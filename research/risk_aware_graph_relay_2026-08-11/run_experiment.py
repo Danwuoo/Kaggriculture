@@ -260,11 +260,21 @@ def analyze(evaluation: list[dict[str, Any]], fit: dict[str, Any]) -> dict[str, 
 def save_evaluation(rows: list[dict[str, Any]]) -> None:
     if not rows:
         return
-    fieldnames = sorted({key for row in rows for key in row})
-    with (ARTIFACTS / "held_out_evaluation.csv").open("w", newline="", encoding="utf-8") as handle:
+    # Do not persist policy_metadata: it contains per-decision feature snapshots
+    # derived from the candidate's private observation.  The safe audit export
+    # retains outcomes, risk counts, and latency only.
+    fieldnames = [
+        "seed", "seat", "opponent", "policy", "own_score", "opponent_score",
+        "margin", "status", "exceptions", "malformed_actions", "timeout_calls",
+        "overage_exhausted", "latency_p95_ms", "latency_max_ms", "animal_escapes",
+        "crop_deaths", "fresh_crop_deaths", "seed_overcommit_events",
+        "seed_overcommit_units", "overflow_events", "overflow_units",
+        "terminal_inventory_units", "terminal_inventory_mark",
+    ]
+    with (ARTIFACTS / "held_out_summary.csv").open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(handle, fieldnames=fieldnames)
         writer.writeheader()
-        writer.writerows(rows)
+        writer.writerows({key: row[key] for key in fieldnames} for row in rows)
 
 
 def main() -> int:
