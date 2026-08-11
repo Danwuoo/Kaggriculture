@@ -7,6 +7,7 @@ import importlib.util
 import json
 from pathlib import Path
 import subprocess
+import sys
 import tempfile
 from typing import Any
 
@@ -19,9 +20,22 @@ AUDIT_RUNNER = (
 OUTPUT = APPROACH_ROOT / "development_validation.json"
 SEED = 811407
 STRATEGIES = ("v27_current_meta", "boatlee_v16_rc2_market_relay")
+WORKTREE_CONTROLS = (
+    APPROACH_ROOT / "performance_optimization_2026_08_11" / "controls" / "layer_00_baseline"
+)
+WORKTREE_CONTROL_SHA256 = {
+    "v27_current_meta": "917fda167d98bbdea95307d61ff3954f56493404baa64ef8467407ad21571fb9",
+    "boatlee_v16_rc2_market_relay": "02d9e7442a5efc425b767aae942d35a1acd41327b53a8038c694f7065b9e1379",
+}
 
 
 def _load_audit_runner():
+    if str(ROOT) not in sys.path:
+        sys.path.insert(0, str(ROOT))
+    from scripts.replay_engine_versions import VENDOR_ROOT
+
+    if str(VENDOR_ROOT) not in sys.path:
+        sys.path.insert(0, str(VENDOR_ROOT))
     spec = importlib.util.spec_from_file_location("main_approach_development_audit", AUDIT_RUNNER)
     if spec is None or spec.loader is None:
         raise RuntimeError(AUDIT_RUNNER)
@@ -51,9 +65,18 @@ def _head_source(strategy: str) -> bytes:
     )
     logical_digest = hashlib.sha256(result.stdout).hexdigest()
     checkout_digest = hashlib.sha256(result.stdout.replace(b"\n", b"\r\n")).hexdigest()
-    if checkout_digest != manifest["standalone_before_split_sha256"]:
-        raise RuntimeError(f"HEAD source hash mismatch for {strategy}")
-    return result.stdout
+    if checkout_digest == manifest["standalone_before_split_sha256"]:
+        return result.stdout
+    frozen = WORKTREE_CONTROLS / strategy / "main.py"
+    if frozen.is_file():
+        frozen_bytes = frozen.read_bytes()
+        frozen_digest = hashlib.sha256(frozen_bytes).hexdigest()
+        if frozen_digest == WORKTREE_CONTROL_SHA256[strategy]:
+            return frozen_bytes
+    raise RuntimeError(
+        f"neither HEAD nor frozen working-tree control matches for {strategy}; "
+        f"HEAD logical digest was {logical_digest}"
+    )
 
 
 def _summary(row: dict[str, Any]) -> dict[str, Any]:

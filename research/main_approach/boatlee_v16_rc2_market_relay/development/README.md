@@ -23,3 +23,16 @@ python research\main_approach\boatlee_v16_rc2_market_relay\development\build_sta
 
 Do not share modules or route data with another approach.  Cross-approach
 similarity is provenance, not a reason to couple their editable sources.
+
+## Performance contract
+
+- Route actions are read-only templates. Aligned static turns return the
+  template directly; a dynamic turn uses the action-schema copier once.
+- Route hand counts, weed/multi-SELL turns, livestock/wool turns, relay
+  checkpoints, and relay target quantities are computed once by `route.py`
+  for development and emitted as literals by this approach's builder.
+- Weed, livestock, wool, market, and relay overlays share one dynamic action
+  pipeline. The final schema/hand-alignment projection remains immediately
+  before return.
+- The generated standalone uses deterministic JSON + zlib + Base64 route
+  storage. It does not read the development route at runtime.

@@ -1,19 +1,34 @@
 """Actor-local bounded weed repair."""
 
-from .runtime import _align_hands, _copy_action, _farm, _get, _seat, _tile_at, _trace_actor_action
+from .runtime import _get, _tile_at, _trace_actor_action
 
 _WEED_STATE = {0: {}, 1: {}}
 _WEED_REPLAY_STEPS = 8
 
-def _weed_repair_action(obs, action, actions, step):
-    action = _align_hands(action, obs)
-    seat = _seat(obs)
-    game = _WEED_STATE[seat]
-    if step == 0 or step < game.get("last_step", -1):
-        game = {"last_step": step, "active": {}}
-        _WEED_STATE[seat] = game
-    game["last_step"] = step
-    farm = _farm(obs, seat)
+
+def _weed_reset(seat):
+    game = {"active": {}}
+    _WEED_STATE[seat] = game
+    return game
+
+
+def _weed_needs_repair(farm, action, game, route_candidate=True):
+    if game["active"]:
+        return True
+    if not route_candidate:
+        return False
+    positions = [_get(farm, "farmer"), *list(_get(farm, "hands", []) or [])]
+    unit_actions = [action.get("farmer", ["PASS"]), *list(action.get("hands") or [])]
+    for position, intended in zip(positions, unit_actions):
+        if not isinstance(intended, list) or not intended or intended[0] not in ("BUILD_PASTURE", "PLANT"):
+            continue
+        tile = _tile_at(farm, position)
+        if isinstance(tile, dict) and tile.get("kind") == "WEED":
+            return True
+    return False
+
+
+def _weed_repair_action(action, actions, step, farm, game):
     positions = [_get(farm, "farmer"), *list(_get(farm, "hands", []) or [])]
     unit_actions = [action.get("farmer", ["PASS"]), *list(action.get("hands") or [])]
     active = game["active"]
@@ -45,4 +60,4 @@ def _weed_repair_action(obs, action, actions, step):
 
     action["farmer"] = unit_actions[0] if unit_actions else ["PASS"]
     action["hands"] = unit_actions[1:]
-    return _align_hands(action, obs)
+    return action

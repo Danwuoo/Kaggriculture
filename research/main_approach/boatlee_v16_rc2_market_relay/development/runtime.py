@@ -1,6 +1,6 @@
 """Observation and action normalization helpers."""
 
-import copy
+_LAST_STEP = [-1, -1]
 
 def _get(value, key, default=None):
     if isinstance(value, dict):
@@ -17,12 +17,51 @@ def _regime(configuration):
 
 
 def _copy_action(action):
-    action = copy.deepcopy(action or {})
+    action = action if isinstance(action, dict) else {}
     return {
         "farmer": list(action.get("farmer") or ["PASS"]),
         "hands": [list(order or ["PASS"]) for order in (action.get("hands") or [])],
         "market": [list(order) for order in (action.get("market") or [])],
     }
+
+
+def _runtime_context(obs, last_route_step):
+    if isinstance(obs, dict):
+        step = min(max(0, int(obs.get("step", 0) or 0)), last_route_step)
+        seat = 1 if int(obs.get("player", 0) or 0) == 1 else 0
+        farms = obs.get("farms", []) or []
+    else:
+        step = min(max(0, int(_get(obs, "step", 0) or 0)), last_route_step)
+        seat = _seat(obs)
+        farms = _get(obs, "farms", []) or []
+    farm = farms[seat] if seat < len(farms) else {}
+    hands = farm.get("hands", []) if isinstance(farm, dict) else (_get(farm, "hands", []) or [])
+    reset = step == 0 or step < _LAST_STEP[seat]
+    _LAST_STEP[seat] = step
+    return step, seat, farm, len(hands or []), reset
+
+
+def _project_action(action, expected_hands):
+    """Final schema/alignment boundary; valid materialized actions pass through."""
+    if isinstance(action, dict):
+        farmer = action.get("farmer")
+        hands = action.get("hands")
+        market = action.get("market")
+        if (
+            isinstance(farmer, list)
+            and isinstance(hands, list)
+            and len(hands) == expected_hands
+            and all(isinstance(order, list) and order for order in hands)
+            and isinstance(market, list)
+            and all(isinstance(order, list) for order in market)
+        ):
+            return action
+    action = _copy_action(action)
+    hands = action["hands"]
+    if len(hands) < expected_hands:
+        hands.extend([["PASS"] for _ in range(expected_hands - len(hands))])
+    action["hands"] = hands[:expected_hands]
+    return action
 
 
 def _seat(obs):
@@ -35,13 +74,8 @@ def _farm(obs, seat):
 
 
 def _align_hands(action, obs):
-    action = _copy_action(action)
     expected = len(_get(_farm(obs, _seat(obs)), "hands", []) or [])
-    hands = list(action.get("hands") or [])
-    if len(hands) < expected:
-        hands.extend([["PASS"] for _ in range(expected - len(hands))])
-    action["hands"] = [list(order or ["PASS"]) for order in hands[:expected]]
-    return action
+    return _project_action(action, expected)
 
 
 def _tile_at(farm, position):

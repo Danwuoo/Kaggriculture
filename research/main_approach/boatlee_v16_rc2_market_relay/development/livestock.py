@@ -1,22 +1,24 @@
 """Yarn-shop-conditioned livestock conversion."""
 
-from .runtime import _copy_action, _get, _seat
+from .runtime import _get
+from .route import _LIVESTOCK_ROUTE_STEPS
 
 # Boatlee V16-R5B: weed-replay-safe livestock-mix controller.
 _V16_NAME = 'Boatlee V16-RC2-MarketRelay'
 _V16_SWITCH_STEP = 161
 _V16_PURCHASE_STEPS = frozenset([192])
 _V16_ACTOR_WINDOWS = [(4, 193, 212)]
-_V16_ROUTE_STATE = {0: {"last_step": -1, "yarn": None}, 1: {"last_step": -1, "yarn": None}}
+_V16_ROUTE_STATE = {0: {"yarn": None}, 1: {"yarn": None}}
 
 
-def _v16_yarn_route(obs, step):
-    seat = _seat(obs)
+def _v16_reset(seat):
+    state = {"yarn": None}
+    _V16_ROUTE_STATE[seat] = state
+    return state
+
+
+def _v16_yarn_route(obs, step, seat):
     state = _V16_ROUTE_STATE[seat]
-    if step == 0 or step < int(state.get("last_step", -1)):
-        state = {"last_step": step, "yarn": None}
-        _V16_ROUTE_STATE[seat] = state
-    state["last_step"] = step
     if step < _V16_SWITCH_STEP:
         return False
     if state.get("yarn") is None:
@@ -37,9 +39,8 @@ def _v16_swap_cow(order):
     return order
 
 
-def _v16_convert_livestock(action, obs, step):
-    action = _copy_action(action)
-    if not _v16_yarn_route(obs, step):
+def _v16_convert_livestock(action, step, yarn):
+    if step not in _LIVESTOCK_ROUTE_STEPS or not yarn:
         return action
     if step in _V16_PURCHASE_STEPS:
         action["market"] = [_v16_swap_cow(order) for order in (action.get("market") or [])]

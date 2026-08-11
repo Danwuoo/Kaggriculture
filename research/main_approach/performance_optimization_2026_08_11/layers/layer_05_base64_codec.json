@@ -1,0 +1,2638 @@
+{
+  "engine": {
+    "commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+    "configuration_blob": "0fcdf2c14c47d3bdc821c02e26263956cf0fd3d8",
+    "configuration_bytes": 5877,
+    "configuration_sha256": "7f196f4aaf9b4e482fbd61ba4bf19f5cec4da0f81938ece756954035a65c0bb5",
+    "python_blob": "4b78842d0f2d4abf6e318a8248b6306454f5c714",
+    "python_bytes": 39801,
+    "python_sha256": "fb9215c5e21a25243e2d13e75b3d70a79cf7d78fff150a90f1bb5eacf9ba2bcf",
+    "vendor_repo": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\.vendor\\kaggle-environments"
+  },
+  "layer": "layer_05_base64_codec",
+  "protocol": {
+    "opponent": "kaito_v21",
+    "performance_repetitions": 15,
+    "representations": [
+      "frozen_before",
+      "generated",
+      "development"
+    ],
+    "seats": [
+      0,
+      1
+    ],
+    "seed": 861505
+  },
+  "status": "PASS",
+  "strategies": {
+    "boatlee_v16_rc2_market_relay": {
+      "artifacts": {
+        "before": {
+          "bytes": 37252,
+          "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\performance_optimization_2026_08_11\\controls\\layer_04_single_materialization_pipeline\\boatlee_v16_rc2_market_relay\\main.py",
+          "sha256": "563efb0d4801803a26c3fa90b6c78564599780dc17edba8eb4a1634e5fec7083"
+        },
+        "development": {
+          "bytes": 113,
+          "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\boatlee_v16_rc2_market_relay\\development_main.py",
+          "sha256": "9c72ec37e79b6144a23e17c677f6af5037003b223952219bc214b70fcce028e4"
+        },
+        "generated": {
+          "bytes": 37741,
+          "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\boatlee_v16_rc2_market_relay\\main.py",
+          "sha256": "7d8cc891b48f2ea4a9a3ea7bcaabd5775139325ac398f1d5431f03c2ebc08946"
+        }
+      },
+      "behavior_equal": true,
+      "games": [
+        {
+          "before": {
+            "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+            "action_issues": {
+              "hand_alignment": 0,
+              "malformed": 0,
+              "market_overflow": 0,
+              "seed_overcommit": 0
+            },
+            "calls": 719,
+            "candidate_money": 84612.0,
+            "candidate_reward": 84612.0,
+            "diagnostics": {
+              "animal_escapes": 0,
+              "crop_deaths": 0,
+              "fresh_crop_deaths": 0,
+              "shed_overflow_events": 0,
+              "shed_overflow_units": 0
+            },
+            "exception": null,
+            "import_ms": 10.028199991211295,
+            "latency_ms": {
+              "calls": 719,
+              "max": 1.3413999695330858,
+              "p50": 0.03629992716014385,
+              "p95": 0.10551998857408762,
+              "p99": 0.17480805050581716,
+              "total": 35.23110051173717
+            },
+            "max_market_orders": 10,
+            "opponent": "kaito_v21",
+            "opponent_action_digest": "1e45d2bceecf95fae000e5afe4a07ec63aa5c85526e20730609ce7075cfd9b79",
+            "opponent_exception": null,
+            "opponent_money": 66033.0,
+            "opponent_reward": 66033.0,
+            "overage_exhausted": false,
+            "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\performance_optimization_2026_08_11\\controls\\layer_04_single_materialization_pipeline\\boatlee_v16_rc2_market_relay\\main.py",
+            "seat": 0,
+            "seed": 861505,
+            "statuses": [
+              "DONE",
+              "DONE"
+            ],
+            "terminal_inventory": {
+              "marked_value": 0.0,
+              "units": 0
+            },
+            "timeout_calls": 0
+          },
+          "development": {
+            "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+            "action_issues": {
+              "hand_alignment": 0,
+              "malformed": 0,
+              "market_overflow": 0,
+              "seed_overcommit": 0
+            },
+            "calls": 719,
+            "candidate_money": 84612.0,
+            "candidate_reward": 84612.0,
+            "diagnostics": {
+              "animal_escapes": 0,
+              "crop_deaths": 0,
+              "fresh_crop_deaths": 0,
+              "shed_overflow_events": 0,
+              "shed_overflow_units": 0
+            },
+            "exception": null,
+            "import_ms": 11.231200071051717,
+            "latency_ms": {
+              "calls": 719,
+              "max": 0.28519995976239443,
+              "p50": 0.022799940779805183,
+              "p95": 0.07111995946615936,
+              "p99": 0.11033602524548794,
+              "total": 21.36269910261035
+            },
+            "max_market_orders": 10,
+            "opponent": "kaito_v21",
+            "opponent_action_digest": "1e45d2bceecf95fae000e5afe4a07ec63aa5c85526e20730609ce7075cfd9b79",
+            "opponent_exception": null,
+            "opponent_money": 66033.0,
+            "opponent_reward": 66033.0,
+            "overage_exhausted": false,
+            "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\boatlee_v16_rc2_market_relay\\development_main.py",
+            "seat": 0,
+            "seed": 861505,
+            "statuses": [
+              "DONE",
+              "DONE"
+            ],
+            "terminal_inventory": {
+              "marked_value": 0.0,
+              "units": 0
+            },
+            "timeout_calls": 0
+          },
+          "equal": true,
+          "generated": {
+            "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+            "action_issues": {
+              "hand_alignment": 0,
+              "malformed": 0,
+              "market_overflow": 0,
+              "seed_overcommit": 0
+            },
+            "calls": 719,
+            "candidate_money": 84612.0,
+            "candidate_reward": 84612.0,
+            "diagnostics": {
+              "animal_escapes": 0,
+              "crop_deaths": 0,
+              "fresh_crop_deaths": 0,
+              "shed_overflow_events": 0,
+              "shed_overflow_units": 0
+            },
+            "exception": null,
+            "import_ms": 2.7341999812051654,
+            "latency_ms": {
+              "calls": 719,
+              "max": 0.3122999332845211,
+              "p50": 0.021300045773386955,
+              "p95": 0.06373001961037517,
+              "p99": 0.13792602345347452,
+              "total": 20.85159858688712
+            },
+            "max_market_orders": 10,
+            "opponent": "kaito_v21",
+            "opponent_action_digest": "1e45d2bceecf95fae000e5afe4a07ec63aa5c85526e20730609ce7075cfd9b79",
+            "opponent_exception": null,
+            "opponent_money": 66033.0,
+            "opponent_reward": 66033.0,
+            "overage_exhausted": false,
+            "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\boatlee_v16_rc2_market_relay\\main.py",
+            "seat": 0,
+            "seed": 861505,
+            "statuses": [
+              "DONE",
+              "DONE"
+            ],
+            "terminal_inventory": {
+              "marked_value": 0.0,
+              "units": 0
+            },
+            "timeout_calls": 0
+          },
+          "seat": 0
+        },
+        {
+          "before": {
+            "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+            "action_issues": {
+              "hand_alignment": 0,
+              "malformed": 0,
+              "market_overflow": 0,
+              "seed_overcommit": 0
+            },
+            "calls": 719,
+            "candidate_money": 84612.0,
+            "candidate_reward": 84612.0,
+            "diagnostics": {
+              "animal_escapes": 0,
+              "crop_deaths": 0,
+              "fresh_crop_deaths": 0,
+              "shed_overflow_events": 0,
+              "shed_overflow_units": 0
+            },
+            "exception": null,
+            "import_ms": 3.5423999652266502,
+            "latency_ms": {
+              "calls": 719,
+              "max": 0.3640000941231847,
+              "p50": 0.02859998494386673,
+              "p95": 0.08422005921602257,
+              "p99": 0.14255994232371466,
+              "total": 27.04310044646263
+            },
+            "max_market_orders": 10,
+            "opponent": "kaito_v21",
+            "opponent_action_digest": "393a57abb2d93da979d13b78bbd0dff88edb58aa5e5e1712a41a11153d139446",
+            "opponent_exception": null,
+            "opponent_money": 66033.0,
+            "opponent_reward": 66033.0,
+            "overage_exhausted": false,
+            "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\performance_optimization_2026_08_11\\controls\\layer_04_single_materialization_pipeline\\boatlee_v16_rc2_market_relay\\main.py",
+            "seat": 1,
+            "seed": 861505,
+            "statuses": [
+              "DONE",
+              "DONE"
+            ],
+            "terminal_inventory": {
+              "marked_value": 0.0,
+              "units": 0
+            },
+            "timeout_calls": 0
+          },
+          "development": {
+            "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+            "action_issues": {
+              "hand_alignment": 0,
+              "malformed": 0,
+              "market_overflow": 0,
+              "seed_overcommit": 0
+            },
+            "calls": 719,
+            "candidate_money": 84612.0,
+            "candidate_reward": 84612.0,
+            "diagnostics": {
+              "animal_escapes": 0,
+              "crop_deaths": 0,
+              "fresh_crop_deaths": 0,
+              "shed_overflow_events": 0,
+              "shed_overflow_units": 0
+            },
+            "exception": null,
+            "import_ms": 9.532000054605305,
+            "latency_ms": {
+              "calls": 719,
+              "max": 0.22499996703118086,
+              "p50": 0.025999965146183968,
+              "p95": 0.07380999159067869,
+              "p99": 0.12455601710826161,
+              "total": 24.053200497291982
+            },
+            "max_market_orders": 10,
+            "opponent": "kaito_v21",
+            "opponent_action_digest": "393a57abb2d93da979d13b78bbd0dff88edb58aa5e5e1712a41a11153d139446",
+            "opponent_exception": null,
+            "opponent_money": 66033.0,
+            "opponent_reward": 66033.0,
+            "overage_exhausted": false,
+            "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\boatlee_v16_rc2_market_relay\\development_main.py",
+            "seat": 1,
+            "seed": 861505,
+            "statuses": [
+              "DONE",
+              "DONE"
+            ],
+            "terminal_inventory": {
+              "marked_value": 0.0,
+              "units": 0
+            },
+            "timeout_calls": 0
+          },
+          "equal": true,
+          "generated": {
+            "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+            "action_issues": {
+              "hand_alignment": 0,
+              "malformed": 0,
+              "market_overflow": 0,
+              "seed_overcommit": 0
+            },
+            "calls": 719,
+            "candidate_money": 84612.0,
+            "candidate_reward": 84612.0,
+            "diagnostics": {
+              "animal_escapes": 0,
+              "crop_deaths": 0,
+              "fresh_crop_deaths": 0,
+              "shed_overflow_events": 0,
+              "shed_overflow_units": 0
+            },
+            "exception": null,
+            "import_ms": 3.166800015605986,
+            "latency_ms": {
+              "calls": 719,
+              "max": 0.16830000095069408,
+              "p50": 0.024700071662664413,
+              "p95": 0.07633999921381475,
+              "p99": 0.12834604596719174,
+              "total": 23.50160025525838
+            },
+            "max_market_orders": 10,
+            "opponent": "kaito_v21",
+            "opponent_action_digest": "393a57abb2d93da979d13b78bbd0dff88edb58aa5e5e1712a41a11153d139446",
+            "opponent_exception": null,
+            "opponent_money": 66033.0,
+            "opponent_reward": 66033.0,
+            "overage_exhausted": false,
+            "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\boatlee_v16_rc2_market_relay\\main.py",
+            "seat": 1,
+            "seed": 861505,
+            "statuses": [
+              "DONE",
+              "DONE"
+            ],
+            "terminal_inventory": {
+              "marked_value": 0.0,
+              "units": 0
+            },
+            "timeout_calls": 0
+          },
+          "seat": 1
+        }
+      ],
+      "performance": {
+        "before": [
+          {
+            "action_digests": [
+              "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a"
+            ],
+            "allocation": {
+              "allocated_blocks_delta": 201,
+              "gc_collections_delta": 0,
+              "traced_current_delta_bytes": 16216,
+              "traced_peak_delta_bytes": 70720
+            },
+            "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\performance_optimization_2026_08_11\\controls\\layer_04_single_materialization_pipeline\\boatlee_v16_rc2_market_relay\\main.py",
+            "per_turn_ms_median_run": {
+              "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+              "allocated_blocks_delta": 158,
+              "calls": 719,
+              "gc_collections_delta": 0,
+              "import_ms": 3.258800017647445,
+              "max": 0.37350005004554987,
+              "p50": 0.010899966582655907,
+              "p95": 0.05605996120721105,
+              "p99": 0.12000007787719369,
+              "repetition": 12,
+              "total": 13.529402087442577
+            },
+            "repetitions": 15,
+            "runs": [
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 1120,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 4.88200003746897,
+                "max": 0.2578999847173691,
+                "p50": 0.0100000761449337,
+                "p95": 0.047019997145980624,
+                "p99": 0.09675601730123165,
+                "repetition": 0,
+                "total": 11.0165971564129
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 158,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 3.2903000246733427,
+                "max": 0.34570007119327784,
+                "p50": 0.009699957445263863,
+                "p95": 0.04722001031041145,
+                "p99": 0.1224200008437038,
+                "repetition": 1,
+                "total": 11.743398616090417
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 158,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 3.145699971355498,
+                "max": 0.18149998504668474,
+                "p50": 0.00970007386058569,
+                "p95": 0.04561999812722207,
+                "p99": 0.0806580320931972,
+                "repetition": 2,
+                "total": 10.684800334274769
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 158,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 5.417300038971007,
+                "max": 0.29450003057718277,
+                "p50": 0.011399970389902592,
+                "p95": 0.060139992274343974,
+                "p99": 0.12950803386047505,
+                "repetition": 3,
+                "total": 14.424700173549354
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 158,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 3.200800041668117,
+                "max": 0.2949000336229801,
+                "p50": 0.01279998105019331,
+                "p95": 0.05922998534515501,
+                "p99": 0.1322920550592244,
+                "repetition": 4,
+                "total": 14.425299712456763
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 158,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 3.463099943473935,
+                "max": 0.3173999721184373,
+                "p50": 0.01170008908957243,
+                "p95": 0.05613007815554739,
+                "p99": 0.12652603210881375,
+                "repetition": 5,
+                "total": 13.3505993289873
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 158,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 3.7526999367401004,
+                "max": 0.3136999439448118,
+                "p50": 0.013600103557109833,
+                "p95": 0.06807993631809951,
+                "p99": 0.13448197627440145,
+                "repetition": 6,
+                "total": 16.72250113915652
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 158,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 3.3645000075921416,
+                "max": 0.23390003480017185,
+                "p50": 0.013399985618889332,
+                "p95": 0.06762993289157748,
+                "p99": 0.1285539520904424,
+                "repetition": 7,
+                "total": 15.53469814825803
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 158,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 3.9431999903172255,
+                "max": 0.2117999829351902,
+                "p50": 0.01309998333454132,
+                "p95": 0.06270001176744702,
+                "p99": 0.1371639966964722,
+                "repetition": 8,
+                "total": 15.136898378841579
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 158,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 3.0815000645816326,
+                "max": 0.26430003345012665,
+                "p50": 0.015099998563528061,
+                "p95": 0.06460992153733978,
+                "p99": 0.13717001769691722,
+                "repetition": 9,
+                "total": 16.6615997441113
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 158,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 5.195199977606535,
+                "max": 1.818799995817244,
+                "p50": 0.02019992098212242,
+                "p95": 0.0859499559737742,
+                "p99": 0.18482793588191374,
+                "repetition": 10,
+                "total": 23.654400021769106
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 158,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 6.779500050470233,
+                "max": 0.3239000216126442,
+                "p50": 0.010499963536858559,
+                "p95": 0.05411994643509389,
+                "p99": 0.11860599275678413,
+                "repetition": 11,
+                "total": 12.471901951357722
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 158,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 3.258800017647445,
+                "max": 0.37350005004554987,
+                "p50": 0.010899966582655907,
+                "p95": 0.05605996120721105,
+                "p99": 0.12000007787719369,
+                "repetition": 12,
+                "total": 13.529402087442577
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 158,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 3.7227999418973923,
+                "max": 0.2859000815078616,
+                "p50": 0.011199968867003918,
+                "p95": 0.058409979101270444,
+                "p99": 0.10628399439156061,
+                "repetition": 13,
+                "total": 13.19539884570986
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 158,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 3.246600041165948,
+                "max": 0.21520000882446766,
+                "p50": 0.011399970389902592,
+                "p95": 0.05241003818809986,
+                "p99": 0.10100807063281583,
+                "repetition": 14,
+                "total": 12.46520085260272
+              }
+            ],
+            "season_total_ms": {
+              "max": 23.654400021769106,
+              "mean": 14.334493099401394,
+              "median": 13.529402087442577,
+              "min": 10.684800334274769,
+              "relative_range": 0.9586232712776107
+            },
+            "stable_digest": true
+          },
+          {
+            "action_digests": [
+              "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d"
+            ],
+            "allocation": {
+              "allocated_blocks_delta": 198,
+              "gc_collections_delta": 0,
+              "traced_current_delta_bytes": 15936,
+              "traced_peak_delta_bytes": 70440
+            },
+            "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\performance_optimization_2026_08_11\\controls\\layer_04_single_materialization_pipeline\\boatlee_v16_rc2_market_relay\\main.py",
+            "per_turn_ms_median_run": {
+              "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+              "allocated_blocks_delta": 156,
+              "calls": 719,
+              "gc_collections_delta": 0,
+              "import_ms": 3.157000057399273,
+              "max": 0.13130006846040487,
+              "p50": 0.010999967344105244,
+              "p95": 0.047059997450560345,
+              "p99": 0.07426407886669066,
+              "repetition": 10,
+              "total": 11.162401642650366
+            },
+            "repetitions": 15,
+            "runs": [
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 1118,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 3.095499938353896,
+                "max": 0.1121999230235815,
+                "p50": 0.010499963536858559,
+                "p95": 0.04387998487800361,
+                "p99": 0.06838393863290554,
+                "repetition": 0,
+                "total": 10.540200863033533
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 156,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 3.71740001719445,
+                "max": 0.17300003673881292,
+                "p50": 0.01070008147507906,
+                "p95": 0.04468999104574325,
+                "p99": 0.07164805894717581,
+                "repetition": 1,
+                "total": 10.767601896077394
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 156,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.9637999832630157,
+                "max": 0.3640000941231847,
+                "p50": 0.009900075383484364,
+                "p95": 0.04529999569058418,
+                "p99": 0.08431205991655645,
+                "repetition": 2,
+                "total": 10.994802578352392
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 156,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.793300081975758,
+                "max": 0.5850999150425196,
+                "p50": 0.010599964298307896,
+                "p95": 0.04336998099461201,
+                "p99": 0.08876799838617555,
+                "repetition": 3,
+                "total": 11.54760003555566
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 156,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 3.2325999345630407,
+                "max": 0.1202999847009778,
+                "p50": 0.010999967344105244,
+                "p95": 0.04692000802606344,
+                "p99": 0.06783795543015007,
+                "repetition": 4,
+                "total": 11.022898717783391
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 156,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 3.216699929907918,
+                "max": 0.10710000060498714,
+                "p50": 0.010600080713629723,
+                "p95": 0.04221007693558932,
+                "p99": 0.07720000576227903,
+                "repetition": 5,
+                "total": 11.10849971882999
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 156,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 3.17949999589473,
+                "max": 0.29660004656761885,
+                "p50": 0.011299969628453255,
+                "p95": 0.047010008711367846,
+                "p99": 0.08949598297476807,
+                "repetition": 6,
+                "total": 12.04469904769212
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 156,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 3.6097000120207667,
+                "max": 0.1545000122860074,
+                "p50": 0.011199968867003918,
+                "p95": 0.04530999576672912,
+                "p99": 0.08128792047500627,
+                "repetition": 7,
+                "total": 11.514498386532068
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 156,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 3.056099987588823,
+                "max": 0.2991999499499798,
+                "p50": 0.010899966582655907,
+                "p95": 0.04876002203673126,
+                "p99": 0.08870597695931809,
+                "repetition": 8,
+                "total": 12.023499351926148
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 156,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 3.0744000105187297,
+                "max": 0.2579999854788184,
+                "p50": 0.010399962775409222,
+                "p95": 0.04530999576672912,
+                "p99": 0.07611399749293937,
+                "repetition": 9,
+                "total": 10.999199701473117
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 156,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 3.157000057399273,
+                "max": 0.13130006846040487,
+                "p50": 0.010999967344105244,
+                "p95": 0.047059997450560345,
+                "p99": 0.07426407886669066,
+                "repetition": 10,
+                "total": 11.162401642650366
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 156,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 3.4395999973639846,
+                "max": 0.31839997973293066,
+                "p50": 0.011100084520876408,
+                "p95": 0.04662000574171546,
+                "p99": 0.07522799074649814,
+                "repetition": 11,
+                "total": 11.376699898391962
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 156,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 3.1711000483483076,
+                "max": 0.188700039871037,
+                "p50": 0.010199961252510548,
+                "p95": 0.04281008150428534,
+                "p99": 0.06821205373853453,
+                "repetition": 12,
+                "total": 10.567100951448083
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 156,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 3.09670006390661,
+                "max": 0.3524000057950616,
+                "p50": 0.011199968867003918,
+                "p95": 0.04957002820447089,
+                "p99": 0.09354601381346611,
+                "repetition": 13,
+                "total": 11.972802109085023
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 156,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 3.2357999589294195,
+                "max": 0.12770004104822874,
+                "p50": 0.010899966582655907,
+                "p95": 0.04367998335510494,
+                "p99": 0.07122196024283778,
+                "repetition": 14,
+                "total": 11.19680015835911
+              }
+            ],
+            "season_total_ms": {
+              "max": 12.04469904769212,
+              "mean": 11.255953670479357,
+              "median": 11.162401642650366,
+              "min": 10.540200863033533,
+              "relative_range": 0.13478265993494243
+            },
+            "stable_digest": true
+          }
+        ],
+        "cold_import": {
+          "before": {
+            "max_ms": 16.18319994304329,
+            "median_ms": 15.37490007467568,
+            "min_ms": 14.631600002758205,
+            "p95_ms": 16.179139993619174,
+            "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\performance_optimization_2026_08_11\\controls\\layer_04_single_materialization_pipeline\\boatlee_v16_rc2_market_relay\\main.py",
+            "raw_ms": [
+              14.865799923427403,
+              15.223199967294931,
+              15.309399925172329,
+              15.065900050103664,
+              16.113299992866814,
+              14.631600002758205,
+              16.18319994304329,
+              15.851499978452921,
+              16.080199973657727,
+              16.177400015294552,
+              15.37490007467568,
+              15.008399961516261,
+              15.032100025564432,
+              15.62080008443445,
+              15.640600002370775
+            ],
+            "repetitions": 15
+          },
+          "generated": {
+            "max_ms": 16.63100009318441,
+            "median_ms": 14.783099992200732,
+            "min_ms": 14.16709995828569,
+            "p95_ms": 16.398320032749325,
+            "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\boatlee_v16_rc2_market_relay\\main.py",
+            "raw_ms": [
+              14.729000045917928,
+              16.298600006848574,
+              14.735500095412135,
+              14.77889996021986,
+              14.176200027577579,
+              16.01919997483492,
+              14.783099992200732,
+              16.63100009318441,
+              15.400500036776066,
+              15.3330999892205,
+              14.16709995828569,
+              16.096699982881546,
+              14.30619996972382,
+              16.013999935239553,
+              14.273899956606328
+            ],
+            "repetitions": 15
+          }
+        },
+        "generated": [
+          {
+            "action_digests": [
+              "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a"
+            ],
+            "allocation": {
+              "allocated_blocks_delta": 201,
+              "gc_collections_delta": 0,
+              "traced_current_delta_bytes": 16216,
+              "traced_peak_delta_bytes": 70720
+            },
+            "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\boatlee_v16_rc2_market_relay\\main.py",
+            "per_turn_ms_median_run": {
+              "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+              "allocated_blocks_delta": 158,
+              "calls": 719,
+              "gc_collections_delta": 0,
+              "import_ms": 4.127899999730289,
+              "max": 0.33790001180022955,
+              "p50": 0.01070008147507906,
+              "p95": 0.053250044584274306,
+              "p99": 0.134403996635229,
+              "repetition": 8,
+              "total": 13.012297917157412
+            },
+            "repetitions": 15,
+            "runs": [
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 1120,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.2537000477313995,
+                "max": 0.3206999972462654,
+                "p50": 0.010599964298307896,
+                "p95": 0.05214003613218671,
+                "p99": 0.11326602660119539,
+                "repetition": 0,
+                "total": 12.644999660551548
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 158,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.5975999888032675,
+                "max": 0.33950002398341894,
+                "p50": 0.010699965059757233,
+                "p95": 0.05540995625779033,
+                "p99": 0.11987600242719114,
+                "repetition": 1,
+                "total": 13.14000110141933
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 158,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.624299959279597,
+                "max": 0.18909992650151253,
+                "p50": 0.010800082236528397,
+                "p95": 0.05193004617467523,
+                "p99": 0.10513398563489336,
+                "repetition": 2,
+                "total": 12.100799707695842
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 158,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.5482000783085823,
+                "max": 0.12260000221431255,
+                "p50": 0.012399978004395962,
+                "p95": 0.05450996104627848,
+                "p99": 0.08247804595157543,
+                "repetition": 3,
+                "total": 13.212899910286069
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 158,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 3.880099975503981,
+                "max": 0.31260005198419094,
+                "p50": 0.011300086043775082,
+                "p95": 0.048420019447803525,
+                "p99": 0.10741000296548037,
+                "repetition": 4,
+                "total": 12.452201917767525
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 158,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 5.082200048491359,
+                "max": 0.32350001856684685,
+                "p50": 0.010899966582655907,
+                "p95": 0.05718996981158855,
+                "p99": 0.13678801478818076,
+                "repetition": 5,
+                "total": 13.083297992125154
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 158,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 3.234099945984781,
+                "max": 0.19449996761977673,
+                "p50": 0.010499963536858559,
+                "p95": 0.07747000781819226,
+                "p99": 0.14637797139585032,
+                "repetition": 6,
+                "total": 14.385698945261538
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 158,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.979199984110892,
+                "max": 0.2810999285429716,
+                "p50": 0.01079996582120657,
+                "p95": 0.059559987857937875,
+                "p99": 0.135909987147898,
+                "repetition": 7,
+                "total": 13.325597275979817
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 158,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 4.127899999730289,
+                "max": 0.33790001180022955,
+                "p50": 0.01070008147507906,
+                "p95": 0.053250044584274306,
+                "p99": 0.134403996635229,
+                "repetition": 8,
+                "total": 13.012297917157412
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 158,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.565799979493022,
+                "max": 0.41800003964453936,
+                "p50": 0.01079996582120657,
+                "p95": 0.05125004099681979,
+                "p99": 0.10548800928518193,
+                "repetition": 9,
+                "total": 12.557800044305623
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 158,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.830500015988946,
+                "max": 0.14570006169378757,
+                "p50": 0.010699965059757233,
+                "p95": 0.051140028517693295,
+                "p99": 0.09493202436715378,
+                "repetition": 10,
+                "total": 12.154199881479144
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 158,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.920099999755621,
+                "max": 0.228599994443357,
+                "p50": 0.014699995517730713,
+                "p95": 0.05815997719764711,
+                "p99": 0.10039197048172357,
+                "repetition": 11,
+                "total": 14.924100134521723
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 158,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 3.4872000105679035,
+                "max": 0.21950004156678915,
+                "p50": 0.015600002370774746,
+                "p95": 0.06728003500029449,
+                "p99": 0.12451203772798214,
+                "repetition": 12,
+                "total": 18.1731004267931
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 158,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 3.1264000572264194,
+                "max": 0.14839996583759785,
+                "p50": 0.011199968867003918,
+                "p95": 0.05007003201171757,
+                "p99": 0.08294204948470037,
+                "repetition": 13,
+                "total": 11.667799204587936
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 158,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.5902000488713384,
+                "max": 0.2601000014692545,
+                "p50": 0.010299962013959885,
+                "p95": 0.046720006503164775,
+                "p99": 0.08208794752135914,
+                "repetition": 14,
+                "total": 11.22149988077581
+              }
+            ],
+            "season_total_ms": {
+              "max": 18.1731004267931,
+              "mean": 13.203752933380505,
+              "median": 13.012297917157412,
+              "min": 11.22149988077581,
+              "relative_range": 0.5342331224103954
+            },
+            "stable_digest": true
+          },
+          {
+            "action_digests": [
+              "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d"
+            ],
+            "allocation": {
+              "allocated_blocks_delta": 198,
+              "gc_collections_delta": 0,
+              "traced_current_delta_bytes": 15936,
+              "traced_peak_delta_bytes": 70440
+            },
+            "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\boatlee_v16_rc2_market_relay\\main.py",
+            "per_turn_ms_median_run": {
+              "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+              "allocated_blocks_delta": 156,
+              "calls": 719,
+              "gc_collections_delta": 0,
+              "import_ms": 2.597499988041818,
+              "max": 0.3432999365031719,
+              "p50": 0.009699957445263863,
+              "p95": 0.04343008622527123,
+              "p99": 0.10014396859332965,
+              "repetition": 3,
+              "total": 10.727599612437189
+            },
+            "repetitions": 15,
+            "runs": [
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 1118,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.666099928319454,
+                "max": 0.43569994159042835,
+                "p50": 0.010500079952180386,
+                "p95": 0.047670013736933484,
+                "p99": 0.06741995224729186,
+                "repetition": 0,
+                "total": 11.095199035480618
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 156,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 4.205100005492568,
+                "max": 0.1669999910518527,
+                "p50": 0.011399970389902592,
+                "p95": 0.04514999454841023,
+                "p99": 0.0780220120213927,
+                "repetition": 1,
+                "total": 11.673499480821192
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 156,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.3385999957099557,
+                "max": 0.16900000628083944,
+                "p50": 0.01079996582120657,
+                "p95": 0.04439998883754015,
+                "p99": 0.06594803649932153,
+                "repetition": 2,
+                "total": 10.905100614763796
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 156,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.597499988041818,
+                "max": 0.3432999365031719,
+                "p50": 0.009699957445263863,
+                "p95": 0.04343008622527123,
+                "p99": 0.10014396859332965,
+                "repetition": 3,
+                "total": 10.727599612437189
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 156,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.47600011061877,
+                "max": 0.10309997014701366,
+                "p50": 0.010599964298307896,
+                "p95": 0.04184998106211425,
+                "p99": 0.06246000993996874,
+                "repetition": 4,
+                "total": 10.291099781170487
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 156,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.368899993598461,
+                "max": 0.3087000222876668,
+                "p50": 0.009899958968162537,
+                "p95": 0.040869961958378595,
+                "p99": 0.07555999327451031,
+                "repetition": 5,
+                "total": 10.574099142104387
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 156,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.58239998947829,
+                "max": 0.13860000763088465,
+                "p50": 0.010199961252510548,
+                "p95": 0.04030996933579445,
+                "p99": 0.06451002554968027,
+                "repetition": 6,
+                "total": 10.365000925958157
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 156,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 4.429300082847476,
+                "max": 0.3993998980149627,
+                "p50": 0.010999967344105244,
+                "p95": 0.0463600037619472,
+                "p99": 0.08544995216652763,
+                "repetition": 7,
+                "total": 11.850497918203473
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 156,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.4518000427633524,
+                "max": 0.15419989358633757,
+                "p50": 0.010299962013959885,
+                "p95": 0.039850058965384974,
+                "p99": 0.07294608978554608,
+                "repetition": 8,
+                "total": 10.158298537135124
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 156,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.468300051987171,
+                "max": 0.16389996744692326,
+                "p50": 0.009999959729611874,
+                "p95": 0.04046006361022593,
+                "p99": 0.08025793358683596,
+                "repetition": 9,
+                "total": 10.629698401317
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 156,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.5494000874459743,
+                "max": 0.2905000001192093,
+                "p50": 0.010100076906383038,
+                "p95": 0.046790007036179325,
+                "p99": 0.0916559994220734,
+                "repetition": 10,
+                "total": 11.023502564057708
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 156,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.4136999854817986,
+                "max": 0.17769995611160994,
+                "p50": 0.010199961252510548,
+                "p95": 0.04275997634977104,
+                "p99": 0.07567599415779122,
+                "repetition": 11,
+                "total": 10.563998599536717
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 156,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.5019999593496323,
+                "max": 0.21550001110881567,
+                "p50": 0.010399962775409222,
+                "p95": 0.04558010259643199,
+                "p99": 0.08915598038584047,
+                "repetition": 12,
+                "total": 11.20639790315181
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 156,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.4154999991878867,
+                "max": 0.13250007759779692,
+                "p50": 0.009399955160915852,
+                "p95": 0.04476999165490272,
+                "p99": 0.06307401461526756,
+                "repetition": 13,
+                "total": 9.976199362426996
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 156,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 3.4262000117450953,
+                "max": 0.6093999836593866,
+                "p50": 0.010199961252510548,
+                "p95": 0.044719991274178035,
+                "p99": 0.10725400177761986,
+                "repetition": 14,
+                "total": 11.731798993423581
+              }
+            ],
+            "season_total_ms": {
+              "max": 11.850497918203473,
+              "mean": 10.85146605813255,
+              "median": 10.727599612437189,
+              "min": 9.976199362426996,
+              "relative_range": 0.17471742267519785
+            },
+            "stable_digest": true
+          }
+        ],
+        "improvement_fraction": 0.038551505224311104,
+        "season_median_ms_after": 11.8699487647973,
+        "season_median_ms_before": 12.345901865046471,
+        "speedup": 1.0400973171561367
+      }
+    },
+    "v27_current_meta": {
+      "artifacts": {
+        "before": {
+          "bytes": 27653,
+          "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\performance_optimization_2026_08_11\\controls\\layer_04_single_materialization_pipeline\\v27_current_meta\\main.py",
+          "sha256": "cdd9e9424df6fc3e55ce9709e5b3d5625f054bd06a59567e13aaeac9144695b0"
+        },
+        "development": {
+          "bytes": 113,
+          "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\v27_current_meta\\development_main.py",
+          "sha256": "9c72ec37e79b6144a23e17c677f6af5037003b223952219bc214b70fcce028e4"
+        },
+        "generated": {
+          "bytes": 28142,
+          "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\v27_current_meta\\main.py",
+          "sha256": "b1a34868901933efdb3c9eb2fb421daba92bb8900c26c033037c39f3f0de3135"
+        }
+      },
+      "behavior_equal": true,
+      "games": [
+        {
+          "before": {
+            "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+            "action_issues": {
+              "hand_alignment": 0,
+              "malformed": 0,
+              "market_overflow": 0,
+              "seed_overcommit": 0
+            },
+            "calls": 719,
+            "candidate_money": 84612.0,
+            "candidate_reward": 84612.0,
+            "diagnostics": {
+              "animal_escapes": 0,
+              "crop_deaths": 0,
+              "fresh_crop_deaths": 0,
+              "shed_overflow_events": 0,
+              "shed_overflow_units": 0
+            },
+            "exception": null,
+            "import_ms": 9.404400014318526,
+            "latency_ms": {
+              "calls": 719,
+              "max": 0.25459995958954096,
+              "p50": 0.034800032153725624,
+              "p95": 0.08002002723515034,
+              "p99": 0.10721000144258144,
+              "total": 28.927901410497725
+            },
+            "max_market_orders": 10,
+            "opponent": "kaito_v21",
+            "opponent_action_digest": "1e45d2bceecf95fae000e5afe4a07ec63aa5c85526e20730609ce7075cfd9b79",
+            "opponent_exception": null,
+            "opponent_money": 66033.0,
+            "opponent_reward": 66033.0,
+            "overage_exhausted": false,
+            "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\performance_optimization_2026_08_11\\controls\\layer_04_single_materialization_pipeline\\v27_current_meta\\main.py",
+            "seat": 0,
+            "seed": 861505,
+            "statuses": [
+              "DONE",
+              "DONE"
+            ],
+            "terminal_inventory": {
+              "marked_value": 0.0,
+              "units": 0
+            },
+            "timeout_calls": 0
+          },
+          "development": {
+            "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+            "action_issues": {
+              "hand_alignment": 0,
+              "malformed": 0,
+              "market_overflow": 0,
+              "seed_overcommit": 0
+            },
+            "calls": 719,
+            "candidate_money": 84612.0,
+            "candidate_reward": 84612.0,
+            "diagnostics": {
+              "animal_escapes": 0,
+              "crop_deaths": 0,
+              "fresh_crop_deaths": 0,
+              "shed_overflow_events": 0,
+              "shed_overflow_units": 0
+            },
+            "exception": null,
+            "import_ms": 70.21580007858574,
+            "latency_ms": {
+              "calls": 719,
+              "max": 0.22339995484799147,
+              "p50": 0.024399952962994576,
+              "p95": 0.06592002464458349,
+              "p99": 0.1073380233719948,
+              "total": 21.94859937299043
+            },
+            "max_market_orders": 10,
+            "opponent": "kaito_v21",
+            "opponent_action_digest": "1e45d2bceecf95fae000e5afe4a07ec63aa5c85526e20730609ce7075cfd9b79",
+            "opponent_exception": null,
+            "opponent_money": 66033.0,
+            "opponent_reward": 66033.0,
+            "overage_exhausted": false,
+            "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\v27_current_meta\\development_main.py",
+            "seat": 0,
+            "seed": 861505,
+            "statuses": [
+              "DONE",
+              "DONE"
+            ],
+            "terminal_inventory": {
+              "marked_value": 0.0,
+              "units": 0
+            },
+            "timeout_calls": 0
+          },
+          "equal": true,
+          "generated": {
+            "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+            "action_issues": {
+              "hand_alignment": 0,
+              "malformed": 0,
+              "market_overflow": 0,
+              "seed_overcommit": 0
+            },
+            "calls": 719,
+            "candidate_money": 84612.0,
+            "candidate_reward": 84612.0,
+            "diagnostics": {
+              "animal_escapes": 0,
+              "crop_deaths": 0,
+              "fresh_crop_deaths": 0,
+              "shed_overflow_events": 0,
+              "shed_overflow_units": 0
+            },
+            "exception": null,
+            "import_ms": 2.5577000342309475,
+            "latency_ms": {
+              "calls": 719,
+              "max": 0.5050000036135316,
+              "p50": 0.02629996743053198,
+              "p95": 0.07943991804495455,
+              "p99": 0.13933201320469418,
+              "total": 24.740501772612333
+            },
+            "max_market_orders": 10,
+            "opponent": "kaito_v21",
+            "opponent_action_digest": "1e45d2bceecf95fae000e5afe4a07ec63aa5c85526e20730609ce7075cfd9b79",
+            "opponent_exception": null,
+            "opponent_money": 66033.0,
+            "opponent_reward": 66033.0,
+            "overage_exhausted": false,
+            "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\v27_current_meta\\main.py",
+            "seat": 0,
+            "seed": 861505,
+            "statuses": [
+              "DONE",
+              "DONE"
+            ],
+            "terminal_inventory": {
+              "marked_value": 0.0,
+              "units": 0
+            },
+            "timeout_calls": 0
+          },
+          "seat": 0
+        },
+        {
+          "before": {
+            "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+            "action_issues": {
+              "hand_alignment": 0,
+              "malformed": 0,
+              "market_overflow": 0,
+              "seed_overcommit": 0
+            },
+            "calls": 719,
+            "candidate_money": 84612.0,
+            "candidate_reward": 84612.0,
+            "diagnostics": {
+              "animal_escapes": 0,
+              "crop_deaths": 0,
+              "fresh_crop_deaths": 0,
+              "shed_overflow_events": 0,
+              "shed_overflow_units": 0
+            },
+            "exception": null,
+            "import_ms": 3.3210000256076455,
+            "latency_ms": {
+              "calls": 719,
+              "max": 0.3524000057950616,
+              "p50": 0.027999980375170708,
+              "p95": 0.07982002571225166,
+              "p99": 0.14018199872225523,
+              "total": 26.615300797857344
+            },
+            "max_market_orders": 10,
+            "opponent": "kaito_v21",
+            "opponent_action_digest": "393a57abb2d93da979d13b78bbd0dff88edb58aa5e5e1712a41a11153d139446",
+            "opponent_exception": null,
+            "opponent_money": 66033.0,
+            "opponent_reward": 66033.0,
+            "overage_exhausted": false,
+            "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\performance_optimization_2026_08_11\\controls\\layer_04_single_materialization_pipeline\\v27_current_meta\\main.py",
+            "seat": 1,
+            "seed": 861505,
+            "statuses": [
+              "DONE",
+              "DONE"
+            ],
+            "terminal_inventory": {
+              "marked_value": 0.0,
+              "units": 0
+            },
+            "timeout_calls": 0
+          },
+          "development": {
+            "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+            "action_issues": {
+              "hand_alignment": 0,
+              "malformed": 0,
+              "market_overflow": 0,
+              "seed_overcommit": 0
+            },
+            "calls": 719,
+            "candidate_money": 84612.0,
+            "candidate_reward": 84612.0,
+            "diagnostics": {
+              "animal_escapes": 0,
+              "crop_deaths": 0,
+              "fresh_crop_deaths": 0,
+              "shed_overflow_events": 0,
+              "shed_overflow_units": 0
+            },
+            "exception": null,
+            "import_ms": 6.1888000927865505,
+            "latency_ms": {
+              "calls": 719,
+              "max": 0.3223000094294548,
+              "p50": 0.021200045011937618,
+              "p95": 0.06601993227377534,
+              "p99": 0.1211640122346585,
+              "total": 20.584898651577532
+            },
+            "max_market_orders": 10,
+            "opponent": "kaito_v21",
+            "opponent_action_digest": "393a57abb2d93da979d13b78bbd0dff88edb58aa5e5e1712a41a11153d139446",
+            "opponent_exception": null,
+            "opponent_money": 66033.0,
+            "opponent_reward": 66033.0,
+            "overage_exhausted": false,
+            "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\v27_current_meta\\development_main.py",
+            "seat": 1,
+            "seed": 861505,
+            "statuses": [
+              "DONE",
+              "DONE"
+            ],
+            "terminal_inventory": {
+              "marked_value": 0.0,
+              "units": 0
+            },
+            "timeout_calls": 0
+          },
+          "equal": true,
+          "generated": {
+            "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+            "action_issues": {
+              "hand_alignment": 0,
+              "malformed": 0,
+              "market_overflow": 0,
+              "seed_overcommit": 0
+            },
+            "calls": 719,
+            "candidate_money": 84612.0,
+            "candidate_reward": 84612.0,
+            "diagnostics": {
+              "animal_escapes": 0,
+              "crop_deaths": 0,
+              "fresh_crop_deaths": 0,
+              "shed_overflow_events": 0,
+              "shed_overflow_units": 0
+            },
+            "exception": null,
+            "import_ms": 2.4689999409019947,
+            "latency_ms": {
+              "calls": 719,
+              "max": 0.26570004411041737,
+              "p50": 0.020700041204690933,
+              "p95": 0.07556999335065487,
+              "p99": 0.14346994925290363,
+              "total": 21.731199114583433
+            },
+            "max_market_orders": 10,
+            "opponent": "kaito_v21",
+            "opponent_action_digest": "393a57abb2d93da979d13b78bbd0dff88edb58aa5e5e1712a41a11153d139446",
+            "opponent_exception": null,
+            "opponent_money": 66033.0,
+            "opponent_reward": 66033.0,
+            "overage_exhausted": false,
+            "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\v27_current_meta\\main.py",
+            "seat": 1,
+            "seed": 861505,
+            "statuses": [
+              "DONE",
+              "DONE"
+            ],
+            "terminal_inventory": {
+              "marked_value": 0.0,
+              "units": 0
+            },
+            "timeout_calls": 0
+          },
+          "seat": 1
+        }
+      ],
+      "performance": {
+        "before": [
+          {
+            "action_digests": [
+              "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a"
+            ],
+            "allocation": {
+              "allocated_blocks_delta": 194,
+              "gc_collections_delta": 0,
+              "traced_current_delta_bytes": 15272,
+              "traced_peak_delta_bytes": 69816
+            },
+            "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\performance_optimization_2026_08_11\\controls\\layer_04_single_materialization_pipeline\\v27_current_meta\\main.py",
+            "per_turn_ms_median_run": {
+              "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+              "allocated_blocks_delta": 150,
+              "calls": 719,
+              "gc_collections_delta": 0,
+              "import_ms": 3.2771999249234796,
+              "max": 0.18679990898817778,
+              "p50": 0.010999967344105244,
+              "p95": 0.050160032697021975,
+              "p99": 0.10959204053506308,
+              "repetition": 9,
+              "total": 12.248498620465398
+            },
+            "repetitions": 15,
+            "runs": [
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 1113,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.9785000951960683,
+                "max": 0.35900005605071783,
+                "p50": 0.010899966582655907,
+                "p95": 0.04774000262841584,
+                "p99": 0.1113539584912372,
+                "repetition": 0,
+                "total": 12.031198246404529
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 151,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.8513999423012137,
+                "max": 0.21500000730156898,
+                "p50": 0.01179997343569994,
+                "p95": 0.046380003914237064,
+                "p99": 0.07005606777966027,
+                "repetition": 1,
+                "total": 12.067701551131904
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 151,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.6140999980270863,
+                "max": 0.20320003386586905,
+                "p50": 0.011200085282325745,
+                "p95": 0.04712000954896212,
+                "p99": 0.08623597910627746,
+                "repetition": 2,
+                "total": 11.703099822625518
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 151,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 4.0432000532746315,
+                "max": 0.27860002592206,
+                "p50": 0.01200009137392044,
+                "p95": 0.05210994277149439,
+                "p99": 0.10007996810600207,
+                "repetition": 3,
+                "total": 12.815198162570596
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 151,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 3.439399995841086,
+                "max": 0.21709990687668324,
+                "p50": 0.011299969628453255,
+                "p95": 0.05508005851879718,
+                "p99": 0.12947195908054732,
+                "repetition": 4,
+                "total": 12.883599963970482
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 151,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.978299977257848,
+                "max": 0.3206999972462654,
+                "p50": 0.010899966582655907,
+                "p95": 0.052710052113980055,
+                "p99": 0.13503798050805932,
+                "repetition": 5,
+                "total": 13.537501450628042
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 151,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 3.1661000102758408,
+                "max": 0.28579996433109045,
+                "p50": 0.012400094419717789,
+                "p95": 0.05670996615663171,
+                "p99": 0.10933403857052396,
+                "repetition": 6,
+                "total": 13.677200651727617
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 151,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 3.3793000038713217,
+                "max": 0.19480008631944656,
+                "p50": 0.011599971912801266,
+                "p95": 0.048610020894557245,
+                "p99": 0.0818460411392155,
+                "repetition": 7,
+                "total": 12.300801812671125
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 151,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 3.2046999549493194,
+                "max": 0.5626999773085117,
+                "p50": 0.010699965059757233,
+                "p95": 0.04791001556441188,
+                "p99": 0.09670003782957817,
+                "repetition": 8,
+                "total": 12.250198284164071
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 150,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 3.2771999249234796,
+                "max": 0.18679990898817778,
+                "p50": 0.010999967344105244,
+                "p95": 0.050160032697021975,
+                "p99": 0.10959204053506308,
+                "repetition": 9,
+                "total": 12.248498620465398
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 151,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.9511998873203993,
+                "max": 0.14140002895146608,
+                "p50": 0.010400079190731049,
+                "p95": 0.04639000399038198,
+                "p99": 0.0990640558302405,
+                "repetition": 10,
+                "total": 11.244000168517232
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 151,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.6039000367745757,
+                "max": 0.17889996524900198,
+                "p50": 0.010699965059757233,
+                "p95": 0.04529999569058418,
+                "p99": 0.0679879565723242,
+                "repetition": 11,
+                "total": 10.945000103674829
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 151,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.6074000634253025,
+                "max": 0.13639999087899923,
+                "p50": 0.011299969628453255,
+                "p95": 0.045149994548410254,
+                "p99": 0.09095599409192803,
+                "repetition": 12,
+                "total": 11.882399558089674
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 151,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 3.4241999965161085,
+                "max": 0.43649994768202305,
+                "p50": 0.011899974197149277,
+                "p95": 0.04852002020925284,
+                "p99": 0.06491002859547737,
+                "repetition": 13,
+                "total": 11.953899287618697
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 151,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.8619999065995216,
+                "max": 0.44840003829449415,
+                "p50": 0.014499993994832039,
+                "p95": 0.0555199570953846,
+                "p99": 0.09823995409533441,
+                "repetition": 14,
+                "total": 14.968299656175077
+              }
+            ],
+            "season_total_ms": {
+              "max": 14.968299656175077,
+              "mean": 12.43390648936232,
+              "median": 12.248498620465398,
+              "min": 10.945000103674829,
+              "relative_range": 0.3284728746899575
+            },
+            "stable_digest": true
+          },
+          {
+            "action_digests": [
+              "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d"
+            ],
+            "allocation": {
+              "allocated_blocks_delta": 191,
+              "gc_collections_delta": 0,
+              "traced_current_delta_bytes": 14992,
+              "traced_peak_delta_bytes": 69536
+            },
+            "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\performance_optimization_2026_08_11\\controls\\layer_04_single_materialization_pipeline\\v27_current_meta\\main.py",
+            "per_turn_ms_median_run": {
+              "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+              "allocated_blocks_delta": 149,
+              "calls": 719,
+              "gc_collections_delta": 0,
+              "import_ms": 2.819199929945171,
+              "max": 0.32979995012283325,
+              "p50": 0.00970007386058569,
+              "p95": 0.04244997398927809,
+              "p99": 0.0799099309369922,
+              "repetition": 5,
+              "total": 10.839701164513826
+            },
+            "repetitions": 15,
+            "runs": [
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 1111,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 3.666499978862703,
+                "max": 0.32460002694278955,
+                "p50": 0.009500072337687016,
+                "p95": 0.04018006147816779,
+                "p99": 0.09025798877701223,
+                "repetition": 0,
+                "total": 10.58040198404342
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 149,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 3.264299943111837,
+                "max": 0.1802000915631652,
+                "p50": 0.009500072337687016,
+                "p95": 0.04132007015869022,
+                "p99": 0.08141603786498353,
+                "repetition": 1,
+                "total": 10.12800121679902
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 149,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.9922000830993056,
+                "max": 0.152900000102818,
+                "p50": 0.0097999582067132,
+                "p95": 0.04325998015701772,
+                "p99": 0.0727379927411676,
+                "repetition": 2,
+                "total": 10.618602624163032
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 149,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 3.621899988502264,
+                "max": 0.27550000231713057,
+                "p50": 0.009899958968162537,
+                "p95": 0.04743001190945507,
+                "p99": 0.13082596939057134,
+                "repetition": 3,
+                "total": 11.901998543180525
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 149,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 3.1268999446183443,
+                "max": 0.14439993537962437,
+                "p50": 0.009500072337687016,
+                "p95": 0.044799991883337525,
+                "p99": 0.12004998279735458,
+                "repetition": 4,
+                "total": 10.841101640835404
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 149,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.819199929945171,
+                "max": 0.32979995012283325,
+                "p50": 0.00970007386058569,
+                "p95": 0.04244997398927809,
+                "p99": 0.0799099309369922,
+                "repetition": 5,
+                "total": 10.839701164513826
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 149,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 3.1147999688982964,
+                "max": 0.14020001981407404,
+                "p50": 0.009400071576237679,
+                "p95": 0.04316997947171332,
+                "p99": 0.09600193705409771,
+                "repetition": 6,
+                "total": 10.503299068659544
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 149,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.8854000847786665,
+                "max": 0.19299995619803667,
+                "p50": 0.01109996810555458,
+                "p95": 0.06423002341762186,
+                "p99": 0.13176405103877212,
+                "repetition": 7,
+                "total": 14.056400046683848
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 149,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 3.66539997048676,
+                "max": 0.14600006397813559,
+                "p50": 0.009899958968162537,
+                "p95": 0.0438499846495688,
+                "p99": 0.09136401815339974,
+                "repetition": 8,
+                "total": 10.803900891914964
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 149,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 4.65359992813319,
+                "max": 0.3024999750778079,
+                "p50": 0.00970007386058569,
+                "p95": 0.048360007349401726,
+                "p99": 0.12449801666662116,
+                "repetition": 9,
+                "total": 11.837703175842762
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 149,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 7.799000013619661,
+                "max": 0.20400003995746374,
+                "p50": 0.009699957445263863,
+                "p95": 0.04324998008087278,
+                "p99": 0.07775600999593739,
+                "repetition": 10,
+                "total": 10.264299809932709
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 149,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 3.532599890604615,
+                "max": 0.1588999293744564,
+                "p50": 0.009499955922365189,
+                "p95": 0.04573999904096127,
+                "p99": 0.09112801635637931,
+                "repetition": 11,
+                "total": 10.923299472779036
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 149,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 6.6275999415665865,
+                "max": 0.18939992878586054,
+                "p50": 0.010199961252510548,
+                "p95": 0.04242007853463293,
+                "p99": 0.06852603517472766,
+                "repetition": 12,
+                "total": 10.655398480594158
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 149,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.9447999550029635,
+                "max": 0.1976999919861555,
+                "p50": 0.011699972674250603,
+                "p95": 0.050720036961138255,
+                "p99": 0.08090393850579869,
+                "repetition": 13,
+                "total": 12.73729873355478
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 149,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.9218000127002597,
+                "max": 0.2899999963119626,
+                "p50": 0.01009996049106121,
+                "p95": 0.04796001594513661,
+                "p99": 0.11008192785084248,
+                "repetition": 14,
+                "total": 11.99010165873915
+              }
+            ],
+            "season_total_ms": {
+              "max": 14.056400046683848,
+              "mean": 11.245433900815746,
+              "median": 10.839701164513826,
+              "min": 10.12800121679902,
+              "relative_range": 0.36240840686137316
+            },
+            "stable_digest": true
+          }
+        ],
+        "cold_import": {
+          "before": {
+            "max_ms": 19.816200016066432,
+            "median_ms": 15.683199977502227,
+            "min_ms": 14.369399985298514,
+            "p95_ms": 19.132859946694225,
+            "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\performance_optimization_2026_08_11\\controls\\layer_04_single_materialization_pipeline\\v27_current_meta\\main.py",
+            "raw_ms": [
+              14.369399985298514,
+              15.427400008775294,
+              15.567900030873716,
+              16.06670010369271,
+              15.32120001502335,
+              15.852099983021617,
+              16.140999970957637,
+              16.17469999473542,
+              15.683199977502227,
+              16.528200008906424,
+              14.779399964027107,
+              15.356000047177076,
+              19.816200016066432,
+              15.668499981984496,
+              18.83999991696328
+            ],
+            "repetitions": 15
+          },
+          "generated": {
+            "max_ms": 21.863500005565584,
+            "median_ms": 15.1773999677971,
+            "min_ms": 13.893899973481894,
+            "p95_ms": 19.621539965737608,
+            "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\v27_current_meta\\main.py",
+            "raw_ms": [
+              21.863500005565584,
+              18.66069994866848,
+              14.692500000819564,
+              14.170799986459315,
+              14.96259996201843,
+              13.893899973481894,
+              15.1773999677971,
+              14.331300044432282,
+              15.210699988529086,
+              15.330299967899919,
+              16.21350005734712,
+              16.15570008289069,
+              16.9406000059098,
+              14.83380002900958,
+              14.272899948991835
+            ],
+            "repetitions": 15
+          }
+        },
+        "generated": [
+          {
+            "action_digests": [
+              "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a"
+            ],
+            "allocation": {
+              "allocated_blocks_delta": 194,
+              "gc_collections_delta": 0,
+              "traced_current_delta_bytes": 15272,
+              "traced_peak_delta_bytes": 69816
+            },
+            "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\v27_current_meta\\main.py",
+            "per_turn_ms_median_run": {
+              "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+              "allocated_blocks_delta": 151,
+              "calls": 719,
+              "gc_collections_delta": 0,
+              "import_ms": 3.2652000663802028,
+              "max": 0.29170000925660133,
+              "p50": 0.009499955922365189,
+              "p95": 0.04652000498026612,
+              "p99": 0.13903991552069866,
+              "repetition": 7,
+              "total": 11.799901723861694
+            },
+            "repetitions": 15,
+            "runs": [
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 1113,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 3.60769999679178,
+                "max": 0.13679999392479658,
+                "p50": 0.01379998866468668,
+                "p95": 0.05341004580259323,
+                "p99": 0.08132994174957282,
+                "repetition": 0,
+                "total": 13.538000639528036
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 151,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.3506999714300036,
+                "max": 0.36990002263337374,
+                "p50": 0.015199999324977398,
+                "p95": 0.055050069931894555,
+                "p99": 0.08327393559738998,
+                "repetition": 1,
+                "total": 15.067699365317822
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 151,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.0079000387340784,
+                "max": 0.26760005857795477,
+                "p50": 0.013199984095990658,
+                "p95": 0.05490995245054364,
+                "p99": 0.08434796473011381,
+                "repetition": 2,
+                "total": 13.489798759110272
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 151,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.306099981069565,
+                "max": 0.24269998539239168,
+                "p50": 0.012499978765845299,
+                "p95": 0.05191004602238536,
+                "p99": 0.09534802753478297,
+                "repetition": 3,
+                "total": 13.446598197333515
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 151,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.25060002412647,
+                "max": 0.14110002666711807,
+                "p50": 0.010100076906383038,
+                "p95": 0.04153007175773383,
+                "p99": 0.06843795999884611,
+                "repetition": 4,
+                "total": 10.416300385259092
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 151,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.402000012807548,
+                "max": 0.18879992421716452,
+                "p50": 0.010300078429281712,
+                "p95": 0.042299984488636255,
+                "p99": 0.07152796257287265,
+                "repetition": 5,
+                "total": 10.724802385084331
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 151,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.9232000233605504,
+                "max": 0.1846000086516142,
+                "p50": 0.0097999582067132,
+                "p95": 0.04344998160377146,
+                "p99": 0.10095197474584051,
+                "repetition": 6,
+                "total": 11.014299117960036
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 151,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 3.2652000663802028,
+                "max": 0.29170000925660133,
+                "p50": 0.009499955922365189,
+                "p95": 0.04652000498026612,
+                "p99": 0.13903991552069866,
+                "repetition": 7,
+                "total": 11.799901723861694
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 151,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.1522999741137028,
+                "max": 0.26819994673132896,
+                "p50": 0.010400079190731049,
+                "p95": 0.04910002462565899,
+                "p99": 0.09219200350344209,
+                "repetition": 8,
+                "total": 11.899999459274113
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 151,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.2470999974757433,
+                "max": 0.17549993935972452,
+                "p50": 0.010100076906383038,
+                "p95": 0.046720006503164775,
+                "p99": 0.08761398959904948,
+                "repetition": 9,
+                "total": 10.890499106608331
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 151,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.8668000595644116,
+                "max": 0.3559000324457884,
+                "p50": 0.010499963536858559,
+                "p95": 0.04941001534461975,
+                "p99": 0.12812994886189732,
+                "repetition": 10,
+                "total": 12.53530359826982
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 151,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.405600040219724,
+                "max": 0.17609994392842054,
+                "p50": 0.0097999582067132,
+                "p95": 0.04595000064000489,
+                "p99": 0.10200996184721592,
+                "repetition": 11,
+                "total": 11.202399502508342
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 151,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.9516000067815185,
+                "max": 0.28499995823949575,
+                "p50": 0.010199961252510548,
+                "p95": 0.04811001708731055,
+                "p99": 0.07976404624059823,
+                "repetition": 12,
+                "total": 11.38820091728121
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 151,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.2176000056788325,
+                "max": 0.219699926674366,
+                "p50": 0.00970007386058569,
+                "p95": 0.04287997726351027,
+                "p99": 0.08963007945567376,
+                "repetition": 13,
+                "total": 11.028500972315669
+              },
+              {
+                "action_digest": "b2dcf24df533960796aaac5c17309da88f85b8134f9179a6eff57c994725eb4a",
+                "allocated_blocks_delta": 151,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 4.795500077307224,
+                "max": 0.16190006863325834,
+                "p50": 0.010299962013959885,
+                "p95": 0.051610032096505165,
+                "p99": 0.11793608311563754,
+                "repetition": 14,
+                "total": 11.991498293355107
+              }
+            ],
+            "season_total_ms": {
+              "max": 15.067699365317822,
+              "mean": 12.028920161537826,
+              "median": 11.799901723861694,
+              "min": 10.416300385259092,
+              "relative_range": 0.39418963724525746
+            },
+            "stable_digest": true
+          },
+          {
+            "action_digests": [
+              "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d"
+            ],
+            "allocation": {
+              "allocated_blocks_delta": 191,
+              "gc_collections_delta": 0,
+              "traced_current_delta_bytes": 14992,
+              "traced_peak_delta_bytes": 69536
+            },
+            "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\v27_current_meta\\main.py",
+            "per_turn_ms_median_run": {
+              "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+              "allocated_blocks_delta": 149,
+              "calls": 719,
+              "gc_collections_delta": 0,
+              "import_ms": 2.3261000169441104,
+              "max": 0.2540999557822943,
+              "p50": 0.010299962013959885,
+              "p95": 0.051300041377544424,
+              "p99": 0.12743803905323153,
+              "repetition": 4,
+              "total": 12.405101559124887
+            },
+            "repetitions": 15,
+            "runs": [
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 1111,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 3.5651999060064554,
+                "max": 0.4205999430269003,
+                "p50": 0.010399962775409222,
+                "p95": 0.04884002264589072,
+                "p99": 0.1411040266975764,
+                "repetition": 0,
+                "total": 12.79810129199177
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 149,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 4.130100016482174,
+                "max": 0.14219991862773895,
+                "p50": 0.013499986380338669,
+                "p95": 0.05125004099681974,
+                "p99": 0.08215794805437335,
+                "repetition": 1,
+                "total": 13.511099154129624
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 149,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.9877000488340855,
+                "max": 0.22209994494915009,
+                "p50": 0.012299977242946625,
+                "p95": 0.04537999629974367,
+                "p99": 0.08080203318968421,
+                "repetition": 2,
+                "total": 12.426897534169257
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 149,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.4061999283730984,
+                "max": 0.3174000885337591,
+                "p50": 0.009900075383484364,
+                "p95": 0.05786998663097622,
+                "p99": 0.15272399876266735,
+                "repetition": 3,
+                "total": 13.516700943000615
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 149,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.3261000169441104,
+                "max": 0.2540999557822943,
+                "p50": 0.010299962013959885,
+                "p95": 0.051300041377544424,
+                "p99": 0.12743803905323153,
+                "repetition": 4,
+                "total": 12.405101559124887
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 149,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.3979999823495746,
+                "max": 0.2367999404668808,
+                "p50": 0.0097999582067132,
+                "p95": 0.04730001091957092,
+                "p99": 0.12134999269619622,
+                "repetition": 5,
+                "total": 11.462699971161783
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 149,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.323599997907877,
+                "max": 0.13880000915378332,
+                "p50": 0.01209997572004795,
+                "p95": 0.05125004099681974,
+                "p99": 0.07606799714267266,
+                "repetition": 6,
+                "total": 12.857497669756413
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 149,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.2462999913841486,
+                "max": 0.27489999774843454,
+                "p50": 0.009899958968162537,
+                "p95": 0.040929974056780345,
+                "p99": 0.07033197442069662,
+                "repetition": 7,
+                "total": 10.489498497918248
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 149,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.4087000638246536,
+                "max": 0.29250001534819603,
+                "p50": 0.010999967344105244,
+                "p95": 0.050530035514384536,
+                "p99": 0.12084798887372025,
+                "repetition": 8,
+                "total": 12.952099554240704
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 149,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.4634000146761537,
+                "max": 0.1841000048443675,
+                "p50": 0.01070008147507906,
+                "p95": 0.052009930368512876,
+                "p99": 0.08946398273110391,
+                "repetition": 9,
+                "total": 12.233101879246533
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 149,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.873999997973442,
+                "max": 0.2956000389531255,
+                "p50": 0.01170008908957243,
+                "p95": 0.0474100117571652,
+                "p99": 0.07266397122293712,
+                "repetition": 10,
+                "total": 12.152702547609806
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 149,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.590700052678585,
+                "max": 0.34119992051273584,
+                "p50": 0.010100076906383038,
+                "p95": 0.04602000117301941,
+                "p99": 0.12008598307147633,
+                "repetition": 11,
+                "total": 11.464600334875286
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 149,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.7112000389024615,
+                "max": 0.1916999462991953,
+                "p50": 0.010299962013959885,
+                "p95": 0.05004002014175058,
+                "p99": 0.11955797905102382,
+                "repetition": 12,
+                "total": 12.036801665090024
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 149,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.3886999115347862,
+                "max": 0.40769996121525764,
+                "p50": 0.009899958968162537,
+                "p95": 0.05058993119746451,
+                "p99": 0.1473459787666803,
+                "repetition": 13,
+                "total": 12.798295821994543
+              },
+              {
+                "action_digest": "e6f4872e236cd08fd5a279e53c385f6de655a7f48f2379ee901e025a981b538d",
+                "allocated_blocks_delta": 149,
+                "calls": 719,
+                "gc_collections_delta": 0,
+                "import_ms": 2.8958000475540757,
+                "max": 0.21299999207258224,
+                "p50": 0.010800082236528397,
+                "p95": 0.04539999645203352,
+                "p99": 0.06917606107890614,
+                "repetition": 14,
+                "total": 11.253901640884578
+              }
+            ],
+            "season_total_ms": {
+              "max": 13.516700943000615,
+              "mean": 12.290606671012938,
+              "median": 12.405101559124887,
+              "min": 10.489498497918248,
+              "relative_range": 0.24402883206188916
+            },
+            "stable_digest": true
+          }
+        ],
+        "improvement_fraction": -0.04837118131375188,
+        "season_median_ms_after": 12.10250164149329,
+        "season_median_ms_before": 11.544099892489612,
+        "speedup": 0.9538606343097525
+      }
+    }
+  }
+}

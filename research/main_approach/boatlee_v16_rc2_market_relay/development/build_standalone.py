@@ -14,6 +14,41 @@ DEVELOPMENT = Path(__file__).resolve().parent
 APPROACH = DEVELOPMENT.parent
 MODULES = ('constants.py', 'runtime.py', 'weed_repair.py', 'market.py', 'livestock.py', 'wool.py', 'base_agent.py', 'relay.py', 'agent.py')
 SUMMARY = 'Boatlee V16-RC2-MarketRelay for Kaggriculture.'
+DEFAULT_CODEC = "b64"
+
+
+def _route_metadata(actions):
+    hand_counts = []
+    weed_steps = []
+    multi_sell_steps = []
+    livestock_steps = []
+    wool_sell_steps = []
+    relay_targets = {}
+    for step, action in enumerate(actions):
+        hands = action.get("hands", []) or []
+        market = action.get("market", []) or []
+        hand_counts.append(len(hands))
+        unit_actions = [action.get("farmer", ["PASS"]), *hands]
+        if any(order and order[0] in ("BUILD_PASTURE", "PLANT") for order in unit_actions):
+            weed_steps.append(step)
+        if sum(bool(len(order) >= 3 and order[0] == "SELL") for order in market) >= 2:
+            multi_sell_steps.append(step)
+        if any(len(order) >= 2 and order[1] == "COW" for order in [*hands, *market]):
+            livestock_steps.append(step)
+        if any(len(order) >= 2 and order[0] == "SELL" and order[1] == "WOOL" for order in market):
+            wool_sell_steps.append(step)
+    for step in range(len(actions)):
+        future_step = step + 3
+        if not (278 <= step <= 662 and 281 <= future_step <= 665 and future_step % 24 == 17):
+            continue
+        quantity = sum(
+            max(0, int(order[2]))
+            for order in (actions[future_step].get("market", []) or [])
+            if len(order) >= 3 and order[0] == "SELL" and order[1] == "FERTILIZER"
+        )
+        if quantity:
+            relay_targets[step] = quantity
+    return hand_counts, weed_steps, multi_sell_steps, livestock_steps, wool_sell_steps, relay_targets
 
 
 def _module_body(name):
@@ -21,12 +56,20 @@ def _module_body(name):
     return "\n".join(line for line in lines if not line.startswith("from ."))
 
 
-def render():
+def render(codec=DEFAULT_CODEC):
     actions = json.loads((DEVELOPMENT / "route_actions.json").read_text(encoding="utf-8"))
     if len(actions) != 719:
         raise ValueError(f"expected 719 route actions, got {len(actions)}")
     raw = json.dumps(actions, separators=(",", ":"), ensure_ascii=True).encode("utf-8")
-    payload = base64.b85encode(zlib.compress(raw, level=9)).decode("ascii")
+    if codec == "b64":
+        payload = base64.b64encode(zlib.compress(raw, level=9)).decode("ascii")
+        decoder = "b64decode"
+    elif codec == "b85":
+        payload = base64.b85encode(zlib.compress(raw, level=9)).decode("ascii")
+        decoder = "b85decode"
+    else:
+        raise ValueError(codec)
+    hand_counts, weed_steps, multi_sell_steps, livestock_steps, wool_sell_steps, relay_targets = _route_metadata(actions)
     chunks = "\n".join(f"        {chunk!r}" for chunk in textwrap.wrap(payload, 100))
     header = (
         f'"""{SUMMARY}\n\n'
@@ -36,12 +79,19 @@ def render():
         'import base64\n'
         'import json\n'
         'import zlib\n\n\n'
-        '_LEGACY_ACTIONS = json.loads(zlib.decompress(base64.b85decode(\n'
+        f'_LEGACY_ACTIONS = json.loads(zlib.decompress(base64.{decoder}(\n'
         '    (\n'
         f'{chunks}\n'
         '    )\n'
         ')).decode("utf-8"))\n'
         '_REBALANCE_ACTIONS = _LEGACY_ACTIONS\n'
+        f'_ROUTE_HAND_COUNTS = {tuple(hand_counts)!r}\n'
+        f'_WEED_CANDIDATE_STEPS = frozenset({tuple(weed_steps)!r})\n'
+        f'_MULTI_SELL_STEPS = frozenset({tuple(multi_sell_steps)!r})\n'
+        f'_LIVESTOCK_ROUTE_STEPS = frozenset({tuple(livestock_steps)!r})\n'
+        f'_WOOL_SELL_STEPS = frozenset({tuple(wool_sell_steps)!r})\n'
+        f'_RELAY_TARGET_QUANTITIES = {relay_targets!r}\n'
+        '_RELAY_CHECKPOINT_STEPS = frozenset((216, 240, 264))\n'
     )
     bodies = [header.rstrip()]
     for name in MODULES:
@@ -52,9 +102,10 @@ def render():
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--check", action="store_true")
+    parser.add_argument("--codec", choices=("b85", "b64"), default=DEFAULT_CODEC)
     parser.add_argument("--output", type=Path, default=APPROACH / "main.py")
     args = parser.parse_args()
-    expected = render()
+    expected = render(args.codec)
     if args.check:
         actual = args.output.read_text(encoding="utf-8")
         if actual != expected:

@@ -19,3 +19,14 @@ python research\main_approach\v27_current_meta\development\build_standalone.py -
 
 Do not share modules or route data with another approach.  Cross-approach
 similarity is provenance, not a reason to couple their editable sources.
+
+## Performance contract
+
+- Route actions are read-only templates. Aligned static turns return the
+  template directly; a dynamic turn uses the action-schema copier once.
+- Route hand counts, weed-candidate turns, and multi-SELL turns are computed
+  once by `route.py` for development and emitted as literals by the builder.
+- Weed repair and SELL ranking mutate only a materialized action. The final
+  schema/hand-alignment projection remains immediately before return.
+- The generated standalone uses deterministic JSON + zlib + Base64 route
+  storage. It does not read the development route at runtime.

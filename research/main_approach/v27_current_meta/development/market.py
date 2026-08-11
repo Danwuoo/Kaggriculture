@@ -3,7 +3,7 @@
 import math
 
 from .constants import _DEMAND_ALPHA, _MARKET_PARAMS, _PRICE_FLOOR, _SHOP_PRODUCTS
-from .runtime import _copy_action, _get, _regime
+from .runtime import _get, _regime
 
 def _shape(name, value):
     value = max(0.0, float(value))
@@ -40,6 +40,16 @@ def _is_sell(order):
         and order[0] == "SELL"
         and order[1] in _MARKET_PARAMS
     )
+
+
+def _has_multiple_sells(action):
+    found = 0
+    for order in action.get("market", []) or []:
+        if _is_sell(order):
+            found += 1
+            if found >= 2:
+                return True
+    return False
 
 
 def _impact_score(obs, order):
@@ -111,7 +121,6 @@ def _order_score(obs, configuration, order):
 
 
 def _rank_sell_slots(obs, action, configuration):
-    action = _copy_action(action)
     market = list(action.get("market") or [])
     rows = [
         (_order_score(obs, configuration, order), -index, list(order))

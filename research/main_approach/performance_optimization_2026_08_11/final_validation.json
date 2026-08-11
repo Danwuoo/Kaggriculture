@@ -1,0 +1,2449 @@
+{
+  "engine": {
+    "commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+    "configuration_blob": "0fcdf2c14c47d3bdc821c02e26263956cf0fd3d8",
+    "configuration_bytes": 5877,
+    "configuration_sha256": "7f196f4aaf9b4e482fbd61ba4bf19f5cec4da0f81938ece756954035a65c0bb5",
+    "python_blob": "4b78842d0f2d4abf6e318a8248b6306454f5c714",
+    "python_bytes": 39801,
+    "python_sha256": "fb9215c5e21a25243e2d13e75b3d70a79cf7d78fff150a90f1bb5eacf9ba2bcf",
+    "vendor_repo": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\.vendor\\kaggle-environments"
+  },
+  "protocol": {
+    "determinism_seed": 873059,
+    "fresh_block": [
+      {
+        "opponent": "kaito_v21",
+        "seed": 873001
+      },
+      {
+        "opponent": "saiteja_3000",
+        "seed": 873019
+      },
+      {
+        "opponent": "other_incumbent",
+        "seed": 873037
+      }
+    ],
+    "isolated_seed": 873077,
+    "seats": [
+      0,
+      1
+    ]
+  },
+  "status": "PASS",
+  "strategies": {
+    "boatlee_v16_rc2_market_relay": {
+      "artifact": {
+        "base64_route_codec": true,
+        "bytes": 37741,
+        "deterministic_builder": true,
+        "forbidden_calls": {
+          "__import__": [],
+          "compile": [],
+          "eval": [],
+          "exec": [],
+          "open": []
+        },
+        "imports": [
+          "base64",
+          "json",
+          "math",
+          "zlib"
+        ],
+        "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\boatlee_v16_rc2_market_relay\\main.py",
+        "sha256": "7d8cc891b48f2ea4a9a3ea7bcaabd5775139325ac398f1d5431f03c2ebc08946",
+        "standard_library_only": true,
+        "under_5_mib": true
+      },
+      "determinism": [
+        {
+          "equal": true,
+          "first": {
+            "action_digest": "5091dd0b18657460ddc422f5c23b778c711c87481b4d68d03a629d7c12a3d610",
+            "action_issues": {
+              "hand_alignment": 0,
+              "malformed": 0,
+              "market_overflow": 0,
+              "seed_overcommit": 0
+            },
+            "calls": 719,
+            "candidate_money": 96560.0,
+            "candidate_reward": 96560.0,
+            "diagnostics": {
+              "animal_escapes": 0,
+              "crop_deaths": 0,
+              "fresh_crop_deaths": 0,
+              "shed_overflow_events": 0,
+              "shed_overflow_units": 0
+            },
+            "exception": null,
+            "import_ms": 2.6072999462485313,
+            "latency_ms": {
+              "calls": 719,
+              "max": 0.34280004911124706,
+              "p50": 0.024999957531690598,
+              "p95": 0.09459002176299697,
+              "p99": 0.16751599498093195,
+              "total": 25.81540052779019
+            },
+            "max_market_orders": 10,
+            "opponent": "kaito_v21",
+            "opponent_action_digest": "1e45d2bceecf95fae000e5afe4a07ec63aa5c85526e20730609ce7075cfd9b79",
+            "opponent_exception": null,
+            "opponent_money": 69601.0,
+            "opponent_reward": 69601.0,
+            "overage_exhausted": false,
+            "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\boatlee_v16_rc2_market_relay\\main.py",
+            "seat": 0,
+            "seed": 873059,
+            "statuses": [
+              "DONE",
+              "DONE"
+            ],
+            "terminal_inventory": {
+              "marked_value": 0.0,
+              "units": 0
+            },
+            "timeout_calls": 0
+          },
+          "seat": 0,
+          "second": {
+            "action_digest": "5091dd0b18657460ddc422f5c23b778c711c87481b4d68d03a629d7c12a3d610",
+            "action_issues": {
+              "hand_alignment": 0,
+              "malformed": 0,
+              "market_overflow": 0,
+              "seed_overcommit": 0
+            },
+            "calls": 719,
+            "candidate_money": 96560.0,
+            "candidate_reward": 96560.0,
+            "diagnostics": {
+              "animal_escapes": 0,
+              "crop_deaths": 0,
+              "fresh_crop_deaths": 0,
+              "shed_overflow_events": 0,
+              "shed_overflow_units": 0
+            },
+            "exception": null,
+            "import_ms": 2.4731000885367393,
+            "latency_ms": {
+              "calls": 719,
+              "max": 0.39499998092651367,
+              "p50": 0.030700000934302807,
+              "p95": 0.09114999556913977,
+              "p99": 0.16046994132921116,
+              "total": 28.35859905462712
+            },
+            "max_market_orders": 10,
+            "opponent": "kaito_v21",
+            "opponent_action_digest": "1e45d2bceecf95fae000e5afe4a07ec63aa5c85526e20730609ce7075cfd9b79",
+            "opponent_exception": null,
+            "opponent_money": 69601.0,
+            "opponent_reward": 69601.0,
+            "overage_exhausted": false,
+            "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\boatlee_v16_rc2_market_relay\\main.py",
+            "seat": 0,
+            "seed": 873059,
+            "statuses": [
+              "DONE",
+              "DONE"
+            ],
+            "terminal_inventory": {
+              "marked_value": 0.0,
+              "units": 0
+            },
+            "timeout_calls": 0
+          }
+        },
+        {
+          "equal": true,
+          "first": {
+            "action_digest": "0ffffc09462688cf6bb70337ef7ed534ffde9319d7d8903fb6c6ec6ec7ec78ec",
+            "action_issues": {
+              "hand_alignment": 0,
+              "malformed": 0,
+              "market_overflow": 0,
+              "seed_overcommit": 0
+            },
+            "calls": 719,
+            "candidate_money": 101424.0,
+            "candidate_reward": 101424.0,
+            "diagnostics": {
+              "animal_escapes": 0,
+              "crop_deaths": 0,
+              "fresh_crop_deaths": 0,
+              "shed_overflow_events": 0,
+              "shed_overflow_units": 0
+            },
+            "exception": null,
+            "import_ms": 3.069999977014959,
+            "latency_ms": {
+              "calls": 719,
+              "max": 0.3836000105366111,
+              "p50": 0.029999995604157448,
+              "p95": 0.08782007498666647,
+              "p99": 0.12835004599764954,
+              "total": 27.477000141516328
+            },
+            "max_market_orders": 10,
+            "opponent": "kaito_v21",
+            "opponent_action_digest": "1e45d2bceecf95fae000e5afe4a07ec63aa5c85526e20730609ce7075cfd9b79",
+            "opponent_exception": null,
+            "opponent_money": 77742.0,
+            "opponent_reward": 77742.0,
+            "overage_exhausted": false,
+            "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\boatlee_v16_rc2_market_relay\\main.py",
+            "seat": 1,
+            "seed": 873059,
+            "statuses": [
+              "DONE",
+              "DONE"
+            ],
+            "terminal_inventory": {
+              "marked_value": 0.0,
+              "units": 0
+            },
+            "timeout_calls": 0
+          },
+          "seat": 1,
+          "second": {
+            "action_digest": "0ffffc09462688cf6bb70337ef7ed534ffde9319d7d8903fb6c6ec6ec7ec78ec",
+            "action_issues": {
+              "hand_alignment": 0,
+              "malformed": 0,
+              "market_overflow": 0,
+              "seed_overcommit": 0
+            },
+            "calls": 719,
+            "candidate_money": 101424.0,
+            "candidate_reward": 101424.0,
+            "diagnostics": {
+              "animal_escapes": 0,
+              "crop_deaths": 0,
+              "fresh_crop_deaths": 0,
+              "shed_overflow_events": 0,
+              "shed_overflow_units": 0
+            },
+            "exception": null,
+            "import_ms": 63.56819998472929,
+            "latency_ms": {
+              "calls": 719,
+              "max": 0.29170000925660133,
+              "p50": 0.02810009755194187,
+              "p95": 0.10848001111298801,
+              "p99": 0.16971401171758835,
+              "total": 28.74199824873358
+            },
+            "max_market_orders": 10,
+            "opponent": "kaito_v21",
+            "opponent_action_digest": "1e45d2bceecf95fae000e5afe4a07ec63aa5c85526e20730609ce7075cfd9b79",
+            "opponent_exception": null,
+            "opponent_money": 77742.0,
+            "opponent_reward": 77742.0,
+            "overage_exhausted": false,
+            "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\boatlee_v16_rc2_market_relay\\main.py",
+            "seat": 1,
+            "seed": 873059,
+            "statuses": [
+              "DONE",
+              "DONE"
+            ],
+            "terminal_inventory": {
+              "marked_value": 0.0,
+              "units": 0
+            },
+            "timeout_calls": 0
+          }
+        }
+      ],
+      "fresh_games": [
+        {
+          "equal": true,
+          "opponent": "kaito_v21",
+          "representations": {
+            "baseline": {
+              "action_digest": "f81deed7fa88cfa63f3943812b8ab9931fb1b25b79cb71b92d7a8aaefba2929d",
+              "action_issues": {
+                "hand_alignment": 0,
+                "malformed": 0,
+                "market_overflow": 0,
+                "seed_overcommit": 0
+              },
+              "calls": 719,
+              "candidate_money": 71222.0,
+              "candidate_reward": 71222.0,
+              "diagnostics": {
+                "animal_escapes": 0,
+                "crop_deaths": 0,
+                "fresh_crop_deaths": 0,
+                "shed_overflow_events": 0,
+                "shed_overflow_units": 0
+              },
+              "exception": null,
+              "import_ms": 88.12560001388192,
+              "latency_ms": {
+                "calls": 719,
+                "max": 1.05640001129359,
+                "p50": 0.20460004452615976,
+                "p95": 0.5652999854646629,
+                "p99": 0.8686520205810677,
+                "total": 175.56890030391514
+              },
+              "max_market_orders": 10,
+              "opponent": "kaito_v21",
+              "opponent_action_digest": "1e45d2bceecf95fae000e5afe4a07ec63aa5c85526e20730609ce7075cfd9b79",
+              "opponent_exception": null,
+              "opponent_money": 43905.0,
+              "opponent_reward": 43905.0,
+              "overage_exhausted": false,
+              "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\performance_optimization_2026_08_11\\controls\\layer_00_baseline\\boatlee_v16_rc2_market_relay\\main.py",
+              "seat": 0,
+              "seed": 873001,
+              "statuses": [
+                "DONE",
+                "DONE"
+              ],
+              "terminal_inventory": {
+                "marked_value": 0.0,
+                "units": 0
+              },
+              "timeout_calls": 0
+            },
+            "development": {
+              "action_digest": "f81deed7fa88cfa63f3943812b8ab9931fb1b25b79cb71b92d7a8aaefba2929d",
+              "action_issues": {
+                "hand_alignment": 0,
+                "malformed": 0,
+                "market_overflow": 0,
+                "seed_overcommit": 0
+              },
+              "calls": 719,
+              "candidate_money": 71222.0,
+              "candidate_reward": 71222.0,
+              "diagnostics": {
+                "animal_escapes": 0,
+                "crop_deaths": 0,
+                "fresh_crop_deaths": 0,
+                "shed_overflow_events": 0,
+                "shed_overflow_units": 0
+              },
+              "exception": null,
+              "import_ms": 14.531400054693222,
+              "latency_ms": {
+                "calls": 719,
+                "max": 0.29470003210008144,
+                "p50": 0.02989999484270811,
+                "p95": 0.09872004156932235,
+                "p99": 0.154444011859596,
+                "total": 29.205499566160142
+              },
+              "max_market_orders": 10,
+              "opponent": "kaito_v21",
+              "opponent_action_digest": "1e45d2bceecf95fae000e5afe4a07ec63aa5c85526e20730609ce7075cfd9b79",
+              "opponent_exception": null,
+              "opponent_money": 43905.0,
+              "opponent_reward": 43905.0,
+              "overage_exhausted": false,
+              "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\boatlee_v16_rc2_market_relay\\development_main.py",
+              "seat": 0,
+              "seed": 873001,
+              "statuses": [
+                "DONE",
+                "DONE"
+              ],
+              "terminal_inventory": {
+                "marked_value": 0.0,
+                "units": 0
+              },
+              "timeout_calls": 0
+            },
+            "generated": {
+              "action_digest": "f81deed7fa88cfa63f3943812b8ab9931fb1b25b79cb71b92d7a8aaefba2929d",
+              "action_issues": {
+                "hand_alignment": 0,
+                "malformed": 0,
+                "market_overflow": 0,
+                "seed_overcommit": 0
+              },
+              "calls": 719,
+              "candidate_money": 71222.0,
+              "candidate_reward": 71222.0,
+              "diagnostics": {
+                "animal_escapes": 0,
+                "crop_deaths": 0,
+                "fresh_crop_deaths": 0,
+                "shed_overflow_events": 0,
+                "shed_overflow_units": 0
+              },
+              "exception": null,
+              "import_ms": 2.782600000500679,
+              "latency_ms": {
+                "calls": 719,
+                "max": 0.30960002914071083,
+                "p50": 0.029199989512562752,
+                "p95": 0.10231996420770886,
+                "p99": 0.18248799256980436,
+                "total": 29.201198602095246
+              },
+              "max_market_orders": 10,
+              "opponent": "kaito_v21",
+              "opponent_action_digest": "1e45d2bceecf95fae000e5afe4a07ec63aa5c85526e20730609ce7075cfd9b79",
+              "opponent_exception": null,
+              "opponent_money": 43905.0,
+              "opponent_reward": 43905.0,
+              "overage_exhausted": false,
+              "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\boatlee_v16_rc2_market_relay\\main.py",
+              "seat": 0,
+              "seed": 873001,
+              "statuses": [
+                "DONE",
+                "DONE"
+              ],
+              "terminal_inventory": {
+                "marked_value": 0.0,
+                "units": 0
+              },
+              "timeout_calls": 0
+            }
+          },
+          "seat": 0,
+          "seed": 873001,
+          "valid": true
+        },
+        {
+          "equal": true,
+          "opponent": "kaito_v21",
+          "representations": {
+            "baseline": {
+              "action_digest": "f81deed7fa88cfa63f3943812b8ab9931fb1b25b79cb71b92d7a8aaefba2929d",
+              "action_issues": {
+                "hand_alignment": 0,
+                "malformed": 0,
+                "market_overflow": 0,
+                "seed_overcommit": 0
+              },
+              "calls": 719,
+              "candidate_money": 71222.0,
+              "candidate_reward": 71222.0,
+              "diagnostics": {
+                "animal_escapes": 0,
+                "crop_deaths": 0,
+                "fresh_crop_deaths": 0,
+                "shed_overflow_events": 0,
+                "shed_overflow_units": 0
+              },
+              "exception": null,
+              "import_ms": 2.8258999809622765,
+              "latency_ms": {
+                "calls": 719,
+                "max": 1.152500044554472,
+                "p50": 0.19649998284876347,
+                "p95": 0.6814999389462176,
+                "p99": 0.9146320214495082,
+                "total": 175.40220159571618
+              },
+              "max_market_orders": 10,
+              "opponent": "kaito_v21",
+              "opponent_action_digest": "1e45d2bceecf95fae000e5afe4a07ec63aa5c85526e20730609ce7075cfd9b79",
+              "opponent_exception": null,
+              "opponent_money": 43905.0,
+              "opponent_reward": 43905.0,
+              "overage_exhausted": false,
+              "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\performance_optimization_2026_08_11\\controls\\layer_00_baseline\\boatlee_v16_rc2_market_relay\\main.py",
+              "seat": 1,
+              "seed": 873001,
+              "statuses": [
+                "DONE",
+                "DONE"
+              ],
+              "terminal_inventory": {
+                "marked_value": 0.0,
+                "units": 0
+              },
+              "timeout_calls": 0
+            },
+            "development": {
+              "action_digest": "f81deed7fa88cfa63f3943812b8ab9931fb1b25b79cb71b92d7a8aaefba2929d",
+              "action_issues": {
+                "hand_alignment": 0,
+                "malformed": 0,
+                "market_overflow": 0,
+                "seed_overcommit": 0
+              },
+              "calls": 719,
+              "candidate_money": 71222.0,
+              "candidate_reward": 71222.0,
+              "diagnostics": {
+                "animal_escapes": 0,
+                "crop_deaths": 0,
+                "fresh_crop_deaths": 0,
+                "shed_overflow_events": 0,
+                "shed_overflow_units": 0
+              },
+              "exception": null,
+              "import_ms": 116.06289993505925,
+              "latency_ms": {
+                "calls": 719,
+                "max": 0.3396999090909958,
+                "p50": 0.03090000245720148,
+                "p95": 0.1016299705952406,
+                "p99": 0.17100402154028455,
+                "total": 30.02009936608374
+              },
+              "max_market_orders": 10,
+              "opponent": "kaito_v21",
+              "opponent_action_digest": "1e45d2bceecf95fae000e5afe4a07ec63aa5c85526e20730609ce7075cfd9b79",
+              "opponent_exception": null,
+              "opponent_money": 43905.0,
+              "opponent_reward": 43905.0,
+              "overage_exhausted": false,
+              "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\boatlee_v16_rc2_market_relay\\development_main.py",
+              "seat": 1,
+              "seed": 873001,
+              "statuses": [
+                "DONE",
+                "DONE"
+              ],
+              "terminal_inventory": {
+                "marked_value": 0.0,
+                "units": 0
+              },
+              "timeout_calls": 0
+            },
+            "generated": {
+              "action_digest": "f81deed7fa88cfa63f3943812b8ab9931fb1b25b79cb71b92d7a8aaefba2929d",
+              "action_issues": {
+                "hand_alignment": 0,
+                "malformed": 0,
+                "market_overflow": 0,
+                "seed_overcommit": 0
+              },
+              "calls": 719,
+              "candidate_money": 71222.0,
+              "candidate_reward": 71222.0,
+              "diagnostics": {
+                "animal_escapes": 0,
+                "crop_deaths": 0,
+                "fresh_crop_deaths": 0,
+                "shed_overflow_events": 0,
+                "shed_overflow_units": 0
+              },
+              "exception": null,
+              "import_ms": 3.2358000753447413,
+              "latency_ms": {
+                "calls": 719,
+                "max": 0.4887999966740608,
+                "p50": 0.027099973522126675,
+                "p95": 0.10507998522371058,
+                "p99": 0.16409396892413505,
+                "total": 29.391999123618007
+              },
+              "max_market_orders": 10,
+              "opponent": "kaito_v21",
+              "opponent_action_digest": "1e45d2bceecf95fae000e5afe4a07ec63aa5c85526e20730609ce7075cfd9b79",
+              "opponent_exception": null,
+              "opponent_money": 43905.0,
+              "opponent_reward": 43905.0,
+              "overage_exhausted": false,
+              "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\boatlee_v16_rc2_market_relay\\main.py",
+              "seat": 1,
+              "seed": 873001,
+              "statuses": [
+                "DONE",
+                "DONE"
+              ],
+              "terminal_inventory": {
+                "marked_value": 0.0,
+                "units": 0
+              },
+              "timeout_calls": 0
+            }
+          },
+          "seat": 1,
+          "seed": 873001,
+          "valid": true
+        },
+        {
+          "equal": true,
+          "opponent": "saiteja_3000",
+          "representations": {
+            "baseline": {
+              "action_digest": "471e015ae58f20315f01b7af26ccf09f9746ffe8364fa86d8ddf41dd831e659e",
+              "action_issues": {
+                "hand_alignment": 0,
+                "malformed": 0,
+                "market_overflow": 0,
+                "seed_overcommit": 0
+              },
+              "calls": 719,
+              "candidate_money": 93486.0,
+              "candidate_reward": 93486.0,
+              "diagnostics": {
+                "animal_escapes": 0,
+                "crop_deaths": 0,
+                "fresh_crop_deaths": 0,
+                "shed_overflow_events": 0,
+                "shed_overflow_units": 0
+              },
+              "exception": null,
+              "import_ms": 9.753599995747209,
+              "latency_ms": {
+                "calls": 719,
+                "max": 0.9345998987555504,
+                "p50": 0.20100001711398363,
+                "p95": 0.4719899850897493,
+                "p99": 0.7311860006302601,
+                "total": 166.76899848971516
+              },
+              "max_market_orders": 10,
+              "opponent": "saiteja_3000",
+              "opponent_action_digest": "73cc71796bc731c08fce7063d2c25db4cbea4036e3e4a17ae24573c6661842ea",
+              "opponent_exception": null,
+              "opponent_money": 56001.0,
+              "opponent_reward": 56001.0,
+              "overage_exhausted": false,
+              "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\performance_optimization_2026_08_11\\controls\\layer_00_baseline\\boatlee_v16_rc2_market_relay\\main.py",
+              "seat": 0,
+              "seed": 873019,
+              "statuses": [
+                "DONE",
+                "DONE"
+              ],
+              "terminal_inventory": {
+                "marked_value": 0.0,
+                "units": 0
+              },
+              "timeout_calls": 0
+            },
+            "development": {
+              "action_digest": "471e015ae58f20315f01b7af26ccf09f9746ffe8364fa86d8ddf41dd831e659e",
+              "action_issues": {
+                "hand_alignment": 0,
+                "malformed": 0,
+                "market_overflow": 0,
+                "seed_overcommit": 0
+              },
+              "calls": 719,
+              "candidate_money": 93486.0,
+              "candidate_reward": 93486.0,
+              "diagnostics": {
+                "animal_escapes": 0,
+                "crop_deaths": 0,
+                "fresh_crop_deaths": 0,
+                "shed_overflow_events": 0,
+                "shed_overflow_units": 0
+              },
+              "exception": null,
+              "import_ms": 10.707800043746829,
+              "latency_ms": {
+                "calls": 719,
+                "max": 0.332099967636168,
+                "p50": 0.044199987314641476,
+                "p95": 0.10512998560443522,
+                "p99": 0.16984001267701399,
+                "total": 36.918900674209
+              },
+              "max_market_orders": 10,
+              "opponent": "saiteja_3000",
+              "opponent_action_digest": "73cc71796bc731c08fce7063d2c25db4cbea4036e3e4a17ae24573c6661842ea",
+              "opponent_exception": null,
+              "opponent_money": 56001.0,
+              "opponent_reward": 56001.0,
+              "overage_exhausted": false,
+              "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\boatlee_v16_rc2_market_relay\\development_main.py",
+              "seat": 0,
+              "seed": 873019,
+              "statuses": [
+                "DONE",
+                "DONE"
+              ],
+              "terminal_inventory": {
+                "marked_value": 0.0,
+                "units": 0
+              },
+              "timeout_calls": 0
+            },
+            "generated": {
+              "action_digest": "471e015ae58f20315f01b7af26ccf09f9746ffe8364fa86d8ddf41dd831e659e",
+              "action_issues": {
+                "hand_alignment": 0,
+                "malformed": 0,
+                "market_overflow": 0,
+                "seed_overcommit": 0
+              },
+              "calls": 719,
+              "candidate_money": 93486.0,
+              "candidate_reward": 93486.0,
+              "diagnostics": {
+                "animal_escapes": 0,
+                "crop_deaths": 0,
+                "fresh_crop_deaths": 0,
+                "shed_overflow_events": 0,
+                "shed_overflow_units": 0
+              },
+              "exception": null,
+              "import_ms": 2.052700030617416,
+              "latency_ms": {
+                "calls": 719,
+                "max": 0.31479995232075453,
+                "p50": 0.041899969801306725,
+                "p95": 0.09517002617940308,
+                "p99": 0.1417120313271881,
+                "total": 34.60160153917968
+              },
+              "max_market_orders": 10,
+              "opponent": "saiteja_3000",
+              "opponent_action_digest": "73cc71796bc731c08fce7063d2c25db4cbea4036e3e4a17ae24573c6661842ea",
+              "opponent_exception": null,
+              "opponent_money": 56001.0,
+              "opponent_reward": 56001.0,
+              "overage_exhausted": false,
+              "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\boatlee_v16_rc2_market_relay\\main.py",
+              "seat": 0,
+              "seed": 873019,
+              "statuses": [
+                "DONE",
+                "DONE"
+              ],
+              "terminal_inventory": {
+                "marked_value": 0.0,
+                "units": 0
+              },
+              "timeout_calls": 0
+            }
+          },
+          "seat": 0,
+          "seed": 873019,
+          "valid": true
+        },
+        {
+          "equal": true,
+          "opponent": "saiteja_3000",
+          "representations": {
+            "baseline": {
+              "action_digest": "471e015ae58f20315f01b7af26ccf09f9746ffe8364fa86d8ddf41dd831e659e",
+              "action_issues": {
+                "hand_alignment": 0,
+                "malformed": 0,
+                "market_overflow": 0,
+                "seed_overcommit": 0
+              },
+              "calls": 719,
+              "candidate_money": 93484.0,
+              "candidate_reward": 93484.0,
+              "diagnostics": {
+                "animal_escapes": 0,
+                "crop_deaths": 0,
+                "fresh_crop_deaths": 0,
+                "shed_overflow_events": 0,
+                "shed_overflow_units": 0
+              },
+              "exception": null,
+              "import_ms": 3.678899956867099,
+              "latency_ms": {
+                "calls": 719,
+                "max": 1.1072999332100153,
+                "p50": 0.18089998047798872,
+                "p95": 0.35344001371413475,
+                "p99": 0.5913919839076703,
+                "total": 141.70099911279976
+              },
+              "max_market_orders": 10,
+              "opponent": "saiteja_3000",
+              "opponent_action_digest": "73cc71796bc731c08fce7063d2c25db4cbea4036e3e4a17ae24573c6661842ea",
+              "opponent_exception": null,
+              "opponent_money": 56079.0,
+              "opponent_reward": 56079.0,
+              "overage_exhausted": false,
+              "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\performance_optimization_2026_08_11\\controls\\layer_00_baseline\\boatlee_v16_rc2_market_relay\\main.py",
+              "seat": 1,
+              "seed": 873019,
+              "statuses": [
+                "DONE",
+                "DONE"
+              ],
+              "terminal_inventory": {
+                "marked_value": 0.0,
+                "units": 0
+              },
+              "timeout_calls": 0
+            },
+            "development": {
+              "action_digest": "471e015ae58f20315f01b7af26ccf09f9746ffe8364fa86d8ddf41dd831e659e",
+              "action_issues": {
+                "hand_alignment": 0,
+                "malformed": 0,
+                "market_overflow": 0,
+                "seed_overcommit": 0
+              },
+              "calls": 719,
+              "candidate_money": 93484.0,
+              "candidate_reward": 93484.0,
+              "diagnostics": {
+                "animal_escapes": 0,
+                "crop_deaths": 0,
+                "fresh_crop_deaths": 0,
+                "shed_overflow_events": 0,
+                "shed_overflow_units": 0
+              },
+              "exception": null,
+              "import_ms": 10.984200052917004,
+              "latency_ms": {
+                "calls": 719,
+                "max": 0.38059998769313097,
+                "p50": 0.04780001472681761,
+                "p95": 0.11523995781317353,
+                "p99": 0.18097798107191934,
+                "total": 41.22010013088584
+              },
+              "max_market_orders": 10,
+              "opponent": "saiteja_3000",
+              "opponent_action_digest": "73cc71796bc731c08fce7063d2c25db4cbea4036e3e4a17ae24573c6661842ea",
+              "opponent_exception": null,
+              "opponent_money": 56079.0,
+              "opponent_reward": 56079.0,
+              "overage_exhausted": false,
+              "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\boatlee_v16_rc2_market_relay\\development_main.py",
+              "seat": 1,
+              "seed": 873019,
+              "statuses": [
+                "DONE",
+                "DONE"
+              ],
+              "terminal_inventory": {
+                "marked_value": 0.0,
+                "units": 0
+              },
+              "timeout_calls": 0
+            },
+            "generated": {
+              "action_digest": "471e015ae58f20315f01b7af26ccf09f9746ffe8364fa86d8ddf41dd831e659e",
+              "action_issues": {
+                "hand_alignment": 0,
+                "malformed": 0,
+                "market_overflow": 0,
+                "seed_overcommit": 0
+              },
+              "calls": 719,
+              "candidate_money": 93484.0,
+              "candidate_reward": 93484.0,
+              "diagnostics": {
+                "animal_escapes": 0,
+                "crop_deaths": 0,
+                "fresh_crop_deaths": 0,
+                "shed_overflow_events": 0,
+                "shed_overflow_units": 0
+              },
+              "exception": null,
+              "import_ms": 2.794699976220727,
+              "latency_ms": {
+                "calls": 719,
+                "max": 0.3602999495342374,
+                "p50": 0.0439999857917428,
+                "p95": 0.10612999321892858,
+                "p99": 0.16528799897059843,
+                "total": 36.74099931959063
+              },
+              "max_market_orders": 10,
+              "opponent": "saiteja_3000",
+              "opponent_action_digest": "73cc71796bc731c08fce7063d2c25db4cbea4036e3e4a17ae24573c6661842ea",
+              "opponent_exception": null,
+              "opponent_money": 56079.0,
+              "opponent_reward": 56079.0,
+              "overage_exhausted": false,
+              "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\boatlee_v16_rc2_market_relay\\main.py",
+              "seat": 1,
+              "seed": 873019,
+              "statuses": [
+                "DONE",
+                "DONE"
+              ],
+              "terminal_inventory": {
+                "marked_value": 0.0,
+                "units": 0
+              },
+              "timeout_calls": 0
+            }
+          },
+          "seat": 1,
+          "seed": 873019,
+          "valid": true
+        },
+        {
+          "equal": true,
+          "opponent": "baseline_v27",
+          "representations": {
+            "baseline": {
+              "action_digest": "75ae0dc296f1eae710972780efabb8a8314797399dbbd2b2501692d55e745f7f",
+              "action_issues": {
+                "hand_alignment": 0,
+                "malformed": 0,
+                "market_overflow": 0,
+                "seed_overcommit": 0
+              },
+              "calls": 719,
+              "candidate_money": 112229.0,
+              "candidate_reward": 112229.0,
+              "diagnostics": {
+                "animal_escapes": 0,
+                "crop_deaths": 0,
+                "fresh_crop_deaths": 0,
+                "shed_overflow_events": 0,
+                "shed_overflow_units": 0
+              },
+              "exception": null,
+              "import_ms": 3.5300999879837036,
+              "latency_ms": {
+                "calls": 719,
+                "max": 1.1337000178173184,
+                "p50": 0.2106999745592475,
+                "p95": 0.3895599395036698,
+                "p99": 0.7045540516264753,
+                "total": 162.0515991235152
+              },
+              "max_market_orders": 10,
+              "opponent": "baseline_v27",
+              "opponent_action_digest": "f9ac7fb16164f5e66163fab7af357314234cf7bc242382942155a15084189968",
+              "opponent_exception": null,
+              "opponent_money": 113063.0,
+              "opponent_reward": 113063.0,
+              "overage_exhausted": false,
+              "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\performance_optimization_2026_08_11\\controls\\layer_00_baseline\\boatlee_v16_rc2_market_relay\\main.py",
+              "seat": 0,
+              "seed": 873037,
+              "statuses": [
+                "DONE",
+                "DONE"
+              ],
+              "terminal_inventory": {
+                "marked_value": 0.0,
+                "units": 0
+              },
+              "timeout_calls": 0
+            },
+            "development": {
+              "action_digest": "75ae0dc296f1eae710972780efabb8a8314797399dbbd2b2501692d55e745f7f",
+              "action_issues": {
+                "hand_alignment": 0,
+                "malformed": 0,
+                "market_overflow": 0,
+                "seed_overcommit": 0
+              },
+              "calls": 719,
+              "candidate_money": 112229.0,
+              "candidate_reward": 112229.0,
+              "diagnostics": {
+                "animal_escapes": 0,
+                "crop_deaths": 0,
+                "fresh_crop_deaths": 0,
+                "shed_overflow_events": 0,
+                "shed_overflow_units": 0
+              },
+              "exception": null,
+              "import_ms": 10.713799973018467,
+              "latency_ms": {
+                "calls": 719,
+                "max": 0.20389992278069258,
+                "p50": 0.031800009310245514,
+                "p95": 0.08312993450090292,
+                "p99": 0.13483599992468978,
+                "total": 27.64529874548316
+              },
+              "max_market_orders": 10,
+              "opponent": "baseline_v27",
+              "opponent_action_digest": "f9ac7fb16164f5e66163fab7af357314234cf7bc242382942155a15084189968",
+              "opponent_exception": null,
+              "opponent_money": 113063.0,
+              "opponent_reward": 113063.0,
+              "overage_exhausted": false,
+              "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\boatlee_v16_rc2_market_relay\\development_main.py",
+              "seat": 0,
+              "seed": 873037,
+              "statuses": [
+                "DONE",
+                "DONE"
+              ],
+              "terminal_inventory": {
+                "marked_value": 0.0,
+                "units": 0
+              },
+              "timeout_calls": 0
+            },
+            "generated": {
+              "action_digest": "75ae0dc296f1eae710972780efabb8a8314797399dbbd2b2501692d55e745f7f",
+              "action_issues": {
+                "hand_alignment": 0,
+                "malformed": 0,
+                "market_overflow": 0,
+                "seed_overcommit": 0
+              },
+              "calls": 719,
+              "candidate_money": 112229.0,
+              "candidate_reward": 112229.0,
+              "diagnostics": {
+                "animal_escapes": 0,
+                "crop_deaths": 0,
+                "fresh_crop_deaths": 0,
+                "shed_overflow_events": 0,
+                "shed_overflow_units": 0
+              },
+              "exception": null,
+              "import_ms": 2.689999993890524,
+              "latency_ms": {
+                "calls": 719,
+                "max": 0.2202000468969345,
+                "p50": 0.0323000131174922,
+                "p95": 0.09133999701589346,
+                "p99": 0.15134398825466655,
+                "total": 29.237500042654574
+              },
+              "max_market_orders": 10,
+              "opponent": "baseline_v27",
+              "opponent_action_digest": "f9ac7fb16164f5e66163fab7af357314234cf7bc242382942155a15084189968",
+              "opponent_exception": null,
+              "opponent_money": 113063.0,
+              "opponent_reward": 113063.0,
+              "overage_exhausted": false,
+              "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\boatlee_v16_rc2_market_relay\\main.py",
+              "seat": 0,
+              "seed": 873037,
+              "statuses": [
+                "DONE",
+                "DONE"
+              ],
+              "terminal_inventory": {
+                "marked_value": 0.0,
+                "units": 0
+              },
+              "timeout_calls": 0
+            }
+          },
+          "seat": 0,
+          "seed": 873037,
+          "valid": true
+        },
+        {
+          "equal": true,
+          "opponent": "baseline_v27",
+          "representations": {
+            "baseline": {
+              "action_digest": "e514648ea2345e2c9f9474c1304d18aa761033469632b779c797a23d8ebb0617",
+              "action_issues": {
+                "hand_alignment": 0,
+                "malformed": 0,
+                "market_overflow": 0,
+                "seed_overcommit": 0
+              },
+              "calls": 719,
+              "candidate_money": 113304.0,
+              "candidate_reward": 113304.0,
+              "diagnostics": {
+                "animal_escapes": 0,
+                "crop_deaths": 0,
+                "fresh_crop_deaths": 0,
+                "shed_overflow_events": 0,
+                "shed_overflow_units": 0
+              },
+              "exception": null,
+              "import_ms": 3.700600005686283,
+              "latency_ms": {
+                "calls": 719,
+                "max": 0.821000081487,
+                "p50": 0.19509997218847275,
+                "p95": 0.3635200788266957,
+                "p99": 0.5874039744958298,
+                "total": 149.49950156733394
+              },
+              "max_market_orders": 10,
+              "opponent": "baseline_v27",
+              "opponent_action_digest": "188d6b463a0ef695b0c97d5b225f6e80e6735ea9396f9e9d6615b70b43ff6c52",
+              "opponent_exception": null,
+              "opponent_money": 111988.0,
+              "opponent_reward": 111988.0,
+              "overage_exhausted": false,
+              "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\performance_optimization_2026_08_11\\controls\\layer_00_baseline\\boatlee_v16_rc2_market_relay\\main.py",
+              "seat": 1,
+              "seed": 873037,
+              "statuses": [
+                "DONE",
+                "DONE"
+              ],
+              "terminal_inventory": {
+                "marked_value": 0.0,
+                "units": 0
+              },
+              "timeout_calls": 0
+            },
+            "development": {
+              "action_digest": "e514648ea2345e2c9f9474c1304d18aa761033469632b779c797a23d8ebb0617",
+              "action_issues": {
+                "hand_alignment": 0,
+                "malformed": 0,
+                "market_overflow": 0,
+                "seed_overcommit": 0
+              },
+              "calls": 719,
+              "candidate_money": 113304.0,
+              "candidate_reward": 113304.0,
+              "diagnostics": {
+                "animal_escapes": 0,
+                "crop_deaths": 0,
+                "fresh_crop_deaths": 0,
+                "shed_overflow_events": 0,
+                "shed_overflow_units": 0
+              },
+              "exception": null,
+              "import_ms": 9.46750002913177,
+              "latency_ms": {
+                "calls": 719,
+                "max": 0.2500000409781933,
+                "p50": 0.03060000017285347,
+                "p95": 0.08939998224377636,
+                "p99": 0.14607196906581543,
+                "total": 28.070095693692565
+              },
+              "max_market_orders": 10,
+              "opponent": "baseline_v27",
+              "opponent_action_digest": "188d6b463a0ef695b0c97d5b225f6e80e6735ea9396f9e9d6615b70b43ff6c52",
+              "opponent_exception": null,
+              "opponent_money": 111988.0,
+              "opponent_reward": 111988.0,
+              "overage_exhausted": false,
+              "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\boatlee_v16_rc2_market_relay\\development_main.py",
+              "seat": 1,
+              "seed": 873037,
+              "statuses": [
+                "DONE",
+                "DONE"
+              ],
+              "terminal_inventory": {
+                "marked_value": 0.0,
+                "units": 0
+              },
+              "timeout_calls": 0
+            },
+            "generated": {
+              "action_digest": "e514648ea2345e2c9f9474c1304d18aa761033469632b779c797a23d8ebb0617",
+              "action_issues": {
+                "hand_alignment": 0,
+                "malformed": 0,
+                "market_overflow": 0,
+                "seed_overcommit": 0
+              },
+              "calls": 719,
+              "candidate_money": 113304.0,
+              "candidate_reward": 113304.0,
+              "diagnostics": {
+                "animal_escapes": 0,
+                "crop_deaths": 0,
+                "fresh_crop_deaths": 0,
+                "shed_overflow_events": 0,
+                "shed_overflow_units": 0
+              },
+              "exception": null,
+              "import_ms": 2.459299983456731,
+              "latency_ms": {
+                "calls": 719,
+                "max": 0.34090003464370966,
+                "p50": 0.028399983420968056,
+                "p95": 0.08937998209148648,
+                "p99": 0.2176399319432677,
+                "total": 28.149199788458645
+              },
+              "max_market_orders": 10,
+              "opponent": "baseline_v27",
+              "opponent_action_digest": "188d6b463a0ef695b0c97d5b225f6e80e6735ea9396f9e9d6615b70b43ff6c52",
+              "opponent_exception": null,
+              "opponent_money": 111988.0,
+              "opponent_reward": 111988.0,
+              "overage_exhausted": false,
+              "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\boatlee_v16_rc2_market_relay\\main.py",
+              "seat": 1,
+              "seed": 873037,
+              "statuses": [
+                "DONE",
+                "DONE"
+              ],
+              "terminal_inventory": {
+                "marked_value": 0.0,
+                "units": 0
+              },
+              "timeout_calls": 0
+            }
+          },
+          "seat": 1,
+          "seed": 873037,
+          "valid": true
+        }
+      ],
+      "fresh_wins_draws_losses": [
+        5,
+        0,
+        1
+      ],
+      "isolated_artifact": {
+        "callable_agent": true,
+        "game": {
+          "action_digest": "8e68c08469a4e1c60f9c049d6ea78782a1e353e7097a5b0adb1575aa0ea676d6",
+          "action_issues": {
+            "hand_alignment": 0,
+            "malformed": 0,
+            "market_overflow": 0,
+            "seed_overcommit": 0
+          },
+          "calls": 719,
+          "candidate_money": 53865.0,
+          "candidate_reward": 53865.0,
+          "diagnostics": {
+            "animal_escapes": 0,
+            "crop_deaths": 0,
+            "fresh_crop_deaths": 0,
+            "shed_overflow_events": 0,
+            "shed_overflow_units": 0
+          },
+          "exception": null,
+          "import_ms": 4.86270000692457,
+          "latency_ms": {
+            "calls": 719,
+            "max": 0.3475999692454934,
+            "p50": 0.028900103643536568,
+            "p95": 0.09296990465372802,
+            "p99": 0.13830802636221073,
+            "total": 26.681497460231185
+          },
+          "max_market_orders": 10,
+          "opponent": "kaito_v21",
+          "opponent_action_digest": "1e45d2bceecf95fae000e5afe4a07ec63aa5c85526e20730609ce7075cfd9b79",
+          "opponent_exception": null,
+          "opponent_money": 32379.0,
+          "opponent_reward": 32379.0,
+          "overage_exhausted": false,
+          "path": "C:\\Users\\wurre\\AppData\\Local\\Temp\\boatlee_v16_rc2_market_relay-isolated-2luvh7zt\\main.py",
+          "seat": 0,
+          "seed": 873077,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "terminal_inventory": {
+            "marked_value": 0.0,
+            "units": 0
+          },
+          "timeout_calls": 0
+        },
+        "import_ms": 33.04689994547516,
+        "route_steps": 719,
+        "valid_game": true
+      },
+      "status": "PASS"
+    },
+    "v27_current_meta": {
+      "artifact": {
+        "base64_route_codec": true,
+        "bytes": 28142,
+        "deterministic_builder": true,
+        "forbidden_calls": {
+          "__import__": [],
+          "compile": [],
+          "eval": [],
+          "exec": [],
+          "open": []
+        },
+        "imports": [
+          "base64",
+          "json",
+          "math",
+          "zlib"
+        ],
+        "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\v27_current_meta\\main.py",
+        "sha256": "b1a34868901933efdb3c9eb2fb421daba92bb8900c26c033037c39f3f0de3135",
+        "standard_library_only": true,
+        "under_5_mib": true
+      },
+      "determinism": [
+        {
+          "equal": true,
+          "first": {
+            "action_digest": "5091dd0b18657460ddc422f5c23b778c711c87481b4d68d03a629d7c12a3d610",
+            "action_issues": {
+              "hand_alignment": 0,
+              "malformed": 0,
+              "market_overflow": 0,
+              "seed_overcommit": 0
+            },
+            "calls": 719,
+            "candidate_money": 96560.0,
+            "candidate_reward": 96560.0,
+            "diagnostics": {
+              "animal_escapes": 0,
+              "crop_deaths": 0,
+              "fresh_crop_deaths": 0,
+              "shed_overflow_events": 0,
+              "shed_overflow_units": 0
+            },
+            "exception": null,
+            "import_ms": 3.0659999465569854,
+            "latency_ms": {
+              "calls": 719,
+              "max": 1.6897000605240464,
+              "p50": 0.03229989670217037,
+              "p95": 0.11758996406570085,
+              "p99": 0.19577799830585757,
+              "total": 34.81009870301932
+            },
+            "max_market_orders": 10,
+            "opponent": "kaito_v21",
+            "opponent_action_digest": "1e45d2bceecf95fae000e5afe4a07ec63aa5c85526e20730609ce7075cfd9b79",
+            "opponent_exception": null,
+            "opponent_money": 69601.0,
+            "opponent_reward": 69601.0,
+            "overage_exhausted": false,
+            "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\v27_current_meta\\main.py",
+            "seat": 0,
+            "seed": 873059,
+            "statuses": [
+              "DONE",
+              "DONE"
+            ],
+            "terminal_inventory": {
+              "marked_value": 0.0,
+              "units": 0
+            },
+            "timeout_calls": 0
+          },
+          "seat": 0,
+          "second": {
+            "action_digest": "5091dd0b18657460ddc422f5c23b778c711c87481b4d68d03a629d7c12a3d610",
+            "action_issues": {
+              "hand_alignment": 0,
+              "malformed": 0,
+              "market_overflow": 0,
+              "seed_overcommit": 0
+            },
+            "calls": 719,
+            "candidate_money": 96560.0,
+            "candidate_reward": 96560.0,
+            "diagnostics": {
+              "animal_escapes": 0,
+              "crop_deaths": 0,
+              "fresh_crop_deaths": 0,
+              "shed_overflow_events": 0,
+              "shed_overflow_units": 0
+            },
+            "exception": null,
+            "import_ms": 7.339200004935265,
+            "latency_ms": {
+              "calls": 719,
+              "max": 0.444200006313622,
+              "p50": 0.047900015488266945,
+              "p95": 0.12403000146150601,
+              "p99": 0.2429819875396788,
+              "total": 42.81530308071524
+            },
+            "max_market_orders": 10,
+            "opponent": "kaito_v21",
+            "opponent_action_digest": "1e45d2bceecf95fae000e5afe4a07ec63aa5c85526e20730609ce7075cfd9b79",
+            "opponent_exception": null,
+            "opponent_money": 69601.0,
+            "opponent_reward": 69601.0,
+            "overage_exhausted": false,
+            "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\v27_current_meta\\main.py",
+            "seat": 0,
+            "seed": 873059,
+            "statuses": [
+              "DONE",
+              "DONE"
+            ],
+            "terminal_inventory": {
+              "marked_value": 0.0,
+              "units": 0
+            },
+            "timeout_calls": 0
+          }
+        },
+        {
+          "equal": true,
+          "first": {
+            "action_digest": "0ffffc09462688cf6bb70337ef7ed534ffde9319d7d8903fb6c6ec6ec7ec78ec",
+            "action_issues": {
+              "hand_alignment": 0,
+              "malformed": 0,
+              "market_overflow": 0,
+              "seed_overcommit": 0
+            },
+            "calls": 719,
+            "candidate_money": 101424.0,
+            "candidate_reward": 101424.0,
+            "diagnostics": {
+              "animal_escapes": 0,
+              "crop_deaths": 0,
+              "fresh_crop_deaths": 0,
+              "shed_overflow_events": 0,
+              "shed_overflow_units": 0
+            },
+            "exception": null,
+            "import_ms": 3.2967000734061003,
+            "latency_ms": {
+              "calls": 719,
+              "max": 0.2899999963119626,
+              "p50": 0.032100011594593525,
+              "p95": 0.10703000007197262,
+              "p99": 0.14949997421354055,
+              "total": 30.58169863652438
+            },
+            "max_market_orders": 10,
+            "opponent": "kaito_v21",
+            "opponent_action_digest": "1e45d2bceecf95fae000e5afe4a07ec63aa5c85526e20730609ce7075cfd9b79",
+            "opponent_exception": null,
+            "opponent_money": 77742.0,
+            "opponent_reward": 77742.0,
+            "overage_exhausted": false,
+            "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\v27_current_meta\\main.py",
+            "seat": 1,
+            "seed": 873059,
+            "statuses": [
+              "DONE",
+              "DONE"
+            ],
+            "terminal_inventory": {
+              "marked_value": 0.0,
+              "units": 0
+            },
+            "timeout_calls": 0
+          },
+          "seat": 1,
+          "second": {
+            "action_digest": "0ffffc09462688cf6bb70337ef7ed534ffde9319d7d8903fb6c6ec6ec7ec78ec",
+            "action_issues": {
+              "hand_alignment": 0,
+              "malformed": 0,
+              "market_overflow": 0,
+              "seed_overcommit": 0
+            },
+            "calls": 719,
+            "candidate_money": 101424.0,
+            "candidate_reward": 101424.0,
+            "diagnostics": {
+              "animal_escapes": 0,
+              "crop_deaths": 0,
+              "fresh_crop_deaths": 0,
+              "shed_overflow_events": 0,
+              "shed_overflow_units": 0
+            },
+            "exception": null,
+            "import_ms": 96.2139000184834,
+            "latency_ms": {
+              "calls": 719,
+              "max": 0.30519999563694,
+              "p50": 0.03029999788850546,
+              "p95": 0.12233000015839936,
+              "p99": 0.19466798985377015,
+              "total": 32.151399878785014
+            },
+            "max_market_orders": 10,
+            "opponent": "kaito_v21",
+            "opponent_action_digest": "1e45d2bceecf95fae000e5afe4a07ec63aa5c85526e20730609ce7075cfd9b79",
+            "opponent_exception": null,
+            "opponent_money": 77742.0,
+            "opponent_reward": 77742.0,
+            "overage_exhausted": false,
+            "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\v27_current_meta\\main.py",
+            "seat": 1,
+            "seed": 873059,
+            "statuses": [
+              "DONE",
+              "DONE"
+            ],
+            "terminal_inventory": {
+              "marked_value": 0.0,
+              "units": 0
+            },
+            "timeout_calls": 0
+          }
+        }
+      ],
+      "fresh_games": [
+        {
+          "equal": true,
+          "opponent": "kaito_v21",
+          "representations": {
+            "baseline": {
+              "action_digest": "f81deed7fa88cfa63f3943812b8ab9931fb1b25b79cb71b92d7a8aaefba2929d",
+              "action_issues": {
+                "hand_alignment": 0,
+                "malformed": 0,
+                "market_overflow": 0,
+                "seed_overcommit": 0
+              },
+              "calls": 719,
+              "candidate_money": 71222.0,
+              "candidate_reward": 71222.0,
+              "diagnostics": {
+                "animal_escapes": 0,
+                "crop_deaths": 0,
+                "fresh_crop_deaths": 0,
+                "shed_overflow_events": 0,
+                "shed_overflow_units": 0
+              },
+              "exception": null,
+              "import_ms": 4.393499926663935,
+              "latency_ms": {
+                "calls": 719,
+                "max": 0.41550002060830593,
+                "p50": 0.11540006380528212,
+                "p95": 0.2247699769213796,
+                "p99": 0.3306319774128503,
+                "total": 88.54550088290125
+              },
+              "max_market_orders": 10,
+              "opponent": "kaito_v21",
+              "opponent_action_digest": "1e45d2bceecf95fae000e5afe4a07ec63aa5c85526e20730609ce7075cfd9b79",
+              "opponent_exception": null,
+              "opponent_money": 43905.0,
+              "opponent_reward": 43905.0,
+              "overage_exhausted": false,
+              "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\performance_optimization_2026_08_11\\controls\\layer_00_baseline\\v27_current_meta\\main.py",
+              "seat": 0,
+              "seed": 873001,
+              "statuses": [
+                "DONE",
+                "DONE"
+              ],
+              "terminal_inventory": {
+                "marked_value": 0.0,
+                "units": 0
+              },
+              "timeout_calls": 0
+            },
+            "development": {
+              "action_digest": "f81deed7fa88cfa63f3943812b8ab9931fb1b25b79cb71b92d7a8aaefba2929d",
+              "action_issues": {
+                "hand_alignment": 0,
+                "malformed": 0,
+                "market_overflow": 0,
+                "seed_overcommit": 0
+              },
+              "calls": 719,
+              "candidate_money": 71222.0,
+              "candidate_reward": 71222.0,
+              "diagnostics": {
+                "animal_escapes": 0,
+                "crop_deaths": 0,
+                "fresh_crop_deaths": 0,
+                "shed_overflow_events": 0,
+                "shed_overflow_units": 0
+              },
+              "exception": null,
+              "import_ms": 12.092999997548759,
+              "latency_ms": {
+                "calls": 719,
+                "max": 1.2848000042140484,
+                "p50": 0.04900002386420965,
+                "p95": 0.13029995607212186,
+                "p99": 0.2968120481818915,
+                "total": 45.114800916053355
+              },
+              "max_market_orders": 10,
+              "opponent": "kaito_v21",
+              "opponent_action_digest": "1e45d2bceecf95fae000e5afe4a07ec63aa5c85526e20730609ce7075cfd9b79",
+              "opponent_exception": null,
+              "opponent_money": 43905.0,
+              "opponent_reward": 43905.0,
+              "overage_exhausted": false,
+              "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\v27_current_meta\\development_main.py",
+              "seat": 0,
+              "seed": 873001,
+              "statuses": [
+                "DONE",
+                "DONE"
+              ],
+              "terminal_inventory": {
+                "marked_value": 0.0,
+                "units": 0
+              },
+              "timeout_calls": 0
+            },
+            "generated": {
+              "action_digest": "f81deed7fa88cfa63f3943812b8ab9931fb1b25b79cb71b92d7a8aaefba2929d",
+              "action_issues": {
+                "hand_alignment": 0,
+                "malformed": 0,
+                "market_overflow": 0,
+                "seed_overcommit": 0
+              },
+              "calls": 719,
+              "candidate_money": 71222.0,
+              "candidate_reward": 71222.0,
+              "diagnostics": {
+                "animal_escapes": 0,
+                "crop_deaths": 0,
+                "fresh_crop_deaths": 0,
+                "shed_overflow_events": 0,
+                "shed_overflow_units": 0
+              },
+              "exception": null,
+              "import_ms": 2.377800061367452,
+              "latency_ms": {
+                "calls": 719,
+                "max": 2.7438000543043017,
+                "p50": 0.056299963034689426,
+                "p95": 0.15282999956980348,
+                "p99": 0.2925160154700281,
+                "total": 51.396100665442646
+              },
+              "max_market_orders": 10,
+              "opponent": "kaito_v21",
+              "opponent_action_digest": "1e45d2bceecf95fae000e5afe4a07ec63aa5c85526e20730609ce7075cfd9b79",
+              "opponent_exception": null,
+              "opponent_money": 43905.0,
+              "opponent_reward": 43905.0,
+              "overage_exhausted": false,
+              "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\v27_current_meta\\main.py",
+              "seat": 0,
+              "seed": 873001,
+              "statuses": [
+                "DONE",
+                "DONE"
+              ],
+              "terminal_inventory": {
+                "marked_value": 0.0,
+                "units": 0
+              },
+              "timeout_calls": 0
+            }
+          },
+          "seat": 0,
+          "seed": 873001,
+          "valid": true
+        },
+        {
+          "equal": true,
+          "opponent": "kaito_v21",
+          "representations": {
+            "baseline": {
+              "action_digest": "f81deed7fa88cfa63f3943812b8ab9931fb1b25b79cb71b92d7a8aaefba2929d",
+              "action_issues": {
+                "hand_alignment": 0,
+                "malformed": 0,
+                "market_overflow": 0,
+                "seed_overcommit": 0
+              },
+              "calls": 719,
+              "candidate_money": 71222.0,
+              "candidate_reward": 71222.0,
+              "diagnostics": {
+                "animal_escapes": 0,
+                "crop_deaths": 0,
+                "fresh_crop_deaths": 0,
+                "shed_overflow_events": 0,
+                "shed_overflow_units": 0
+              },
+              "exception": null,
+              "import_ms": 3.8741000462323427,
+              "latency_ms": {
+                "calls": 719,
+                "max": 0.9448999771848321,
+                "p50": 0.1412000274285674,
+                "p95": 0.456449971534312,
+                "p99": 0.7020460115745668,
+                "total": 130.18570106942207
+              },
+              "max_market_orders": 10,
+              "opponent": "kaito_v21",
+              "opponent_action_digest": "1e45d2bceecf95fae000e5afe4a07ec63aa5c85526e20730609ce7075cfd9b79",
+              "opponent_exception": null,
+              "opponent_money": 43905.0,
+              "opponent_reward": 43905.0,
+              "overage_exhausted": false,
+              "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\performance_optimization_2026_08_11\\controls\\layer_00_baseline\\v27_current_meta\\main.py",
+              "seat": 1,
+              "seed": 873001,
+              "statuses": [
+                "DONE",
+                "DONE"
+              ],
+              "terminal_inventory": {
+                "marked_value": 0.0,
+                "units": 0
+              },
+              "timeout_calls": 0
+            },
+            "development": {
+              "action_digest": "f81deed7fa88cfa63f3943812b8ab9931fb1b25b79cb71b92d7a8aaefba2929d",
+              "action_issues": {
+                "hand_alignment": 0,
+                "malformed": 0,
+                "market_overflow": 0,
+                "seed_overcommit": 0
+              },
+              "calls": 719,
+              "candidate_money": 71222.0,
+              "candidate_reward": 71222.0,
+              "diagnostics": {
+                "animal_escapes": 0,
+                "crop_deaths": 0,
+                "fresh_crop_deaths": 0,
+                "shed_overflow_events": 0,
+                "shed_overflow_units": 0
+              },
+              "exception": null,
+              "import_ms": 18.439800012856722,
+              "latency_ms": {
+                "calls": 719,
+                "max": 0.4642999265342951,
+                "p50": 0.03850006032735109,
+                "p95": 0.10380998719483614,
+                "p99": 0.21062406944111006,
+                "total": 35.29450041241944
+              },
+              "max_market_orders": 10,
+              "opponent": "kaito_v21",
+              "opponent_action_digest": "1e45d2bceecf95fae000e5afe4a07ec63aa5c85526e20730609ce7075cfd9b79",
+              "opponent_exception": null,
+              "opponent_money": 43905.0,
+              "opponent_reward": 43905.0,
+              "overage_exhausted": false,
+              "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\v27_current_meta\\development_main.py",
+              "seat": 1,
+              "seed": 873001,
+              "statuses": [
+                "DONE",
+                "DONE"
+              ],
+              "terminal_inventory": {
+                "marked_value": 0.0,
+                "units": 0
+              },
+              "timeout_calls": 0
+            },
+            "generated": {
+              "action_digest": "f81deed7fa88cfa63f3943812b8ab9931fb1b25b79cb71b92d7a8aaefba2929d",
+              "action_issues": {
+                "hand_alignment": 0,
+                "malformed": 0,
+                "market_overflow": 0,
+                "seed_overcommit": 0
+              },
+              "calls": 719,
+              "candidate_money": 71222.0,
+              "candidate_reward": 71222.0,
+              "diagnostics": {
+                "animal_escapes": 0,
+                "crop_deaths": 0,
+                "fresh_crop_deaths": 0,
+                "shed_overflow_events": 0,
+                "shed_overflow_units": 0
+              },
+              "exception": null,
+              "import_ms": 3.4420000156387687,
+              "latency_ms": {
+                "calls": 719,
+                "max": 0.6523999618366361,
+                "p50": 0.05519995465874672,
+                "p95": 0.17636005068197852,
+                "p99": 0.3311879816465084,
+                "total": 51.64179974235594
+              },
+              "max_market_orders": 10,
+              "opponent": "kaito_v21",
+              "opponent_action_digest": "1e45d2bceecf95fae000e5afe4a07ec63aa5c85526e20730609ce7075cfd9b79",
+              "opponent_exception": null,
+              "opponent_money": 43905.0,
+              "opponent_reward": 43905.0,
+              "overage_exhausted": false,
+              "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\v27_current_meta\\main.py",
+              "seat": 1,
+              "seed": 873001,
+              "statuses": [
+                "DONE",
+                "DONE"
+              ],
+              "terminal_inventory": {
+                "marked_value": 0.0,
+                "units": 0
+              },
+              "timeout_calls": 0
+            }
+          },
+          "seat": 1,
+          "seed": 873001,
+          "valid": true
+        },
+        {
+          "equal": true,
+          "opponent": "saiteja_3000",
+          "representations": {
+            "baseline": {
+              "action_digest": "3a39ed0b2eedeed00e7f7d66c2eeefd71015442e8ee76a31ddfb380325da7ca2",
+              "action_issues": {
+                "hand_alignment": 0,
+                "malformed": 0,
+                "market_overflow": 0,
+                "seed_overcommit": 0
+              },
+              "calls": 719,
+              "candidate_money": 83135.0,
+              "candidate_reward": 83135.0,
+              "diagnostics": {
+                "animal_escapes": 0,
+                "crop_deaths": 0,
+                "fresh_crop_deaths": 0,
+                "shed_overflow_events": 0,
+                "shed_overflow_units": 0
+              },
+              "exception": null,
+              "import_ms": 54.03260001912713,
+              "latency_ms": {
+                "calls": 719,
+                "max": 0.45519997365772724,
+                "p50": 0.12209999840706587,
+                "p95": 0.21511000813916334,
+                "p99": 0.3330479748547078,
+                "total": 93.14390004146844
+              },
+              "max_market_orders": 10,
+              "opponent": "saiteja_3000",
+              "opponent_action_digest": "73cc71796bc731c08fce7063d2c25db4cbea4036e3e4a17ae24573c6661842ea",
+              "opponent_exception": null,
+              "opponent_money": 54002.0,
+              "opponent_reward": 54002.0,
+              "overage_exhausted": false,
+              "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\performance_optimization_2026_08_11\\controls\\layer_00_baseline\\v27_current_meta\\main.py",
+              "seat": 0,
+              "seed": 873019,
+              "statuses": [
+                "DONE",
+                "DONE"
+              ],
+              "terminal_inventory": {
+                "marked_value": 0.0,
+                "units": 0
+              },
+              "timeout_calls": 0
+            },
+            "development": {
+              "action_digest": "3a39ed0b2eedeed00e7f7d66c2eeefd71015442e8ee76a31ddfb380325da7ca2",
+              "action_issues": {
+                "hand_alignment": 0,
+                "malformed": 0,
+                "market_overflow": 0,
+                "seed_overcommit": 0
+              },
+              "calls": 719,
+              "candidate_money": 83135.0,
+              "candidate_reward": 83135.0,
+              "diagnostics": {
+                "animal_escapes": 0,
+                "crop_deaths": 0,
+                "fresh_crop_deaths": 0,
+                "shed_overflow_events": 0,
+                "shed_overflow_units": 0
+              },
+              "exception": null,
+              "import_ms": 6.49229995906353,
+              "latency_ms": {
+                "calls": 719,
+                "max": 0.5152999656274915,
+                "p50": 0.061400001868605614,
+                "p95": 0.14945997390896085,
+                "p99": 0.3059819689951862,
+                "total": 49.943897989578545
+              },
+              "max_market_orders": 10,
+              "opponent": "saiteja_3000",
+              "opponent_action_digest": "73cc71796bc731c08fce7063d2c25db4cbea4036e3e4a17ae24573c6661842ea",
+              "opponent_exception": null,
+              "opponent_money": 54002.0,
+              "opponent_reward": 54002.0,
+              "overage_exhausted": false,
+              "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\v27_current_meta\\development_main.py",
+              "seat": 0,
+              "seed": 873019,
+              "statuses": [
+                "DONE",
+                "DONE"
+              ],
+              "terminal_inventory": {
+                "marked_value": 0.0,
+                "units": 0
+              },
+              "timeout_calls": 0
+            },
+            "generated": {
+              "action_digest": "3a39ed0b2eedeed00e7f7d66c2eeefd71015442e8ee76a31ddfb380325da7ca2",
+              "action_issues": {
+                "hand_alignment": 0,
+                "malformed": 0,
+                "market_overflow": 0,
+                "seed_overcommit": 0
+              },
+              "calls": 719,
+              "candidate_money": 83135.0,
+              "candidate_reward": 83135.0,
+              "diagnostics": {
+                "animal_escapes": 0,
+                "crop_deaths": 0,
+                "fresh_crop_deaths": 0,
+                "shed_overflow_events": 0,
+                "shed_overflow_units": 0
+              },
+              "exception": null,
+              "import_ms": 3.122299909591675,
+              "latency_ms": {
+                "calls": 719,
+                "max": 0.37839997094124556,
+                "p50": 0.04249997437000275,
+                "p95": 0.11831998126581311,
+                "p99": 0.18510401248931896,
+                "total": 37.23070083651692
+              },
+              "max_market_orders": 10,
+              "opponent": "saiteja_3000",
+              "opponent_action_digest": "73cc71796bc731c08fce7063d2c25db4cbea4036e3e4a17ae24573c6661842ea",
+              "opponent_exception": null,
+              "opponent_money": 54002.0,
+              "opponent_reward": 54002.0,
+              "overage_exhausted": false,
+              "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\v27_current_meta\\main.py",
+              "seat": 0,
+              "seed": 873019,
+              "statuses": [
+                "DONE",
+                "DONE"
+              ],
+              "terminal_inventory": {
+                "marked_value": 0.0,
+                "units": 0
+              },
+              "timeout_calls": 0
+            }
+          },
+          "seat": 0,
+          "seed": 873019,
+          "valid": true
+        },
+        {
+          "equal": true,
+          "opponent": "saiteja_3000",
+          "representations": {
+            "baseline": {
+              "action_digest": "3a39ed0b2eedeed00e7f7d66c2eeefd71015442e8ee76a31ddfb380325da7ca2",
+              "action_issues": {
+                "hand_alignment": 0,
+                "malformed": 0,
+                "market_overflow": 0,
+                "seed_overcommit": 0
+              },
+              "calls": 719,
+              "candidate_money": 83133.0,
+              "candidate_reward": 83133.0,
+              "diagnostics": {
+                "animal_escapes": 0,
+                "crop_deaths": 0,
+                "fresh_crop_deaths": 0,
+                "shed_overflow_events": 0,
+                "shed_overflow_units": 0
+              },
+              "exception": null,
+              "import_ms": 59.2061000643298,
+              "latency_ms": {
+                "calls": 719,
+                "max": 1.5077999560162425,
+                "p50": 0.20370003767311573,
+                "p95": 0.41742991888895636,
+                "p99": 0.6665719742886727,
+                "total": 164.21950166113675
+              },
+              "max_market_orders": 10,
+              "opponent": "saiteja_3000",
+              "opponent_action_digest": "73cc71796bc731c08fce7063d2c25db4cbea4036e3e4a17ae24573c6661842ea",
+              "opponent_exception": null,
+              "opponent_money": 54080.0,
+              "opponent_reward": 54080.0,
+              "overage_exhausted": false,
+              "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\performance_optimization_2026_08_11\\controls\\layer_00_baseline\\v27_current_meta\\main.py",
+              "seat": 1,
+              "seed": 873019,
+              "statuses": [
+                "DONE",
+                "DONE"
+              ],
+              "terminal_inventory": {
+                "marked_value": 0.0,
+                "units": 0
+              },
+              "timeout_calls": 0
+            },
+            "development": {
+              "action_digest": "3a39ed0b2eedeed00e7f7d66c2eeefd71015442e8ee76a31ddfb380325da7ca2",
+              "action_issues": {
+                "hand_alignment": 0,
+                "malformed": 0,
+                "market_overflow": 0,
+                "seed_overcommit": 0
+              },
+              "calls": 719,
+              "candidate_money": 83133.0,
+              "candidate_reward": 83133.0,
+              "diagnostics": {
+                "animal_escapes": 0,
+                "crop_deaths": 0,
+                "fresh_crop_deaths": 0,
+                "shed_overflow_events": 0,
+                "shed_overflow_units": 0
+              },
+              "exception": null,
+              "import_ms": 35.927999997511506,
+              "latency_ms": {
+                "calls": 719,
+                "max": 1.1434999760240316,
+                "p50": 0.05600007716566324,
+                "p95": 0.13798000290989879,
+                "p99": 0.21500000730156898,
+                "total": 47.48719907365739
+              },
+              "max_market_orders": 10,
+              "opponent": "saiteja_3000",
+              "opponent_action_digest": "73cc71796bc731c08fce7063d2c25db4cbea4036e3e4a17ae24573c6661842ea",
+              "opponent_exception": null,
+              "opponent_money": 54080.0,
+              "opponent_reward": 54080.0,
+              "overage_exhausted": false,
+              "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\v27_current_meta\\development_main.py",
+              "seat": 1,
+              "seed": 873019,
+              "statuses": [
+                "DONE",
+                "DONE"
+              ],
+              "terminal_inventory": {
+                "marked_value": 0.0,
+                "units": 0
+              },
+              "timeout_calls": 0
+            },
+            "generated": {
+              "action_digest": "3a39ed0b2eedeed00e7f7d66c2eeefd71015442e8ee76a31ddfb380325da7ca2",
+              "action_issues": {
+                "hand_alignment": 0,
+                "malformed": 0,
+                "market_overflow": 0,
+                "seed_overcommit": 0
+              },
+              "calls": 719,
+              "candidate_money": 83133.0,
+              "candidate_reward": 83133.0,
+              "diagnostics": {
+                "animal_escapes": 0,
+                "crop_deaths": 0,
+                "fresh_crop_deaths": 0,
+                "shed_overflow_events": 0,
+                "shed_overflow_units": 0
+              },
+              "exception": null,
+              "import_ms": 32.706899917684495,
+              "latency_ms": {
+                "calls": 719,
+                "max": 0.2666000509634614,
+                "p50": 0.05389994475990534,
+                "p95": 0.12624002993106845,
+                "p99": 0.18011397449299704,
+                "total": 44.296198640950024
+              },
+              "max_market_orders": 10,
+              "opponent": "saiteja_3000",
+              "opponent_action_digest": "73cc71796bc731c08fce7063d2c25db4cbea4036e3e4a17ae24573c6661842ea",
+              "opponent_exception": null,
+              "opponent_money": 54080.0,
+              "opponent_reward": 54080.0,
+              "overage_exhausted": false,
+              "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\v27_current_meta\\main.py",
+              "seat": 1,
+              "seed": 873019,
+              "statuses": [
+                "DONE",
+                "DONE"
+              ],
+              "terminal_inventory": {
+                "marked_value": 0.0,
+                "units": 0
+              },
+              "timeout_calls": 0
+            }
+          },
+          "seat": 1,
+          "seed": 873019,
+          "valid": true
+        },
+        {
+          "equal": true,
+          "opponent": "baseline_boatlee",
+          "representations": {
+            "baseline": {
+              "action_digest": "188d6b463a0ef695b0c97d5b225f6e80e6735ea9396f9e9d6615b70b43ff6c52",
+              "action_issues": {
+                "hand_alignment": 0,
+                "malformed": 0,
+                "market_overflow": 0,
+                "seed_overcommit": 0
+              },
+              "calls": 719,
+              "candidate_money": 111988.0,
+              "candidate_reward": 111988.0,
+              "diagnostics": {
+                "animal_escapes": 0,
+                "crop_deaths": 0,
+                "fresh_crop_deaths": 0,
+                "shed_overflow_events": 0,
+                "shed_overflow_units": 0
+              },
+              "exception": null,
+              "import_ms": 30.56979994289577,
+              "latency_ms": {
+                "calls": 719,
+                "max": 1.5344999264925718,
+                "p50": 0.18860003910958767,
+                "p95": 0.37968998076394217,
+                "p99": 0.6888140062801542,
+                "total": 147.68619986716658
+              },
+              "max_market_orders": 10,
+              "opponent": "baseline_boatlee",
+              "opponent_action_digest": "e514648ea2345e2c9f9474c1304d18aa761033469632b779c797a23d8ebb0617",
+              "opponent_exception": null,
+              "opponent_money": 113304.0,
+              "opponent_reward": 113304.0,
+              "overage_exhausted": false,
+              "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\performance_optimization_2026_08_11\\controls\\layer_00_baseline\\v27_current_meta\\main.py",
+              "seat": 0,
+              "seed": 873037,
+              "statuses": [
+                "DONE",
+                "DONE"
+              ],
+              "terminal_inventory": {
+                "marked_value": 0.0,
+                "units": 0
+              },
+              "timeout_calls": 0
+            },
+            "development": {
+              "action_digest": "188d6b463a0ef695b0c97d5b225f6e80e6735ea9396f9e9d6615b70b43ff6c52",
+              "action_issues": {
+                "hand_alignment": 0,
+                "malformed": 0,
+                "market_overflow": 0,
+                "seed_overcommit": 0
+              },
+              "calls": 719,
+              "candidate_money": 111988.0,
+              "candidate_reward": 111988.0,
+              "diagnostics": {
+                "animal_escapes": 0,
+                "crop_deaths": 0,
+                "fresh_crop_deaths": 0,
+                "shed_overflow_events": 0,
+                "shed_overflow_units": 0
+              },
+              "exception": null,
+              "import_ms": 20.844500046223402,
+              "latency_ms": {
+                "calls": 719,
+                "max": 0.3453000681474805,
+                "p50": 0.03529991954565048,
+                "p95": 0.11014002375304702,
+                "p99": 0.18236599164083606,
+                "total": 33.636699663475156
+              },
+              "max_market_orders": 10,
+              "opponent": "baseline_boatlee",
+              "opponent_action_digest": "e514648ea2345e2c9f9474c1304d18aa761033469632b779c797a23d8ebb0617",
+              "opponent_exception": null,
+              "opponent_money": 113304.0,
+              "opponent_reward": 113304.0,
+              "overage_exhausted": false,
+              "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\v27_current_meta\\development_main.py",
+              "seat": 0,
+              "seed": 873037,
+              "statuses": [
+                "DONE",
+                "DONE"
+              ],
+              "terminal_inventory": {
+                "marked_value": 0.0,
+                "units": 0
+              },
+              "timeout_calls": 0
+            },
+            "generated": {
+              "action_digest": "188d6b463a0ef695b0c97d5b225f6e80e6735ea9396f9e9d6615b70b43ff6c52",
+              "action_issues": {
+                "hand_alignment": 0,
+                "malformed": 0,
+                "market_overflow": 0,
+                "seed_overcommit": 0
+              },
+              "calls": 719,
+              "candidate_money": 111988.0,
+              "candidate_reward": 111988.0,
+              "diagnostics": {
+                "animal_escapes": 0,
+                "crop_deaths": 0,
+                "fresh_crop_deaths": 0,
+                "shed_overflow_events": 0,
+                "shed_overflow_units": 0
+              },
+              "exception": null,
+              "import_ms": 6.100600003264844,
+              "latency_ms": {
+                "calls": 719,
+                "max": 0.5358000053092837,
+                "p50": 0.051200040616095066,
+                "p95": 0.12559992028400302,
+                "p99": 0.23132801521569518,
+                "total": 44.07040076330304
+              },
+              "max_market_orders": 10,
+              "opponent": "baseline_boatlee",
+              "opponent_action_digest": "e514648ea2345e2c9f9474c1304d18aa761033469632b779c797a23d8ebb0617",
+              "opponent_exception": null,
+              "opponent_money": 113304.0,
+              "opponent_reward": 113304.0,
+              "overage_exhausted": false,
+              "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\v27_current_meta\\main.py",
+              "seat": 0,
+              "seed": 873037,
+              "statuses": [
+                "DONE",
+                "DONE"
+              ],
+              "terminal_inventory": {
+                "marked_value": 0.0,
+                "units": 0
+              },
+              "timeout_calls": 0
+            }
+          },
+          "seat": 0,
+          "seed": 873037,
+          "valid": true
+        },
+        {
+          "equal": true,
+          "opponent": "baseline_boatlee",
+          "representations": {
+            "baseline": {
+              "action_digest": "f9ac7fb16164f5e66163fab7af357314234cf7bc242382942155a15084189968",
+              "action_issues": {
+                "hand_alignment": 0,
+                "malformed": 0,
+                "market_overflow": 0,
+                "seed_overcommit": 0
+              },
+              "calls": 719,
+              "candidate_money": 113063.0,
+              "candidate_reward": 113063.0,
+              "diagnostics": {
+                "animal_escapes": 0,
+                "crop_deaths": 0,
+                "fresh_crop_deaths": 0,
+                "shed_overflow_events": 0,
+                "shed_overflow_units": 0
+              },
+              "exception": null,
+              "import_ms": 3.183000022545457,
+              "latency_ms": {
+                "calls": 719,
+                "max": 1.969299977645278,
+                "p50": 0.15209999401122332,
+                "p95": 0.4181700292974712,
+                "p99": 0.9933939645998207,
+                "total": 140.60360030271113
+              },
+              "max_market_orders": 10,
+              "opponent": "baseline_boatlee",
+              "opponent_action_digest": "75ae0dc296f1eae710972780efabb8a8314797399dbbd2b2501692d55e745f7f",
+              "opponent_exception": null,
+              "opponent_money": 112229.0,
+              "opponent_reward": 112229.0,
+              "overage_exhausted": false,
+              "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\performance_optimization_2026_08_11\\controls\\layer_00_baseline\\v27_current_meta\\main.py",
+              "seat": 1,
+              "seed": 873037,
+              "statuses": [
+                "DONE",
+                "DONE"
+              ],
+              "terminal_inventory": {
+                "marked_value": 0.0,
+                "units": 0
+              },
+              "timeout_calls": 0
+            },
+            "development": {
+              "action_digest": "f9ac7fb16164f5e66163fab7af357314234cf7bc242382942155a15084189968",
+              "action_issues": {
+                "hand_alignment": 0,
+                "malformed": 0,
+                "market_overflow": 0,
+                "seed_overcommit": 0
+              },
+              "calls": 719,
+              "candidate_money": 113063.0,
+              "candidate_reward": 113063.0,
+              "diagnostics": {
+                "animal_escapes": 0,
+                "crop_deaths": 0,
+                "fresh_crop_deaths": 0,
+                "shed_overflow_events": 0,
+                "shed_overflow_units": 0
+              },
+              "exception": null,
+              "import_ms": 18.91430001705885,
+              "latency_ms": {
+                "calls": 719,
+                "max": 0.5256000440567732,
+                "p50": 0.03350002225488424,
+                "p95": 0.10185006540268661,
+                "p99": 0.152928021270782,
+                "total": 31.653898418881
+              },
+              "max_market_orders": 10,
+              "opponent": "baseline_boatlee",
+              "opponent_action_digest": "75ae0dc296f1eae710972780efabb8a8314797399dbbd2b2501692d55e745f7f",
+              "opponent_exception": null,
+              "opponent_money": 112229.0,
+              "opponent_reward": 112229.0,
+              "overage_exhausted": false,
+              "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\v27_current_meta\\development_main.py",
+              "seat": 1,
+              "seed": 873037,
+              "statuses": [
+                "DONE",
+                "DONE"
+              ],
+              "terminal_inventory": {
+                "marked_value": 0.0,
+                "units": 0
+              },
+              "timeout_calls": 0
+            },
+            "generated": {
+              "action_digest": "f9ac7fb16164f5e66163fab7af357314234cf7bc242382942155a15084189968",
+              "action_issues": {
+                "hand_alignment": 0,
+                "malformed": 0,
+                "market_overflow": 0,
+                "seed_overcommit": 0
+              },
+              "calls": 719,
+              "candidate_money": 113063.0,
+              "candidate_reward": 113063.0,
+              "diagnostics": {
+                "animal_escapes": 0,
+                "crop_deaths": 0,
+                "fresh_crop_deaths": 0,
+                "shed_overflow_events": 0,
+                "shed_overflow_units": 0
+              },
+              "exception": null,
+              "import_ms": 2.713100053369999,
+              "latency_ms": {
+                "calls": 719,
+                "max": 0.5629999795928597,
+                "p50": 0.060999998822808266,
+                "p95": 0.14338004402816298,
+                "p99": 0.3660500142723326,
+                "total": 52.113101934082806
+              },
+              "max_market_orders": 10,
+              "opponent": "baseline_boatlee",
+              "opponent_action_digest": "75ae0dc296f1eae710972780efabb8a8314797399dbbd2b2501692d55e745f7f",
+              "opponent_exception": null,
+              "opponent_money": 112229.0,
+              "opponent_reward": 112229.0,
+              "overage_exhausted": false,
+              "path": "C:\\Users\\wurre\\.codex\\worktrees\\853c\\Kaggriculture\\research\\main_approach\\v27_current_meta\\main.py",
+              "seat": 1,
+              "seed": 873037,
+              "statuses": [
+                "DONE",
+                "DONE"
+              ],
+              "terminal_inventory": {
+                "marked_value": 0.0,
+                "units": 0
+              },
+              "timeout_calls": 0
+            }
+          },
+          "seat": 1,
+          "seed": 873037,
+          "valid": true
+        }
+      ],
+      "fresh_wins_draws_losses": [
+        5,
+        0,
+        1
+      ],
+      "isolated_artifact": {
+        "callable_agent": true,
+        "game": {
+          "action_digest": "8e68c08469a4e1c60f9c049d6ea78782a1e353e7097a5b0adb1575aa0ea676d6",
+          "action_issues": {
+            "hand_alignment": 0,
+            "malformed": 0,
+            "market_overflow": 0,
+            "seed_overcommit": 0
+          },
+          "calls": 719,
+          "candidate_money": 53865.0,
+          "candidate_reward": 53865.0,
+          "diagnostics": {
+            "animal_escapes": 0,
+            "crop_deaths": 0,
+            "fresh_crop_deaths": 0,
+            "shed_overflow_events": 0,
+            "shed_overflow_units": 0
+          },
+          "exception": null,
+          "import_ms": 2.9970998875796795,
+          "latency_ms": {
+            "calls": 719,
+            "max": 0.2712999703362584,
+            "p50": 0.031000003218650818,
+            "p95": 0.11388994753360752,
+            "p99": 0.16740401508286631,
+            "total": 30.563700012862682
+          },
+          "max_market_orders": 10,
+          "opponent": "kaito_v21",
+          "opponent_action_digest": "1e45d2bceecf95fae000e5afe4a07ec63aa5c85526e20730609ce7075cfd9b79",
+          "opponent_exception": null,
+          "opponent_money": 32379.0,
+          "opponent_reward": 32379.0,
+          "overage_exhausted": false,
+          "path": "C:\\Users\\wurre\\AppData\\Local\\Temp\\v27_current_meta-isolated-6pakx2xm\\main.py",
+          "seat": 0,
+          "seed": 873077,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "terminal_inventory": {
+            "marked_value": 0.0,
+            "units": 0
+          },
+          "timeout_calls": 0
+        },
+        "import_ms": 53.79699997138232,
+        "route_steps": 719,
+        "valid_game": true
+      },
+      "status": "PASS"
+    }
+  }
+}

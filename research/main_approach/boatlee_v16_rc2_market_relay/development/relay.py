@@ -1,19 +1,25 @@
 """Guarded, debt-accounted three-turn fertilizer relay."""
 
 from .market import _rank_sell_slots
-from .route import _REBALANCE_ACTIONS
-from .runtime import _copy_action, _farm, _get, _seat
+from .route import _RELAY_CHECKPOINT_STEPS, _RELAY_TARGET_QUANTITIES
+from .runtime import _get
 
 # Boatlee V16-RC2: guarded, debt-accounted inter-turn FERTILIZER relay.
-_RC2_ROUTE_CHECKPOINTS = (216, 240, 264)
+_RC2_ROUTE_CHECKPOINTS = tuple(sorted(_RELAY_CHECKPOINT_STEPS))
 _RC2_ROUTE_DISTANCE_MAX = 8
 _RC2_RELAY_LEAD = 3
 _RC2_RELAY_FIRST = 278
 _RC2_RELAY_LAST = 662
 _RC2_ROUTE_STATE = {
-    0: {"last_step": -1, "checks": {}, "locked": False, "due_step": -1, "due": 0},
-    1: {"last_step": -1, "checks": {}, "locked": False, "due_step": -1, "due": 0},
+    0: {"checks": {}, "locked": False, "due_step": -1, "due": 0},
+    1: {"checks": {}, "locked": False, "due_step": -1, "due": 0},
 }
+
+
+def _rc2_reset(seat):
+    state = {"checks": {}, "locked": False, "due_step": -1, "due": 0}
+    _RC2_ROUTE_STATE[seat] = state
+    return state
 
 
 def _rc2_public_signature(farm):
@@ -52,40 +58,30 @@ def _rc2_route_distance(obs):
     )
 
 
-def _rc2_state(obs, step):
-    seat = _seat(obs)
+def _rc2_update_state(obs, step, seat):
     state = _RC2_ROUTE_STATE[seat]
-    if step == 0 or step < int(state.get("last_step", -1)):
-        state = {
-            "last_step": step,
-            "checks": {},
-            "locked": False,
-            "due_step": -1,
-            "due": 0,
-        }
-        _RC2_ROUTE_STATE[seat] = state
-    state["last_step"] = step
-    if step in _RC2_ROUTE_CHECKPOINTS and step not in state["checks"]:
+    if step in _RELAY_CHECKPOINT_STEPS and step not in state["checks"]:
         state["checks"][step] = _rc2_route_distance(obs) <= _RC2_ROUTE_DISTANCE_MAX
         if all(checkpoint in state["checks"] for checkpoint in _RC2_ROUTE_CHECKPOINTS):
             state["locked"] = all(state["checks"].values())
     return state
 
 
-def _rc2_future_fertilizer_quantity(step):
-    future_step = step + _RC2_RELAY_LEAD
-    if not (
-        _RC2_RELAY_FIRST <= step <= _RC2_RELAY_LAST
-        and 281 <= future_step <= 665
-        and future_step % 24 == 17
-        and future_step < len(_REBALANCE_ACTIONS)
-    ):
-        return 0
-    return sum(
-        max(0, int(order[2]))
-        for order in (_REBALANCE_ACTIONS[future_step].get("market") or [])
-        if len(order) >= 3 and order[0] == "SELL" and order[1] == "FERTILIZER"
+def _rc2_needs_relay(state, step):
+    due_step = int(state.get("due_step", -1))
+    if due_step == step:
+        return True
+    if 0 <= due_step < step:
+        state["due_step"], state["due"] = -1, 0
+    return bool(
+        state.get("locked")
+        and not state.get("due", 0)
+        and _rc2_future_fertilizer_quantity(step) > 0
     )
+
+
+def _rc2_future_fertilizer_quantity(step):
+    return int(_RELAY_TARGET_QUANTITIES.get(step, 0))
 
 
 def _rc2_repay(action, state, step):
@@ -117,9 +113,7 @@ def _rc2_repay(action, state, step):
     return action
 
 
-def _rc2_market_relay(obs, action, step, configuration):
-    action = _copy_action(action)
-    state = _rc2_state(obs, step)
+def _rc2_market_relay(obs, action, step, configuration, state):
     action = _rc2_repay(action, state, step)
     if not state.get("locked") or state.get("due", 0):
         return action

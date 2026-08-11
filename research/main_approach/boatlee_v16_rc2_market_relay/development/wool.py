@@ -1,14 +1,20 @@
 """Inventory- and price-aware wool release."""
 
-from .livestock import _v16_yarn_route
-from .runtime import _copy_action, _get, _seat
+from .route import _WOOL_SELL_STEPS
+from .runtime import _get
 
 # Boatlee V16-R6: inventory- and price-aware WOOL release for YARN_STORE.
 _V16_WOOL_GATES = ((480, 170), (600, 120), (672, 80), (719, 1))
 _V16_WOOL_PRESSURE = 78
 _V16_WOOL_BATCH = 16
 _V16_WOOL_GAP = 6
-_V16_WOOL_STATE = {0: {"last_step": -1, "last_sale": -1000}, 1: {"last_step": -1, "last_sale": -1000}}
+_V16_WOOL_STATE = {0: {"last_sale": -1000}, 1: {"last_sale": -1000}}
+
+
+def _v16_wool_reset(seat):
+    state = {"last_sale": -1000}
+    _V16_WOOL_STATE[seat] = state
+    return state
 
 
 def _v16_wool_gate(step):
@@ -18,19 +24,13 @@ def _v16_wool_gate(step):
     return 1
 
 
-def _v16_wool_controller(action, obs, step):
-    action = _copy_action(action)
-    if not _v16_yarn_route(obs, step):
+def _v16_wool_controller(action, obs, step, seat, yarn):
+    if not yarn:
         return action
-    seat = _seat(obs)
     state = _V16_WOOL_STATE[seat]
-    if step == 0 or step < int(state.get("last_step", -1)):
-        state = {"last_step": step, "last_sale": -1000}
-        _V16_WOOL_STATE[seat] = state
-    state["last_step"] = step
-    market_orders = [list(order) for order in (action.get("market") or [])]
-    if any(len(order) >= 2 and order[0] == "SELL" and order[1] == "WOOL" for order in market_orders):
+    if step in _WOOL_SELL_STEPS:
         return action
+    market_orders = [list(order) for order in (action.get("market") or [])]
     private = _get(obs, "private", {}) or {}
     shed = _get(private, "shed", {}) or {}
     wool = max(0, int(_get(shed, "WOOL", 0) or 0))

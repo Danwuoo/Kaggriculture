@@ -18,13 +18,38 @@ import copy
 import hashlib
 import importlib.util
 import random
+import subprocess
 import sys
 from pathlib import Path
 from types import ModuleType, SimpleNamespace
 
 
 ROOT = Path(__file__).resolve().parents[1]
-VENDOR_ROOT = ROOT / ".vendor" / "kaggle-environments"
+
+
+def _vendor_root() -> Path:
+    """Resolve the read-only pinned checkout from a linked Git worktree."""
+    local = ROOT / ".vendor" / "kaggle-environments"
+    if local.is_dir():
+        return local
+    common = subprocess.run(
+        ["git", "rev-parse", "--git-common-dir"],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    if common.returncode == 0:
+        common_dir = Path(common.stdout.strip())
+        if not common_dir.is_absolute():
+            common_dir = ROOT / common_dir
+        shared = common_dir.resolve().parent / ".vendor" / "kaggle-environments"
+        if shared.is_dir():
+            return shared
+    return local
+
+
+VENDOR_ROOT = _vendor_root()
 ENGINE_PATH = VENDOR_ROOT / "kaggle_environments" / "envs" / "kaggriculture" / "kaggriculture.py"
 JSON_PATH = ENGINE_PATH.with_suffix(".json")
 

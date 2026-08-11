@@ -14,6 +14,23 @@ DEVELOPMENT = Path(__file__).resolve().parent
 APPROACH = DEVELOPMENT.parent
 MODULES = ('constants.py', 'runtime.py', 'weed_repair.py', 'market.py', 'agent.py')
 SUMMARY = 'v27 current-meta midgame reset for Kaggriculture.'
+DEFAULT_CODEC = "b64"
+
+
+def _route_metadata(actions):
+    hand_counts = []
+    weed_steps = []
+    multi_sell_steps = []
+    for step, action in enumerate(actions):
+        hands = action.get("hands", []) or []
+        hand_counts.append(len(hands))
+        unit_actions = [action.get("farmer", ["PASS"]), *hands]
+        if any(order and order[0] in ("BUILD_PASTURE", "PLANT") for order in unit_actions):
+            weed_steps.append(step)
+        sells = sum(bool(len(order) >= 3 and order[0] == "SELL") for order in (action.get("market", []) or []))
+        if sells >= 2:
+            multi_sell_steps.append(step)
+    return tuple(hand_counts), tuple(weed_steps), tuple(multi_sell_steps)
 
 
 def _module_body(name):
@@ -21,12 +38,20 @@ def _module_body(name):
     return "\n".join(line for line in lines if not line.startswith("from ."))
 
 
-def render():
+def render(codec=DEFAULT_CODEC):
     actions = json.loads((DEVELOPMENT / "route_actions.json").read_text(encoding="utf-8"))
     if len(actions) != 719:
         raise ValueError(f"expected 719 route actions, got {len(actions)}")
     raw = json.dumps(actions, separators=(",", ":"), ensure_ascii=True).encode("utf-8")
-    payload = base64.b85encode(zlib.compress(raw, level=9)).decode("ascii")
+    if codec == "b64":
+        payload = base64.b64encode(zlib.compress(raw, level=9)).decode("ascii")
+        decoder = "b64decode"
+    elif codec == "b85":
+        payload = base64.b85encode(zlib.compress(raw, level=9)).decode("ascii")
+        decoder = "b85decode"
+    else:
+        raise ValueError(codec)
+    hand_counts, weed_steps, multi_sell_steps = _route_metadata(actions)
     chunks = "\n".join(f"        {chunk!r}" for chunk in textwrap.wrap(payload, 100))
     header = (
         f'"""{SUMMARY}\n\n'
@@ -36,12 +61,15 @@ def render():
         'import base64\n'
         'import json\n'
         'import zlib\n\n\n'
-        '_LEGACY_ACTIONS = json.loads(zlib.decompress(base64.b85decode(\n'
+        f'_LEGACY_ACTIONS = json.loads(zlib.decompress(base64.{decoder}(\n'
         '    (\n'
         f'{chunks}\n'
         '    )\n'
         ')).decode("utf-8"))\n'
         '_REBALANCE_ACTIONS = _LEGACY_ACTIONS\n'
+        f'_ROUTE_HAND_COUNTS = {hand_counts!r}\n'
+        f'_WEED_CANDIDATE_STEPS = frozenset({weed_steps!r})\n'
+        f'_MULTI_SELL_STEPS = frozenset({multi_sell_steps!r})\n'
     )
     bodies = [header.rstrip()]
     for name in MODULES:
@@ -52,9 +80,10 @@ def render():
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--check", action="store_true")
+    parser.add_argument("--codec", choices=("b85", "b64"), default=DEFAULT_CODEC)
     parser.add_argument("--output", type=Path, default=APPROACH / "main.py")
     args = parser.parse_args()
-    expected = render()
+    expected = render(args.codec)
     if args.check:
         actual = args.output.read_text(encoding="utf-8")
         if actual != expected:
