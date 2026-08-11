@@ -1,0 +1,38 @@
+{
+  "flat_mlp": {
+    "epochs": 1581,
+    "parameters": 409,
+    "train_mae": 0.6360333870702881,
+    "validation_mae": 1.6225862102277213,
+    "validation_sign_accuracy": 0.4166666666666667
+  },
+  "gcn": {
+    "epochs": 481,
+    "parameters": 449,
+    "train_mae": 4.164707061736895,
+    "validation_mae": 5.030829819776723,
+    "validation_sign_accuracy": 0.4166666666666667
+  },
+  "train_delta_summary": {
+    "count": 48,
+    "cvar20": 0.0,
+    "mean": 7.833333333333333,
+    "median": 0.0,
+    "negative": 0,
+    "positive": 20,
+    "worst": 0.0,
+    "zero": 28
+  },
+  "train_samples": 48,
+  "validation_delta_summary": {
+    "count": 24,
+    "cvar20": 0.0,
+    "mean": 7.833333333333333,
+    "median": 0.0,
+    "negative": 0,
+    "positive": 10,
+    "worst": 0.0,
+    "zero": 14
+  },
+  "validation_samples": 24
+}
