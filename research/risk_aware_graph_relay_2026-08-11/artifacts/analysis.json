@@ -1,0 +1,286 @@
+{
+  "fit": {
+    "flat_mlp": {
+      "epochs": 1581,
+      "parameters": 409,
+      "train_mae": 0.6360333870702881,
+      "validation_mae": 1.6225862102277213,
+      "validation_sign_accuracy": 0.4166666666666667
+    },
+    "gcn": {
+      "epochs": 481,
+      "parameters": 449,
+      "train_mae": 4.164707061736895,
+      "validation_mae": 5.030829819776723,
+      "validation_sign_accuracy": 0.4166666666666667
+    },
+    "train_delta_summary": {
+      "count": 48,
+      "cvar20": 0.0,
+      "mean": 7.833333333333333,
+      "median": 0.0,
+      "negative": 0,
+      "positive": 20,
+      "worst": 0.0,
+      "zero": 28
+    },
+    "train_samples": 48,
+    "validation_delta_summary": {
+      "count": 24,
+      "cvar20": 0.0,
+      "mean": 7.833333333333333,
+      "median": 0.0,
+      "negative": 0,
+      "positive": 10,
+      "worst": 0.0,
+      "zero": 14
+    },
+    "validation_samples": 24
+  },
+  "models": {
+    "always_force": {
+      "by_opponent": {
+        "kaito_v21_top30": {
+          "count": 4,
+          "cvar20": 8.0,
+          "mean": 8.0,
+          "median": 8.0,
+          "negative": 0,
+          "positive": 4,
+          "worst": 8.0,
+          "zero": 0
+        },
+        "roman_lb950": {
+          "count": 4,
+          "cvar20": 0.0,
+          "mean": 2.5,
+          "median": 2.5,
+          "negative": 0,
+          "positive": 2,
+          "worst": 0.0,
+          "zero": 2
+        },
+        "saiteja_mega_ensemble_3000": {
+          "count": 4,
+          "cvar20": 22.0,
+          "mean": 22.0,
+          "median": 22.0,
+          "negative": 0,
+          "positive": 4,
+          "worst": 22.0,
+          "zero": 0
+        },
+        "v27_current_meta": {
+          "count": 4,
+          "cvar20": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "negative": 0,
+          "positive": 0,
+          "worst": 0.0,
+          "zero": 4
+        },
+        "v27_current_meta_safety_guarded": {
+          "count": 4,
+          "cvar20": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "negative": 0,
+          "positive": 0,
+          "worst": 0.0,
+          "zero": 4
+        }
+      },
+      "latency_max_ms": 116.70076800010065,
+      "latency_p95_ms_max": 2.158873999860589,
+      "paired_delta": {
+        "count": 20,
+        "cvar20": 0.0,
+        "mean": 6.5,
+        "median": 2.5,
+        "negative": 0,
+        "positive": 10,
+        "worst": 0.0,
+        "zero": 10
+      },
+      "soft_risk_delta_vs_control": {
+        "animal_escapes": 0.0,
+        "crop_deaths": 0.0,
+        "fresh_crop_deaths": 0.0,
+        "overflow_units": 0.0,
+        "seed_overcommit_events": 0.0,
+        "seed_overcommit_units": 0.0,
+        "terminal_inventory_mark": 0.0,
+        "terminal_inventory_units": 0.0
+      },
+      "technical_failures": 0,
+      "weakest_opponent_mean": 0.0
+    },
+    "flat_mlp": {
+      "by_opponent": {
+        "kaito_v21_top30": {
+          "count": 4,
+          "cvar20": 8.0,
+          "mean": 8.0,
+          "median": 8.0,
+          "negative": 0,
+          "positive": 4,
+          "worst": 8.0,
+          "zero": 0
+        },
+        "roman_lb950": {
+          "count": 4,
+          "cvar20": 0.0,
+          "mean": 0.5,
+          "median": 0.5,
+          "negative": 0,
+          "positive": 2,
+          "worst": 0.0,
+          "zero": 2
+        },
+        "saiteja_mega_ensemble_3000": {
+          "count": 4,
+          "cvar20": 16.0,
+          "mean": 19.0,
+          "median": 19.0,
+          "negative": 0,
+          "positive": 4,
+          "worst": 16.0,
+          "zero": 0
+        },
+        "v27_current_meta": {
+          "count": 4,
+          "cvar20": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "negative": 0,
+          "positive": 0,
+          "worst": 0.0,
+          "zero": 4
+        },
+        "v27_current_meta_safety_guarded": {
+          "count": 4,
+          "cvar20": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "negative": 0,
+          "positive": 0,
+          "worst": 0.0,
+          "zero": 4
+        }
+      },
+      "latency_max_ms": 83.72150499985764,
+      "latency_p95_ms_max": 0.4033019999951648,
+      "paired_delta": {
+        "count": 20,
+        "cvar20": 0.0,
+        "mean": 5.5,
+        "median": 0.5,
+        "negative": 0,
+        "positive": 10,
+        "worst": 0.0,
+        "zero": 10
+      },
+      "soft_risk_delta_vs_control": {
+        "animal_escapes": 0.0,
+        "crop_deaths": 0.0,
+        "fresh_crop_deaths": 0.0,
+        "overflow_units": 0.0,
+        "seed_overcommit_events": 0.0,
+        "seed_overcommit_units": 0.0,
+        "terminal_inventory_mark": 0.0,
+        "terminal_inventory_units": 0.0
+      },
+      "technical_failures": 0,
+      "weakest_opponent_mean": 0.0
+    },
+    "gcn": {
+      "by_opponent": {
+        "kaito_v21_top30": {
+          "count": 4,
+          "cvar20": 8.0,
+          "mean": 8.0,
+          "median": 8.0,
+          "negative": 0,
+          "positive": 4,
+          "worst": 8.0,
+          "zero": 0
+        },
+        "roman_lb950": {
+          "count": 4,
+          "cvar20": 0.0,
+          "mean": 2.5,
+          "median": 2.5,
+          "negative": 0,
+          "positive": 2,
+          "worst": 0.0,
+          "zero": 2
+        },
+        "saiteja_mega_ensemble_3000": {
+          "count": 4,
+          "cvar20": 8.0,
+          "mean": 11.0,
+          "median": 11.0,
+          "negative": 0,
+          "positive": 4,
+          "worst": 8.0,
+          "zero": 0
+        },
+        "v27_current_meta": {
+          "count": 4,
+          "cvar20": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "negative": 0,
+          "positive": 0,
+          "worst": 0.0,
+          "zero": 4
+        },
+        "v27_current_meta_safety_guarded": {
+          "count": 4,
+          "cvar20": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "negative": 0,
+          "positive": 0,
+          "worst": 0.0,
+          "zero": 4
+        }
+      },
+      "latency_max_ms": 18.024625999942145,
+      "latency_p95_ms_max": 0.5465409999487747,
+      "paired_delta": {
+        "count": 20,
+        "cvar20": 0.0,
+        "mean": 4.3,
+        "median": 2.5,
+        "negative": 0,
+        "positive": 10,
+        "worst": 0.0,
+        "zero": 10
+      },
+      "soft_risk_delta_vs_control": {
+        "animal_escapes": 0.0,
+        "crop_deaths": 0.0,
+        "fresh_crop_deaths": 0.0,
+        "overflow_units": 0.0,
+        "seed_overcommit_events": 0.0,
+        "seed_overcommit_units": 0.0,
+        "terminal_inventory_mark": 0.0,
+        "terminal_inventory_units": 0.0
+      },
+      "technical_failures": 0,
+      "weakest_opponent_mean": 0.0
+    }
+  },
+  "promotion": {
+    "downside_gate": true,
+    "graph_ablation_gate": false,
+    "held_out_mean_gate": true,
+    "paired_win_gate": true,
+    "promote": false,
+    "technical_gate": true,
+    "weakest_family_gate": true
+  },
+  "wall_time_seconds": 153.9108768200001
+}
