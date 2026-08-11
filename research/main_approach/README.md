@@ -30,3 +30,24 @@ here does not establish safety, efficacy, or promotion readiness.
   are provenance for the two v27 variants.
 - Do not package any approach as the production submission unless it separately
   passes the workspace acceptance gates.
+
+## Development sources
+
+The two active high-score lines keep their editable implementation under a
+`development/` package. Their 719-turn routes are readable
+`route_actions.json` files and their runtime overlays are split by concern.
+The sibling `main.py` is generated only as the single-file Kaggle artifact;
+edit the development package, then run its `build_standalone.py` and
+`--check`. `development_main.py` exposes the same agent directly from the
+uncompressed modules for local experiments.
+
+Run the shared source contracts and full current-engine equivalence check with:
+
+```powershell
+python -m unittest research.main_approach.test_development_sources -v
+python research\main_approach\validate_development.py
+```
+
+The full-game validator requires exact equality of rewards, action digests,
+schema findings, and safety diagnostics from both seats. Keep the two
+development trees independent even when their route data currently matches.

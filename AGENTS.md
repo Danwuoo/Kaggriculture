@@ -1,536 +1,423 @@
-# Kaggriculture Workspace Guide
+# Kaggriculture Main-Approach Guide
 
-This file governs work under `C:\Users\wurre\Desktop\Kaggriculture` unless a
+This file governs work under `C:\Users\wurre\Downloads\Kaggriculture` unless a
 more deeply nested `AGENTS.md` overrides it.
 
-## Mission
+## Current Focus
 
-Maintain and improve a reliable, competitive, multi-file Kaggriculture agent.
-The current production design and canonical experimental control are:
+The active development center is `research/main_approach/`, with two independent
+incumbent strategy lines:
 
-> Efficient mixed livestock baseline + closed-loop task scheduling + exact
-> market control + safe degradation.
+| Incumbent | Core mechanism | Editable source |
+| --- | --- | --- |
+| `v27_current_meta` | HIRE4-derived fixed route, actor-local weed repair, and market SELL-slot ranking | `research/main_approach/v27_current_meta/development/` |
+| `boatlee_v16_rc2_market_relay` | Boatlee V16-RC2 livestock route, wool control, and guarded three-turn FERTILIZER relay | `research/main_approach/boatlee_v16_rc2_market_relay/development/` |
 
-This control is reliable but not close to the demonstrated public frontier.
-Treat its route, scheduler, objective, and economic theory as hypotheses, not as
-the definition of the problem. Before optimizing an existing mechanism, compare
-materially different explanations, seek falsifying evidence, and prefer the
-cheapest experiment that reduces uncertainty. Do not promote a change from a
-single favorable seed, raw score, or winning margin.
+Treat both as first-class incumbents. Do not silently make one the universal
+baseline, transplant a result from one to the other, or report an aggregate
+gain that hides a regression on either line. They may share hypotheses, test
+harnesses, and offline analysis, but their runtime modules, routes, generated
+artifacts, controls, and evidence must remain independently attributable.
 
-Prefer a complete, tested, submission-ready change over a plan or an abstract
-framework. Continue autonomously through implementation, tests, official-engine
-games, performance checks, and packaging unless a decision cannot be recovered
-from this workspace or an authoritative source.
+`v27_current_meta_safety_guarded/` is retained as a useful reference variant,
+not a third active development line. The multi-file `submission/` tree is the
+restored Round 2 reliability control; it is no longer the default optimization
+target and must not displace the two main approaches in experiments unless the
+hypothesis specifically requires it.
 
-Do not submit to Kaggle, create a remote repository, push commits, or otherwise
-change external state unless the user explicitly asks in the current chat.
+The primary next research direction is a dual-incumbent temporal residual over
+a 24- to 48-turn horizon. It should let feed, water, harvest, shipping, shed
+capacity, sale timing, deliberate asset abandonment, and time-shifted market
+preemption compete through explicit opportunity cost. Asset survival has no
+special status in that comparison: losing an animal or crop can be the rational
+choice when its remaining value is below the work, timing, capacity, or capital
+it consumes. A graph model is one
+ablation, not the assumed solution: compare it with a flat model and a simple
+greedy/value rule. A shared residual must condition on incumbent identity and
+state, rejoin the relevant incumbent legally, and earn its value separately on
+both strategy families.
+
+Prefer a complete, tested, standalone, submission-ready change over a plan or
+an abstract framework. Continue through implementation, official-engine games,
+performance checks, and artifact verification unless a decision cannot be
+recovered from this workspace or an authoritative source.
+
+Do not submit to Kaggle, create or change a remote repository, push commits, or
+otherwise change external state unless the user explicitly asks in the current
+chat.
 
 ## Authority and Required Reading
 
-Before changing strategy or engine-facing behavior, read:
+Before changing either main approach or engine-facing experiment behavior,
+read in this order:
 
-1. `strategy.md`
-2. `data/kaggriculture/AGENTS.md`
-3. `data/kaggriculture/README.md`
-4. The relevant material in `docs/competition/`
-5. The current official engine source
+1. This file.
+2. `research/main_approach/README.md`.
+3. The selected approach's `development/README.md` and relevant split modules.
+4. `data/kaggriculture/AGENTS.md` and `data/kaggriculture/README.md`.
+5. The exact official engine Python and configuration JSON used by the run.
+6. The decision record for the mechanism being extended or challenged.
 
-When sources disagree, the current competition engine is authoritative:
+Read `strategy.md` and the relevant `submission/` modules only when changing or
+using the legacy production control. Read archived reports narrowly for the
+question at hand; they are evidence, not active implementation instructions.
 
-- <https://github.com/Kaggle/kaggle-environments/tree/master/kaggle_environments/envs/kaggriculture>
-- The local pinned checkout `.vendor/kaggle-environments` currently resolves to
-  `a4dce5ae6e2ffe3c1afea8ec4b24b562df74cc07`.
-- The latest retained experiment audit was verified against commit
-  `bded87b0d7879078c726a93a4884d044f79c4eed` on 2026-08-08; that newer engine
-  is not the current local pinned checkout.
+When sources disagree, the exact engine used by the experiment is authoritative:
 
-Re-check upstream before relying on that commit in a later session. Do not edit
-`.vendor`, `data`, or `docs` as part of normal agent development.
+- Official source: <https://github.com/Kaggle/kaggle-environments/tree/master/kaggle_environments/envs/kaggriculture>
+- Local pinned checkout `.vendor/kaggle-environments` resolves to
+  `a4dce5ae6e2ffe3c1afea8ec4b24b562df74cc07` and is older than the latest
+  retained current-engine audit.
+- The 2026-08-11 graph-relay audit used Python blob
+  `4b78842d0f2d4abf6e318a8248b6306454f5c714` and configuration blob
+  `0fcdf2c14c47d3bdc821c02e26263956cf0fd3d8`, associated with audited engine
+  commit `bded87b0d7879078c726a93a4884d044f79c4eed`.
 
-## Documentation Navigation
+Re-fingerprint both Python and configuration before every new official-engine
+experiment. Never call a result current-engine-matched merely because its
+Python code matches while its JSON configuration differs. Do not edit
+`.vendor/`, `data/`, or `docs/` during normal strategy development.
 
-Use the narrowest authoritative document for the task:
+## Active Source and Artifact Contract
 
-| Need | Start here |
-| --- | --- |
-| Intended production strategy | `strategy.md` |
-| Manually tuned standalone main approaches | `research/main_approach/README.md` |
-| Risk-aware graph-relay experiment | `research/risk_aware_graph_relay_2026-08-11/decision.md` |
-| Packaged competition data and local rules | `data/kaggriculture/AGENTS.md`, `data/kaggriculture/README.md` |
-| Saved competition page | `docs/competition/Kaggriculture _ Kaggle.html` |
-| Initial implementation and validation | `reports/strategy_round1_2026-08-06.md` |
-| Restoration of the canonical Round 2 control | `reports/round2_restoration_2026-08-08.md` |
-| Latest arena and public-league evidence | `reports/arena_results.json`, `reports/public_league_results.json` |
-| Retired family and one-factor decisions | `reports/experiments/README.md` |
-| Top-50 replay metadata and external payload location | `data/public_replays/top50-2026-08-09/README.md` |
-| Replay-clone analysis and archived full matrix | `reports/replay_clone_study/analysis.md`, `reports/replay_clone_study/full_matrix_report.md` |
-| H1-H8 hypothesis cycle and redevelopment decision | `reports/hypothesis_cycle_2026-08-10.md` |
-| Original replay-reproduction notes | `report_v1.md` |
-| Downloaded public agents | `research/public_agents/README.md` |
-| External artifact and retired-code map | `ARCHIVE.md` |
+For each active incumbent, `development/` is the editable source of truth. The
+sibling `main.py` is a deterministic, compressed, generated Kaggle artifact.
 
-`report_v1.md` and the frozen replay-clone matrix are historical evidence with a
-known mixed-engine configuration: newer Python semantics were patched into an
-older package while its JSON still used a 12-turn town-center interval. Read the
-2026-08-10 hypothesis report before drawing current-engine conclusions from
-those results.
+### v27 current meta
 
-## Hand-Tuned Main Approaches
+- `route_actions.json`: independently owned readable 719-turn route.
+- `constants.py`, `runtime.py`: constants and episode/runtime state.
+- `weed_repair.py`, `market.py`: runtime overlays.
+- `agent.py`: development composition and entrypoint.
+- `development_main.py`: local uncompressed entrypoint.
+- `development/build_standalone.py`: deterministic single-file builder.
+- `main.py`: generated artifact; never edit it by hand.
 
-`research/main_approach/` is the canonical home for the project owner's
-manually tuned, standalone strategy lines. It currently contains:
+### Boatlee V16-RC2 market relay
 
-- `v27_current_meta/`: the original v27 fixed public route with actor-local
-  weed repair and market SELL-slot ranking.
-- `v27_current_meta_safety_guarded/`: the v27 route plus a same-turn seed
-  ledger and fresh-crop watering protection.
-- `boatlee_v16_rc2_market_relay/`: the Boatlee V16-RC2 livestock route with
-  wool control and a guarded three-turn FERTILIZER market relay.
+- `route_actions.json`: independently owned readable 719-turn route.
+- `constants.py`, `runtime.py`: constants and episode/runtime state.
+- `weed_repair.py`, `market.py`: shared concerns within this approach only.
+- `livestock.py`, `wool.py`: livestock conversion and wool control.
+- `base_agent.py`, `relay.py`, `agent.py`: base route, relay residual, and
+  development composition.
+- `development_main.py`: local uncompressed entrypoint.
+- `development/build_standalone.py`: deterministic single-file builder.
+- `main.py`: generated artifact; never edit it by hand.
 
-Each line retains a self-contained `main.py`. They are classified research
-approaches, not production controls, and their presence here is not promotion
-evidence. Compare them under an explicit engine/configuration fingerprint and
-the standard paired safety/efficacy gates before reusing or packaging one. The
-former `scripts/other appoach/` location was removed after its two v27 agents
-were moved here; retained audit reports may still cite the old paths as
-provenance.
+Do not deduplicate route JSON, constants, or Python modules across the two
+approaches. Similarity is provenance, not permission to couple their editable
+sources. If a reusable offline harness is needed, keep it outside both runtime
+trees and ensure neither generated artifact imports it.
 
-## Evidence Retention and Deleted Material
+Every generated `main.py` must:
 
-The temporary route-memory, search, and learned-family program was retired on
-2026-08-08 after none of its frozen candidates established competitive efficacy.
-Only its narrative final reports and decisions remain under
-`reports/experiments/`. The former `experiments/` tree, candidate source,
-runners, raw matrices, logs, caches, and superseded snapshots were intentionally
-deleted. Paths to them inside retained reports are provenance, not live
-navigation or reproducibility promises.
+- expose `agent(obs)` from archive root;
+- be self-contained and standard-library-only;
+- have no runtime filesystem, network, subprocess, or local checkout
+  assumptions;
+- preserve seat-isolated episode state and reset on step zero or rewind;
+- remain below the competition package and runtime limits.
 
-Do not treat any reported family as a promotion candidate or restart the old
-staged program without a new, explicitly authorized protocol.
+`v27_current_meta_safety_guarded/main.py` remains authoritative for that
+reference variant until a separately validated decompression is performed.
 
-On 2026-08-10 the workspace was compacted into an active source tree and an
-external archive at
-`C:\Users\wurre\Desktop\Kaggriculture-archive\2026-08-10`. The replay-clone
-implementation, large raw matrix files, raw replay payloads, and completed or
-rejected 2026-08-10 research implementations are retained there. Compact
-decisions, analyses, manifests, and checksums remain in this workspace. Paths
-inside historical reports that now point to archived files are provenance, not
-live navigation. Read `ARCHIVE.md` before attempting to reproduce or resume an
-archived lane.
+## Main-Approach Development Workflow
 
-The full-tape topology scale-up is not archived: its source and resumable cache
-remain active under `research/full_tape_topology_scaleup_2026-08-10/` and
-`research/cache/full_tape_topology_scaleup_2026-08-10/`. `.vendor/` and
-`research/other_approach_submission_audit_2026-08-10/` were explicitly
-excluded from the cleanup and must remain untouched unless the user separately
-authorizes a change.
+### 1. Establish the control
 
-## Workspace Map
+Before editing:
 
-- `reports/experiments/`: narrative final reports and decisions from retired
-  family and one-factor programs; raw per-game evidence is not retained.
-- `reports/hypothesis_cycle_2026-08-10.md`: consolidated H1-H8 evidence,
-  measurement audit, and final redevelopment rejection.
-- `reports/replay_clone_study/`: retained replay-clone summaries and compact
-  fidelity/specification evidence. Large raw matrix outputs are in the external
-  archive; apply the mixed-engine caveat above.
-- `submission/main.py`: Kaggle entrypoint exposing `agent(obs)`.
-- `submission/controller.py`: episode lifecycle, timing budget, orchestration,
-  caching, and fallback levels.
-- `submission/state.py`: defensive observation normalization and derived state.
-- `submission/rules.py`: legality, schema, resource consistency, and final
-  action projection.
-- `submission/scheduler.py`: P0-P5 job generation, assignment, logistics, and
-  weed recovery.
-- `submission/pathfinding.py`: cached all-pairs BFS for the 10x10 board.
-- `submission/market.py`: exact price curve, per-unit projection, ordered sales,
-  purchases, hiring, and land decisions.
-- `submission/economy.py`: crop, animal, land, fertilizer, and terminal value.
-- `submission/opponent.py`: public-information-only cohort forecasts.
-- `submission/simulator.py`: compressed daily macro scenario selection.
-- `submission/strategy.py`: stable spatial roles and desired farm topology.
-- `submission/constants.py`: engine-matched constants.
-- `submission/parameters.py`: small offline-tunable policy parameters.
-- `tests/test_agent.py`: unit and official-engine rule tests.
-- `scripts/run_arena.py`: official 720-step multi-seed/paired-seat arena and
-  latency/safety report.
-- `scripts/run_public_league.py`: scalable paired-seat league against safely
-  extracted public research agents.
-- `scripts/extract_public_agents.py`: static, non-executing notebook payload
-  extractor and source audit.
-- `scripts/analyze_top50_replays.py`: offline structural analysis of the fixed
-  Top-50 replay snapshot. It reads compact metadata locally, raw payloads from
-  the external archive by default, and writes regenerated large output there.
-- `scripts/build_submission.py`: deterministic tarball builder and extracted
-  import smoke test.
-- `data/high scores notebook/`: downloaded high-scoring notebook sources; read
-  them as evidence, never package or import them at runtime.
-- `data/public_replays/top50-2026-08-09/`: fixed Top-50 snapshot metadata and
-  authoritative manifest. The 50 raw replay payloads are externally archived
-  at the location recorded in its `README.md` and in `ARCHIVE.md`.
-- `research/main_approach/`: canonical catalog of the project owner's three
-  manually tuned standalone agents; see its `README.md` before evaluation.
-- `research/risk_aware_graph_relay_2026-08-11/`: current-engine paired
-  counterfactual lane comparing a fixed relay, flat MLP, and graph residual;
-  it is research evidence, not a production dependency.
-- `research/public_agents/`: downloaded public notebooks and offline-only
-  extracted opponents; never package this directory into a submission.
-- `research/full_tape_topology_scaleup_2026-08-10/`: the only retained active
-  scale-up research lane; its checkpoint remains under `research/cache/`.
-- `research/other_approach_submission_audit_2026-08-10/`: explicitly retained
-  standalone submission audit; do not treat it as production.
-- `ARCHIVE.md`: exact mapping of externally archived raw evidence, retired
-  research implementations, and historical runners.
-- `reports/arena_results.json`: latest generated arena evidence.
-- `dist/submission.tar.gz`: generated Kaggle artifact; never edit by hand.
+1. Run `git status -sb` and preserve unrelated or user-owned changes.
+2. Name the incumbent being changed. For a dual-incumbent mechanism, name both.
+3. Fingerprint engine Python and configuration JSON.
+4. Freeze or checksum each pre-change generated `main.py` used as a control.
+5. Predeclare the mechanism, smallest discriminating game block, fresh
+   holdouts, stopping rule, and falsifying result.
+6. Decide whether the work is behavior-preserving or intentionally behavioral;
+   the validation protocol is different.
 
-All runtime imports must work with the archive extracted directly into
-`/kaggle_simulations/agent/`. Keep sibling imports absolute, lightweight, and
-free of local filesystem assumptions.
+Use `apply_patch` for source edits. Keep the final action projection or
+equivalent legality boundary immediately before returning the action.
+
+### 2. Edit decompressed source only
+
+Make runtime and route changes under the selected approach's `development/`
+tree. Never prototype by editing generated `main.py`. Do not change both
+incumbents in one lane unless the experiment explicitly tests a shared
+dual-incumbent residual; even then, retain separate parameterization and
+per-incumbent results.
+
+For a temporal or time-difference intervention, record:
+
+- the public trigger and decision step;
+- the intended action shift and maximum horizon;
+- the resource, maintenance, capacity, or market opportunity displaced;
+- the exact condition that returns control to the incumbent;
+- the unshifted paired counterfactual.
+
+### 3. Rebuild generated artifacts
+
+From workspace root:
+
+```powershell
+python research\main_approach\v27_current_meta\development\build_standalone.py
+python research\main_approach\v27_current_meta\development\build_standalone.py --check
+python research\main_approach\boatlee_v16_rc2_market_relay\development\build_standalone.py
+python research\main_approach\boatlee_v16_rc2_market_relay\development\build_standalone.py --check
+python -m unittest research.main_approach.test_development_sources -v
+```
+
+Run only the relevant builder when one approach changed, but always run the
+shared source contract. A stale generated artifact is a failed check, not a
+minor packaging issue.
+
+### 4. Validate according to change type
+
+For a behavior-preserving split, builder, or refactor change, run:
+
+```powershell
+python research\main_approach\validate_development.py
+```
+
+It must establish exact current-engine equivalence among the frozen pre-change
+standalone control, regenerated `main.py`, and `development_main.py`, from both
+seats. Compare rewards, all 719 returned actions or their full digest,
+  termination, action-schema findings, economic-event diagnostics, and opponent
+  behavior.
+
+For an intentional strategy change, equality to the old control is neither
+expected nor sufficient. Use the frozen pre-change artifact as the matched
+control, evaluate the candidate from both seats on identical seed/opponent
+blocks, and keep every loss, invalid run, and adverse event. Confirm separately
+that the regenerated `main.py` and `development_main.py` are exactly equivalent
+to each other.
+
+### 5. Evaluate against both incumbents
+
+A single-incumbent change must be judged relative to its own incumbent. A
+shared overlay, selector, job model, or temporal residual must report two
+separate strata:
+
+- candidate-on-v27 versus unmodified v27;
+- candidate-on-Boatlee versus unmodified Boatlee.
+
+Do not pool raw terminal rewards across these strata. Report paired win/draw/
+loss first, then paired terminal-margin delta, own-bank delta, downside, and
+mechanism-specific diagnostics. Include the other incumbent as an opponent
+when it is useful, but do not confuse opponent choice with the control being
+ablated.
+
+Use both seats and fresh, previously unused holdout seeds before expanding a
+lane. Opponent blocks should be family-stratified and chosen for interaction,
+not merely public rating. The retained Kaito v21, Saiteja Mega Ensemble, Roman,
+guarded-v27, and the other active incumbent are available references; add an
+opponent only when it exercises a distinct maintenance, capacity, livestock,
+fertilizer, or market-timing interaction.
+
+### 6. Record and hand off
+
+Retain exact engine/config hashes, controls, source hashes, seeds, seats,
+opponents, per-game results, action digests, latency, and economic events. A
+summary report is not passing unless its current machine-readable
+artifact supports it. Do not overwrite or discard unfavorable runs.
+
+## Experiment and Promotion Gates
+
+Use the cheapest experiment that can falsify the mechanism. One favorable seed,
+raw score, margin, or head-to-head win is not promotion evidence.
+
+A candidate may expand only after:
+
+- both players finish `DONE` in every retained game;
+- there are zero exceptions, timeouts, malformed action structures, and
+  overage exhaustion;
+- same seed, seats, strategies, engine, and configuration reproduce identical
+  rewards and action digests;
+- market action lists never exceed ten entries;
+- latency is measured across a full episode, with p95 below 150 ms and maximum
+  below 750 ms on the development machine;
+- fresh paired holdouts show a positive win signal in the relevant incumbent
+  stratum, with no unexplained strategy-wide collapse;
+- a dual-incumbent candidate has non-negative credible evidence on each
+  incumbent separately rather than relying on a pooled gain.
+
+Animal escapes, crop deaths, fresh-crop deaths, shed overflow, seed
+overcommit, deliberate abandonment, and terminal inventory are economic
+outcomes, never independent promotion gates. They may increase, even sharply,
+when paired win and value evidence shows that the released labor, timing,
+capacity, or capital is worth more. Record and attribute them so intentional
+abandonment can be distinguished from an uncontrolled cascade. Reject them only
+when the total economic outcome or downside is unreasonable, not because an
+asset failed to survive.
+
+Before packaging any approach for submission, also verify that the archive:
+
+- is under 5 MiB;
+- contains `main.py` at archive root;
+- excludes development modules, tests, reports, replay data, caches, virtual
+  environments, and local paths;
+- imports after extraction into an isolated directory;
+- completes at least one official-engine game from the extracted copy.
+
+Packaging or promotion does not authorize a Kaggle submission.
 
 ## Engine Invariants
 
-Preserve these rules in every change:
+Preserve and test these rules in every engine-facing change:
 
-- The episode has 720 recorded states; meaningful agent actions are steps
-  0-718. The engine marks both players `DONE` after processing step 718.
-- Unit actions run before market actions. A product already carried can be
+- An episode has 720 recorded states. Meaningful agent actions are steps 0-718;
+  both players become `DONE` after processing step 718.
+- Unit actions run before market actions. A product already carried may be
   `DROP`ped and then `SELL`ed in the same turn.
-- Same-turn market purchases cannot fund or supply unit actions that were
-  already processed. Earlier `SELL` orders can fund later market orders.
-- `SELL` consumes shed inventory only. `HARVEST` writes to that unit's inventory.
-- A fresh plant begins with `consecutive_unwatered = 1` and must be watered on
-  its planting day or it becomes a weed at refresh.
-- Two consecutive missed daily needs kill the asset: plants become weeds and
-  animals escape permanently.
-- PLANT demand is atomic per crop. If requests exceed seeds, every PLANT request
-  for that crop is cancelled. Always use a same-turn shadow seed ledger.
+- Same-turn purchases cannot fund or supply unit actions already processed.
+  Earlier `SELL` orders may fund later market orders.
+- `SELL` consumes shed inventory only. `HARVEST` writes to unit inventory.
+- A fresh plant starts with `consecutive_unwatered = 1` and must be watered on
+  planting day or it becomes a weed at refresh.
+- Two consecutive missed daily needs destroy the asset: plants become weeds
+  and animals escape permanently.
+- PLANT demand is atomic per crop. If requests exceed available seeds, every
+  PLANT request for that crop is cancelled. Use a same-turn shadow seed ledger
+  whenever an overlay can add or redirect planting.
 - LOCKED tiles are traversable. In the audited current engine, center-shed
-  `PICKUP`, `DROP`, and shed-directed `PLACE` are handled before the locked-tile
-  guard and therefore remain legal; field mutations remain blocked. A hired
-  hand may spawn on `(5,4)` while NE is locked and must be able to leave.
+  `PICKUP`, `DROP`, and shed-directed `PLACE` occur before the locked-tile guard;
+  field mutations remain blocked. A hand spawned at `(5,4)` while NE is locked
+  must be able to leave.
 - The shed holds 100 non-seed items. DROP overflow is discarded before market
-  processing; selling later in that turn cannot recover overflow.
-- Market queues are ordered and capped at 10 entries. Extra orders are silently
-  discarded.
-- Market price is recomputed per unit. Splitting one order into several orders
-  in the same turn does not improve its price.
-- Price-floor sales do not add market inventory. BUY_PRODUCT quotes at post-buy
-  inventory.
-- At audited commit `bded87b0d7879078c726a93a4884d044f79c4eed`, the town
-  center sells on a flat 24-turn interval and shops are sampled as instances
-  with replacement, so duplicate shop types are possible, up to a cap of eight.
-- The restored production control and local pinned package still encode older
-  assumptions in places, including a 12-turn demand estimate and unlocked-only
-  shed targeting. Fingerprint both the Python engine and configuration JSON
-  before every current-engine experiment; do not call the control
-  current-engine-matched without that check.
-- State must reset when `step` returns to zero or moves backward and must remain
-  isolated by player seat.
-- Opponent modeling may use only public money, farm tiles, crops, animals,
-  workers, land, town, shops, and market data. Never infer from account, team,
-  or hidden private inventory.
+  processing and cannot be recovered by selling later that turn.
+- Market queues are ordered and capped at ten entries. Extra orders are
+  silently discarded.
+- Market price is recomputed per unit. Splitting an order in the same turn does
+  not improve price.
+- Price-floor sales do not add market inventory. BUY_PRODUCT quotes use
+  post-buy inventory.
+- At audited commit `bded87b0d7879078c726a93a4884d044f79c4eed`, town-center
+  demand uses a flat 24-turn interval and shop instances are sampled with
+  replacement, permitting duplicate types up to the eight-shop cap.
+- State resets when step returns to zero or moves backward and remains isolated
+  by player seat.
+- Runtime opponent modeling may use only public money, farms, tiles, crops,
+  animals, workers, land, town, shops, market data, and public actions. Never
+  infer from account, team, or hidden private inventory.
 
-## Strategy and Risk Priorities
+## Job Value and Opportunity Cost
 
-Use these urgency priorities in the default scheduler. P0 marks an imminent,
-irreversible asset loss; it is not by itself a hard research or promotion gate.
-A candidate may accept an asset loss or atomic PLANT cancellation when an
-explicit opportunity-cost model and fresh paired evidence value that tradeoff.
-Always retain and report those events rather than silently treating them as
-success or automatically rejecting the candidate:
+For the current temporal-residual direction, compare work by marginal value over
+the active horizon rather than inherited urgency labels. The model or rule must
+put all of these on the same opportunity-cost surface:
 
-- P0: second missed water/feed would destroy an asset.
-- P1: decay, full held yield, shed pressure, forced terminal return/drop/sale.
-- P2: melon or fertilized production windows and bounded weed recovery.
-- P3: normal feed, care, harvest, and logistics.
-- P4: fertilizer collection and feed staging.
-- P5: planting, building, digging, expansion, and optional investment.
+- preventing an imminent crop death or animal escape;
+- accepting that death or escape and reallocating the worker;
+- relieving capacity or decay pressure;
+- harvesting, shipping, or exploiting a fertilized production window;
+- moving a sale to preempt public demand or delaying it for a better bundle;
+- ordinary feed, water, care, pickup, and staging;
+- planting, building, digging, expansion, hiring, and investment.
 
-The canonical control remains adaptive. Do not replace it merely because a
-route is common in strong replays: the trajectory-primary redevelopment failed
-both safety and efficacy gates. Its intended route is approximately 3 cows + 1
-sheep in the opening, a small melon capital event, conditional NE then SW
-unlocks, and a mature target near 8 cows, 5-6 sheep, 6-7 staggered strawberries,
-and 10-12 hands when workload warrants it. SE must pass a remaining-time,
-4,000-coin, labor, and commute marginal-return test. A materially different
-route is allowed, but must earn promotion through fresh paired evidence and the
-  same technical and paired-efficacy gates, with biological/resource events
-  retained as risk-aware economic diagnostics.
+None receives a categorical priority merely because it preserves an asset. The
+point of a job-level residual is to expose the competition between remaining
+asset value, travel, labor, timing, capacity, capital, and opponent interaction.
+Preserve the incumbent action when the residual lacks support, and bound every
+override in time and scope so a local trade does not accidentally become a
+strategy-wide collapse.
 
-For a planned PLANT or BUILD target that becomes a weed: DIG, revalidate next
-turn, retry locally for a bounded number of turns, and cancel if terminal or
-economic feasibility is gone. A recovery retry must still obey the planting
-cutoff so it cannot create an unwatered crop late in the day.
+For a planned PLANT or BUILD target that becomes a weed, DIG, revalidate on the
+next turn, retry locally for a bounded number of turns, and cancel when terminal
+or economic feasibility is gone. Any retry must still obey planting-day water
+requirements and cutoffs.
 
 ## Runtime Constraints
 
-The official action timeout is one second. Keep normal turns far below 150 ms.
-Use `time.perf_counter()` and preserve the controller's levels:
+The official action timeout is one second. Keep normal turns far below 150 ms
+and measure with `time.perf_counter()`.
 
-- Level 0: full macro plan, opponent forecast, jobs, and market control.
-- Level 1: reuse macro state and update jobs/market only.
-- Level 2: survival, harvest, return/drop, legal liquidation, and schema safety.
+Runtime code and generated artifacts must not use networking, subprocesses,
+multiprocessing, pandas, sklearn, heavy models, file writes, or verbose logging.
+Offline experiment scripts may use files and subprocesses. Keep learned models
+small, deterministic, embedded, and cheap enough that model inference is not a
+meaningful share of the action budget.
 
-Runtime code must not use networking, subprocesses, multiprocessing, pandas,
-sklearn, heavy models, file writes, or verbose logging. Offline scripts may use
-files and subprocesses for validation/building.
+Use bounded technical degradation for any new residual:
 
-## Development Workflow
+- if observations or features are missing, return to the incumbent;
+- if the time budget is threatened, skip the residual and preserve legal
+  incumbent behavior;
+- if an override becomes illegal or its preconditions change, rejoin rather
+  than improvising an unvalidated action chain.
 
-1. Inspect the workspace and, if present, `git status -sb`. Preserve unrelated
-   and user-owned changes.
-2. Read the relevant modules and official engine code before editing.
-3. Use `apply_patch` for source edits.
-4. Keep the legality projector as the final boundary before returning an action.
-5. Compile and run unit tests.
-6. Run the official arena for behavioral, paired-seat, determinism, and latency
-   evidence.
-7. Rebuild the tarball only after all validation passes.
-8. Extract and import-smoke-test the tarball; for material changes, also run one
-   complete game using the extracted package.
-9. Report exact results and remaining risks. Do not describe a generated report
-   as passing unless its current contents support that claim.
+This fallback rule protects runtime validity, not biological assets. A valid
+residual may intentionally skip maintenance or abandon an asset when that is
+the higher-value action.
 
-PowerShell validation commands from the workspace root:
+## Retained Decision Memory
 
-```powershell
-python -m compileall -q submission tests scripts
-$env:PYTHONPATH=(Resolve-Path '.vendor\kaggle-environments').Path
-$env:TF_CPP_MIN_LOG_LEVEL='3'
-python -m unittest discover -s tests -v
-python scripts\run_arena.py
-python scripts\build_submission.py
-```
+The details belong in their reports; the following constraints remain active:
 
-The source checkout may print `Loading environment open_spiel_env failed: No
-module named 'pyspiel'`; this is unrelated to Kaggriculture when the
-Kaggriculture environment loads and runs successfully.
+- `research/risk_aware_graph_relay_2026-08-11/decision.md`: do not promote the
+  GCN or flat MLP. Across 80 held-out games, a static always-force fertilizer
+  residual beat both learned selectors but improved mean paired margin by only
+  6.5 coins and changed no win/loss. The intervention surface lacked negative
+  labels. Reuse this as falsifying evidence, not as a model candidate.
+- `reports/hypothesis_cycle_2026-08-10.md`: scale-only, opening-only, one-day
+  commitment, modal-route imitation, and fixed-tape continuation were not
+  sufficient. Do not restart them without a distinct mechanism and protocol.
+- `reports/experiments/README.md`: the old route-memory, one-day search, linear
+  learned, and one-factor programs failed efficacy gates. Their reported paths
+  may be provenance to deleted material.
+- `reports/replay_clone_study/`: the Top-50 snapshot showed concentrated visible
+  routes but distinct complete action and market tapes. Historical clone
+  matrices also used a mixed engine/configuration; read the caveat before
+  drawing current-engine conclusions.
+- The restored `submission/` control passed its historical reliability gates
+  but went 4-76 in the retained public-agent league and 0/64 against the four
+  strongest extracted public routes. Reliability is not frontier efficacy.
+- `research/full_tape_topology_scaleup_2026-08-10/` and its cache remain active
+  files but are not the present priority. Do not resume that lane merely because
+  its artifacts remain on disk.
 
-## Acceptance Gates
+## Evidence, Archive, and Navigation
 
-A submission candidate is ready only when the technical gates pass:
+Use the narrowest source that answers the question:
 
-- All unit tests pass.
-- Self-play ends with both players `DONE`.
-- Multi-seed games against `starter` and `random` run from both seats.
-- Same seed + same strategies reproduce identical rewards and action digest.
-- There are zero timeouts and malformed actions.
-- Replay auditing reports animal escapes, crop deaths, shed overflow, and seed
-  overcommit with their paired terminal opportunity cost. Zero is not a hard
-  promotion target for these four economic events.
-- Market lists never exceed 10 entries. PLANT overcommit must be counted and
-  attributed; the official atomic cancellation is legal and therefore is not
-  automatically a malformed-action failure.
-- A full official episode records p50, p95, p99, and maximum agent latency; p95
-  must stay under 150 ms and maximum under 750 ms.
-- `dist/submission.tar.gz` is under 5 MiB, contains `main.py` at archive root,
-  excludes tests/replays/cache/venv, and imports after extraction.
+| Need | Start here |
+| --- | --- |
+| Two active incumbents and development contract | `research/main_approach/README.md` |
+| v27 editable architecture | `research/main_approach/v27_current_meta/development/README.md` |
+| Boatlee editable architecture | `research/main_approach/boatlee_v16_rc2_market_relay/development/README.md` |
+| Decompression equivalence evidence | `research/main_approach/development_validation.json` |
+| Failed graph-relay decision and next abstraction | `research/risk_aware_graph_relay_2026-08-11/decision.md` |
+| Competition rules and packaged data | `data/kaggriculture/AGENTS.md`, `data/kaggriculture/README.md` |
+| Legacy production intent | `strategy.md` |
+| Legacy production validation | `reports/round2_restoration_2026-08-08.md` |
+| Historical experiment decisions | `reports/experiments/README.md`, `reports/hypothesis_cycle_2026-08-10.md` |
+| Top-50 replay metadata | `data/public_replays/top50-2026-08-09/README.md` |
+| Downloaded public opponents | `research/public_agents/README.md` |
+| Archived artifact map | `ARCHIVE.md` |
 
-## Experiment Results and Decisions
+The external archive is at
+`C:\Users\wurre\Desktop\Kaggriculture-archive\2026-08-10`. Read `ARCHIVE.md`
+before reproducing an archived lane. Paths in historical reports may be
+provenance rather than live navigation.
 
-These summaries are decision memory, not permission to reuse deleted candidates.
-Consult the linked reports for protocols, seed sets, and caveats.
+The fixed Top-50 replay snapshot contains one selected replay for each rank
+1-50. Only ranks 1-28 were rated at least 3000; replay rewards are not
+leaderboard ratings. Combining both players' replay observations reveals
+private information unavailable at runtime. Use private fields only to audit
+that same player; all cross-player and runtime comparisons must remain public.
 
-### Production controls and public league
+The initial decompression of both active incumbents was verified on 2026-08-11
+against audited current-engine commit
+`bded87b0d7879078c726a93a4884d044f79c4eed`: 12 full games covering both
+approaches, original/generated/development representations, and both seats
+ended `DONE`/`DONE` with exact rewards and 719-call action digests. The source
+contracts passed 3/3 and the legacy production suite passed 18/18. See
+`research/main_approach/development_validation.json`.
 
-- Round 1 established the safe multi-file baseline; Round 2 added regional
-  scheduling and shipping ETA and is the restored canonical control.
-- The initial 10-replay audit found only about 22-24% field/logistics actions,
-  2.7-2.9 moves per productive action versus roughly 1.7-1.9 for strong winning
-  opponents, and a planned 6-7 strawberry target usually realized as only 2-3.
-  Under the then-pinned engine, unlocked-only shed routing plus an eight-melon
-  opening addressed a real logistics/capital defect; this historical locked-
-  shed conclusion must not be projected onto the newer audited semantics.
-- An intermediate old-versus-new candidate matrix was 10 wins and 2 losses with
-  mean paired terminal difference +2,403.42. The retained final Round 2
-  candidate then went 12-0 against the exact old archive across six seeds and
-  both seats, averaging +11,662.00. See
-  `reports/candidate_vs_baseline_round1.json` and
-  `reports/candidate_vs_baseline_round2.json`.
-- A broader sticky-assignment variant was rejected immediately after causing
-  two animal escapes; it is not in production.
-- The 80-game public-agent league was 4 wins and 76 losses. Against the four
-  strongest extracted public routes, the control was 0/64 despite zero safety
-  failures. Reliability therefore does not establish competitive efficacy.
+## Default Working Principle
 
-### Retired three-family program
-
-Results below use wins-draws-losses as recorded in
-`reports/experiments/README.md`:
-
-| Family | Result | Decision |
-| --- | --- | --- |
-| Route memory, Stage 1 | 4-0-316; paired 2-0-158 | Failed efficacy gate. |
-| Route memory, Stage 2 | `adaptive_profit` 10-0-630; `nearest_robust` 11-0-629 | Both selector variants failed. |
-| Route memory, Stage 3 entry | `full_repaired` 1-0-639 | `DO_NOT_ENTER_STAGE3`. |
-| One-day search hybrid | 0-0-320 | `DO_NOT_ENTER_STAGE2`. |
-| Linear learned hybrid | 0-0-320 | `DO_NOT_ENTER_STAGE2`. |
-
-The common lesson is that route selection, one-day ranking, and linear behavior
-cloning did not overcome the shared execution core. The underlying candidates
-and runners no longer exist in this workspace.
-
-### One-factor lanes and failed current-engine integration
-
-| Lane | Evidence | Decision |
-| --- | --- | --- |
-| 01, current-engine parity | Reproduced audited current semantics and served as a correctness control. | Baseline only; no efficacy claim. |
-| 02, four-way shed | Higher starter margin in 3/4 pairs, mean +1,493; public-opponent run hit its time cap. | Insufficient for promotion. |
-| 03, short zone scheduler | Positive in 1/4 pairs; mean -1,791.25. | Stop. |
-| 04, capital/herd timing | Positive in 1/2 seed-pairs (2/4 seats); combined -5,664. | Stop. |
-| 05, 14-strawberry scale | 0/4; mean -4,676. | Stop. |
-| 06, shop-conditioned portfolio | 0/4; mean -10,674.5. | Stop. |
-| 07, four-way shed isolation | Higher current-engine margin in 1/4; mean paired delta -1,955.25. | Stop. |
-
-A later current-engine integration passed its correctness gates, including
-23/23 tests, but improved public-match margin in only 5/16 bounded comparisons
-with mean delta -291.19 and then received a lower live leaderboard result. It
-was restored away. Its decision report is retained at
-`reports/experiments/current_engine_integration_failed/decision.md`; several raw
-artifact links inside that report point to intentionally deleted files.
-
-### Replay-clone study
-
-The Top-50 snapshot showed a highly concentrated visible route but not a shared
-complete policy: 45/50 replays had the same macro fingerprint and 33/50 the
-exact unit-action sequence, while every complete action tape, market tape, and
-market-order shape was distinct.
-
-Three closed-loop reference clones were safe but competitively ineffective:
-
-| Clone | Matrix result | Average margin |
-| --- | --- | --- |
-| Rank-1 full-map 10-cow/11-sheep | 0-0-96; paired 0-0-48 | -97,629.0 |
-| Cow-heavy 12-cow/2-sheep | 0-0-96 | -102,141.6 |
-| Dominant 8-cow/6-sheep | 0-0-96 | -107,700.2 |
-
-Interpret these results with the mixed-engine measurement caveat in
-Documentation Navigation. They falsify the retained clone implementations, not
-the broader claim that strong agents exploit coordinated trajectories.
-
-### H1-H8 uncertainty-reduction cycle, 2026-08-10
-
-The full protocol and evidence are in `reports/hypothesis_cycle_2026-08-10.md`.
-
-| ID | Hypothesis and discriminating result | Decision |
-| --- | --- | --- |
-| H1 | Small intended scale is the main bottleneck. Exact v25 created a much larger turn-240 farm, but v25-to-canonical scored 91,427 versus all-canonical 99,084 and lost 20 inherited strawberries. | Reject as primary cause. |
-| H2 | Season-scale multi-worker trajectory commitment is missing. Strong routes showed less travel and more productive work; a day-local proxy went 4/4 on reused seeds but only 3/1 on fresh holdouts, with paired means +52 and +516 instead of +13,178. | Mechanism plausible; tested proxy not established. |
-| H3 | A different opening capital basin is sufficient. Exact v25 scored 200,213 versus 99,084, but handoffs to canonical at 24/72/240 scored 56,738/92,351/91,427. | Reject sufficiency; continued execution carries the value. |
-| H4 | Shared-market timing is frontier alpha. SELL ranking won a near-clone comparison 4/0 with about +153 mean margin; cross-family preemption changed only tens of coins and no W/L. | Stable small edge, not main gap. |
-| H5 | The apparent limit is partly measurement artifact. The clone study used a 12-turn JSON interval while audited current semantics use 24, and locked center-shed behavior also differs. | Supported. |
-| H6 | Clone evaluation mismeasured exact public artifacts. Exact Kaito v21 and Saiteja 3000 beat canonical in both seats; Roman lost both, but none maps to a specific Top-50 team and conditioned tapes later diverged. | Moderately supported, identity unresolved. |
-| H7 | Raw terminal bank is the wrong selection objective. Raw-bank P1R1 and paired-win P0R1 market variants both went 4/0 versus Kaito. | Not supported by bounded test. |
-| H8 | The Top-50 modal field route is the right imitation target. Route concentration was high, but all 50 full/market tapes were unique. | Reject as sufficient formulation. |
-
-The resulting trajectory-primary Preempt-H6 redevelopment was rejected. Before
-its guard fix it went 0/4 versus canonical and 0/2 versus exact v25 with 32
-animal escapes. Independent post-fix validation still lost both seats to
-canonical on fresh seed `618273` (117-759 and 117-670) and lost four animals in
-each game. Do not promote, package, or resume this candidate; use it only as
-negative evidence about fixed-tape compatibility and maintenance feasibility.
-
-## Current Verified Baseline
-
-The production tree is the restored Round 2 canonical control, not any
-experiment candidate. On 2026-08-10, all 13 files under `submission/` matched an
-isolated Round 2 control snapshot by SHA-256, and the archive digest was still
-unchanged. Its initial retained 2026-08-06 validation report recorded:
-
-- 18/18 unit tests passing.
-- 13 official arena games all ending with both players `DONE`.
-- 6/6 wins against `starter` and 6/6 wins against `random`, using three seeds
-  and both seats.
-- Zero malformed actions, animal escapes, fresh-crop deaths, and overflow states.
-- Deterministic repeated self-play at seed 777.
-- Full-episode latency: p50 0.7387 ms, p95 1.07972 ms, p99 1.50608 ms,
-  max 9.1504 ms.
-- Archive size 17,340 bytes with SHA-256
-  `C84664D77EB9D32CE7001D31EE15634AE144B9403BA98D43B1D69226A588AAB2`.
-- The 80-game public-agent league ended 4 wins and 76 losses. The control was
-  0/64 against the four strongest public routes while retaining zero safety
-  failures. See `reports/public_league_results.json`.
-
-The 2026-08-08 restoration independently reran compilation, 18/18 tests, all 13
-arena games, determinism, safety, and an extracted-package game. All passed; its
-719-call latency was p50 0.7774 ms, p95 1.04767 ms, p99 2.00739 ms, and maximum
-10.4343 ms. See `reports/round2_restoration_2026-08-08.md`.
-
-Those gates were run against the older local pinned package. Because production
-was deliberately restored after the failed current-engine integration, it is
-not currently verified as semantically identical to audited commit
-`bded87b0d7879078c726a93a4884d044f79c4eed`. Establish an explicit current
-engine/configuration fingerprint before using it as a current-engine control.
-
-Kaggle submissions `55283999` (`Hybrid livestock closed-loop scheduler v1`) and
-`55287643` (`Round 2 regional scheduler + shipping ETA; safety-gated`) were both
-`COMPLETE` when checked on 2026-08-06, with API public scores 668.6 and 783.0.
-These values are historical and simulation ratings continue to move: query the
-live state with `kaggle competitions submissions kaggriculture --csv` before
-reporting it.
-
-The workspace was not a Git repository when this guide was created. Do not
-initialize a repository or invent a remote without explicit user direction.
-
-## Top-50 Public Replay Dataset
-
-The workspace contains the metadata for a fixed public-leaderboard replay
-snapshot at `data/public_replays/top50-2026-08-09/`; its raw payloads are under
-`C:\Users\wurre\Desktop\Kaggriculture-archive\2026-08-10\data\public_replays\top50-2026-08-09\replays`.
-It was captured at
-`2026-08-08T16:10:15.675637Z` and contains 50 unique official replays, one for
-each leaderboard rank 1-50. For every team, the retained episode is the highest
-reward completed public episode of the active submission whose public score
-matched the leaderboard snapshot. All 50 happened to be distinct, so no
-next-best duplicate fallback was needed.
-
-Do not describe all of these as `3000+` leaderboard agents. Only ranks 1-28 in
-the snapshot had leaderboard ratings at or above 3000 (`3003.2-3201.1`); ranks
-29-50 were rated `2935.1-2997.5`. The selected episode rewards are a different
-metric and range from `134,868` to `183,163`. "Top replay" in this dataset means
-the highest single-game reward available for that team's matched submission,
-not a leaderboard rating above 3000 or an estimate of expected performance.
-
-The 50 externally archived, uncompressed JSON files total 1,391,681,379 bytes
-(1.296 GiB). All were
-verified as 720-step `DONE`/`DONE` episodes with matching team rewards and
-SHA-256 checksums. Engine module versions are 47 replays on `1.32.6`, two on
-`1.32.5`, and one on `1.32.4`. Treat `manifest.json` as the authoritative index,
-`leaderboard_snapshot.json` as the ranking evidence, and
-`scripts/collect_top_public_replays.py` as the reproduction tool.
-
-A replay exposes each player's own private observation. Combining both records
-offline therefore reveals information that neither agent possessed during play.
-Use private fields only to audit that same player; cross-player comparisons and
-runtime opponent modeling must remain limited to public farms, actions, market,
-town, and reward data.
-
-## Highest-Value Next Work
-
-Start from matched, one-factor ablations against the canonical control, but do
-not assume that more assets, a different opening, or the modal fixed route is
-the right formulation. The highest-information next abstraction is
-route-state compatibility plus maintenance feasibility: test whether a planner
-can accept a dense inherited state, preserve all animals and fresh crops, and
-continue productive work before building another full trajectory policy.
-
-For every new program:
-
-1. Fingerprint the exact engine Python and configuration JSON first.
-2. Predeclare the mechanism, support and falsification evidence, smallest
-   discriminating game block, fresh holdouts, stopping rule, and what a failed
-   experiment would still teach.
-3. Keep lanes isolated from production and from one another. Preserve every
-   loss and invalid run in the decision record.
-4. Require zero technical failures and a positive paired-win signal on fresh,
-   unused seeds before expanding the program. Price survival, seed-overcommit,
-   overflow, travel, and productive-action events through paired terminal and
-   downside evidence; none is an independent zero-tolerance promotion gate.
-5. Optimize family-stratified paired match wins first; use own bank and margin
-   as secondary diagnostics. Treat SELL ordering as a late-stage marginal edge.
-
-Do not restart scale-only, opening-only, one-day commitment, linear-clone, or
-fixed-tape programs without a new mechanism and a protocol that distinguishes
-it from the failures recorded above.
+Start from the smallest matched residual on each incumbent that can reveal a
+real temporal tradeoff. Preserve incumbent behavior outside the declared
+window, require negative as well as positive counterfactual labels before
+training a selector, and expand only after fresh paired evidence supports the
+mechanism separately for v27 and Boatlee.

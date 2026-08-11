@@ -1,0 +1,439 @@
+{
+  "comparisons": [
+    {
+      "development": {
+        "action_digest": "157b250f30b2a08262cb8fc2c501fa80b5f2f01638d3558efbf4b7d0459983f9",
+        "action_issues": {
+          "malformed": 0,
+          "market_overflow": 0,
+          "seed_overcommit": 0
+        },
+        "calls": 719,
+        "candidate_reward": 84395.0,
+        "diagnostics": {
+          "animal_escapes": 0,
+          "drop_overflow_units": 0,
+          "eod_overflow_units": 0,
+          "fresh_crop_deaths": 0,
+          "shed_overflow_states": 0
+        },
+        "exception": null,
+        "latency_ms": {
+          "calls": 719,
+          "max": 0.6482000462710857,
+          "p50": 0.17490005120635033,
+          "p95": 0.31587006524205213,
+          "p99": 0.42040405794978153
+        },
+        "opponent_exception": null,
+        "opponent_reward": 56684.0,
+        "states": 720,
+        "statuses": [
+          "DONE",
+          "DONE"
+        ],
+        "timeout_calls": 0
+      },
+      "equal": true,
+      "generated": {
+        "action_digest": "157b250f30b2a08262cb8fc2c501fa80b5f2f01638d3558efbf4b7d0459983f9",
+        "action_issues": {
+          "malformed": 0,
+          "market_overflow": 0,
+          "seed_overcommit": 0
+        },
+        "calls": 719,
+        "candidate_reward": 84395.0,
+        "diagnostics": {
+          "animal_escapes": 0,
+          "drop_overflow_units": 0,
+          "eod_overflow_units": 0,
+          "fresh_crop_deaths": 0,
+          "shed_overflow_states": 0
+        },
+        "exception": null,
+        "latency_ms": {
+          "calls": 719,
+          "max": 0.7987000280991197,
+          "p50": 0.15350000467151403,
+          "p95": 0.5533799179829657,
+          "p99": 0.6813899707049138
+        },
+        "opponent_exception": null,
+        "opponent_reward": 56684.0,
+        "states": 720,
+        "statuses": [
+          "DONE",
+          "DONE"
+        ],
+        "timeout_calls": 0
+      },
+      "original": {
+        "action_digest": "157b250f30b2a08262cb8fc2c501fa80b5f2f01638d3558efbf4b7d0459983f9",
+        "action_issues": {
+          "malformed": 0,
+          "market_overflow": 0,
+          "seed_overcommit": 0
+        },
+        "calls": 719,
+        "candidate_reward": 84395.0,
+        "diagnostics": {
+          "animal_escapes": 0,
+          "drop_overflow_units": 0,
+          "eod_overflow_units": 0,
+          "fresh_crop_deaths": 0,
+          "shed_overflow_states": 0
+        },
+        "exception": null,
+        "latency_ms": {
+          "calls": 719,
+          "max": 0.7208000170066953,
+          "p50": 0.125400023534894,
+          "p95": 0.21867003524675968,
+          "p99": 0.4971859650686392
+        },
+        "opponent_exception": null,
+        "opponent_reward": 56684.0,
+        "states": 720,
+        "statuses": [
+          "DONE",
+          "DONE"
+        ],
+        "timeout_calls": 0
+      },
+      "seat": 0,
+      "seed": 811407,
+      "strategy": "v27_current_meta"
+    },
+    {
+      "development": {
+        "action_digest": "157b250f30b2a08262cb8fc2c501fa80b5f2f01638d3558efbf4b7d0459983f9",
+        "action_issues": {
+          "malformed": 0,
+          "market_overflow": 0,
+          "seed_overcommit": 0
+        },
+        "calls": 719,
+        "candidate_reward": 84395.0,
+        "diagnostics": {
+          "animal_escapes": 0,
+          "drop_overflow_units": 0,
+          "eod_overflow_units": 0,
+          "fresh_crop_deaths": 0,
+          "shed_overflow_states": 0
+        },
+        "exception": null,
+        "latency_ms": {
+          "calls": 719,
+          "max": 0.7575000636279583,
+          "p50": 0.10390009265393019,
+          "p95": 0.20520004909485579,
+          "p99": 0.3874960402026774
+        },
+        "opponent_exception": null,
+        "opponent_reward": 56684.0,
+        "states": 720,
+        "statuses": [
+          "DONE",
+          "DONE"
+        ],
+        "timeout_calls": 0
+      },
+      "equal": true,
+      "generated": {
+        "action_digest": "157b250f30b2a08262cb8fc2c501fa80b5f2f01638d3558efbf4b7d0459983f9",
+        "action_issues": {
+          "malformed": 0,
+          "market_overflow": 0,
+          "seed_overcommit": 0
+        },
+        "calls": 719,
+        "candidate_reward": 84395.0,
+        "diagnostics": {
+          "animal_escapes": 0,
+          "drop_overflow_units": 0,
+          "eod_overflow_units": 0,
+          "fresh_crop_deaths": 0,
+          "shed_overflow_states": 0
+        },
+        "exception": null,
+        "latency_ms": {
+          "calls": 719,
+          "max": 0.8427000138908625,
+          "p50": 0.11080002877861261,
+          "p95": 0.23116001393646018,
+          "p99": 0.3650519857183103
+        },
+        "opponent_exception": null,
+        "opponent_reward": 56684.0,
+        "states": 720,
+        "statuses": [
+          "DONE",
+          "DONE"
+        ],
+        "timeout_calls": 0
+      },
+      "original": {
+        "action_digest": "157b250f30b2a08262cb8fc2c501fa80b5f2f01638d3558efbf4b7d0459983f9",
+        "action_issues": {
+          "malformed": 0,
+          "market_overflow": 0,
+          "seed_overcommit": 0
+        },
+        "calls": 719,
+        "candidate_reward": 84395.0,
+        "diagnostics": {
+          "animal_escapes": 0,
+          "drop_overflow_units": 0,
+          "eod_overflow_units": 0,
+          "fresh_crop_deaths": 0,
+          "shed_overflow_states": 0
+        },
+        "exception": null,
+        "latency_ms": {
+          "calls": 719,
+          "max": 1.6551000298932195,
+          "p50": 0.1346999779343605,
+          "p95": 0.30938002746552246,
+          "p99": 0.5091100349090993
+        },
+        "opponent_exception": null,
+        "opponent_reward": 56684.0,
+        "states": 720,
+        "statuses": [
+          "DONE",
+          "DONE"
+        ],
+        "timeout_calls": 0
+      },
+      "seat": 1,
+      "seed": 811407,
+      "strategy": "v27_current_meta"
+    },
+    {
+      "development": {
+        "action_digest": "157b250f30b2a08262cb8fc2c501fa80b5f2f01638d3558efbf4b7d0459983f9",
+        "action_issues": {
+          "malformed": 0,
+          "market_overflow": 0,
+          "seed_overcommit": 0
+        },
+        "calls": 719,
+        "candidate_reward": 84395.0,
+        "diagnostics": {
+          "animal_escapes": 0,
+          "drop_overflow_units": 0,
+          "eod_overflow_units": 0,
+          "fresh_crop_deaths": 0,
+          "shed_overflow_states": 0
+        },
+        "exception": null,
+        "latency_ms": {
+          "calls": 719,
+          "max": 0.7461000932380557,
+          "p50": 0.1230000052601099,
+          "p95": 0.22151004523038864,
+          "p99": 0.38893005112186085
+        },
+        "opponent_exception": null,
+        "opponent_reward": 56684.0,
+        "states": 720,
+        "statuses": [
+          "DONE",
+          "DONE"
+        ],
+        "timeout_calls": 0
+      },
+      "equal": true,
+      "generated": {
+        "action_digest": "157b250f30b2a08262cb8fc2c501fa80b5f2f01638d3558efbf4b7d0459983f9",
+        "action_issues": {
+          "malformed": 0,
+          "market_overflow": 0,
+          "seed_overcommit": 0
+        },
+        "calls": 719,
+        "candidate_reward": 84395.0,
+        "diagnostics": {
+          "animal_escapes": 0,
+          "drop_overflow_units": 0,
+          "eod_overflow_units": 0,
+          "fresh_crop_deaths": 0,
+          "shed_overflow_states": 0
+        },
+        "exception": null,
+        "latency_ms": {
+          "calls": 719,
+          "max": 1.2182999635115266,
+          "p50": 0.18060009460896254,
+          "p95": 0.3190300893038513,
+          "p99": 0.7070479542016996
+        },
+        "opponent_exception": null,
+        "opponent_reward": 56684.0,
+        "states": 720,
+        "statuses": [
+          "DONE",
+          "DONE"
+        ],
+        "timeout_calls": 0
+      },
+      "original": {
+        "action_digest": "157b250f30b2a08262cb8fc2c501fa80b5f2f01638d3558efbf4b7d0459983f9",
+        "action_issues": {
+          "malformed": 0,
+          "market_overflow": 0,
+          "seed_overcommit": 0
+        },
+        "calls": 719,
+        "candidate_reward": 84395.0,
+        "diagnostics": {
+          "animal_escapes": 0,
+          "drop_overflow_units": 0,
+          "eod_overflow_units": 0,
+          "fresh_crop_deaths": 0,
+          "shed_overflow_states": 0
+        },
+        "exception": null,
+        "latency_ms": {
+          "calls": 719,
+          "max": 1.3701000716537237,
+          "p50": 0.19209994934499264,
+          "p95": 0.34633997129276395,
+          "p99": 0.569995979312809
+        },
+        "opponent_exception": null,
+        "opponent_reward": 56684.0,
+        "states": 720,
+        "statuses": [
+          "DONE",
+          "DONE"
+        ],
+        "timeout_calls": 0
+      },
+      "seat": 0,
+      "seed": 811407,
+      "strategy": "boatlee_v16_rc2_market_relay"
+    },
+    {
+      "development": {
+        "action_digest": "157b250f30b2a08262cb8fc2c501fa80b5f2f01638d3558efbf4b7d0459983f9",
+        "action_issues": {
+          "malformed": 0,
+          "market_overflow": 0,
+          "seed_overcommit": 0
+        },
+        "calls": 719,
+        "candidate_reward": 84395.0,
+        "diagnostics": {
+          "animal_escapes": 0,
+          "drop_overflow_units": 0,
+          "eod_overflow_units": 0,
+          "fresh_crop_deaths": 0,
+          "shed_overflow_states": 0
+        },
+        "exception": null,
+        "latency_ms": {
+          "calls": 719,
+          "max": 0.7921999786049128,
+          "p50": 0.10609999299049377,
+          "p95": 0.1758000464178622,
+          "p99": 0.2737279352732018
+        },
+        "opponent_exception": null,
+        "opponent_reward": 56684.0,
+        "states": 720,
+        "statuses": [
+          "DONE",
+          "DONE"
+        ],
+        "timeout_calls": 0
+      },
+      "equal": true,
+      "generated": {
+        "action_digest": "157b250f30b2a08262cb8fc2c501fa80b5f2f01638d3558efbf4b7d0459983f9",
+        "action_issues": {
+          "malformed": 0,
+          "market_overflow": 0,
+          "seed_overcommit": 0
+        },
+        "calls": 719,
+        "candidate_reward": 84395.0,
+        "diagnostics": {
+          "animal_escapes": 0,
+          "drop_overflow_units": 0,
+          "eod_overflow_units": 0,
+          "fresh_crop_deaths": 0,
+          "shed_overflow_states": 0
+        },
+        "exception": null,
+        "latency_ms": {
+          "calls": 719,
+          "max": 0.9804000146687031,
+          "p50": 0.16469997353851795,
+          "p95": 0.30639990000054246,
+          "p99": 0.6185880000703051
+        },
+        "opponent_exception": null,
+        "opponent_reward": 56684.0,
+        "states": 720,
+        "statuses": [
+          "DONE",
+          "DONE"
+        ],
+        "timeout_calls": 0
+      },
+      "original": {
+        "action_digest": "157b250f30b2a08262cb8fc2c501fa80b5f2f01638d3558efbf4b7d0459983f9",
+        "action_issues": {
+          "malformed": 0,
+          "market_overflow": 0,
+          "seed_overcommit": 0
+        },
+        "calls": 719,
+        "candidate_reward": 84395.0,
+        "diagnostics": {
+          "animal_escapes": 0,
+          "drop_overflow_units": 0,
+          "eod_overflow_units": 0,
+          "fresh_crop_deaths": 0,
+          "shed_overflow_states": 0
+        },
+        "exception": null,
+        "latency_ms": {
+          "calls": 719,
+          "max": 0.9668000275269151,
+          "p50": 0.16140006482601166,
+          "p95": 0.2800700254738333,
+          "p99": 0.6720899627544016
+        },
+        "opponent_exception": null,
+        "opponent_reward": 56684.0,
+        "states": 720,
+        "statuses": [
+          "DONE",
+          "DONE"
+        ],
+        "timeout_calls": 0
+      },
+      "seat": 1,
+      "seed": 811407,
+      "strategy": "boatlee_v16_rc2_market_relay"
+    }
+  ],
+  "current_engine_patch": "bded87b0d7879078c726a93a4884d044f79c4eed",
+  "opponent": "kaito_v21",
+  "original_checkout_sha256": {
+    "boatlee_v16_rc2_market_relay": "e642a5fa78b2ae3aa0de08e3c657c4e028535de98bab8a32a03bc156aca1747a",
+    "v27_current_meta": "86c6eb346a9048c2804f1d1b76aef4ae6d0b432cc11121fca4252dc7b2e14b27"
+  },
+  "original_sha256": {
+    "boatlee_v16_rc2_market_relay": "3c9b6e75d1bb9cc1f23b6bf5d8821c84193d1306d5bcb74ada1628359e3fb025",
+    "v27_current_meta": "f48c21166eac68d1b05a401f04f94a2eb6154e65415af64893672365ff33c7b8"
+  },
+  "standalone_sha256": {
+    "boatlee_v16_rc2_market_relay": "4ab895a693b6f21619defc5372647b7d5234c0b10cba094bf3fdb9743d0c047e",
+    "v27_current_meta": "f08899c21fefb839b12cadc22bf4e73223ff7f05fa0abbc5313f2d3eba9f4d7e"
+  },
+  "status": "PASS"
+}
