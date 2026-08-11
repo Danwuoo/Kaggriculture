@@ -55,6 +55,7 @@ Use the narrowest authoritative document for the task:
 | Need | Start here |
 | --- | --- |
 | Intended production strategy | `strategy.md` |
+| Manually tuned standalone main approaches | `research/main_approach/README.md` |
 | Packaged competition data and local rules | `data/kaggriculture/AGENTS.md`, `data/kaggriculture/README.md` |
 | Saved competition page | `docs/competition/Kaggriculture _ Kaggle.html` |
 | Initial implementation and validation | `reports/strategy_round1_2026-08-06.md` |
@@ -73,6 +74,26 @@ known mixed-engine configuration: newer Python semantics were patched into an
 older package while its JSON still used a 12-turn town-center interval. Read the
 2026-08-10 hypothesis report before drawing current-engine conclusions from
 those results.
+
+## Hand-Tuned Main Approaches
+
+`research/main_approach/` is the canonical home for the project owner's
+manually tuned, standalone strategy lines. It currently contains:
+
+- `v27_current_meta/`: the original v27 fixed public route with actor-local
+  weed repair and market SELL-slot ranking.
+- `v27_current_meta_safety_guarded/`: the v27 route plus a same-turn seed
+  ledger and fresh-crop watering protection.
+- `boatlee_v16_rc2_market_relay/`: the Boatlee V16-RC2 livestock route with
+  wool control and a guarded three-turn FERTILIZER market relay.
+
+Each line retains a self-contained `main.py`. They are classified research
+approaches, not production controls, and their presence here is not promotion
+evidence. Compare them under an explicit engine/configuration fingerprint and
+the standard paired safety/efficacy gates before reusing or packaging one. The
+former `scripts/other appoach/` location was removed after its two v27 agents
+were moved here; retained audit reports may still cite the old paths as
+provenance.
 
 ## Evidence Retention and Deleted Material
 
@@ -147,6 +168,8 @@ authorizes a change.
 - `data/public_replays/top50-2026-08-09/`: fixed Top-50 snapshot metadata and
   authoritative manifest. The 50 raw replay payloads are externally archived
   at the location recorded in its `README.md` and in `ARCHIVE.md`.
+- `research/main_approach/`: canonical catalog of the project owner's three
+  manually tuned standalone agents; see its `README.md` before evaluation.
 - `research/public_agents/`: downloaded public notebooks and offline-only
   extracted opponents; never package this directory into a submission.
 - `research/full_tape_topology_scaleup_2026-08-10/`: the only retained active
