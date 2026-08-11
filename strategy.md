@@ -61,11 +61,13 @@ weeds，然後把每個 worker inventory 自動放入 shed；超過 100 的部�
 與 DROP 行動，但只有在容量、動物搬運、終局清算及下一日銷售均安全時才是
 候選，且必須記錄 auto-drop units 與 cap waste。
 
-P0 第二次缺水／缺飼料永遠是 constraint，普通經濟分數不得覆蓋。非危急
-WATER／CARE 則以邊際**行動**價值評估：實際新增 yield、存活／產量窗口、
-held cap、後續 FEED、旅行與替代工作成本都要計入。動物購買使用購買日開始
-的 finite-season NPV，包含 placement、首次產出前飼料、每日維護、CARE、
-harvest／shipment、容量風險與 terminal slack，而不是無限期平均收益。
+P0 第二次缺水／缺飼料表示即將發生不可逆資產損失，預設 scheduler 應優先
+處理；但它不是獨立於競爭收益的硬升級門檻。候選若刻意放棄資產，必須把
+存活價值、產量窗口、held cap、後續 FEED、旅行與替代工作成本納入，並以
+fresh paired terminal 與 downside 證據證明取捨。非危急 WATER／CARE 同樣以
+邊際**行動**價值評估。動物購買使用購買日開始的 finite-season NPV，包含
+placement、首次產出前飼料、每日維護、CARE、harvest／shipment、容量風險
+與 terminal slack，而不是無限期平均收益。
 
 ### 0.4 競爭目標與 route contract
 
@@ -609,7 +611,7 @@ Runtime 禁止：
 - 甜瓜資本事件。
 - 8C5/6S＋草莓成熟路線。
 - 動態雇工與 NE/SW 解鎖。
-- 無雜草、無逃跑、無爆倉。
+- 記錄雜草、逃跑、爆倉及其機會成本；零事件是診斷結果，不是硬升級條件。
 
 ### Milestone 3：精確市場
 
