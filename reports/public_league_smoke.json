@@ -1,0 +1,511 @@
+{
+  "candidate_source_sha256": "75567280fa51f6f6af54f857fd92bf8bc21375c952a9ca65c0d2c9211ae1b9d6",
+  "agents": [
+    "kaito_v20",
+    "kaito_v21",
+    "roman_lb950",
+    "saiteja_2600",
+    "saiteja_3000"
+  ],
+  "seeds": [
+    0
+  ],
+  "summary": {
+    "kaito_v20": {
+      "games": 2,
+      "wins": 0,
+      "ties": 0,
+      "losses": 2,
+      "mean_difference": -82843.0,
+      "median_difference": -82843.0,
+      "worst_difference": -84090.0,
+      "all_done": true,
+      "candidate_malformed": 0,
+      "opponent_malformed": 0,
+      "candidate_escapes": 0,
+      "candidate_fresh_crop_deaths": 0
+    },
+    "kaito_v21": {
+      "games": 2,
+      "wins": 0,
+      "ties": 0,
+      "losses": 2,
+      "mean_difference": -83319.0,
+      "median_difference": -83319.0,
+      "worst_difference": -83319.0,
+      "all_done": true,
+      "candidate_malformed": 0,
+      "opponent_malformed": 0,
+      "candidate_escapes": 0,
+      "candidate_fresh_crop_deaths": 0
+    },
+    "roman_lb950": {
+      "games": 2,
+      "wins": 0,
+      "ties": 0,
+      "losses": 2,
+      "mean_difference": -7381.0,
+      "median_difference": -7381.0,
+      "worst_difference": -8139.0,
+      "all_done": true,
+      "candidate_malformed": 0,
+      "opponent_malformed": 0,
+      "candidate_escapes": 0,
+      "candidate_fresh_crop_deaths": 0
+    },
+    "saiteja_2600": {
+      "games": 2,
+      "wins": 0,
+      "ties": 0,
+      "losses": 2,
+      "mean_difference": -89384.0,
+      "median_difference": -89384.0,
+      "worst_difference": -92617.0,
+      "all_done": true,
+      "candidate_malformed": 0,
+      "opponent_malformed": 42,
+      "candidate_escapes": 0,
+      "candidate_fresh_crop_deaths": 0
+    },
+    "saiteja_3000": {
+      "games": 2,
+      "wins": 0,
+      "ties": 0,
+      "losses": 2,
+      "mean_difference": -70839.0,
+      "median_difference": -70839.0,
+      "worst_difference": -70839.0,
+      "all_done": true,
+      "candidate_malformed": 0,
+      "opponent_malformed": 0,
+      "candidate_escapes": 0,
+      "candidate_fresh_crop_deaths": 0
+    }
+  },
+  "games": [
+    {
+      "opponent": "kaito_v20",
+      "seed": 0,
+      "candidate_seat": 0,
+      "status": [
+        "DONE",
+        "DONE"
+      ],
+      "candidate_reward": 43429.0,
+      "opponent_reward": 125025.0,
+      "difference": -81596.0,
+      "candidate_malformed": [],
+      "opponent_malformed": [],
+      "candidate_diagnostics": {
+        "escapes": 0,
+        "fresh_crop_deaths": 0,
+        "overflow_states": 0
+      },
+      "opponent_diagnostics": {
+        "escapes": 0,
+        "fresh_crop_deaths": 0,
+        "overflow_states": 0
+      },
+      "candidate_timing": {
+        "calls": 719,
+        "p50_ms": 1.1451000173110515,
+        "p95_ms": 1.5443899930687623,
+        "p99_ms": 2.119648021762269,
+        "max_ms": 24.585100007243454
+      },
+      "opponent_timing": {
+        "calls": 719,
+        "p50_ms": 0.28490001568570733,
+        "p95_ms": 0.3812199924141169,
+        "p99_ms": 0.6144360086182138,
+        "max_ms": 1.1461999965831637
+      }
+    },
+    {
+      "opponent": "kaito_v20",
+      "seed": 0,
+      "candidate_seat": 1,
+      "status": [
+        "DONE",
+        "DONE"
+      ],
+      "candidate_reward": 40682.0,
+      "opponent_reward": 124772.0,
+      "difference": -84090.0,
+      "candidate_malformed": [],
+      "opponent_malformed": [],
+      "candidate_diagnostics": {
+        "escapes": 0,
+        "fresh_crop_deaths": 0,
+        "overflow_states": 0
+      },
+      "opponent_diagnostics": {
+        "escapes": 0,
+        "fresh_crop_deaths": 0,
+        "overflow_states": 0
+      },
+      "candidate_timing": {
+        "calls": 719,
+        "p50_ms": 1.1609999928623438,
+        "p95_ms": 1.9515300053171827,
+        "p99_ms": 3.1063939945306736,
+        "max_ms": 4.629600007319823
+      },
+      "opponent_timing": {
+        "calls": 719,
+        "p50_ms": 0.3328000020701438,
+        "p95_ms": 0.6921900028828532,
+        "p99_ms": 1.0483739816118043,
+        "max_ms": 23.12779999920167
+      }
+    },
+    {
+      "opponent": "kaito_v21",
+      "seed": 0,
+      "candidate_seat": 0,
+      "status": [
+        "DONE",
+        "DONE"
+      ],
+      "candidate_reward": 79428.0,
+      "opponent_reward": 162747.0,
+      "difference": -83319.0,
+      "candidate_malformed": [],
+      "opponent_malformed": [],
+      "candidate_diagnostics": {
+        "escapes": 0,
+        "fresh_crop_deaths": 0,
+        "overflow_states": 0
+      },
+      "opponent_diagnostics": {
+        "escapes": 0,
+        "fresh_crop_deaths": 0,
+        "overflow_states": 0
+      },
+      "candidate_timing": {
+        "calls": 719,
+        "p50_ms": 1.281699980609119,
+        "p95_ms": 2.165370009606704,
+        "p99_ms": 3.1236639880808093,
+        "max_ms": 31.691100011812523
+      },
+      "opponent_timing": {
+        "calls": 719,
+        "p50_ms": 0.17809998826123774,
+        "p95_ms": 0.7619100040756167,
+        "p99_ms": 1.2186159880366239,
+        "max_ms": 2.150699991034344
+      }
+    },
+    {
+      "opponent": "kaito_v21",
+      "seed": 0,
+      "candidate_seat": 1,
+      "status": [
+        "DONE",
+        "DONE"
+      ],
+      "candidate_reward": 79428.0,
+      "opponent_reward": 162747.0,
+      "difference": -83319.0,
+      "candidate_malformed": [],
+      "opponent_malformed": [],
+      "candidate_diagnostics": {
+        "escapes": 0,
+        "fresh_crop_deaths": 0,
+        "overflow_states": 0
+      },
+      "opponent_diagnostics": {
+        "escapes": 0,
+        "fresh_crop_deaths": 0,
+        "overflow_states": 0
+      },
+      "candidate_timing": {
+        "calls": 719,
+        "p50_ms": 1.2604999938048422,
+        "p95_ms": 2.402109987451696,
+        "p99_ms": 3.236391997197645,
+        "max_ms": 49.593099975027144
+      },
+      "opponent_timing": {
+        "calls": 719,
+        "p50_ms": 0.18929998623207211,
+        "p95_ms": 0.8143699989886954,
+        "p99_ms": 1.3225800165673727,
+        "max_ms": 11.98019998264499
+      }
+    },
+    {
+      "opponent": "roman_lb950",
+      "seed": 0,
+      "candidate_seat": 0,
+      "status": [
+        "DONE",
+        "DONE"
+      ],
+      "candidate_reward": 88123.0,
+      "opponent_reward": 96262.0,
+      "difference": -8139.0,
+      "candidate_malformed": [],
+      "opponent_malformed": [],
+      "candidate_diagnostics": {
+        "escapes": 0,
+        "fresh_crop_deaths": 0,
+        "overflow_states": 0
+      },
+      "opponent_diagnostics": {
+        "escapes": 0,
+        "fresh_crop_deaths": 0,
+        "overflow_states": 0
+      },
+      "candidate_timing": {
+        "calls": 719,
+        "p50_ms": 1.2775000068359077,
+        "p95_ms": 2.192599987029099,
+        "p99_ms": 3.273130006855357,
+        "max_ms": 48.17759999423288
+      },
+      "opponent_timing": {
+        "calls": 719,
+        "p50_ms": 1.3942999939899892,
+        "p95_ms": 2.513140009250492,
+        "p99_ms": 3.2923440216109254,
+        "max_ms": 3.956999978981912
+      }
+    },
+    {
+      "opponent": "roman_lb950",
+      "seed": 0,
+      "candidate_seat": 1,
+      "status": [
+        "DONE",
+        "DONE"
+      ],
+      "candidate_reward": 84335.0,
+      "opponent_reward": 90958.0,
+      "difference": -6623.0,
+      "candidate_malformed": [],
+      "opponent_malformed": [],
+      "candidate_diagnostics": {
+        "escapes": 0,
+        "fresh_crop_deaths": 0,
+        "overflow_states": 0
+      },
+      "opponent_diagnostics": {
+        "escapes": 0,
+        "fresh_crop_deaths": 0,
+        "overflow_states": 0
+      },
+      "candidate_timing": {
+        "calls": 719,
+        "p50_ms": 1.1903000122401863,
+        "p95_ms": 1.9796000065980486,
+        "p99_ms": 2.876832007896159,
+        "max_ms": 18.068399978801608
+      },
+      "opponent_timing": {
+        "calls": 719,
+        "p50_ms": 1.3908999972045422,
+        "p95_ms": 2.4352599983103573,
+        "p99_ms": 3.2352060044649997,
+        "max_ms": 40.229200007161126
+      }
+    },
+    {
+      "opponent": "saiteja_2600",
+      "seed": 0,
+      "candidate_seat": 0,
+      "status": [
+        "DONE",
+        "DONE"
+      ],
+      "candidate_reward": 35918.0,
+      "opponent_reward": 122069.0,
+      "difference": -86151.0,
+      "candidate_malformed": [],
+      "opponent_malformed": [
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+      ],
+      "candidate_diagnostics": {
+        "escapes": 0,
+        "fresh_crop_deaths": 0,
+        "overflow_states": 0
+      },
+      "opponent_diagnostics": {
+        "escapes": 1,
+        "fresh_crop_deaths": 0,
+        "overflow_states": 0
+      },
+      "candidate_timing": {
+        "calls": 719,
+        "p50_ms": 1.3300999999046326,
+        "p95_ms": 2.2766899928683424,
+        "p99_ms": 3.147424002527261,
+        "max_ms": 46.10769997816533
+      },
+      "opponent_timing": {
+        "calls": 719,
+        "p50_ms": 0.041000021155923605,
+        "p95_ms": 0.07470998680219057,
+        "p99_ms": 0.1419420039746912,
+        "max_ms": 0.33500001882202923
+      }
+    },
+    {
+      "opponent": "saiteja_2600",
+      "seed": 0,
+      "candidate_seat": 1,
+      "status": [
+        "DONE",
+        "DONE"
+      ],
+      "candidate_reward": 43673.0,
+      "opponent_reward": 136290.0,
+      "difference": -92617.0,
+      "candidate_malformed": [],
+      "opponent_malformed": [
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+      ],
+      "candidate_diagnostics": {
+        "escapes": 0,
+        "fresh_crop_deaths": 0,
+        "overflow_states": 0
+      },
+      "opponent_diagnostics": {
+        "escapes": 1,
+        "fresh_crop_deaths": 0,
+        "overflow_states": 0
+      },
+      "candidate_timing": {
+        "calls": 719,
+        "p50_ms": 1.2811000051442534,
+        "p95_ms": 2.144209999823943,
+        "p99_ms": 3.263412010273897,
+        "max_ms": 48.228100000415
+      },
+      "opponent_timing": {
+        "calls": 719,
+        "p50_ms": 0.03989998367615044,
+        "p95_ms": 0.11511000338941813,
+        "p99_ms": 0.28750001394655705,
+        "max_ms": 34.9788999883458
+      }
+    },
+    {
+      "opponent": "saiteja_3000",
+      "seed": 0,
+      "candidate_seat": 0,
+      "status": [
+        "DONE",
+        "DONE"
+      ],
+      "candidate_reward": 34984.0,
+      "opponent_reward": 105823.0,
+      "difference": -70839.0,
+      "candidate_malformed": [],
+      "opponent_malformed": [],
+      "candidate_diagnostics": {
+        "escapes": 0,
+        "fresh_crop_deaths": 0,
+        "overflow_states": 0
+      },
+      "opponent_diagnostics": {
+        "escapes": 1,
+        "fresh_crop_deaths": 0,
+        "overflow_states": 0
+      },
+      "candidate_timing": {
+        "calls": 719,
+        "p50_ms": 1.2716999917756766,
+        "p95_ms": 2.4824799853377044,
+        "p99_ms": 3.5611879796488273,
+        "max_ms": 63.396999990800396
+      },
+      "opponent_timing": {
+        "calls": 719,
+        "p50_ms": 4.071900009876117,
+        "p95_ms": 7.325930008664729,
+        "p99_ms": 10.239541999762896,
+        "max_ms": 31.08700001030229
+      }
+    },
+    {
+      "opponent": "saiteja_3000",
+      "seed": 0,
+      "candidate_seat": 1,
+      "status": [
+        "DONE",
+        "DONE"
+      ],
+      "candidate_reward": 34984.0,
+      "opponent_reward": 105823.0,
+      "difference": -70839.0,
+      "candidate_malformed": [],
+      "opponent_malformed": [],
+      "candidate_diagnostics": {
+        "escapes": 0,
+        "fresh_crop_deaths": 0,
+        "overflow_states": 0
+      },
+      "opponent_diagnostics": {
+        "escapes": 1,
+        "fresh_crop_deaths": 0,
+        "overflow_states": 0
+      },
+      "candidate_timing": {
+        "calls": 719,
+        "p50_ms": 1.17790000513196,
+        "p95_ms": 1.9643699924927207,
+        "p99_ms": 2.6044060109416045,
+        "max_ms": 3.2435999892186373
+      },
+      "opponent_timing": {
+        "calls": 719,
+        "p50_ms": 3.947999997762963,
+        "p95_ms": 6.1601500026881695,
+        "p99_ms": 8.257234003394847,
+        "max_ms": 71.88130001304671
+      }
+    }
+  ]
+}

@@ -1,0 +1,7376 @@
+{
+  "cache_absolute_path": "C:\\Users\\wurre\\Desktop\\Kaggriculture\\research\\cache\\full_tape_topology_scaleup_2026-08-10",
+  "sqlite_path": "C:\\Users\\wurre\\Desktop\\Kaggriculture\\research\\cache\\full_tape_topology_scaleup_2026-08-10\\corpus\\full_action_prefix_trie.sqlite",
+  "information_boundary": "Trie and residual summaries read canonical target-player actions only; no replay observations or opponent private state.",
+  "representative_tapes": 227,
+  "nodes": 102803,
+  "max_depth": 719,
+  "common_prefixes_support_ge_2": [
+    {
+      "depth": 1,
+      "support": 227,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 2,
+      "support": 103,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 5,
+      "support": 102,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 4,
+      "support": 102,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 3,
+      "support": 102,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 15,
+      "support": 100,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 14,
+      "support": 100,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 13,
+      "support": 100,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 12,
+      "support": 100,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 11,
+      "support": 100,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 10,
+      "support": 100,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 9,
+      "support": 100,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 8,
+      "support": 100,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 7,
+      "support": 100,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 6,
+      "support": 100,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 78,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 77,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 76,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 75,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 74,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 73,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 72,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 71,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 70,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 69,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 68,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 67,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 66,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 65,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 64,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 63,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 62,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 61,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 60,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 59,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 58,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 57,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 56,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 55,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 54,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 53,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 52,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 51,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 50,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 49,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 48,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 47,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 46,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 45,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 44,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 43,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 42,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 41,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 40,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 39,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 38,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 37,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 36,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 35,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 34,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 33,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 32,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 31,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 30,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 29,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 28,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 27,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 26,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 25,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 24,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 23,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 22,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 21,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 20,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 19,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 18,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 17,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 16,
+      "support": 98,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 81,
+      "support": 96,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 80,
+      "support": 96,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 79,
+      "support": 96,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 87,
+      "support": 94,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 86,
+      "support": 94,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 85,
+      "support": 94,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 84,
+      "support": 94,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 83,
+      "support": 94,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 82,
+      "support": 94,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 106,
+      "support": 92,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 105,
+      "support": 92,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 104,
+      "support": 92,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 103,
+      "support": 92,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 102,
+      "support": 92,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 101,
+      "support": 92,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 100,
+      "support": 92,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 99,
+      "support": 92,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 98,
+      "support": 92,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 97,
+      "support": 92,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 96,
+      "support": 92,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 95,
+      "support": 92,
+      "first_rank": 1,
+      "first_episode": 91471546
+    },
+    {
+      "depth": 94,
+      "support": 92,
+      "first_rank": 1,
+      "first_episode": 91471546
+    }
+  ],
+  "branch_boundaries": [
+    {
+      "children": 16,
+      "turn": 1,
+      "aggregate_child_support": 227
+    },
+    {
+      "children": 2,
+      "turn": 2,
+      "aggregate_child_support": 103
+    },
+    {
+      "children": 2,
+      "turn": 5,
+      "aggregate_child_support": 102
+    },
+    {
+      "children": 2,
+      "turn": 15,
+      "aggregate_child_support": 100
+    },
+    {
+      "children": 2,
+      "turn": 78,
+      "aggregate_child_support": 98
+    },
+    {
+      "children": 2,
+      "turn": 81,
+      "aggregate_child_support": 96
+    },
+    {
+      "children": 2,
+      "turn": 87,
+      "aggregate_child_support": 94
+    },
+    {
+      "children": 2,
+      "turn": 106,
+      "aggregate_child_support": 92
+    },
+    {
+      "children": 2,
+      "turn": 117,
+      "aggregate_child_support": 91
+    },
+    {
+      "children": 2,
+      "turn": 118,
+      "aggregate_child_support": 90
+    },
+    {
+      "children": 3,
+      "turn": 121,
+      "aggregate_child_support": 89
+    },
+    {
+      "children": 2,
+      "turn": 125,
+      "aggregate_child_support": 87
+    },
+    {
+      "children": 2,
+      "turn": 127,
+      "aggregate_child_support": 68
+    },
+    {
+      "children": 2,
+      "turn": 129,
+      "aggregate_child_support": 66
+    },
+    {
+      "children": 2,
+      "turn": 131,
+      "aggregate_child_support": 62
+    },
+    {
+      "children": 2,
+      "turn": 143,
+      "aggregate_child_support": 61
+    },
+    {
+      "children": 2,
+      "turn": 2,
+      "aggregate_child_support": 61
+    },
+    {
+      "children": 2,
+      "turn": 160,
+      "aggregate_child_support": 60
+    },
+    {
+      "children": 2,
+      "turn": 3,
+      "aggregate_child_support": 60
+    },
+    {
+      "children": 3,
+      "turn": 162,
+      "aggregate_child_support": 59
+    },
+    {
+      "children": 2,
+      "turn": 19,
+      "aggregate_child_support": 59
+    },
+    {
+      "children": 2,
+      "turn": 121,
+      "aggregate_child_support": 58
+    },
+    {
+      "children": 2,
+      "turn": 167,
+      "aggregate_child_support": 57
+    },
+    {
+      "children": 2,
+      "turn": 168,
+      "aggregate_child_support": 56
+    },
+    {
+      "children": 5,
+      "turn": 217,
+      "aggregate_child_support": 55
+    },
+    {
+      "children": 2,
+      "turn": 233,
+      "aggregate_child_support": 46
+    },
+    {
+      "children": 2,
+      "turn": 234,
+      "aggregate_child_support": 45
+    },
+    {
+      "children": 3,
+      "turn": 170,
+      "aggregate_child_support": 45
+    },
+    {
+      "children": 2,
+      "turn": 237,
+      "aggregate_child_support": 44
+    },
+    {
+      "children": 2,
+      "turn": 238,
+      "aggregate_child_support": 41
+    },
+    {
+      "children": 2,
+      "turn": 184,
+      "aggregate_child_support": 41
+    },
+    {
+      "children": 2,
+      "turn": 239,
+      "aggregate_child_support": 40
+    },
+    {
+      "children": 2,
+      "turn": 193,
+      "aggregate_child_support": 40
+    },
+    {
+      "children": 2,
+      "turn": 207,
+      "aggregate_child_support": 39
+    },
+    {
+      "children": 3,
+      "turn": 210,
+      "aggregate_child_support": 38
+    },
+    {
+      "children": 2,
+      "turn": 240,
+      "aggregate_child_support": 37
+    },
+    {
+      "children": 2,
+      "turn": 265,
+      "aggregate_child_support": 36
+    },
+    {
+      "children": 2,
+      "turn": 213,
+      "aggregate_child_support": 36
+    },
+    {
+      "children": 2,
+      "turn": 278,
+      "aggregate_child_support": 35
+    },
+    {
+      "children": 2,
+      "turn": 214,
+      "aggregate_child_support": 35
+    },
+    {
+      "children": 2,
+      "turn": 313,
+      "aggregate_child_support": 34
+    },
+    {
+      "children": 2,
+      "turn": 5,
+      "aggregate_child_support": 34
+    },
+    {
+      "children": 2,
+      "turn": 6,
+      "aggregate_child_support": 33
+    },
+    {
+      "children": 2,
+      "turn": 22,
+      "aggregate_child_support": 32
+    },
+    {
+      "children": 2,
+      "turn": 25,
+      "aggregate_child_support": 31
+    },
+    {
+      "children": 2,
+      "turn": 26,
+      "aggregate_child_support": 30
+    },
+    {
+      "children": 2,
+      "turn": 217,
+      "aggregate_child_support": 29
+    },
+    {
+      "children": 2,
+      "turn": 78,
+      "aggregate_child_support": 29
+    },
+    {
+      "children": 2,
+      "turn": 84,
+      "aggregate_child_support": 28
+    },
+    {
+      "children": 2,
+      "turn": 127,
+      "aggregate_child_support": 26
+    },
+    {
+      "children": 2,
+      "turn": 131,
+      "aggregate_child_support": 25
+    },
+    {
+      "children": 2,
+      "turn": 135,
+      "aggregate_child_support": 23
+    },
+    {
+      "children": 2,
+      "turn": 162,
+      "aggregate_child_support": 22
+    },
+    {
+      "children": 2,
+      "turn": 334,
+      "aggregate_child_support": 21
+    },
+    {
+      "children": 2,
+      "turn": 337,
+      "aggregate_child_support": 20
+    },
+    {
+      "children": 2,
+      "turn": 270,
+      "aggregate_child_support": 19
+    },
+    {
+      "children": 2,
+      "turn": 135,
+      "aggregate_child_support": 19
+    },
+    {
+      "children": 2,
+      "turn": 312,
+      "aggregate_child_support": 18
+    },
+    {
+      "children": 2,
+      "turn": 361,
+      "aggregate_child_support": 16
+    },
+    {
+      "children": 2,
+      "turn": 204,
+      "aggregate_child_support": 16
+    },
+    {
+      "children": 2,
+      "turn": 313,
+      "aggregate_child_support": 15
+    },
+    {
+      "children": 2,
+      "turn": 207,
+      "aggregate_child_support": 15
+    },
+    {
+      "children": 2,
+      "turn": 187,
+      "aggregate_child_support": 15
+    },
+    {
+      "children": 3,
+      "turn": 217,
+      "aggregate_child_support": 14
+    },
+    {
+      "children": 2,
+      "turn": 217,
+      "aggregate_child_support": 14
+    },
+    {
+      "children": 2,
+      "turn": 337,
+      "aggregate_child_support": 13
+    },
+    {
+      "children": 3,
+      "turn": 217,
+      "aggregate_child_support": 13
+    },
+    {
+      "children": 3,
+      "turn": 25,
+      "aggregate_child_support": 13
+    },
+    {
+      "children": 2,
+      "turn": 288,
+      "aggregate_child_support": 12
+    },
+    {
+      "children": 2,
+      "turn": 385,
+      "aggregate_child_support": 11
+    },
+    {
+      "children": 2,
+      "turn": 361,
+      "aggregate_child_support": 11
+    },
+    {
+      "children": 2,
+      "turn": 312,
+      "aggregate_child_support": 10
+    },
+    {
+      "children": 2,
+      "turn": 229,
+      "aggregate_child_support": 10
+    },
+    {
+      "children": 2,
+      "turn": 457,
+      "aggregate_child_support": 9
+    },
+    {
+      "children": 2,
+      "turn": 382,
+      "aggregate_child_support": 9
+    },
+    {
+      "children": 2,
+      "turn": 337,
+      "aggregate_child_support": 9
+    },
+    {
+      "children": 4,
+      "turn": 162,
+      "aggregate_child_support": 9
+    },
+    {
+      "children": 3,
+      "turn": 385,
+      "aggregate_child_support": 8
+    },
+    {
+      "children": 2,
+      "turn": 385,
+      "aggregate_child_support": 8
+    },
+    {
+      "children": 3,
+      "turn": 313,
+      "aggregate_child_support": 8
+    },
+    {
+      "children": 2,
+      "turn": 503,
+      "aggregate_child_support": 7
+    },
+    {
+      "children": 2,
+      "turn": 433,
+      "aggregate_child_support": 7
+    },
+    {
+      "children": 2,
+      "turn": 409,
+      "aggregate_child_support": 7
+    },
+    {
+      "children": 2,
+      "turn": 312,
+      "aggregate_child_support": 7
+    },
+    {
+      "children": 2,
+      "turn": 505,
+      "aggregate_child_support": 6
+    },
+    {
+      "children": 2,
+      "turn": 481,
+      "aggregate_child_support": 6
+    },
+    {
+      "children": 2,
+      "turn": 458,
+      "aggregate_child_support": 6
+    },
+    {
+      "children": 2,
+      "turn": 382,
+      "aggregate_child_support": 6
+    },
+    {
+      "children": 2,
+      "turn": 313,
+      "aggregate_child_support": 6
+    },
+    {
+      "children": 2,
+      "turn": 217,
+      "aggregate_child_support": 6
+    },
+    {
+      "children": 2,
+      "turn": 211,
+      "aggregate_child_support": 6
+    },
+    {
+      "children": 3,
+      "turn": 529,
+      "aggregate_child_support": 5
+    },
+    {
+      "children": 2,
+      "turn": 525,
+      "aggregate_child_support": 5
+    },
+    {
+      "children": 3,
+      "turn": 505,
+      "aggregate_child_support": 5
+    },
+    {
+      "children": 3,
+      "turn": 409,
+      "aggregate_child_support": 5
+    },
+    {
+      "children": 2,
+      "turn": 385,
+      "aggregate_child_support": 5
+    },
+    {
+      "children": 2,
+      "turn": 385,
+      "aggregate_child_support": 5
+    },
+    {
+      "children": 2,
+      "turn": 337,
+      "aggregate_child_support": 5
+    },
+    {
+      "children": 4,
+      "turn": 312,
+      "aggregate_child_support": 5
+    },
+    {
+      "children": 2,
+      "turn": 239,
+      "aggregate_child_support": 5
+    }
+  ],
+  "family_market_residuals": [
+    {
+      "unit_tape": "c4764b92e8819b15ee1ab75f833d1ec8d0f1f3aba42a87d95b355d126682e770",
+      "support": 53,
+      "ranks": [
+        148,
+        156,
+        158,
+        161,
+        162,
+        175,
+        183,
+        188,
+        190,
+        192,
+        199,
+        200,
+        204,
+        207,
+        208,
+        211,
+        214,
+        215,
+        221,
+        222,
+        225,
+        227,
+        230,
+        233,
+        235,
+        237,
+        239,
+        241,
+        243,
+        245,
+        246,
+        247,
+        248,
+        250,
+        251,
+        255,
+        259,
+        261,
+        263,
+        264,
+        267,
+        268,
+        269,
+        272,
+        273,
+        278,
+        280,
+        282,
+        283,
+        284,
+        287,
+        289,
+        290
+      ],
+      "distinct_market_tapes": 53,
+      "phase_sell_modes": [
+        {
+          "phase": 0,
+          "top": [
+            [
+              "WHEAT:1",
+              106
+            ]
+          ]
+        },
+        {
+          "phase": 2,
+          "top": [
+            [
+              "FERTILIZER:4",
+              53
+            ]
+          ]
+        },
+        {
+          "phase": 3,
+          "top": [
+            [
+              "FERTILIZER:4",
+              53
+            ]
+          ]
+        },
+        {
+          "phase": 4,
+          "top": [
+            [
+              "FERTILIZER:4",
+              53
+            ]
+          ]
+        },
+        {
+          "phase": 5,
+          "top": [
+            [
+              "FERTILIZER:4",
+              53
+            ],
+            [
+              "WHEAT:25",
+              52
+            ],
+            [
+              "WHEAT:22",
+              1
+            ]
+          ]
+        },
+        {
+          "phase": 6,
+          "top": [
+            [
+              "FERTILIZER:4",
+              53
+            ],
+            [
+              "WHEAT:2",
+              1
+            ]
+          ]
+        },
+        {
+          "phase": 7,
+          "top": [
+            [
+              "WOOL:10",
+              53
+            ],
+            [
+              "FERTILIZER:4",
+              53
+            ],
+            [
+              "WHEAT:2",
+              52
+            ]
+          ]
+        },
+        {
+          "phase": 8,
+          "top": [
+            [
+              "FERTILIZER:4",
+              53
+            ],
+            [
+              "WHEAT:5",
+              1
+            ]
+          ]
+        },
+        {
+          "phase": 9,
+          "top": [
+            [
+              "FERTILIZER:6",
+              53
+            ],
+            [
+              "MILK:1",
+              53
+            ],
+            [
+              "MILK:7",
+              51
+            ],
+            [
+              "WHEAT:17",
+              51
+            ],
+            [
+              "MILK:4",
+              10
+            ]
+          ]
+        },
+        {
+          "phase": 10,
+          "top": [
+            [
+              "WHEAT:1",
+              478
+            ],
+            [
+              "WHEAT:3",
+              159
+            ],
+            [
+              "MELON:12",
+              159
+            ],
+            [
+              "WHEAT:2",
+              106
+            ],
+            [
+              "WOOL:8",
+              53
+            ]
+          ]
+        },
+        {
+          "phase": 11,
+          "top": [
+            [
+              "MELON:12",
+              53
+            ],
+            [
+              "WHEAT:3",
+              52
+            ],
+            [
+              "FERTILIZER:14",
+              52
+            ],
+            [
+              "WHEAT:1",
+              51
+            ],
+            [
+              "FERTILIZER:7",
+              2
+            ]
+          ]
+        },
+        {
+          "phase": 12,
+          "top": [
+            [
+              "FERTILIZER:8",
+              53
+            ],
+            [
+              "WHEAT:7",
+              1
+            ]
+          ]
+        },
+        {
+          "phase": 13,
+          "top": [
+            [
+              "FERTILIZER:14",
+              53
+            ],
+            [
+              "WOOL:8",
+              53
+            ],
+            [
+              "WHEAT:7",
+              51
+            ],
+            [
+              "MILK:12",
+              11
+            ],
+            [
+              "WHEAT:6",
+              1
+            ]
+          ]
+        },
+        {
+          "phase": 14,
+          "top": [
+            [
+              "FERTILIZER:14",
+              53
+            ],
+            [
+              "WHEAT:6",
+              52
+            ],
+            [
+              "MILK:12",
+              44
+            ]
+          ]
+        },
+        {
+          "phase": 15,
+          "top": [
+            [
+              "MILK:6",
+              53
+            ],
+            [
+              "FERTILIZER:9",
+              53
+            ],
+            [
+              "MILK:1",
+              53
+            ]
+          ]
+        },
+        {
+          "phase": 16,
+          "top": [
+            [
+              "WOOL:8",
+              53
+            ],
+            [
+              "MILK:1",
+              53
+            ],
+            [
+              "MILK:11",
+              51
+            ],
+            [
+              "MILK:12",
+              2
+            ],
+            [
+              "WHEAT:7",
+              1
+            ]
+          ]
+        },
+        {
+          "phase": 17,
+          "top": [
+            [
+              "MILK:1",
+              64
+            ],
+            [
+              "FERTILIZER:14",
+              53
+            ],
+            [
+              "STRAWBERRY:4",
+              53
+            ],
+            [
+              "STRAWBERRY:10",
+              53
+            ],
+            [
+              "MILK:10",
+              52
+            ]
+          ]
+        },
+        {
+          "phase": 18,
+          "top": [
+            [
+              "MILK:3",
+              54
+            ],
+            [
+              "WOOL:24",
+              53
+            ],
+            [
+              "FERTILIZER:14",
+              53
+            ],
+            [
+              "MILK:2",
+              53
+            ],
+            [
+              "STRAWBERRY:2",
+              53
+            ]
+          ]
+        },
+        {
+          "phase": 19,
+          "top": [
+            [
+              "MILK:6",
+              106
+            ],
+            [
+              "WOOL:8",
+              53
+            ],
+            [
+              "MILK:3",
+              53
+            ],
+            [
+              "STRAWBERRY:3",
+              53
+            ],
+            [
+              "WHEAT:4",
+              52
+            ]
+          ]
+        },
+        {
+          "phase": 20,
+          "top": [
+            [
+              "MELON:12",
+              106
+            ],
+            [
+              "MILK:6",
+              54
+            ],
+            [
+              "STRAWBERRY:34",
+              53
+            ],
+            [
+              "MILK:1",
+              53
+            ],
+            [
+              "WOOL:4",
+              53
+            ]
+          ]
+        },
+        {
+          "phase": 21,
+          "top": [
+            [
+              "MELON:24",
+              53
+            ],
+            [
+              "WOOL:12",
+              53
+            ],
+            [
+              "MILK:4",
+              53
+            ],
+            [
+              "WHEAT:6",
+              53
+            ],
+            [
+              "MILK:2",
+              53
+            ]
+          ]
+        },
+        {
+          "phase": 22,
+          "top": [
+            [
+              "MELON:24",
+              53
+            ],
+            [
+              "MILK:9",
+              53
+            ],
+            [
+              "STRAWBERRY:4",
+              53
+            ],
+            [
+              "WOOL:4",
+              53
+            ],
+            [
+              "WHEAT:6",
+              52
+            ]
+          ]
+        },
+        {
+          "phase": 23,
+          "top": [
+            [
+              "MILK:3",
+              106
+            ],
+            [
+              "WOOL:4",
+              106
+            ],
+            [
+              "STRAWBERRY:6",
+              87
+            ],
+            [
+              "MILK:10",
+              53
+            ],
+            [
+              "FERTILIZER:14",
+              53
+            ]
+          ]
+        },
+        {
+          "phase": 24,
+          "top": [
+            [
+              "MILK:3",
+              106
+            ],
+            [
+              "MILK:6",
+              106
+            ],
+            [
+              "STRAWBERRY:8",
+              55
+            ],
+            [
+              "STRAWBERRY:31",
+              53
+            ],
+            [
+              "WOOL:4",
+              53
+            ]
+          ]
+        },
+        {
+          "phase": 25,
+          "top": [
+            [
+              "STRAWBERRY:6",
+              58
+            ],
+            [
+              "STRAWBERRY:10",
+              55
+            ],
+            [
+              "WOOL:10",
+              53
+            ],
+            [
+              "FERTILIZER:4",
+              53
+            ],
+            [
+              "MILK:3",
+              53
+            ]
+          ]
+        },
+        {
+          "phase": 26,
+          "top": [
+            [
+              "MILK:2",
+              53
+            ],
+            [
+              "MILK:6",
+              53
+            ],
+            [
+              "WOOL:4",
+              53
+            ],
+            [
+              "WHEAT:15",
+              52
+            ],
+            [
+              "MILK:7",
+              51
+            ]
+          ]
+        },
+        {
+          "phase": 27,
+          "top": [
+            [
+              "MILK:3",
+              199
+            ],
+            [
+              "STRAWBERRY:1",
+              70
+            ],
+            [
+              "WOOL:14",
+              53
+            ],
+            [
+              "WOOL:4",
+              53
+            ],
+            [
+              "FERTILIZER:1",
+              53
+            ]
+          ]
+        },
+        {
+          "phase": 28,
+          "top": [
+            [
+              "FERTILIZER:8",
+              53
+            ],
+            [
+              "MILK:3",
+              53
+            ],
+            [
+              "WHEAT:34",
+              52
+            ],
+            [
+              "WHEAT:20",
+              1
+            ]
+          ]
+        },
+        {
+          "phase": 29,
+          "top": [
+            [
+              "MILK:2",
+              107
+            ],
+            [
+              "WOOL:4",
+              106
+            ],
+            [
+              "FERTILIZER:14",
+              53
+            ],
+            [
+              "WHEAT:48",
+              53
+            ],
+            [
+              "WHEAT:8",
+              53
+            ]
+          ]
+        }
+      ],
+      "terminal_market_shapes": [
+        {
+          "shape": "[[\"SELL\",\"MILK\",2],[\"SELL\",\"WHEAT\",11]]",
+          "support": 37
+        },
+        {
+          "shape": "[[\"SELL\",\"MILK\",3],[\"SELL\",\"WOOL\",4],[\"SELL\",\"WHEAT\",16]]",
+          "support": 21
+        },
+        {
+          "shape": "[[\"SELL\",\"MILK\",7],[\"SELL\",\"WOOL\",10],[\"SELL\",\"WHEAT\",18],[\"SELL\",\"STRAWBERRY\",25]]",
+          "support": 16
+        },
+        {
+          "shape": "[[\"SELL\",\"WHEAT\",11],[\"SELL\",\"MILK\",2]]",
+          "support": 15
+        },
+        {
+          "shape": "[[\"SELL\",\"WOOL\",10],[\"SELL\",\"MILK\",7],[\"SELL\",\"WHEAT\",18],[\"SELL\",\"STRAWBERRY\",25]]",
+          "support": 10
+        },
+        {
+          "shape": "[[\"SELL\",\"WHEAT\",16],[\"SELL\",\"MILK\",3],[\"SELL\",\"WOOL\",4]]",
+          "support": 9
+        },
+        {
+          "shape": "[[\"SELL\",\"WOOL\",4],[\"SELL\",\"MILK\",3],[\"SELL\",\"WHEAT\",16]]",
+          "support": 9
+        },
+        {
+          "shape": "[[\"SELL\",\"MILK\",7],[\"SELL\",\"WHEAT\",18],[\"SELL\",\"WOOL\",10],[\"SELL\",\"STRAWBERRY\",25]]",
+          "support": 6
+        },
+        {
+          "shape": "[[\"SELL\",\"WHEAT\",16],[\"SELL\",\"WOOL\",4],[\"SELL\",\"MILK\",3]]",
+          "support": 5
+        },
+        {
+          "shape": "[[\"SELL\",\"WOOL\",4],[\"SELL\",\"WHEAT\",16],[\"SELL\",\"MILK\",3]]",
+          "support": 5
+        }
+      ]
+    },
+    {
+      "unit_tape": "87b1288596c124f0128f0eb17cc7f4806aa89009c3adb152681e19d5ba7c1be6",
+      "support": 29,
+      "ranks": [
+        5,
+        7,
+        10,
+        13,
+        15,
+        16,
+        18,
+        24,
+        25,
+        30,
+        34,
+        39,
+        44,
+        45,
+        48,
+        50,
+        53,
+        59,
+        67,
+        72,
+        84,
+        90,
+        105,
+        109,
+        112,
+        120,
+        122,
+        173,
+        217
+      ],
+      "distinct_market_tapes": 29,
+      "phase_sell_modes": [
+        {
+          "phase": 2,
+          "top": [
+            [
+              "FERTILIZER:5",
+              29
+            ]
+          ]
+        },
+        {
+          "phase": 3,
+          "top": [
+            [
+              "FERTILIZER:5",
+              29
+            ]
+          ]
+        },
+        {
+          "phase": 4,
+          "top": [
+            [
+              "FERTILIZER:5",
+              29
+            ]
+          ]
+        },
+        {
+          "phase": 5,
+          "top": [
+            [
+              "WHEAT:17",
+              29
+            ],
+            [
+              "FERTILIZER:5",
+              29
+            ]
+          ]
+        },
+        {
+          "phase": 6,
+          "top": [
+            [
+              "FERTILIZER:5",
+              29
+            ],
+            [
+              "WOOL:5",
+              29
+            ],
+            [
+              "FERTILIZER:3",
+              29
+            ]
+          ]
+        },
+        {
+          "phase": 7,
+          "top": [
+            [
+              "WOOL:15",
+              29
+            ],
+            [
+              "FERTILIZER:3",
+              29
+            ]
+          ]
+        },
+        {
+          "phase": 8,
+          "top": [
+            [
+              "FERTILIZER:7",
+              29
+            ],
+            [
+              "WHEAT:2",
+              29
+            ],
+            [
+              "WHEAT:6",
+              27
+            ]
+          ]
+        },
+        {
+          "phase": 9,
+          "top": [
+            [
+              "FERTILIZER:10",
+              29
+            ],
+            [
+              "MILK:6",
+              29
+            ],
+            [
+              "WHEAT:7",
+              27
+            ],
+            [
+              "WHEAT:13",
+              2
+            ]
+          ]
+        },
+        {
+          "phase": 10,
+          "top": [
+            [
+              "MELON:6",
+              145
+            ],
+            [
+              "WOOL:16",
+              29
+            ],
+            [
+              "WHEAT:2",
+              29
+            ]
+          ]
+        },
+        {
+          "phase": 11,
+          "top": [
+            [
+              "MILK:3",
+              29
+            ],
+            [
+              "WHEAT:2",
+              29
+            ],
+            [
+              "FERTILIZER:12",
+              27
+            ]
+          ]
+        },
+        {
+          "phase": 12,
+          "top": [
+            [
+              "WHEAT:10",
+              29
+            ],
+            [
+              "WHEAT:1",
+              29
+            ],
+            [
+              "FERTILIZER:9",
+              27
+            ],
+            [
+              "FERTILIZER:12",
+              2
+            ]
+          ]
+        },
+        {
+          "phase": 13,
+          "top": [
+            [
+              "WOOL:4",
+              29
+            ],
+            [
+              "MILK:3",
+              29
+            ],
+            [
+              "WHEAT:24",
+              29
+            ],
+            [
+              "WOOL:12",
+              29
+            ],
+            [
+              "FERTILIZER:12",
+              27
+            ]
+          ]
+        },
+        {
+          "phase": 14,
+          "top": [
+            [
+              "MILK:6",
+              29
+            ],
+            [
+              "STRAWBERRY:6",
+              29
+            ],
+            [
+              "WHEAT:3",
+              29
+            ],
+            [
+              "FERTILIZER:8",
+              27
+            ],
+            [
+              "FERTILIZER:12",
+              2
+            ]
+          ]
+        },
+        {
+          "phase": 15,
+          "top": [
+            [
+              "MILK:9",
+              29
+            ],
+            [
+              "MILK:12",
+              29
+            ],
+            [
+              "WOOL:8",
+              29
+            ],
+            [
+              "MILK:3",
+              29
+            ],
+            [
+              "FERTILIZER:2",
+              29
+            ]
+          ]
+        },
+        {
+          "phase": 16,
+          "top": [
+            [
+              "WOOL:8",
+              29
+            ],
+            [
+              "STRAWBERRY:14",
+              29
+            ],
+            [
+              "WHEAT:10",
+              29
+            ],
+            [
+              "MILK:21",
+              29
+            ],
+            [
+              "WHEAT:6",
+              27
+            ]
+          ]
+        },
+        {
+          "phase": 17,
+          "top": [
+            [
+              "MILK:3",
+              29
+            ],
+            [
+              "STRAWBERRY:2",
+              29
+            ],
+            [
+              "WHEAT:19",
+              27
+            ],
+            [
+              "FERTILIZER:9",
+              27
+            ],
+            [
+              "WHEAT:25",
+              2
+            ]
+          ]
+        },
+        {
+          "phase": 18,
+          "top": [
+            [
+              "STRAWBERRY:28",
+              29
+            ],
+            [
+              "MILK:9",
+              29
+            ],
+            [
+              "WHEAT:3",
+              29
+            ],
+            [
+              "WHEAT:1",
+              29
+            ],
+            [
+              "FERTILIZER:8",
+              27
+            ]
+          ]
+        },
+        {
+          "phase": 19,
+          "top": [
+            [
+              "WHEAT:1",
+              57
+            ],
+            [
+              "MILK:9",
+              29
+            ],
+            [
+              "WOOL:16",
+              29
+            ],
+            [
+              "MILK:3",
+              29
+            ],
+            [
+              "STRAWBERRY:12",
+              28
+            ]
+          ]
+        },
+        {
+          "phase": 20,
+          "top": [
+            [
+              "MELON:6",
+              203
+            ],
+            [
+              "STRAWBERRY:14",
+              29
+            ],
+            [
+              "MILK:14",
+              29
+            ],
+            [
+              "MELON:12",
+              29
+            ],
+            [
+              "MILK:9",
+              29
+            ]
+          ]
+        },
+        {
+          "phase": 21,
+          "top": [
+            [
+              "MILK:3",
+              58
+            ],
+            [
+              "WOOL:8",
+              58
+            ],
+            [
+              "MELON:6",
+              29
+            ],
+            [
+              "STRAWBERRY:18",
+              29
+            ],
+            [
+              "MELON:12",
+              29
+            ]
+          ]
+        },
+        {
+          "phase": 22,
+          "top": [
+            [
+              "MILK:3",
+              29
+            ],
+            [
+              "FERTILIZER:2",
+              29
+            ],
+            [
+              "MELON:12",
+              29
+            ],
+            [
+              "STRAWBERRY:34",
+              28
+            ],
+            [
+              "FERTILIZER:11",
+              27
+            ]
+          ]
+        },
+        {
+          "phase": 23,
+          "top": [
+            [
+              "STRAWBERRY:28",
+              29
+            ],
+            [
+              "MILK:9",
+              29
+            ],
+            [
+              "WHEAT:3",
+              29
+            ],
+            [
+              "MILK:6",
+              29
+            ],
+            [
+              "FERTILIZER:8",
+              27
+            ]
+          ]
+        },
+        {
+          "phase": 24,
+          "top": [
+            [
+              "STRAWBERRY:10",
+              58
+            ],
+            [
+              "FERTILIZER:1",
+              58
+            ],
+            [
+              "WHEAT:20",
+              29
+            ],
+            [
+              "MILK:11",
+              29
+            ],
+            [
+              "WHEAT:4",
+              29
+            ]
+          ]
+        },
+        {
+          "phase": 25,
+          "top": [
+            [
+              "WOOL:16",
+              29
+            ],
+            [
+              "STRAWBERRY:10",
+              29
+            ],
+            [
+              "WHEAT:31",
+              29
+            ],
+            [
+              "MILK:3",
+              29
+            ],
+            [
+              "MILK:11",
+              29
+            ]
+          ]
+        },
+        {
+          "phase": 26,
+          "top": [
+            [
+              "FERTILIZER:1",
+              144
+            ],
+            [
+              "FERTILIZER:2",
+              58
+            ],
+            [
+              "STRAWBERRY:16",
+              29
+            ],
+            [
+              "WHEAT:30",
+              29
+            ],
+            [
+              "MILK:5",
+              29
+            ]
+          ]
+        },
+        {
+          "phase": 27,
+          "top": [
+            [
+              "MILK:9",
+              58
+            ],
+            [
+              "STRAWBERRY:22",
+              29
+            ],
+            [
+              "WHEAT:2",
+              29
+            ],
+            [
+              "WHEAT:3",
+              29
+            ],
+            [
+              "FERTILIZER:2",
+              29
+            ]
+          ]
+        },
+        {
+          "phase": 28,
+          "top": [
+            [
+              "MILK:3",
+              87
+            ],
+            [
+              "FERTILIZER:3",
+              86
+            ],
+            [
+              "WOOL:16",
+              29
+            ],
+            [
+              "WHEAT:45",
+              29
+            ],
+            [
+              "STRAWBERRY:6",
+              29
+            ]
+          ]
+        },
+        {
+          "phase": 29,
+          "top": [
+            [
+              "FERTILIZER:3",
+              85
+            ],
+            [
+              "MILK:18",
+              58
+            ],
+            [
+              "FERTILIZER:5",
+              57
+            ],
+            [
+              "WHEAT:53",
+              29
+            ],
+            [
+              "WHEAT:4",
+              29
+            ]
+          ]
+        }
+      ],
+      "terminal_market_shapes": [
+        {
+          "shape": "[[\"SELL\",\"WHEAT\",36],[\"SELL\",\"FERTILIZER\",1]]",
+          "support": 27
+        },
+        {
+          "shape": "[[\"SELL\",\"MILK\",18],[\"SELL\",\"WHEAT\",26],[\"SELL\",\"FERTILIZER\",5]]",
+          "support": 19
+        },
+        {
+          "shape": "[[\"SELL\",\"MILK\",18],[\"SELL\",\"WHEAT\",22],[\"SELL\",\"FERTILIZER\",5],[\"SELL\",\"WHEAT\",1]]",
+          "support": 14
+        },
+        {
+          "shape": "[[\"SELL\",\"MILK\",18],[\"SELL\",\"FERTILIZER\",5],[\"SELL\",\"WHEAT\",22],[\"SELL\",\"WHEAT\",1]]",
+          "support": 13
+        },
+        {
+          "shape": "[[\"SELL\",\"MILK\",18],[\"SELL\",\"FERTILIZER\",5],[\"SELL\",\"WHEAT\",26]]",
+          "support": 9
+        },
+        {
+          "shape": "[[\"SELL\",\"FERTILIZER\",1],[\"SELL\",\"WHEAT\",36]]",
+          "support": 1
+        },
+        {
+          "shape": "[[\"SELL\",\"MILK\",18],[\"SELL\",\"WHEAT\",22],[\"SELL\",\"FERTILIZER\",2]]",
+          "support": 1
+        },
+        {
+          "shape": "[[\"SELL\",\"WHEAT\",23],[\"SELL\",\"FERTILIZER\",5],[\"SELL\",\"MILK\",18]]",
+          "support": 1
+        },
+        {
+          "shape": "[[\"SELL\",\"WHEAT\",24],[\"SELL\",\"FERTILIZER\",1]]",
+          "support": 1
+        },
+        {
+          "shape": "[[\"SELL\",\"WHEAT\",22],[\"SELL\",\"FERTILIZER\",5],[\"SELL\",\"MILK\",18],[\"SELL\",\"WHEAT\",1]]",
+          "support": 1
+        }
+      ]
+    },
+    {
+      "unit_tape": "8cd5e679b48c5da667d9735070c3c83c51f21af45cc1778011da0056e2356c24",
+      "support": 14,
+      "ranks": [
+        49,
+        71,
+        73,
+        92,
+        115,
+        124,
+        129,
+        130,
+        143,
+        155,
+        193,
+        198,
+        262,
+        275
+      ],
+      "distinct_market_tapes": 14,
+      "phase_sell_modes": [
+        {
+          "phase": 2,
+          "top": [
+            [
+              "FERTILIZER:5",
+              14
+            ]
+          ]
+        },
+        {
+          "phase": 3,
+          "top": [
+            [
+              "FERTILIZER:5",
+              14
+            ]
+          ]
+        },
+        {
+          "phase": 4,
+          "top": [
+            [
+              "FERTILIZER:5",
+              14
+            ],
+            [
+              "WHEAT:3",
+              1
+            ]
+          ]
+        },
+        {
+          "phase": 5,
+          "top": [
+            [
+              "FERTILIZER:5",
+              14
+            ],
+            [
+              "WHEAT:17",
+              13
+            ],
+            [
+              "WHEAT:14",
+              1
+            ]
+          ]
+        },
+        {
+          "phase": 6,
+          "top": [
+            [
+              "FERTILIZER:5",
+              14
+            ],
+            [
+              "WOOL:5",
+              14
+            ],
+            [
+              "FERTILIZER:3",
+              14
+            ],
+            [
+              "WHEAT:1",
+              14
+            ]
+          ]
+        },
+        {
+          "phase": 7,
+          "top": [
+            [
+              "WOOL:15",
+              14
+            ],
+            [
+              "FERTILIZER:3",
+              14
+            ],
+            [
+              "WHEAT:2",
+              1
+            ]
+          ]
+        },
+        {
+          "phase": 8,
+          "top": [
+            [
+              "FERTILIZER:7",
+              14
+            ],
+            [
+              "WHEAT:2",
+              13
+            ],
+            [
+              "WHEAT:6",
+              1
+            ]
+          ]
+        },
+        {
+          "phase": 9,
+          "top": [
+            [
+              "FERTILIZER:10",
+              14
+            ],
+            [
+              "MILK:6",
+              14
+            ],
+            [
+              "WHEAT:1",
+              14
+            ],
+            [
+              "WHEAT:13",
+              13
+            ],
+            [
+              "WHEAT:7",
+              1
+            ]
+          ]
+        },
+        {
+          "phase": 10,
+          "top": [
+            [
+              "MELON:6",
+              70
+            ],
+            [
+              "WOOL:16",
+              14
+            ],
+            [
+              "WHEAT:2",
+              13
+            ]
+          ]
+        },
+        {
+          "phase": 11,
+          "top": [
+            [
+              "MILK:3",
+              14
+            ],
+            [
+              "WHEAT:7",
+              1
+            ],
+            [
+              "FERTILIZER:12",
+              1
+            ]
+          ]
+        },
+        {
+          "phase": 12,
+          "top": [
+            [
+              "WHEAT:1",
+              14
+            ],
+            [
+              "WOOL:12",
+              14
+            ],
+            [
+              "FERTILIZER:12",
+              13
+            ],
+            [
+              "WHEAT:10",
+              13
+            ],
+            [
+              "WHEAT:3",
+              1
+            ]
+          ]
+        },
+        {
+          "phase": 13,
+          "top": [
+            [
+              "WOOL:4",
+              14
+            ],
+            [
+              "MILK:3",
+              14
+            ],
+            [
+              "WHEAT:25",
+              13
+            ],
+            [
+              "FERTILIZER:9",
+              13
+            ],
+            [
+              "WHEAT:19",
+              1
+            ]
+          ]
+        },
+        {
+          "phase": 14,
+          "top": [
+            [
+              "WHEAT:1",
+              15
+            ],
+            [
+              "MILK:6",
+              14
+            ],
+            [
+              "STRAWBERRY:6",
+              14
+            ],
+            [
+              "FERTILIZER:12",
+              13
+            ],
+            [
+              "WHEAT:4",
+              13
+            ]
+          ]
+        },
+        {
+          "phase": 15,
+          "top": [
+            [
+              "MILK:9",
+              14
+            ],
+            [
+              "MILK:12",
+              14
+            ],
+            [
+              "FERTILIZER:1",
+              14
+            ],
+            [
+              "WHEAT:1",
+              13
+            ],
+            [
+              "FERTILIZER:8",
+              13
+            ]
+          ]
+        },
+        {
+          "phase": 16,
+          "top": [
+            [
+              "WOOL:16",
+              14
+            ],
+            [
+              "STRAWBERRY:12",
+              14
+            ],
+            [
+              "MILK:9",
+              14
+            ],
+            [
+              "FERTILIZER:9",
+              13
+            ],
+            [
+              "WHEAT:10",
+              13
+            ]
+          ]
+        },
+        {
+          "phase": 17,
+          "top": [
+            [
+              "MILK:18",
+              14
+            ],
+            [
+              "STRAWBERRY:4",
+              14
+            ],
+            [
+              "WHEAT:25",
+              13
+            ],
+            [
+              "WHEAT:19",
+              1
+            ],
+            [
+              "WHEAT:4",
+              1
+            ]
+          ]
+        },
+        {
+          "phase": 18,
+          "top": [
+            [
+              "WHEAT:1",
+              40
+            ],
+            [
+              "WHEAT:2",
+              16
+            ],
+            [
+              "STRAWBERRY:28",
+              14
+            ],
+            [
+              "MILK:9",
+              14
+            ],
+            [
+              "WHEAT:5",
+              14
+            ]
+          ]
+        },
+        {
+          "phase": 19,
+          "top": [
+            [
+              "MILK:9",
+              14
+            ],
+            [
+              "WOOL:16",
+              14
+            ],
+            [
+              "STRAWBERRY:12",
+              14
+            ],
+            [
+              "MILK:3",
+              14
+            ],
+            [
+              "MILK:11",
+              14
+            ]
+          ]
+        },
+        {
+          "phase": 20,
+          "top": [
+            [
+              "MELON:6",
+              98
+            ],
+            [
+              "STRAWBERRY:34",
+              14
+            ],
+            [
+              "MILK:3",
+              14
+            ],
+            [
+              "MELON:12",
+              14
+            ],
+            [
+              "MILK:9",
+              14
+            ]
+          ]
+        },
+        {
+          "phase": 21,
+          "top": [
+            [
+              "MELON:6",
+              28
+            ],
+            [
+              "MILK:3",
+              28
+            ],
+            [
+              "MELON:12",
+              14
+            ],
+            [
+              "STRAWBERRY:16",
+              14
+            ],
+            [
+              "MILK:6",
+              14
+            ]
+          ]
+        },
+        {
+          "phase": 22,
+          "top": [
+            [
+              "WHEAT:1",
+              28
+            ],
+            [
+              "STRAWBERRY:6",
+              14
+            ],
+            [
+              "STRAWBERRY:30",
+              14
+            ],
+            [
+              "WOOL:8",
+              14
+            ],
+            [
+              "MELON:6",
+              14
+            ]
+          ]
+        },
+        {
+          "phase": 23,
+          "top": [
+            [
+              "STRAWBERRY:33",
+              14
+            ],
+            [
+              "MILK:9",
+              14
+            ],
+            [
+              "MILK:11",
+              14
+            ],
+            [
+              "FERTILIZER:13",
+              13
+            ],
+            [
+              "WHEAT:1",
+              13
+            ]
+          ]
+        },
+        {
+          "phase": 24,
+          "top": [
+            [
+              "FERTILIZER:2",
+              54
+            ],
+            [
+              "MILK:3",
+              28
+            ],
+            [
+              "FERTILIZER:1",
+              28
+            ],
+            [
+              "WHEAT:12",
+              15
+            ],
+            [
+              "STRAWBERRY:22",
+              14
+            ]
+          ]
+        },
+        {
+          "phase": 25,
+          "top": [
+            [
+              "MILK:3",
+              14
+            ],
+            [
+              "STRAWBERRY:16",
+              14
+            ],
+            [
+              "WOOL:12",
+              14
+            ],
+            [
+              "MILK:9",
+              14
+            ],
+            [
+              "FERTILIZER:2",
+              14
+            ]
+          ]
+        },
+        {
+          "phase": 26,
+          "top": [
+            [
+              "FERTILIZER:1",
+              140
+            ],
+            [
+              "FERTILIZER:2",
+              42
+            ],
+            [
+              "STRAWBERRY:6",
+              14
+            ],
+            [
+              "MILK:5",
+              14
+            ],
+            [
+              "FERTILIZER:10",
+              13
+            ]
+          ]
+        },
+        {
+          "phase": 27,
+          "top": [
+            [
+              "FERTILIZER:2",
+              28
+            ],
+            [
+              "STRAWBERRY:32",
+              14
+            ],
+            [
+              "FERTILIZER:13",
+              14
+            ],
+            [
+              "MILK:6",
+              14
+            ],
+            [
+              "MILK:9",
+              14
+            ]
+          ]
+        },
+        {
+          "phase": 28,
+          "top": [
+            [
+              "FERTILIZER:9",
+              14
+            ],
+            [
+              "WOOL:8",
+              14
+            ],
+            [
+              "MILK:3",
+              14
+            ],
+            [
+              "FERTILIZER:2",
+              14
+            ],
+            [
+              "MILK:5",
+              14
+            ]
+          ]
+        },
+        {
+          "phase": 29,
+          "top": [
+            [
+              "WHEAT:15",
+              28
+            ],
+            [
+              "FERTILIZER:7",
+              14
+            ],
+            [
+              "MILK:3",
+              14
+            ],
+            [
+              "MILK:18",
+              14
+            ],
+            [
+              "FERTILIZER:9",
+              14
+            ]
+          ]
+        }
+      ],
+      "terminal_market_shapes": [
+        {
+          "shape": "[[\"SELL\",\"WHEAT\",15]]",
+          "support": 14
+        },
+        {
+          "shape": "[[\"SELL\",\"FERTILIZER\",14],[\"SELL\",\"WHEAT\",24],[\"SELL\",\"MILK\",6],[\"SELL\",\"FERTILIZER\",3]]",
+          "support": 7
+        },
+        {
+          "shape": "[[\"SELL\",\"WHEAT\",15],[\"SELL\",\"FERTILIZER\",1]]",
+          "support": 7
+        },
+        {
+          "shape": "[[\"SELL\",\"FERTILIZER\",1],[\"SELL\",\"WHEAT\",15]]",
+          "support": 6
+        },
+        {
+          "shape": "[[\"SELL\",\"FERTILIZER\",14],[\"SELL\",\"MILK\",6],[\"SELL\",\"FERTILIZER\",3],[\"SELL\",\"WHEAT\",24]]",
+          "support": 4
+        },
+        {
+          "shape": "[[\"SELL\",\"FERTILIZER\",14],[\"SELL\",\"MILK\",6],[\"SELL\",\"WHEAT\",24],[\"SELL\",\"FERTILIZER\",3]]",
+          "support": 2
+        },
+        {
+          "shape": "[[\"SELL\",\"MILK\",6],[\"SELL\",\"FERTILIZER\",14],[\"SELL\",\"FERTILIZER\",3],[\"SELL\",\"WHEAT\",24]]",
+          "support": 1
+        },
+        {
+          "shape": "[[\"SELL\",\"WHEAT\",15],[\"SELL\",\"FERTILIZER\",1],[\"SELL\",\"WHEAT\",3]]",
+          "support": 1
+        }
+      ]
+    },
+    {
+      "unit_tape": "4b52dfdd1fcda88a852d3421c7014d55103887d06efe4640f68ddb8808b0a84d",
+      "support": 10,
+      "ranks": [
+        146,
+        157,
+        159,
+        167,
+        184,
+        185,
+        216,
+        231,
+        249,
+        276
+      ],
+      "distinct_market_tapes": 10,
+      "phase_sell_modes": [
+        {
+          "phase": 2,
+          "top": [
+            [
+              "FERTILIZER:5",
+              10
+            ]
+          ]
+        },
+        {
+          "phase": 3,
+          "top": [
+            [
+              "FERTILIZER:5",
+              10
+            ]
+          ]
+        },
+        {
+          "phase": 4,
+          "top": [
+            [
+              "FERTILIZER:5",
+              10
+            ]
+          ]
+        },
+        {
+          "phase": 5,
+          "top": [
+            [
+              "WHEAT:17",
+              10
+            ],
+            [
+              "FERTILIZER:5",
+              10
+            ]
+          ]
+        },
+        {
+          "phase": 6,
+          "top": [
+            [
+              "FERTILIZER:5",
+              10
+            ],
+            [
+              "WOOL:5",
+              10
+            ],
+            [
+              "FERTILIZER:3",
+              10
+            ]
+          ]
+        },
+        {
+          "phase": 7,
+          "top": [
+            [
+              "WOOL:15",
+              10
+            ],
+            [
+              "FERTILIZER:3",
+              10
+            ]
+          ]
+        },
+        {
+          "phase": 8,
+          "top": [
+            [
+              "FERTILIZER:7",
+              10
+            ],
+            [
+              "WHEAT:2",
+              10
+            ]
+          ]
+        },
+        {
+          "phase": 9,
+          "top": [
+            [
+              "FERTILIZER:10",
+              10
+            ],
+            [
+              "MILK:6",
+              10
+            ],
+            [
+              "WHEAT:13",
+              10
+            ],
+            [
+              "WHEAT:3",
+              10
+            ]
+          ]
+        },
+        {
+          "phase": 10,
+          "top": [
+            [
+              "MELON:6",
+              50
+            ],
+            [
+              "WOOL:16",
+              10
+            ],
+            [
+              "WHEAT:2",
+              10
+            ]
+          ]
+        },
+        {
+          "phase": 11,
+          "top": [
+            [
+              "MILK:3",
+              10
+            ]
+          ]
+        },
+        {
+          "phase": 12,
+          "top": [
+            [
+              "FERTILIZER:13",
+              10
+            ],
+            [
+              "WHEAT:10",
+              10
+            ],
+            [
+              "WHEAT:2",
+              10
+            ],
+            [
+              "WOOL:12",
+              10
+            ]
+          ]
+        },
+        {
+          "phase": 13,
+          "top": [
+            [
+              "WOOL:4",
+              10
+            ],
+            [
+              "FERTILIZER:10",
+              10
+            ],
+            [
+              "WHEAT:24",
+              10
+            ],
+            [
+              "MILK:3",
+              10
+            ]
+          ]
+        },
+        {
+          "phase": 14,
+          "top": [
+            [
+              "FERTILIZER:13",
+              10
+            ],
+            [
+              "MILK:6",
+              10
+            ],
+            [
+              "STRAWBERRY:6",
+              10
+            ],
+            [
+              "WHEAT:4",
+              10
+            ]
+          ]
+        },
+        {
+          "phase": 15,
+          "top": [
+            [
+              "MILK:9",
+              10
+            ],
+            [
+              "FERTILIZER:9",
+              10
+            ],
+            [
+              "MILK:12",
+              10
+            ],
+            [
+              "WHEAT:1",
+              10
+            ],
+            [
+              "FERTILIZER:1",
+              10
+            ]
+          ]
+        },
+        {
+          "phase": 16,
+          "top": [
+            [
+              "WOOL:8",
+              10
+            ],
+            [
+              "STRAWBERRY:14",
+              10
+            ],
+            [
+              "MILK:6",
+              10
+            ],
+            [
+              "FERTILIZER:8",
+              10
+            ],
+            [
+              "WHEAT:10",
+              10
+            ]
+          ]
+        },
+        {
+          "phase": 17,
+          "top": [
+            [
+              "MILK:3",
+              20
+            ],
+            [
+              "MILK:15",
+              10
+            ],
+            [
+              "WHEAT:25",
+              10
+            ],
+            [
+              "STRAWBERRY:2",
+              10
+            ],
+            [
+              "WHEAT:4",
+              10
+            ]
+          ]
+        },
+        {
+          "phase": 18,
+          "top": [
+            [
+              "STRAWBERRY:28",
+              10
+            ],
+            [
+              "MILK:3",
+              10
+            ],
+            [
+              "FERTILIZER:7",
+              10
+            ],
+            [
+              "WHEAT:3",
+              10
+            ],
+            [
+              "WHEAT:2",
+              10
+            ]
+          ]
+        },
+        {
+          "phase": 19,
+          "top": [
+            [
+              "MILK:9",
+              20
+            ],
+            [
+              "WOOL:16",
+              10
+            ],
+            [
+              "STRAWBERRY:12",
+              10
+            ],
+            [
+              "FERTILIZER:10",
+              10
+            ],
+            [
+              "WHEAT:1",
+              10
+            ]
+          ]
+        },
+        {
+          "phase": 20,
+          "top": [
+            [
+              "MELON:6",
+              60
+            ],
+            [
+              "MILK:3",
+              20
+            ],
+            [
+              "STRAWBERRY:34",
+              10
+            ],
+            [
+              "WHEAT:9",
+              10
+            ],
+            [
+              "MELON:12",
+              10
+            ]
+          ]
+        },
+        {
+          "phase": 21,
+          "top": [
+            [
+              "MILK:6",
+              20
+            ],
+            [
+              "MILK:3",
+              20
+            ],
+            [
+              "FERTILIZER:2",
+              20
+            ],
+            [
+              "WOOL:8",
+              20
+            ],
+            [
+              "MELON:18",
+              10
+            ]
+          ]
+        },
+        {
+          "phase": 22,
+          "top": [
+            [
+              "WHEAT:1",
+              10
+            ],
+            [
+              "MELON:18",
+              10
+            ],
+            [
+              "STRAWBERRY:26",
+              10
+            ],
+            [
+              "FERTILIZER:3",
+              10
+            ],
+            [
+              "WHEAT:4",
+              10
+            ]
+          ]
+        },
+        {
+          "phase": 23,
+          "top": [
+            [
+              "STRAWBERRY:24",
+              10
+            ],
+            [
+              "MILK:6",
+              10
+            ],
+            [
+              "FERTILIZER:10",
+              10
+            ],
+            [
+              "WHEAT:1",
+              10
+            ],
+            [
+              "MILK:11",
+              10
+            ]
+          ]
+        },
+        {
+          "phase": 24,
+          "top": [
+            [
+              "FERTILIZER:1",
+              40
+            ],
+            [
+              "MILK:3",
+              20
+            ],
+            [
+              "WOOL:4",
+              20
+            ],
+            [
+              "FERTILIZER:2",
+              20
+            ],
+            [
+              "STRAWBERRY:23",
+              10
+            ]
+          ]
+        },
+        {
+          "phase": 25,
+          "top": [
+            [
+              "STRAWBERRY:32",
+              10
+            ],
+            [
+              "MILK:6",
+              10
+            ],
+            [
+              "FERTILIZER:8",
+              10
+            ],
+            [
+              "WHEAT:24",
+              10
+            ]
+          ]
+        },
+        {
+          "phase": 26,
+          "top": [
+            [
+              "FERTILIZER:1",
+              90
+            ],
+            [
+              "FERTILIZER:2",
+              20
+            ],
+            [
+              "MILK:11",
+              10
+            ],
+            [
+              "FERTILIZER:13",
+              10
+            ],
+            [
+              "WHEAT:20",
+              10
+            ]
+          ]
+        },
+        {
+          "phase": 27,
+          "top": [
+            [
+              "MILK:12",
+              10
+            ],
+            [
+              "STRAWBERRY:28",
+              10
+            ],
+            [
+              "FERTILIZER:13",
+              10
+            ],
+            [
+              "WHEAT:9",
+              10
+            ],
+            [
+              "WOOL:8",
+              10
+            ]
+          ]
+        },
+        {
+          "phase": 28,
+          "top": [
+            [
+              "MILK:14",
+              10
+            ],
+            [
+              "WHEAT:48",
+              10
+            ],
+            [
+              "FERTILIZER:11",
+              10
+            ],
+            [
+              "WOOL:8",
+              10
+            ],
+            [
+              "STRAWBERRY:2",
+              10
+            ]
+          ]
+        },
+        {
+          "phase": 29,
+          "top": [
+            [
+              "MILK:3",
+              20
+            ],
+            [
+              "WHEAT:71",
+              10
+            ],
+            [
+              "FERTILIZER:7",
+              10
+            ],
+            [
+              "WHEAT:4",
+              10
+            ],
+            [
+              "FERTILIZER:2",
+              10
+            ]
+          ]
+        }
+      ],
+      "terminal_market_shapes": [
+        {
+          "shape": "[[\"SELL\",\"WHEAT\",11]]",
+          "support": 10
+        },
+        {
+          "shape": "[[\"SELL\",\"WHEAT\",22]]",
+          "support": 10
+        },
+        {
+          "shape": "[[\"SELL\",\"WHEAT\",47],[\"SELL\",\"MILK\",9],[\"SELL\",\"FERTILIZER\",10],[\"SELL\",\"WOOL\",6]]",
+          "support": 5
+        },
+        {
+          "shape": "[[\"SELL\",\"MILK\",9],[\"SELL\",\"WHEAT\",47],[\"SELL\",\"FERTILIZER\",10],[\"SELL\",\"WOOL\",6]]",
+          "support": 1
+        },
+        {
+          "shape": "[[\"SELL\",\"WHEAT\",47],[\"SELL\",\"FERTILIZER\",10],[\"SELL\",\"MILK\",9],[\"SELL\",\"WOOL\",6]]",
+          "support": 1
+        },
+        {
+          "shape": "[[\"SELL\",\"WOOL\",6],[\"SELL\",\"WHEAT\",47],[\"SELL\",\"FERTILIZER\",10],[\"SELL\",\"MILK\",9]]",
+          "support": 1
+        },
+        {
+          "shape": "[[\"SELL\",\"WHEAT\",47],[\"SELL\",\"WOOL\",6],[\"SELL\",\"MILK\",9],[\"SELL\",\"FERTILIZER\",10]]",
+          "support": 1
+        },
+        {
+          "shape": "[[\"SELL\",\"MILK\",9],[\"SELL\",\"WHEAT\",47],[\"SELL\",\"WOOL\",6],[\"SELL\",\"FERTILIZER\",10]]",
+          "support": 1
+        }
+      ]
+    },
+    {
+      "unit_tape": "69889ced976c1798176361ef71c0591a5d35c7e33a25516f508b0a9924b2ee5a",
+      "support": 8,
+      "ranks": [
+        3,
+        4,
+        8,
+        32,
+        37,
+        63,
+        65,
+        191
+      ],
+      "distinct_market_tapes": 8,
+      "phase_sell_modes": [
+        {
+          "phase": 2,
+          "top": [
+            [
+              "FERTILIZER:5",
+              8
+            ]
+          ]
+        },
+        {
+          "phase": 3,
+          "top": [
+            [
+              "FERTILIZER:5",
+              8
+            ]
+          ]
+        },
+        {
+          "phase": 4,
+          "top": [
+            [
+              "FERTILIZER:5",
+              8
+            ]
+          ]
+        },
+        {
+          "phase": 5,
+          "top": [
+            [
+              "FERTILIZER:5",
+              8
+            ],
+            [
+              "WHEAT:17",
+              7
+            ]
+          ]
+        },
+        {
+          "phase": 6,
+          "top": [
+            [
+              "FERTILIZER:5",
+              8
+            ],
+            [
+              "WOOL:5",
+              8
+            ],
+            [
+              "FERTILIZER:3",
+              8
+            ],
+            [
+              "WHEAT:17",
+              1
+            ]
+          ]
+        },
+        {
+          "phase": 7,
+          "top": [
+            [
+              "WOOL:15",
+              8
+            ],
+            [
+              "FERTILIZER:3",
+              8
+            ]
+          ]
+        },
+        {
+          "phase": 8,
+          "top": [
+            [
+              "FERTILIZER:7",
+              8
+            ],
+            [
+              "WHEAT:2",
+              8
+            ]
+          ]
+        },
+        {
+          "phase": 9,
+          "top": [
+            [
+              "FERTILIZER:10",
+              8
+            ],
+            [
+              "MILK:6",
+              8
+            ],
+            [
+              "WHEAT:13",
+              7
+            ],
+            [
+              "WHEAT:2",
+              1
+            ]
+          ]
+        },
+        {
+          "phase": 10,
+          "top": [
+            [
+              "MELON:6",
+              40
+            ],
+            [
+              "WOOL:16",
+              8
+            ],
+            [
+              "WHEAT:2",
+              7
+            ],
+            [
+              "WHEAT:9",
+              1
+            ],
+            [
+              "WHEAT:4",
+              1
+            ]
+          ]
+        },
+        {
+          "phase": 11,
+          "top": [
+            [
+              "MILK:3",
+              7
+            ]
+          ]
+        },
+        {
+          "phase": 12,
+          "top": [
+            [
+              "FERTILIZER:12",
+              8
+            ],
+            [
+              "WHEAT:10",
+              8
+            ],
+            [
+              "MILK:3",
+              1
+            ]
+          ]
+        },
+        {
+          "phase": 13,
+          "top": [
+            [
+              "WOOL:4",
+              8
+            ],
+            [
+              "MILK:3",
+              8
+            ],
+            [
+              "WOOL:12",
+              8
+            ],
+            [
+              "WHEAT:25",
+              8
+            ],
+            [
+              "FERTILIZER:9",
+              7
+            ]
+          ]
+        },
+        {
+          "phase": 14,
+          "top": [
+            [
+              "FERTILIZER:12",
+              8
+            ],
+            [
+              "MILK:6",
+              8
+            ],
+            [
+              "STRAWBERRY:6",
+              8
+            ],
+            [
+              "WHEAT:4",
+              8
+            ],
+            [
+              "WHEAT:1",
+              8
+            ]
+          ]
+        },
+        {
+          "phase": 15,
+          "top": [
+            [
+              "MILK:9",
+              8
+            ],
+            [
+              "WHEAT:3",
+              8
+            ],
+            [
+              "FERTILIZER:1",
+              8
+            ],
+            [
+              "MILK:12",
+              8
+            ],
+            [
+              "WOOL:8",
+              8
+            ]
+          ]
+        },
+        {
+          "phase": 16,
+          "top": [
+            [
+              "WHEAT:3",
+              9
+            ],
+            [
+              "FERTILIZER:6",
+              8
+            ],
+            [
+              "STRAWBERRY:14",
+              8
+            ],
+            [
+              "WHEAT:10",
+              8
+            ],
+            [
+              "WOOL:8",
+              8
+            ]
+          ]
+        },
+        {
+          "phase": 17,
+          "top": [
+            [
+              "WHEAT:25",
+              8
+            ],
+            [
+              "MILK:3",
+              8
+            ],
+            [
+              "STRAWBERRY:2",
+              8
+            ]
+          ]
+        },
+        {
+          "phase": 18,
+          "top": [
+            [
+              "WHEAT:1",
+              31
+            ],
+            [
+              "FERTILIZER:9",
+              8
+            ],
+            [
+              "STRAWBERRY:28",
+              8
+            ],
+            [
+              "MILK:9",
+              8
+            ],
+            [
+              "WHEAT:3",
+              8
+            ]
+          ]
+        },
+        {
+          "phase": 19,
+          "top": [
+            [
+              "WHEAT:1",
+              17
+            ],
+            [
+              "MILK:9",
+              8
+            ],
+            [
+              "FERTILIZER:8",
+              8
+            ],
+            [
+              "WOOL:16",
+              8
+            ],
+            [
+              "MILK:3",
+              8
+            ]
+          ]
+        },
+        {
+          "phase": 20,
+          "top": [
+            [
+              "MELON:6",
+              56
+            ],
+            [
+              "STRAWBERRY:14",
+              8
+            ],
+            [
+              "STRAWBERRY:20",
+              8
+            ],
+            [
+              "MILK:14",
+              8
+            ],
+            [
+              "WHEAT:11",
+              8
+            ]
+          ]
+        },
+        {
+          "phase": 21,
+          "top": [
+            [
+              "STRAWBERRY:10",
+              16
+            ],
+            [
+              "WOOL:8",
+              16
+            ],
+            [
+              "MELON:6",
+              8
+            ],
+            [
+              "MILK:12",
+              8
+            ],
+            [
+              "MILK:9",
+              8
+            ]
+          ]
+        },
+        {
+          "phase": 22,
+          "top": [
+            [
+              "FERTILIZER:6",
+              9
+            ],
+            [
+              "MELON:12",
+              9
+            ],
+            [
+              "STRAWBERRY:36",
+              8
+            ],
+            [
+              "MILK:3",
+              8
+            ]
+          ]
+        },
+        {
+          "phase": 23,
+          "top": [
+            [
+              "STRAWBERRY:26",
+              8
+            ],
+            [
+              "MILK:12",
+              8
+            ],
+            [
+              "FERTILIZER:12",
+              7
+            ],
+            [
+              "FERTILIZER:11",
+              1
+            ]
+          ]
+        },
+        {
+          "phase": 24,
+          "top": [
+            [
+              "MILK:9",
+              16
+            ],
+            [
+              "FERTILIZER:2",
+              16
+            ],
+            [
+              "STRAWBERRY:18",
+              8
+            ],
+            [
+              "STRAWBERRY:14",
+              8
+            ],
+            [
+              "WHEAT:18",
+              8
+            ]
+          ]
+        },
+        {
+          "phase": 25,
+          "top": [
+            [
+              "WHEAT:37",
+              8
+            ],
+            [
+              "STRAWBERRY:8",
+              8
+            ],
+            [
+              "WOOL:4",
+              8
+            ],
+            [
+              "MILK:11",
+              8
+            ],
+            [
+              "FERTILIZER:4",
+              7
+            ]
+          ]
+        },
+        {
+          "phase": 26,
+          "top": [
+            [
+              "FERTILIZER:1",
+              46
+            ],
+            [
+              "STRAWBERRY:18",
+              8
+            ],
+            [
+              "WHEAT:31",
+              8
+            ],
+            [
+              "MILK:3",
+              8
+            ],
+            [
+              "FERTILIZER:12",
+              7
+            ]
+          ]
+        },
+        {
+          "phase": 27,
+          "top": [
+            [
+              "STRAWBERRY:20",
+              8
+            ],
+            [
+              "FERTILIZER:14",
+              8
+            ],
+            [
+              "MILK:9",
+              8
+            ],
+            [
+              "WHEAT:3",
+              8
+            ],
+            [
+              "FERTILIZER:3",
+              8
+            ]
+          ]
+        },
+        {
+          "phase": 28,
+          "top": [
+            [
+              "FERTILIZER:3",
+              17
+            ],
+            [
+              "MILK:3",
+              15
+            ],
+            [
+              "WHEAT:45",
+              8
+            ],
+            [
+              "MILK:9",
+              8
+            ],
+            [
+              "STRAWBERRY:8",
+              8
+            ]
+          ]
+        },
+        {
+          "phase": 29,
+          "top": [
+            [
+              "WHEAT:70",
+              8
+            ],
+            [
+              "MILK:8",
+              8
+            ],
+            [
+              "FERTILIZER:8",
+              8
+            ],
+            [
+              "FERTILIZER:4",
+              8
+            ],
+            [
+              "WHEAT:16",
+              8
+            ]
+          ]
+        }
+      ],
+      "terminal_market_shapes": [
+        {
+          "shape": "[[\"SELL\",\"WHEAT\",31],[\"SELL\",\"MILK\",3],[\"SELL\",\"FERTILIZER\",1]]",
+          "support": 7
+        },
+        {
+          "shape": "[[\"SELL\",\"MILK\",9],[\"SELL\",\"WHEAT\",15],[\"SELL\",\"FERTILIZER\",2]]",
+          "support": 6
+        },
+        {
+          "shape": "[[\"SELL\",\"MILK\",6],[\"SELL\",\"FERTILIZER\",7],[\"SELL\",\"WHEAT\",12]]",
+          "support": 6
+        },
+        {
+          "shape": "[[\"SELL\",\"MILK\",6],[\"SELL\",\"WHEAT\",12],[\"SELL\",\"FERTILIZER\",7]]",
+          "support": 2
+        },
+        {
+          "shape": "[[\"SELL\",\"WHEAT\",15],[\"SELL\",\"MILK\",9],[\"SELL\",\"FERTILIZER\",2]]",
+          "support": 1
+        },
+        {
+          "shape": "[]",
+          "support": 1
+        },
+        {
+          "shape": "[[\"SELL\",\"MILK\",9],[\"SELL\",\"WHEAT\",15]]",
+          "support": 1
+        }
+      ]
+    },
+    {
+      "unit_tape": "53f44cd73cc34e4e2bd3469aa78ba18aa6c499bd57c2eb37207a475e2293d78d",
+      "support": 7,
+      "ranks": [
+        26,
+        41,
+        46,
+        75,
+        78,
+        150,
+        228
+      ],
+      "distinct_market_tapes": 7,
+      "phase_sell_modes": [
+        {
+          "phase": 2,
+          "top": [
+            [
+              "FERTILIZER:5",
+              7
+            ]
+          ]
+        },
+        {
+          "phase": 3,
+          "top": [
+            [
+              "FERTILIZER:5",
+              7
+            ]
+          ]
+        },
+        {
+          "phase": 4,
+          "top": [
+            [
+              "FERTILIZER:5",
+              7
+            ]
+          ]
+        },
+        {
+          "phase": 5,
+          "top": [
+            [
+              "WHEAT:17",
+              7
+            ],
+            [
+              "FERTILIZER:5",
+              7
+            ]
+          ]
+        },
+        {
+          "phase": 6,
+          "top": [
+            [
+              "FERTILIZER:5",
+              7
+            ],
+            [
+              "WOOL:5",
+              7
+            ],
+            [
+              "FERTILIZER:3",
+              7
+            ]
+          ]
+        },
+        {
+          "phase": 7,
+          "top": [
+            [
+              "WOOL:15",
+              7
+            ],
+            [
+              "FERTILIZER:3",
+              7
+            ]
+          ]
+        },
+        {
+          "phase": 8,
+          "top": [
+            [
+              "FERTILIZER:7",
+              7
+            ],
+            [
+              "WHEAT:2",
+              7
+            ]
+          ]
+        },
+        {
+          "phase": 9,
+          "top": [
+            [
+              "MILK:6",
+              7
+            ],
+            [
+              "FERTILIZER:10",
+              7
+            ],
+            [
+              "WHEAT:13",
+              7
+            ]
+          ]
+        },
+        {
+          "phase": 10,
+          "top": [
+            [
+              "MELON:6",
+              35
+            ],
+            [
+              "WOOL:16",
+              7
+            ],
+            [
+              "WHEAT:2",
+              7
+            ]
+          ]
+        },
+        {
+          "phase": 11,
+          "top": [
+            [
+              "MILK:3",
+              7
+            ]
+          ]
+        },
+        {
+          "phase": 12,
+          "top": [
+            [
+              "FERTILIZER:12",
+              7
+            ],
+            [
+              "WHEAT:10",
+              7
+            ]
+          ]
+        },
+        {
+          "phase": 13,
+          "top": [
+            [
+              "WOOL:4",
+              7
+            ],
+            [
+              "MILK:3",
+              7
+            ],
+            [
+              "WOOL:12",
+              7
+            ],
+            [
+              "WHEAT:25",
+              7
+            ],
+            [
+              "FERTILIZER:9",
+              7
+            ]
+          ]
+        },
+        {
+          "phase": 14,
+          "top": [
+            [
+              "MILK:6",
+              7
+            ],
+            [
+              "STRAWBERRY:6",
+              7
+            ],
+            [
+              "FERTILIZER:12",
+              7
+            ],
+            [
+              "WHEAT:4",
+              7
+            ],
+            [
+              "WHEAT:3",
+              7
+            ]
+          ]
+        },
+        {
+          "phase": 15,
+          "top": [
+            [
+              "WHEAT:1",
+              7
+            ],
+            [
+              "MILK:9",
+              7
+            ],
+            [
+              "FERTILIZER:8",
+              7
+            ],
+            [
+              "WHEAT:3",
+              7
+            ],
+            [
+              "MILK:12",
+              7
+            ]
+          ]
+        },
+        {
+          "phase": 16,
+          "top": [
+            [
+              "WOOL:8",
+              7
+            ],
+            [
+              "STRAWBERRY:14",
+              7
+            ],
+            [
+              "FERTILIZER:6",
+              7
+            ],
+            [
+              "WHEAT:10",
+              7
+            ],
+            [
+              "WHEAT:3",
+              7
+            ]
+          ]
+        },
+        {
+          "phase": 17,
+          "top": [
+            [
+              "MILK:3",
+              7
+            ],
+            [
+              "STRAWBERRY:2",
+              7
+            ],
+            [
+              "WHEAT:25",
+              7
+            ]
+          ]
+        },
+        {
+          "phase": 18,
+          "top": [
+            [
+              "WHEAT:1",
+              28
+            ],
+            [
+              "STRAWBERRY:28",
+              7
+            ],
+            [
+              "MILK:9",
+              7
+            ],
+            [
+              "FERTILIZER:9",
+              7
+            ],
+            [
+              "WHEAT:3",
+              7
+            ]
+          ]
+        },
+        {
+          "phase": 19,
+          "top": [
+            [
+              "WHEAT:1",
+              14
+            ],
+            [
+              "MILK:9",
+              7
+            ],
+            [
+              "WOOL:16",
+              7
+            ],
+            [
+              "STRAWBERRY:12",
+              7
+            ],
+            [
+              "MILK:3",
+              7
+            ]
+          ]
+        },
+        {
+          "phase": 20,
+          "top": [
+            [
+              "MELON:6",
+              49
+            ],
+            [
+              "STRAWBERRY:14",
+              7
+            ],
+            [
+              "MILK:14",
+              7
+            ],
+            [
+              "STRAWBERRY:20",
+              7
+            ],
+            [
+              "WHEAT:11",
+              7
+            ]
+          ]
+        },
+        {
+          "phase": 21,
+          "top": [
+            [
+              "STRAWBERRY:10",
+              14
+            ],
+            [
+              "WOOL:8",
+              14
+            ],
+            [
+              "MELON:6",
+              7
+            ],
+            [
+              "MELON:12",
+              7
+            ],
+            [
+              "MILK:12",
+              7
+            ]
+          ]
+        },
+        {
+          "phase": 22,
+          "top": [
+            [
+              "STRAWBERRY:36",
+              7
+            ],
+            [
+              "MELON:12",
+              7
+            ],
+            [
+              "MILK:3",
+              7
+            ],
+            [
+              "FERTILIZER:6",
+              7
+            ]
+          ]
+        },
+        {
+          "phase": 23,
+          "top": [
+            [
+              "STRAWBERRY:26",
+              7
+            ],
+            [
+              "MILK:12",
+              7
+            ],
+            [
+              "FERTILIZER:12",
+              7
+            ]
+          ]
+        },
+        {
+          "phase": 24,
+          "top": [
+            [
+              "MILK:9",
+              14
+            ],
+            [
+              "FERTILIZER:2",
+              14
+            ],
+            [
+              "STRAWBERRY:18",
+              7
+            ],
+            [
+              "STRAWBERRY:14",
+              7
+            ],
+            [
+              "FERTILIZER:11",
+              7
+            ]
+          ]
+        },
+        {
+          "phase": 25,
+          "top": [
+            [
+              "WOOL:4",
+              7
+            ],
+            [
+              "STRAWBERRY:8",
+              7
+            ],
+            [
+              "WHEAT:37",
+              7
+            ],
+            [
+              "FERTILIZER:4",
+              7
+            ],
+            [
+              "MILK:11",
+              7
+            ]
+          ]
+        },
+        {
+          "phase": 26,
+          "top": [
+            [
+              "FERTILIZER:1",
+              42
+            ],
+            [
+              "STRAWBERRY:18",
+              7
+            ],
+            [
+              "MILK:3",
+              7
+            ],
+            [
+              "FERTILIZER:12",
+              7
+            ],
+            [
+              "WHEAT:31",
+              7
+            ]
+          ]
+        },
+        {
+          "phase": 27,
+          "top": [
+            [
+              "MILK:9",
+              7
+            ],
+            [
+              "STRAWBERRY:20",
+              7
+            ],
+            [
+              "FERTILIZER:14",
+              7
+            ],
+            [
+              "WHEAT:3",
+              7
+            ],
+            [
+              "WOOL:8",
+              7
+            ]
+          ]
+        },
+        {
+          "phase": 28,
+          "top": [
+            [
+              "MILK:3",
+              14
+            ],
+            [
+              "FERTILIZER:3",
+              14
+            ],
+            [
+              "FERTILIZER:4",
+              8
+            ],
+            [
+              "MILK:9",
+              7
+            ],
+            [
+              "WOOL:4",
+              7
+            ]
+          ]
+        },
+        {
+          "phase": 29,
+          "top": [
+            [
+              "MILK:8",
+              7
+            ],
+            [
+              "WHEAT:70",
+              7
+            ],
+            [
+              "FERTILIZER:8",
+              7
+            ],
+            [
+              "WHEAT:16",
+              7
+            ],
+            [
+              "FERTILIZER:4",
+              7
+            ]
+          ]
+        }
+      ],
+      "terminal_market_shapes": [
+        {
+          "shape": "[[\"SELL\",\"MILK\",6],[\"SELL\",\"FERTILIZER\",7],[\"SELL\",\"WHEAT\",12]]",
+          "support": 7
+        },
+        {
+          "shape": "[[\"SELL\",\"MILK\",9],[\"SELL\",\"WHEAT\",15],[\"SELL\",\"FERTILIZER\",2]]",
+          "support": 7
+        },
+        {
+          "shape": "[[\"SELL\",\"WHEAT\",31],[\"SELL\",\"MILK\",3],[\"SELL\",\"FERTILIZER\",1]]",
+          "support": 6
+        },
+        {
+          "shape": "[[\"SELL\",\"MILK\",3],[\"SELL\",\"WHEAT\",31],[\"SELL\",\"FERTILIZER\",1]]",
+          "support": 1
+        }
+      ]
+    },
+    {
+      "unit_tape": "d7869de065c1399f4746da832a15f0f6c00db2025b0cff1e5507d364f0b82689",
+      "support": 6,
+      "ranks": [
+        91,
+        128,
+        203,
+        212,
+        220,
+        234
+      ],
+      "distinct_market_tapes": 6,
+      "phase_sell_modes": [
+        {
+          "phase": 2,
+          "top": [
+            [
+              "FERTILIZER:5",
+              6
+            ]
+          ]
+        },
+        {
+          "phase": 3,
+          "top": [
+            [
+              "FERTILIZER:5",
+              6
+            ]
+          ]
+        },
+        {
+          "phase": 4,
+          "top": [
+            [
+              "FERTILIZER:5",
+              6
+            ]
+          ]
+        },
+        {
+          "phase": 5,
+          "top": [
+            [
+              "WHEAT:17",
+              6
+            ],
+            [
+              "FERTILIZER:5",
+              6
+            ]
+          ]
+        },
+        {
+          "phase": 6,
+          "top": [
+            [
+              "FERTILIZER:5",
+              6
+            ],
+            [
+              "WOOL:5",
+              6
+            ],
+            [
+              "FERTILIZER:3",
+              6
+            ]
+          ]
+        },
+        {
+          "phase": 7,
+          "top": [
+            [
+              "WOOL:15",
+              6
+            ],
+            [
+              "FERTILIZER:3",
+              6
+            ]
+          ]
+        },
+        {
+          "phase": 8,
+          "top": [
+            [
+              "FERTILIZER:6",
+              6
+            ],
+            [
+              "WHEAT:2",
+              6
+            ]
+          ]
+        },
+        {
+          "phase": 9,
+          "top": [
+            [
+              "FERTILIZER:10",
+              6
+            ],
+            [
+              "MILK:6",
+              6
+            ],
+            [
+              "WHEAT:13",
+              6
+            ],
+            [
+              "WHEAT:2",
+              6
+            ]
+          ]
+        },
+        {
+          "phase": 10,
+          "top": [
+            [
+              "MELON:6",
+              30
+            ],
+            [
+              "WOOL:16",
+              6
+            ],
+            [
+              "WHEAT:2",
+              6
+            ]
+          ]
+        },
+        {
+          "phase": 11,
+          "top": [
+            [
+              "MILK:3",
+              6
+            ]
+          ]
+        },
+        {
+          "phase": 12,
+          "top": [
+            [
+              "FERTILIZER:12",
+              6
+            ],
+            [
+              "WHEAT:8",
+              6
+            ],
+            [
+              "WOOL:12",
+              6
+            ]
+          ]
+        },
+        {
+          "phase": 13,
+          "top": [
+            [
+              "WHEAT:24",
+              6
+            ],
+            [
+              "FERTILIZER:9",
+              6
+            ],
+            [
+              "WOOL:4",
+              6
+            ],
+            [
+              "MILK:3",
+              6
+            ],
+            [
+              "WHEAT:1",
+              6
+            ]
+          ]
+        },
+        {
+          "phase": 14,
+          "top": [
+            [
+              "FERTILIZER:12",
+              6
+            ],
+            [
+              "MILK:6",
+              6
+            ],
+            [
+              "STRAWBERRY:6",
+              6
+            ],
+            [
+              "WHEAT:4",
+              6
+            ],
+            [
+              "WHEAT:1",
+              6
+            ]
+          ]
+        },
+        {
+          "phase": 15,
+          "top": [
+            [
+              "FERTILIZER:8",
+              6
+            ],
+            [
+              "MILK:3",
+              6
+            ],
+            [
+              "WHEAT:4",
+              6
+            ],
+            [
+              "WHEAT:2",
+              6
+            ],
+            [
+              "MILK:12",
+              6
+            ]
+          ]
+        },
+        {
+          "phase": 16,
+          "top": [
+            [
+              "WOOL:8",
+              12
+            ],
+            [
+              "MILK:6",
+              6
+            ],
+            [
+              "FERTILIZER:3",
+              6
+            ],
+            [
+              "MILK:9",
+              6
+            ],
+            [
+              "FERTILIZER:8",
+              6
+            ]
+          ]
+        },
+        {
+          "phase": 17,
+          "top": [
+            [
+              "MILK:15",
+              6
+            ],
+            [
+              "WHEAT:17",
+              6
+            ],
+            [
+              "FERTILIZER:1",
+              6
+            ],
+            [
+              "MELON:6",
+              6
+            ],
+            [
+              "STRAWBERRY:10",
+              6
+            ]
+          ]
+        },
+        {
+          "phase": 18,
+          "top": [
+            [
+              "STRAWBERRY:20",
+              6
+            ],
+            [
+              "MELON:6",
+              6
+            ],
+            [
+              "MILK:9",
+              6
+            ],
+            [
+              "FERTILIZER:10",
+              6
+            ],
+            [
+              "WHEAT:5",
+              6
+            ]
+          ]
+        },
+        {
+          "phase": 19,
+          "top": [
+            [
+              "WOOL:16",
+              6
+            ],
+            [
+              "MILK:9",
+              6
+            ],
+            [
+              "FERTILIZER:8",
+              6
+            ],
+            [
+              "STRAWBERRY:4",
+              6
+            ],
+            [
+              "WHEAT:4",
+              6
+            ]
+          ]
+        },
+        {
+          "phase": 20,
+          "top": [
+            [
+              "MELON:6",
+              42
+            ],
+            [
+              "STRAWBERRY:10",
+              6
+            ],
+            [
+              "STRAWBERRY:20",
+              6
+            ],
+            [
+              "MILK:15",
+              6
+            ],
+            [
+              "WHEAT:8",
+              6
+            ]
+          ]
+        },
+        {
+          "phase": 21,
+          "top": [
+            [
+              "STRAWBERRY:6",
+              12
+            ],
+            [
+              "STRAWBERRY:16",
+              6
+            ],
+            [
+              "MILK:9",
+              6
+            ],
+            [
+              "WHEAT:21",
+              6
+            ],
+            [
+              "MELON:6",
+              6
+            ]
+          ]
+        },
+        {
+          "phase": 22,
+          "top": [
+            [
+              "WOOL:16",
+              6
+            ],
+            [
+              "MILK:15",
+              6
+            ],
+            [
+              "STRAWBERRY:12",
+              6
+            ],
+            [
+              "FERTILIZER:7",
+              6
+            ],
+            [
+              "WHEAT:6",
+              6
+            ]
+          ]
+        },
+        {
+          "phase": 23,
+          "top": [
+            [
+              "STRAWBERRY:8",
+              6
+            ],
+            [
+              "STRAWBERRY:18",
+              6
+            ],
+            [
+              "FERTILIZER:13",
+              6
+            ],
+            [
+              "MILK:9",
+              6
+            ],
+            [
+              "MELON:6",
+              6
+            ]
+          ]
+        },
+        {
+          "phase": 24,
+          "top": [
+            [
+              "FERTILIZER:1",
+              12
+            ],
+            [
+              "STRAWBERRY:25",
+              6
+            ],
+            [
+              "MILK:15",
+              6
+            ],
+            [
+              "WHEAT:15",
+              6
+            ],
+            [
+              "WHEAT:5",
+              6
+            ]
+          ]
+        },
+        {
+          "phase": 25,
+          "top": [
+            [
+              "STRAWBERRY:8",
+              6
+            ],
+            [
+              "WHEAT:36",
+              6
+            ],
+            [
+              "MILK:6",
+              6
+            ],
+            [
+              "FERTILIZER:8",
+              6
+            ]
+          ]
+        },
+        {
+          "phase": 26,
+          "top": [
+            [
+              "FERTILIZER:1",
+              54
+            ],
+            [
+              "STRAWBERRY:14",
+              6
+            ],
+            [
+              "MILK:15",
+              6
+            ],
+            [
+              "FERTILIZER:12",
+              6
+            ],
+            [
+              "WHEAT:21",
+              6
+            ]
+          ]
+        },
+        {
+          "phase": 27,
+          "top": [
+            [
+              "STRAWBERRY:8",
+              6
+            ],
+            [
+              "STRAWBERRY:28",
+              6
+            ],
+            [
+              "MELON:6",
+              6
+            ],
+            [
+              "FERTILIZER:13",
+              6
+            ],
+            [
+              "MILK:9",
+              6
+            ]
+          ]
+        },
+        {
+          "phase": 28,
+          "top": [
+            [
+              "MILK:15",
+              6
+            ],
+            [
+              "MELON:12",
+              6
+            ],
+            [
+              "WHEAT:32",
+              6
+            ],
+            [
+              "FERTILIZER:10",
+              6
+            ],
+            [
+              "WOOL:8",
+              6
+            ]
+          ]
+        },
+        {
+          "phase": 29,
+          "top": [
+            [
+              "MILK:6",
+              12
+            ],
+            [
+              "WHEAT:50",
+              6
+            ],
+            [
+              "FERTILIZER:13",
+              6
+            ],
+            [
+              "MILK:9",
+              6
+            ],
+            [
+              "FERTILIZER:1",
+              6
+            ]
+          ]
+        }
+      ],
+      "terminal_market_shapes": [
+        {
+          "shape": "[]",
+          "support": 6
+        },
+        {
+          "shape": "[[\"SELL\",\"WHEAT\",43],[\"SELL\",\"MILK\",6],[\"SELL\",\"FERTILIZER\",2]]",
+          "support": 6
+        },
+        {
+          "shape": "[[\"SELL\",\"MILK\",6],[\"SELL\",\"FERTILIZER\",1],[\"SELL\",\"WHEAT\",14]]",
+          "support": 3
+        },
+        {
+          "shape": "[[\"SELL\",\"MILK\",6],[\"SELL\",\"WHEAT\",14],[\"SELL\",\"FERTILIZER\",1]]",
+          "support": 2
+        },
+        {
+          "shape": "[[\"SELL\",\"WHEAT\",14],[\"SELL\",\"MILK\",6],[\"SELL\",\"FERTILIZER\",1]]",
+          "support": 1
+        }
+      ]
+    },
+    {
+      "unit_tape": "3e92f62c591cb7b190fe132ae2f43cedf6d7af1c39eda96543a0caf959667c03",
+      "support": 3,
+      "ranks": [
+        100,
+        180,
+        258
+      ],
+      "distinct_market_tapes": 2,
+      "phase_sell_modes": [
+        {
+          "phase": 2,
+          "top": [
+            [
+              "FERTILIZER:5",
+              3
+            ]
+          ]
+        },
+        {
+          "phase": 3,
+          "top": [
+            [
+              "FERTILIZER:5",
+              3
+            ]
+          ]
+        },
+        {
+          "phase": 4,
+          "top": [
+            [
+              "FERTILIZER:5",
+              3
+            ]
+          ]
+        },
+        {
+          "phase": 5,
+          "top": [
+            [
+              "WHEAT:17",
+              3
+            ],
+            [
+              "FERTILIZER:5",
+              3
+            ]
+          ]
+        },
+        {
+          "phase": 6,
+          "top": [
+            [
+              "FERTILIZER:5",
+              3
+            ],
+            [
+              "WOOL:5",
+              3
+            ],
+            [
+              "FERTILIZER:3",
+              3
+            ]
+          ]
+        },
+        {
+          "phase": 7,
+          "top": [
+            [
+              "WOOL:15",
+              3
+            ],
+            [
+              "FERTILIZER:3",
+              3
+            ]
+          ]
+        },
+        {
+          "phase": 8,
+          "top": [
+            [
+              "FERTILIZER:7",
+              3
+            ],
+            [
+              "WHEAT:2",
+              3
+            ]
+          ]
+        },
+        {
+          "phase": 9,
+          "top": [
+            [
+              "MILK:6",
+              3
+            ],
+            [
+              "FERTILIZER:10",
+              3
+            ],
+            [
+              "WHEAT:13",
+              3
+            ]
+          ]
+        },
+        {
+          "phase": 10,
+          "top": [
+            [
+              "MELON:6",
+              15
+            ],
+            [
+              "WOOL:16",
+              3
+            ],
+            [
+              "WHEAT:2",
+              3
+            ]
+          ]
+        },
+        {
+          "phase": 11,
+          "top": [
+            [
+              "MILK:3",
+              3
+            ],
+            [
+              "WHEAT:1",
+              3
+            ]
+          ]
+        },
+        {
+          "phase": 12,
+          "top": [
+            [
+              "FERTILIZER:12",
+              3
+            ],
+            [
+              "WHEAT:10",
+              3
+            ],
+            [
+              "WHEAT:3",
+              3
+            ],
+            [
+              "WOOL:12",
+              3
+            ]
+          ]
+        },
+        {
+          "phase": 13,
+          "top": [
+            [
+              "WOOL:4",
+              3
+            ],
+            [
+              "WHEAT:25",
+              3
+            ],
+            [
+              "FERTILIZER:9",
+              3
+            ],
+            [
+              "MILK:3",
+              3
+            ]
+          ]
+        },
+        {
+          "phase": 14,
+          "top": [
+            [
+              "FERTILIZER:12",
+              3
+            ],
+            [
+              "MILK:6",
+              3
+            ],
+            [
+              "STRAWBERRY:6",
+              3
+            ],
+            [
+              "WHEAT:4",
+              3
+            ],
+            [
+              "WHEAT:1",
+              3
+            ]
+          ]
+        },
+        {
+          "phase": 15,
+          "top": [
+            [
+              "WHEAT:1",
+              3
+            ],
+            [
+              "MILK:9",
+              3
+            ],
+            [
+              "FERTILIZER:8",
+              3
+            ],
+            [
+              "MILK:12",
+              3
+            ],
+            [
+              "FERTILIZER:1",
+              3
+            ]
+          ]
+        },
+        {
+          "phase": 16,
+          "top": [
+            [
+              "STRAWBERRY:14",
+              3
+            ],
+            [
+              "MILK:6",
+              3
+            ],
+            [
+              "FERTILIZER:6",
+              3
+            ],
+            [
+              "WHEAT:10",
+              3
+            ],
+            [
+              "WOOL:8",
+              3
+            ]
+          ]
+        },
+        {
+          "phase": 17,
+          "top": [
+            [
+              "MILK:18",
+              3
+            ],
+            [
+              "WHEAT:25",
+              3
+            ],
+            [
+              "STRAWBERRY:2",
+              3
+            ]
+          ]
+        },
+        {
+          "phase": 18,
+          "top": [
+            [
+              "WHEAT:1",
+              12
+            ],
+            [
+              "STRAWBERRY:28",
+              3
+            ],
+            [
+              "MILK:9",
+              3
+            ],
+            [
+              "FERTILIZER:9",
+              3
+            ],
+            [
+              "WHEAT:4",
+              3
+            ]
+          ]
+        },
+        {
+          "phase": 19,
+          "top": [
+            [
+              "WHEAT:1",
+              6
+            ],
+            [
+              "MILK:9",
+              3
+            ],
+            [
+              "STRAWBERRY:12",
+              3
+            ],
+            [
+              "MILK:3",
+              3
+            ],
+            [
+              "FERTILIZER:8",
+              3
+            ]
+          ]
+        },
+        {
+          "phase": 20,
+          "top": [
+            [
+              "MELON:6",
+              24
+            ],
+            [
+              "STRAWBERRY:34",
+              3
+            ],
+            [
+              "MILK:3",
+              3
+            ],
+            [
+              "WHEAT:13",
+              3
+            ]
+          ]
+        },
+        {
+          "phase": 21,
+          "top": [
+            [
+              "MELON:12",
+              6
+            ],
+            [
+              "MILK:3",
+              6
+            ],
+            [
+              "MILK:9",
+              3
+            ],
+            [
+              "STRAWBERRY:16",
+              3
+            ],
+            [
+              "WHEAT:20",
+              3
+            ]
+          ]
+        },
+        {
+          "phase": 22,
+          "top": [
+            [
+              "STRAWBERRY:36",
+              3
+            ],
+            [
+              "WOOL:8",
+              3
+            ],
+            [
+              "FERTILIZER:3",
+              3
+            ],
+            [
+              "STRAWBERRY:12",
+              3
+            ]
+          ]
+        },
+        {
+          "phase": 23,
+          "top": [
+            [
+              "MILK:9",
+              3
+            ],
+            [
+              "FERTILIZER:3",
+              3
+            ],
+            [
+              "STRAWBERRY:25",
+              3
+            ],
+            [
+              "FERTILIZER:12",
+              3
+            ],
+            [
+              "MILK:3",
+              3
+            ]
+          ]
+        },
+        {
+          "phase": 24,
+          "top": [
+            [
+              "FERTILIZER:2",
+              6
+            ],
+            [
+              "FERTILIZER:1",
+              6
+            ],
+            [
+              "STRAWBERRY:24",
+              3
+            ],
+            [
+              "WHEAT:13",
+              3
+            ],
+            [
+              "FERTILIZER:4",
+              3
+            ]
+          ]
+        },
+        {
+          "phase": 25,
+          "top": [
+            [
+              "STRAWBERRY:14",
+              3
+            ],
+            [
+              "WOOL:4",
+              3
+            ],
+            [
+              "MILK:6",
+              3
+            ],
+            [
+              "WHEAT:34",
+              3
+            ],
+            [
+              "FERTILIZER:9",
+              3
+            ]
+          ]
+        },
+        {
+          "phase": 26,
+          "top": [
+            [
+              "FERTILIZER:1",
+              27
+            ],
+            [
+              "FERTILIZER:2",
+              9
+            ],
+            [
+              "STRAWBERRY:12",
+              3
+            ],
+            [
+              "FERTILIZER:13",
+              3
+            ],
+            [
+              "MILK:5",
+              3
+            ]
+          ]
+        },
+        {
+          "phase": 27,
+          "top": [
+            [
+              "MILK:9",
+              6
+            ],
+            [
+              "STRAWBERRY:32",
+              3
+            ],
+            [
+              "FERTILIZER:15",
+              3
+            ],
+            [
+              "WHEAT:4",
+              3
+            ],
+            [
+              "FERTILIZER:2",
+              3
+            ]
+          ]
+        },
+        {
+          "phase": 28,
+          "top": [
+            [
+              "WOOL:14",
+              3
+            ],
+            [
+              "WHEAT:40",
+              3
+            ],
+            [
+              "STRAWBERRY:4",
+              3
+            ],
+            [
+              "FERTILIZER:10",
+              3
+            ],
+            [
+              "FERTILIZER:2",
+              3
+            ]
+          ]
+        },
+        {
+          "phase": 29,
+          "top": [
+            [
+              "MILK:3",
+              6
+            ],
+            [
+              "WHEAT:4",
+              6
+            ],
+            [
+              "MILK:6",
+              6
+            ],
+            [
+              "WHEAT:63",
+              3
+            ],
+            [
+              "FERTILIZER:8",
+              3
+            ]
+          ]
+        }
+      ],
+      "terminal_market_shapes": [
+        {
+          "shape": "[[\"SELL\",\"WHEAT\",35],[\"SELL\",\"MILK\",6],[\"SELL\",\"FERTILIZER\",4]]",
+          "support": 3
+        },
+        {
+          "shape": "[[\"SELL\",\"MILK\",9],[\"SELL\",\"WHEAT\",10]]",
+          "support": 3
+        },
+        {
+          "shape": "[[\"SELL\",\"MILK\",6],[\"SELL\",\"WHEAT\",20],[\"SELL\",\"FERTILIZER\",6]]",
+          "support": 2
+        },
+        {
+          "shape": "[[\"SELL\",\"MILK\",6],[\"SELL\",\"FERTILIZER\",6],[\"SELL\",\"WHEAT\",20]]",
+          "support": 1
+        }
+      ]
+    },
+    {
+      "unit_tape": "b30f7dc3feb3b564f9132ab469210c9171787e4bb184bef1c3ad58b5858d8343",
+      "support": 3,
+      "ranks": [
+        14,
+        54,
+        125
+      ],
+      "distinct_market_tapes": 3,
+      "phase_sell_modes": [
+        {
+          "phase": 2,
+          "top": [
+            [
+              "FERTILIZER:5",
+              3
+            ]
+          ]
+        },
+        {
+          "phase": 3,
+          "top": [
+            [
+              "FERTILIZER:5",
+              3
+            ]
+          ]
+        },
+        {
+          "phase": 4,
+          "top": [
+            [
+              "FERTILIZER:5",
+              3
+            ]
+          ]
+        },
+        {
+          "phase": 5,
+          "top": [
+            [
+              "WHEAT:17",
+              3
+            ],
+            [
+              "FERTILIZER:5",
+              3
+            ]
+          ]
+        },
+        {
+          "phase": 6,
+          "top": [
+            [
+              "FERTILIZER:5",
+              3
+            ],
+            [
+              "WOOL:5",
+              3
+            ],
+            [
+              "FERTILIZER:3",
+              3
+            ]
+          ]
+        },
+        {
+          "phase": 7,
+          "top": [
+            [
+              "WOOL:15",
+              3
+            ],
+            [
+              "FERTILIZER:3",
+              3
+            ]
+          ]
+        },
+        {
+          "phase": 8,
+          "top": [
+            [
+              "FERTILIZER:7",
+              3
+            ],
+            [
+              "WHEAT:2",
+              3
+            ]
+          ]
+        },
+        {
+          "phase": 9,
+          "top": [
+            [
+              "MILK:6",
+              3
+            ],
+            [
+              "FERTILIZER:10",
+              3
+            ],
+            [
+              "WHEAT:13",
+              3
+            ]
+          ]
+        },
+        {
+          "phase": 10,
+          "top": [
+            [
+              "MELON:6",
+              15
+            ],
+            [
+              "WOOL:16",
+              3
+            ],
+            [
+              "WHEAT:2",
+              3
+            ]
+          ]
+        },
+        {
+          "phase": 11,
+          "top": [
+            [
+              "MILK:3",
+              3
+            ],
+            [
+              "WHEAT:3",
+              3
+            ]
+          ]
+        },
+        {
+          "phase": 12,
+          "top": [
+            [
+              "FERTILIZER:13",
+              3
+            ],
+            [
+              "WHEAT:10",
+              3
+            ],
+            [
+              "WOOL:12",
+              3
+            ],
+            [
+              "WHEAT:1",
+              3
+            ]
+          ]
+        },
+        {
+          "phase": 13,
+          "top": [
+            [
+              "WOOL:4",
+              3
+            ],
+            [
+              "FERTILIZER:10",
+              3
+            ],
+            [
+              "MILK:3",
+              3
+            ],
+            [
+              "WHEAT:25",
+              3
+            ],
+            [
+              "WHEAT:4",
+              3
+            ]
+          ]
+        },
+        {
+          "phase": 14,
+          "top": [
+            [
+              "WHEAT:4",
+              6
+            ],
+            [
+              "FERTILIZER:13",
+              3
+            ],
+            [
+              "STRAWBERRY:6",
+              3
+            ],
+            [
+              "MILK:6",
+              3
+            ],
+            [
+              "WHEAT:1",
+              3
+            ]
+          ]
+        },
+        {
+          "phase": 15,
+          "top": [
+            [
+              "WHEAT:1",
+              3
+            ],
+            [
+              "MILK:9",
+              3
+            ],
+            [
+              "FERTILIZER:9",
+              3
+            ],
+            [
+              "WHEAT:3",
+              3
+            ],
+            [
+              "MILK:12",
+              3
+            ]
+          ]
+        },
+        {
+          "phase": 16,
+          "top": [
+            [
+              "MILK:3",
+              3
+            ],
+            [
+              "FERTILIZER:1",
+              3
+            ],
+            [
+              "WOOL:8",
+              3
+            ],
+            [
+              "STRAWBERRY:14",
+              3
+            ],
+            [
+              "MILK:6",
+              3
+            ]
+          ]
+        },
+        {
+          "phase": 17,
+          "top": [
+            [
+              "MILK:18",
+              3
+            ],
+            [
+              "WHEAT:25",
+              3
+            ],
+            [
+              "STRAWBERRY:2",
+              3
+            ],
+            [
+              "WHEAT:2",
+              3
+            ],
+            [
+              "MILK:6",
+              3
+            ]
+          ]
+        },
+        {
+          "phase": 18,
+          "top": [
+            [
+              "MILK:3",
+              6
+            ],
+            [
+              "STRAWBERRY:4",
+              3
+            ],
+            [
+              "FERTILIZER:1",
+              3
+            ],
+            [
+              "STRAWBERRY:28",
+              3
+            ],
+            [
+              "FERTILIZER:9",
+              3
+            ]
+          ]
+        },
+        {
+          "phase": 19,
+          "top": [
+            [
+              "MILK:9",
+              6
+            ],
+            [
+              "WOOL:16",
+              3
+            ],
+            [
+              "STRAWBERRY:8",
+              3
+            ],
+            [
+              "FERTILIZER:9",
+              3
+            ]
+          ]
+        },
+        {
+          "phase": 20,
+          "top": [
+            [
+              "MELON:6",
+              18
+            ],
+            [
+              "MILK:3",
+              6
+            ],
+            [
+              "STRAWBERRY:34",
+              3
+            ],
+            [
+              "WHEAT:9",
+              3
+            ],
+            [
+              "MELON:12",
+              3
+            ]
+          ]
+        },
+        {
+          "phase": 21,
+          "top": [
+            [
+              "WOOL:8",
+              6
+            ],
+            [
+              "FERTILIZER:1",
+              6
+            ],
+            [
+              "MELON:18",
+              3
+            ],
+            [
+              "MILK:9",
+              3
+            ],
+            [
+              "STRAWBERRY:12",
+              3
+            ]
+          ]
+        },
+        {
+          "phase": 22,
+          "top": [
+            [
+              "STRAWBERRY:42",
+              3
+            ],
+            [
+              "FERTILIZER:5",
+              3
+            ],
+            [
+              "MILK:3",
+              3
+            ],
+            [
+              "MELON:6",
+              3
+            ],
+            [
+              "WHEAT:3",
+              3
+            ]
+          ]
+        },
+        {
+          "phase": 23,
+          "top": [
+            [
+              "STRAWBERRY:28",
+              3
+            ],
+            [
+              "FERTILIZER:11",
+              3
+            ],
+            [
+              "MILK:6",
+              3
+            ],
+            [
+              "WHEAT:1",
+              3
+            ],
+            [
+              "MILK:11",
+              3
+            ]
+          ]
+        },
+        {
+          "phase": 24,
+          "top": [
+            [
+              "FERTILIZER:1",
+              15
+            ],
+            [
+              "FERTILIZER:2",
+              9
+            ],
+            [
+              "WHEAT:2",
+              9
+            ],
+            [
+              "MILK:3",
+              6
+            ],
+            [
+              "WOOL:5",
+              3
+            ]
+          ]
+        },
+        {
+          "phase": 25,
+          "top": [
+            [
+              "WHEAT:14",
+              3
+            ],
+            [
+              "STRAWBERRY:28",
+              3
+            ],
+            [
+              "WOOL:4",
+              3
+            ],
+            [
+              "FERTILIZER:5",
+              3
+            ],
+            [
+              "WHEAT:26",
+              3
+            ]
+          ]
+        },
+        {
+          "phase": 26,
+          "top": [
+            [
+              "FERTILIZER:1",
+              24
+            ],
+            [
+              "FERTILIZER:2",
+              9
+            ],
+            [
+              "MILK:6",
+              3
+            ],
+            [
+              "FERTILIZER:3",
+              3
+            ],
+            [
+              "FERTILIZER:11",
+              3
+            ]
+          ]
+        },
+        {
+          "phase": 27,
+          "top": [
+            [
+              "STRAWBERRY:28",
+              3
+            ],
+            [
+              "MILK:12",
+              3
+            ],
+            [
+              "FERTILIZER:14",
+              3
+            ],
+            [
+              "WHEAT:2",
+              3
+            ],
+            [
+              "WOOL:8",
+              3
+            ]
+          ]
+        },
+        {
+          "phase": 28,
+          "top": [
+            [
+              "WHEAT:50",
+              3
+            ],
+            [
+              "WOOL:4",
+              3
+            ],
+            [
+              "FERTILIZER:8",
+              3
+            ],
+            [
+              "STRAWBERRY:4",
+              3
+            ],
+            [
+              "FERTILIZER:2",
+              3
+            ]
+          ]
+        },
+        {
+          "phase": 29,
+          "top": [
+            [
+              "MILK:2",
+              6
+            ],
+            [
+              "MILK:12",
+              3
+            ],
+            [
+              "WHEAT:65",
+              3
+            ],
+            [
+              "FERTILIZER:13",
+              3
+            ],
+            [
+              "FERTILIZER:1",
+              3
+            ]
+          ]
+        }
+      ],
+      "terminal_market_shapes": [
+        {
+          "shape": "[[\"SELL\",\"WOOL\",9],[\"SELL\",\"WHEAT\",11]]",
+          "support": 2
+        },
+        {
+          "shape": "[[\"SELL\",\"WHEAT\",12],[\"SELL\",\"FERTILIZER\",2]]",
+          "support": 2
+        },
+        {
+          "shape": "[[\"SELL\",\"WHEAT\",17],[\"SELL\",\"MILK\",2],[\"SELL\",\"FERTILIZER\",3]]",
+          "support": 1
+        },
+        {
+          "shape": "[[\"SELL\",\"FERTILIZER\",2],[\"SELL\",\"WHEAT\",12]]",
+          "support": 1
+        },
+        {
+          "shape": "[[\"SELL\",\"MILK\",2],[\"SELL\",\"FERTILIZER\",3],[\"SELL\",\"WHEAT\",17]]",
+          "support": 1
+        },
+        {
+          "shape": "[[\"SELL\",\"WHEAT\",11],[\"SELL\",\"WOOL\",9]]",
+          "support": 1
+        },
+        {
+          "shape": "[[\"SELL\",\"FERTILIZER\",3],[\"SELL\",\"MILK\",2],[\"SELL\",\"WHEAT\",17]]",
+          "support": 1
+        }
+      ]
+    },
+    {
+      "unit_tape": "3bc7fe7962ccb45ceeee04ab848a1085e94a633a4b4622ab8ab1fcbc2c471a37",
+      "support": 2,
+      "ranks": [
+        40,
+        210
+      ],
+      "distinct_market_tapes": 2,
+      "phase_sell_modes": [
+        {
+          "phase": 2,
+          "top": [
+            [
+              "FERTILIZER:5",
+              2
+            ]
+          ]
+        },
+        {
+          "phase": 3,
+          "top": [
+            [
+              "FERTILIZER:5",
+              2
+            ]
+          ]
+        },
+        {
+          "phase": 4,
+          "top": [
+            [
+              "FERTILIZER:5",
+              2
+            ]
+          ]
+        },
+        {
+          "phase": 5,
+          "top": [
+            [
+              "WHEAT:17",
+              2
+            ],
+            [
+              "FERTILIZER:5",
+              2
+            ]
+          ]
+        },
+        {
+          "phase": 6,
+          "top": [
+            [
+              "FERTILIZER:5",
+              2
+            ],
+            [
+              "WOOL:5",
+              2
+            ],
+            [
+              "FERTILIZER:3",
+              2
+            ]
+          ]
+        },
+        {
+          "phase": 7,
+          "top": [
+            [
+              "WOOL:15",
+              2
+            ],
+            [
+              "FERTILIZER:3",
+              2
+            ]
+          ]
+        },
+        {
+          "phase": 8,
+          "top": [
+            [
+              "FERTILIZER:7",
+              2
+            ],
+            [
+              "WHEAT:2",
+              2
+            ]
+          ]
+        },
+        {
+          "phase": 9,
+          "top": [
+            [
+              "MILK:6",
+              2
+            ],
+            [
+              "FERTILIZER:10",
+              2
+            ],
+            [
+              "WHEAT:13",
+              2
+            ],
+            [
+              "WHEAT:3",
+              2
+            ]
+          ]
+        },
+        {
+          "phase": 10,
+          "top": [
+            [
+              "MELON:6",
+              10
+            ],
+            [
+              "WOOL:16",
+              2
+            ],
+            [
+              "WHEAT:2",
+              2
+            ]
+          ]
+        },
+        {
+          "phase": 11,
+          "top": [
+            [
+              "MILK:3",
+              2
+            ]
+          ]
+        },
+        {
+          "phase": 12,
+          "top": [
+            [
+              "FERTILIZER:13",
+              2
+            ],
+            [
+              "WHEAT:10",
+              2
+            ],
+            [
+              "WHEAT:3",
+              2
+            ],
+            [
+              "WHEAT:2",
+              2
+            ],
+            [
+              "WOOL:12",
+              2
+            ]
+          ]
+        },
+        {
+          "phase": 13,
+          "top": [
+            [
+              "WHEAT:23",
+              2
+            ],
+            [
+              "FERTILIZER:10",
+              2
+            ],
+            [
+              "MILK:3",
+              2
+            ],
+            [
+              "WOOL:4",
+              2
+            ],
+            [
+              "WHEAT:3",
+              2
+            ]
+          ]
+        },
+        {
+          "phase": 14,
+          "top": [
+            [
+              "FERTILIZER:13",
+              2
+            ],
+            [
+              "MILK:6",
+              2
+            ],
+            [
+              "STRAWBERRY:6",
+              2
+            ],
+            [
+              "WHEAT:3",
+              2
+            ],
+            [
+              "WHEAT:1",
+              2
+            ]
+          ]
+        },
+        {
+          "phase": 15,
+          "top": [
+            [
+              "MILK:9",
+              2
+            ],
+            [
+              "FERTILIZER:9",
+              2
+            ],
+            [
+              "MILK:12",
+              2
+            ],
+            [
+              "FERTILIZER:1",
+              2
+            ],
+            [
+              "WOOL:8",
+              2
+            ]
+          ]
+        },
+        {
+          "phase": 16,
+          "top": [
+            [
+              "STRAWBERRY:14",
+              2
+            ],
+            [
+              "MILK:6",
+              2
+            ],
+            [
+              "FERTILIZER:8",
+              2
+            ],
+            [
+              "WHEAT:8",
+              2
+            ],
+            [
+              "WOOL:8",
+              2
+            ]
+          ]
+        },
+        {
+          "phase": 17,
+          "top": [
+            [
+              "MELON:6",
+              4
+            ],
+            [
+              "MILK:18",
+              2
+            ],
+            [
+              "WHEAT:24",
+              2
+            ],
+            [
+              "STRAWBERRY:2",
+              2
+            ],
+            [
+              "MILK:6",
+              2
+            ]
+          ]
+        },
+        {
+          "phase": 18,
+          "top": [
+            [
+              "WHEAT:1",
+              4
+            ],
+            [
+              "STRAWBERRY:12",
+              2
+            ],
+            [
+              "MELON:6",
+              2
+            ],
+            [
+              "STRAWBERRY:16",
+              2
+            ],
+            [
+              "FERTILIZER:11",
+              2
+            ]
+          ]
+        },
+        {
+          "phase": 19,
+          "top": [
+            [
+              "WHEAT:1",
+              2
+            ],
+            [
+              "WOOL:16",
+              2
+            ],
+            [
+              "MILK:9",
+              2
+            ],
+            [
+              "STRAWBERRY:6",
+              2
+            ],
+            [
+              "FERTILIZER:8",
+              2
+            ]
+          ]
+        },
+        {
+          "phase": 20,
+          "top": [
+            [
+              "MELON:6",
+              8
+            ],
+            [
+              "STRAWBERRY:14",
+              4
+            ],
+            [
+              "MELON:12",
+              4
+            ],
+            [
+              "MILK:6",
+              2
+            ],
+            [
+              "WHEAT:10",
+              2
+            ]
+          ]
+        },
+        {
+          "phase": 21,
+          "top": [
+            [
+              "WOOL:8",
+              4
+            ],
+            [
+              "FERTILIZER:1",
+              4
+            ],
+            [
+              "MELON:6",
+              2
+            ],
+            [
+              "STRAWBERRY:14",
+              2
+            ],
+            [
+              "MILK:3",
+              2
+            ]
+          ]
+        },
+        {
+          "phase": 22,
+          "top": [
+            [
+              "WHEAT:1",
+              6
+            ],
+            [
+              "MILK:3",
+              4
+            ],
+            [
+              "FERTILIZER:2",
+              2
+            ],
+            [
+              "STRAWBERRY:36",
+              2
+            ],
+            [
+              "FERTILIZER:4",
+              2
+            ]
+          ]
+        },
+        {
+          "phase": 23,
+          "top": [
+            [
+              "WHEAT:1",
+              6
+            ],
+            [
+              "STRAWBERRY:12",
+              2
+            ],
+            [
+              "MILK:10",
+              2
+            ],
+            [
+              "FERTILIZER:12",
+              2
+            ],
+            [
+              "MILK:9",
+              2
+            ]
+          ]
+        },
+        {
+          "phase": 24,
+          "top": [
+            [
+              "MILK:3",
+              6
+            ],
+            [
+              "FERTILIZER:2",
+              6
+            ],
+            [
+              "STRAWBERRY:31",
+              2
+            ],
+            [
+              "WHEAT:16",
+              2
+            ],
+            [
+              "FERTILIZER:3",
+              2
+            ]
+          ]
+        },
+        {
+          "phase": 25,
+          "top": [
+            [
+              "MILK:3",
+              4
+            ],
+            [
+              "WHEAT:1",
+              2
+            ],
+            [
+              "WHEAT:41",
+              2
+            ],
+            [
+              "FERTILIZER:10",
+              2
+            ],
+            [
+              "WOOL:4",
+              2
+            ]
+          ]
+        },
+        {
+          "phase": 26,
+          "top": [
+            [
+              "FERTILIZER:1",
+              8
+            ],
+            [
+              "FERTILIZER:2",
+              4
+            ],
+            [
+              "MILK:3",
+              2
+            ],
+            [
+              "STRAWBERRY:20",
+              2
+            ],
+            [
+              "FERTILIZER:11",
+              2
+            ]
+          ]
+        },
+        {
+          "phase": 27,
+          "top": [
+            [
+              "MILK:3",
+              4
+            ],
+            [
+              "FERTILIZER:100",
+              3
+            ],
+            [
+              "STRAWBERRY:24",
+              2
+            ],
+            [
+              "MILK:14",
+              2
+            ],
+            [
+              "WHEAT:1",
+              2
+            ]
+          ]
+        },
+        {
+          "phase": 28,
+          "top": [
+            [
+              "FERTILIZER:100",
+              6
+            ],
+            [
+              "MILK:3",
+              4
+            ],
+            [
+              "MILK:6",
+              2
+            ],
+            [
+              "WOOL:5",
+              2
+            ],
+            [
+              "STRAWBERRY:12",
+              2
+            ]
+          ]
+        },
+        {
+          "phase": 29,
+          "top": [
+            [
+              "FERTILIZER:100",
+              5
+            ],
+            [
+              "MILK:3",
+              4
+            ],
+            [
+              "WHEAT:72",
+              2
+            ],
+            [
+              "WHEAT:4",
+              2
+            ],
+            [
+              "MILK:6",
+              2
+            ]
+          ]
+        }
+      ],
+      "terminal_market_shapes": [
+        {
+          "shape": "[[\"SELL\",\"MILK\",6],[\"SELL\",\"WHEAT\",20],[\"SELL\",\"FERTILIZER\",100]]",
+          "support": 1
+        },
+        {
+          "shape": "[[\"SELL\",\"WHEAT\",18],[\"SELL\",\"FERTILIZER\",100]]",
+          "support": 1
+        },
+        {
+          "shape": "[[\"SELL\",\"MILK\",3],[\"SELL\",\"WHEAT\",15],[\"SELL\",\"FERTILIZER\",100],[\"SELL\",\"WOOL\",3]]",
+          "support": 1
+        },
+        {
+          "shape": "[[\"SELL\",\"WHEAT\",20],[\"SELL\",\"MILK\",6],[\"SELL\",\"FERTILIZER\",1]]",
+          "support": 1
+        },
+        {
+          "shape": "[[\"SELL\",\"WHEAT\",18],[\"SELL\",\"FERTILIZER\",3]]",
+          "support": 1
+        },
+        {
+          "shape": "[[\"SELL\",\"WHEAT\",15],[\"SELL\",\"FERTILIZER\",6],[\"SELL\",\"MILK\",3],[\"SELL\",\"WOOL\",3]]",
+          "support": 1
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,426 @@
+{
+  "official_engine_commit": "a4dce5ae6e2ffe3c1afea8ec4b24b562df74cc07",
+  "engine_files_sha256": {
+    "kaggriculture.py": "C11BAF358548D8DD6F3CBA031899BC1614C0FCB31A27366F12753563154307E6",
+    "kaggriculture.json": "9518A5FA925039B5443BAF4A162454ABAE40EC6E7CAF462D0CEE2654419A8063"
+  },
+  "all_done": true,
+  "malformed_actions": 0,
+  "timeout_calls": 0,
+  "timeouts": 0,
+  "escapes": 0,
+  "fresh_crop_deaths": 0,
+  "shed_overflow_states": 0,
+  "seed_overcommit": 0,
+  "market_orders_over_10": 0,
+  "deterministic": true,
+  "performance_all": {
+    "calls": 9347,
+    "p50_ms": 0.666600011754781,
+    "p95_ms": 1.0146000247914344,
+    "p99_ms": 1.9846259732730573,
+    "max_ms": 33.32549997139722
+  },
+  "performance_720": {
+    "calls": 719,
+    "p50_ms": 0.7774000405333936,
+    "p95_ms": 1.047669985564426,
+    "p99_ms": 2.007392023224387,
+    "max_ms": 10.434299998451024
+  },
+  "games": [
+    {
+      "opponent": "self",
+      "seed": 101,
+      "seat": 0,
+      "status": [
+        "DONE",
+        "DONE"
+      ],
+      "rewards": [
+        50083.0,
+        49722.0
+      ],
+      "our_reward": 50083.0,
+      "opponent_reward": 49722.0,
+      "win": true,
+      "malformed": [],
+      "seed_overcommit": [],
+      "market_overflow": [],
+      "timeout_calls": [],
+      "diagnostics": {
+        "escapes": 0,
+        "fresh_crop_deaths": 0,
+        "overflow_states": 0
+      },
+      "action_digest": "976c7e9cf9443fb4e8127e7cc4b4edd9cee21e375d0565d55c886c9066386b5a"
+    },
+    {
+      "opponent": "starter",
+      "seed": 11,
+      "seat": 0,
+      "status": [
+        "DONE",
+        "DONE"
+      ],
+      "rewards": [
+        83100.0,
+        3512.0
+      ],
+      "our_reward": 83100.0,
+      "opponent_reward": 3512.0,
+      "win": true,
+      "malformed": [],
+      "seed_overcommit": [],
+      "market_overflow": [],
+      "timeout_calls": [],
+      "diagnostics": {
+        "escapes": 0,
+        "fresh_crop_deaths": 0,
+        "overflow_states": 0
+      },
+      "action_digest": null
+    },
+    {
+      "opponent": "starter",
+      "seed": 11,
+      "seat": 1,
+      "status": [
+        "DONE",
+        "DONE"
+      ],
+      "rewards": [
+        3512.0,
+        83100.0
+      ],
+      "our_reward": 83100.0,
+      "opponent_reward": 3512.0,
+      "win": true,
+      "malformed": [],
+      "seed_overcommit": [],
+      "market_overflow": [],
+      "timeout_calls": [],
+      "diagnostics": {
+        "escapes": 0,
+        "fresh_crop_deaths": 0,
+        "overflow_states": 0
+      },
+      "action_digest": null
+    },
+    {
+      "opponent": "starter",
+      "seed": 23,
+      "seat": 0,
+      "status": [
+        "DONE",
+        "DONE"
+      ],
+      "rewards": [
+        92428.0,
+        3509.0
+      ],
+      "our_reward": 92428.0,
+      "opponent_reward": 3509.0,
+      "win": true,
+      "malformed": [],
+      "seed_overcommit": [],
+      "market_overflow": [],
+      "timeout_calls": [],
+      "diagnostics": {
+        "escapes": 0,
+        "fresh_crop_deaths": 0,
+        "overflow_states": 0
+      },
+      "action_digest": null
+    },
+    {
+      "opponent": "starter",
+      "seed": 23,
+      "seat": 1,
+      "status": [
+        "DONE",
+        "DONE"
+      ],
+      "rewards": [
+        3503.0,
+        82233.0
+      ],
+      "our_reward": 82233.0,
+      "opponent_reward": 3503.0,
+      "win": true,
+      "malformed": [],
+      "seed_overcommit": [],
+      "market_overflow": [],
+      "timeout_calls": [],
+      "diagnostics": {
+        "escapes": 0,
+        "fresh_crop_deaths": 0,
+        "overflow_states": 0
+      },
+      "action_digest": null
+    },
+    {
+      "opponent": "starter",
+      "seed": 37,
+      "seat": 0,
+      "status": [
+        "DONE",
+        "DONE"
+      ],
+      "rewards": [
+        101922.0,
+        3487.0
+      ],
+      "our_reward": 101922.0,
+      "opponent_reward": 3487.0,
+      "win": true,
+      "malformed": [],
+      "seed_overcommit": [],
+      "market_overflow": [],
+      "timeout_calls": [],
+      "diagnostics": {
+        "escapes": 0,
+        "fresh_crop_deaths": 0,
+        "overflow_states": 0
+      },
+      "action_digest": null
+    },
+    {
+      "opponent": "starter",
+      "seed": 37,
+      "seat": 1,
+      "status": [
+        "DONE",
+        "DONE"
+      ],
+      "rewards": [
+        3487.0,
+        96378.0
+      ],
+      "our_reward": 96378.0,
+      "opponent_reward": 3487.0,
+      "win": true,
+      "malformed": [],
+      "seed_overcommit": [],
+      "market_overflow": [],
+      "timeout_calls": [],
+      "diagnostics": {
+        "escapes": 0,
+        "fresh_crop_deaths": 0,
+        "overflow_states": 0
+      },
+      "action_digest": null
+    },
+    {
+      "opponent": "random",
+      "seed": 11,
+      "seat": 0,
+      "status": [
+        "DONE",
+        "DONE"
+      ],
+      "rewards": [
+        96816.0,
+        0.0
+      ],
+      "our_reward": 96816.0,
+      "opponent_reward": 0.0,
+      "win": true,
+      "malformed": [],
+      "seed_overcommit": [],
+      "market_overflow": [],
+      "timeout_calls": [],
+      "diagnostics": {
+        "escapes": 0,
+        "fresh_crop_deaths": 0,
+        "overflow_states": 0
+      },
+      "action_digest": null
+    },
+    {
+      "opponent": "random",
+      "seed": 11,
+      "seat": 1,
+      "status": [
+        "DONE",
+        "DONE"
+      ],
+      "rewards": [
+        0.0,
+        96663.0
+      ],
+      "our_reward": 96663.0,
+      "opponent_reward": 0.0,
+      "win": true,
+      "malformed": [],
+      "seed_overcommit": [],
+      "market_overflow": [],
+      "timeout_calls": [],
+      "diagnostics": {
+        "escapes": 0,
+        "fresh_crop_deaths": 0,
+        "overflow_states": 0
+      },
+      "action_digest": null
+    },
+    {
+      "opponent": "random",
+      "seed": 23,
+      "seat": 0,
+      "status": [
+        "DONE",
+        "DONE"
+      ],
+      "rewards": [
+        83535.0,
+        0.0
+      ],
+      "our_reward": 83535.0,
+      "opponent_reward": 0.0,
+      "win": true,
+      "malformed": [],
+      "seed_overcommit": [],
+      "market_overflow": [],
+      "timeout_calls": [],
+      "diagnostics": {
+        "escapes": 0,
+        "fresh_crop_deaths": 0,
+        "overflow_states": 0
+      },
+      "action_digest": null
+    },
+    {
+      "opponent": "random",
+      "seed": 23,
+      "seat": 1,
+      "status": [
+        "DONE",
+        "DONE"
+      ],
+      "rewards": [
+        0.0,
+        95406.0
+      ],
+      "our_reward": 95406.0,
+      "opponent_reward": 0.0,
+      "win": true,
+      "malformed": [],
+      "seed_overcommit": [],
+      "market_overflow": [],
+      "timeout_calls": [],
+      "diagnostics": {
+        "escapes": 0,
+        "fresh_crop_deaths": 0,
+        "overflow_states": 0
+      },
+      "action_digest": null
+    },
+    {
+      "opponent": "random",
+      "seed": 37,
+      "seat": 0,
+      "status": [
+        "DONE",
+        "DONE"
+      ],
+      "rewards": [
+        93487.0,
+        0.0
+      ],
+      "our_reward": 93487.0,
+      "opponent_reward": 0.0,
+      "win": true,
+      "malformed": [],
+      "seed_overcommit": [],
+      "market_overflow": [],
+      "timeout_calls": [],
+      "diagnostics": {
+        "escapes": 0,
+        "fresh_crop_deaths": 0,
+        "overflow_states": 0
+      },
+      "action_digest": null
+    },
+    {
+      "opponent": "random",
+      "seed": 37,
+      "seat": 1,
+      "status": [
+        "DONE",
+        "DONE"
+      ],
+      "rewards": [
+        0.0,
+        97141.0
+      ],
+      "our_reward": 97141.0,
+      "opponent_reward": 0.0,
+      "win": true,
+      "malformed": [],
+      "seed_overcommit": [],
+      "market_overflow": [],
+      "timeout_calls": [],
+      "diagnostics": {
+        "escapes": 0,
+        "fresh_crop_deaths": 0,
+        "overflow_states": 0
+      },
+      "action_digest": null
+    }
+  ],
+  "determinism_runs": [
+    {
+      "opponent": "self",
+      "seed": 777,
+      "seat": 0,
+      "status": [
+        "DONE",
+        "DONE"
+      ],
+      "rewards": [
+        70555.0,
+        70851.0
+      ],
+      "our_reward": 70555.0,
+      "opponent_reward": 70851.0,
+      "win": false,
+      "malformed": [],
+      "seed_overcommit": [],
+      "market_overflow": [],
+      "timeout_calls": [],
+      "diagnostics": {
+        "escapes": 0,
+        "fresh_crop_deaths": 0,
+        "overflow_states": 0
+      },
+      "action_digest": "e36890e59a2811f4a77ed83574de48699502824de474b085126fa6a32f30dfff"
+    },
+    {
+      "opponent": "self",
+      "seed": 777,
+      "seat": 0,
+      "status": [
+        "DONE",
+        "DONE"
+      ],
+      "rewards": [
+        70555.0,
+        70851.0
+      ],
+      "our_reward": 70555.0,
+      "opponent_reward": 70851.0,
+      "win": false,
+      "malformed": [],
+      "seed_overcommit": [],
+      "market_overflow": [],
+      "timeout_calls": [],
+      "diagnostics": {
+        "escapes": 0,
+        "fresh_crop_deaths": 0,
+        "overflow_states": 0
+      },
+      "action_digest": "e36890e59a2811f4a77ed83574de48699502824de474b085126fa6a32f30dfff"
+    }
+  ],
+  "acceptance_passed": true
+}

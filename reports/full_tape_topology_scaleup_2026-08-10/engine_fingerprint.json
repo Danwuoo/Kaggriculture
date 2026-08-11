@@ -1,0 +1,31 @@
+{
+  "configuration": {
+    "episodeSteps": 720,
+    "maxMarketOrdersPerTurn": 10,
+    "shedCapacity": 100,
+    "townCenterSellInterval": 24,
+    "townShopSellInterval": 4,
+    "turnsPerDay": 24
+  },
+  "current_engine_commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+  "current_engine_json_sha256": "7F196F4AAF9B4E482FBD61BA4BF19F5CEC4DA0F81938ECE756954035A65C0BB5",
+  "current_engine_python_normalized_sha256": "FB9215C5E21A25243E2D13E75B3D70A79CF7D78FFF150A90F1BB5EACF9BA2BCF",
+  "functional_checks": {
+    "configured_town_center_sell_interval": 24,
+    "hired_hand_spawn": [
+      5,
+      4
+    ],
+    "locked_shed_pickup_inventory": 1,
+    "locked_shed_pickup_shed_after": 0,
+    "spawn_tile": "LOCKED"
+  },
+  "pinned_base_read_only": {
+    "current_commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+    "current_json_sha256": "7F196F4AAF9B4E482FBD61BA4BF19F5CEC4DA0F81938ECE756954035A65C0BB5",
+    "current_normalized_sha256": "FB9215C5E21A25243E2D13E75B3D70A79CF7D78FFF150A90F1BB5EACF9BA2BCF",
+    "engine_path": "C:\\Users\\wurre\\Desktop\\Kaggriculture\\.vendor\\kaggle-environments\\kaggle_environments\\envs\\kaggriculture\\kaggriculture.py",
+    "normalized_sha256": "9741C0470A8DB98A70644491D5121AE6295413343D1A08EF9FCEE35E0B76F2C5",
+    "pinned_commit": "a4dce5ae6e2ffe3c1afea8ec4b24b562df74cc07"
+  }
+}

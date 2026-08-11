@@ -1,0 +1,26 @@
+{
+  "source_digest": "39D7FC856222C9FD10C95C868940F649754CEC82C9F6EB5873CF9E861F876439",
+  "seeds": [
+    410101,
+    410211,
+    410307,
+    410409,
+    410503,
+    410607,
+    410709,
+    410811
+  ],
+  "variants": [
+    "dominant_8c6s",
+    "rank1_fullmap_10c11s",
+    "cow_heavy_12c2s"
+  ],
+  "opponents": [
+    "canonical",
+    "kaito_v20",
+    "kaito_v21",
+    "roman_lb950",
+    "saiteja_3000",
+    "saiteja_2600"
+  ]
+}

@@ -1,0 +1,1390 @@
+{
+  "decision": {
+    "submission_gate_passed": true,
+    "reason": "All current-engine completion, schema, safety, overflow, determinism, and latency gates passed."
+  },
+  "static_audit": {
+    "path": "C:\\Users\\wurre\\Desktop\\Kaggriculture\\scripts\\other appoach\\main.py",
+    "bytes": 22688,
+    "sha256": "0138B516F265250B55EFC84C7849C36E7B54045D171A54B8D81022F6322C43E7",
+    "imports": [
+      "base64",
+      "copy",
+      "json",
+      "math",
+      "zlib"
+    ],
+    "forbidden_calls": {
+      "open": [],
+      "exec": [],
+      "eval": [],
+      "compile": [],
+      "__import__": []
+    },
+    "agent_parameters": [
+      "obs",
+      "configuration"
+    ],
+    "tape_steps": 719,
+    "tape_sha256": "9080682756f5b9fc0f2cae25efdffa69474d40883f693b49f58be2c1893ae5d2",
+    "rebalance_is_legacy_object": true,
+    "first_action": {
+      "farmer": [
+        "PASS"
+      ],
+      "hands": [],
+      "market": [
+        [
+          "HIRE"
+        ],
+        [
+          "HIRE"
+        ],
+        [
+          "HIRE"
+        ],
+        [
+          "HIRE"
+        ],
+        [
+          "BUY_ANIMAL",
+          "COW",
+          1
+        ],
+        [
+          "BUY_ANIMAL",
+          "SHEEP",
+          4
+        ],
+        [
+          "BUY_SEED",
+          "WHEAT",
+          5
+        ],
+        [
+          "BUY_SEED",
+          "MELON",
+          5
+        ],
+        [
+          "BUY_PRODUCT",
+          "WHEAT",
+          5
+        ]
+      ]
+    },
+    "last_action": {
+      "farmer": [
+        "PASS"
+      ],
+      "hands": [
+        [
+          "PASS"
+        ],
+        [
+          "PASS"
+        ],
+        [
+          "PASS"
+        ],
+        [
+          "PASS"
+        ],
+        [
+          "PASS"
+        ],
+        [
+          "PASS"
+        ],
+        [
+          "PASS"
+        ],
+        [
+          "PASS"
+        ],
+        [
+          "DROP"
+        ],
+        [
+          "PASS"
+        ]
+      ],
+      "market": [
+        [
+          "SELL",
+          "WHEAT",
+          7
+        ]
+      ]
+    }
+  },
+  "engine": {
+    "commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+    "python_normalized_sha256": "FB9215C5E21A25243E2D13E75B3D70A79CF7D78FFF150A90F1BB5EACF9BA2BCF",
+    "json_sha256": "7F196F4AAF9B4E482FBD61BA4BF19F5CEC4DA0F81938ECE756954035A65C0BB5",
+    "configuration": {
+      "episodeSteps": 720,
+      "turnsPerDay": 24,
+      "townCenterSellInterval": 24,
+      "townShopSellInterval": 4,
+      "shedCapacity": 100,
+      "maxMarketOrdersPerTurn": 10
+    },
+    "pinned_base_read_only": {
+      "engine_path": "C:\\Users\\wurre\\Desktop\\Kaggriculture\\.vendor\\kaggle-environments\\kaggle_environments\\envs\\kaggriculture\\kaggriculture.py",
+      "pinned_commit": "a4dce5ae6e2ffe3c1afea8ec4b24b562df74cc07",
+      "normalized_sha256": "9741C0470A8DB98A70644491D5121AE6295413343D1A08EF9FCEE35E0B76F2C5",
+      "current_commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+      "current_normalized_sha256": "FB9215C5E21A25243E2D13E75B3D70A79CF7D78FFF150A90F1BB5EACF9BA2BCF",
+      "current_json_sha256": "7F196F4AAF9B4E482FBD61BA4BF19F5CEC4DA0F81938ECE756954035A65C0BB5"
+    }
+  },
+  "protocol": {
+    "candidate_games": 21,
+    "adaptive_reference_games": 6,
+    "arena": {
+      "opponents": [
+        "starter",
+        "random"
+      ],
+      "seeds": [
+        11,
+        23,
+        37
+      ],
+      "seats": [
+        0,
+        1
+      ]
+    },
+    "public": {
+      "opponents": [
+        "kaito_v21",
+        "saiteja_3000",
+        "roman_lb950"
+      ],
+      "fresh_seed": 904291,
+      "seats": [
+        0,
+        1
+      ]
+    },
+    "determinism": {
+      "opponent": "kaito_v21",
+      "seed": 777,
+      "seat": 0,
+      "repetitions": 2
+    }
+  },
+  "acceptance": {
+    "all_candidate_games_valid": true,
+    "deterministic": true,
+    "latency_all_ms": {
+      "calls": 15099,
+      "p50": 0.16789999790489674,
+      "p95": 0.35522992257028774,
+      "p99": 0.6661139521747831,
+      "max": 1.1745999800041318
+    },
+    "latency_full_episode_ms": {
+      "calls": 719,
+      "p50": 0.16719999257475138,
+      "p95": 0.300399970728904,
+      "p99": 0.6383060128428063,
+      "max": 0.906999921426177
+    },
+    "diagnostic_totals": {
+      "animal_escapes": 0,
+      "fresh_crop_deaths": 0,
+      "shed_overflow_states": 0,
+      "drop_overflow_units": 0,
+      "eod_overflow_units": 0
+    },
+    "action_issue_totals": {
+      "malformed": 0,
+      "seed_overcommit": 0,
+      "market_overflow": 0
+    },
+    "timeout_calls": 0
+  },
+  "public_comparison": {
+    "candidate_wins_draws_losses": [
+      6,
+      0,
+      0
+    ],
+    "adaptive_wins_draws_losses": [
+      6,
+      0,
+      0
+    ],
+    "family": {
+      "kaito_v21": {
+        "candidate_wins": 2,
+        "adaptive_wins": 2,
+        "candidate_margins": [
+          13587.0,
+          13587.0
+        ],
+        "adaptive_margins": [
+          6215.0,
+          6215.0
+        ],
+        "candidate_minus_adaptive_margin": [
+          7372.0,
+          7372.0
+        ],
+        "paired_mean_delta": 7372.0
+      },
+      "saiteja_3000": {
+        "candidate_wins": 2,
+        "adaptive_wins": 2,
+        "candidate_margins": [
+          30363.0,
+          30413.0
+        ],
+        "adaptive_margins": [
+          30740.0,
+          30802.0
+        ],
+        "candidate_minus_adaptive_margin": [
+          -377.0,
+          -389.0
+        ],
+        "paired_mean_delta": -383.0
+      },
+      "roman_lb950": {
+        "candidate_wins": 2,
+        "adaptive_wins": 2,
+        "candidate_margins": [
+          73645.0,
+          78630.0
+        ],
+        "adaptive_margins": [
+          101424.0,
+          102216.0
+        ],
+        "candidate_minus_adaptive_margin": [
+          -27779.0,
+          -23586.0
+        ],
+        "paired_mean_delta": -25682.5
+      }
+    }
+  },
+  "games": [
+    {
+      "policy": "candidate",
+      "opponent": "candidate_self",
+      "seed": 101,
+      "seat": 0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "states": 720,
+      "calls": 719,
+      "candidate_reward": 103824.0,
+      "opponent_reward": 103824.0,
+      "margin": 0.0,
+      "diagnostics": {
+        "animal_escapes": 0,
+        "fresh_crop_deaths": 0,
+        "shed_overflow_states": 0,
+        "drop_overflow_units": 0,
+        "eod_overflow_units": 0
+      },
+      "fresh_death_events": [],
+      "action_issues": {
+        "malformed": 0,
+        "seed_overcommit": 0,
+        "market_overflow": 0
+      },
+      "action_issue_events": [],
+      "timeout_calls": 0,
+      "latency_ms": {
+        "calls": 719,
+        "p50": 0.16719999257475138,
+        "p95": 0.300399970728904,
+        "p99": 0.6383060128428063,
+        "max": 0.906999921426177
+      },
+      "action_digest": "d36adf96793c1f5ecf089dadd5c1a8bb0cdee592227fb4b64d86de6f7db28bee",
+      "trace": null,
+      "exception": null,
+      "opponent_exception": null
+    },
+    {
+      "policy": "candidate",
+      "opponent": "starter",
+      "seed": 11,
+      "seat": 0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "states": 720,
+      "calls": 719,
+      "candidate_reward": 189804.0,
+      "opponent_reward": 3480.0,
+      "margin": 186324.0,
+      "diagnostics": {
+        "animal_escapes": 0,
+        "fresh_crop_deaths": 0,
+        "shed_overflow_states": 0,
+        "drop_overflow_units": 0,
+        "eod_overflow_units": 0
+      },
+      "fresh_death_events": [],
+      "action_issues": {
+        "malformed": 0,
+        "seed_overcommit": 0,
+        "market_overflow": 0
+      },
+      "action_issue_events": [],
+      "timeout_calls": 0,
+      "latency_ms": {
+        "calls": 719,
+        "p50": 0.18400000408291817,
+        "p95": 0.4916800069622696,
+        "p99": 0.8210039860568954,
+        "max": 1.1113999644294381
+      },
+      "action_digest": "163258453594676253283c84a1fbf984cc519dc7c61e82d649e6a8ea4a5c7be2",
+      "trace": null,
+      "exception": null,
+      "opponent_exception": null
+    },
+    {
+      "policy": "candidate",
+      "opponent": "starter",
+      "seed": 11,
+      "seat": 1,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "states": 720,
+      "calls": 719,
+      "candidate_reward": 189523.0,
+      "opponent_reward": 3480.0,
+      "margin": 186043.0,
+      "diagnostics": {
+        "animal_escapes": 0,
+        "fresh_crop_deaths": 0,
+        "shed_overflow_states": 0,
+        "drop_overflow_units": 0,
+        "eod_overflow_units": 0
+      },
+      "fresh_death_events": [],
+      "action_issues": {
+        "malformed": 0,
+        "seed_overcommit": 0,
+        "market_overflow": 0
+      },
+      "action_issue_events": [],
+      "timeout_calls": 0,
+      "latency_ms": {
+        "calls": 719,
+        "p50": 0.17929996829479933,
+        "p95": 0.4318400286138059,
+        "p99": 0.6996640143916026,
+        "max": 1.0393999982625246
+      },
+      "action_digest": "97e63176e770d2673f8643ec608c9e2ee212d1a662eb83e88c4a5f061b06fff3",
+      "trace": null,
+      "exception": null,
+      "opponent_exception": null
+    },
+    {
+      "policy": "candidate",
+      "opponent": "starter",
+      "seed": 23,
+      "seat": 0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "states": 720,
+      "calls": 719,
+      "candidate_reward": 127996.0,
+      "opponent_reward": 3478.0,
+      "margin": 124518.0,
+      "diagnostics": {
+        "animal_escapes": 0,
+        "fresh_crop_deaths": 0,
+        "shed_overflow_states": 0,
+        "drop_overflow_units": 0,
+        "eod_overflow_units": 0
+      },
+      "fresh_death_events": [],
+      "action_issues": {
+        "malformed": 0,
+        "seed_overcommit": 0,
+        "market_overflow": 0
+      },
+      "action_issue_events": [],
+      "timeout_calls": 0,
+      "latency_ms": {
+        "calls": 719,
+        "p50": 0.17689995002001524,
+        "p95": 0.3964699921198191,
+        "p99": 0.7483399938791996,
+        "max": 0.9988000383600593
+      },
+      "action_digest": "4e7d9f6160bc9ec05927508a88b155b7090489655c9fd87325a8220fa47ef87d",
+      "trace": null,
+      "exception": null,
+      "opponent_exception": null
+    },
+    {
+      "policy": "candidate",
+      "opponent": "starter",
+      "seed": 23,
+      "seat": 1,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "states": 720,
+      "calls": 719,
+      "candidate_reward": 139559.0,
+      "opponent_reward": 3490.0,
+      "margin": 136069.0,
+      "diagnostics": {
+        "animal_escapes": 0,
+        "fresh_crop_deaths": 0,
+        "shed_overflow_states": 0,
+        "drop_overflow_units": 0,
+        "eod_overflow_units": 0
+      },
+      "fresh_death_events": [],
+      "action_issues": {
+        "malformed": 0,
+        "seed_overcommit": 0,
+        "market_overflow": 0
+      },
+      "action_issue_events": [],
+      "timeout_calls": 0,
+      "latency_ms": {
+        "calls": 719,
+        "p50": 0.1498999772593379,
+        "p95": 0.2681400626897813,
+        "p99": 0.5208780081011359,
+        "max": 0.712099950760603
+      },
+      "action_digest": "2d122d1fdb98c858beb4776221bdb358883068d1e2e7969baa6590d989cfaede",
+      "trace": null,
+      "exception": null,
+      "opponent_exception": null
+    },
+    {
+      "policy": "candidate",
+      "opponent": "starter",
+      "seed": 37,
+      "seat": 0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "states": 720,
+      "calls": 719,
+      "candidate_reward": 175727.0,
+      "opponent_reward": 3455.0,
+      "margin": 172272.0,
+      "diagnostics": {
+        "animal_escapes": 0,
+        "fresh_crop_deaths": 0,
+        "shed_overflow_states": 0,
+        "drop_overflow_units": 0,
+        "eod_overflow_units": 0
+      },
+      "fresh_death_events": [],
+      "action_issues": {
+        "malformed": 0,
+        "seed_overcommit": 0,
+        "market_overflow": 0
+      },
+      "action_issue_events": [],
+      "timeout_calls": 0,
+      "latency_ms": {
+        "calls": 719,
+        "p50": 0.1569000305607915,
+        "p95": 0.2435199916362763,
+        "p99": 0.6085540191270427,
+        "max": 0.8694001007825136
+      },
+      "action_digest": "fec7191787366e150e4417aac1b9745a4c4f4fdc696a1a046ebf2442e334a808",
+      "trace": null,
+      "exception": null,
+      "opponent_exception": null
+    },
+    {
+      "policy": "candidate",
+      "opponent": "starter",
+      "seed": 37,
+      "seat": 1,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "states": 720,
+      "calls": 719,
+      "candidate_reward": 175727.0,
+      "opponent_reward": 3455.0,
+      "margin": 172272.0,
+      "diagnostics": {
+        "animal_escapes": 0,
+        "fresh_crop_deaths": 0,
+        "shed_overflow_states": 0,
+        "drop_overflow_units": 0,
+        "eod_overflow_units": 0
+      },
+      "fresh_death_events": [],
+      "action_issues": {
+        "malformed": 0,
+        "seed_overcommit": 0,
+        "market_overflow": 0
+      },
+      "action_issue_events": [],
+      "timeout_calls": 0,
+      "latency_ms": {
+        "calls": 719,
+        "p50": 0.1466000685468316,
+        "p95": 0.24543999461457142,
+        "p99": 0.5207000277005144,
+        "max": 0.960900099016726
+      },
+      "action_digest": "fec7191787366e150e4417aac1b9745a4c4f4fdc696a1a046ebf2442e334a808",
+      "trace": null,
+      "exception": null,
+      "opponent_exception": null
+    },
+    {
+      "policy": "candidate",
+      "opponent": "random",
+      "seed": 11,
+      "seat": 0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "states": 720,
+      "calls": 719,
+      "candidate_reward": 147253.0,
+      "opponent_reward": 0.0,
+      "margin": 147253.0,
+      "diagnostics": {
+        "animal_escapes": 0,
+        "fresh_crop_deaths": 0,
+        "shed_overflow_states": 0,
+        "drop_overflow_units": 0,
+        "eod_overflow_units": 0
+      },
+      "fresh_death_events": [],
+      "action_issues": {
+        "malformed": 0,
+        "seed_overcommit": 0,
+        "market_overflow": 0
+      },
+      "action_issue_events": [],
+      "timeout_calls": 0,
+      "latency_ms": {
+        "calls": 719,
+        "p50": 0.17180002760142088,
+        "p95": 0.39389997255057096,
+        "p99": 0.6035979813896126,
+        "max": 0.9496000129729509
+      },
+      "action_digest": "df0990c13e0c113e56cffbd314e540ad1e1a9a8229cdf13831e07c2f1733aecc",
+      "trace": null,
+      "exception": null,
+      "opponent_exception": null
+    },
+    {
+      "policy": "candidate",
+      "opponent": "random",
+      "seed": 11,
+      "seat": 1,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "states": 720,
+      "calls": 719,
+      "candidate_reward": 156102.0,
+      "opponent_reward": 0.0,
+      "margin": 156102.0,
+      "diagnostics": {
+        "animal_escapes": 0,
+        "fresh_crop_deaths": 0,
+        "shed_overflow_states": 0,
+        "drop_overflow_units": 0,
+        "eod_overflow_units": 0
+      },
+      "fresh_death_events": [],
+      "action_issues": {
+        "malformed": 0,
+        "seed_overcommit": 0,
+        "market_overflow": 0
+      },
+      "action_issue_events": [],
+      "timeout_calls": 0,
+      "latency_ms": {
+        "calls": 719,
+        "p50": 0.15710003208369017,
+        "p95": 0.2651800401508808,
+        "p99": 0.3875639452598991,
+        "max": 0.7028999971225858
+      },
+      "action_digest": "93efe0e425e8fc7af0c49439233513089b1cef4fa5e098814bf42aa1d779f26a",
+      "trace": null,
+      "exception": null,
+      "opponent_exception": null
+    },
+    {
+      "policy": "candidate",
+      "opponent": "random",
+      "seed": 23,
+      "seat": 0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "states": 720,
+      "calls": 719,
+      "candidate_reward": 163823.0,
+      "opponent_reward": 0.0,
+      "margin": 163823.0,
+      "diagnostics": {
+        "animal_escapes": 0,
+        "fresh_crop_deaths": 0,
+        "shed_overflow_states": 0,
+        "drop_overflow_units": 0,
+        "eod_overflow_units": 0
+      },
+      "fresh_death_events": [],
+      "action_issues": {
+        "malformed": 0,
+        "seed_overcommit": 0,
+        "market_overflow": 0
+      },
+      "action_issue_events": [],
+      "timeout_calls": 0,
+      "latency_ms": {
+        "calls": 719,
+        "p50": 0.1770999515429139,
+        "p95": 0.3227500128559769,
+        "p99": 0.559498069342226,
+        "max": 1.0018999455496669
+      },
+      "action_digest": "6c590f8657e08821f5122c95ffe75ae851b54f4b85c431f559d0e6da60123328",
+      "trace": null,
+      "exception": null,
+      "opponent_exception": null
+    },
+    {
+      "policy": "candidate",
+      "opponent": "random",
+      "seed": 23,
+      "seat": 1,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "states": 720,
+      "calls": 719,
+      "candidate_reward": 153810.0,
+      "opponent_reward": 60.0,
+      "margin": 153750.0,
+      "diagnostics": {
+        "animal_escapes": 0,
+        "fresh_crop_deaths": 0,
+        "shed_overflow_states": 0,
+        "drop_overflow_units": 0,
+        "eod_overflow_units": 0
+      },
+      "fresh_death_events": [],
+      "action_issues": {
+        "malformed": 0,
+        "seed_overcommit": 0,
+        "market_overflow": 0
+      },
+      "action_issue_events": [],
+      "timeout_calls": 0,
+      "latency_ms": {
+        "calls": 719,
+        "p50": 0.16840000171214342,
+        "p95": 0.2661599428392947,
+        "p99": 0.45572397764772193,
+        "max": 0.6798999384045601
+      },
+      "action_digest": "7b36bc92a124e2661cfd0bd30f218c3d05b4efc1659111f0655ce704d7362a32",
+      "trace": null,
+      "exception": null,
+      "opponent_exception": null
+    },
+    {
+      "policy": "candidate",
+      "opponent": "random",
+      "seed": 37,
+      "seat": 0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "states": 720,
+      "calls": 719,
+      "candidate_reward": 152631.0,
+      "opponent_reward": 0.0,
+      "margin": 152631.0,
+      "diagnostics": {
+        "animal_escapes": 0,
+        "fresh_crop_deaths": 0,
+        "shed_overflow_states": 0,
+        "drop_overflow_units": 0,
+        "eod_overflow_units": 0
+      },
+      "fresh_death_events": [],
+      "action_issues": {
+        "malformed": 0,
+        "seed_overcommit": 0,
+        "market_overflow": 0
+      },
+      "action_issue_events": [],
+      "timeout_calls": 0,
+      "latency_ms": {
+        "calls": 719,
+        "p50": 0.19180006347596645,
+        "p95": 0.4468500264920295,
+        "p99": 0.7429659832269004,
+        "max": 0.9461999870836735
+      },
+      "action_digest": "e8d2469c78ec5ac6cd41ac4274b1078aa0b1adde5f4845c8cb05a9c5691b5514",
+      "trace": null,
+      "exception": null,
+      "opponent_exception": null
+    },
+    {
+      "policy": "candidate",
+      "opponent": "random",
+      "seed": 37,
+      "seat": 1,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "states": 720,
+      "calls": 719,
+      "candidate_reward": 130649.0,
+      "opponent_reward": 0.0,
+      "margin": 130649.0,
+      "diagnostics": {
+        "animal_escapes": 0,
+        "fresh_crop_deaths": 0,
+        "shed_overflow_states": 0,
+        "drop_overflow_units": 0,
+        "eod_overflow_units": 0
+      },
+      "fresh_death_events": [],
+      "action_issues": {
+        "malformed": 0,
+        "seed_overcommit": 0,
+        "market_overflow": 0
+      },
+      "action_issue_events": [],
+      "timeout_calls": 0,
+      "latency_ms": {
+        "calls": 719,
+        "p50": 0.15499989967793226,
+        "p95": 0.31777997501194477,
+        "p99": 0.48101005377247935,
+        "max": 0.7792999967932701
+      },
+      "action_digest": "d030aa5db8b752b61185b9422839035bcc122f6105629548397566d96ac4d045",
+      "trace": null,
+      "exception": null,
+      "opponent_exception": null
+    }
+  ],
+  "public_games": [
+    {
+      "policy": "candidate",
+      "opponent": "kaito_v21",
+      "seed": 904291,
+      "seat": 0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "states": 720,
+      "calls": 719,
+      "candidate_reward": 78869.0,
+      "opponent_reward": 65282.0,
+      "margin": 13587.0,
+      "diagnostics": {
+        "animal_escapes": 0,
+        "fresh_crop_deaths": 0,
+        "shed_overflow_states": 0,
+        "drop_overflow_units": 0,
+        "eod_overflow_units": 0
+      },
+      "fresh_death_events": [],
+      "action_issues": {
+        "malformed": 0,
+        "seed_overcommit": 0,
+        "market_overflow": 0
+      },
+      "action_issue_events": [],
+      "timeout_calls": 0,
+      "latency_ms": {
+        "calls": 719,
+        "p50": 0.17490005120635033,
+        "p95": 0.3418800304643811,
+        "p99": 0.6803500792011627,
+        "max": 1.05489999987185
+      },
+      "action_digest": "e365bd4bd51a8e22c37a13eb2e9c95feacd1cdfec2ca9e5c1bfdffefb48d73d6",
+      "trace": null,
+      "exception": null,
+      "opponent_exception": null
+    },
+    {
+      "policy": "candidate",
+      "opponent": "kaito_v21",
+      "seed": 904291,
+      "seat": 1,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "states": 720,
+      "calls": 719,
+      "candidate_reward": 78869.0,
+      "opponent_reward": 65282.0,
+      "margin": 13587.0,
+      "diagnostics": {
+        "animal_escapes": 0,
+        "fresh_crop_deaths": 0,
+        "shed_overflow_states": 0,
+        "drop_overflow_units": 0,
+        "eod_overflow_units": 0
+      },
+      "fresh_death_events": [],
+      "action_issues": {
+        "malformed": 0,
+        "seed_overcommit": 0,
+        "market_overflow": 0
+      },
+      "action_issue_events": [],
+      "timeout_calls": 0,
+      "latency_ms": {
+        "calls": 719,
+        "p50": 0.1564000267535448,
+        "p95": 0.30523999594151974,
+        "p99": 0.5472759227268411,
+        "max": 0.7340000011026859
+      },
+      "action_digest": "e365bd4bd51a8e22c37a13eb2e9c95feacd1cdfec2ca9e5c1bfdffefb48d73d6",
+      "trace": null,
+      "exception": null,
+      "opponent_exception": null
+    },
+    {
+      "policy": "candidate",
+      "opponent": "saiteja_3000",
+      "seed": 904291,
+      "seat": 0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "states": 720,
+      "calls": 719,
+      "candidate_reward": 113239.0,
+      "opponent_reward": 82876.0,
+      "margin": 30363.0,
+      "diagnostics": {
+        "animal_escapes": 0,
+        "fresh_crop_deaths": 0,
+        "shed_overflow_states": 0,
+        "drop_overflow_units": 0,
+        "eod_overflow_units": 0
+      },
+      "fresh_death_events": [],
+      "action_issues": {
+        "malformed": 0,
+        "seed_overcommit": 0,
+        "market_overflow": 0
+      },
+      "action_issue_events": [],
+      "timeout_calls": 0,
+      "latency_ms": {
+        "calls": 719,
+        "p50": 0.20030001178383827,
+        "p95": 0.4068200592882931,
+        "p99": 0.771158051211387,
+        "max": 0.9941000025719404
+      },
+      "action_digest": "4951ffeac8b6d6c84c39e70bcd71cd168dfc8f4e49f398d486f12a2a492b2300",
+      "trace": null,
+      "exception": null,
+      "opponent_exception": null
+    },
+    {
+      "policy": "candidate",
+      "opponent": "saiteja_3000",
+      "seed": 904291,
+      "seat": 1,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "states": 720,
+      "calls": 719,
+      "candidate_reward": 113241.0,
+      "opponent_reward": 82828.0,
+      "margin": 30413.0,
+      "diagnostics": {
+        "animal_escapes": 0,
+        "fresh_crop_deaths": 0,
+        "shed_overflow_states": 0,
+        "drop_overflow_units": 0,
+        "eod_overflow_units": 0
+      },
+      "fresh_death_events": [],
+      "action_issues": {
+        "malformed": 0,
+        "seed_overcommit": 0,
+        "market_overflow": 0
+      },
+      "action_issue_events": [],
+      "timeout_calls": 0,
+      "latency_ms": {
+        "calls": 719,
+        "p50": 0.16920000780373812,
+        "p95": 0.3846800071187319,
+        "p99": 0.506542036309839,
+        "max": 0.8691999828442931
+      },
+      "action_digest": "e349959b6eb4e00f578f40e74e21d66444c9e6bd110c813e6bf2f74297c09aa2",
+      "trace": null,
+      "exception": null,
+      "opponent_exception": null
+    },
+    {
+      "policy": "candidate",
+      "opponent": "roman_lb950",
+      "seed": 904291,
+      "seat": 0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "states": 720,
+      "calls": 719,
+      "candidate_reward": 145347.0,
+      "opponent_reward": 71702.0,
+      "margin": 73645.0,
+      "diagnostics": {
+        "animal_escapes": 0,
+        "fresh_crop_deaths": 0,
+        "shed_overflow_states": 0,
+        "drop_overflow_units": 0,
+        "eod_overflow_units": 0
+      },
+      "fresh_death_events": [],
+      "action_issues": {
+        "malformed": 0,
+        "seed_overcommit": 0,
+        "market_overflow": 0
+      },
+      "action_issue_events": [],
+      "timeout_calls": 0,
+      "latency_ms": {
+        "calls": 719,
+        "p50": 0.1623999560251832,
+        "p95": 0.28130003483966,
+        "p99": 0.6384679395705483,
+        "max": 0.9148999815806746
+      },
+      "action_digest": "2d9b469d56f083a4a376c4d3e37f1b35ac95940e8bc1755e73fe01deceba770d",
+      "trace": null,
+      "exception": null,
+      "opponent_exception": null
+    },
+    {
+      "policy": "candidate",
+      "opponent": "roman_lb950",
+      "seed": 904291,
+      "seat": 1,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "states": 720,
+      "calls": 719,
+      "candidate_reward": 150095.0,
+      "opponent_reward": 71465.0,
+      "margin": 78630.0,
+      "diagnostics": {
+        "animal_escapes": 0,
+        "fresh_crop_deaths": 0,
+        "shed_overflow_states": 0,
+        "drop_overflow_units": 0,
+        "eod_overflow_units": 0
+      },
+      "fresh_death_events": [],
+      "action_issues": {
+        "malformed": 0,
+        "seed_overcommit": 0,
+        "market_overflow": 0
+      },
+      "action_issue_events": [],
+      "timeout_calls": 0,
+      "latency_ms": {
+        "calls": 719,
+        "p50": 0.1666999887675047,
+        "p95": 0.28820997104048746,
+        "p99": 0.5017099995166076,
+        "max": 1.1745999800041318
+      },
+      "action_digest": "932501c4d035c2c3c9596015954a9ecd6e40963766393c873d20da14a24456f6",
+      "trace": null,
+      "exception": null,
+      "opponent_exception": null
+    }
+  ],
+  "adaptive_reference_games": [
+    {
+      "policy": "adaptive",
+      "opponent": "kaito_v21",
+      "seed": 904291,
+      "seat": 0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "states": 720,
+      "calls": 719,
+      "candidate_reward": 115817.0,
+      "opponent_reward": 109602.0,
+      "margin": 6215.0,
+      "diagnostics": {
+        "animal_escapes": 0,
+        "fresh_crop_deaths": 0,
+        "shed_overflow_states": 0,
+        "drop_overflow_units": 0,
+        "eod_overflow_units": 0
+      },
+      "fresh_death_events": [],
+      "action_issues": {
+        "malformed": 0,
+        "seed_overcommit": 0,
+        "market_overflow": 0
+      },
+      "action_issue_events": [],
+      "timeout_calls": 0,
+      "latency_ms": {
+        "calls": 719,
+        "p50": 0.20920007955282927,
+        "p95": 0.43157002655789256,
+        "p99": 0.6927199405618018,
+        "max": 1.0182000696659088
+      },
+      "action_digest": "119e188dee2f69f3ae1ac2a31e1b34966fc30c932a714127e5c49e625f4b8519",
+      "trace": null,
+      "exception": null,
+      "opponent_exception": null
+    },
+    {
+      "policy": "adaptive",
+      "opponent": "kaito_v21",
+      "seed": 904291,
+      "seat": 1,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "states": 720,
+      "calls": 719,
+      "candidate_reward": 115817.0,
+      "opponent_reward": 109602.0,
+      "margin": 6215.0,
+      "diagnostics": {
+        "animal_escapes": 0,
+        "fresh_crop_deaths": 0,
+        "shed_overflow_states": 0,
+        "drop_overflow_units": 0,
+        "eod_overflow_units": 0
+      },
+      "fresh_death_events": [],
+      "action_issues": {
+        "malformed": 0,
+        "seed_overcommit": 0,
+        "market_overflow": 0
+      },
+      "action_issue_events": [],
+      "timeout_calls": 0,
+      "latency_ms": {
+        "calls": 719,
+        "p50": 0.19319995772093534,
+        "p95": 0.4678999539464712,
+        "p99": 0.6562580121681107,
+        "max": 1.0314000537618995
+      },
+      "action_digest": "119e188dee2f69f3ae1ac2a31e1b34966fc30c932a714127e5c49e625f4b8519",
+      "trace": null,
+      "exception": null,
+      "opponent_exception": null
+    },
+    {
+      "policy": "adaptive",
+      "opponent": "saiteja_3000",
+      "seed": 904291,
+      "seat": 0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "states": 720,
+      "calls": 719,
+      "candidate_reward": 88554.0,
+      "opponent_reward": 57814.0,
+      "margin": 30740.0,
+      "diagnostics": {
+        "animal_escapes": 0,
+        "fresh_crop_deaths": 0,
+        "shed_overflow_states": 0,
+        "drop_overflow_units": 0,
+        "eod_overflow_units": 0
+      },
+      "fresh_death_events": [],
+      "action_issues": {
+        "malformed": 0,
+        "seed_overcommit": 0,
+        "market_overflow": 0
+      },
+      "action_issue_events": [],
+      "timeout_calls": 0,
+      "latency_ms": {
+        "calls": 719,
+        "p50": 0.2223999472334981,
+        "p95": 0.5847200052812702,
+        "p99": 0.8947379444725811,
+        "max": 1.1530999327078462
+      },
+      "action_digest": "6249bfca7ede2b7aca9044298272e148b16474efcf629c0a557c15f8547a5ec1",
+      "trace": null,
+      "exception": null,
+      "opponent_exception": null
+    },
+    {
+      "policy": "adaptive",
+      "opponent": "saiteja_3000",
+      "seed": 904291,
+      "seat": 1,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "states": 720,
+      "calls": 719,
+      "candidate_reward": 88558.0,
+      "opponent_reward": 57756.0,
+      "margin": 30802.0,
+      "diagnostics": {
+        "animal_escapes": 0,
+        "fresh_crop_deaths": 0,
+        "shed_overflow_states": 0,
+        "drop_overflow_units": 0,
+        "eod_overflow_units": 0
+      },
+      "fresh_death_events": [],
+      "action_issues": {
+        "malformed": 0,
+        "seed_overcommit": 0,
+        "market_overflow": 0
+      },
+      "action_issue_events": [],
+      "timeout_calls": 0,
+      "latency_ms": {
+        "calls": 719,
+        "p50": 0.18569990061223507,
+        "p95": 0.32572002382949,
+        "p99": 0.5082400492392487,
+        "max": 0.8061000844463706
+      },
+      "action_digest": "6249bfca7ede2b7aca9044298272e148b16474efcf629c0a557c15f8547a5ec1",
+      "trace": null,
+      "exception": null,
+      "opponent_exception": null
+    },
+    {
+      "policy": "adaptive",
+      "opponent": "roman_lb950",
+      "seed": 904291,
+      "seat": 0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "states": 720,
+      "calls": 719,
+      "candidate_reward": 148664.0,
+      "opponent_reward": 47240.0,
+      "margin": 101424.0,
+      "diagnostics": {
+        "animal_escapes": 0,
+        "fresh_crop_deaths": 0,
+        "shed_overflow_states": 0,
+        "drop_overflow_units": 0,
+        "eod_overflow_units": 0
+      },
+      "fresh_death_events": [],
+      "action_issues": {
+        "malformed": 0,
+        "seed_overcommit": 0,
+        "market_overflow": 0
+      },
+      "action_issue_events": [],
+      "timeout_calls": 0,
+      "latency_ms": {
+        "calls": 719,
+        "p50": 0.1908999402076006,
+        "p95": 0.3792099887505174,
+        "p99": 0.683083983603865,
+        "max": 1.0450000409036875
+      },
+      "action_digest": "2ca502b33be2405016a4a2871529845359c4bcf280a11a29b1f92d905b550850",
+      "trace": null,
+      "exception": null,
+      "opponent_exception": null
+    },
+    {
+      "policy": "adaptive",
+      "opponent": "roman_lb950",
+      "seed": 904291,
+      "seat": 1,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "states": 720,
+      "calls": 719,
+      "candidate_reward": 156968.0,
+      "opponent_reward": 54752.0,
+      "margin": 102216.0,
+      "diagnostics": {
+        "animal_escapes": 0,
+        "fresh_crop_deaths": 0,
+        "shed_overflow_states": 0,
+        "drop_overflow_units": 0,
+        "eod_overflow_units": 0
+      },
+      "fresh_death_events": [],
+      "action_issues": {
+        "malformed": 0,
+        "seed_overcommit": 0,
+        "market_overflow": 0
+      },
+      "action_issue_events": [],
+      "timeout_calls": 0,
+      "latency_ms": {
+        "calls": 719,
+        "p50": 0.18750003073364496,
+        "p95": 0.35395001759752637,
+        "p99": 0.5687500233761967,
+        "max": 1.0978999780490994
+      },
+      "action_digest": "50ead270a528db8da99f63512cbf34e74f533bd0a99e24a2e75dad6a897b057c",
+      "trace": null,
+      "exception": null,
+      "opponent_exception": null
+    }
+  ],
+  "determinism_runs": [
+    {
+      "policy": "candidate",
+      "opponent": "kaito_v21",
+      "seed": 777,
+      "seat": 0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "states": 720,
+      "calls": 719,
+      "candidate_reward": 87019.0,
+      "opponent_reward": 65445.0,
+      "margin": 21574.0,
+      "diagnostics": {
+        "animal_escapes": 0,
+        "fresh_crop_deaths": 0,
+        "shed_overflow_states": 0,
+        "drop_overflow_units": 0,
+        "eod_overflow_units": 0
+      },
+      "fresh_death_events": [],
+      "action_issues": {
+        "malformed": 0,
+        "seed_overcommit": 0,
+        "market_overflow": 0
+      },
+      "action_issue_events": [],
+      "timeout_calls": 0,
+      "latency_ms": {
+        "calls": 719,
+        "p50": 0.175400055013597,
+        "p95": 0.3412200370803476,
+        "p99": 0.621815908234568,
+        "max": 0.9068999206647277
+      },
+      "action_digest": "885914ea16f96f4e43cbc2502df5a44b7657d040e82e86f1da12d44ecba69f30",
+      "trace": null,
+      "exception": null,
+      "opponent_exception": null
+    },
+    {
+      "policy": "candidate",
+      "opponent": "kaito_v21",
+      "seed": 777,
+      "seat": 0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "states": 720,
+      "calls": 719,
+      "candidate_reward": 87019.0,
+      "opponent_reward": 65445.0,
+      "margin": 21574.0,
+      "diagnostics": {
+        "animal_escapes": 0,
+        "fresh_crop_deaths": 0,
+        "shed_overflow_states": 0,
+        "drop_overflow_units": 0,
+        "eod_overflow_units": 0
+      },
+      "fresh_death_events": [],
+      "action_issues": {
+        "malformed": 0,
+        "seed_overcommit": 0,
+        "market_overflow": 0
+      },
+      "action_issue_events": [],
+      "timeout_calls": 0,
+      "latency_ms": {
+        "calls": 719,
+        "p50": 0.19239995162934065,
+        "p95": 0.5605799611657858,
+        "p99": 0.8519180840812626,
+        "max": 1.0308000491932034
+      },
+      "action_digest": "885914ea16f96f4e43cbc2502df5a44b7657d040e82e86f1da12d44ecba69f30",
+      "trace": null,
+      "exception": null,
+      "opponent_exception": null
+    }
+  ]
+}

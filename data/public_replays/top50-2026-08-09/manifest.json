@@ -1,0 +1,2172 @@
+{
+  "dataset": "Kaggriculture top-team high-reward public replays",
+  "competition": "kaggriculture",
+  "captured_at": "2026-08-08T16:10:15.675637Z",
+  "selection_policy": {
+    "leaderboard_snapshot": "single live public leaderboard snapshot",
+    "submission": "active team submission whose public score exactly matches the snapshot score",
+    "episode": "highest target-team reward among completed public episodes",
+    "uniqueness": "episode IDs are unique in leaderboard order; later duplicate uses next-highest reward",
+    "tie_break": "lower episode ID",
+    "backfill": "scan leaderboard ranks 1-55 until 50 files are selected"
+  },
+  "tooling": {
+    "collector": "scripts/collect_top_public_replays.py",
+    "kaggle_cli_version": "2.2.4"
+  },
+  "requested_count": 50,
+  "downloaded_count": 50,
+  "total_bytes": 1391681379,
+  "entries": [
+    {
+      "rank": 1,
+      "team_id": 16630516,
+      "team_name": "Seb (allegedly)",
+      "leaderboard_score": "3201.1",
+      "submission_date": "2026-08-07T11:38:45.223000Z",
+      "submission_id": 55299100,
+      "submission_public_score": "3201.1",
+      "submission_created_at": "2026-08-06T13:13:47.387000Z",
+      "episode_id": 90442423,
+      "create_time": "2026-08-06T13:17:47.852000Z",
+      "end_time": "2026-08-06T13:19:16.299000Z",
+      "target_reward": 183082.0,
+      "target_agent_index": 1,
+      "opponent": {
+        "team_id": 16666257,
+        "team_name": "Shijian Wen",
+        "submission_id": 55295001,
+        "reward": 28916.0,
+        "agent_index": 0
+      },
+      "team_reward_rank_within_submission": 1,
+      "selection_reason": "highest_reward_unique_public_episode",
+      "file": "replays/episode-90442423-replay.json",
+      "bytes": 27086494,
+      "sha256": "58aa3a8f2b622b79dded891483076ada5cf572d062b13def023255f072223244",
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "replay_rewards": [
+        28916.0,
+        183082.0
+      ],
+      "seed": 781561028,
+      "module_version": "1.32.4",
+      "schema_version": 1,
+      "team_names": [
+        "Shijian Wen",
+        "Seb (allegedly)"
+      ]
+    },
+    {
+      "rank": 2,
+      "team_id": 16672202,
+      "team_name": "HealthStone",
+      "leaderboard_score": "3132.9",
+      "submission_date": "2026-08-08T06:14:19.830000Z",
+      "submission_id": 55341106,
+      "submission_public_score": "3132.9",
+      "submission_created_at": "2026-08-08T04:43:48.607000Z",
+      "episode_id": 90909860,
+      "create_time": "2026-08-08T04:51:51.943000Z",
+      "end_time": "2026-08-08T04:53:22.953000Z",
+      "target_reward": 151412.0,
+      "target_agent_index": 0,
+      "opponent": {
+        "team_id": 16666055,
+        "team_name": "Axit",
+        "submission_id": 55290647,
+        "reward": 66058.0,
+        "agent_index": 1
+      },
+      "team_reward_rank_within_submission": 1,
+      "selection_reason": "highest_reward_unique_public_episode",
+      "file": "replays/episode-90909860-replay.json",
+      "bytes": 24757931,
+      "sha256": "925aea2b739e3fe68710a16bc41c6084b8662670eaae479b5c792c3d68d52006",
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "replay_rewards": [
+        151412.0,
+        66058.0
+      ],
+      "seed": 1012110528,
+      "module_version": "1.32.6",
+      "schema_version": 1,
+      "team_names": [
+        "HealthStone",
+        "Axit"
+      ]
+    },
+    {
+      "rank": 3,
+      "team_id": 16676321,
+      "team_name": "tao wu11",
+      "leaderboard_score": "3131.4",
+      "submission_date": "2026-08-08T08:22:16.960000Z",
+      "submission_id": 55345236,
+      "submission_public_score": "3131.4",
+      "submission_created_at": "2026-08-08T08:22:16.960000Z",
+      "episode_id": 90970766,
+      "create_time": "2026-08-08T09:43:48.924000Z",
+      "end_time": "2026-08-08T09:45:05.642000Z",
+      "target_reward": 148526.0,
+      "target_agent_index": 0,
+      "opponent": {
+        "team_id": 16678172,
+        "team_name": "Eishkaran Singh",
+        "submission_id": 55319378,
+        "reward": 148667.0,
+        "agent_index": 1
+      },
+      "team_reward_rank_within_submission": 1,
+      "selection_reason": "highest_reward_unique_public_episode",
+      "file": "replays/episode-90970766-replay.json",
+      "bytes": 31802388,
+      "sha256": "242da0d40f59b937c3f83bf986639019569cf5ea67e484d108fa2fa8900133b2",
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "replay_rewards": [
+        148526.0,
+        148667.0
+      ],
+      "seed": 790923403,
+      "module_version": "1.32.6",
+      "schema_version": 1,
+      "team_names": [
+        "tao wu11",
+        "Eishkaran Singh"
+      ]
+    },
+    {
+      "rank": 4,
+      "team_id": 16624979,
+      "team_name": "Mohamed abdelrazik",
+      "leaderboard_score": "3123.1",
+      "submission_date": "2026-08-08T06:44:00.350000Z",
+      "submission_id": 55343482,
+      "submission_public_score": "3123.1",
+      "submission_created_at": "2026-08-08T06:44:00.350000Z",
+      "episode_id": 90942520,
+      "create_time": "2026-08-08T07:27:47.504000Z",
+      "end_time": "2026-08-08T07:29:16.449000Z",
+      "target_reward": 152002.0,
+      "target_agent_index": 1,
+      "opponent": {
+        "team_id": 16668721,
+        "team_name": "Efe Can Celiksoy",
+        "submission_id": 55316738,
+        "reward": 138099.0,
+        "agent_index": 0
+      },
+      "team_reward_rank_within_submission": 1,
+      "selection_reason": "highest_reward_unique_public_episode",
+      "file": "replays/episode-90942520-replay.json",
+      "bytes": 30681468,
+      "sha256": "cd2afca3728acc4615424859dafb8d6f8d042adf04672293989274a392532dac",
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "replay_rewards": [
+        138099.0,
+        152002.0
+      ],
+      "seed": 424149334,
+      "module_version": "1.32.6",
+      "schema_version": 1,
+      "team_names": [
+        "Efe Can Celiksoy",
+        "Mohamed abdelrazik"
+      ]
+    },
+    {
+      "rank": 5,
+      "team_id": 16669403,
+      "team_name": "mrgrishninsb",
+      "leaderboard_score": "3117.6",
+      "submission_date": "2026-08-08T01:16:19.360000Z",
+      "submission_id": 55337518,
+      "submission_public_score": "3117.6",
+      "submission_created_at": "2026-08-08T01:09:22.070000Z",
+      "episode_id": 90890552,
+      "create_time": "2026-08-08T03:19:40.478000Z",
+      "end_time": "2026-08-08T03:21:12.828000Z",
+      "target_reward": 137100.0,
+      "target_agent_index": 0,
+      "opponent": {
+        "team_id": 16679810,
+        "team_name": "Patrick Joël MAIRLOT-MBEZELE",
+        "submission_id": 55314852,
+        "reward": 139218.0,
+        "agent_index": 1
+      },
+      "team_reward_rank_within_submission": 1,
+      "selection_reason": "highest_reward_unique_public_episode",
+      "file": "replays/episode-90890552-replay.json",
+      "bytes": 31806755,
+      "sha256": "3038cdf7f7325b96f2e0d8b78231c764ce85c41812c588e3736caed4247c10b8",
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "replay_rewards": [
+        137100.0,
+        139218.0
+      ],
+      "seed": 1613205847,
+      "module_version": "1.32.6",
+      "schema_version": 1,
+      "team_names": [
+        "mrgrishninsb",
+        "Patrick Joël MAIRLOT-MBEZELE"
+      ]
+    },
+    {
+      "rank": 6,
+      "team_id": 16662492,
+      "team_name": "Lester Leong",
+      "leaderboard_score": "3117.1",
+      "submission_date": "2026-08-08T11:10:17.483000Z",
+      "submission_id": 55348654,
+      "submission_public_score": "3117.1",
+      "submission_created_at": "2026-08-08T11:10:09.330000Z",
+      "episode_id": 90989940,
+      "create_time": "2026-08-08T11:15:49.086000Z",
+      "end_time": "2026-08-08T11:17:08.318000Z",
+      "target_reward": 176794.0,
+      "target_agent_index": 0,
+      "opponent": {
+        "team_id": 16648589,
+        "team_name": "Yilan Zhu",
+        "submission_id": 55268308,
+        "reward": 51056.0,
+        "agent_index": 1
+      },
+      "team_reward_rank_within_submission": 1,
+      "selection_reason": "highest_reward_unique_public_episode",
+      "file": "replays/episode-90989940-replay.json",
+      "bytes": 22263543,
+      "sha256": "c535217cc1ba6cc62a9539863aede8cdba9221a5c9b170e82376d034905ac71f",
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "replay_rewards": [
+        176794.0,
+        51056.0
+      ],
+      "seed": 1448212320,
+      "module_version": "1.32.6",
+      "schema_version": 1,
+      "team_names": [
+        "Lester Leong",
+        "Yilan Zhu"
+      ]
+    },
+    {
+      "rank": 7,
+      "team_id": 16663229,
+      "team_name": "kakuteki",
+      "leaderboard_score": "3103.8",
+      "submission_date": "2026-08-08T03:30:12.310000Z",
+      "submission_id": 55334137,
+      "submission_public_score": "3103.8",
+      "submission_created_at": "2026-08-07T21:27:13.897000Z",
+      "episode_id": 90817820,
+      "create_time": "2026-08-07T21:31:14.248000Z",
+      "end_time": "2026-08-07T21:32:42.472000Z",
+      "target_reward": 152580.0,
+      "target_agent_index": 1,
+      "opponent": {
+        "team_id": 16664251,
+        "team_name": "zzy123123",
+        "submission_id": 55290665,
+        "reward": 38166.0,
+        "agent_index": 0
+      },
+      "team_reward_rank_within_submission": 1,
+      "selection_reason": "highest_reward_unique_public_episode",
+      "file": "replays/episode-90817820-replay.json",
+      "bytes": 21309091,
+      "sha256": "f79c92c1908a4e8dd84aff69d64bce1114505c4c83fb98026458ff46c2b1810b",
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "replay_rewards": [
+        38166.0,
+        152580.0
+      ],
+      "seed": 1469379655,
+      "module_version": "1.32.6",
+      "schema_version": 1,
+      "team_names": [
+        "zzy123123",
+        "kakuteki"
+      ]
+    },
+    {
+      "rank": 8,
+      "team_id": 16626191,
+      "team_name": "kevin park",
+      "leaderboard_score": "3103.3",
+      "submission_date": "2026-08-08T11:53:46.923000Z",
+      "submission_id": 55349527,
+      "submission_public_score": "3103.3",
+      "submission_created_at": "2026-08-08T11:53:46.923000Z",
+      "episode_id": 90998319,
+      "create_time": "2026-08-08T11:55:49.141000Z",
+      "end_time": "2026-08-08T11:57:12.491000Z",
+      "target_reward": 162627.0,
+      "target_agent_index": 0,
+      "opponent": {
+        "team_id": 16689349,
+        "team_name": "Adunola Abdulrahman",
+        "submission_id": 55347421,
+        "reward": 23636.0,
+        "agent_index": 1
+      },
+      "team_reward_rank_within_submission": 1,
+      "selection_reason": "highest_reward_unique_public_episode",
+      "file": "replays/episode-90998319-replay.json",
+      "bytes": 25213393,
+      "sha256": "92e62e016e3f7f64b6764ec64b192e70d98e016f38ab2c9539131116e71a664a",
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "replay_rewards": [
+        162627.0,
+        23636.0
+      ],
+      "seed": 906255362,
+      "module_version": "1.32.6",
+      "schema_version": 1,
+      "team_names": [
+        "kevin park",
+        "Adunola Abdulrahman"
+      ]
+    },
+    {
+      "rank": 9,
+      "team_id": 16669148,
+      "team_name": "Syed Muhammad Gillani",
+      "leaderboard_score": "3100.9",
+      "submission_date": "2026-08-08T10:58:26.313000Z",
+      "submission_id": 55346836,
+      "submission_public_score": "3100.9",
+      "submission_created_at": "2026-08-08T09:38:14.420000Z",
+      "episode_id": 90969937,
+      "create_time": "2026-08-08T09:39:50.147000Z",
+      "end_time": "2026-08-08T09:41:19.350000Z",
+      "target_reward": 158245.0,
+      "target_agent_index": 1,
+      "opponent": {
+        "team_id": 16663981,
+        "team_name": "Steven Pun",
+        "submission_id": 55311657,
+        "reward": 2708.0,
+        "agent_index": 0
+      },
+      "team_reward_rank_within_submission": 1,
+      "selection_reason": "highest_reward_unique_public_episode",
+      "file": "replays/episode-90969937-replay.json",
+      "bytes": 22873361,
+      "sha256": "2b67f83b72b422d587fb87836c1ecfc63dcfb6723af8c91803743ba1d2ff395d",
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "replay_rewards": [
+        2708.0,
+        158245.0
+      ],
+      "seed": 698789182,
+      "module_version": "1.32.6",
+      "schema_version": 1,
+      "team_names": [
+        "Steven Pun",
+        "Syed Muhammad Gillani"
+      ]
+    },
+    {
+      "rank": 10,
+      "team_id": 16632867,
+      "team_name": "Rayk Kretzschmar",
+      "leaderboard_score": "3088.5",
+      "submission_date": "2026-08-08T09:04:51.303000Z",
+      "submission_id": 55345266,
+      "submission_public_score": "3088.5",
+      "submission_created_at": "2026-08-08T08:24:03.880000Z",
+      "episode_id": 90990954,
+      "create_time": "2026-08-08T11:19:49.302000Z",
+      "end_time": "2026-08-08T11:21:14.885000Z",
+      "target_reward": 153271.0,
+      "target_agent_index": 1,
+      "opponent": {
+        "team_id": 16657825,
+        "team_name": "MilanJoshi",
+        "submission_id": 55344924,
+        "reward": 151963.0,
+        "agent_index": 0
+      },
+      "team_reward_rank_within_submission": 1,
+      "selection_reason": "highest_reward_unique_public_episode",
+      "file": "replays/episode-90990954-replay.json",
+      "bytes": 31961907,
+      "sha256": "2ce8f0e810767e63df28c40d4ffb21eec12bec1c0168a5b84d2c4e1db761ac80",
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "replay_rewards": [
+        151963.0,
+        153271.0
+      ],
+      "seed": 588280264,
+      "module_version": "1.32.6",
+      "schema_version": 1,
+      "team_names": [
+        "MilanJoshi",
+        "Rayk Kretzschmar"
+      ]
+    },
+    {
+      "rank": 11,
+      "team_id": 16666393,
+      "team_name": "saikyo",
+      "leaderboard_score": "3084.7",
+      "submission_date": "2026-08-08T14:55:56.163000Z",
+      "submission_id": 55348136,
+      "submission_public_score": "3084.7",
+      "submission_created_at": "2026-08-08T10:43:49.497000Z",
+      "episode_id": 90984960,
+      "create_time": "2026-08-08T10:51:53.825000Z",
+      "end_time": "2026-08-08T10:52:58.370000Z",
+      "target_reward": 136877.0,
+      "target_agent_index": 0,
+      "opponent": {
+        "team_id": 16625149,
+        "team_name": "Rubylicious",
+        "submission_id": 55131247,
+        "reward": 25710.0,
+        "agent_index": 1
+      },
+      "team_reward_rank_within_submission": 1,
+      "selection_reason": "highest_reward_unique_public_episode",
+      "file": "replays/episode-90984960-replay.json",
+      "bytes": 24224189,
+      "sha256": "a855320a94317805ae7d900599c4fa4cfc8881585eeb6830eb0b75edf8f9b6be",
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "replay_rewards": [
+        136877.0,
+        25710.0
+      ],
+      "seed": 1332654100,
+      "module_version": "1.32.6",
+      "schema_version": 1,
+      "team_names": [
+        "saikyo",
+        "Rubylicious"
+      ]
+    },
+    {
+      "rank": 12,
+      "team_id": 16623805,
+      "team_name": "Howon Kang",
+      "leaderboard_score": "3074.7",
+      "submission_date": "2026-08-08T12:29:11.576000Z",
+      "submission_id": 55350305,
+      "submission_public_score": "3074.7",
+      "submission_created_at": "2026-08-08T12:29:11.577000Z",
+      "episode_id": 91006642,
+      "create_time": "2026-08-08T12:35:49.806000Z",
+      "end_time": "2026-08-08T12:37:10.213000Z",
+      "target_reward": 155387.0,
+      "target_agent_index": 0,
+      "opponent": {
+        "team_id": 16682915,
+        "team_name": "igeo kK",
+        "submission_id": 55325401,
+        "reward": 68034.0,
+        "agent_index": 1
+      },
+      "team_reward_rank_within_submission": 1,
+      "selection_reason": "highest_reward_unique_public_episode",
+      "file": "replays/episode-91006642-replay.json",
+      "bytes": 24895627,
+      "sha256": "bf82f707f120d80593fac07f3379b8c0715c39a623b83fc8d132a3abda5d23ab",
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "replay_rewards": [
+        155387.0,
+        68034.0
+      ],
+      "seed": 1771696602,
+      "module_version": "1.32.6",
+      "schema_version": 1,
+      "team_names": [
+        "Howon Kang",
+        "igeo kK"
+      ]
+    },
+    {
+      "rank": 13,
+      "team_id": 16682885,
+      "team_name": "风沙星辰",
+      "leaderboard_score": "3053.1",
+      "submission_date": "2026-08-08T09:50:28.750000Z",
+      "submission_id": 55347083,
+      "submission_public_score": "3053.1",
+      "submission_created_at": "2026-08-08T09:50:28.750000Z",
+      "episode_id": 90973263,
+      "create_time": "2026-08-08T09:55:48.928000Z",
+      "end_time": "2026-08-08T09:57:17.219000Z",
+      "target_reward": 163420.0,
+      "target_agent_index": 0,
+      "opponent": {
+        "team_id": 16644577,
+        "team_name": "Arthur Merritt",
+        "submission_id": 55232983,
+        "reward": 61458.0,
+        "agent_index": 1
+      },
+      "team_reward_rank_within_submission": 1,
+      "selection_reason": "highest_reward_unique_public_episode",
+      "file": "replays/episode-90973263-replay.json",
+      "bytes": 23832749,
+      "sha256": "d46e17e8eebd65b124108be204fd28e6d3e1ad73fb14339014804393faf95e0b",
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "replay_rewards": [
+        163420.0,
+        61458.0
+      ],
+      "seed": 755352880,
+      "module_version": "1.32.6",
+      "schema_version": 1,
+      "team_names": [
+        "风沙星辰",
+        "Arthur Merritt"
+      ]
+    },
+    {
+      "rank": 14,
+      "team_id": 16663252,
+      "team_name": "MD Concepcion",
+      "leaderboard_score": "3051.2",
+      "submission_date": "2026-08-08T09:04:38.230000Z",
+      "submission_id": 55346092,
+      "submission_public_score": "3051.2",
+      "submission_created_at": "2026-08-08T09:04:38.230000Z",
+      "episode_id": 91006014,
+      "create_time": "2026-08-08T12:31:53.271000Z",
+      "end_time": "2026-08-08T12:33:01.874000Z",
+      "target_reward": 140112.0,
+      "target_agent_index": 1,
+      "opponent": {
+        "team_id": 16637546,
+        "team_name": "Forrest",
+        "submission_id": 55344471,
+        "reward": 138232.0,
+        "agent_index": 0
+      },
+      "team_reward_rank_within_submission": 1,
+      "selection_reason": "highest_reward_unique_public_episode",
+      "file": "replays/episode-91006014-replay.json",
+      "bytes": 31959602,
+      "sha256": "fba5c6919d65f2a36beb39e90447b219174e5ceb06715e8303caa8642984a698",
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "replay_rewards": [
+        138232.0,
+        140112.0
+      ],
+      "seed": 1751413991,
+      "module_version": "1.32.6",
+      "schema_version": 1,
+      "team_names": [
+        "Forrest",
+        "MD Concepcion"
+      ]
+    },
+    {
+      "rank": 15,
+      "team_id": 16660259,
+      "team_name": "Marcus",
+      "leaderboard_score": "3049.1",
+      "submission_date": "2026-08-08T03:09:35.423000Z",
+      "submission_id": 55339397,
+      "submission_public_score": "3049.1",
+      "submission_created_at": "2026-08-08T03:09:35.423000Z",
+      "episode_id": 90892125,
+      "create_time": "2026-08-08T03:27:40.431000Z",
+      "end_time": "2026-08-08T03:28:47.683000Z",
+      "target_reward": 140410.0,
+      "target_agent_index": 0,
+      "opponent": {
+        "team_id": 16635872,
+        "team_name": "Evgeniya Dmitrieva",
+        "submission_id": 55161396,
+        "reward": 93874.0,
+        "agent_index": 1
+      },
+      "team_reward_rank_within_submission": 1,
+      "selection_reason": "highest_reward_unique_public_episode",
+      "file": "replays/episode-90892125-replay.json",
+      "bytes": 28888854,
+      "sha256": "b4e4547af7879e7afae03976736396d20e25b9a0fd1bca5360007a196c282781",
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "replay_rewards": [
+        140410.0,
+        93874.0
+      ],
+      "seed": 881211839,
+      "module_version": "1.32.6",
+      "schema_version": 1,
+      "team_names": [
+        "Marcus",
+        "Evgeniya Dmitrieva"
+      ]
+    },
+    {
+      "rank": 16,
+      "team_id": 16660220,
+      "team_name": "tomo11111",
+      "leaderboard_score": "3044.9",
+      "submission_date": "2026-08-08T10:23:19.730000Z",
+      "submission_id": 55347742,
+      "submission_public_score": "3044.9",
+      "submission_created_at": "2026-08-08T10:23:19.730000Z",
+      "episode_id": 90979949,
+      "create_time": "2026-08-08T10:27:48.988000Z",
+      "end_time": "2026-08-08T10:28:59.477000Z",
+      "target_reward": 147760.0,
+      "target_agent_index": 1,
+      "opponent": {
+        "team_id": 16670986,
+        "team_name": "Anas Erami",
+        "submission_id": 55337328,
+        "reward": 23822.0,
+        "agent_index": 0
+      },
+      "team_reward_rank_within_submission": 1,
+      "selection_reason": "highest_reward_unique_public_episode",
+      "file": "replays/episode-90979949-replay.json",
+      "bytes": 28682608,
+      "sha256": "12a87b0b98b89bc08394df2c11c8fe88ec4b24ba47389d6e630be58d828d39ae",
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "replay_rewards": [
+        23822.0,
+        147760.0
+      ],
+      "seed": 1846960796,
+      "module_version": "1.32.6",
+      "schema_version": 1,
+      "team_names": [
+        "Anas Erami",
+        "tomo11111"
+      ]
+    },
+    {
+      "rank": 17,
+      "team_id": 16623152,
+      "team_name": "Ibad Ur Rahman",
+      "leaderboard_score": "3042.9",
+      "submission_date": "2026-08-08T09:06:49.710000Z",
+      "submission_id": 55346155,
+      "submission_public_score": "3042.9",
+      "submission_created_at": "2026-08-08T09:06:49.710000Z",
+      "episode_id": 90964958,
+      "create_time": "2026-08-08T09:15:49.673000Z",
+      "end_time": "2026-08-08T09:17:18.720000Z",
+      "target_reward": 177720.0,
+      "target_agent_index": 0,
+      "opponent": {
+        "team_id": 16671913,
+        "team_name": "res67",
+        "submission_id": 55324677,
+        "reward": 9701.0,
+        "agent_index": 1
+      },
+      "team_reward_rank_within_submission": 1,
+      "selection_reason": "highest_reward_unique_public_episode",
+      "file": "replays/episode-90964958-replay.json",
+      "bytes": 22546201,
+      "sha256": "fb387c2e9f29da4201b5d48648f98083c0939bed689193f23d90beec5959690a",
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "replay_rewards": [
+        177720.0,
+        9701.0
+      ],
+      "seed": 413367907,
+      "module_version": "1.32.6",
+      "schema_version": 1,
+      "team_names": [
+        "Ibad Ur Rahman",
+        "res67"
+      ]
+    },
+    {
+      "rank": 18,
+      "team_id": 16629165,
+      "team_name": "lingyu07",
+      "leaderboard_score": "3035.9",
+      "submission_date": "2026-08-08T09:51:24.013000Z",
+      "submission_id": 55347101,
+      "submission_public_score": "3035.9",
+      "submission_created_at": "2026-08-08T09:51:24.013000Z",
+      "episode_id": 90974094,
+      "create_time": "2026-08-08T09:59:49.224000Z",
+      "end_time": "2026-08-08T10:01:25.973000Z",
+      "target_reward": 149024.0,
+      "target_agent_index": 0,
+      "opponent": {
+        "team_id": 16663594,
+        "team_name": "NGU BLACK SANTA",
+        "submission_id": 55273823,
+        "reward": 30893.0,
+        "agent_index": 1
+      },
+      "team_reward_rank_within_submission": 1,
+      "selection_reason": "highest_reward_unique_public_episode",
+      "file": "replays/episode-90974094-replay.json",
+      "bytes": 24753175,
+      "sha256": "3c332b282276eb8f567123db47171d6a13f2bd74cc369feec220b79d30bd501d",
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "replay_rewards": [
+        149024.0,
+        30893.0
+      ],
+      "seed": 1730551516,
+      "module_version": "1.32.6",
+      "schema_version": 1,
+      "team_names": [
+        "lingyu07",
+        "NGU BLACK SANTA"
+      ]
+    },
+    {
+      "rank": 19,
+      "team_id": 16682494,
+      "team_name": "Phi",
+      "leaderboard_score": "3034.5",
+      "submission_date": "2026-08-08T14:49:50.983000Z",
+      "submission_id": 55344002,
+      "submission_public_score": "3034.5",
+      "submission_created_at": "2026-08-08T07:13:49Z",
+      "episode_id": 90941726,
+      "create_time": "2026-08-08T07:23:47.540000Z",
+      "end_time": "2026-08-08T07:25:04.694000Z",
+      "target_reward": 149980.0,
+      "target_agent_index": 0,
+      "opponent": {
+        "team_id": 16678638,
+        "team_name": "Loshtradz",
+        "submission_id": 55333637,
+        "reward": 83422.0,
+        "agent_index": 1
+      },
+      "team_reward_rank_within_submission": 1,
+      "selection_reason": "highest_reward_unique_public_episode",
+      "file": "replays/episode-90941726-replay.json",
+      "bytes": 29685475,
+      "sha256": "25c2fb11387ef9d4497e1f706c1ced1e680681907efcc86a66fceb6f9db81732",
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "replay_rewards": [
+        149980.0,
+        83422.0
+      ],
+      "seed": 1422364626,
+      "module_version": "1.32.6",
+      "schema_version": 1,
+      "team_names": [
+        "Phi",
+        "Loshtradz"
+      ]
+    },
+    {
+      "rank": 20,
+      "team_id": 16663928,
+      "team_name": "Auxileon",
+      "leaderboard_score": "3032.8",
+      "submission_date": "2026-08-08T04:06:20.066000Z",
+      "submission_id": 55340360,
+      "submission_public_score": "3032.8",
+      "submission_created_at": "2026-08-08T04:06:20.067000Z",
+      "episode_id": 90900520,
+      "create_time": "2026-08-08T04:07:40.023000Z",
+      "end_time": "2026-08-08T04:09:11.834000Z",
+      "target_reward": 158903.0,
+      "target_agent_index": 1,
+      "opponent": {
+        "team_id": 16633069,
+        "team_name": "Nur Srijan",
+        "submission_id": 55295340,
+        "reward": 46173.0,
+        "agent_index": 0
+      },
+      "team_reward_rank_within_submission": 1,
+      "selection_reason": "highest_reward_unique_public_episode",
+      "file": "replays/episode-90900520-replay.json",
+      "bytes": 24282763,
+      "sha256": "bba0c5064cc2247a1eadd8cf0af3ed9efec2742d4c463b16a0348626f2fbe25b",
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "replay_rewards": [
+        46173.0,
+        158903.0
+      ],
+      "seed": 300528428,
+      "module_version": "1.32.6",
+      "schema_version": 1,
+      "team_names": [
+        "Nur Srijan",
+        "Auxileon"
+      ]
+    },
+    {
+      "rank": 21,
+      "team_id": 16669256,
+      "team_name": "Shivam_2212",
+      "leaderboard_score": "3026.3",
+      "submission_date": "2026-08-08T14:35:51.093000Z",
+      "submission_id": 55345819,
+      "submission_public_score": "3026.3",
+      "submission_created_at": "2026-08-08T08:51:21.023000Z",
+      "episode_id": 90988372,
+      "create_time": "2026-08-08T11:07:48.970000Z",
+      "end_time": "2026-08-08T11:09:17.672000Z",
+      "target_reward": 137083.0,
+      "target_agent_index": 0,
+      "opponent": {
+        "team_id": 16632867,
+        "team_name": "Rayk Kretzschmar",
+        "submission_id": 55345266,
+        "reward": 139516.0,
+        "agent_index": 1
+      },
+      "team_reward_rank_within_submission": 1,
+      "selection_reason": "highest_reward_unique_public_episode",
+      "file": "replays/episode-90988372-replay.json",
+      "bytes": 31961410,
+      "sha256": "efd226194104666917fafacbfb537a6d89a3a08ec850b76128e4d043d3f1356e",
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "replay_rewards": [
+        137083.0,
+        139516.0
+      ],
+      "seed": 142739803,
+      "module_version": "1.32.6",
+      "schema_version": 1,
+      "team_names": [
+        "Shivam_2212",
+        "Rayk Kretzschmar"
+      ]
+    },
+    {
+      "rank": 22,
+      "team_id": 16660037,
+      "team_name": "shehai.lrs",
+      "leaderboard_score": "3016.6",
+      "submission_date": "2026-08-08T13:50:31.826000Z",
+      "submission_id": 55347115,
+      "submission_public_score": "3016.6",
+      "submission_created_at": "2026-08-08T09:51:51.587000Z",
+      "episode_id": 90974091,
+      "create_time": "2026-08-08T09:59:49.221000Z",
+      "end_time": "2026-08-08T10:01:18.229000Z",
+      "target_reward": 148987.0,
+      "target_agent_index": 0,
+      "opponent": {
+        "team_id": 16665046,
+        "team_name": "Srish Jana",
+        "submission_id": 55279730,
+        "reward": 27160.0,
+        "agent_index": 1
+      },
+      "team_reward_rank_within_submission": 1,
+      "selection_reason": "highest_reward_unique_public_episode",
+      "file": "replays/episode-90974091-replay.json",
+      "bytes": 35771640,
+      "sha256": "ef37a5719ecad52668b11503578a6fb6e5f3ec229eb596748b202414aa68093b",
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "replay_rewards": [
+        148987.0,
+        27160.0
+      ],
+      "seed": 1710895486,
+      "module_version": "1.32.6",
+      "schema_version": 1,
+      "team_names": [
+        "shehai.lrs",
+        "Srish Jana"
+      ]
+    },
+    {
+      "rank": 23,
+      "team_id": 16637546,
+      "team_name": "Forrest",
+      "leaderboard_score": "3016.1",
+      "submission_date": "2026-08-08T13:21:37.470000Z",
+      "submission_id": 55344471,
+      "submission_public_score": "3016.1",
+      "submission_created_at": "2026-08-08T07:38:16.383000Z",
+      "episode_id": 90969176,
+      "create_time": "2026-08-08T09:35:49.536000Z",
+      "end_time": "2026-08-08T09:37:17.165000Z",
+      "target_reward": 145711.0,
+      "target_agent_index": 1,
+      "opponent": {
+        "team_id": 16659395,
+        "team_name": "HyperX",
+        "submission_id": 55334338,
+        "reward": 143519.0,
+        "agent_index": 0
+      },
+      "team_reward_rank_within_submission": 1,
+      "selection_reason": "highest_reward_unique_public_episode",
+      "file": "replays/episode-90969176-replay.json",
+      "bytes": 31995787,
+      "sha256": "83e27e3e4fb2044f1a9677d4eb3664315cc2b9bfea26fd4f543451a3a5c43de4",
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "replay_rewards": [
+        143519.0,
+        145711.0
+      ],
+      "seed": 1163763692,
+      "module_version": "1.32.6",
+      "schema_version": 1,
+      "team_names": [
+        "HyperX",
+        "Forrest"
+      ]
+    },
+    {
+      "rank": 24,
+      "team_id": 16667219,
+      "team_name": "Komil Parmar",
+      "leaderboard_score": "3014.1",
+      "submission_date": "2026-08-08T10:00:55.736000Z",
+      "submission_id": 55347287,
+      "submission_public_score": "3014.1",
+      "submission_created_at": "2026-08-08T10:00:42.740000Z",
+      "episode_id": 90974965,
+      "create_time": "2026-08-08T10:03:49.628000Z",
+      "end_time": "2026-08-08T10:05:06.161000Z",
+      "target_reward": 183163.0,
+      "target_agent_index": 0,
+      "opponent": {
+        "team_id": 16677747,
+        "team_name": "Yuvraj Bhatt",
+        "submission_id": 55317008,
+        "reward": 4742.0,
+        "agent_index": 1
+      },
+      "team_reward_rank_within_submission": 1,
+      "selection_reason": "highest_reward_unique_public_episode",
+      "file": "replays/episode-90974965-replay.json",
+      "bytes": 21117289,
+      "sha256": "42fac636db4b3531968e6701b33089b40824c29b78573f36365a785bc244a9bb",
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "replay_rewards": [
+        183163.0,
+        4742.0
+      ],
+      "seed": 495454069,
+      "module_version": "1.32.6",
+      "schema_version": 1,
+      "team_names": [
+        "Komil Parmar",
+        "Yuvraj Bhatt"
+      ]
+    },
+    {
+      "rank": 25,
+      "team_id": 16670032,
+      "team_name": "Kenjo1209",
+      "leaderboard_score": "3012.6",
+      "submission_date": "2026-08-08T12:53:17.270000Z",
+      "submission_id": 55347137,
+      "submission_public_score": "3012.6",
+      "submission_created_at": "2026-08-08T09:52:58.977000Z",
+      "episode_id": 91023598,
+      "create_time": "2026-08-08T13:55:56.585000Z",
+      "end_time": "2026-08-08T13:57:24.563000Z",
+      "target_reward": 148604.0,
+      "target_agent_index": 0,
+      "opponent": {
+        "team_id": 16662492,
+        "team_name": "Lester Leong",
+        "submission_id": 55348654,
+        "reward": 149033.0,
+        "agent_index": 1
+      },
+      "team_reward_rank_within_submission": 1,
+      "selection_reason": "highest_reward_unique_public_episode",
+      "file": "replays/episode-91023598-replay.json",
+      "bytes": 31967137,
+      "sha256": "e305125701c888cc503f7d8067228cf991316713d8a68aca73aa44ea633dd56d",
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "replay_rewards": [
+        148604.0,
+        149033.0
+      ],
+      "seed": 1314198640,
+      "module_version": "1.32.6",
+      "schema_version": 1,
+      "team_names": [
+        "Kenjo1209",
+        "Lester Leong"
+      ]
+    },
+    {
+      "rank": 26,
+      "team_id": 16637973,
+      "team_name": "StephenNedumpally",
+      "leaderboard_score": "3005.7",
+      "submission_date": "2026-08-08T12:48:20.500000Z",
+      "submission_id": 55350741,
+      "submission_public_score": "3005.7",
+      "submission_created_at": "2026-08-08T12:48:20.500000Z",
+      "episode_id": 91011637,
+      "create_time": "2026-08-08T12:59:49.031000Z",
+      "end_time": "2026-08-08T13:01:37.658000Z",
+      "target_reward": 154891.0,
+      "target_agent_index": 0,
+      "opponent": {
+        "team_id": 16682876,
+        "team_name": "Kartik Garg",
+        "submission_id": 55321692,
+        "reward": 61882.0,
+        "agent_index": 1
+      },
+      "team_reward_rank_within_submission": 1,
+      "selection_reason": "highest_reward_unique_public_episode",
+      "file": "replays/episode-91011637-replay.json",
+      "bytes": 24583158,
+      "sha256": "be7737a3cd7db6749742a59ef14f513bad50f040d776427deb597f92490c5999",
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "replay_rewards": [
+        154891.0,
+        61882.0
+      ],
+      "seed": 1547632726,
+      "module_version": "1.32.6",
+      "schema_version": 1,
+      "team_names": [
+        "StephenNedumpally",
+        "Kartik Garg"
+      ]
+    },
+    {
+      "rank": 27,
+      "team_id": 16660678,
+      "team_name": "Chaitanya Sonaje",
+      "leaderboard_score": "3003.5",
+      "submission_date": "2026-08-08T10:29:30.186000Z",
+      "submission_id": 55347853,
+      "submission_public_score": "3003.5",
+      "submission_created_at": "2026-08-08T10:29:30.187000Z",
+      "episode_id": 90995806,
+      "create_time": "2026-08-08T11:43:51.467000Z",
+      "end_time": "2026-08-08T11:45:02.629000Z",
+      "target_reward": 141219.0,
+      "target_agent_index": 1,
+      "opponent": {
+        "team_id": 16660215,
+        "team_name": "YoungDSML [dsml.kz]",
+        "submission_id": 55287570,
+        "reward": 136774.0,
+        "agent_index": 0
+      },
+      "team_reward_rank_within_submission": 1,
+      "selection_reason": "highest_reward_unique_public_episode",
+      "file": "replays/episode-90995806-replay.json",
+      "bytes": 31656032,
+      "sha256": "2082f518085c7c4f1d37aca6ab75b03de56795153ccdb2f7c3e60924ef2ccef2",
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "replay_rewards": [
+        136774.0,
+        141219.0
+      ],
+      "seed": 780894883,
+      "module_version": "1.32.6",
+      "schema_version": 1,
+      "team_names": [
+        "YoungDSML [dsml.kz]",
+        "Chaitanya Sonaje"
+      ]
+    },
+    {
+      "rank": 28,
+      "team_id": 16686827,
+      "team_name": "Kronki",
+      "leaderboard_score": "3003.2",
+      "submission_date": "2026-08-08T12:40:10.563000Z",
+      "submission_id": 55350228,
+      "submission_public_score": "3003.2",
+      "submission_created_at": "2026-08-08T12:26:05.480000Z",
+      "episode_id": 91005796,
+      "create_time": "2026-08-08T12:31:52.709000Z",
+      "end_time": "2026-08-08T12:33:17.191000Z",
+      "target_reward": 147281.0,
+      "target_agent_index": 1,
+      "opponent": {
+        "team_id": 16676663,
+        "team_name": "This cat is called Fumi",
+        "submission_id": 55310174,
+        "reward": 38421.0,
+        "agent_index": 0
+      },
+      "team_reward_rank_within_submission": 1,
+      "selection_reason": "highest_reward_unique_public_episode",
+      "file": "replays/episode-91005796-replay.json",
+      "bytes": 24755796,
+      "sha256": "ad3a05eed2b35afd5af830eeafbdb981f50dfd008eb1e75a841a64de7431cd07",
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "replay_rewards": [
+        38421.0,
+        147281.0
+      ],
+      "seed": 382810314,
+      "module_version": "1.32.6",
+      "schema_version": 1,
+      "team_names": [
+        "This cat is called Fumi",
+        "Kronki"
+      ]
+    },
+    {
+      "rank": 29,
+      "team_id": 16631536,
+      "team_name": "kglctf",
+      "leaderboard_score": "2997.5",
+      "submission_date": "2026-08-08T12:42:57.810000Z",
+      "submission_id": 55350603,
+      "submission_public_score": "2997.5",
+      "submission_created_at": "2026-08-08T12:42:57.810000Z",
+      "episode_id": 91010817,
+      "create_time": "2026-08-08T12:55:48.814000Z",
+      "end_time": "2026-08-08T12:57:07.669000Z",
+      "target_reward": 170045.0,
+      "target_agent_index": 0,
+      "opponent": {
+        "team_id": 16632100,
+        "team_name": "Mohit Shirke",
+        "submission_id": 55330826,
+        "reward": 54653.0,
+        "agent_index": 1
+      },
+      "team_reward_rank_within_submission": 1,
+      "selection_reason": "highest_reward_unique_public_episode",
+      "file": "replays/episode-91010817-replay.json",
+      "bytes": 24424274,
+      "sha256": "4b4cece8ebe510acef8a36ff0eec8923e810b84e71af7fb283007711652a7d22",
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "replay_rewards": [
+        170045.0,
+        54653.0
+      ],
+      "seed": 1824476946,
+      "module_version": "1.32.6",
+      "schema_version": 1,
+      "team_names": [
+        "kglctf",
+        "Mohit Shirke"
+      ]
+    },
+    {
+      "rank": 30,
+      "team_id": 16688732,
+      "team_name": "tully_boss",
+      "leaderboard_score": "2997.1",
+      "submission_date": "2026-08-08T06:57:18.806000Z",
+      "submission_id": 55343317,
+      "submission_public_score": "2997.1",
+      "submission_created_at": "2026-08-08T06:34:18.707000Z",
+      "episode_id": 90933359,
+      "create_time": "2026-08-08T06:43:47.799000Z",
+      "end_time": "2026-08-08T06:45:11.500000Z",
+      "target_reward": 153539.0,
+      "target_agent_index": 1,
+      "opponent": {
+        "team_id": 16660345,
+        "team_name": "Aadhithya Ramesh",
+        "submission_id": 55270419,
+        "reward": 86372.0,
+        "agent_index": 0
+      },
+      "team_reward_rank_within_submission": 1,
+      "selection_reason": "highest_reward_unique_public_episode",
+      "file": "replays/episode-90933359-replay.json",
+      "bytes": 28820142,
+      "sha256": "8d7c92fac71fe81b27ab9c9651c78bac72fca9c005f574bcf43f60e408cd1233",
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "replay_rewards": [
+        86372.0,
+        153539.0
+      ],
+      "seed": 646861790,
+      "module_version": "1.32.6",
+      "schema_version": 1,
+      "team_names": [
+        "Aadhithya Ramesh",
+        "tully_boss"
+      ]
+    },
+    {
+      "rank": 31,
+      "team_id": 16665596,
+      "team_name": "chunhu666",
+      "leaderboard_score": "2994.3",
+      "submission_date": "2026-08-08T10:49:51.386000Z",
+      "submission_id": 55344800,
+      "submission_public_score": "2994.3",
+      "submission_created_at": "2026-08-08T07:58:07.503000Z",
+      "episode_id": 90985123,
+      "create_time": "2026-08-08T10:51:54.201000Z",
+      "end_time": "2026-08-08T10:53:19.146000Z",
+      "target_reward": 137309.0,
+      "target_agent_index": 1,
+      "opponent": {
+        "team_id": 16659395,
+        "team_name": "HyperX",
+        "submission_id": 55334338,
+        "reward": 134750.0,
+        "agent_index": 0
+      },
+      "team_reward_rank_within_submission": 1,
+      "selection_reason": "highest_reward_unique_public_episode",
+      "file": "replays/episode-90985123-replay.json",
+      "bytes": 31996586,
+      "sha256": "c30d6fefc54c730bcb56545326c38e37a81706e438307b6ec3143bd74c1f5350",
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "replay_rewards": [
+        134750.0,
+        137309.0
+      ],
+      "seed": 1305106134,
+      "module_version": "1.32.6",
+      "schema_version": 1,
+      "team_names": [
+        "HyperX",
+        "chunhu666"
+      ]
+    },
+    {
+      "rank": 32,
+      "team_id": 16641169,
+      "team_name": "boatlee",
+      "leaderboard_score": "2992.9",
+      "submission_date": "2026-08-08T07:01:09.570000Z",
+      "submission_id": 55343774,
+      "submission_public_score": "2992.9",
+      "submission_created_at": "2026-08-08T07:01:09.570000Z",
+      "episode_id": 90969213,
+      "create_time": "2026-08-08T09:35:49.600000Z",
+      "end_time": "2026-08-08T09:37:18.809000Z",
+      "target_reward": 147519.0,
+      "target_agent_index": 1,
+      "opponent": {
+        "team_id": 16633043,
+        "team_name": "Ryan Adams",
+        "submission_id": 55308266,
+        "reward": 148974.0,
+        "agent_index": 0
+      },
+      "team_reward_rank_within_submission": 1,
+      "selection_reason": "highest_reward_unique_public_episode",
+      "file": "replays/episode-90969213-replay.json",
+      "bytes": 31805748,
+      "sha256": "4832fc019ce9067c336d7bd83fbeff526ec7bc083ea392bc0016efca4057af50",
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "replay_rewards": [
+        148974.0,
+        147519.0
+      ],
+      "seed": 1053215752,
+      "module_version": "1.32.6",
+      "schema_version": 1,
+      "team_names": [
+        "Ryan Adams",
+        "boatlee"
+      ]
+    },
+    {
+      "rank": 33,
+      "team_id": 16641077,
+      "team_name": "lucaskna",
+      "leaderboard_score": "2987.1",
+      "submission_date": "2026-08-08T13:27:29.440000Z",
+      "submission_id": 55351607,
+      "submission_public_score": "2987.1",
+      "submission_created_at": "2026-08-08T13:27:29.440000Z",
+      "episode_id": 91023354,
+      "create_time": "2026-08-08T13:55:56.168000Z",
+      "end_time": "2026-08-08T13:57:18.964000Z",
+      "target_reward": 166041.0,
+      "target_agent_index": 1,
+      "opponent": {
+        "team_id": 16661607,
+        "team_name": "choqui62",
+        "submission_id": 55297647,
+        "reward": 131243.0,
+        "agent_index": 0
+      },
+      "team_reward_rank_within_submission": 1,
+      "selection_reason": "highest_reward_unique_public_episode",
+      "file": "replays/episode-91023354-replay.json",
+      "bytes": 29937142,
+      "sha256": "faf5fe081e1202c5f16c66c3b02dae91e43a3d3ce892ebbcbdf2f4c5e09ee32e",
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "replay_rewards": [
+        131243.0,
+        166041.0
+      ],
+      "seed": 85175755,
+      "module_version": "1.32.6",
+      "schema_version": 1,
+      "team_names": [
+        "choqui62",
+        "lucaskna"
+      ]
+    },
+    {
+      "rank": 34,
+      "team_id": 16671012,
+      "team_name": "Sean Zhang",
+      "leaderboard_score": "2986.4",
+      "submission_date": "2026-08-08T03:18:41.410000Z",
+      "submission_id": 55335088,
+      "submission_public_score": "2986.4",
+      "submission_created_at": "2026-08-07T22:43:20.483000Z",
+      "episode_id": 90833487,
+      "create_time": "2026-08-07T22:47:14.537000Z",
+      "end_time": "2026-08-07T22:48:38.832000Z",
+      "target_reward": 154317.0,
+      "target_agent_index": 1,
+      "opponent": {
+        "team_id": 16671773,
+        "team_name": "Sawyer Lundberg",
+        "submission_id": 55311988,
+        "reward": 8346.0,
+        "agent_index": 0
+      },
+      "team_reward_rank_within_submission": 1,
+      "selection_reason": "highest_reward_unique_public_episode",
+      "file": "replays/episode-90833487-replay.json",
+      "bytes": 24233198,
+      "sha256": "424df9165431a4aa5629bb893c4aed097fe87a994444587f96b08b71d148c925",
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "replay_rewards": [
+        8346.0,
+        154317.0
+      ],
+      "seed": 1593752527,
+      "module_version": "1.32.6",
+      "schema_version": 1,
+      "team_names": [
+        "Sawyer Lundberg",
+        "Sean Zhang"
+      ]
+    },
+    {
+      "rank": 35,
+      "team_id": 16684568,
+      "team_name": "[ODS] waniz",
+      "leaderboard_score": "2986.4",
+      "submission_date": "2026-08-08T11:04:42.970000Z",
+      "submission_id": 55348539,
+      "submission_public_score": "2986.4",
+      "submission_created_at": "2026-08-08T11:04:42.970000Z",
+      "episode_id": 90989111,
+      "create_time": "2026-08-08T11:11:54.842000Z",
+      "end_time": "2026-08-08T11:13:22.853000Z",
+      "target_reward": 155320.0,
+      "target_agent_index": 1,
+      "opponent": {
+        "team_id": 16660310,
+        "team_name": "KOLONEX.NET",
+        "submission_id": 55245394,
+        "reward": 42657.0,
+        "agent_index": 0
+      },
+      "team_reward_rank_within_submission": 1,
+      "selection_reason": "highest_reward_unique_public_episode",
+      "file": "replays/episode-90989111-replay.json",
+      "bytes": 30592145,
+      "sha256": "426f878c7af4ef1fec177ff7336f55eaa00cb41b1b76f5a7556d944a3af97b27",
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "replay_rewards": [
+        42657.0,
+        155320.0
+      ],
+      "seed": 1441608092,
+      "module_version": "1.32.6",
+      "schema_version": 1,
+      "team_names": [
+        "KOLONEX.NET",
+        "[ODS] waniz"
+      ]
+    },
+    {
+      "rank": 36,
+      "team_id": 16624893,
+      "team_name": "GURU Prasaatha S",
+      "leaderboard_score": "2981.3",
+      "submission_date": "2026-08-08T10:57:29.416000Z",
+      "submission_id": 55348392,
+      "submission_public_score": "2981.3",
+      "submission_created_at": "2026-08-08T10:57:29.417000Z",
+      "episode_id": 91007617,
+      "create_time": "2026-08-08T12:39:49.919000Z",
+      "end_time": "2026-08-08T12:41:07.630000Z",
+      "target_reward": 134868.0,
+      "target_agent_index": 0,
+      "opponent": {
+        "team_id": 16659295,
+        "team_name": "snaykey",
+        "submission_id": 55347134,
+        "reward": 134018.0,
+        "agent_index": 1
+      },
+      "team_reward_rank_within_submission": 1,
+      "selection_reason": "highest_reward_unique_public_episode",
+      "file": "replays/episode-91007617-replay.json",
+      "bytes": 31963457,
+      "sha256": "f0e86d1eca6d272ddd7c18a3532c9e628e8d368d33bd62ed8dc9e40de28de240",
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "replay_rewards": [
+        134868.0,
+        134018.0
+      ],
+      "seed": 1499591232,
+      "module_version": "1.32.6",
+      "schema_version": 1,
+      "team_names": [
+        "GURU Prasaatha S",
+        "snaykey"
+      ]
+    },
+    {
+      "rank": 37,
+      "team_id": 16629685,
+      "team_name": "mikelou1",
+      "leaderboard_score": "2978.7",
+      "submission_date": "2026-08-08T04:59:35.763000Z",
+      "submission_id": 55341437,
+      "submission_public_score": "2978.7",
+      "submission_created_at": "2026-08-08T04:59:35.763000Z",
+      "episode_id": 90956870,
+      "create_time": "2026-08-08T08:35:50.433000Z",
+      "end_time": "2026-08-08T08:37:13.856000Z",
+      "target_reward": 144477.0,
+      "target_agent_index": 1,
+      "opponent": {
+        "team_id": 16674839,
+        "team_name": "hongqian miao",
+        "submission_id": 55340623,
+        "reward": 145329.0,
+        "agent_index": 0
+      },
+      "team_reward_rank_within_submission": 1,
+      "selection_reason": "highest_reward_unique_public_episode",
+      "file": "replays/episode-90956870-replay.json",
+      "bytes": 31970577,
+      "sha256": "28e07c4ccd73a6770d8adf679dad29633106958ef97cac0d3328563786d685da",
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "replay_rewards": [
+        145329.0,
+        144477.0
+      ],
+      "seed": 676367652,
+      "module_version": "1.32.6",
+      "schema_version": 1,
+      "team_names": [
+        "hongqian miao",
+        "mikelou1"
+      ]
+    },
+    {
+      "rank": 38,
+      "team_id": 16674839,
+      "team_name": "hongqian miao",
+      "leaderboard_score": "2974.4",
+      "submission_date": "2026-08-08T09:24:03.143000Z",
+      "submission_id": 55340623,
+      "submission_public_score": "2974.4",
+      "submission_created_at": "2026-08-08T04:19:03.800000Z",
+      "episode_id": 90904768,
+      "create_time": "2026-08-08T04:27:39.832000Z",
+      "end_time": "2026-08-08T04:28:50.871000Z",
+      "target_reward": 160474.0,
+      "target_agent_index": 1,
+      "opponent": {
+        "team_id": 16668648,
+        "team_name": "Mason R. Brito",
+        "submission_id": 55314673,
+        "reward": 94289.0,
+        "agent_index": 0
+      },
+      "team_reward_rank_within_submission": 1,
+      "selection_reason": "highest_reward_unique_public_episode",
+      "file": "replays/episode-90904768-replay.json",
+      "bytes": 26232255,
+      "sha256": "661ca9d3917220846a80026f53be51ede892eabcd7170d954ea836c4d4493e8c",
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "replay_rewards": [
+        94289.0,
+        160474.0
+      ],
+      "seed": 254648254,
+      "module_version": "1.32.6",
+      "schema_version": 1,
+      "team_names": [
+        "Mason R. Brito",
+        "hongqian miao"
+      ]
+    },
+    {
+      "rank": 39,
+      "team_id": 16668370,
+      "team_name": "Matthew Labrador",
+      "leaderboard_score": "2968.0",
+      "submission_date": "2026-08-08T12:53:49.803000Z",
+      "submission_id": 55350882,
+      "submission_public_score": "2968.0",
+      "submission_created_at": "2026-08-08T12:53:49.803000Z",
+      "episode_id": 91028460,
+      "create_time": "2026-08-08T14:19:56.735000Z",
+      "end_time": "2026-08-08T14:21:15.089000Z",
+      "target_reward": 141919.0,
+      "target_agent_index": 0,
+      "opponent": {
+        "team_id": 16686827,
+        "team_name": "Kronki",
+        "submission_id": 55350524,
+        "reward": 141458.0,
+        "agent_index": 1
+      },
+      "team_reward_rank_within_submission": 1,
+      "selection_reason": "highest_reward_unique_public_episode",
+      "file": "replays/episode-91028460-replay.json",
+      "bytes": 31971192,
+      "sha256": "a525771e1e7ac24d68f34550422f9fdab39a64309e2d0fcdd8bbc58ac298330f",
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "replay_rewards": [
+        141919.0,
+        141458.0
+      ],
+      "seed": 658155348,
+      "module_version": "1.32.6",
+      "schema_version": 1,
+      "team_names": [
+        "Matthew Labrador",
+        "Kronki"
+      ]
+    },
+    {
+      "rank": 40,
+      "team_id": 16667124,
+      "team_name": "Chaotic Era",
+      "leaderboard_score": "2966.4",
+      "submission_date": "2026-08-08T12:54:08.943000Z",
+      "submission_id": 55337648,
+      "submission_public_score": "2966.4",
+      "submission_created_at": "2026-08-08T01:16:39.137000Z",
+      "episode_id": 90865234,
+      "create_time": "2026-08-08T01:19:39.990000Z",
+      "end_time": "2026-08-08T01:20:48.710000Z",
+      "target_reward": 152346.0,
+      "target_agent_index": 0,
+      "opponent": {
+        "team_id": 16658655,
+        "team_name": "HbjaHbja",
+        "submission_id": 55296433,
+        "reward": 3000.0,
+        "agent_index": 1
+      },
+      "team_reward_rank_within_submission": 1,
+      "selection_reason": "highest_reward_unique_public_episode",
+      "file": "replays/episode-90865234-replay.json",
+      "bytes": 18126578,
+      "sha256": "7f95022ff42190c1145b590a571d1aaf79034e923139ef659080beb8766d6050",
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "replay_rewards": [
+        152346.0,
+        3000.0
+      ],
+      "seed": 905457668,
+      "module_version": "1.32.6",
+      "schema_version": 1,
+      "team_names": [
+        "Chaotic Era",
+        "HbjaHbja"
+      ]
+    },
+    {
+      "rank": 41,
+      "team_id": 16671174,
+      "team_name": "Alexandre008",
+      "leaderboard_score": "2963.1",
+      "submission_date": "2026-08-08T13:01:45.083000Z",
+      "submission_id": 55336902,
+      "submission_public_score": "2963.1",
+      "submission_created_at": "2026-08-08T00:28:58.397000Z",
+      "episode_id": 90953514,
+      "create_time": "2026-08-08T08:19:49.431000Z",
+      "end_time": "2026-08-08T08:21:15.960000Z",
+      "target_reward": 143083.0,
+      "target_agent_index": 1,
+      "opponent": {
+        "team_id": 16663928,
+        "team_name": "Auxileon",
+        "submission_id": 55340360,
+        "reward": 143927.0,
+        "agent_index": 0
+      },
+      "team_reward_rank_within_submission": 1,
+      "selection_reason": "highest_reward_unique_public_episode",
+      "file": "replays/episode-90953514-replay.json",
+      "bytes": 31965218,
+      "sha256": "1629cef51471d4452eca3b9dec6d3b62bf94156a4ddb3d186a9e7ea3dab133d2",
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "replay_rewards": [
+        143927.0,
+        143083.0
+      ],
+      "seed": 1260812871,
+      "module_version": "1.32.6",
+      "schema_version": 1,
+      "team_names": [
+        "Auxileon",
+        "Alexandre008"
+      ]
+    },
+    {
+      "rank": 42,
+      "team_id": 16663668,
+      "team_name": "╰┈➤ˎˊ˗ www.sleepyai.org",
+      "leaderboard_score": "2960.5",
+      "submission_date": "2026-08-07T18:44:41.950000Z",
+      "submission_id": 55319673,
+      "submission_public_score": "2960.5",
+      "submission_created_at": "2026-08-07T08:09:52.570000Z",
+      "episode_id": 90657199,
+      "create_time": "2026-08-07T08:11:59.374000Z",
+      "end_time": "2026-08-07T08:13:34.350000Z",
+      "target_reward": 172555.0,
+      "target_agent_index": 1,
+      "opponent": {
+        "team_id": 16664359,
+        "team_name": "Apil Khadka",
+        "submission_id": 55298707,
+        "reward": 57262.0,
+        "agent_index": 0
+      },
+      "team_reward_rank_within_submission": 1,
+      "selection_reason": "highest_reward_unique_public_episode",
+      "file": "replays/episode-90657199-replay.json",
+      "bytes": 25335831,
+      "sha256": "69b63eef8a7e6c3fe375933a4bd640f6284b8e0c7a198e1fa8ca5d0090566055",
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "replay_rewards": [
+        57262.0,
+        172555.0
+      ],
+      "seed": 936702878,
+      "module_version": "1.32.5",
+      "schema_version": 1,
+      "team_names": [
+        "Apil Khadka",
+        "╰┈➤ˎˊ˗ www.sleepyai.org"
+      ]
+    },
+    {
+      "rank": 43,
+      "team_id": 16669926,
+      "team_name": "Jince",
+      "leaderboard_score": "2958.8",
+      "submission_date": "2026-08-08T08:46:10.740000Z",
+      "submission_id": 55336185,
+      "submission_public_score": "2958.8",
+      "submission_created_at": "2026-08-08T00:00:50.510000Z",
+      "episode_id": 90850054,
+      "create_time": "2026-08-08T00:07:45.371000Z",
+      "end_time": "2026-08-08T00:08:51.734000Z",
+      "target_reward": 145650.0,
+      "target_agent_index": 0,
+      "opponent": {
+        "team_id": 16665395,
+        "team_name": "bachi idriss",
+        "submission_id": 55320112,
+        "reward": 83330.0,
+        "agent_index": 1
+      },
+      "team_reward_rank_within_submission": 1,
+      "selection_reason": "highest_reward_unique_public_episode",
+      "file": "replays/episode-90850054-replay.json",
+      "bytes": 26859507,
+      "sha256": "127e576b77e435f368fb563f62e13b8a384af07a058d8a75342208e4fb12fedd",
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "replay_rewards": [
+        145650.0,
+        83330.0
+      ],
+      "seed": 490475509,
+      "module_version": "1.32.6",
+      "schema_version": 1,
+      "team_names": [
+        "Jince",
+        "bachi idriss"
+      ]
+    },
+    {
+      "rank": 44,
+      "team_id": 16685828,
+      "team_name": "Ztr0",
+      "leaderboard_score": "2953.8",
+      "submission_date": "2026-08-08T13:58:19.830000Z",
+      "submission_id": 55352389,
+      "submission_public_score": "2953.8",
+      "submission_created_at": "2026-08-08T13:58:19.830000Z",
+      "episode_id": 91024246,
+      "create_time": "2026-08-08T13:59:56.685000Z",
+      "end_time": "2026-08-08T14:01:17.381000Z",
+      "target_reward": 156149.0,
+      "target_agent_index": 1,
+      "opponent": {
+        "team_id": 16673230,
+        "team_name": "saitamad",
+        "submission_id": 55346023,
+        "reward": 37623.0,
+        "agent_index": 0
+      },
+      "team_reward_rank_within_submission": 1,
+      "selection_reason": "highest_reward_unique_public_episode",
+      "file": "replays/episode-91024246-replay.json",
+      "bytes": 23854133,
+      "sha256": "2f31a9cadad66d9099beff267ce0188bd9e4d5623c6aaf1d30c3ef0925c0aa7d",
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "replay_rewards": [
+        37623.0,
+        156149.0
+      ],
+      "seed": 2134809558,
+      "module_version": "1.32.6",
+      "schema_version": 1,
+      "team_names": [
+        "saitamad",
+        "Ztr0"
+      ]
+    },
+    {
+      "rank": 45,
+      "team_id": 16663313,
+      "team_name": "onlysmrtsumx",
+      "leaderboard_score": "2953.1",
+      "submission_date": "2026-08-07T08:38:35.916000Z",
+      "submission_id": 55320218,
+      "submission_public_score": "2953.1",
+      "submission_created_at": "2026-08-07T08:38:35.917000Z",
+      "episode_id": 90662797,
+      "create_time": "2026-08-07T08:39:59.487000Z",
+      "end_time": "2026-08-07T08:41:20.023000Z",
+      "target_reward": 172972.0,
+      "target_agent_index": 0,
+      "opponent": {
+        "team_id": 16633190,
+        "team_name": "Gigrise",
+        "submission_id": 55187856,
+        "reward": 64007.0,
+        "agent_index": 1
+      },
+      "team_reward_rank_within_submission": 1,
+      "selection_reason": "highest_reward_unique_public_episode",
+      "file": "replays/episode-90662797-replay.json",
+      "bytes": 23943087,
+      "sha256": "98c2749d0935ead3c2530e874e10485518163accff05e380713becb6c9d2a41b",
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "replay_rewards": [
+        172972.0,
+        64007.0
+      ],
+      "seed": 463251073,
+      "module_version": "1.32.5",
+      "schema_version": 1,
+      "team_names": [
+        "onlysmrtsumx",
+        "Gigrise"
+      ]
+    },
+    {
+      "rank": 46,
+      "team_id": 16683199,
+      "team_name": "Filippo Gombac",
+      "leaderboard_score": "2952.0",
+      "submission_date": "2026-08-08T11:20:56.293000Z",
+      "submission_id": 55348863,
+      "submission_public_score": "2952.0",
+      "submission_created_at": "2026-08-08T11:20:56.293000Z",
+      "episode_id": 91005823,
+      "create_time": "2026-08-08T12:31:52.788000Z",
+      "end_time": "2026-08-08T12:33:06.525000Z",
+      "target_reward": 149495.0,
+      "target_agent_index": 0,
+      "opponent": {
+        "team_id": 16661934,
+        "team_name": "Viacheslav Kasatkin",
+        "submission_id": 55327708,
+        "reward": 143228.0,
+        "agent_index": 1
+      },
+      "team_reward_rank_within_submission": 1,
+      "selection_reason": "highest_reward_unique_public_episode",
+      "file": "replays/episode-91005823-replay.json",
+      "bytes": 31896837,
+      "sha256": "c32a1026c20b46913080f95b2a26061a326eafff703cd688088b8eb3fb46b7cf",
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "replay_rewards": [
+        149495.0,
+        143228.0
+      ],
+      "seed": 97638505,
+      "module_version": "1.32.6",
+      "schema_version": 1,
+      "team_names": [
+        "Filippo Gombac",
+        "Viacheslav Kasatkin"
+      ]
+    },
+    {
+      "rank": 47,
+      "team_id": 16639565,
+      "team_name": "yasu",
+      "leaderboard_score": "2951.5",
+      "submission_date": "2026-08-07T20:22:53.243000Z",
+      "submission_id": 55333263,
+      "submission_public_score": "2951.5",
+      "submission_created_at": "2026-08-07T20:22:53.243000Z",
+      "episode_id": 90806215,
+      "create_time": "2026-08-07T20:35:13.168000Z",
+      "end_time": "2026-08-07T20:36:49.988000Z",
+      "target_reward": 178905.0,
+      "target_agent_index": 0,
+      "opponent": {
+        "team_id": 16663267,
+        "team_name": "Sravya Isukapatla",
+        "submission_id": 55249260,
+        "reward": 28467.0,
+        "agent_index": 1
+      },
+      "team_reward_rank_within_submission": 1,
+      "selection_reason": "highest_reward_unique_public_episode",
+      "file": "replays/episode-90806215-replay.json",
+      "bytes": 29362996,
+      "sha256": "730e602e106ebac8237364586fd2a6d8a5e3132913ebabc9db8438eec1148560",
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "replay_rewards": [
+        178905.0,
+        28467.0
+      ],
+      "seed": 2074619832,
+      "module_version": "1.32.6",
+      "schema_version": 1,
+      "team_names": [
+        "yasu",
+        "Sravya Isukapatla"
+      ]
+    },
+    {
+      "rank": 48,
+      "team_id": 16665077,
+      "team_name": "Mohit Babel",
+      "leaderboard_score": "2950.6",
+      "submission_date": "2026-08-08T14:13:05.056000Z",
+      "submission_id": 55352362,
+      "submission_public_score": "2950.6",
+      "submission_created_at": "2026-08-08T13:56:36.640000Z",
+      "episode_id": 91025054,
+      "create_time": "2026-08-08T14:03:56.305000Z",
+      "end_time": "2026-08-08T14:05:12.180000Z",
+      "target_reward": 161434.0,
+      "target_agent_index": 1,
+      "opponent": {
+        "team_id": 16662094,
+        "team_name": "moncef elm",
+        "submission_id": 55348794,
+        "reward": 86884.0,
+        "agent_index": 0
+      },
+      "team_reward_rank_within_submission": 1,
+      "selection_reason": "highest_reward_unique_public_episode",
+      "file": "replays/episode-91025054-replay.json",
+      "bytes": 28142085,
+      "sha256": "cbb136a997caaeaab10d100da0e34b61a9db85a60432cf7360dfb2d99dbef7e1",
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "replay_rewards": [
+        86884.0,
+        161434.0
+      ],
+      "seed": 5641901,
+      "module_version": "1.32.6",
+      "schema_version": 1,
+      "team_names": [
+        "moncef elm",
+        "Mohit Babel"
+      ]
+    },
+    {
+      "rank": 49,
+      "team_id": 16666977,
+      "team_name": "Tagir Analyzes",
+      "leaderboard_score": "2935.5",
+      "submission_date": "2026-08-08T09:30:35.460000Z",
+      "submission_id": 55346658,
+      "submission_public_score": "2935.5",
+      "submission_created_at": "2026-08-08T09:30:35.460000Z",
+      "episode_id": 90969916,
+      "create_time": "2026-08-08T09:39:50.124000Z",
+      "end_time": "2026-08-08T09:41:00.074000Z",
+      "target_reward": 144169.0,
+      "target_agent_index": 0,
+      "opponent": {
+        "team_id": 16671237,
+        "team_name": "Jose Alejandro Rivera Jaramillo",
+        "submission_id": 55309104,
+        "reward": 68361.0,
+        "agent_index": 1
+      },
+      "team_reward_rank_within_submission": 1,
+      "selection_reason": "highest_reward_unique_public_episode",
+      "file": "replays/episode-90969916-replay.json",
+      "bytes": 29107983,
+      "sha256": "61d30963e4f1d03d91b74f7d097b0c026bc40fdf461d487691c67c38d6b1ef87",
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "replay_rewards": [
+        144169.0,
+        68361.0
+      ],
+      "seed": 1308431452,
+      "module_version": "1.32.6",
+      "schema_version": 1,
+      "team_names": [
+        "Tagir Analyzes",
+        "Jose Alejandro Rivera Jaramillo"
+      ]
+    },
+    {
+      "rank": 50,
+      "team_id": 16682353,
+      "team_name": "counter puncher",
+      "leaderboard_score": "2935.1",
+      "submission_date": "2026-08-08T00:01:18.753000Z",
+      "submission_id": 55336218,
+      "submission_public_score": "2935.1",
+      "submission_created_at": "2026-08-08T00:01:18.753000Z",
+      "episode_id": 90895687,
+      "create_time": "2026-08-08T03:43:43.202000Z",
+      "end_time": "2026-08-08T03:44:49.814000Z",
+      "target_reward": 152484.0,
+      "target_agent_index": 0,
+      "opponent": {
+        "team_id": 16663313,
+        "team_name": "onlysmrtsumx",
+        "submission_id": 55320218,
+        "reward": 152026.0,
+        "agent_index": 1
+      },
+      "team_reward_rank_within_submission": 1,
+      "selection_reason": "highest_reward_unique_public_episode",
+      "file": "replays/episode-90895687-replay.json",
+      "bytes": 31824585,
+      "sha256": "e6960bd1384202a60f4fe3f022b9d91b6b76157fd995a1dc4406bed2a96e0a93",
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "replay_rewards": [
+        152484.0,
+        152026.0
+      ],
+      "seed": 1990608483,
+      "module_version": "1.32.6",
+      "schema_version": 1,
+      "team_names": [
+        "counter puncher",
+        "onlysmrtsumx"
+      ]
+    }
+  ]
+}

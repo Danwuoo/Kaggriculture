@@ -1,0 +1,160 @@
+{
+  "sources": [
+    {
+      "directory": "kaito_v20_weed_recovery",
+      "files": [
+        {
+          "bytes": 26894,
+          "flagged_calls": [],
+          "flagged_imports": [],
+          "imports": [
+            "base64",
+            "copy",
+            "json",
+            "math",
+            "zlib"
+          ],
+          "name": "main.py",
+          "sha256": "231cf97fcadb1481e2936395f9a6ac8592b8740903c8f93ec9f88b704e20ac24"
+        }
+      ],
+      "kernel": "kaitofukami/159-160-vs-frontier-v20-weed-slip-recovery",
+      "notebook": "159-160-vs-frontier-v20-weed-slip-recovery.ipynb",
+      "notebook_sha256": "fde3b799df21bbf0bd8e42cec75c7cc2b89c7a47f900488695e48bbc3d4f0cbd",
+      "title": "159/160 vs Frontier | v20 WEED-Slip Recovery"
+    },
+    {
+      "directory": "kaito_v21_top30",
+      "files": [
+        {
+          "bytes": 428598,
+          "flagged_calls": [],
+          "flagged_imports": [],
+          "imports": [
+            "base64",
+            "copy",
+            "json",
+            "math",
+            "zlib"
+          ],
+          "name": "main.py",
+          "sha256": "d9dc24ce5429ec628ead0621a160bee90725350683d7dfcc4686fcaf511f3aab"
+        }
+      ],
+      "kernel": "kaitofukami/177-180-fresh-top-30-v21-1-conditional-memory",
+      "notebook": "177-180-fresh-top-30-v21-1-conditional-memory.ipynb",
+      "notebook_sha256": "32471f25e3bc3c206a0539d8fd08ab3db52db8460c6ab90cac75249c6819e2d5",
+      "title": "177/180 Fresh Top-30 | v21.1 Conditional Memory"
+    },
+    {
+      "directory": "roman_lb950",
+      "files": [
+        {
+          "bytes": 26394,
+          "flagged_calls": [],
+          "flagged_imports": [],
+          "imports": [
+            "collections",
+            "math"
+          ],
+          "name": "main.py",
+          "sha256": "26311e7c17449c862c0a2edc5b00224f81f0580aa7f4b8d78073b4026f7d814a"
+        }
+      ],
+      "kernel": "romanrozen/strong-statr-baseline-agent-lb-950",
+      "notebook": "strong-statr-baseline-agent-lb-950.ipynb",
+      "notebook_sha256": "9def56d7af4aebae13f194a1a3ed672a81cab4768fda258d2ed5e6f261346aef",
+      "title": "[STRONG STATR] Baseline Agent | LB 950+ "
+    },
+    {
+      "directory": "saiteja_mega_ensemble_3000",
+      "files": [
+        {
+          "bytes": 146652,
+          "flagged_calls": [],
+          "flagged_imports": [],
+          "imports": [
+            "copy"
+          ],
+          "name": "agent_frontier.py",
+          "sha256": "3fb10a15c823bac447d402afe458436f2dff2821c2c2184e725a947402f5ea43"
+        },
+        {
+          "bytes": 142690,
+          "flagged_calls": [],
+          "flagged_imports": [],
+          "imports": [
+            "copy"
+          ],
+          "name": "agent_hamburger.py",
+          "sha256": "c3be7447f79a1c4e0a9fa537b9fbd2eb7ae1a199a09690e7dfdc15da1cb0b5a4"
+        },
+        {
+          "bytes": 143901,
+          "flagged_calls": [],
+          "flagged_imports": [],
+          "imports": [
+            "copy"
+          ],
+          "name": "agent_moon.py",
+          "sha256": "7c5a4a2a3ba51cc4dc00657614f28a0afa8ee275ce6cdd8e7cb6c2ac2b54840d"
+        },
+        {
+          "bytes": 146870,
+          "flagged_calls": [],
+          "flagged_imports": [],
+          "imports": [
+            "__future__",
+            "base64",
+            "json",
+            "zlib"
+          ],
+          "name": "agent_v14.py",
+          "sha256": "a041937433c399a87865c6ba5f5497231347ced08c7012a888b779126e5feccf"
+        },
+        {
+          "bytes": 1238,
+          "flagged_calls": [],
+          "flagged_imports": [],
+          "imports": [
+            "agent_frontier",
+            "agent_hamburger",
+            "agent_moon",
+            "agent_v14",
+            "copy",
+            "sys"
+          ],
+          "name": "main.py",
+          "sha256": "bc2213715fe37d37b8698dbd6a7b0bab3a081242b8ad6ff56c7bec48447ef32e"
+        }
+      ],
+      "kernel": "saitejabandaruin/kaggriculture-ultimate-mega-ensemble-3000",
+      "notebook": "kaggriculture-ultimate-mega-ensemble-3000.ipynb",
+      "notebook_sha256": "19460e1d391d0ca67d35934f444e55743eff05e39d0de6ca94333a6ebb4ad8de",
+      "title": "Kaggriculture | Ultimate Mega-Ensemble 3000+"
+    },
+    {
+      "directory": "saiteja_pure_architecture_2600",
+      "files": [
+        {
+          "bytes": 22204,
+          "flagged_calls": [],
+          "flagged_imports": [],
+          "imports": [
+            "__future__",
+            "base64",
+            "copy",
+            "json",
+            "zlib"
+          ],
+          "name": "main.py",
+          "sha256": "580931ce9a59d0fb7e6c61503ef61811c1b9ec49350b0259cad867c2326ad6c4"
+        }
+      ],
+      "kernel": "saitejabandaruin/kaggriculture-pure-architecture-2600-elo-v3",
+      "notebook": "kaggriculture-pure-architecture-2600-elo-v3.ipynb",
+      "notebook_sha256": "78d151859fed306e2c859f42516a4faf3635fc631d889424f9e11c6f7c9bdede",
+      "title": "Kaggriculture | Pure Architecture (2600+ Elo) V3"
+    }
+  ]
+}

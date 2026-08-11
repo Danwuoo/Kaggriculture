@@ -1,0 +1,21 @@
+{
+  "archive": "C:\\Users\\wurre\\Desktop\\Kaggriculture\\research\\other_approach_submission_audit_2026-08-10\\artifacts\\other_approach_submission.tar.gz",
+  "bytes": 12211,
+  "sha256": "8594ABF803D0658AF85DB6C2708113287EC08E19C046F272454B29B202EDB274",
+  "members": [
+    "main.py"
+  ],
+  "source_sha256": "0138B516F265250B55EFC84C7849C36E7B54045D171A54B8D81022F6322C43E7",
+  "extracted_sha256": "0138B516F265250B55EFC84C7849C36E7B54045D171A54B8D81022F6322C43E7",
+  "smoke": {
+    "states": 720,
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "rewards": [
+      157753.0,
+      3516.0
+    ]
+  }
+}

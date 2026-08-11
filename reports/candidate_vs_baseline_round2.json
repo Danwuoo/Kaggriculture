@@ -1,0 +1,143 @@
+{
+  "summary": {
+    "wins": 12,
+    "losses": 0,
+    "avg_diff": 11662.0,
+    "new_avg": 63433.166666666664,
+    "old_avg": 51771.166666666664
+  },
+  "games": [
+    {
+      "seed": 0,
+      "seat": 0,
+      "new": 60983.0,
+      "old": 45244.0,
+      "diff": 15739.0,
+      "status": [
+        "DONE",
+        "DONE"
+      ]
+    },
+    {
+      "seed": 0,
+      "seat": 1,
+      "new": 59789.0,
+      "old": 47812.0,
+      "diff": 11977.0,
+      "status": [
+        "DONE",
+        "DONE"
+      ]
+    },
+    {
+      "seed": 11,
+      "seat": 0,
+      "new": 56495.0,
+      "old": 46011.0,
+      "diff": 10484.0,
+      "status": [
+        "DONE",
+        "DONE"
+      ]
+    },
+    {
+      "seed": 11,
+      "seat": 1,
+      "new": 56495.0,
+      "old": 46011.0,
+      "diff": 10484.0,
+      "status": [
+        "DONE",
+        "DONE"
+      ]
+    },
+    {
+      "seed": 23,
+      "seat": 0,
+      "new": 77136.0,
+      "old": 68276.0,
+      "diff": 8860.0,
+      "status": [
+        "DONE",
+        "DONE"
+      ]
+    },
+    {
+      "seed": 23,
+      "seat": 1,
+      "new": 57238.0,
+      "old": 44958.0,
+      "diff": 12280.0,
+      "status": [
+        "DONE",
+        "DONE"
+      ]
+    },
+    {
+      "seed": 37,
+      "seat": 0,
+      "new": 68961.0,
+      "old": 57789.0,
+      "diff": 11172.0,
+      "status": [
+        "DONE",
+        "DONE"
+      ]
+    },
+    {
+      "seed": 37,
+      "seat": 1,
+      "new": 70081.0,
+      "old": 62123.0,
+      "diff": 7958.0,
+      "status": [
+        "DONE",
+        "DONE"
+      ]
+    },
+    {
+      "seed": 101,
+      "seat": 0,
+      "new": 57657.0,
+      "old": 43031.0,
+      "diff": 14626.0,
+      "status": [
+        "DONE",
+        "DONE"
+      ]
+    },
+    {
+      "seed": 101,
+      "seat": 1,
+      "new": 60568.0,
+      "old": 50234.0,
+      "diff": 10334.0,
+      "status": [
+        "DONE",
+        "DONE"
+      ]
+    },
+    {
+      "seed": 777,
+      "seat": 0,
+      "new": 68628.0,
+      "old": 55833.0,
+      "diff": 12795.0,
+      "status": [
+        "DONE",
+        "DONE"
+      ]
+    },
+    {
+      "seed": 777,
+      "seat": 1,
+      "new": 67167.0,
+      "old": 53932.0,
+      "diff": 13235.0,
+      "status": [
+        "DONE",
+        "DONE"
+      ]
+    }
+  ]
+}
