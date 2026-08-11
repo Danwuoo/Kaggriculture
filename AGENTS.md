@@ -56,6 +56,7 @@ Use the narrowest authoritative document for the task:
 | --- | --- |
 | Intended production strategy | `strategy.md` |
 | Manually tuned standalone main approaches | `research/main_approach/README.md` |
+| Risk-aware graph-relay experiment | `research/risk_aware_graph_relay_2026-08-11/decision.md` |
 | Packaged competition data and local rules | `data/kaggriculture/AGENTS.md`, `data/kaggriculture/README.md` |
 | Saved competition page | `docs/competition/Kaggriculture _ Kaggle.html` |
 | Initial implementation and validation | `reports/strategy_round1_2026-08-06.md` |
@@ -170,6 +171,9 @@ authorizes a change.
   at the location recorded in its `README.md` and in `ARCHIVE.md`.
 - `research/main_approach/`: canonical catalog of the project owner's three
   manually tuned standalone agents; see its `README.md` before evaluation.
+- `research/risk_aware_graph_relay_2026-08-11/`: current-engine paired
+  counterfactual lane comparing a fixed relay, flat MLP, and graph residual;
+  it is research evidence, not a production dependency.
 - `research/public_agents/`: downloaded public notebooks and offline-only
   extracted opponents; never package this directory into a submission.
 - `research/full_tape_topology_scaleup_2026-08-10/`: the only retained active
@@ -228,9 +232,14 @@ Preserve these rules in every change:
   workers, land, town, shops, and market data. Never infer from account, team,
   or hidden private inventory.
 
-## Strategy and Safety Priorities
+## Strategy and Risk Priorities
 
-Use lexicographic priorities that ordinary economic scores cannot override:
+Use these urgency priorities in the default scheduler. P0 marks an imminent,
+irreversible asset loss; it is not by itself a hard research or promotion gate.
+A candidate may accept an asset loss or atomic PLANT cancellation when an
+explicit opportunity-cost model and fresh paired evidence value that tradeoff.
+Always retain and report those events rather than silently treating them as
+success or automatically rejecting the candidate:
 
 - P0: second missed water/feed would destroy an asset.
 - P1: decay, full held yield, shed pressure, forced terminal return/drop/sale.
@@ -247,7 +256,8 @@ unlocks, and a mature target near 8 cows, 5-6 sheep, 6-7 staggered strawberries,
 and 10-12 hands when workload warrants it. SE must pass a remaining-time,
 4,000-coin, labor, and commute marginal-return test. A materially different
 route is allowed, but must earn promotion through fresh paired evidence and the
-same safety gates.
+  same technical and paired-efficacy gates, with biological/resource events
+  retained as risk-aware economic diagnostics.
 
 For a planned PLANT or BUILD target that becomes a weed: DIG, revalidate next
 turn, retry locally for a bounded number of turns, and cancel if terminal or
@@ -300,17 +310,19 @@ Kaggriculture environment loads and runs successfully.
 
 ## Acceptance Gates
 
-A submission candidate is ready only when:
+A submission candidate is ready only when the technical gates pass:
 
 - All unit tests pass.
 - Self-play ends with both players `DONE`.
 - Multi-seed games against `starter` and `random` run from both seats.
 - Same seed + same strategies reproduce identical rewards and action digest.
 - There are zero timeouts and malformed actions.
-- Replay auditing finds zero animal escapes, zero fresh-crop water deaths, and
-  zero shed states above capacity.
-- Market lists never exceed 10 entries and emitted PLANT requests never exceed
-  available seeds.
+- Replay auditing reports animal escapes, crop deaths, shed overflow, and seed
+  overcommit with their paired terminal opportunity cost. Zero is not a hard
+  promotion target for these four economic events.
+- Market lists never exceed 10 entries. PLANT overcommit must be counted and
+  attributed; the official atomic cancellation is legal and therefore is not
+  automatically a malformed-action failure.
 - A full official episode records p50, p95, p99, and maximum agent latency; p95
   must stay under 150 ms and maximum under 750 ms.
 - `dist/submission.tar.gz` is under 5 MiB, contains `main.py` at archive root,
@@ -512,10 +524,10 @@ For every new program:
    experiment would still teach.
 3. Keep lanes isolated from production and from one another. Preserve every
    loss and invalid run in the decision record.
-4. Require zero survival/safety violations and a positive paired-win signal on
-   fresh, unused seeds before expanding the program. Diagnostics such as lower
-   travel or higher productive-action rate are supporting evidence, not
-   promotion criteria.
+4. Require zero technical failures and a positive paired-win signal on fresh,
+   unused seeds before expanding the program. Price survival, seed-overcommit,
+   overflow, travel, and productive-action events through paired terminal and
+   downside evidence; none is an independent zero-tolerance promotion gate.
 5. Optimize family-stratified paired match wins first; use own bank and margin
    as secondary diagnostics. Treat SELL ordering as a late-stage marginal edge.
 
