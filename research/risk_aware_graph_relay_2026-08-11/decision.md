@@ -98,7 +98,8 @@ public score alone is not sufficient.
 ## Reproduction artifacts
 
 - `artifacts/counterfactuals.jsonl`: all 72 retained counterfactual pairs.
-- `artifacts/held_out_evaluation.csv`: all 80 held-out games.
+- `artifacts/held_out_summary.csv`: all 80 held-out outcomes with private
+  decision snapshots deliberately omitted.
 - `artifacts/analysis.json`: exact summaries and promotion gates.
 - `artifacts/gcn_model.json` and `artifacts/flat_mlp_model.json`: fitted weights.
 - `run_experiment.py`: full generation, training, evaluation, and analysis.
