@@ -157,6 +157,7 @@ def candidate_market_receipts(trace: Sequence[Any]) -> list[dict[str, Any]]:
 
 def _candidate_record(
     control: GameRun, candidate: GameRun, window: CandidateWindow, trace_file: Path, candidate_trace_file: Path,
+    candidate_trace_sha256: str,
 ) -> dict[str, Any]:
     effects, values = _effect_values(control, candidate, window)
     scored_window = replace(window, effects=effects)
@@ -175,6 +176,7 @@ def _candidate_record(
         "seat": control.seat,
         "control_trace": trace_file.as_posix(),
         "candidate_trace": candidate_trace_file.as_posix(),
+        "candidate_trace_sha256": candidate_trace_sha256,
         "candidate": {
             "candidate_id": scored_window.candidate_id,
             "family": scored_window.family,
@@ -246,7 +248,7 @@ def run_discovery(output: Path) -> dict[str, Any]:
             candidate_trace_path = _candidate_trace_path(output, forced, window)
             _write_deterministic_trace(candidate_trace_path, forced)
             record = _candidate_record(
-                control, forced, window, trace_file, candidate_trace_path.relative_to(output),
+                control, forced, window, trace_file, candidate_trace_path.relative_to(output), _sha256(candidate_trace_path),
             )
             records.append(record)
             _abort_if_technical((record,))
@@ -257,8 +259,9 @@ def run_discovery(output: Path) -> dict[str, Any]:
     gate = discovery_gate(summary)
     manifest = LANE_ROOT / "artifacts" / "prechange_manifest.json"
     windows_payload = {
-        "schema_version": 3,
+        "schema_version": 4,
         "candidate_market_receipt_schema": "step-receipt-index-product-receipt-v1",
+        "candidate_trace_sha256": "sha256-file-bytes-v1",
         "prechange_manifest_sha256": _sha256(manifest),
         "discovery_games_sha256": _sha256(games_path),
         "rows": [
@@ -268,8 +271,9 @@ def run_discovery(output: Path) -> dict[str, Any]:
     }
     _write_json(output / "discovery_windows.json", windows_payload)
     summary_payload = {
-        "schema_version": 3,
+        "schema_version": 4,
         "candidate_market_receipt_schema": "step-receipt-index-product-receipt-v1",
+        "candidate_trace_sha256": "sha256-file-bytes-v1",
         "prechange_manifest_sha256": _sha256(manifest),
         "discovery_games_sha256": _sha256(games_path),
         "controls": len(controls),
@@ -289,9 +293,94 @@ def _same_behavior(stored: Mapping[str, Any], fresh: GameRun) -> bool:
     }
 
 
+def _stored_trace_receipts(payload: Mapping[str, Any]) -> list[dict[str, Any]]:
+    trace = payload.get("trace")
+    if not isinstance(trace, list):
+        raise RuntimeError("candidate trace has no trace list")
+    rows: list[dict[str, Any]] = []
+    for frame in trace:
+        if not isinstance(frame, Mapping) or not isinstance(frame.get("step"), int):
+            raise RuntimeError("candidate trace has malformed frame")
+        receipts = frame.get("market_receipts")
+        if not isinstance(receipts, list):
+            raise RuntimeError("candidate trace has malformed receipts")
+        for index, receipt in enumerate(receipts):
+            if not isinstance(receipt, list) or len(receipt) != 3 or receipt[0] != frame["step"]:
+                raise RuntimeError("candidate trace has malformed receipt")
+            rows.append({
+                "step": frame["step"], "receipt_index": index,
+                "product": str(receipt[1]), "receipt": float(receipt[2]),
+            })
+    return rows
+
+
+def _read_candidate_trace(record: Mapping[str, Any], records_path: Path) -> Mapping[str, Any]:
+    relative = record.get("candidate_trace")
+    if not isinstance(relative, str):
+        raise RuntimeError("candidate row lacks candidate trace reference")
+    trace_path = records_path.parent / relative
+    if not trace_path.is_file():
+        raise RuntimeError("candidate trace is missing")
+    expected_hash = record.get("candidate_trace_sha256")
+    if not isinstance(expected_hash, str) or _sha256(trace_path) != expected_hash:
+        raise RuntimeError("candidate trace hash mismatch")
+    try:
+        with gzip.open(trace_path, "rt", encoding="utf-8") as stream:
+            payload = json.load(stream)
+    except (OSError, json.JSONDecodeError) as error:
+        raise RuntimeError("candidate trace cannot be parsed") from error
+    if not isinstance(payload, Mapping):
+        raise RuntimeError("candidate trace payload is malformed")
+    return payload
+
+
+def audit_existing(path: Path) -> dict[str, Any]:
+    """Offline-only integrity audit for immutable forced-candidate evidence."""
+    records = [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line]
+    audited = 0
+    for record in records:
+        if record.get("kind") != "candidate":
+            continue
+        payload = _read_candidate_trace(record, path)
+        if payload.get("summary") != record.get("candidate_run"):
+            raise RuntimeError("candidate trace summary mismatch")
+        if payload.get("policy_metadata") != record.get("metadata"):
+            raise RuntimeError("candidate trace metadata mismatch")
+        if _stored_trace_receipts(payload) != record.get("candidate_market_receipts"):
+            raise RuntimeError("candidate trace receipt mismatch")
+        audited += 1
+    return {"audited_candidates": audited, "pass": True}
+
+
+def migrate_existing(path: Path) -> dict[str, Any]:
+    """Offline-only schema migration for already retained candidate trace files."""
+    records = [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line]
+    for record in records:
+        if record.get("kind") == "candidate":
+            relative = record.get("candidate_trace")
+            if not isinstance(relative, str):
+                raise RuntimeError("candidate row lacks candidate trace reference")
+            trace_path = path.parent / relative
+            if not trace_path.is_file():
+                raise RuntimeError("candidate trace is missing")
+            record["candidate_trace_sha256"] = _sha256(trace_path)
+    path.write_bytes(b"".join(_canonical_bytes(record) for record in records))
+    games_hash = _sha256(path)
+    for name in ("discovery_windows.json", "discovery_summary.json"):
+        artifact_path = path.parent / name
+        payload = json.loads(artifact_path.read_text(encoding="utf-8"))
+        payload["schema_version"] = 4
+        payload["candidate_market_receipt_schema"] = "step-receipt-index-product-receipt-v1"
+        payload["candidate_trace_sha256"] = "sha256-file-bytes-v1"
+        payload["discovery_games_sha256"] = games_hash
+        _write_json(artifact_path, payload)
+    return {"migrated_candidates": sum(record.get("kind") == "candidate" for record in records), "discovery_games_sha256": games_hash}
+
+
 def verify_existing(path: Path) -> dict[str, Any]:
     """Re-run every retained game and reject any action, result, label, or rejoin drift."""
     records = [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line]
+    audit_existing(path)
     controls: dict[tuple[str, str, int, int], GameRun] = {}
     verified = 0
     for record in records:
@@ -322,16 +411,6 @@ def verify_existing(path: Path) -> dict[str, Any]:
             raise RuntimeError(f"label reproduction mismatch: {key} {window.candidate_id}")
         if candidate_market_receipts(fresh.trace) != record.get("candidate_market_receipts"):
             raise RuntimeError(f"receipt reproduction mismatch: {key} {window.candidate_id}")
-        candidate_trace = path.parent / record["candidate_trace"]
-        with gzip.open(candidate_trace, "rt", encoding="utf-8") as stream:
-            stored_trace = json.load(stream)
-        stored_receipts = [
-            {"step": frame["step"], "receipt_index": index, "product": receipt[1], "receipt": receipt[2]}
-            for frame in stored_trace["trace"]
-            for index, receipt in enumerate(frame["market_receipts"])
-        ]
-        if stored_receipts != record["candidate_market_receipts"]:
-            raise RuntimeError(f"candidate trace receipt mismatch: {key} {window.candidate_id}")
         for name in ("status", "applied_steps", "abort_step", "abort_reason", "observed_rejoin_position"):
             if fresh.policy_metadata.get(name) != record["metadata"].get(name):
                 raise RuntimeError(f"rejoin reproduction mismatch: {key} {window.candidate_id} {name}")
@@ -343,13 +422,19 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--output", type=Path)
     parser.add_argument("--verify-existing", type=Path)
+    parser.add_argument("--audit-existing", type=Path)
+    parser.add_argument("--migrate-existing", type=Path)
     args = parser.parse_args()
-    if bool(args.output) == bool(args.verify_existing):
-        parser.error("provide exactly one of --output or --verify-existing")
+    if sum(value is not None for value in (args.output, args.verify_existing, args.audit_existing, args.migrate_existing)) != 1:
+        parser.error("provide exactly one mode")
     if args.output:
         print(json.dumps(run_discovery(args.output), sort_keys=True))
-    else:
+    elif args.verify_existing:
         print(json.dumps(verify_existing(args.verify_existing), sort_keys=True))
+    elif args.audit_existing:
+        print(json.dumps(audit_existing(args.audit_existing), sort_keys=True))
+    else:
+        print(json.dumps(migrate_existing(args.migrate_existing), sort_keys=True))
 
 
 if __name__ == "__main__":

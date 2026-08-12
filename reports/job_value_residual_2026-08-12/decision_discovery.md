@@ -28,6 +28,12 @@ stream (`step`, receipt index, product, price) and a deterministic full
 candidate-trace reference. This preserves later committed orders even when an
 earlier same-turn SELL is rejected by the official lockstep market.
 
+The evidence was subsequently migrated offline to schema 4, adding a SHA-256
+over each referenced candidate trace file. The offline audit checks the hash,
+full trace summary, policy metadata, and canonical receipt sequence for all 48
+candidates. It passed without running the engine. The resulting discovery JSONL
+SHA-256 is `2be420368f42a690a1b0a2a88aa51ce10a5b3a50b2e512d64dbe49543aa07e72`.
+
 ## Per-incumbent gate evidence
 
 | Incumbent | Forced candidates | Labels (+ / 0 / -) | Families | Legal rejoin | Selected threshold | Score accuracy / baselines | Gate result |

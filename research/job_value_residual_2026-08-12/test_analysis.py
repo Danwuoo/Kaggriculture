@@ -2,6 +2,9 @@
 
 from __future__ import annotations
 
+import gzip
+import hashlib
+import json
 import tempfile
 from pathlib import Path
 import unittest
@@ -9,7 +12,7 @@ import unittest
 from analysis import discovery_gate, label_pair, summarize_discovery
 from engine_runner import TraceFrame
 from freeze_windows import render_policy
-from run_discovery import candidate_market_receipts
+from run_discovery import audit_existing, candidate_market_receipts
 from test_support import passing_discovery_summary
 
 
@@ -76,6 +79,51 @@ class AnalysisTests(unittest.TestCase):
             ],
             candidate_market_receipts(trace),
         )
+
+    def _candidate_evidence(self, directory, *, summary=None, metadata=None):
+        trace_path = Path(directory) / "candidate.json.gz"
+        payload = {
+            "summary": {"reward": 12} if summary is None else summary,
+            "policy_metadata": {"status": "rejoined"} if metadata is None else metadata,
+            "trace": [{"step": 0, "market_receipts": []}],
+        }
+        with gzip.open(trace_path, "wt", encoding="utf-8", newline="\n") as stream:
+            json.dump(payload, stream, sort_keys=True, separators=(",", ":"))
+        row = {
+            "kind": "candidate", "candidate_trace": "candidate.json.gz",
+            "candidate_trace_sha256": hashlib.sha256(trace_path.read_bytes()).hexdigest(),
+            "candidate_run": {"reward": 12}, "metadata": {"status": "rejoined"},
+            "candidate_market_receipts": [],
+        }
+        records = Path(directory) / "records.jsonl"
+        records.write_text(json.dumps(row) + "\n", encoding="utf-8")
+        return records, trace_path, row
+
+    def test_offline_audit_rejects_candidate_trace_hash_mutation(self):
+        """Catch a swapped or mutated candidate trace that still has plausible rows."""
+        with tempfile.TemporaryDirectory() as directory:
+            records, trace_path, _row = self._candidate_evidence(directory)
+            trace_path.write_bytes(trace_path.read_bytes() + b"mutation")
+            with self.assertRaisesRegex(RuntimeError, "candidate trace hash mismatch"):
+                audit_existing(records)
+
+    def test_offline_audit_rejects_same_receipts_with_mutated_summary(self):
+        """Catch trace-content mutation hidden by recomputing its row hash."""
+        with tempfile.TemporaryDirectory() as directory:
+            records, trace_path, row = self._candidate_evidence(directory, summary={"reward": 13})
+            row["candidate_trace_sha256"] = hashlib.sha256(trace_path.read_bytes()).hexdigest()
+            records.write_text(json.dumps(row) + "\n", encoding="utf-8")
+            with self.assertRaisesRegex(RuntimeError, "candidate trace summary mismatch"):
+                audit_existing(records)
+
+    def test_offline_audit_rejects_same_receipts_with_mutated_metadata(self):
+        """Catch trace policy drift that leaves all unit receipt values unchanged."""
+        with tempfile.TemporaryDirectory() as directory:
+            records, trace_path, row = self._candidate_evidence(directory, metadata={"status": "aborted"})
+            row["candidate_trace_sha256"] = hashlib.sha256(trace_path.read_bytes()).hexdigest()
+            records.write_text(json.dumps(row) + "\n", encoding="utf-8")
+            with self.assertRaisesRegex(RuntimeError, "candidate trace metadata mismatch"):
+                audit_existing(records)
 
 
 if __name__ == "__main__":
