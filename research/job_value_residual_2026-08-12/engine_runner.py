@@ -26,6 +26,15 @@ import harness  # noqa: E402
 
 MANIFEST_PATH = LANE_ROOT / "artifacts" / "prechange_manifest.json"
 PolicyFactory = Callable[[Any, Callable[..., dict], int], Callable[..., dict]]
+ENGINE_IDENTITY_KEYS = (
+    "commit",
+    "python_blob",
+    "configuration_blob",
+    "python_sha256",
+    "configuration_sha256",
+    "python_bytes",
+    "configuration_bytes",
+)
 
 
 @dataclass(frozen=True)
@@ -48,14 +57,16 @@ class GameRun:
 
 
 def assert_engine_current() -> dict[str, Any]:
-    """Reject a run unless the complete frozen engine fingerprint still matches."""
+    """Reject a run unless portable engine identity matches the frozen manifest."""
     manifest = json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))
     actual = harness.engine_fingerprint()
     expected = manifest["engine"]
-    if actual != expected:
+    actual_identity = {key: actual.get(key) for key in ENGINE_IDENTITY_KEYS}
+    expected_identity = {key: expected.get(key) for key in ENGINE_IDENTITY_KEYS}
+    if actual_identity != expected_identity:
         raise RuntimeError(
             "current engine fingerprint differs from frozen protocol: "
-            f"actual={actual!r} expected={expected!r}"
+            f"actual={actual_identity!r} expected={expected_identity!r}"
         )
     return actual
 
@@ -121,24 +132,22 @@ def _action_issues(observation: dict[str, Any], action: Any) -> dict[str, int]:
     }
 
 
-def _tile_events(before: list[Any], after: list[Any], day: int) -> tuple[int, int, int]:
-    escapes = crop_deaths = fresh_crop_deaths = 0
+def _tile_events(before: list[Any], after: list[Any], day: int) -> list[tuple[str, bool]]:
+    events: list[tuple[str, bool]] = []
     for y, row in enumerate(before):
         for x, old in enumerate(row):
             new = after[y][x]
             if isinstance(old, dict) and old.get("animal"):
-                escapes += int(
-                    not (isinstance(new, dict) and new.get("animal") == old.get("animal"))
-                )
+                if not (isinstance(new, dict) and new.get("animal") == old.get("animal")):
+                    events.append(("animal_escape", False))
             if (
                 isinstance(old, dict)
                 and old.get("kind") == "PLANT"
                 and isinstance(new, dict)
                 and new.get("kind") == "WEED"
             ):
-                crop_deaths += 1
-                fresh_crop_deaths += int(int(old.get("planted_day", -1000)) == day)
-    return escapes, crop_deaths, fresh_crop_deaths
+                events.append(("crop_death", int(old.get("planted_day", -1000)) == day))
+    return events
 
 
 def _inventory_total(private: Any) -> int:
@@ -168,13 +177,20 @@ def _terminal_inventory(observation: Any) -> dict[str, float | int]:
     }
 
 
-def _instrument_overflow(engine: Any, candidate_private: Any, diagnostics: dict[str, int]):
-    """Return an undo callback after observing exact engine-discard operations."""
+def _instrument_engine(
+    engine: Any,
+    candidate_private: Any,
+    diagnostics: dict[str, Any],
+    planted_tiles: list[tuple[int, int]],
+):
+    """Return an undo callback after observing discard and successful-plant transitions."""
     original_unit = engine._apply_unit_action
     original_daily_drop = engine._drop_inventories_to_shed
 
     def tracked_unit(*args: Any, **kwargs: Any) -> Any:
+        farm = args[0]
         private = args[1]
+        unit_index = args[2]
         action = args[3]
         is_shed_drop = (
             private is candidate_private
@@ -189,6 +205,18 @@ def _instrument_overflow(engine: Any, candidate_private: Any, diagnostics: dict[
             if discarded:
                 diagnostics["shed_overflow_events"] += 1
                 diagnostics["shed_overflow_units"] += discarded
+        if (
+            private is candidate_private
+            and isinstance(action, list)
+            and len(action) >= 2
+            and action[0] == "PLANT"
+        ):
+            position = engine._farmer_position(farm, unit_index)
+            if position is not None:
+                x, y = position
+                tile = farm["tiles"][y][x]
+                if isinstance(tile, dict) and tile.get("kind") == "PLANT":
+                    planted_tiles.append((x, y))
         return result
 
     def tracked_daily_drop(private: Any, capacity: int) -> Any:
@@ -217,7 +245,9 @@ def run_game(
     seat: int,
     *,
     policy_factory: PolicyFactory | None = None,
+    opponent_policy_factory: PolicyFactory | None = None,
     capture_trace: bool = False,
+    clock: Callable[[], float] = time.perf_counter,
 ) -> GameRun:
     """Play one full, deterministic current-engine game from either seat."""
     fingerprint = assert_engine_current()
@@ -234,58 +264,63 @@ def run_game(
     if policy_factory is not None:
         candidate = policy_factory(module, candidate, seat)
         metadata = getattr(candidate, "metadata", metadata)
-    _, opponent, opponent_import_ms = harness.load_agent(
+    opponent_module, opponent, opponent_import_ms = harness.load_agent(
         opponent_path(incumbent, opponent_family),
         f"job_opponent_{incumbent}_{opponent_family}_{seed}_{seat}",
     )
+    if opponent_policy_factory is not None:
+        opponent = opponent_policy_factory(opponent_module, opponent, 1 - seat)
     policies = [opponent, opponent]
     policies[seat] = candidate
 
     digests = [hashlib.sha256(), hashlib.sha256()]
-    latencies_ms: list[float] = []
+    latencies_ms: list[list[float]] = [[], []]
     trace: list[TraceFrame] = []
     calls = [0, 0]
     overage = [60.0, 60.0]
     exceptions: list[str | None] = [None, None]
-    issues = {
-        "malformed": 0,
-        "hand_alignment": 0,
-        "seed_overcommit": 0,
-        "market_overflow": 0,
-    }
+    issues = [
+        {
+            "malformed": 0,
+            "hand_alignment": 0,
+            "seed_overcommit": 0,
+            "market_overflow": 0,
+        }
+        for _ in range(2)
+    ]
     diagnostics = {
         "animal_escapes": 0,
         "crop_deaths": 0,
         "fresh_crop_deaths": 0,
+        "animal_escape_steps": [],
+        "crop_death_steps": [],
+        "fresh_crop_death_steps": [],
         "shed_overflow_events": 0,
         "shed_overflow_units": 0,
     }
-    max_market_orders = 0
-    undo_instrumentation = _instrument_overflow(
-        engine, state[seat].observation.private, diagnostics
+    max_market_orders = [0, 0]
+    planted_tiles: list[tuple[int, int]] = []
+    undo_instrumentation = _instrument_engine(
+        engine, state[seat].observation.private, diagnostics, planted_tiles
     )
     try:
         for step in range(int(config.episodeSteps) - 1):
             for index in range(2):
                 state[index].observation.step = step
                 state[index].observation.remainingOverageTime = overage[index]
-            end_of_day = (step + 1) % int(config.turnsPerDay) == 0
-            before_tiles = (
-                copy.deepcopy(state[seat].observation.farms[seat]["tiles"])
-                if end_of_day
-                else None
-            )
+            before_tiles = copy.deepcopy(state[seat].observation.farms[seat]["tiles"])
+            planted_tiles.clear()
             for index, policy in enumerate(policies):
                 observation = harness.structify(
                     copy.deepcopy(harness.plain(state[index].observation))
                 )
-                started = time.perf_counter()
+                started = clock()
                 try:
                     returned = harness.invoke(policy, observation, config)
                 except Exception as error:
                     returned = {"farmer": ["PASS"], "hands": [], "market": []}
                     exceptions[index] = f"{type(error).__name__}: {error}"
-                elapsed_ms = (time.perf_counter() - started) * 1000.0
+                elapsed_ms = (clock() - started) * 1000.0
                 calls[index] += 1
                 if elapsed_ms > float(config.actTimeout) * 1000.0:
                     overage[index] -= elapsed_ms / 1000.0 - float(config.actTimeout)
@@ -293,14 +328,14 @@ def run_game(
                 digests[index].update(
                     json.dumps(action, sort_keys=True, separators=(",", ":")).encode("utf-8")
                 )
+                latencies_ms[index].append(elapsed_ms)
+                found = _action_issues(harness.plain(observation), returned)
+                for key, value in found.items():
+                    issues[index][key] += value
+                market = action.get("market", [])
+                if isinstance(market, list):
+                    max_market_orders[index] = max(max_market_orders[index], len(market))
                 if index == seat:
-                    latencies_ms.append(elapsed_ms)
-                    found = _action_issues(harness.plain(observation), returned)
-                    for key, value in found.items():
-                        issues[key] += value
-                    market = action.get("market", [])
-                    if isinstance(market, list):
-                        max_market_orders = max(max_market_orders, len(market))
                     if capture_trace:
                         trace.append(
                             TraceFrame(
@@ -314,15 +349,27 @@ def run_game(
             if any(exceptions):
                 break
             engine.interpreter(state, env)
-            if end_of_day and before_tiles is not None:
-                escapes, deaths, fresh_deaths = _tile_events(
-                    before_tiles,
-                    state[seat].observation.farms[seat]["tiles"],
-                    step // int(config.turnsPerDay),
-                )
-                diagnostics["animal_escapes"] += escapes
-                diagnostics["crop_deaths"] += deaths
-                diagnostics["fresh_crop_deaths"] += fresh_deaths
+            for event, fresh in _tile_events(
+                before_tiles,
+                state[seat].observation.farms[seat]["tiles"],
+                step // int(config.turnsPerDay),
+            ):
+                if event == "animal_escape":
+                    diagnostics["animal_escapes"] += 1
+                    diagnostics["animal_escape_steps"].append(step)
+                else:
+                    diagnostics["crop_deaths"] += 1
+                    diagnostics["crop_death_steps"].append(step)
+                    if fresh:
+                        diagnostics["fresh_crop_deaths"] += 1
+                        diagnostics["fresh_crop_death_steps"].append(step)
+            for x, y in planted_tiles:
+                tile = state[seat].observation.farms[seat]["tiles"][y][x]
+                if isinstance(tile, dict) and tile.get("kind") == "WEED":
+                    diagnostics["crop_deaths"] += 1
+                    diagnostics["fresh_crop_deaths"] += 1
+                    diagnostics["crop_death_steps"].append(step)
+                    diagnostics["fresh_crop_death_steps"].append(step)
             if all(item.status == "DONE" for item in state):
                 break
     finally:
@@ -337,15 +384,25 @@ def run_game(
         "money": money,
         "action_digest": digests[seat].hexdigest(),
         "opponent_action_digest": digests[1 - seat].hexdigest(),
-        "action_issues": issues,
-        "max_market_orders": max_market_orders,
+        "action_issues": issues[seat],
+        "max_market_orders": max_market_orders[seat],
         "diagnostics": diagnostics,
         "terminal_inventory": _terminal_inventory(state[seat].observation),
         "exception": exceptions[seat],
         "opponent_exception": exceptions[1 - seat],
-        "timeout_calls": sum(value > float(config.actTimeout) * 1000.0 for value in latencies_ms),
+        "timeout_calls": sum(
+            value > float(config.actTimeout) * 1000.0 for value in latencies_ms[seat]
+        ),
         "overage_exhausted": overage[seat] < 0.0,
-        "latency_ms": harness.latency_summary(latencies_ms),
+        "latency_ms": harness.latency_summary(latencies_ms[seat]),
+        "opponent_calls": calls[1 - seat],
+        "opponent_action_issues": issues[1 - seat],
+        "opponent_max_market_orders": max_market_orders[1 - seat],
+        "opponent_timeout_calls": sum(
+            value > float(config.actTimeout) * 1000.0 for value in latencies_ms[1 - seat]
+        ),
+        "opponent_overage_exhausted": overage[1 - seat] < 0.0,
+        "opponent_latency_ms": harness.latency_summary(latencies_ms[1 - seat]),
         "engine_fingerprint": fingerprint,
         "import_ms": import_ms,
         "opponent_import_ms": opponent_import_ms,
