@@ -1,0 +1,94 @@
+{
+  "controls": {
+    "boatlee_v16_rc2_market_relay": {
+      "bytes": 37741,
+      "path": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\.worktrees\\job-value-residual\\research\\job_value_residual_2026-08-12\\controls\\boatlee_v16_rc2_market_relay\\main.py",
+      "sha256": "7117e45755fc4f9b227c82921e19822ce7fcee8c5605a6d0f84957a5a4a8592a"
+    },
+    "v27_current_meta": {
+      "bytes": 28142,
+      "path": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\.worktrees\\job-value-residual\\research\\job_value_residual_2026-08-12\\controls\\v27_current_meta\\main.py",
+      "sha256": "6f8d070467e311293f6ee919fa405a332ab9f904f3fea77390bb9abb5ff46c64"
+    }
+  },
+  "engine": {
+    "commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+    "configuration_blob": "0fcdf2c14c47d3bdc821c02e26263956cf0fd3d8",
+    "configuration_bytes": 5877,
+    "configuration_sha256": "7f196f4aaf9b4e482fbd61ba4bf19f5cec4da0f81938ece756954035a65c0bb5",
+    "python_blob": "4b78842d0f2d4abf6e318a8248b6306454f5c714",
+    "python_bytes": 39801,
+    "python_sha256": "fb9215c5e21a25243e2d13e75b3d70a79cf7d78fff150a90f1bb5eacf9ba2bcf",
+    "vendor_repo": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\.vendor\\kaggle-environments"
+  },
+  "opponents": {
+    "boatlee_v16_rc2_market_relay": {
+      "kaito_v21": {
+        "bytes": 433657,
+        "path": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\.worktrees\\job-value-residual\\research\\public_agents\\kaito_v21_top30\\extracted\\main.py",
+        "sha256": "fa4f33da7af1f19f3f509d24d066ea64bffe361e12042474616654a6ae8e6f8e"
+      },
+      "other_incumbent": {
+        "bytes": 28142,
+        "path": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\.worktrees\\job-value-residual\\research\\job_value_residual_2026-08-12\\controls\\v27_current_meta\\main.py",
+        "sha256": "6f8d070467e311293f6ee919fa405a332ab9f904f3fea77390bb9abb5ff46c64"
+      }
+    },
+    "v27_current_meta": {
+      "kaito_v21": {
+        "bytes": 433657,
+        "path": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\.worktrees\\job-value-residual\\research\\public_agents\\kaito_v21_top30\\extracted\\main.py",
+        "sha256": "fa4f33da7af1f19f3f509d24d066ea64bffe361e12042474616654a6ae8e6f8e"
+      },
+      "other_incumbent": {
+        "bytes": 37741,
+        "path": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\.worktrees\\job-value-residual\\research\\job_value_residual_2026-08-12\\controls\\boatlee_v16_rc2_market_relay\\main.py",
+        "sha256": "7117e45755fc4f9b227c82921e19822ce7fcee8c5605a6d0f84957a5a4a8592a"
+      }
+    }
+  },
+  "prior_seed_hits": {
+    "15516570": [],
+    "22465322": [],
+    "22831087": [],
+    "27715185": [],
+    "28880297": [],
+    "37504575": [],
+    "39010211": [],
+    "44100301": [],
+    "47896298": [],
+    "65365230": [],
+    "76238482": [],
+    "79417473": [],
+    "89716831": [],
+    "93687444": []
+  },
+  "schema_version": 1,
+  "seed_pools": {
+    "confirmation": [
+      22831087,
+      27715185,
+      39010211,
+      44100301,
+      89716831,
+      79417473,
+      15516570,
+      28880297
+    ],
+    "discovery": [
+      93687444,
+      65365230
+    ],
+    "screen": [
+      76238482,
+      47896298,
+      37504575,
+      22465322
+    ]
+  },
+  "stage_context_counts": {
+    "confirmation": 64,
+    "discovery": 16,
+    "screen": 32
+  }
+}
