@@ -113,6 +113,16 @@ class ForcedPolicyTests(unittest.TestCase):
         self.assertEqual(base_policy(gap), wrapped(gap))
         self.assertEqual("step_gap", wrapped.metadata["abort_reason"])
 
+    def test_rejoin_rejects_missing_forced_offsets(self):
+        window = candidate_fixture()
+        wrapped = make_forced_factory(window)(object(), base_policy, 0)
+        wrapped(observation_fixture(step=10, hands=1, hand_positions=[(1, 1)]))
+        rejoin = observation_fixture(step=14, hands=1, hand_positions=[(1, 1)])
+        self.assertEqual(base_policy(rejoin), wrapped(rejoin))
+        self.assertEqual("aborted", wrapped.metadata["status"])
+        self.assertEqual("step_gap", wrapped.metadata["abort_reason"])
+        self.assertEqual(14, wrapped.metadata["abort_step"])
+
     def test_retirement_needs_same_actor_product_and_same_mutated_tile(self):
         inventory = replace(
             candidate_fixture(),

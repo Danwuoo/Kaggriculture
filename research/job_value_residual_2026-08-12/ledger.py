@@ -148,9 +148,9 @@ def _tile_yield(observation: Mapping[str, Any], tile: tuple[int, int]) -> tuple[
     return product, int(yield_units)
 
 
-def _market_sales(trace: Sequence[Any], start: int, end: int) -> dict[str, list[tuple[int, int, float]] ] | None:
+def _market_sales(trace: Sequence[Any], start: int, end: int) -> dict[str, list[tuple[int, int, int, float]]] | None:
     """Bind each SELL order to actual committed unit receipts from the runner."""
-    sales: dict[str, list[tuple[int, int, float]]] = {}
+    sales: dict[str, list[tuple[int, int, int, float]]] = {}
     for frame in trace:
         step = _frame_value(frame, "step")
         if not isinstance(step, int) or not start <= step <= end:
@@ -167,7 +167,7 @@ def _market_sales(trace: Sequence[Any], start: int, end: int) -> dict[str, list[
             if not isinstance(receipt, (tuple, list)) or len(receipt) != 3 or receipt[0] != step or not isinstance(receipt[2], (int, float)):
                 return None
             by_product.setdefault(str(receipt[1]), []).append(float(receipt[2]))
-        for order in action.get("market", []) or []:
+        for order_index, order in enumerate(action.get("market", []) or []):
             if not isinstance(order, (list, tuple)) or len(order) < 3 or order[0] != "SELL":
                 continue
             product, quantity = str(order[1]), int(order[2] or 0)
@@ -177,39 +177,49 @@ def _market_sales(trace: Sequence[Any], start: int, end: int) -> dict[str, list[
             by_product[product] = by_product.get(product, [])[quantity:]
             if len(committed) != quantity:
                 return None
-            sales.setdefault(product, []).append((step, quantity, float(sum(committed))))
+            sales.setdefault(product, []).extend(
+                (step, order_index, unit_index, receipt)
+                for unit_index, receipt in enumerate(committed)
+            )
         if any(values for values in by_product.values()):
             return None
     return sales
 
 
 def _shift_for_product(
-    product: str, control: list[tuple[int, int, float]], candidate: list[tuple[int, int, float]], trigger: int,
+    product: str,
+    control: list[tuple[int, int, int, float]],
+    candidate: list[tuple[int, int, int, float]],
+    trigger: int,
 ) -> tuple[MarketShift, ...] | None:
-    if sum(item[1] for item in control) != sum(item[1] for item in candidate):
+    if len(control) != len(candidate):
         return None
     shifts: list[MarketShift] = []
     left, right = list(control), list(candidate)
+    # Preserve same-step/same-order units first.  Their receipt difference is a
+    # cash effect, not a timing premium, even if a shifted sibling changed price.
+    matched_left: set[int] = set()
+    matched_right: set[int] = set()
+    for left_index, (left_step, left_order, _left_unit, _left_receipt) in enumerate(left):
+        for right_index, (right_step, right_order, _right_unit, _right_receipt) in enumerate(right):
+            if right_index not in matched_right and (left_step, left_order) == (right_step, right_order):
+                matched_left.add(left_index)
+                matched_right.add(right_index)
+                break
+    left = [item for index, item in enumerate(left) if index not in matched_left]
+    right = [item for index, item in enumerate(right) if index not in matched_right]
+    if len(left) != len(right):
+        return None
     index = 0
-    while left and right:
-        c_step, c_qty, c_receipt = left[0]
-        d_step, d_qty, d_receipt = right[0]
-        quantity = min(c_qty, d_qty)
-        c_share = c_receipt * quantity / c_qty
-        d_share = d_receipt * quantity / d_qty
+    for control_unit, candidate_unit in zip(sorted(left), sorted(right)):
+        c_step, _c_order, _c_unit, c_receipt = control_unit
+        d_step, _d_order, _d_unit, d_receipt = candidate_unit
         if c_step != d_step:
             shifts.append(MarketShift(
-                product, quantity, c_step - trigger, d_step - trigger, f"sale:{product}:{index}", c_share, d_share,
+                product, 1, c_step - trigger, d_step - trigger,
+                f"sale:{product}:{index}", c_receipt, d_receipt,
             ))
             index += 1
-        if c_qty == quantity:
-            left.pop(0)
-        else:
-            left[0] = (c_step, c_qty - quantity, c_receipt - c_share)
-        if d_qty == quantity:
-            right.pop(0)
-        else:
-            right[0] = (d_step, d_qty - quantity, d_receipt - d_share)
     return tuple(shifts)
 
 
@@ -217,6 +227,11 @@ def _capacity_rows(frame: Any) -> dict[str, tuple[str, int]] | None:
     """Read only runner-recorded capacity-delayed units, rejecting ambiguity."""
     raw = _frame_value(frame, "capacity_inflight", ())
     if not isinstance(raw, (list, tuple)):
+        return None
+    certification = _frame_value(frame, "capacity_certification")
+    if raw and certification != "certified_capacity_inflight":
+        return None
+    if not raw and not isinstance(certification, str):
         return None
     rows: dict[str, tuple[str, int]] = {}
     for item in raw:
@@ -234,6 +249,16 @@ def derive_horizon_effects(control_trace: Sequence[Any], candidate_trace: Sequen
     control_frames, candidate_frames = _frames_by_step(control_trace), _frames_by_step(candidate_trace)
     if not control_frames or not candidate_frames:
         return None
+    trigger_control = control_frames.get(window.trigger_step)
+    trigger_candidate = candidate_frames.get(window.trigger_step)
+    context = _frame_context(trigger_control) if trigger_control is not None else None
+    if (
+        context is None
+        or context[0] != window.incumbent
+        or trigger_candidate is None
+        or _frame_context(trigger_candidate) != context
+    ):
+        return None
     products = {directive.product for directive in window.sell_directives}
     for tile in window.touched_tiles:
         for frames in (control_frames, candidate_frames):
@@ -247,6 +272,8 @@ def derive_horizon_effects(control_trace: Sequence[Any], candidate_trace: Sequen
         step = min(window.trigger_step + horizon, 718)
         control_frame, candidate_frame = control_frames.get(step), candidate_frames.get(step)
         if control_frame is None or candidate_frame is None:
+            return None
+        if _frame_context(control_frame) != context or _frame_context(candidate_frame) != context:
             return None
         control_obs, candidate_obs = _frame_value(control_frame, "observation", {}), _frame_value(candidate_frame, "observation", {})
         if not isinstance(control_obs, Mapping) or not isinstance(candidate_obs, Mapping):
@@ -304,7 +331,7 @@ def derive_horizon_effects(control_trace: Sequence[Any], candidate_trace: Sequen
         effect = HorizonEffect(
             horizon, candidate_money - control_money - timing,
             tuple(liquidatable), tuple(asset), tuple(capacity), tuple(shifts),
-            _frame_context(candidate_frame),
+            context,
         )
         if not _distinct_buckets(effect):
             return None

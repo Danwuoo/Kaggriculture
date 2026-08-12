@@ -246,6 +246,12 @@ def make_forced_factory(window: CandidateWindow) -> Callable[[Any, Callable[...,
                 return base
             if step == window.rejoin_step:
                 if metadata["status"] in {"active", "forced"}:
+                    if (
+                        metadata["last_forced_step"] != window.rejoin_step - 1
+                        or metadata["applied_steps"] != list(range(window.trigger_step, window.rejoin_step))
+                    ):
+                        metadata.update(status="aborted", abort_step=step, abort_reason="step_gap")
+                        return base
                     observed = _actor_position(observation, window.actor)
                     metadata["observed_rejoin_position"] = None if observed is None else list(observed)
                     if observed == window.expected_positions[-1]:

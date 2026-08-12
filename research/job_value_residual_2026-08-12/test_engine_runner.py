@@ -74,7 +74,7 @@ class EngineRunnerTests(unittest.TestCase):
             with gzip.open(path, "rt", encoding="utf-8") as stream:
                 payload = stream.read()
         self.assertEqual(
-            '{"policy_metadata":{"selector":"control"},"summary":{"calls":1,"statuses":["DONE","DONE"]},"trace":[{"action":{"farmer":["PASS"],"hands":[],"market":[]},"capacity_inflight":[],"context":null,"latency_ms":0.25,"market_receipts":[],"observation":{"private":{"shed":{}}},"step":0}]}',
+            '{"policy_metadata":{"selector":"control"},"summary":{"calls":1,"statuses":["DONE","DONE"]},"trace":[{"action":{"farmer":["PASS"],"hands":[],"market":[]},"capacity_certification":null,"capacity_inflight":[],"context":null,"latency_ms":0.25,"market_receipts":[],"observation":{"private":{"shed":{}}},"step":0}]}',
             payload,
         )
         self.assertEqual(1, json.loads(payload)["summary"]["calls"])
@@ -209,6 +209,19 @@ class EngineRunnerTests(unittest.TestCase):
         self.assertEqual(719, run.summary["opponent_timeout_calls"])
         self.assertTrue(run.summary["opponent_overage_exhausted"])
         self.assertEqual(719, run.summary["opponent_latency_ms"]["calls"])
+
+    def test_trace_explicitly_certifies_or_refuses_capacity_inflight(self):
+        run = run_game(
+            "v27_current_meta",
+            control_path("v27_current_meta"),
+            "kaito_v21",
+            93687444,
+            0,
+            capture_trace=True,
+        )
+        self.assertTrue(run.trace)
+        self.assertTrue(all(frame.capacity_certification for frame in run.trace))
+        self.assertTrue(all(not frame.capacity_inflight for frame in run.trace))
 
 
 if __name__ == "__main__":

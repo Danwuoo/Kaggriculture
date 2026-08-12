@@ -80,9 +80,10 @@ class LedgerTests(unittest.TestCase):
 
     def test_capacity_bucket_requires_runner_recorded_unambiguous_inflight(self):
         window = candidate_fixture()
-        control = [{"step": step, "observation": observation_fixture(step=step), "action": {"market": []}} for step in (10, 34, 58)]
+        context = ("v27_current_meta", "kaito_v21", 1, 0)
+        control = [{"step": step, "context": context, "observation": observation_fixture(step=step), "action": {"market": []}, "market_receipts": (), "capacity_certification": "no_certified_capacity_inflight"} for step in (10, 34, 58)]
         candidate = [dict(row) for row in control]
-        candidate[1] = {**candidate[1], "capacity_inflight": (("MILK", 2, "capacity:hand:1"),)}
+        candidate[1] = {**candidate[1], "capacity_inflight": (("MILK", 2, "capacity:hand:1"),), "capacity_certification": "certified_capacity_inflight"}
         effects = derive_horizon_effects(control, candidate, window)
         self.assertEqual((("MILK", 2, "capacity:hand:1"),), effects[0].capacity)
         candidate[1] = {**candidate[1], "capacity_inflight": (("MILK", 2, "same"), ("MILK", 1, "same"))}
@@ -92,10 +93,11 @@ class LedgerTests(unittest.TestCase):
         from schema import SellDirective
 
         window = replace(candidate_fixture(), sell_directives=(SellDirective(0, "MILK", 2),))
+        context = ("v27_current_meta", "kaito_v21", 6, 0)
         def frame(step, *, action=None, receipts=(), money=3000):
             obs = observation_fixture(step=step)
             obs["farms"][0]["money"] = money
-            return {"step": step, "observation": obs, "action": action or {"market": []}, "market_receipts": receipts}
+            return {"step": step, "context": context, "observation": obs, "action": action or {"market": []}, "market_receipts": receipts, "capacity_certification": "no_certified_capacity_inflight"}
         control = [
             frame(10, action={"market": [["SELL", "MILK", 2]]}, receipts=((10, "MILK", 20.0), (10, "MILK", 19.0))),
             frame(34), frame(58),
@@ -106,9 +108,37 @@ class LedgerTests(unittest.TestCase):
             frame(34, money=3010), frame(58, money=3010),
         ]
         effects = derive_horizon_effects(control, candidate, window)
-        shift = effects[0].market[0]
-        self.assertEqual((39.0, 49.0), (shift.control_receipt, shift.candidate_receipt))
+        self.assertEqual(2, len(effects[0].market))
+        self.assertEqual(39.0, sum(item.control_receipt for item in effects[0].market))
+        self.assertEqual(49.0, sum(item.candidate_receipt for item in effects[0].market))
         self.assertEqual(0.0, effects[0].cash_coins)
+
+    def test_same_step_retained_unit_is_not_prorated_into_shift(self):
+        from schema import SellDirective
+
+        window = replace(candidate_fixture(), sell_directives=(SellDirective(0, "MILK", 2),))
+        context = ("v27_current_meta", "kaito_v21", 7, 0)
+        def frame(step, action, receipts, money):
+            obs = observation_fixture(step=step)
+            obs["farms"][0]["money"] = money
+            return {"step": step, "context": context, "observation": obs, "action": action, "market_receipts": receipts, "capacity_certification": "no_certified_capacity_inflight"}
+        control = [frame(10, {"market": [["SELL", "MILK", 2]]}, ((10, "MILK", 20.0), (10, "MILK", 19.0)), 3000), frame(34, {"market": []}, (), 3000), frame(58, {"market": []}, (), 3000)]
+        candidate = [frame(10, {"market": [["SELL", "MILK", 1]]}, ((10, "MILK", 25.0),), 3000), frame(11, {"market": [["SELL", "MILK", 1]]}, ((11, "MILK", 24.0),), 3000), frame(34, {"market": []}, (), 3010), frame(58, {"market": []}, (), 3010)]
+        effects = derive_horizon_effects(control, candidate, window)
+        self.assertEqual(1, len(effects[0].market))
+        self.assertEqual((19.0, 24.0), (effects[0].market[0].control_receipt, effects[0].market[0].candidate_receipt))
+        self.assertEqual(5.0, effects[0].market[0].candidate_receipt - effects[0].market[0].control_receipt)
+        self.assertEqual(5.0, effects[0].cash_coins)
+
+    def test_effect_refuses_missing_or_mismatched_paired_context(self):
+        window = candidate_fixture()
+        context = ("v27_current_meta", "kaito_v21", 7, 0)
+        def frame(step, identity):
+            return {"step": step, "context": identity, "observation": observation_fixture(step=step), "action": {"market": []}, "market_receipts": (), "capacity_certification": "no_certified_capacity_inflight"}
+        control = [frame(step, context) for step in (10, 34, 58)]
+        self.assertIsNone(derive_horizon_effects(control, [frame(step, None) for step in (10, 34, 58)], window))
+        boatlee = ("boatlee_v16_rc2_market_relay", "kaito_v21", 7, 0)
+        self.assertIsNone(derive_horizon_effects(control, [frame(step, boatlee) for step in (10, 34, 58)], window))
 
     def test_public_inbound_rekeys_when_identified_actor_moves(self):
         before = observation_fixture(step=100)

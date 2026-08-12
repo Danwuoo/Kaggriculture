@@ -45,6 +45,7 @@ class TraceFrame:
     latency_ms: float
     market_receipts: tuple[tuple[int, str, float], ...] = ()
     capacity_inflight: tuple[tuple[str, int, str], ...] = ()
+    capacity_certification: str | None = None
     context: tuple[str, str, int, int] | None = None
 
 
@@ -184,7 +185,7 @@ def _instrument_engine(
     engine: Any,
     candidate_private: Any,
     diagnostics: dict[str, Any],
-    planted_tiles: list[tuple[int, int]], receipts: list[tuple[int, str, float]], step_ref: list[int],
+    planted_tiles: list[tuple[int, int]], receipts: list[tuple[int, str, float]], step_ref: list[int], capacity_reasons: dict[int, str],
 ):
     """Return an undo callback after observing discard and successful-plant transitions."""
     original_unit = engine._apply_unit_action
@@ -203,6 +204,13 @@ def _instrument_engine(
             and action[0] == "DROP"
         )
         before = _inventory_total(private) if is_shed_drop else 0
+        if is_shed_drop:
+            shed = private.get("shed", {}) or {}
+            carried = sum(max(0, int(value or 0)) for value in (private.get("inventories", [])[unit_index] or {}).values())
+            if carried and sum(max(0, int(value or 0)) for value in shed.values()) >= 100:
+                # The audited engine discards a full-shed DROP, so it cannot certify
+                # a still-in-flight capacity unit. Preserve that explicit reason.
+                capacity_reasons[step_ref[0]] = "drop_overflow_discards"
         result = original_unit(*args, **kwargs)
         if is_shed_drop:
             discarded = max(0, before - _inventory_total(private))
@@ -315,8 +323,9 @@ def run_game(
     planted_tiles: list[tuple[int, int]] = []
     receipts: list[tuple[int, str, float]] = []
     step_ref = [-1]
+    capacity_reasons: dict[int, str] = {}
     undo_instrumentation = _instrument_engine(
-        engine, state[seat].observation.private, diagnostics, planted_tiles, receipts, step_ref
+        engine, state[seat].observation.private, diagnostics, planted_tiles, receipts, step_ref, capacity_reasons
     )
     try:
         for step in range(int(config.episodeSteps) - 1):
@@ -371,6 +380,7 @@ def run_game(
                 trace[-1] = replace(
                     frame,
                     market_receipts=tuple(item for item in receipts if item[0] == step),
+                    capacity_certification=capacity_reasons.get(step, "no_certified_capacity_inflight"),
                 )
             for event, fresh in _tile_events(
                 before_tiles,
