@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import copy
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from dataclasses import asdict
 import gzip
 import hashlib
@@ -43,6 +43,9 @@ class TraceFrame:
     observation: dict[str, Any]
     action: dict[str, Any]
     latency_ms: float
+    market_receipts: tuple[tuple[int, str, float], ...] = ()
+    capacity_inflight: tuple[tuple[str, int, str], ...] = ()
+    context: tuple[str, str, int, int] | None = None
 
 
 @dataclass
@@ -181,11 +184,12 @@ def _instrument_engine(
     engine: Any,
     candidate_private: Any,
     diagnostics: dict[str, Any],
-    planted_tiles: list[tuple[int, int]],
+    planted_tiles: list[tuple[int, int]], receipts: list[tuple[int, str, float]], step_ref: list[int],
 ):
     """Return an undo callback after observing discard and successful-plant transitions."""
     original_unit = engine._apply_unit_action
     original_daily_drop = engine._drop_inventories_to_shed
+    original_commit = engine._commit_unit
 
     def tracked_unit(*args: Any, **kwargs: Any) -> Any:
         farm = args[0]
@@ -230,9 +234,18 @@ def _instrument_engine(
     engine._apply_unit_action = tracked_unit
     engine._drop_inventories_to_shed = tracked_daily_drop
 
+    def tracked_commit(op: str, item: str, price: float, farm: Any, private: Any, market: Any, shed_capacity: int = 100) -> Any:
+        result = original_commit(op, item, price, farm, private, market, shed_capacity)
+        if result and private is candidate_private and op == "SELL":
+            receipts.append((step_ref[0], str(item), float(price)))
+        return result
+
+    engine._commit_unit = tracked_commit
+
     def undo() -> None:
         engine._apply_unit_action = original_unit
         engine._drop_inventories_to_shed = original_daily_drop
+        engine._commit_unit = original_commit
 
     return undo
 
@@ -300,11 +313,14 @@ def run_game(
     }
     max_market_orders = [0, 0]
     planted_tiles: list[tuple[int, int]] = []
+    receipts: list[tuple[int, str, float]] = []
+    step_ref = [-1]
     undo_instrumentation = _instrument_engine(
-        engine, state[seat].observation.private, diagnostics, planted_tiles
+        engine, state[seat].observation.private, diagnostics, planted_tiles, receipts, step_ref
     )
     try:
         for step in range(int(config.episodeSteps) - 1):
+            step_ref[0] = step
             for index in range(2):
                 state[index].observation.step = step
                 state[index].observation.remainingOverageTime = overage[index]
@@ -343,12 +359,19 @@ def run_game(
                                 observation=harness.plain(copy.deepcopy(observation)),
                                 action=copy.deepcopy(action),
                                 latency_ms=elapsed_ms,
+                                context=(incumbent, opponent_family, int(seed), int(seat)),
                             )
                         )
                 state[index].action = harness.structify(action)
             if any(exceptions):
                 break
             engine.interpreter(state, env)
+            if capture_trace:
+                frame = trace[-1]
+                trace[-1] = replace(
+                    frame,
+                    market_receipts=tuple(item for item in receipts if item[0] == step),
+                )
             for event, fresh in _tile_events(
                 before_tiles,
                 state[seat].observation.farms[seat]["tiles"],

@@ -61,7 +61,11 @@ def value_effect(
         return None
     market = 0.0
     for shift in effect.market:
-        adjustment = timing_adjustments.get(shift.provenance)
+        adjustment = (
+            shift.candidate_receipt - shift.control_receipt
+            if shift.control_receipt is not None and shift.candidate_receipt is not None
+            else timing_adjustments.get(shift.provenance)
+        )
         if not isinstance(adjustment, (int, float)):
             return None
         market += float(adjustment)
@@ -72,6 +76,16 @@ def _frame_value(frame: Any, name: str, default: Any = None) -> Any:
     if isinstance(frame, Mapping):
         return frame.get(name, default)
     return getattr(frame, name, default)
+
+
+def _frame_context(frame: Any) -> tuple[str, str, int, int] | None:
+    value = _frame_value(frame, "context")
+    if not isinstance(value, (tuple, list)) or len(value) != 4:
+        return None
+    try:
+        return str(value[0]), str(value[1]), int(value[2]), int(value[3])
+    except (TypeError, ValueError):
+        return None
 
 
 def _frames_by_step(trace: Sequence[Any]) -> dict[int, Any]:
@@ -134,8 +148,9 @@ def _tile_yield(observation: Mapping[str, Any], tile: tuple[int, int]) -> tuple[
     return product, int(yield_units)
 
 
-def _market_sales(trace: Sequence[Any], start: int, end: int) -> dict[str, list[tuple[int, int, float | None]]]:
-    sales: dict[str, list[tuple[int, int, float | None]]] = {}
+def _market_sales(trace: Sequence[Any], start: int, end: int) -> dict[str, list[tuple[int, int, float]] ] | None:
+    """Bind each SELL order to actual committed unit receipts from the runner."""
+    sales: dict[str, list[tuple[int, int, float]]] = {}
     for frame in trace:
         step = _frame_value(frame, "step")
         if not isinstance(step, int) or not start <= step <= end:
@@ -144,20 +159,32 @@ def _market_sales(trace: Sequence[Any], start: int, end: int) -> dict[str, list[
         observation = _frame_value(frame, "observation", {})
         if not isinstance(action, Mapping) or not isinstance(observation, Mapping):
             continue
-        prices = ((observation.get("market") or {}).get("prices") or {}) if isinstance(observation.get("market"), Mapping) else {}
+        receipts = _frame_value(frame, "market_receipts", ())
+        if not isinstance(receipts, (tuple, list)):
+            return None
+        by_product: dict[str, list[float]] = {}
+        for receipt in receipts:
+            if not isinstance(receipt, (tuple, list)) or len(receipt) != 3 or receipt[0] != step or not isinstance(receipt[2], (int, float)):
+                return None
+            by_product.setdefault(str(receipt[1]), []).append(float(receipt[2]))
         for order in action.get("market", []) or []:
             if not isinstance(order, (list, tuple)) or len(order) < 3 or order[0] != "SELL":
                 continue
             product, quantity = str(order[1]), int(order[2] or 0)
             if quantity <= 0:
                 continue
-            quote = prices.get(product) if isinstance(prices, Mapping) else None
-            sales.setdefault(product, []).append((step, quantity, float(quote) if isinstance(quote, (int, float)) else None))
+            committed = by_product.get(product, [])[:quantity]
+            by_product[product] = by_product.get(product, [])[quantity:]
+            if len(committed) != quantity:
+                return None
+            sales.setdefault(product, []).append((step, quantity, float(sum(committed))))
+        if any(values for values in by_product.values()):
+            return None
     return sales
 
 
 def _shift_for_product(
-    product: str, control: list[tuple[int, int, float | None]], candidate: list[tuple[int, int, float | None]], trigger: int,
+    product: str, control: list[tuple[int, int, float]], candidate: list[tuple[int, int, float]], trigger: int,
 ) -> tuple[MarketShift, ...] | None:
     if sum(item[1] for item in control) != sum(item[1] for item in candidate):
         return None
@@ -165,21 +192,41 @@ def _shift_for_product(
     left, right = list(control), list(candidate)
     index = 0
     while left and right:
-        c_step, c_qty, _c_quote = left[0]
-        d_step, d_qty, _d_quote = right[0]
+        c_step, c_qty, c_receipt = left[0]
+        d_step, d_qty, d_receipt = right[0]
         quantity = min(c_qty, d_qty)
+        c_share = c_receipt * quantity / c_qty
+        d_share = d_receipt * quantity / d_qty
         if c_step != d_step:
-            shifts.append(MarketShift(product, quantity, c_step - trigger, d_step - trigger, f"sale:{product}:{index}"))
+            shifts.append(MarketShift(
+                product, quantity, c_step - trigger, d_step - trigger, f"sale:{product}:{index}", c_share, d_share,
+            ))
             index += 1
         if c_qty == quantity:
             left.pop(0)
         else:
-            left[0] = (c_step, c_qty - quantity, _c_quote)
+            left[0] = (c_step, c_qty - quantity, c_receipt - c_share)
         if d_qty == quantity:
             right.pop(0)
         else:
-            right[0] = (d_step, d_qty - quantity, _d_quote)
+            right[0] = (d_step, d_qty - quantity, d_receipt - d_share)
     return tuple(shifts)
+
+
+def _capacity_rows(frame: Any) -> dict[str, tuple[str, int]] | None:
+    """Read only runner-recorded capacity-delayed units, rejecting ambiguity."""
+    raw = _frame_value(frame, "capacity_inflight", ())
+    if not isinstance(raw, (list, tuple)):
+        return None
+    rows: dict[str, tuple[str, int]] = {}
+    for item in raw:
+        if not isinstance(item, (list, tuple)) or len(item) != 3:
+            return None
+        product, quantity, provenance = str(item[0]), item[1], str(item[2])
+        if not isinstance(quantity, int) or quantity < 0 or provenance in rows:
+            return None
+        rows[provenance] = (product, quantity)
+    return rows
 
 
 def derive_horizon_effects(control_trace: Sequence[Any], candidate_trace: Sequence[Any], window: CandidateWindow) -> tuple[HorizonEffect, ...] | None:
@@ -226,6 +273,8 @@ def derive_horizon_effects(control_trace: Sequence[Any], candidate_trace: Sequen
                 asset.append((after[0], delta, f"tile:{tile[0]},{tile[1]}"))
         control_sales = _market_sales(control_trace, window.trigger_step, step)
         candidate_sales = _market_sales(candidate_trace, window.trigger_step, step)
+        if control_sales is None or candidate_sales is None:
+            return None
         shifts: list[MarketShift] = []
         for product in sorted(set(control_sales) | set(candidate_sales) | products):
             found = _shift_for_product(product, control_sales.get(product, []), candidate_sales.get(product, []), window.trigger_step)
@@ -235,12 +284,28 @@ def derive_horizon_effects(control_trace: Sequence[Any], candidate_trace: Sequen
         # Timing adjustments are deliberately omitted from cash only when a shifted sale is observed.
         timing = 0.0
         for shift in shifts:
-            control_quote = next((quote for sale_step, _qty, quote in control_sales[shift.product] if sale_step == window.trigger_step + shift.control_offset), None)
-            candidate_quote = next((quote for sale_step, _qty, quote in candidate_sales[shift.product] if sale_step == window.trigger_step + shift.candidate_offset), None)
-            if control_quote is None or candidate_quote is None:
+            if shift.control_receipt is None or shift.candidate_receipt is None:
                 return None
-            timing += shift.quantity * (candidate_quote - control_quote)
-        effect = HorizonEffect(horizon, candidate_money - control_money - timing, tuple(liquidatable), tuple(asset), (), tuple(shifts))
+            timing += shift.candidate_receipt - shift.control_receipt
+        control_capacity = _capacity_rows(control_frame)
+        candidate_capacity = _capacity_rows(candidate_frame)
+        if control_capacity is None or candidate_capacity is None:
+            return None
+        capacity: list[tuple[str, int, str]] = []
+        for provenance in sorted(set(control_capacity) | set(candidate_capacity)):
+            before = control_capacity.get(provenance)
+            after = candidate_capacity.get(provenance)
+            if before is not None and after is not None and before[0] != after[0]:
+                return None
+            product = (after or before)[0]
+            delta = (after[1] if after else 0) - (before[1] if before else 0)
+            if delta:
+                capacity.append((product, delta, provenance))
+        effect = HorizonEffect(
+            horizon, candidate_money - control_money - timing,
+            tuple(liquidatable), tuple(asset), tuple(capacity), tuple(shifts),
+            _frame_context(candidate_frame),
+        )
         if not _distinct_buckets(effect):
             return None
         results.append(effect)
@@ -318,6 +383,25 @@ def update_public_inbound(state: Mapping[str, Any], observation: Mapping[str, An
         int(new_market.get(product, 0) or 0) > int(old_market.get(product, 0) or 0) for product in set(old_market) | set(new_market)
     ):
         return {"previous": current, "bounds": {}}
+    # The lower bound belongs to a public actor index.  Move its key with that
+    # actor's consecutive public position so the stored distance cannot go stale.
+    current_actors = dict(_actors(current))
+    rekeyed: dict[str, dict[str, Any]] = {}
+    for key, entry in bounds.items():
+        try:
+            actor = int(str(key).split(":", 1)[0])
+        except (TypeError, ValueError):
+            return {"previous": current, "bounds": {}}
+        position = current_actors.get(actor)
+        if position is None or not isinstance(entry, Mapping):
+            return {"previous": current, "bounds": {}}
+        new_key = f"{actor}:{position}"
+        if new_key in rekeyed:
+            return {"previous": current, "bounds": {}}
+        moved = dict(entry)
+        moved["distance_to_shed"] = _distance_to_shed(position)
+        rekeyed[new_key] = moved
+    bounds = rekeyed
     actors = _actors(previous)
     for y, row in enumerate(previous.get("tiles") or []):
         if not isinstance(row, list):
@@ -352,6 +436,9 @@ def stable_median_effect(effects: Sequence[HorizonEffect]) -> tuple[HorizonEffec
     output: list[HorizonEffect] = []
     for horizon, rows in sorted(grouped.items()):
         if len(rows) < 2:
+            return None
+        contexts = [row.context for row in rows]
+        if any(context is None for context in contexts) or len(set(contexts)) < 2:
             return None
         liquidatable = _median_bucket([row.liquidatable for row in rows])
         asset = _median_bucket([row.asset for row in rows])
@@ -396,6 +483,11 @@ def _median_market(rows: Sequence[tuple[MarketShift, ...]]) -> tuple[MarketShift
     identity = tuple((item.product, item.provenance) for item in rows[0])
     if any(tuple((item.product, item.provenance) for item in row) != identity for row in rows):
         return None
+    if any(
+        item.control_receipt is None or item.candidate_receipt is None
+        for row in rows for item in row
+    ):
+        return None
     return tuple(
         MarketShift(
             product,
@@ -403,6 +495,8 @@ def _median_market(rows: Sequence[tuple[MarketShift, ...]]) -> tuple[MarketShift
             int(median(row[index].control_offset for row in rows)),
             int(median(row[index].candidate_offset for row in rows)),
             provenance,
+            float(median(row[index].control_receipt for row in rows)),
+            float(median(row[index].candidate_receipt for row in rows)),
         )
         for index, (product, provenance) in enumerate(identity)
     )

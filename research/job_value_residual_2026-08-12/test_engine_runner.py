@@ -74,7 +74,7 @@ class EngineRunnerTests(unittest.TestCase):
             with gzip.open(path, "rt", encoding="utf-8") as stream:
                 payload = stream.read()
         self.assertEqual(
-            '{"policy_metadata":{"selector":"control"},"summary":{"calls":1,"statuses":["DONE","DONE"]},"trace":[{"action":{"farmer":["PASS"],"hands":[],"market":[]},"latency_ms":0.25,"observation":{"private":{"shed":{}}},"step":0}]}',
+            '{"policy_metadata":{"selector":"control"},"summary":{"calls":1,"statuses":["DONE","DONE"]},"trace":[{"action":{"farmer":["PASS"],"hands":[],"market":[]},"capacity_inflight":[],"context":null,"latency_ms":0.25,"market_receipts":[],"observation":{"private":{"shed":{}}},"step":0}]}',
             payload,
         )
         self.assertEqual(1, json.loads(payload)["summary"]["calls"])

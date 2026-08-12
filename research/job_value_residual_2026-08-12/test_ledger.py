@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from dataclasses import replace
 import unittest
 
 from ledger import LedgerBreakdown, derive_horizon_effects, stable_median_effect, update_public_inbound, value_effect
@@ -69,10 +70,61 @@ class LedgerTests(unittest.TestCase):
         self.assertIsNone(derive_horizon_effects(control, candidate, window))
 
     def test_effect_aggregation_requires_same_buckets_and_signs(self):
-        first = HorizonEffect(24, 2.0, (("MILK", 2, "cargo"),), (), (), ())
-        second = HorizonEffect(24, 4.0, (("MILK", 4, "cargo"),), (), (), ())
+        context_a = ("v27_current_meta", "kaito_v21", 1, 0)
+        context_b = ("v27_current_meta", "kaito_v21", 2, 0)
+        first = HorizonEffect(24, 2.0, (("MILK", 2, "cargo"),), (), (), (), context_a)
+        second = HorizonEffect(24, 4.0, (("MILK", 4, "cargo"),), (), (), (), context_b)
         self.assertEqual((HorizonEffect(24, 3.0, (("MILK", 3, "cargo"),), (), (), ()),), stable_median_effect((first, second)))
-        self.assertIsNone(stable_median_effect((first, HorizonEffect(24, -4.0, (("MILK", -4, "cargo"),), (), (), ()))))
+        self.assertIsNone(stable_median_effect((first, replace(second, context=context_a))))
+        self.assertIsNone(stable_median_effect((first, replace(second, cash_coins=-4.0, liquidatable=(("MILK", -4, "cargo"),)))))
+
+    def test_capacity_bucket_requires_runner_recorded_unambiguous_inflight(self):
+        window = candidate_fixture()
+        control = [{"step": step, "observation": observation_fixture(step=step), "action": {"market": []}} for step in (10, 34, 58)]
+        candidate = [dict(row) for row in control]
+        candidate[1] = {**candidate[1], "capacity_inflight": (("MILK", 2, "capacity:hand:1"),)}
+        effects = derive_horizon_effects(control, candidate, window)
+        self.assertEqual((("MILK", 2, "capacity:hand:1"),), effects[0].capacity)
+        candidate[1] = {**candidate[1], "capacity_inflight": (("MILK", 2, "same"), ("MILK", 1, "same"))}
+        self.assertIsNone(derive_horizon_effects(control, candidate, window))
+
+    def test_shift_uses_realized_per_unit_receipts_not_pre_action_quote(self):
+        from schema import SellDirective
+
+        window = replace(candidate_fixture(), sell_directives=(SellDirective(0, "MILK", 2),))
+        def frame(step, *, action=None, receipts=(), money=3000):
+            obs = observation_fixture(step=step)
+            obs["farms"][0]["money"] = money
+            return {"step": step, "observation": obs, "action": action or {"market": []}, "market_receipts": receipts}
+        control = [
+            frame(10, action={"market": [["SELL", "MILK", 2]]}, receipts=((10, "MILK", 20.0), (10, "MILK", 19.0))),
+            frame(34), frame(58),
+        ]
+        candidate = [
+            frame(10),
+            frame(11, action={"market": [["SELL", "MILK", 2]]}, receipts=((11, "MILK", 25.0), (11, "MILK", 24.0))),
+            frame(34, money=3010), frame(58, money=3010),
+        ]
+        effects = derive_horizon_effects(control, candidate, window)
+        shift = effects[0].market[0]
+        self.assertEqual((39.0, 49.0), (shift.control_receipt, shift.candidate_receipt))
+        self.assertEqual(0.0, effects[0].cash_coins)
+
+    def test_public_inbound_rekeys_when_identified_actor_moves(self):
+        before = observation_fixture(step=100)
+        before["farms"][1]["hands"] = [[2, 1]]
+        before["farms"][1]["tiles"][1][2] = {"kind": "PASTURE", "animal": "COW", "yield_units": 3}
+        state = update_public_inbound({}, before, 0)
+        harvest = observation_fixture(step=101)
+        harvest["farms"][1]["hands"] = [[2, 1]]
+        harvest["farms"][1]["tiles"][1][2] = {"kind": "PASTURE", "animal": "COW", "yield_units": 2}
+        state = update_public_inbound(state, harvest, 0)
+        moved = observation_fixture(step=102)
+        moved["farms"][1]["hands"] = [[3, 1]]
+        moved["farms"][1]["tiles"][1][2] = {"kind": "PASTURE", "animal": "COW", "yield_units": 2}
+        state = update_public_inbound(state, moved, 0)
+        self.assertNotIn("1:(2, 1)", state["bounds"])
+        self.assertEqual(1, state["bounds"]["1:(3, 1)"]["MILK"])
 
 
 if __name__ == "__main__":

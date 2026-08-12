@@ -29,6 +29,8 @@ class MarketShift:
     control_offset: int
     candidate_offset: int
     provenance: str
+    control_receipt: float | None = None
+    candidate_receipt: float | None = None
 
 
 @dataclass(frozen=True)
@@ -39,6 +41,7 @@ class HorizonEffect:
     asset: tuple[tuple[str, int, str], ...]
     capacity: tuple[tuple[str, int, str], ...]
     market: tuple[MarketShift, ...]
+    context: tuple[str, str, int, int] | None = None
 
 
 @dataclass(frozen=True)
@@ -75,6 +78,8 @@ def _market_shift(value: Mapping[str, Any]) -> MarketShift:
     return MarketShift(
         str(value["product"]), int(value["quantity"]), int(value["control_offset"]),
         int(value["candidate_offset"]), str(value["provenance"]),
+        None if value.get("control_receipt") is None else float(value["control_receipt"]),
+        None if value.get("candidate_receipt") is None else float(value["candidate_receipt"]),
     )
 
 
@@ -85,6 +90,10 @@ def _effect(value: Mapping[str, Any]) -> HorizonEffect:
         tuple(tuple(item) for item in value["asset"]),
         tuple(tuple(item) for item in value["capacity"]),
         tuple(_market_shift(item) for item in value["market"]),
+        None if value.get("context") is None else (
+            str(value["context"][0]), str(value["context"][1]),
+            int(value["context"][2]), int(value["context"][3]),
+        ),
     )
 
 

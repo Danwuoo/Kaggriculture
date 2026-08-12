@@ -110,6 +110,8 @@ def requirements_hold(
     observation: Mapping[str, Any],
     *,
     offset: int = 0,
+    previous_observation: Mapping[str, Any] | None = None,
+    previous_order: tuple[str, ...] | None = None,
 ) -> bool:
     """Return false for missing/malformed data rather than improvising a window."""
     for requirement in window.requirements:
@@ -121,20 +123,51 @@ def requirements_hold(
         # A delivery consumes its declared carried input.  Requiring that same
         # input on the turn after a successful DROP would turn a legal local
         # route into a false failed-precondition extension.
-        if requirement.field == "actor_inventory" and any(
-            action[:1] == ("DROP",) for action in window.actions[:offset]
-        ):
-            continue
-        # Likewise, a harvested tile is no longer required to retain the yield
-        # that was explicitly consumed by the prior forced action.
-        if requirement.field in {"tile_kind", "tile_product", "tile_yield"} and any(
-            action[:1] == ("HARVEST",) for action in window.actions[:offset]
+        if _retired_requirement(
+            requirement, window, observation, previous_observation, previous_order
         ):
             continue
         actual = _requirement_value(requirement, observation)
         if actual is None or not _compare(actual, requirement.operator, requirement.value):
             return False
     return True
+
+
+def _retired_requirement(
+    requirement: Requirement,
+    window: CandidateWindow,
+    observation: Mapping[str, Any],
+    previous_observation: Mapping[str, Any] | None,
+    previous_order: tuple[str, ...] | None,
+) -> bool:
+    """Retire only a requirement whose exact input was consumed last turn."""
+    if previous_observation is None or previous_order is None:
+        return False
+    if requirement.field == "actor_inventory" and previous_order[:1] == ("DROP",):
+        if len(requirement.key) != 2 or int(requirement.key[0]) != window.actor:
+            return False
+        before = _requirement_value(requirement, previous_observation)
+        after = _requirement_value(requirement, observation)
+        return isinstance(before, (int, float)) and isinstance(after, (int, float)) and after < before
+    if requirement.field in {"tile_kind", "tile_product", "tile_yield"} and previous_order[:1] == ("HARVEST",):
+        if len(requirement.key) != 2 or _actor_position(previous_observation, window.actor) != tuple(requirement.key):
+            return False
+        before_tile = _tile(previous_observation, requirement.key)
+        after_tile = _tile(observation, requirement.key)
+        if before_tile is None:
+            return False
+        before_yield = before_tile.get("yield_units")
+        after_yield = after_tile.get("yield_units") if after_tile else None
+        return after_tile is None or (
+            isinstance(before_yield, (int, float))
+            and isinstance(after_yield, (int, float))
+            and after_yield < before_yield
+        )
+    return False
+
+
+def _requirement_identity(requirement: Requirement) -> str:
+    return f"{requirement.field}:{':'.join(map(str, requirement.key))}"
 
 
 def apply_actor_action(action: Mapping[str, Any], actor: int, order: tuple[str, ...]) -> dict[str, list[Any]]:
@@ -190,6 +223,15 @@ def make_forced_factory(window: CandidateWindow) -> Callable[[Any, Callable[...,
             "rejoin_step": window.rejoin_step,
             "applied_sell_quantity": 0,
             "sell_rejected": False,
+            "sell_rejected_reason": None,
+            "abort_reason": None,
+            "failed_precondition": None,
+            "expected_rejoin_position": list(window.expected_positions[-1]),
+            "observed_rejoin_position": None,
+            "last_forced_step": None,
+            "last_observation": None,
+            "last_order": None,
+            "retired_preconditions": [],
         }
 
         def wrapped(observation: Mapping[str, Any], configuration: Any = None) -> dict:
@@ -197,49 +239,86 @@ def make_forced_factory(window: CandidateWindow) -> Callable[[Any, Callable[...,
             step = observation.get("step")
             if not isinstance(step, int):
                 return base
+            if metadata["status"] == "pending" and step > window.trigger_step:
+                metadata.update(status="aborted", abort_step=step, abort_reason="interior_start")
+                return base
             if step < window.trigger_step or step > window.rejoin_step:
                 return base
             if step == window.rejoin_step:
                 if metadata["status"] in {"active", "forced"}:
-                    if _actor_position(observation, window.actor) == window.expected_positions[-1]:
+                    observed = _actor_position(observation, window.actor)
+                    metadata["observed_rejoin_position"] = None if observed is None else list(observed)
+                    if observed == window.expected_positions[-1]:
                         metadata["status"] = "rejoined"
                     else:
-                        metadata["status"] = "failed_rejoin"
+                        metadata.update(status="failed_rejoin", abort_reason="failed_rejoin")
                 return base
             offset = step - window.trigger_step
             if metadata["status"] not in {"pending", "active", "forced"}:
                 return base
+            if metadata["last_forced_step"] is not None and step != metadata["last_forced_step"] + 1:
+                metadata.update(status="aborted", abort_step=step, abort_reason="step_gap")
+                return base
+            failed_requirement = None
+            for requirement in window.requirements:
+                identity = _requirement_identity(requirement)
+                if identity in metadata["retired_preconditions"]:
+                    continue
+                single_requirement = CandidateWindow(
+                    window.candidate_id, window.incumbent, window.family,
+                    window.trigger_step, window.actor, window.rejoin_step,
+                    window.actions, window.expected_positions, (requirement,),
+                    window.sell_directives, window.displaced_actions,
+                    window.touched_tiles, window.effects,
+                )
+                if _retired_requirement(
+                    requirement, window, observation, metadata["last_observation"], metadata["last_order"],
+                ):
+                    metadata["retired_preconditions"].append(identity)
+                    continue
+                if not requirements_hold(
+                    single_requirement, observation, offset=offset,
+                    previous_observation=metadata["last_observation"], previous_order=metadata["last_order"],
+                ):
+                    failed_requirement = requirement
+                    break
             if (
                 offset < 0
                 or offset >= len(window.actions)
                 or _actor_position(observation, window.actor) != window.expected_positions[offset]
-                or not requirements_hold(window, observation, offset=offset)
+                or failed_requirement is not None
             ):
-                metadata["status"] = "aborted"
-                metadata["abort_step"] = step
+                metadata.update(
+                    status="aborted", abort_step=step,
+                    abort_reason="position_mismatch" if failed_requirement is None else "precondition_failed",
+                    failed_precondition=None if failed_requirement is None else _requirement_identity(failed_requirement),
+                )
                 return base
             try:
                 changed = apply_actor_action(base, window.actor, window.actions[offset])
             except ValueError:
-                metadata["status"] = "aborted"
-                metadata["abort_step"] = step
+                metadata.update(status="aborted", abort_step=step, abort_reason="actor_absent")
                 return base
             directives = [item for item in window.sell_directives if item.offset == offset]
             if len(directives) > 1:
-                metadata["status"] = "aborted"
-                metadata["abort_step"] = step
+                metadata.update(status="aborted", abort_step=step, abort_reason="multiple_sell_directives")
                 return base
             if directives:
                 directive = directives[0]
                 available = _available_for_sell(observation, base, window.actor, window.actions[offset], directive)
-                if available == directive.quantity:
+                if len(changed["market"]) >= 10:
+                    metadata.update(sell_rejected=True, sell_rejected_reason="market_cap")
+                elif available == directive.quantity:
                     changed["market"].append(["SELL", directive.product, directive.quantity])
                     metadata["applied_sell_quantity"] += directive.quantity
                 else:
-                    metadata["sell_rejected"] = True
+                    metadata.update(sell_rejected=True, sell_rejected_reason="insufficient_shed")
             metadata["status"] = "forced"
             metadata["applied_steps"].append(step)
             metadata["applied_actions"].append(list(window.actions[offset]))
+            metadata["last_forced_step"] = step
+            metadata["last_observation"] = deepcopy(observation)
+            metadata["last_order"] = tuple(window.actions[offset])
             return changed
 
         wrapped.metadata = metadata  # type: ignore[attr-defined]

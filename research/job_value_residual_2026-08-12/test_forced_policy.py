@@ -80,6 +80,59 @@ class ForcedPolicyTests(unittest.TestCase):
             wrapped(obs)
         self.assertEqual([10, 11, 12, 13], wrapped.metadata["applied_steps"])
 
+    def test_full_market_queue_rejects_extra_sell_without_mutating_base_orders(self):
+        window = replace(
+            candidate_fixture(),
+            actions=(("DROP",), ("PASS",), ("PASS",), ("PASS",)),
+            expected_positions=((4, 4),) * 5,
+            sell_directives=(SellDirective(0, "MILK", 1),),
+        )
+
+        def full_market(obs, configuration=None):
+            result = base_policy(obs)
+            result["market"] = [["SELL", "WHEAT", 1] for _ in range(10)]
+            return result
+
+        obs = observation_fixture(step=10, hands=1, hand_positions=[(4, 4)])
+        obs["private"]["shed"]["MILK"] = 1
+        wrapped = make_forced_factory(window)(object(), full_market, 0)
+        changed = wrapped(obs)
+        self.assertEqual(10, len(changed["market"]))
+        self.assertTrue(wrapped.metadata["sell_rejected"])
+        self.assertEqual("market_cap", wrapped.metadata["sell_rejected_reason"])
+
+    def test_interior_first_call_and_step_gap_abort_fail_closed(self):
+        window = candidate_fixture()
+        wrapped = make_forced_factory(window)(object(), base_policy, 0)
+        interior = observation_fixture(step=11, hands=1, hand_positions=[(2, 1)])
+        self.assertEqual(base_policy(interior), wrapped(interior))
+        self.assertEqual("interior_start", wrapped.metadata["abort_reason"])
+        wrapped = make_forced_factory(window)(object(), base_policy, 0)
+        wrapped(observation_fixture(step=10, hands=1, hand_positions=[(1, 1)]))
+        gap = observation_fixture(step=12, hands=1, hand_positions=[(2, 1)])
+        self.assertEqual(base_policy(gap), wrapped(gap))
+        self.assertEqual("step_gap", wrapped.metadata["abort_reason"])
+
+    def test_retirement_needs_same_actor_product_and_same_mutated_tile(self):
+        inventory = replace(
+            candidate_fixture(),
+            actions=(("DROP",), ("PASS",), ("PASS",), ("PASS",)),
+            expected_positions=((4, 4),) * 5,
+            requirements=(
+                Requirement("actor_inventory", (1, "MILK"), "ge", 1),
+                Requirement("actor_inventory", (0, "WOOL"), "ge", 1),
+            ),
+        )
+        wrapped = make_forced_factory(inventory)(object(), base_policy, 0)
+        start = observation_fixture(step=10, hands=1, hand_positions=[(4, 4)])
+        start["private"]["inventories"][1]["MILK"] = 1
+        start["private"]["inventories"][0]["WOOL"] = 1
+        wrapped(start)
+        later = observation_fixture(step=11, hands=1, hand_positions=[(4, 4)])
+        later["private"]["inventories"][0]["WOOL"] = 0
+        self.assertEqual(base_policy(later), wrapped(later))
+        self.assertEqual("actor_inventory:0:WOOL", wrapped.metadata["failed_precondition"])
+
     def test_apply_actor_action_copies_all_action_lists(self):
         action = {"farmer": ["PASS"], "hands": [["PASS"]], "market": [["SELL", "MILK", 1]]}
         changed = apply_actor_action(action, 1, ("EAST",))
