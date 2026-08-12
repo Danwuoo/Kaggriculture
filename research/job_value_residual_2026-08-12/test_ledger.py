@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import replace
+import json
 import unittest
 
 from ledger import LedgerBreakdown, derive_horizon_effects, stable_median_effect, update_public_inbound, value_effect
@@ -139,6 +140,20 @@ class LedgerTests(unittest.TestCase):
         self.assertIsNone(derive_horizon_effects(control, [frame(step, None) for step in (10, 34, 58)], window))
         boatlee = ("boatlee_v16_rc2_market_relay", "kaito_v21", 7, 0)
         self.assertIsNone(derive_horizon_effects(control, [frame(step, boatlee) for step in (10, 34, 58)], window))
+
+    def test_json_string_round_trip_normalizes_tuple_requirement_values(self):
+        from schema import Requirement, from_json, to_json
+        from forced_policy import requirements_hold
+
+        window = replace(candidate_fixture(), requirements=(
+            Requirement("actor_position", (1,), "eq", (1, 1)),
+            Requirement("tile_yield", (2, 1), "ge", 1),
+        ))
+        restored = from_json(json.loads(json.dumps(to_json(window))))
+        self.assertEqual(window, restored)
+        obs = observation_fixture(step=10, hands=1, hand_positions=[(1, 1)])
+        obs["farms"][0]["tiles"][1][2] = {"kind": "PLANT", "yield_units": 1}
+        self.assertTrue(requirements_hold(restored, obs))
 
     def test_public_inbound_rekeys_when_identified_actor_moves(self):
         before = observation_fixture(step=100)

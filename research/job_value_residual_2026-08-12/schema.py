@@ -67,7 +67,14 @@ def to_json(window: CandidateWindow) -> dict[str, Any]:
 
 
 def _requirement(value: Mapping[str, Any]) -> Requirement:
-    return Requirement(str(value["field"]), tuple(value["key"]), str(value["operator"]), value["value"])
+    field = str(value["field"])
+    expected = value["value"]
+    # ``actor_position`` is the schema's exact-coordinate requirement. JSON
+    # decodes its tuple as a list, which must not silently break equality or a
+    # forced window's fail-closed position precondition on artifact replay.
+    if field == "actor_position" and isinstance(expected, list):
+        expected = tuple(expected)
+    return Requirement(field, tuple(value["key"]), str(value["operator"]), expected)
 
 
 def _directive(value: Mapping[str, Any]) -> SellDirective:
