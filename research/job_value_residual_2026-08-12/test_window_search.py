@@ -118,6 +118,14 @@ class WindowSearchTests(unittest.TestCase):
             changed[1] = TraceFrame(1, changed[1].observation, overlay, 0.1)
             self.assertEqual((), mine_candidates("v27_current_meta", changed, tuple(route), opponent_family="kaito_v21", seed=1, seat=0))
 
+    def test_miner_rejects_candidate_interval_with_missing_interior_trace_frame(self):
+        trace, route = self._pass_trace(5)
+        for frame in trace:
+            frame.observation["farms"][0]["tiles"][1][2] = {"kind": "PLANT", "yield_units": 2, "watered_today": True}
+        incomplete = [trace[0], *trace[2:]]
+        found = mine_candidates("v27_current_meta", incomplete, tuple(route), opponent_family="kaito_v21", seed=1, seat=0)
+        self.assertFalse([window for window in found if window.trigger_step == 0])
+
     def test_anchor_window_does_not_read_offset_six_for_length_four(self):
         trace, route = self._pass_trace(8)
         trace[0].observation["farms"][0]["tiles"][1][2] = {"kind": "PLANT", "yield_units": 2, "watered_today": True}
@@ -140,6 +148,15 @@ class WindowSearchTests(unittest.TestCase):
             frame.observation["private"]["inventories"][1]["MILK"] = 0
         bare = [replace(frame, action={"farmer": ["PASS"], "hands": [["PASS"]], "market": [["SELL", "MILK", 3]]}) for frame in trace]
         self.assertFalse([window for window in mine_candidates("v27_current_meta", bare, tuple(route), opponent_family="kaito_v21", seed=1, seat=0) if window.family == "logistics_market"])
+
+    def test_capacity_uses_projected_shed_occupancy_from_bounded_inbound_delivery(self):
+        trace, route = self._pass_trace(5)
+        trace[0].observation["private"]["inventories"][1]["MILK"] = 3
+        trace[0].observation["private"]["shed"]["WHEAT"] = 84
+        found = mine_candidates("v27_current_meta", trace, tuple(route), opponent_family="kaito_v21", seed=1, seat=0)
+        logistics = [window for window in found if window.family == "logistics_market"]
+        self.assertTrue(logistics)
+        self.assertIn(("shed_occupancy", 87, "ge_85"), logistics[0].effects[0].capacity)
 
     def test_harvest_inside_window_can_anchor_logistics_delivery(self):
         trace, route = self._pass_trace(5)

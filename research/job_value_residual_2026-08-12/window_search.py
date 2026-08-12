@@ -89,8 +89,8 @@ def _normalized_action(action: Any) -> str:
 def _window_route_matches(frames: dict[int, TraceFrame], frame: TraceFrame, route: Sequence[dict[str, Any]], actor: int, length: int) -> bool:
     """Do not modify a readable-tape interval already changed by an incumbent overlay."""
     return all(
-        frame.step + offset not in frames
-        or _normalized_action(frames[frame.step + offset].action) == _normalized_action(route[frame.step + offset])
+        frame.step + offset in frames
+        and _normalized_action(frames[frame.step + offset].action) == _normalized_action(route[frame.step + offset])
         for offset in range(length)
     )
 
@@ -167,6 +167,15 @@ def _route_sell(route: Sequence[dict[str, Any]], step: int, length: int, product
             if len(order) >= 3 and order[0] == "SELL" and order[1] == product:
                 return SellDirective(offset, product, min(delivered, max(0, int(order[2] or 0))))
     return None
+
+
+def _with_capacity_anchor(window: CandidateWindow, observation: dict[str, Any], delivered: int) -> CandidateWindow:
+    """Annotate only a delivery that would project the finite shed to the capacity region."""
+    projected = _shed_occupancy(observation) + max(0, int(delivered))
+    if projected < 85:
+        return window
+    capacity = ("shed_occupancy", projected, "ge_85")
+    return replace(window, effects=tuple(replace(effect, capacity=(capacity,)) for effect in window.effects))
 
 
 def validate_window(window: CandidateWindow) -> list[str]:
@@ -296,9 +305,7 @@ def mine_candidates(
                     if candidate is not None:
                         directive = _route_sell(route, frame.step, length, product, quantity)
                         candidate = replace(candidate, sell_directives=() if directive is None else (directive,))
-                        if _shed_occupancy(frame.observation) >= 85:
-                            capacity = ("shed_occupancy", _shed_occupancy(frame.observation), "ge_85")
-                            candidate = replace(candidate, effects=tuple(replace(effect, capacity=(capacity,)) for effect in candidate.effects))
+                        candidate = _with_capacity_anchor(candidate, frame.observation, quantity)
                         candidate = replace(candidate, candidate_id=_candidate_id(candidate))
                         retain(candidate)
     selected = []
@@ -403,6 +410,7 @@ def _harvest_logistics_window(
         () if directive is None else (directive,), tuple(baseline), (harvest, shed), _effects(frame.step),
     )
     window = replace(window, candidate_id=_candidate_id(window))
+    window = _with_capacity_anchor(window, frame.observation, quantity)
     return None if validate_window(window) else window
 
 
