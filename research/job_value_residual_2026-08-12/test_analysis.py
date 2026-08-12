@@ -7,7 +7,9 @@ from pathlib import Path
 import unittest
 
 from analysis import discovery_gate, label_pair, summarize_discovery
+from engine_runner import TraceFrame
 from freeze_windows import render_policy
+from run_discovery import candidate_market_receipts
 from test_support import passing_discovery_summary
 
 
@@ -59,6 +61,21 @@ class AnalysisTests(unittest.TestCase):
         }
         self.assertEqual(render_policy(payload), render_policy(payload))
         self.assertLess(render_policy(payload).find("candidate_id': 'a"), render_policy(payload).find("candidate_id': 'b"))
+
+    def test_candidate_record_keeps_every_committed_receipt_when_an_earlier_sell_fails(self):
+        """Catch receipt encoding that loses later units after a failed earlier SELL order."""
+        trace = [
+            TraceFrame(
+                step=12, observation={}, action={"market": [["SELL", "MILK", 2], ["SELL", "WOOL", 1]]}, latency_ms=0.1,
+                market_receipts=((12, "WOOL", 30.0),),
+            ),
+        ]
+        self.assertEqual(
+            [
+                {"step": 12, "receipt_index": 0, "product": "WOOL", "receipt": 30.0},
+            ],
+            candidate_market_receipts(trace),
+        )
 
 
 if __name__ == "__main__":

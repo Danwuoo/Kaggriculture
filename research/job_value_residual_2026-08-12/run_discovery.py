@@ -36,6 +36,12 @@ def _trace_path(output: Path, run: GameRun) -> Path:
     return output / "control_traces" / f"{run.incumbent}__{run.opponent_family}__{run.seed}__seat{run.seat}.json.gz"
 
 
+def _candidate_trace_path(output: Path, run: GameRun, window: CandidateWindow) -> Path:
+    return output / "candidate_traces" / (
+        f"{run.incumbent}__{run.opponent_family}__{run.seed}__seat{run.seat}__{window.candidate_id}.json.gz"
+    )
+
+
 def _write_deterministic_trace(path: Path, run: GameRun) -> None:
     """Store all observed control frames with a fixed gzip timestamp and JSON order."""
     payload = {
@@ -124,7 +130,34 @@ def _logistics_delivery_valid(window: CandidateWindow) -> bool:
     return True
 
 
-def _candidate_record(control: GameRun, candidate: GameRun, window: CandidateWindow, trace_file: Path) -> dict[str, Any]:
+def candidate_market_receipts(trace: Sequence[Any]) -> list[dict[str, Any]]:
+    """Canonically preserve every committed forced-run SELL unit receipt.
+
+    The official lockstep market can reject an earlier SELL while a later order
+    succeeds; the committed receipt stream has no engine-provided order index.
+    Preserve its exact per-frame order and retain the deterministic full trace
+    reference beside it instead of inventing an ambiguous order association.
+    """
+    rows: list[dict[str, Any]] = []
+    for frame in sorted(trace, key=lambda item: int(item.step)):
+        for receipt_index, receipt in enumerate(frame.market_receipts):
+            if (
+                not isinstance(receipt, (tuple, list))
+                or len(receipt) != 3
+                or receipt[0] != frame.step
+                or not isinstance(receipt[2], (int, float))
+            ):
+                raise ValueError(f"candidate trace has malformed receipt at step {frame.step}")
+            rows.append({
+                "step": int(frame.step), "receipt_index": receipt_index,
+                "product": str(receipt[1]), "receipt": float(receipt[2]),
+            })
+    return rows
+
+
+def _candidate_record(
+    control: GameRun, candidate: GameRun, window: CandidateWindow, trace_file: Path, candidate_trace_file: Path,
+) -> dict[str, Any]:
     effects, values = _effect_values(control, candidate, window)
     scored_window = replace(window, effects=effects)
     control_view, candidate_view = control.summary, candidate.summary
@@ -141,6 +174,7 @@ def _candidate_record(control: GameRun, candidate: GameRun, window: CandidateWin
         "seed": control.seed,
         "seat": control.seat,
         "control_trace": trace_file.as_posix(),
+        "candidate_trace": candidate_trace_file.as_posix(),
         "candidate": {
             "candidate_id": scored_window.candidate_id,
             "family": scored_window.family,
@@ -151,6 +185,7 @@ def _candidate_record(control: GameRun, candidate: GameRun, window: CandidateWin
         "window": to_json(scored_window),
         "control": control_view,
         "candidate_run": candidate_view,
+        "candidate_market_receipts": candidate_market_receipts(candidate.trace),
         "metadata": candidate.policy_metadata,
         "label": label.to_dict(),
         "delta_value_24": values[24],
@@ -208,7 +243,11 @@ def run_discovery(output: Path) -> dict[str, Any]:
                 control.incumbent, control_path(control.incumbent), control.opponent_family,
                 control.seed, control.seat, policy_factory=make_forced_factory(window), capture_trace=True,
             )
-            record = _candidate_record(control, forced, window, trace_file)
+            candidate_trace_path = _candidate_trace_path(output, forced, window)
+            _write_deterministic_trace(candidate_trace_path, forced)
+            record = _candidate_record(
+                control, forced, window, trace_file, candidate_trace_path.relative_to(output),
+            )
             records.append(record)
             _abort_if_technical((record,))
     games_path = output / "discovery_games.jsonl"
@@ -218,7 +257,8 @@ def run_discovery(output: Path) -> dict[str, Any]:
     gate = discovery_gate(summary)
     manifest = LANE_ROOT / "artifacts" / "prechange_manifest.json"
     windows_payload = {
-        "schema_version": 1,
+        "schema_version": 3,
+        "candidate_market_receipt_schema": "step-receipt-index-product-receipt-v1",
         "prechange_manifest_sha256": _sha256(manifest),
         "discovery_games_sha256": _sha256(games_path),
         "rows": [
@@ -228,7 +268,8 @@ def run_discovery(output: Path) -> dict[str, Any]:
     }
     _write_json(output / "discovery_windows.json", windows_payload)
     summary_payload = {
-        "schema_version": 1,
+        "schema_version": 3,
+        "candidate_market_receipt_schema": "step-receipt-index-product-receipt-v1",
         "prechange_manifest_sha256": _sha256(manifest),
         "discovery_games_sha256": _sha256(games_path),
         "controls": len(controls),
@@ -269,13 +310,28 @@ def verify_existing(path: Path) -> dict[str, Any]:
         context = record["context"]
         key = (context["incumbent"], context["opponent_family"], int(context["seed"]), int(context["seat"]))
         window = from_json(record["window"])
-        fresh = run_game(key[0], control_path(key[0]), key[1], key[2], key[3], policy_factory=make_forced_factory(window))
+        fresh = run_game(
+            key[0], control_path(key[0]), key[1], key[2], key[3],
+            policy_factory=make_forced_factory(window), capture_trace=True,
+        )
         if not _same_behavior(record["candidate_run"], fresh):
             raise RuntimeError(f"candidate reproduction mismatch: {key} {window.candidate_id}")
         control = controls[key]
         fresh_label = label_pair({"margin": _margin(control.summary, key[3])}, {"margin": _margin(fresh.summary, key[3])}).to_dict()
         if fresh_label != record["label"]:
             raise RuntimeError(f"label reproduction mismatch: {key} {window.candidate_id}")
+        if candidate_market_receipts(fresh.trace) != record.get("candidate_market_receipts"):
+            raise RuntimeError(f"receipt reproduction mismatch: {key} {window.candidate_id}")
+        candidate_trace = path.parent / record["candidate_trace"]
+        with gzip.open(candidate_trace, "rt", encoding="utf-8") as stream:
+            stored_trace = json.load(stream)
+        stored_receipts = [
+            {"step": frame["step"], "receipt_index": index, "product": receipt[1], "receipt": receipt[2]}
+            for frame in stored_trace["trace"]
+            for index, receipt in enumerate(frame["market_receipts"])
+        ]
+        if stored_receipts != record["candidate_market_receipts"]:
+            raise RuntimeError(f"candidate trace receipt mismatch: {key} {window.candidate_id}")
         for name in ("status", "applied_steps", "abort_step", "abort_reason", "observed_rejoin_position"):
             if fresh.policy_metadata.get(name) != record["metadata"].get(name):
                 raise RuntimeError(f"rejoin reproduction mismatch: {key} {window.candidate_id} {name}")

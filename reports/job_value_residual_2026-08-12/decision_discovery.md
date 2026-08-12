@@ -23,6 +23,10 @@ Python blob `4b78842d0f2d4abf6e318a8248b6306454f5c714`, configuration blob
 is [discovery_games.jsonl](../../research/job_value_residual_2026-08-12/artifacts/discovery_games.jsonl),
 [discovery_windows.json](../../research/job_value_residual_2026-08-12/artifacts/discovery_windows.json),
 and [discovery_summary.json](../../research/job_value_residual_2026-08-12/artifacts/discovery_summary.json).
+Every forced-candidate row also retains its canonical committed per-unit receipt
+stream (`step`, receipt index, product, price) and a deterministic full
+candidate-trace reference. This preserves later committed orders even when an
+earlier same-turn SELL is rejected by the official lockstep market.
 
 ## Per-incumbent gate evidence
 
