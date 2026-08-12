@@ -26,8 +26,8 @@ REQUIREMENT_KEYS = {
 
 
 def shortest_actions(start: tuple[int, int], target: tuple[int, int]) -> tuple[str, ...]:
-    x, y = start
-    tx, ty = target
+    x, y = (max(0, min(9, int(start[0]))), max(0, min(9, int(start[1]))))
+    tx, ty = (max(0, min(9, int(target[0]))), max(0, min(9, int(target[1]))))
     result: list[str] = []
     result.extend(["EAST" if tx > x else "WEST"] * abs(tx - x))
     result.extend(["SOUTH" if ty > y else "NORTH"] * abs(ty - y))
@@ -81,10 +81,16 @@ def _route_matches(frame: TraceFrame, route: Sequence[dict[str, Any]], actor: in
     return 0 <= frame.step < len(route) and _actor_action(frame.action, actor) == _actor_action(route[frame.step], actor)
 
 
+def _normalized_action(action: Any) -> str:
+    """Compare the full readable action object, including every actor and market order."""
+    return json.dumps(action, sort_keys=True, separators=(",", ":"), ensure_ascii=True)
+
+
 def _window_route_matches(frames: dict[int, TraceFrame], frame: TraceFrame, route: Sequence[dict[str, Any]], actor: int, length: int) -> bool:
     """Do not modify a readable-tape interval already changed by an incumbent overlay."""
     return all(
-        frame.step + offset not in frames or _route_matches(frames[frame.step + offset], route, actor)
+        frame.step + offset not in frames
+        or _normalized_action(frames[frame.step + offset].action) == _normalized_action(route[frame.step + offset])
         for offset in range(length)
     )
 
@@ -142,6 +148,27 @@ def _targets(observation: dict[str, Any]) -> list[tuple[tuple[int, int], str, Re
     return result
 
 
+def _drop_targets(observation: dict[str, Any], actor: int) -> list[tuple[tuple[int, int], str, Requirement]]:
+    cargo = [(product, int(amount or 0)) for product, amount in _inventory(observation, actor).items()
+             if product in SELLABLE and int(amount or 0) > 0]
+    if not cargo:
+        return []
+    product, _ = sorted(cargo)[0]
+    return [(tile, "DROP", Requirement("actor_inventory", (actor, product), "ge", 1)) for tile in SHED_TILES]
+
+
+def _shed_occupancy(observation: dict[str, Any]) -> int:
+    return sum(max(0, int(value or 0)) for value in ((observation.get("private", {}) or {}).get("shed", {}) or {}).values())
+
+
+def _route_sell(route: Sequence[dict[str, Any]], step: int, length: int, product: str, delivered: int) -> SellDirective | None:
+    for offset in range(length):
+        for order in route[step + offset].get("market", []) or []:
+            if len(order) >= 3 and order[0] == "SELL" and order[1] == product:
+                return SellDirective(offset, product, min(delivered, max(0, int(order[2] or 0))))
+    return None
+
+
 def validate_window(window: CandidateWindow) -> list[str]:
     errors: list[str] = []
     if window.incumbent not in INCUMBENTS:
@@ -159,7 +186,10 @@ def validate_window(window: CandidateWindow) -> list[str]:
     if any(len(action) > 1 and action[1] in MOVES for action in window.actions):
         errors.append("multiple_actors")
     for requirement in window.requirements:
-        allowed = REQUIREMENT_KEYS.get(requirement.field)
+        if requirement.field not in REQUIREMENT_KEYS:
+            errors.append("invalid_requirement")
+            break
+        allowed = REQUIREMENT_KEYS[requirement.field]
         valid_key = allowed is None or tuple(requirement.key) in allowed
         if requirement.operator not in {"eq", "ge", "le"} or not valid_key:
             errors.append("invalid_requirement")
@@ -206,29 +236,31 @@ def mine_candidates(
         for actor in range(1 + len(frame.observation["farms"][int(frame.observation.get("player", 0))].get("hands", []) or [])):
             if not _route_matches(frame, route, actor):
                 continue
-            targets = _targets(frame.observation)
             position = _actor_position(frame.observation, actor)
             if position is None:
                 continue
+            targets = _targets(frame.observation) + _drop_targets(frame.observation, actor)
             targets = sorted(
                 targets,
                 key=lambda item: (abs(item[0][0] - position[0]) + abs(item[0][1] - position[1]), item[0], item[1]),
             )[:4]
             inventory = _inventory(frame.observation, actor)
-            baseline = [_actor_action(route[frame.step + offset], actor) for offset in range(min(8, len(route) - frame.step))]
-            has_maintenance = any(action and action[0] in {"WATER", "FEED", "CARE"} for action in baseline)
-            has_pass_or_reverse = any(action and action[0] == "PASS" for action in baseline) or any(
-                left and right and left[0] in OPPOSITE and OPPOSITE[left[0]] == right[0]
-                for left, right in zip(baseline, baseline[1:])
-            )
             for length in range(4, 9):
+                if frame.step < 0 or frame.step + length > len(route):
+                    continue
                 if not _window_route_matches(frames, frame, route, actor, length):
                     continue
+                baseline = [_actor_action(route[frame.step + offset], actor) for offset in range(length)]
+                has_maintenance = any(action and action[0] in {"WATER", "FEED", "CARE"} for action in baseline)
+                has_pass_or_reverse = any(action and action[0] == "PASS" for action in baseline) or any(
+                    left and right and left[0] in OPPOSITE and OPPOSITE[left[0]] == right[0]
+                    for left, right in zip(baseline, baseline[1:])
+                )
                 rejoin = _rejoin_position(frames, frame, route, actor, length)
                 if rejoin is None:
                     continue
                 for target, job, requirement in targets:
-                    if has_maintenance and job == "HARVEST":
+                    if has_maintenance and job in {"HARVEST", "DROP"}:
                         candidate = _build_window_with_rejoin(incumbent, "maintenance_trade", frame, actor, target, job, requirement, route, length, rejoin)
                         retain(candidate)
                     if has_pass_or_reverse:
@@ -239,6 +271,22 @@ def mine_candidates(
                     retain(_reversed_jobs_window(
                         incumbent, frame, actor, scheduled[0], scheduled[1], route, length, rejoin
                     ))
+                for harvest_offset in range(length):
+                    sample = frames.get(frame.step + harvest_offset)
+                    if sample is None or _actor_action(sample.action, actor)[:1] != ("HARVEST",):
+                        continue
+                    harvest_position = _actor_position(sample.observation, actor)
+                    harvest_tile = _tile(sample.observation, harvest_position) if harvest_position is not None else None
+                    if not isinstance(harvest_tile, dict):
+                        continue
+                    product = str(harvest_tile.get("crop") or "")
+                    quantity = int(harvest_tile.get("yield_units", 0) or 0)
+                    if product not in SELLABLE or quantity <= 0:
+                        continue
+                    candidate = _harvest_logistics_window(
+                        incumbent, frame, actor, harvest_position, product, quantity, route, length, rejoin
+                    )
+                    retain(candidate)
                 cargo = [(product, int(amount or 0)) for product, amount in inventory.items() if product in SELLABLE and int(amount or 0) > 0]
                 if cargo:
                     product, quantity = sorted(cargo)[0]
@@ -246,7 +294,11 @@ def mine_candidates(
                     requirement = Requirement("actor_inventory", (actor, product), "ge", 1)
                     candidate = _build_window_with_rejoin(incumbent, "logistics_market", frame, actor, shed, "DROP", requirement, route, length, rejoin)
                     if candidate is not None:
-                        candidate = replace(candidate, sell_directives=(SellDirective(len(candidate.actions) - 1, product, quantity),))
+                        directive = _route_sell(route, frame.step, length, product, quantity)
+                        candidate = replace(candidate, sell_directives=() if directive is None else (directive,))
+                        if _shed_occupancy(frame.observation) >= 85:
+                            capacity = ("shed_occupancy", _shed_occupancy(frame.observation), "ge_85")
+                            candidate = replace(candidate, effects=tuple(replace(effect, capacity=(capacity,)) for effect in candidate.effects))
                         candidate = replace(candidate, candidate_id=_candidate_id(candidate))
                         retain(candidate)
     selected = []
@@ -314,6 +366,41 @@ def _reversed_jobs_window(
         tuple(actions), tuple(positions),
         (Requirement("actor_position", (actor,), "eq", start), second_requirement, first_requirement),
         (), tuple(baseline), (second_target, first_target), _effects(frame.step),
+    )
+    window = replace(window, candidate_id=_candidate_id(window))
+    return None if validate_window(window) else window
+
+
+def _harvest_logistics_window(
+    incumbent: str, frame: TraceFrame, actor: int, harvest: tuple[int, int], product: str, quantity: int,
+    route: Sequence[dict[str, Any]], window_len: int, rejoin: tuple[int, int],
+) -> CandidateWindow | None:
+    """Collect a trace-observed harvest and deliver it before the original rejoin point."""
+    start = _actor_position(frame.observation, actor)
+    if start is None:
+        return None
+    shed = min(SHED_TILES, key=lambda item: (abs(item[0] - harvest[0]) + abs(item[1] - harvest[1]), item))
+    actions = [(move,) for move in shortest_actions(start, harvest)] + [("HARVEST",)]
+    actions += [(move,) for move in shortest_actions(harvest, shed)] + [("DROP",)]
+    actions += [(move,) for move in shortest_actions(shed, rejoin)]
+    if len(actions) > window_len:
+        return None
+    baseline = [_actor_action(route[frame.step + offset], actor) for offset in range(window_len)]
+    for offset in range(len(actions), window_len):
+        if not _stationary(baseline[offset]):
+            return None
+        actions.append(baseline[offset])
+    positions = [start]
+    for action in actions:
+        positions.append(_position_after(positions[-1], action))
+    if positions[-1] != rejoin:
+        return None
+    directive = _route_sell(route, frame.step, window_len, product, quantity)
+    window = CandidateWindow(
+        "", incumbent, "logistics_market", frame.step, actor, frame.step + window_len,
+        tuple(actions), tuple(positions),
+        (Requirement("actor_position", (actor,), "eq", start), Requirement("tile_yield", harvest, "ge", 1)),
+        () if directive is None else (directive,), tuple(baseline), (harvest, shed), _effects(frame.step),
     )
     window = replace(window, candidate_id=_candidate_id(window))
     return None if validate_window(window) else window
