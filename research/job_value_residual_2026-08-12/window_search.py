@@ -5,7 +5,7 @@ from __future__ import annotations
 from dataclasses import replace
 import hashlib
 import json
-from typing import Any, Iterable, Sequence
+from typing import Any, Sequence
 
 from engine_runner import TraceFrame
 from protocol import INCUMBENTS
