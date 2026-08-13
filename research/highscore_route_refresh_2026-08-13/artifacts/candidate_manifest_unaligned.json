@@ -1,0 +1,14 @@
+{
+  "dominant_8c4s": {
+    "bytes": 12522,
+    "path": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\research\\highscore_route_refresh_2026-08-13\\candidates\\dominant_8c4s\\main.py",
+    "sha256": "6104e156e4830a9927553493aa3808391741ef8c431ff15039d0dfa3b9c196ed",
+    "source_tape_sha256": "6f12ba2d796dbc26ac5a7d0224955e8e373611b05ba81e6e2c1e05fc67dc3cd6"
+  },
+  "rank1_10c4s": {
+    "bytes": 12424,
+    "path": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\research\\highscore_route_refresh_2026-08-13\\candidates\\rank1_10c4s\\main.py",
+    "sha256": "38acdceba87f41731d17514f3c3f3980118bc1d5940af90eb5155e22b6c2f165",
+    "source_tape_sha256": "757e22ee35f12c10d466db24c9180929e928adbb1fb55f5d513896af8828bf08"
+  }
+}

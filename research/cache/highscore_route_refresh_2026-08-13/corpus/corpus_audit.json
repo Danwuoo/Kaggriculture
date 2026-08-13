@@ -1,0 +1,1576 @@
+{
+  "analysis_representative_ranks": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41
+  ],
+  "analysis_representatives": 40,
+  "cache_absolute_path": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\research\\cache\\highscore_route_refresh_2026-08-13",
+  "duplicate_team_or_submission_records_excluded_from_support": 0,
+  "full_tape_clusters": [
+    {
+      "digest": "04644d12c636ff08a2477ab7172794f21635d85541e5efa28611139250089899",
+      "episodes": [
+        92482014
+      ],
+      "id": "F0001",
+      "ranks": [
+        4
+      ],
+      "support": 1
+    },
+    {
+      "digest": "26183c5a98d37261453af800a84d323358b43d935125efdc6622d94b06f38b5e",
+      "episodes": [
+        92572232
+      ],
+      "id": "F0002",
+      "ranks": [
+        20
+      ],
+      "support": 1
+    },
+    {
+      "digest": "2ee5fcdc5bad9f10b2b490bdcb1410182e4994815ad544f26b9e873e9ba4fc62",
+      "episodes": [
+        92584434
+      ],
+      "id": "F0003",
+      "ranks": [
+        17
+      ],
+      "support": 1
+    },
+    {
+      "digest": "31f1eb2f1312a0c0e0c8e7ddba4293ece1820b566a5cd4eb2149c313ff0792fa",
+      "episodes": [
+        92148054
+      ],
+      "id": "F0004",
+      "ranks": [
+        6
+      ],
+      "support": 1
+    },
+    {
+      "digest": "33c217a5555bd52c20fe5c4b09ca81d474b7249a15bc2289ff789e75321e4b63",
+      "episodes": [
+        92243589
+      ],
+      "id": "F0005",
+      "ranks": [
+        24
+      ],
+      "support": 1
+    },
+    {
+      "digest": "391f45d42e708f40f0914b482591c87ea961529e8c31dfbdd932b639009ea87e",
+      "episodes": [
+        92611548
+      ],
+      "id": "F0006",
+      "ranks": [
+        14
+      ],
+      "support": 1
+    },
+    {
+      "digest": "3b42ad776f40823aa7de6d4b3942e81825ac417318545752b75f5a50e4e345fa",
+      "episodes": [
+        92317161
+      ],
+      "id": "F0007",
+      "ranks": [
+        29
+      ],
+      "support": 1
+    },
+    {
+      "digest": "40a4ab08a36d824fb02c8573d477f4e22a7c9931eff850a4cd1470e91f6efeb0",
+      "episodes": [
+        92530323
+      ],
+      "id": "F0008",
+      "ranks": [
+        15
+      ],
+      "support": 1
+    },
+    {
+      "digest": "4170cfa54961f6b37b83d05ae87faced5a97b15436a79ac128bc4a0977107197",
+      "episodes": [
+        92416914
+      ],
+      "id": "F0009",
+      "ranks": [
+        36
+      ],
+      "support": 1
+    },
+    {
+      "digest": "4504f793a8f9e31d47d301b4c4e6ed9ad585a14f64cfd10f56709b290de6e800",
+      "episodes": [
+        92394690
+      ],
+      "id": "F0010",
+      "ranks": [
+        38
+      ],
+      "support": 1
+    },
+    {
+      "digest": "45bed41a473d301e49e795ef2dc780d3ac34fded73be394a1484e05e88787cfa",
+      "episodes": [
+        92556337
+      ],
+      "id": "F0011",
+      "ranks": [
+        39
+      ],
+      "support": 1
+    },
+    {
+      "digest": "4d3a4746bcd69442cbf5255a3a52ee05cf3de60acb047598d6b10dff081cd096",
+      "episodes": [
+        92422767
+      ],
+      "id": "F0012",
+      "ranks": [
+        5
+      ],
+      "support": 1
+    },
+    {
+      "digest": "513a0822ed14292456f28237aab30b711dfb5f8071991dade01478ff12b277a5",
+      "episodes": [
+        92591824
+      ],
+      "id": "F0013",
+      "ranks": [
+        10
+      ],
+      "support": 1
+    },
+    {
+      "digest": "596721eb996a7bd549ab67622d7bf38735c9d76b37f36c683d28988194bf917b",
+      "episodes": [
+        92489465
+      ],
+      "id": "F0014",
+      "ranks": [
+        11
+      ],
+      "support": 1
+    },
+    {
+      "digest": "59e6cf8aa76737b50cf27e3059bb75d6095b88f8e93e70a888487ca5c63efd0c",
+      "episodes": [
+        92423692
+      ],
+      "id": "F0015",
+      "ranks": [
+        3
+      ],
+      "support": 1
+    },
+    {
+      "digest": "602760a845cb007374ef3dc2558dba6d775b59cc0c5010a43bbc7cac04224ae8",
+      "episodes": [
+        92518234
+      ],
+      "id": "F0016",
+      "ranks": [
+        12
+      ],
+      "support": 1
+    },
+    {
+      "digest": "645a9968902c40d5a2f293f8ce66a07cfcdb204601dc6cc52aad797e53e710d2",
+      "episodes": [
+        92587174
+      ],
+      "id": "F0017",
+      "ranks": [
+        40
+      ],
+      "support": 1
+    },
+    {
+      "digest": "7dfd649298e5dbb84e6b2c8d2eb71b949001bad75b383761af2f1f77e4bf8432",
+      "episodes": [
+        92570368
+      ],
+      "id": "F0018",
+      "ranks": [
+        8
+      ],
+      "support": 1
+    },
+    {
+      "digest": "8ade3a1c9c25e27896f59c3ac8059f31398e35d7b78a097a6d82bc837b0dcf09",
+      "episodes": [
+        92043653
+      ],
+      "id": "F0019",
+      "ranks": [
+        41
+      ],
+      "support": 1
+    },
+    {
+      "digest": "8d53615df81852f86623ef203beae675a4bec0cf35f562aaab982bc8daa24a27",
+      "episodes": [
+        92594642
+      ],
+      "id": "F0020",
+      "ranks": [
+        16
+      ],
+      "support": 1
+    },
+    {
+      "digest": "8f1b76d7db3d3f8b0926890ba94246f3faede302f8de556c533240786d5131c5",
+      "episodes": [
+        92084504
+      ],
+      "id": "F0021",
+      "ranks": [
+        2
+      ],
+      "support": 1
+    },
+    {
+      "digest": "9007a32499aeb974d8e5cf5ba4193b0a90dd457209bffa8105e84852ae5af994",
+      "episodes": [
+        92379957
+      ],
+      "id": "F0022",
+      "ranks": [
+        18
+      ],
+      "support": 1
+    },
+    {
+      "digest": "96e614d6325f18b367cd6a88e833d5ba2be8563dbecd0c1a26f49e06af21a0f8",
+      "episodes": [
+        92271497
+      ],
+      "id": "F0023",
+      "ranks": [
+        35
+      ],
+      "support": 1
+    },
+    {
+      "digest": "96f281b9a76bae27c746ef7f96e9b7d5a934320560db6ad5155f3a4a7bb84670",
+      "episodes": [
+        92601233
+      ],
+      "id": "F0024",
+      "ranks": [
+        13
+      ],
+      "support": 1
+    },
+    {
+      "digest": "974748094100f4b30f0e0551a8e8f84b58971d089ece76ec2ebbc24e1eb0ec8b",
+      "episodes": [
+        92348991
+      ],
+      "id": "F0025",
+      "ranks": [
+        31
+      ],
+      "support": 1
+    },
+    {
+      "digest": "985d8021b6a4c7f218b8f1021fea467a6dba4ad7ca77d1850c0714d26afc0fbb",
+      "episodes": [
+        92662925
+      ],
+      "id": "F0026",
+      "ranks": [
+        32
+      ],
+      "support": 1
+    },
+    {
+      "digest": "ad2964473e1b681f19b1c03162b67049c40e29cf37f7638daf45c0742abb84be",
+      "episodes": [
+        92367713
+      ],
+      "id": "F0027",
+      "ranks": [
+        30
+      ],
+      "support": 1
+    },
+    {
+      "digest": "b7d8875565704bc04c4c03fefe4ccbc92f170a251dd9cb8f224624769e9f5464",
+      "episodes": [
+        92498144
+      ],
+      "id": "F0028",
+      "ranks": [
+        1
+      ],
+      "support": 1
+    },
+    {
+      "digest": "c02a6700fa1c40aa0c15c0c33c6e2d5946b1476a847da25a6a8c3cb43c53d42f",
+      "episodes": [
+        92564781
+      ],
+      "id": "F0029",
+      "ranks": [
+        25
+      ],
+      "support": 1
+    },
+    {
+      "digest": "c1bae9fba3cc6b3a8ef65658bc33c8c3cfd8b8db99bfefe89323ea0e5d2a1dfd",
+      "episodes": [
+        92609462
+      ],
+      "id": "F0030",
+      "ranks": [
+        26
+      ],
+      "support": 1
+    },
+    {
+      "digest": "c5638b6eb6fd336d1b03c4c81b25c45fb7ebd48523e4f0541578a7700ff18ad9",
+      "episodes": [
+        92567875
+      ],
+      "id": "F0031",
+      "ranks": [
+        21
+      ],
+      "support": 1
+    },
+    {
+      "digest": "c6464c931e80ceef7dc78f7355823d934fa255670dbce9a9c8905b8e7019e2da",
+      "episodes": [
+        92532388
+      ],
+      "id": "F0032",
+      "ranks": [
+        27
+      ],
+      "support": 1
+    },
+    {
+      "digest": "d2f5bbd247bfb6bfdefa3a4ed31db9b5afaad735216d3faef9f95fd25d30c237",
+      "episodes": [
+        92466078
+      ],
+      "id": "F0033",
+      "ranks": [
+        9
+      ],
+      "support": 1
+    },
+    {
+      "digest": "d5279eca05b28543efc731ea97c3ed802ec14f0e05734d1282f8985d57ce8933",
+      "episodes": [
+        92643365
+      ],
+      "id": "F0034",
+      "ranks": [
+        7
+      ],
+      "support": 1
+    },
+    {
+      "digest": "d6b410289357907b3bde36fc9d0489d35c642aab96416cae941d677ea62b58e7",
+      "episodes": [
+        92279902
+      ],
+      "id": "F0035",
+      "ranks": [
+        22
+      ],
+      "support": 1
+    },
+    {
+      "digest": "e6b91da72efabe63f96daf04c67d9a31c9e9a48bfc09694e2ad144110dd29b93",
+      "episodes": [
+        92309096
+      ],
+      "id": "F0036",
+      "ranks": [
+        33
+      ],
+      "support": 1
+    },
+    {
+      "digest": "ed38d302338bcf17ba39548fcda4b128e558e4a56fe8bf45e8451ccc7daeeaf3",
+      "episodes": [
+        92602937
+      ],
+      "id": "F0037",
+      "ranks": [
+        37
+      ],
+      "support": 1
+    },
+    {
+      "digest": "ed41c99a22f0abfa02ea92157217272bdd63f074db3875038e833f505bd56b17",
+      "episodes": [
+        92591840
+      ],
+      "id": "F0038",
+      "ranks": [
+        19
+      ],
+      "support": 1
+    },
+    {
+      "digest": "ef50a2a2de971f3b4cd33c7399547ff36cef90bd998f480f551359ede57cadcb",
+      "episodes": [
+        92373276
+      ],
+      "id": "F0039",
+      "ranks": [
+        28
+      ],
+      "support": 1
+    },
+    {
+      "digest": "ffa1098dd7318ff049ad07e3c3239e2531be08cc2d4603dd9eb50b8c3c82895e",
+      "episodes": [
+        92567577
+      ],
+      "id": "F0040",
+      "ranks": [
+        23
+      ],
+      "support": 1
+    }
+  ],
+  "information_boundary": "No cross-player private replay observation is extracted or stored.",
+  "market_tape_clusters": [
+    {
+      "digest": "03e789439c2a0a115e18d628cde39a49ae51fd614372c3f530ac0fde64e59ff0",
+      "episodes": [
+        92587174
+      ],
+      "id": "M0001",
+      "ranks": [
+        40
+      ],
+      "support": 1
+    },
+    {
+      "digest": "05ea56b7133c447ca84c59ac9800210c90eec429b00363809f56098d227a0a7a",
+      "episodes": [
+        92556337
+      ],
+      "id": "M0002",
+      "ranks": [
+        39
+      ],
+      "support": 1
+    },
+    {
+      "digest": "08bc18ddeafdeaf844b590dd198ebc6667cbf0b994242aef9e9abac4ddb3865e",
+      "episodes": [
+        92532388
+      ],
+      "id": "M0003",
+      "ranks": [
+        27
+      ],
+      "support": 1
+    },
+    {
+      "digest": "0b836c1d8393da0ba1a281f5f32a4fd82e71cf2f5f2972e84fc3ae36e5e7ffe3",
+      "episodes": [
+        92243589
+      ],
+      "id": "M0004",
+      "ranks": [
+        24
+      ],
+      "support": 1
+    },
+    {
+      "digest": "19b13645b62527813cfc9360a95984fcea7df5857e93852b1f5ac0c50ba5f4af",
+      "episodes": [
+        92518234
+      ],
+      "id": "M0005",
+      "ranks": [
+        12
+      ],
+      "support": 1
+    },
+    {
+      "digest": "1e20d7896f65df39e8d90f62b6c8ce395a29af3e01cd9dd8908c69078cbc4de2",
+      "episodes": [
+        92567875
+      ],
+      "id": "M0006",
+      "ranks": [
+        21
+      ],
+      "support": 1
+    },
+    {
+      "digest": "270983e08e3e3a745e9be61ddabcdfe3cf332d1015bcf9749d91f2d71d624c9d",
+      "episodes": [
+        92643365
+      ],
+      "id": "M0007",
+      "ranks": [
+        7
+      ],
+      "support": 1
+    },
+    {
+      "digest": "3353af032574b08952584913bbddaaff66ce54c00372edab87173707854dddc2",
+      "episodes": [
+        92482014
+      ],
+      "id": "M0008",
+      "ranks": [
+        4
+      ],
+      "support": 1
+    },
+    {
+      "digest": "344841f63d2af7d03e558f0f4fe06e3e478014d1d8fb92b2eb84574b80ec2de5",
+      "episodes": [
+        92564781
+      ],
+      "id": "M0009",
+      "ranks": [
+        25
+      ],
+      "support": 1
+    },
+    {
+      "digest": "38c2e3a62e51df3b1cd819925834c2239757a401739020567776557e917adcf7",
+      "episodes": [
+        92043653
+      ],
+      "id": "M0010",
+      "ranks": [
+        41
+      ],
+      "support": 1
+    },
+    {
+      "digest": "3bc4e554e761cf57ce79b1a24354fd9deea1c9e1a9d729ae352c63867120e4ee",
+      "episodes": [
+        92423692
+      ],
+      "id": "M0011",
+      "ranks": [
+        3
+      ],
+      "support": 1
+    },
+    {
+      "digest": "46ede84d401c5efe1f79bd8bc75098d99964e39a67f24143285c32821057de06",
+      "episodes": [
+        92148054
+      ],
+      "id": "M0012",
+      "ranks": [
+        6
+      ],
+      "support": 1
+    },
+    {
+      "digest": "5b6254aae593aeba976b98571e1dbf31c1bf3251b9fdeaf56f2d08eaf3f65db6",
+      "episodes": [
+        92530323
+      ],
+      "id": "M0013",
+      "ranks": [
+        15
+      ],
+      "support": 1
+    },
+    {
+      "digest": "5ef49926bd90c818a5f15f43483d38d243e6d4285e619e36bed5335088bdf6bd",
+      "episodes": [
+        92489465
+      ],
+      "id": "M0014",
+      "ranks": [
+        11
+      ],
+      "support": 1
+    },
+    {
+      "digest": "61ff1818c1a53748fb01ad9d0d73cd6711ca3db647cba4fd57bae7a48ad4d72b",
+      "episodes": [
+        92584434
+      ],
+      "id": "M0015",
+      "ranks": [
+        17
+      ],
+      "support": 1
+    },
+    {
+      "digest": "62e28d3ca0c71085346d80b2affe009937ff2fea649397147338a852b3be7a69",
+      "episodes": [
+        92271497
+      ],
+      "id": "M0016",
+      "ranks": [
+        35
+      ],
+      "support": 1
+    },
+    {
+      "digest": "670192bf48ac33b7690ccc001faf501eefb2bde4f0bc28cb8b0d6b9d3ceb5e1f",
+      "episodes": [
+        92567577
+      ],
+      "id": "M0017",
+      "ranks": [
+        23
+      ],
+      "support": 1
+    },
+    {
+      "digest": "7222e17581289a01c43149baad3319bc7969a4ba01b2e8e9f11ad671a5f18816",
+      "episodes": [
+        92572232
+      ],
+      "id": "M0018",
+      "ranks": [
+        20
+      ],
+      "support": 1
+    },
+    {
+      "digest": "735e7d45d200148747f520cd5ca3bf13dd929f91c8b486135bb08056f5fa3f02",
+      "episodes": [
+        92662925
+      ],
+      "id": "M0019",
+      "ranks": [
+        32
+      ],
+      "support": 1
+    },
+    {
+      "digest": "8a4feb8a505e2fb3bc6444d34668f15d25ffdd924b62c7cb579dcae97d7b230f",
+      "episodes": [
+        92591824
+      ],
+      "id": "M0020",
+      "ranks": [
+        10
+      ],
+      "support": 1
+    },
+    {
+      "digest": "8b429932e6fdfb0c25dda670d7d81e718bb0ef22e9262c0cd0e730d740191a11",
+      "episodes": [
+        92601233
+      ],
+      "id": "M0021",
+      "ranks": [
+        13
+      ],
+      "support": 1
+    },
+    {
+      "digest": "8fdc63095336ffef70f7da0ebe3d6b9ccab36af807d0668f96173a0d6b778452",
+      "episodes": [
+        92422767
+      ],
+      "id": "M0022",
+      "ranks": [
+        5
+      ],
+      "support": 1
+    },
+    {
+      "digest": "92d52d8e8c7ed68d6985a714a477c5fbdea6f8f6c6fa220d2c5def4c655478d2",
+      "episodes": [
+        92309096
+      ],
+      "id": "M0023",
+      "ranks": [
+        33
+      ],
+      "support": 1
+    },
+    {
+      "digest": "96137791e400f8c87e22645dc5c6c3503e694b44a2afc94bf351edfba1110b03",
+      "episodes": [
+        92611548
+      ],
+      "id": "M0024",
+      "ranks": [
+        14
+      ],
+      "support": 1
+    },
+    {
+      "digest": "9a6f287dc70f27b74a644a8337724ef69c0d3193c45f9cc9c106721b640b6cf1",
+      "episodes": [
+        92594642
+      ],
+      "id": "M0025",
+      "ranks": [
+        16
+      ],
+      "support": 1
+    },
+    {
+      "digest": "9adb85926d82b447ee388641e0c3bbfe325179f14b7bc9221602284b5aacf84a",
+      "episodes": [
+        92602937
+      ],
+      "id": "M0026",
+      "ranks": [
+        37
+      ],
+      "support": 1
+    },
+    {
+      "digest": "a52a7cf3467128a65cc9f09862834f533844eabc7e871fec233742d6ff0f7daa",
+      "episodes": [
+        92609462
+      ],
+      "id": "M0027",
+      "ranks": [
+        26
+      ],
+      "support": 1
+    },
+    {
+      "digest": "a5b9610803705c3e08d8cf1689418d8aa6a8d67a03717d42a93eb08faa4a4a41",
+      "episodes": [
+        92348991
+      ],
+      "id": "M0028",
+      "ranks": [
+        31
+      ],
+      "support": 1
+    },
+    {
+      "digest": "b2a145a9b0cf590b4be1d8d258282e98687e5c5125205de73795b69988428d2f",
+      "episodes": [
+        92379957
+      ],
+      "id": "M0029",
+      "ranks": [
+        18
+      ],
+      "support": 1
+    },
+    {
+      "digest": "b736c86f045145672d08d6515b2ef3e08eaa3300e3a3e172a31a9472b7a624eb",
+      "episodes": [
+        92084504
+      ],
+      "id": "M0030",
+      "ranks": [
+        2
+      ],
+      "support": 1
+    },
+    {
+      "digest": "bd3707b5e99ec2b75909775380d6ad904ab09a9055e800075ca068a0f10be987",
+      "episodes": [
+        92279902
+      ],
+      "id": "M0031",
+      "ranks": [
+        22
+      ],
+      "support": 1
+    },
+    {
+      "digest": "c5aa21d0fa0ea48f43de77269112b4e6e55e5af8f9a333076bb8be01442bc082",
+      "episodes": [
+        92317161
+      ],
+      "id": "M0032",
+      "ranks": [
+        29
+      ],
+      "support": 1
+    },
+    {
+      "digest": "c5dbf532d160c16e4ccc855a15c5b4877b1594a06ef6c6e132ae550f5de4d2c1",
+      "episodes": [
+        92570368
+      ],
+      "id": "M0033",
+      "ranks": [
+        8
+      ],
+      "support": 1
+    },
+    {
+      "digest": "d4322ba80b12147f277282b62b301bdb398af2a004d288d5bb546730c86b4556",
+      "episodes": [
+        92373276
+      ],
+      "id": "M0034",
+      "ranks": [
+        28
+      ],
+      "support": 1
+    },
+    {
+      "digest": "dbfdc1d7bf9671b86c0e67f254225c663ccbcca3f27d9802c283f96860ebd3ed",
+      "episodes": [
+        92416914
+      ],
+      "id": "M0035",
+      "ranks": [
+        36
+      ],
+      "support": 1
+    },
+    {
+      "digest": "e517a89c345a996e8d4f7147aebf245b8b0ce79e8499398736c2a499021ff289",
+      "episodes": [
+        92591840
+      ],
+      "id": "M0036",
+      "ranks": [
+        19
+      ],
+      "support": 1
+    },
+    {
+      "digest": "ebc95704e5fdf27d880e5678c8a477fd39877dd3dc6430c256e90066931124d5",
+      "episodes": [
+        92498144
+      ],
+      "id": "M0037",
+      "ranks": [
+        1
+      ],
+      "support": 1
+    },
+    {
+      "digest": "ec4c609a8bdb60d94039054bf1251c1f9fe20f29064dd7a032ff029d72cec21d",
+      "episodes": [
+        92466078
+      ],
+      "id": "M0038",
+      "ranks": [
+        9
+      ],
+      "support": 1
+    },
+    {
+      "digest": "f72403cc6dc53d6bf379eacc9a1e8d2e1489d7c13ee6acece352473d7ff0b788",
+      "episodes": [
+        92367713
+      ],
+      "id": "M0039",
+      "ranks": [
+        30
+      ],
+      "support": 1
+    },
+    {
+      "digest": "fdb1c06fed8a028e6664232da160ab1150e266ef25b5d4a556f97d4c3a60d1ca",
+      "episodes": [
+        92394690
+      ],
+      "id": "M0040",
+      "ranks": [
+        38
+      ],
+      "support": 1
+    }
+  ],
+  "module_versions": {
+    "1.32.6": 40
+  },
+  "ranks_covered": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41
+  ],
+  "raw_processed_bytes": 1098596992,
+  "raw_retained_success_bytes": 0,
+  "replays_streamed": 40,
+  "route_family_clusters": [
+    {
+      "digest": "9af5ca06a15b3010e29d94fb6e286db8401ebf11a6f466c1e0d219b0f621c316",
+      "episodes": [
+        92271497,
+        92279902,
+        92348991,
+        92367713,
+        92416914,
+        92422767,
+        92423692,
+        92466078,
+        92518234,
+        92532388,
+        92556337,
+        92564781,
+        92567577,
+        92567875,
+        92572232,
+        92591840,
+        92601233,
+        92611548,
+        92643365,
+        92662925
+      ],
+      "id": "R0001",
+      "ranks": [
+        3,
+        5,
+        7,
+        9,
+        12,
+        13,
+        14,
+        19,
+        20,
+        21,
+        22,
+        23,
+        25,
+        27,
+        30,
+        31,
+        32,
+        35,
+        36,
+        39
+      ],
+      "support": 20
+    },
+    {
+      "digest": "366ef3a9b063c65c59b0f7c4278fb826a6fce4245970d6a4ee6331ea6ed0ac3d",
+      "episodes": [
+        92243589,
+        92309096,
+        92530323,
+        92584434,
+        92591824,
+        92602937,
+        92609462
+      ],
+      "id": "R0002",
+      "ranks": [
+        10,
+        15,
+        17,
+        24,
+        26,
+        33,
+        37
+      ],
+      "support": 7
+    },
+    {
+      "digest": "f1d434d8486739614872b32e14769c1fd3cb4668a79019f70a831cfbb1d65b9f",
+      "episodes": [
+        92394690,
+        92489465
+      ],
+      "id": "R0003",
+      "ranks": [
+        11,
+        38
+      ],
+      "support": 2
+    },
+    {
+      "digest": "1448f21bc15303b26363b7dd8fa291b68d84a0f1044330b04fcfe4dcda9b48de",
+      "episodes": [
+        92373276
+      ],
+      "id": "R0004",
+      "ranks": [
+        28
+      ],
+      "support": 1
+    },
+    {
+      "digest": "2f5b660be1b02e667b625cb23286fe4afd7931482d7c44ec1bb89f71961db833",
+      "episodes": [
+        92570368
+      ],
+      "id": "R0005",
+      "ranks": [
+        8
+      ],
+      "support": 1
+    },
+    {
+      "digest": "6807b59964684333bcc25724060ab19493360dd6a41cc12fcd27808ea4435480",
+      "episodes": [
+        92587174
+      ],
+      "id": "R0006",
+      "ranks": [
+        40
+      ],
+      "support": 1
+    },
+    {
+      "digest": "8fd12d0f55a023ba5936eb988c5a43ae7881ad6655262cd8dc7001703a468b67",
+      "episodes": [
+        92482014
+      ],
+      "id": "R0007",
+      "ranks": [
+        4
+      ],
+      "support": 1
+    },
+    {
+      "digest": "9240f8123daa4b81e87d3e88782dc02078c9ee347ac2d2757d8c5ba2e4d9ace8",
+      "episodes": [
+        92043653
+      ],
+      "id": "R0008",
+      "ranks": [
+        41
+      ],
+      "support": 1
+    },
+    {
+      "digest": "9d3750f3ddf244ec855b37785dda46e18c9a994d639e684a9b7a3b51fb727bdb",
+      "episodes": [
+        92084504
+      ],
+      "id": "R0009",
+      "ranks": [
+        2
+      ],
+      "support": 1
+    },
+    {
+      "digest": "af4ccbb2b138f66f2c6df3879fd783a2d75d242b4dc06de53c2e5f2b47291bc1",
+      "episodes": [
+        92148054
+      ],
+      "id": "R0010",
+      "ranks": [
+        6
+      ],
+      "support": 1
+    },
+    {
+      "digest": "b3112f810b850cc7a6ac9da43e40d5141ad1be1f2bcf5a512d327ee98f1bd2cf",
+      "episodes": [
+        92498144
+      ],
+      "id": "R0011",
+      "ranks": [
+        1
+      ],
+      "support": 1
+    },
+    {
+      "digest": "bb529ebd666dfc264237873246cc625a3e7378dd00a5b94e4fa8a7706364d3ff",
+      "episodes": [
+        92379957
+      ],
+      "id": "R0012",
+      "ranks": [
+        18
+      ],
+      "support": 1
+    },
+    {
+      "digest": "f3e66bdda970bd76b89b833f3e79f9316db022002b2bf68d4203986e465d1f60",
+      "episodes": [
+        92594642
+      ],
+      "id": "R0013",
+      "ranks": [
+        16
+      ],
+      "support": 1
+    },
+    {
+      "digest": "f92fd734079c548e50fcbe1554316f67ab67facfa214c4536dd3b0933ba3728d",
+      "episodes": [
+        92317161
+      ],
+      "id": "R0014",
+      "ranks": [
+        29
+      ],
+      "support": 1
+    }
+  ],
+  "split_protocol": {
+    "biases": [
+      "selected-best-episode",
+      "engine-version drift",
+      "notebook-team identity unresolved"
+    ],
+    "group_boundaries": [
+      "team",
+      "submission",
+      "episode",
+      "full_tape_family"
+    ],
+    "random_transition_split_forbidden": true,
+    "temporal_boundary": "episode end_time recorded in selected metadata"
+  },
+  "unique_episodes": 40,
+  "unique_submissions": 40,
+  "unique_teams": 40,
+  "unit_tape_clusters": [
+    {
+      "digest": "7a200e767030483fb65faeb4060ac4b6bc6580b9ca493180d067c43fdd07ca30",
+      "episodes": [
+        92422767,
+        92423692,
+        92466078,
+        92532388,
+        92567577,
+        92601233,
+        92643365
+      ],
+      "id": "U0001",
+      "ranks": [
+        3,
+        5,
+        7,
+        9,
+        13,
+        23,
+        27
+      ],
+      "support": 7
+    },
+    {
+      "digest": "3fd67201fded4baf2b6bf5a5f309a2b7383bb7c1155843f6b38f9e3160d93d13",
+      "episodes": [
+        92591840,
+        92609462
+      ],
+      "id": "U0002",
+      "ranks": [
+        19,
+        26
+      ],
+      "support": 2
+    },
+    {
+      "digest": "7dd3801e140699f75dcb3ca15f289474388849de9e4939437aae92b04887258c",
+      "episodes": [
+        92243589,
+        92309096
+      ],
+      "id": "U0003",
+      "ranks": [
+        24,
+        33
+      ],
+      "support": 2
+    },
+    {
+      "digest": "0a2e07dd2d6df78058d00f5650ac068b69794e8163a76aa7383adf6199299326",
+      "episodes": [
+        92556337
+      ],
+      "id": "U0004",
+      "ranks": [
+        39
+      ],
+      "support": 1
+    },
+    {
+      "digest": "0a4d71f8d1493e27e5bdc1041c4f578061271a87c2b49c6d29f9b6b0ac90aa86",
+      "episodes": [
+        92394690
+      ],
+      "id": "U0005",
+      "ranks": [
+        38
+      ],
+      "support": 1
+    },
+    {
+      "digest": "0b073185b116f01821523682eeb168763a34957bfe13f71c09a7404443176282",
+      "episodes": [
+        92373276
+      ],
+      "id": "U0006",
+      "ranks": [
+        28
+      ],
+      "support": 1
+    },
+    {
+      "digest": "0c0818e1fb3acaca0c5e62f02652ad1a6f298cc2da96c819533ff57e138fd344",
+      "episodes": [
+        92587174
+      ],
+      "id": "U0007",
+      "ranks": [
+        40
+      ],
+      "support": 1
+    },
+    {
+      "digest": "1c463ee890c615c7bf741e1c0dcb6597562d5f1659f4c5a6c54fe1ec3f761f05",
+      "episodes": [
+        92416914
+      ],
+      "id": "U0008",
+      "ranks": [
+        36
+      ],
+      "support": 1
+    },
+    {
+      "digest": "21e5042b2777ce18c967c14be1b6db8f3223a468ff23a6911bf943e368a7b318",
+      "episodes": [
+        92348991
+      ],
+      "id": "U0009",
+      "ranks": [
+        31
+      ],
+      "support": 1
+    },
+    {
+      "digest": "28be6d93d8a0c03413f7ab7756e4ed4f50f8de2e379fe374e64d97354391885d",
+      "episodes": [
+        92379957
+      ],
+      "id": "U0010",
+      "ranks": [
+        18
+      ],
+      "support": 1
+    },
+    {
+      "digest": "3c21824ecca369bd0479253c6663514b1c893c7803176d934a2e59a5e545582a",
+      "episodes": [
+        92572232
+      ],
+      "id": "U0011",
+      "ranks": [
+        20
+      ],
+      "support": 1
+    },
+    {
+      "digest": "461a71cef0c704f74da48f8856e68fba2214b910d35bb0fba687fef16795056e",
+      "episodes": [
+        92570368
+      ],
+      "id": "U0012",
+      "ranks": [
+        8
+      ],
+      "support": 1
+    },
+    {
+      "digest": "46ebdea3d0f73d3978550666981825010311800db23d00f778545238fcad6fec",
+      "episodes": [
+        92482014
+      ],
+      "id": "U0013",
+      "ranks": [
+        4
+      ],
+      "support": 1
+    },
+    {
+      "digest": "5cbf2376f2c1fe709faef1e67433ab8860c6aab7dfa27098ba64d47ebddb958b",
+      "episodes": [
+        92602937
+      ],
+      "id": "U0014",
+      "ranks": [
+        37
+      ],
+      "support": 1
+    },
+    {
+      "digest": "79278020928ed11669c8bef422b25d69032cd273b04c101c3b43dbb2570ff844",
+      "episodes": [
+        92530323
+      ],
+      "id": "U0015",
+      "ranks": [
+        15
+      ],
+      "support": 1
+    },
+    {
+      "digest": "8416cd9470a0c2810b55774cdb4fead5664f2d9e2f7d6c3fe5d25a1a5fcb152f",
+      "episodes": [
+        92591824
+      ],
+      "id": "U0016",
+      "ranks": [
+        10
+      ],
+      "support": 1
+    },
+    {
+      "digest": "84770e5b50ff724f612f079489a36c610e2583478466031f995973953013f03a",
+      "episodes": [
+        92279902
+      ],
+      "id": "U0017",
+      "ranks": [
+        22
+      ],
+      "support": 1
+    },
+    {
+      "digest": "8e4914ac455a039484d31b330d8ebf21f1147c6db66663ba226a4685c6f4fad5",
+      "episodes": [
+        92564781
+      ],
+      "id": "U0018",
+      "ranks": [
+        25
+      ],
+      "support": 1
+    },
+    {
+      "digest": "914cab6ea5594b2131426f5f4ea7aff609c27ccadec6b91147ce051380ea39cf",
+      "episodes": [
+        92084504
+      ],
+      "id": "U0019",
+      "ranks": [
+        2
+      ],
+      "support": 1
+    },
+    {
+      "digest": "ad90c928d02936117449e17e06523e41997799300643486b471cc32fc10f34b6",
+      "episodes": [
+        92148054
+      ],
+      "id": "U0020",
+      "ranks": [
+        6
+      ],
+      "support": 1
+    },
+    {
+      "digest": "ae0effbda92a4c530cb680cdeb0278b56ae6a011b334b3e9fff24b1e8381d788",
+      "episodes": [
+        92043653
+      ],
+      "id": "U0021",
+      "ranks": [
+        41
+      ],
+      "support": 1
+    },
+    {
+      "digest": "b1fd2143c46dd31f9bb108a3f30e23815c6843a29ab9d3a67098378158d13a82",
+      "episodes": [
+        92367713
+      ],
+      "id": "U0022",
+      "ranks": [
+        30
+      ],
+      "support": 1
+    },
+    {
+      "digest": "c50adf4c7493e7d6337782abed05a979ee50963a1012ce864bbb3477ab9de5f4",
+      "episodes": [
+        92594642
+      ],
+      "id": "U0023",
+      "ranks": [
+        16
+      ],
+      "support": 1
+    },
+    {
+      "digest": "d1b4e13c479d4c9d80889be6038d821c76589ae66546fe15ec9deee76ffef185",
+      "episodes": [
+        92611548
+      ],
+      "id": "U0024",
+      "ranks": [
+        14
+      ],
+      "support": 1
+    },
+    {
+      "digest": "d492dc330d9745e6bd49a8a7e79ce63935951b7821a863fc6962fa8c5040ae67",
+      "episodes": [
+        92317161
+      ],
+      "id": "U0025",
+      "ranks": [
+        29
+      ],
+      "support": 1
+    },
+    {
+      "digest": "d5858793f8b8d884147a4c29e069b37be265fd57cc1a24874ee8d3a10ef75508",
+      "episodes": [
+        92584434
+      ],
+      "id": "U0026",
+      "ranks": [
+        17
+      ],
+      "support": 1
+    },
+    {
+      "digest": "dca5825035370700d12810c9c118065219616bdcf6a10408a4d7317f8cc850e6",
+      "episodes": [
+        92489465
+      ],
+      "id": "U0027",
+      "ranks": [
+        11
+      ],
+      "support": 1
+    },
+    {
+      "digest": "e36b8e6cc6e83733f0486efd0138ee2262476c4f852e1885881a68a8157f4e79",
+      "episodes": [
+        92271497
+      ],
+      "id": "U0028",
+      "ranks": [
+        35
+      ],
+      "support": 1
+    },
+    {
+      "digest": "ef6a799804d18542eb1ae301636a9dcfedcc9052a33ca8e6c745daf92df10110",
+      "episodes": [
+        92662925
+      ],
+      "id": "U0029",
+      "ranks": [
+        32
+      ],
+      "support": 1
+    },
+    {
+      "digest": "f2fa767578a3498fe04502eca10d8bf84c5b6899dabbdbf8bf84f2042199b8c8",
+      "episodes": [
+        92498144
+      ],
+      "id": "U0030",
+      "ranks": [
+        1
+      ],
+      "support": 1
+    },
+    {
+      "digest": "f312f36b0075e79da44c80ba3c123ae5691cac23fc4cc79c6d02c32e30be23a5",
+      "episodes": [
+        92567875
+      ],
+      "id": "U0031",
+      "ranks": [
+        21
+      ],
+      "support": 1
+    },
+    {
+      "digest": "f85c1a535e3f1c858b3d685cd29800147335254f10e9365cf577a0b18a08780b",
+      "episodes": [
+        92518234
+      ],
+      "id": "U0032",
+      "ranks": [
+        12
+      ],
+      "support": 1
+    }
+  ]
+}

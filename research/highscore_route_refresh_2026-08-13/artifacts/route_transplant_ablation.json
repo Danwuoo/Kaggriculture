@@ -1,0 +1,2838 @@
+{
+  "deterministic": true,
+  "engine": {
+    "commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+    "configuration_blob": "0fcdf2c14c47d3bdc821c02e26263956cf0fd3d8",
+    "configuration_bytes": 5877,
+    "configuration_sha256": "7f196f4aaf9b4e482fbd61ba4bf19f5cec4da0f81938ece756954035a65c0bb5",
+    "python_blob": "4b78842d0f2d4abf6e318a8248b6306454f5c714",
+    "python_bytes": 39801,
+    "python_sha256": "fb9215c5e21a25243e2d13e75b3d70a79cf7d78fff150a90f1bb5eacf9ba2bcf",
+    "vendor_repo": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\.vendor\\kaggle-environments"
+  },
+  "expansion_pass": {
+    "dominant_8c4s": false,
+    "rank1_10c4s": false
+  },
+  "pairs": [
+    {
+      "candidate": {
+        "action_digest": "88533ec1a0df4fd9f75081481424ffeebb0fd2135c8b832f567585ac053d9503",
+        "action_issues": {
+          "hand_alignment": 0,
+          "malformed": 0,
+          "market_overflow": 0,
+          "seed_overcommit": 0
+        },
+        "calls": 719,
+        "diagnostics": {
+          "animal_escape_steps": [],
+          "animal_escapes": 0,
+          "crop_death_steps": [
+            359,
+            359,
+            407,
+            527,
+            528,
+            556,
+            575,
+            578,
+            600,
+            600,
+            672,
+            672,
+            672,
+            672,
+            672,
+            672,
+            672,
+            672,
+            672,
+            672,
+            672,
+            696,
+            696,
+            696
+          ],
+          "crop_deaths": 24,
+          "fresh_crop_death_steps": [],
+          "fresh_crop_deaths": 0,
+          "shed_overflow_events": 0,
+          "shed_overflow_units": 0
+        },
+        "engine_fingerprint": {
+          "commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+          "configuration_blob": "0fcdf2c14c47d3bdc821c02e26263956cf0fd3d8",
+          "configuration_bytes": 5877,
+          "configuration_sha256": "7f196f4aaf9b4e482fbd61ba4bf19f5cec4da0f81938ece756954035a65c0bb5",
+          "python_blob": "4b78842d0f2d4abf6e318a8248b6306454f5c714",
+          "python_bytes": 39801,
+          "python_sha256": "fb9215c5e21a25243e2d13e75b3d70a79cf7d78fff150a90f1bb5eacf9ba2bcf",
+          "vendor_repo": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\.vendor\\kaggle-environments"
+        },
+        "exception": null,
+        "latency_ms": {
+          "calls": 719,
+          "max": 0.8781999999882828,
+          "p50": 0.03299999980299617,
+          "p95": 0.11264000004302949,
+          "p99": 0.2843179999126745,
+          "total": 33.87169999541584
+        },
+        "max_market_orders": 10,
+        "money": [
+          44416.0,
+          41181.0
+        ],
+        "opponent_action_digest": "8d67d26529f7c6d7874cb2946faa10c53f9eaa8273a00dd31a13c44c9f7adafb",
+        "opponent_exception": null,
+        "overage_exhausted": false,
+        "rewards": [
+          44416.0,
+          41181.0
+        ],
+        "statuses": [
+          "DONE",
+          "DONE"
+        ],
+        "terminal_inventory": {
+          "marked_value": 0.0,
+          "units": 0
+        },
+        "timeout_calls": 0
+      },
+      "candidate_name": "rank1_10c4s",
+      "candidate_outcome": "W",
+      "control": {
+        "action_digest": "d56744510d29252ee804455193fc4e27c002735362c8f805d4ebeb952ab3036d",
+        "action_issues": {
+          "hand_alignment": 0,
+          "malformed": 0,
+          "market_overflow": 0,
+          "seed_overcommit": 2
+        },
+        "calls": 719,
+        "diagnostics": {
+          "animal_escape_steps": [],
+          "animal_escapes": 0,
+          "crop_death_steps": [
+            167,
+            263,
+            503,
+            508,
+            508,
+            508,
+            604,
+            672,
+            672,
+            672,
+            672,
+            672,
+            676
+          ],
+          "crop_deaths": 13,
+          "fresh_crop_death_steps": [
+            167,
+            263,
+            503
+          ],
+          "fresh_crop_deaths": 3,
+          "shed_overflow_events": 0,
+          "shed_overflow_units": 0
+        },
+        "engine_fingerprint": {
+          "commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+          "configuration_blob": "0fcdf2c14c47d3bdc821c02e26263956cf0fd3d8",
+          "configuration_bytes": 5877,
+          "configuration_sha256": "7f196f4aaf9b4e482fbd61ba4bf19f5cec4da0f81938ece756954035a65c0bb5",
+          "python_blob": "4b78842d0f2d4abf6e318a8248b6306454f5c714",
+          "python_bytes": 39801,
+          "python_sha256": "fb9215c5e21a25243e2d13e75b3d70a79cf7d78fff150a90f1bb5eacf9ba2bcf",
+          "vendor_repo": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\.vendor\\kaggle-environments"
+        },
+        "exception": null,
+        "latency_ms": {
+          "calls": 719,
+          "max": 0.23639999972147052,
+          "p50": 0.026300000172341242,
+          "p95": 0.0775999997586041,
+          "p99": 0.13565800004471393,
+          "total": 24.9137999908271
+        },
+        "max_market_orders": 10,
+        "money": [
+          42022.0,
+          42294.0
+        ],
+        "opponent_action_digest": "8ec8770a523bfaa16996bbcdc2c4afc0d118bfc8802c35311b93a0a6fb1f9446",
+        "opponent_exception": null,
+        "overage_exhausted": false,
+        "rewards": [
+          42022.0,
+          42294.0
+        ],
+        "statuses": [
+          "DONE",
+          "DONE"
+        ],
+        "terminal_inventory": {
+          "marked_value": 0.0,
+          "units": 0
+        },
+        "timeout_calls": 0
+      },
+      "control_outcome": "L",
+      "incumbent_stratum": "v27_current_meta",
+      "opponent_family": "other_incumbent",
+      "paired_margin_delta": 3507.0,
+      "seat": 0,
+      "seed": 83171301,
+      "technical_pass": true
+    },
+    {
+      "candidate": {
+        "action_digest": "88533ec1a0df4fd9f75081481424ffeebb0fd2135c8b832f567585ac053d9503",
+        "action_issues": {
+          "hand_alignment": 0,
+          "malformed": 0,
+          "market_overflow": 0,
+          "seed_overcommit": 0
+        },
+        "calls": 719,
+        "diagnostics": {
+          "animal_escape_steps": [],
+          "animal_escapes": 0,
+          "crop_death_steps": [
+            359,
+            359,
+            407,
+            527,
+            528,
+            556,
+            575,
+            578,
+            600,
+            600,
+            672,
+            672,
+            672,
+            672,
+            672,
+            672,
+            672,
+            672,
+            672,
+            672,
+            672,
+            696,
+            696,
+            696
+          ],
+          "crop_deaths": 24,
+          "fresh_crop_death_steps": [],
+          "fresh_crop_deaths": 0,
+          "shed_overflow_events": 0,
+          "shed_overflow_units": 0
+        },
+        "engine_fingerprint": {
+          "commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+          "configuration_blob": "0fcdf2c14c47d3bdc821c02e26263956cf0fd3d8",
+          "configuration_bytes": 5877,
+          "configuration_sha256": "7f196f4aaf9b4e482fbd61ba4bf19f5cec4da0f81938ece756954035a65c0bb5",
+          "python_blob": "4b78842d0f2d4abf6e318a8248b6306454f5c714",
+          "python_bytes": 39801,
+          "python_sha256": "fb9215c5e21a25243e2d13e75b3d70a79cf7d78fff150a90f1bb5eacf9ba2bcf",
+          "vendor_repo": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\.vendor\\kaggle-environments"
+        },
+        "exception": null,
+        "latency_ms": {
+          "calls": 719,
+          "max": 1.2692999998762389,
+          "p50": 0.029100000119797187,
+          "p95": 0.10929999980362484,
+          "p99": 0.4083660001742891,
+          "total": 32.124999992447556
+        },
+        "max_market_orders": 10,
+        "money": [
+          41260.0,
+          44165.0
+        ],
+        "opponent_action_digest": "cb05248fb12ae98aa44757466f6f8c7d5c72225e235e168d686a8de3ae1329d7",
+        "opponent_exception": null,
+        "overage_exhausted": false,
+        "rewards": [
+          41260.0,
+          44165.0
+        ],
+        "statuses": [
+          "DONE",
+          "DONE"
+        ],
+        "terminal_inventory": {
+          "marked_value": 0.0,
+          "units": 0
+        },
+        "timeout_calls": 0
+      },
+      "candidate_name": "rank1_10c4s",
+      "candidate_outcome": "W",
+      "control": {
+        "action_digest": "7da37a13edd3feae2ef3c8f24dfaa4e5d534e8474b9bedb47718e6e370d4fc1c",
+        "action_issues": {
+          "hand_alignment": 0,
+          "malformed": 0,
+          "market_overflow": 0,
+          "seed_overcommit": 2
+        },
+        "calls": 719,
+        "diagnostics": {
+          "animal_escape_steps": [],
+          "animal_escapes": 0,
+          "crop_death_steps": [
+            167,
+            263,
+            287,
+            503,
+            508,
+            508,
+            508,
+            604,
+            672,
+            672,
+            672,
+            672,
+            676
+          ],
+          "crop_deaths": 13,
+          "fresh_crop_death_steps": [
+            167,
+            263,
+            287,
+            503
+          ],
+          "fresh_crop_deaths": 4,
+          "shed_overflow_events": 0,
+          "shed_overflow_units": 0
+        },
+        "engine_fingerprint": {
+          "commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+          "configuration_blob": "0fcdf2c14c47d3bdc821c02e26263956cf0fd3d8",
+          "configuration_bytes": 5877,
+          "configuration_sha256": "7f196f4aaf9b4e482fbd61ba4bf19f5cec4da0f81938ece756954035a65c0bb5",
+          "python_blob": "4b78842d0f2d4abf6e318a8248b6306454f5c714",
+          "python_bytes": 39801,
+          "python_sha256": "fb9215c5e21a25243e2d13e75b3d70a79cf7d78fff150a90f1bb5eacf9ba2bcf",
+          "vendor_repo": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\.vendor\\kaggle-environments"
+        },
+        "exception": null,
+        "latency_ms": {
+          "calls": 719,
+          "max": 1.281999999719119,
+          "p50": 0.0297000001410197,
+          "p95": 0.10432999993099659,
+          "p99": 0.3866879998531675,
+          "total": 33.09410000247226
+        },
+        "max_market_orders": 10,
+        "money": [
+          42262.0,
+          42054.0
+        ],
+        "opponent_action_digest": "d0953590ed2391068e506aacd6aebcc7ce60e8a5ff68612556265363f5ed9ad9",
+        "opponent_exception": null,
+        "overage_exhausted": false,
+        "rewards": [
+          42262.0,
+          42054.0
+        ],
+        "statuses": [
+          "DONE",
+          "DONE"
+        ],
+        "terminal_inventory": {
+          "marked_value": 0.0,
+          "units": 0
+        },
+        "timeout_calls": 0
+      },
+      "control_outcome": "L",
+      "incumbent_stratum": "v27_current_meta",
+      "opponent_family": "other_incumbent",
+      "paired_margin_delta": 3113.0,
+      "seat": 1,
+      "seed": 83171301,
+      "technical_pass": true
+    },
+    {
+      "candidate": {
+        "action_digest": "88533ec1a0df4fd9f75081481424ffeebb0fd2135c8b832f567585ac053d9503",
+        "action_issues": {
+          "hand_alignment": 0,
+          "malformed": 0,
+          "market_overflow": 0,
+          "seed_overcommit": 0
+        },
+        "calls": 719,
+        "diagnostics": {
+          "animal_escape_steps": [],
+          "animal_escapes": 0,
+          "crop_death_steps": [
+            359,
+            359,
+            407,
+            527,
+            528,
+            556,
+            575,
+            578,
+            600,
+            600,
+            672,
+            672,
+            672,
+            672,
+            672,
+            672,
+            672,
+            672,
+            672,
+            672,
+            672,
+            696,
+            696,
+            696
+          ],
+          "crop_deaths": 24,
+          "fresh_crop_death_steps": [],
+          "fresh_crop_deaths": 0,
+          "shed_overflow_events": 0,
+          "shed_overflow_units": 0
+        },
+        "engine_fingerprint": {
+          "commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+          "configuration_blob": "0fcdf2c14c47d3bdc821c02e26263956cf0fd3d8",
+          "configuration_bytes": 5877,
+          "configuration_sha256": "7f196f4aaf9b4e482fbd61ba4bf19f5cec4da0f81938ece756954035a65c0bb5",
+          "python_blob": "4b78842d0f2d4abf6e318a8248b6306454f5c714",
+          "python_bytes": 39801,
+          "python_sha256": "fb9215c5e21a25243e2d13e75b3d70a79cf7d78fff150a90f1bb5eacf9ba2bcf",
+          "vendor_repo": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\.vendor\\kaggle-environments"
+        },
+        "exception": null,
+        "latency_ms": {
+          "calls": 719,
+          "max": 1.2271000000509957,
+          "p50": 0.036500000078376615,
+          "p95": 0.11513000022205236,
+          "p99": 0.21386999991591504,
+          "total": 35.32410000843811
+        },
+        "max_market_orders": 10,
+        "money": [
+          118745.0,
+          93090.0
+        ],
+        "opponent_action_digest": "11911f3eb04c311a4dee1aee6069330efb498097180cf4daa1f9deb206d8e9b6",
+        "opponent_exception": null,
+        "overage_exhausted": false,
+        "rewards": [
+          118745.0,
+          93090.0
+        ],
+        "statuses": [
+          "DONE",
+          "DONE"
+        ],
+        "terminal_inventory": {
+          "marked_value": 0.0,
+          "units": 0
+        },
+        "timeout_calls": 0
+      },
+      "candidate_name": "rank1_10c4s",
+      "candidate_outcome": "W",
+      "control": {
+        "action_digest": "566cb95740aa1e7d2498438f00d2b1671e035797eebc1c4fbca83a8938899588",
+        "action_issues": {
+          "hand_alignment": 0,
+          "malformed": 0,
+          "market_overflow": 0,
+          "seed_overcommit": 0
+        },
+        "calls": 719,
+        "diagnostics": {
+          "animal_escape_steps": [],
+          "animal_escapes": 0,
+          "crop_death_steps": [
+            167,
+            263,
+            503,
+            508,
+            508,
+            508,
+            604,
+            672,
+            672,
+            672,
+            672,
+            672,
+            676
+          ],
+          "crop_deaths": 13,
+          "fresh_crop_death_steps": [
+            167,
+            263,
+            503
+          ],
+          "fresh_crop_deaths": 3,
+          "shed_overflow_events": 0,
+          "shed_overflow_units": 0
+        },
+        "engine_fingerprint": {
+          "commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+          "configuration_blob": "0fcdf2c14c47d3bdc821c02e26263956cf0fd3d8",
+          "configuration_bytes": 5877,
+          "configuration_sha256": "7f196f4aaf9b4e482fbd61ba4bf19f5cec4da0f81938ece756954035a65c0bb5",
+          "python_blob": "4b78842d0f2d4abf6e318a8248b6306454f5c714",
+          "python_bytes": 39801,
+          "python_sha256": "fb9215c5e21a25243e2d13e75b3d70a79cf7d78fff150a90f1bb5eacf9ba2bcf",
+          "vendor_repo": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\.vendor\\kaggle-environments"
+        },
+        "exception": null,
+        "latency_ms": {
+          "calls": 719,
+          "max": 0.8425000000897853,
+          "p50": 0.035600000046542846,
+          "p95": 0.09922000003825815,
+          "p99": 0.1988180000171279,
+          "total": 32.74800000053801
+        },
+        "max_market_orders": 10,
+        "money": [
+          74046.0,
+          40760.0
+        ],
+        "opponent_action_digest": "67615598a23a4c853b4586d1fa8fc91b33a004bc149c06135b3c85518ac6d28c",
+        "opponent_exception": null,
+        "overage_exhausted": false,
+        "rewards": [
+          74046.0,
+          40760.0
+        ],
+        "statuses": [
+          "DONE",
+          "DONE"
+        ],
+        "terminal_inventory": {
+          "marked_value": 0.0,
+          "units": 0
+        },
+        "timeout_calls": 0
+      },
+      "control_outcome": "W",
+      "incumbent_stratum": "v27_current_meta",
+      "opponent_family": "kaito_v21",
+      "paired_margin_delta": -7631.0,
+      "seat": 0,
+      "seed": 83171301,
+      "technical_pass": true
+    },
+    {
+      "candidate": {
+        "action_digest": "88533ec1a0df4fd9f75081481424ffeebb0fd2135c8b832f567585ac053d9503",
+        "action_issues": {
+          "hand_alignment": 0,
+          "malformed": 0,
+          "market_overflow": 0,
+          "seed_overcommit": 0
+        },
+        "calls": 719,
+        "diagnostics": {
+          "animal_escape_steps": [],
+          "animal_escapes": 0,
+          "crop_death_steps": [
+            359,
+            359,
+            407,
+            527,
+            528,
+            556,
+            575,
+            578,
+            600,
+            600,
+            672,
+            672,
+            672,
+            672,
+            672,
+            672,
+            672,
+            672,
+            672,
+            672,
+            672,
+            696,
+            696,
+            696
+          ],
+          "crop_deaths": 24,
+          "fresh_crop_death_steps": [],
+          "fresh_crop_deaths": 0,
+          "shed_overflow_events": 0,
+          "shed_overflow_units": 0
+        },
+        "engine_fingerprint": {
+          "commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+          "configuration_blob": "0fcdf2c14c47d3bdc821c02e26263956cf0fd3d8",
+          "configuration_bytes": 5877,
+          "configuration_sha256": "7f196f4aaf9b4e482fbd61ba4bf19f5cec4da0f81938ece756954035a65c0bb5",
+          "python_blob": "4b78842d0f2d4abf6e318a8248b6306454f5c714",
+          "python_bytes": 39801,
+          "python_sha256": "fb9215c5e21a25243e2d13e75b3d70a79cf7d78fff150a90f1bb5eacf9ba2bcf",
+          "vendor_repo": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\.vendor\\kaggle-environments"
+        },
+        "exception": null,
+        "latency_ms": {
+          "calls": 719,
+          "max": 0.9266000001844077,
+          "p50": 0.032300000384566374,
+          "p95": 0.09793999984140103,
+          "p99": 0.2792260001842843,
+          "total": 33.1845000064277
+        },
+        "max_market_orders": 10,
+        "money": [
+          93611.0,
+          115626.0
+        ],
+        "opponent_action_digest": "0588bc4df2bb9687a9c3000b15804c256f27704fa20b0bfc6d92703b55dbd7b1",
+        "opponent_exception": null,
+        "overage_exhausted": false,
+        "rewards": [
+          93611.0,
+          115626.0
+        ],
+        "statuses": [
+          "DONE",
+          "DONE"
+        ],
+        "terminal_inventory": {
+          "marked_value": 0.0,
+          "units": 0
+        },
+        "timeout_calls": 0
+      },
+      "candidate_name": "rank1_10c4s",
+      "candidate_outcome": "W",
+      "control": {
+        "action_digest": "b02698ffbd5c8f742f2ff874cce6398cf76daf156125c0eab77471a654f511be",
+        "action_issues": {
+          "hand_alignment": 0,
+          "malformed": 0,
+          "market_overflow": 0,
+          "seed_overcommit": 0
+        },
+        "calls": 719,
+        "diagnostics": {
+          "animal_escape_steps": [],
+          "animal_escapes": 0,
+          "crop_death_steps": [
+            167,
+            263,
+            287,
+            503,
+            508,
+            508,
+            508,
+            604,
+            672,
+            672,
+            672,
+            672,
+            672,
+            676
+          ],
+          "crop_deaths": 14,
+          "fresh_crop_death_steps": [
+            167,
+            263,
+            503
+          ],
+          "fresh_crop_deaths": 3,
+          "shed_overflow_events": 0,
+          "shed_overflow_units": 0
+        },
+        "engine_fingerprint": {
+          "commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+          "configuration_blob": "0fcdf2c14c47d3bdc821c02e26263956cf0fd3d8",
+          "configuration_bytes": 5877,
+          "configuration_sha256": "7f196f4aaf9b4e482fbd61ba4bf19f5cec4da0f81938ece756954035a65c0bb5",
+          "python_blob": "4b78842d0f2d4abf6e318a8248b6306454f5c714",
+          "python_bytes": 39801,
+          "python_sha256": "fb9215c5e21a25243e2d13e75b3d70a79cf7d78fff150a90f1bb5eacf9ba2bcf",
+          "vendor_repo": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\.vendor\\kaggle-environments"
+        },
+        "exception": null,
+        "latency_ms": {
+          "calls": 719,
+          "max": 0.846200000069075,
+          "p50": 0.03609999976106337,
+          "p95": 0.11827999978777376,
+          "p99": 0.20148200005678568,
+          "total": 34.508199998526834
+        },
+        "max_market_orders": 10,
+        "money": [
+          41887.0,
+          73860.0
+        ],
+        "opponent_action_digest": "fb3141af275f95b6a3bf5cc0dfc74e7f5ba8ca26f0afbbe34028b8736a69969d",
+        "opponent_exception": null,
+        "overage_exhausted": false,
+        "rewards": [
+          41887.0,
+          73860.0
+        ],
+        "statuses": [
+          "DONE",
+          "DONE"
+        ],
+        "terminal_inventory": {
+          "marked_value": 0.0,
+          "units": 0
+        },
+        "timeout_calls": 0
+      },
+      "control_outcome": "W",
+      "incumbent_stratum": "v27_current_meta",
+      "opponent_family": "kaito_v21",
+      "paired_margin_delta": -9958.0,
+      "seat": 1,
+      "seed": 83171301,
+      "technical_pass": true
+    },
+    {
+      "candidate": {
+        "action_digest": "88533ec1a0df4fd9f75081481424ffeebb0fd2135c8b832f567585ac053d9503",
+        "action_issues": {
+          "hand_alignment": 0,
+          "malformed": 0,
+          "market_overflow": 0,
+          "seed_overcommit": 0
+        },
+        "calls": 719,
+        "diagnostics": {
+          "animal_escape_steps": [],
+          "animal_escapes": 0,
+          "crop_death_steps": [
+            359,
+            359,
+            407,
+            527,
+            528,
+            556,
+            575,
+            578,
+            600,
+            600,
+            672,
+            672,
+            672,
+            672,
+            672,
+            672,
+            672,
+            672,
+            672,
+            672,
+            672,
+            696,
+            696,
+            696
+          ],
+          "crop_deaths": 24,
+          "fresh_crop_death_steps": [],
+          "fresh_crop_deaths": 0,
+          "shed_overflow_events": 0,
+          "shed_overflow_units": 0
+        },
+        "engine_fingerprint": {
+          "commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+          "configuration_blob": "0fcdf2c14c47d3bdc821c02e26263956cf0fd3d8",
+          "configuration_bytes": 5877,
+          "configuration_sha256": "7f196f4aaf9b4e482fbd61ba4bf19f5cec4da0f81938ece756954035a65c0bb5",
+          "python_blob": "4b78842d0f2d4abf6e318a8248b6306454f5c714",
+          "python_bytes": 39801,
+          "python_sha256": "fb9215c5e21a25243e2d13e75b3d70a79cf7d78fff150a90f1bb5eacf9ba2bcf",
+          "vendor_repo": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\.vendor\\kaggle-environments"
+        },
+        "exception": null,
+        "latency_ms": {
+          "calls": 719,
+          "max": 1.2200999999549822,
+          "p50": 0.029299999823706457,
+          "p95": 0.09682999980213941,
+          "p99": 0.16036400002121837,
+          "total": 31.113399998957902
+        },
+        "max_market_orders": 10,
+        "money": [
+          44416.0,
+          41181.0
+        ],
+        "opponent_action_digest": "8d67d26529f7c6d7874cb2946faa10c53f9eaa8273a00dd31a13c44c9f7adafb",
+        "opponent_exception": null,
+        "overage_exhausted": false,
+        "rewards": [
+          44416.0,
+          41181.0
+        ],
+        "statuses": [
+          "DONE",
+          "DONE"
+        ],
+        "terminal_inventory": {
+          "marked_value": 0.0,
+          "units": 0
+        },
+        "timeout_calls": 0
+      },
+      "candidate_name": "rank1_10c4s",
+      "candidate_outcome": "W",
+      "control": {
+        "action_digest": "d0953590ed2391068e506aacd6aebcc7ce60e8a5ff68612556265363f5ed9ad9",
+        "action_issues": {
+          "hand_alignment": 0,
+          "malformed": 0,
+          "market_overflow": 0,
+          "seed_overcommit": 2
+        },
+        "calls": 719,
+        "diagnostics": {
+          "animal_escape_steps": [],
+          "animal_escapes": 0,
+          "crop_death_steps": [
+            167,
+            263,
+            503,
+            508,
+            508,
+            508,
+            604,
+            672,
+            672,
+            672,
+            672,
+            672,
+            676
+          ],
+          "crop_deaths": 13,
+          "fresh_crop_death_steps": [
+            167,
+            263,
+            503
+          ],
+          "fresh_crop_deaths": 3,
+          "shed_overflow_events": 0,
+          "shed_overflow_units": 0
+        },
+        "engine_fingerprint": {
+          "commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+          "configuration_blob": "0fcdf2c14c47d3bdc821c02e26263956cf0fd3d8",
+          "configuration_bytes": 5877,
+          "configuration_sha256": "7f196f4aaf9b4e482fbd61ba4bf19f5cec4da0f81938ece756954035a65c0bb5",
+          "python_blob": "4b78842d0f2d4abf6e318a8248b6306454f5c714",
+          "python_bytes": 39801,
+          "python_sha256": "fb9215c5e21a25243e2d13e75b3d70a79cf7d78fff150a90f1bb5eacf9ba2bcf",
+          "vendor_repo": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\.vendor\\kaggle-environments"
+        },
+        "exception": null,
+        "latency_ms": {
+          "calls": 719,
+          "max": 0.843699999677483,
+          "p50": 0.03770000012082164,
+          "p95": 0.13667999983226767,
+          "p99": 0.2357319996554001,
+          "total": 39.47349999816652
+        },
+        "max_market_orders": 10,
+        "money": [
+          42262.0,
+          42054.0
+        ],
+        "opponent_action_digest": "7da37a13edd3feae2ef3c8f24dfaa4e5d534e8474b9bedb47718e6e370d4fc1c",
+        "opponent_exception": null,
+        "overage_exhausted": false,
+        "rewards": [
+          42262.0,
+          42054.0
+        ],
+        "statuses": [
+          "DONE",
+          "DONE"
+        ],
+        "terminal_inventory": {
+          "marked_value": 0.0,
+          "units": 0
+        },
+        "timeout_calls": 0
+      },
+      "control_outcome": "W",
+      "incumbent_stratum": "boatlee_v16_rc2_market_relay",
+      "opponent_family": "other_incumbent",
+      "paired_margin_delta": 3027.0,
+      "seat": 0,
+      "seed": 83171301,
+      "technical_pass": true
+    },
+    {
+      "candidate": {
+        "action_digest": "88533ec1a0df4fd9f75081481424ffeebb0fd2135c8b832f567585ac053d9503",
+        "action_issues": {
+          "hand_alignment": 0,
+          "malformed": 0,
+          "market_overflow": 0,
+          "seed_overcommit": 0
+        },
+        "calls": 719,
+        "diagnostics": {
+          "animal_escape_steps": [],
+          "animal_escapes": 0,
+          "crop_death_steps": [
+            359,
+            359,
+            407,
+            527,
+            528,
+            556,
+            575,
+            578,
+            600,
+            600,
+            672,
+            672,
+            672,
+            672,
+            672,
+            672,
+            672,
+            672,
+            672,
+            672,
+            672,
+            696,
+            696,
+            696
+          ],
+          "crop_deaths": 24,
+          "fresh_crop_death_steps": [],
+          "fresh_crop_deaths": 0,
+          "shed_overflow_events": 0,
+          "shed_overflow_units": 0
+        },
+        "engine_fingerprint": {
+          "commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+          "configuration_blob": "0fcdf2c14c47d3bdc821c02e26263956cf0fd3d8",
+          "configuration_bytes": 5877,
+          "configuration_sha256": "7f196f4aaf9b4e482fbd61ba4bf19f5cec4da0f81938ece756954035a65c0bb5",
+          "python_blob": "4b78842d0f2d4abf6e318a8248b6306454f5c714",
+          "python_bytes": 39801,
+          "python_sha256": "fb9215c5e21a25243e2d13e75b3d70a79cf7d78fff150a90f1bb5eacf9ba2bcf",
+          "vendor_repo": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\.vendor\\kaggle-environments"
+        },
+        "exception": null,
+        "latency_ms": {
+          "calls": 719,
+          "max": 0.9580999999343476,
+          "p50": 0.027999999929306796,
+          "p95": 0.0660500000776665,
+          "p99": 0.12517799990746464,
+          "total": 24.73009999584974
+        },
+        "max_market_orders": 10,
+        "money": [
+          41260.0,
+          44165.0
+        ],
+        "opponent_action_digest": "cb05248fb12ae98aa44757466f6f8c7d5c72225e235e168d686a8de3ae1329d7",
+        "opponent_exception": null,
+        "overage_exhausted": false,
+        "rewards": [
+          41260.0,
+          44165.0
+        ],
+        "statuses": [
+          "DONE",
+          "DONE"
+        ],
+        "terminal_inventory": {
+          "marked_value": 0.0,
+          "units": 0
+        },
+        "timeout_calls": 0
+      },
+      "candidate_name": "rank1_10c4s",
+      "candidate_outcome": "W",
+      "control": {
+        "action_digest": "8ec8770a523bfaa16996bbcdc2c4afc0d118bfc8802c35311b93a0a6fb1f9446",
+        "action_issues": {
+          "hand_alignment": 0,
+          "malformed": 0,
+          "market_overflow": 0,
+          "seed_overcommit": 2
+        },
+        "calls": 719,
+        "diagnostics": {
+          "animal_escape_steps": [],
+          "animal_escapes": 0,
+          "crop_death_steps": [
+            167,
+            263,
+            287,
+            503,
+            508,
+            508,
+            508,
+            604,
+            672,
+            672,
+            672,
+            672,
+            676
+          ],
+          "crop_deaths": 13,
+          "fresh_crop_death_steps": [
+            167,
+            263,
+            287,
+            503
+          ],
+          "fresh_crop_deaths": 4,
+          "shed_overflow_events": 0,
+          "shed_overflow_units": 0
+        },
+        "engine_fingerprint": {
+          "commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+          "configuration_blob": "0fcdf2c14c47d3bdc821c02e26263956cf0fd3d8",
+          "configuration_bytes": 5877,
+          "configuration_sha256": "7f196f4aaf9b4e482fbd61ba4bf19f5cec4da0f81938ece756954035a65c0bb5",
+          "python_blob": "4b78842d0f2d4abf6e318a8248b6306454f5c714",
+          "python_bytes": 39801,
+          "python_sha256": "fb9215c5e21a25243e2d13e75b3d70a79cf7d78fff150a90f1bb5eacf9ba2bcf",
+          "vendor_repo": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\.vendor\\kaggle-environments"
+        },
+        "exception": null,
+        "latency_ms": {
+          "calls": 719,
+          "max": 0.37849999989703065,
+          "p50": 0.02989999984492897,
+          "p95": 0.08248999988609287,
+          "p99": 0.19206999995731258,
+          "total": 27.757600002587424
+        },
+        "max_market_orders": 10,
+        "money": [
+          42022.0,
+          42294.0
+        ],
+        "opponent_action_digest": "d56744510d29252ee804455193fc4e27c002735362c8f805d4ebeb952ab3036d",
+        "opponent_exception": null,
+        "overage_exhausted": false,
+        "rewards": [
+          42022.0,
+          42294.0
+        ],
+        "statuses": [
+          "DONE",
+          "DONE"
+        ],
+        "terminal_inventory": {
+          "marked_value": 0.0,
+          "units": 0
+        },
+        "timeout_calls": 0
+      },
+      "control_outcome": "W",
+      "incumbent_stratum": "boatlee_v16_rc2_market_relay",
+      "opponent_family": "other_incumbent",
+      "paired_margin_delta": 2633.0,
+      "seat": 1,
+      "seed": 83171301,
+      "technical_pass": true
+    },
+    {
+      "candidate": {
+        "action_digest": "88533ec1a0df4fd9f75081481424ffeebb0fd2135c8b832f567585ac053d9503",
+        "action_issues": {
+          "hand_alignment": 0,
+          "malformed": 0,
+          "market_overflow": 0,
+          "seed_overcommit": 0
+        },
+        "calls": 719,
+        "diagnostics": {
+          "animal_escape_steps": [],
+          "animal_escapes": 0,
+          "crop_death_steps": [
+            359,
+            359,
+            407,
+            527,
+            528,
+            556,
+            575,
+            578,
+            600,
+            600,
+            672,
+            672,
+            672,
+            672,
+            672,
+            672,
+            672,
+            672,
+            672,
+            672,
+            672,
+            696,
+            696,
+            696
+          ],
+          "crop_deaths": 24,
+          "fresh_crop_death_steps": [],
+          "fresh_crop_deaths": 0,
+          "shed_overflow_events": 0,
+          "shed_overflow_units": 0
+        },
+        "engine_fingerprint": {
+          "commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+          "configuration_blob": "0fcdf2c14c47d3bdc821c02e26263956cf0fd3d8",
+          "configuration_bytes": 5877,
+          "configuration_sha256": "7f196f4aaf9b4e482fbd61ba4bf19f5cec4da0f81938ece756954035a65c0bb5",
+          "python_blob": "4b78842d0f2d4abf6e318a8248b6306454f5c714",
+          "python_bytes": 39801,
+          "python_sha256": "fb9215c5e21a25243e2d13e75b3d70a79cf7d78fff150a90f1bb5eacf9ba2bcf",
+          "vendor_repo": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\.vendor\\kaggle-environments"
+        },
+        "exception": null,
+        "latency_ms": {
+          "calls": 719,
+          "max": 0.33159999975396204,
+          "p50": 0.03699999979289714,
+          "p95": 0.08931000024858807,
+          "p99": 0.1579939999373895,
+          "total": 31.890199994904833
+        },
+        "max_market_orders": 10,
+        "money": [
+          118745.0,
+          93090.0
+        ],
+        "opponent_action_digest": "11911f3eb04c311a4dee1aee6069330efb498097180cf4daa1f9deb206d8e9b6",
+        "opponent_exception": null,
+        "overage_exhausted": false,
+        "rewards": [
+          118745.0,
+          93090.0
+        ],
+        "statuses": [
+          "DONE",
+          "DONE"
+        ],
+        "terminal_inventory": {
+          "marked_value": 0.0,
+          "units": 0
+        },
+        "timeout_calls": 0
+      },
+      "candidate_name": "rank1_10c4s",
+      "candidate_outcome": "W",
+      "control": {
+        "action_digest": "566cb95740aa1e7d2498438f00d2b1671e035797eebc1c4fbca83a8938899588",
+        "action_issues": {
+          "hand_alignment": 0,
+          "malformed": 0,
+          "market_overflow": 0,
+          "seed_overcommit": 0
+        },
+        "calls": 719,
+        "diagnostics": {
+          "animal_escape_steps": [],
+          "animal_escapes": 0,
+          "crop_death_steps": [
+            167,
+            263,
+            503,
+            508,
+            508,
+            508,
+            604,
+            672,
+            672,
+            672,
+            672,
+            672,
+            676
+          ],
+          "crop_deaths": 13,
+          "fresh_crop_death_steps": [
+            167,
+            263,
+            503
+          ],
+          "fresh_crop_deaths": 3,
+          "shed_overflow_events": 0,
+          "shed_overflow_units": 0
+        },
+        "engine_fingerprint": {
+          "commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+          "configuration_blob": "0fcdf2c14c47d3bdc821c02e26263956cf0fd3d8",
+          "configuration_bytes": 5877,
+          "configuration_sha256": "7f196f4aaf9b4e482fbd61ba4bf19f5cec4da0f81938ece756954035a65c0bb5",
+          "python_blob": "4b78842d0f2d4abf6e318a8248b6306454f5c714",
+          "python_bytes": 39801,
+          "python_sha256": "fb9215c5e21a25243e2d13e75b3d70a79cf7d78fff150a90f1bb5eacf9ba2bcf",
+          "vendor_repo": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\.vendor\\kaggle-environments"
+        },
+        "exception": null,
+        "latency_ms": {
+          "calls": 719,
+          "max": 1.7007000001285633,
+          "p50": 0.03229999992981902,
+          "p95": 0.09114000017689251,
+          "p99": 0.1623199999812644,
+          "total": 31.887500006632763
+        },
+        "max_market_orders": 10,
+        "money": [
+          74046.0,
+          40760.0
+        ],
+        "opponent_action_digest": "67615598a23a4c853b4586d1fa8fc91b33a004bc149c06135b3c85518ac6d28c",
+        "opponent_exception": null,
+        "overage_exhausted": false,
+        "rewards": [
+          74046.0,
+          40760.0
+        ],
+        "statuses": [
+          "DONE",
+          "DONE"
+        ],
+        "terminal_inventory": {
+          "marked_value": 0.0,
+          "units": 0
+        },
+        "timeout_calls": 0
+      },
+      "control_outcome": "W",
+      "incumbent_stratum": "boatlee_v16_rc2_market_relay",
+      "opponent_family": "kaito_v21",
+      "paired_margin_delta": -7631.0,
+      "seat": 0,
+      "seed": 83171301,
+      "technical_pass": true
+    },
+    {
+      "candidate": {
+        "action_digest": "88533ec1a0df4fd9f75081481424ffeebb0fd2135c8b832f567585ac053d9503",
+        "action_issues": {
+          "hand_alignment": 0,
+          "malformed": 0,
+          "market_overflow": 0,
+          "seed_overcommit": 0
+        },
+        "calls": 719,
+        "diagnostics": {
+          "animal_escape_steps": [],
+          "animal_escapes": 0,
+          "crop_death_steps": [
+            359,
+            359,
+            407,
+            527,
+            528,
+            556,
+            575,
+            578,
+            600,
+            600,
+            672,
+            672,
+            672,
+            672,
+            672,
+            672,
+            672,
+            672,
+            672,
+            672,
+            672,
+            696,
+            696,
+            696
+          ],
+          "crop_deaths": 24,
+          "fresh_crop_death_steps": [],
+          "fresh_crop_deaths": 0,
+          "shed_overflow_events": 0,
+          "shed_overflow_units": 0
+        },
+        "engine_fingerprint": {
+          "commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+          "configuration_blob": "0fcdf2c14c47d3bdc821c02e26263956cf0fd3d8",
+          "configuration_bytes": 5877,
+          "configuration_sha256": "7f196f4aaf9b4e482fbd61ba4bf19f5cec4da0f81938ece756954035a65c0bb5",
+          "python_blob": "4b78842d0f2d4abf6e318a8248b6306454f5c714",
+          "python_bytes": 39801,
+          "python_sha256": "fb9215c5e21a25243e2d13e75b3d70a79cf7d78fff150a90f1bb5eacf9ba2bcf",
+          "vendor_repo": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\.vendor\\kaggle-environments"
+        },
+        "exception": null,
+        "latency_ms": {
+          "calls": 719,
+          "max": 4.201500000363012,
+          "p50": 0.03100000003541936,
+          "p95": 0.089399999978923,
+          "p99": 0.1585219998469257,
+          "total": 32.75890000304571
+        },
+        "max_market_orders": 10,
+        "money": [
+          93611.0,
+          115626.0
+        ],
+        "opponent_action_digest": "0588bc4df2bb9687a9c3000b15804c256f27704fa20b0bfc6d92703b55dbd7b1",
+        "opponent_exception": null,
+        "overage_exhausted": false,
+        "rewards": [
+          93611.0,
+          115626.0
+        ],
+        "statuses": [
+          "DONE",
+          "DONE"
+        ],
+        "terminal_inventory": {
+          "marked_value": 0.0,
+          "units": 0
+        },
+        "timeout_calls": 0
+      },
+      "candidate_name": "rank1_10c4s",
+      "candidate_outcome": "W",
+      "control": {
+        "action_digest": "b02698ffbd5c8f742f2ff874cce6398cf76daf156125c0eab77471a654f511be",
+        "action_issues": {
+          "hand_alignment": 0,
+          "malformed": 0,
+          "market_overflow": 0,
+          "seed_overcommit": 0
+        },
+        "calls": 719,
+        "diagnostics": {
+          "animal_escape_steps": [],
+          "animal_escapes": 0,
+          "crop_death_steps": [
+            167,
+            263,
+            287,
+            503,
+            508,
+            508,
+            508,
+            604,
+            672,
+            672,
+            672,
+            672,
+            672,
+            676
+          ],
+          "crop_deaths": 14,
+          "fresh_crop_death_steps": [
+            167,
+            263,
+            503
+          ],
+          "fresh_crop_deaths": 3,
+          "shed_overflow_events": 0,
+          "shed_overflow_units": 0
+        },
+        "engine_fingerprint": {
+          "commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+          "configuration_blob": "0fcdf2c14c47d3bdc821c02e26263956cf0fd3d8",
+          "configuration_bytes": 5877,
+          "configuration_sha256": "7f196f4aaf9b4e482fbd61ba4bf19f5cec4da0f81938ece756954035a65c0bb5",
+          "python_blob": "4b78842d0f2d4abf6e318a8248b6306454f5c714",
+          "python_bytes": 39801,
+          "python_sha256": "fb9215c5e21a25243e2d13e75b3d70a79cf7d78fff150a90f1bb5eacf9ba2bcf",
+          "vendor_repo": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\.vendor\\kaggle-environments"
+        },
+        "exception": null,
+        "latency_ms": {
+          "calls": 719,
+          "max": 2.1099999999023566,
+          "p50": 0.04089999993084348,
+          "p95": 0.14192999988154048,
+          "p99": 0.28625800000554924,
+          "total": 42.241799995281326
+        },
+        "max_market_orders": 10,
+        "money": [
+          41887.0,
+          73860.0
+        ],
+        "opponent_action_digest": "fb3141af275f95b6a3bf5cc0dfc74e7f5ba8ca26f0afbbe34028b8736a69969d",
+        "opponent_exception": null,
+        "overage_exhausted": false,
+        "rewards": [
+          41887.0,
+          73860.0
+        ],
+        "statuses": [
+          "DONE",
+          "DONE"
+        ],
+        "terminal_inventory": {
+          "marked_value": 0.0,
+          "units": 0
+        },
+        "timeout_calls": 0
+      },
+      "control_outcome": "W",
+      "incumbent_stratum": "boatlee_v16_rc2_market_relay",
+      "opponent_family": "kaito_v21",
+      "paired_margin_delta": -9958.0,
+      "seat": 1,
+      "seed": 83171301,
+      "technical_pass": true
+    },
+    {
+      "candidate": {
+        "action_digest": "64920240143dc574208e879290a4c838f745791ab296d595e8697f8a53372c8a",
+        "action_issues": {
+          "hand_alignment": 0,
+          "malformed": 0,
+          "market_overflow": 0,
+          "seed_overcommit": 2
+        },
+        "calls": 719,
+        "diagnostics": {
+          "animal_escape_steps": [],
+          "animal_escapes": 0,
+          "crop_death_steps": [
+            167,
+            263,
+            503,
+            508,
+            508,
+            508,
+            604,
+            672,
+            672,
+            672,
+            672,
+            672,
+            676
+          ],
+          "crop_deaths": 13,
+          "fresh_crop_death_steps": [
+            167,
+            263,
+            503
+          ],
+          "fresh_crop_deaths": 3,
+          "shed_overflow_events": 0,
+          "shed_overflow_units": 0
+        },
+        "engine_fingerprint": {
+          "commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+          "configuration_blob": "0fcdf2c14c47d3bdc821c02e26263956cf0fd3d8",
+          "configuration_bytes": 5877,
+          "configuration_sha256": "7f196f4aaf9b4e482fbd61ba4bf19f5cec4da0f81938ece756954035a65c0bb5",
+          "python_blob": "4b78842d0f2d4abf6e318a8248b6306454f5c714",
+          "python_bytes": 39801,
+          "python_sha256": "fb9215c5e21a25243e2d13e75b3d70a79cf7d78fff150a90f1bb5eacf9ba2bcf",
+          "vendor_repo": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\.vendor\\kaggle-environments"
+        },
+        "exception": null,
+        "latency_ms": {
+          "calls": 719,
+          "max": 0.6582999999409367,
+          "p50": 0.037599999814119656,
+          "p95": 0.09757999982866751,
+          "p99": 0.16479599997183023,
+          "total": 33.08299999025621
+        },
+        "max_market_orders": 10,
+        "money": [
+          94306.0,
+          73812.0
+        ],
+        "opponent_action_digest": "91ed27430d045cfc5ec571c1989cbab9ff960281d2f057ab52aa66a6cd57431f",
+        "opponent_exception": null,
+        "overage_exhausted": false,
+        "rewards": [
+          94306.0,
+          73812.0
+        ],
+        "statuses": [
+          "DONE",
+          "DONE"
+        ],
+        "terminal_inventory": {
+          "marked_value": 0.0,
+          "units": 0
+        },
+        "timeout_calls": 0
+      },
+      "candidate_name": "dominant_8c4s",
+      "candidate_outcome": "W",
+      "control": {
+        "action_digest": "d56744510d29252ee804455193fc4e27c002735362c8f805d4ebeb952ab3036d",
+        "action_issues": {
+          "hand_alignment": 0,
+          "malformed": 0,
+          "market_overflow": 0,
+          "seed_overcommit": 2
+        },
+        "calls": 719,
+        "diagnostics": {
+          "animal_escape_steps": [],
+          "animal_escapes": 0,
+          "crop_death_steps": [
+            167,
+            263,
+            503,
+            508,
+            508,
+            508,
+            604,
+            672,
+            672,
+            672,
+            672,
+            672,
+            676
+          ],
+          "crop_deaths": 13,
+          "fresh_crop_death_steps": [
+            167,
+            263,
+            503
+          ],
+          "fresh_crop_deaths": 3,
+          "shed_overflow_events": 0,
+          "shed_overflow_units": 0
+        },
+        "engine_fingerprint": {
+          "commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+          "configuration_blob": "0fcdf2c14c47d3bdc821c02e26263956cf0fd3d8",
+          "configuration_bytes": 5877,
+          "configuration_sha256": "7f196f4aaf9b4e482fbd61ba4bf19f5cec4da0f81938ece756954035a65c0bb5",
+          "python_blob": "4b78842d0f2d4abf6e318a8248b6306454f5c714",
+          "python_bytes": 39801,
+          "python_sha256": "fb9215c5e21a25243e2d13e75b3d70a79cf7d78fff150a90f1bb5eacf9ba2bcf",
+          "vendor_repo": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\.vendor\\kaggle-environments"
+        },
+        "exception": null,
+        "latency_ms": {
+          "calls": 719,
+          "max": 0.23639999972147052,
+          "p50": 0.026300000172341242,
+          "p95": 0.0775999997586041,
+          "p99": 0.13565800004471393,
+          "total": 24.9137999908271
+        },
+        "max_market_orders": 10,
+        "money": [
+          42022.0,
+          42294.0
+        ],
+        "opponent_action_digest": "8ec8770a523bfaa16996bbcdc2c4afc0d118bfc8802c35311b93a0a6fb1f9446",
+        "opponent_exception": null,
+        "overage_exhausted": false,
+        "rewards": [
+          42022.0,
+          42294.0
+        ],
+        "statuses": [
+          "DONE",
+          "DONE"
+        ],
+        "terminal_inventory": {
+          "marked_value": 0.0,
+          "units": 0
+        },
+        "timeout_calls": 0
+      },
+      "control_outcome": "L",
+      "incumbent_stratum": "v27_current_meta",
+      "opponent_family": "other_incumbent",
+      "paired_margin_delta": 20766.0,
+      "seat": 0,
+      "seed": 83171301,
+      "technical_pass": false
+    },
+    {
+      "candidate": {
+        "action_digest": "64920240143dc574208e879290a4c838f745791ab296d595e8697f8a53372c8a",
+        "action_issues": {
+          "hand_alignment": 0,
+          "malformed": 0,
+          "market_overflow": 0,
+          "seed_overcommit": 2
+        },
+        "calls": 719,
+        "diagnostics": {
+          "animal_escape_steps": [],
+          "animal_escapes": 0,
+          "crop_death_steps": [
+            167,
+            263,
+            503,
+            508,
+            508,
+            508,
+            604,
+            672,
+            672,
+            672,
+            672,
+            676
+          ],
+          "crop_deaths": 12,
+          "fresh_crop_death_steps": [
+            167,
+            263,
+            503
+          ],
+          "fresh_crop_deaths": 3,
+          "shed_overflow_events": 0,
+          "shed_overflow_units": 0
+        },
+        "engine_fingerprint": {
+          "commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+          "configuration_blob": "0fcdf2c14c47d3bdc821c02e26263956cf0fd3d8",
+          "configuration_bytes": 5877,
+          "configuration_sha256": "7f196f4aaf9b4e482fbd61ba4bf19f5cec4da0f81938ece756954035a65c0bb5",
+          "python_blob": "4b78842d0f2d4abf6e318a8248b6306454f5c714",
+          "python_bytes": 39801,
+          "python_sha256": "fb9215c5e21a25243e2d13e75b3d70a79cf7d78fff150a90f1bb5eacf9ba2bcf",
+          "vendor_repo": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\.vendor\\kaggle-environments"
+        },
+        "exception": null,
+        "latency_ms": {
+          "calls": 719,
+          "max": 1.1426000000938075,
+          "p50": 0.029400000130408444,
+          "p95": 0.08863000020937763,
+          "p99": 0.1860199999373443,
+          "total": 30.779599994730233
+        },
+        "max_market_orders": 10,
+        "money": [
+          73973.0,
+          94204.0
+        ],
+        "opponent_action_digest": "18930b1479a544bf1ce7be58472c4cfad804091a77f2ed42e0951b602b0b06f9",
+        "opponent_exception": null,
+        "overage_exhausted": false,
+        "rewards": [
+          73973.0,
+          94204.0
+        ],
+        "statuses": [
+          "DONE",
+          "DONE"
+        ],
+        "terminal_inventory": {
+          "marked_value": 0.0,
+          "units": 0
+        },
+        "timeout_calls": 0
+      },
+      "candidate_name": "dominant_8c4s",
+      "candidate_outcome": "W",
+      "control": {
+        "action_digest": "7da37a13edd3feae2ef3c8f24dfaa4e5d534e8474b9bedb47718e6e370d4fc1c",
+        "action_issues": {
+          "hand_alignment": 0,
+          "malformed": 0,
+          "market_overflow": 0,
+          "seed_overcommit": 2
+        },
+        "calls": 719,
+        "diagnostics": {
+          "animal_escape_steps": [],
+          "animal_escapes": 0,
+          "crop_death_steps": [
+            167,
+            263,
+            287,
+            503,
+            508,
+            508,
+            508,
+            604,
+            672,
+            672,
+            672,
+            672,
+            676
+          ],
+          "crop_deaths": 13,
+          "fresh_crop_death_steps": [
+            167,
+            263,
+            287,
+            503
+          ],
+          "fresh_crop_deaths": 4,
+          "shed_overflow_events": 0,
+          "shed_overflow_units": 0
+        },
+        "engine_fingerprint": {
+          "commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+          "configuration_blob": "0fcdf2c14c47d3bdc821c02e26263956cf0fd3d8",
+          "configuration_bytes": 5877,
+          "configuration_sha256": "7f196f4aaf9b4e482fbd61ba4bf19f5cec4da0f81938ece756954035a65c0bb5",
+          "python_blob": "4b78842d0f2d4abf6e318a8248b6306454f5c714",
+          "python_bytes": 39801,
+          "python_sha256": "fb9215c5e21a25243e2d13e75b3d70a79cf7d78fff150a90f1bb5eacf9ba2bcf",
+          "vendor_repo": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\.vendor\\kaggle-environments"
+        },
+        "exception": null,
+        "latency_ms": {
+          "calls": 719,
+          "max": 1.281999999719119,
+          "p50": 0.0297000001410197,
+          "p95": 0.10432999993099659,
+          "p99": 0.3866879998531675,
+          "total": 33.09410000247226
+        },
+        "max_market_orders": 10,
+        "money": [
+          42262.0,
+          42054.0
+        ],
+        "opponent_action_digest": "d0953590ed2391068e506aacd6aebcc7ce60e8a5ff68612556265363f5ed9ad9",
+        "opponent_exception": null,
+        "overage_exhausted": false,
+        "rewards": [
+          42262.0,
+          42054.0
+        ],
+        "statuses": [
+          "DONE",
+          "DONE"
+        ],
+        "terminal_inventory": {
+          "marked_value": 0.0,
+          "units": 0
+        },
+        "timeout_calls": 0
+      },
+      "control_outcome": "L",
+      "incumbent_stratum": "v27_current_meta",
+      "opponent_family": "other_incumbent",
+      "paired_margin_delta": 20439.0,
+      "seat": 1,
+      "seed": 83171301,
+      "technical_pass": false
+    },
+    {
+      "candidate": {
+        "action_digest": "64920240143dc574208e879290a4c838f745791ab296d595e8697f8a53372c8a",
+        "action_issues": {
+          "hand_alignment": 0,
+          "malformed": 0,
+          "market_overflow": 0,
+          "seed_overcommit": 3
+        },
+        "calls": 719,
+        "diagnostics": {
+          "animal_escape_steps": [],
+          "animal_escapes": 0,
+          "crop_death_steps": [
+            167,
+            263,
+            503,
+            508,
+            508,
+            508,
+            604,
+            672,
+            672,
+            672,
+            672,
+            672,
+            676
+          ],
+          "crop_deaths": 13,
+          "fresh_crop_death_steps": [
+            167,
+            263,
+            503
+          ],
+          "fresh_crop_deaths": 3,
+          "shed_overflow_events": 0,
+          "shed_overflow_units": 0
+        },
+        "engine_fingerprint": {
+          "commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+          "configuration_blob": "0fcdf2c14c47d3bdc821c02e26263956cf0fd3d8",
+          "configuration_bytes": 5877,
+          "configuration_sha256": "7f196f4aaf9b4e482fbd61ba4bf19f5cec4da0f81938ece756954035a65c0bb5",
+          "python_blob": "4b78842d0f2d4abf6e318a8248b6306454f5c714",
+          "python_bytes": 39801,
+          "python_sha256": "fb9215c5e21a25243e2d13e75b3d70a79cf7d78fff150a90f1bb5eacf9ba2bcf",
+          "vendor_repo": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\.vendor\\kaggle-environments"
+        },
+        "exception": null,
+        "latency_ms": {
+          "calls": 719,
+          "max": 0.304600000163191,
+          "p50": 0.03500000002532033,
+          "p95": 0.11982000009993501,
+          "p99": 0.18023400009042279,
+          "total": 32.28669999361955
+        },
+        "max_market_orders": 10,
+        "money": [
+          100083.0,
+          75930.0
+        ],
+        "opponent_action_digest": "c6fb431e33d80f1fcc0e673751982d1d27dad2e92cf3dd43da8a85cf0f71f86d",
+        "opponent_exception": null,
+        "overage_exhausted": false,
+        "rewards": [
+          100083.0,
+          75930.0
+        ],
+        "statuses": [
+          "DONE",
+          "DONE"
+        ],
+        "terminal_inventory": {
+          "marked_value": 0.0,
+          "units": 0
+        },
+        "timeout_calls": 0
+      },
+      "candidate_name": "dominant_8c4s",
+      "candidate_outcome": "W",
+      "control": {
+        "action_digest": "566cb95740aa1e7d2498438f00d2b1671e035797eebc1c4fbca83a8938899588",
+        "action_issues": {
+          "hand_alignment": 0,
+          "malformed": 0,
+          "market_overflow": 0,
+          "seed_overcommit": 0
+        },
+        "calls": 719,
+        "diagnostics": {
+          "animal_escape_steps": [],
+          "animal_escapes": 0,
+          "crop_death_steps": [
+            167,
+            263,
+            503,
+            508,
+            508,
+            508,
+            604,
+            672,
+            672,
+            672,
+            672,
+            672,
+            676
+          ],
+          "crop_deaths": 13,
+          "fresh_crop_death_steps": [
+            167,
+            263,
+            503
+          ],
+          "fresh_crop_deaths": 3,
+          "shed_overflow_events": 0,
+          "shed_overflow_units": 0
+        },
+        "engine_fingerprint": {
+          "commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+          "configuration_blob": "0fcdf2c14c47d3bdc821c02e26263956cf0fd3d8",
+          "configuration_bytes": 5877,
+          "configuration_sha256": "7f196f4aaf9b4e482fbd61ba4bf19f5cec4da0f81938ece756954035a65c0bb5",
+          "python_blob": "4b78842d0f2d4abf6e318a8248b6306454f5c714",
+          "python_bytes": 39801,
+          "python_sha256": "fb9215c5e21a25243e2d13e75b3d70a79cf7d78fff150a90f1bb5eacf9ba2bcf",
+          "vendor_repo": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\.vendor\\kaggle-environments"
+        },
+        "exception": null,
+        "latency_ms": {
+          "calls": 719,
+          "max": 0.8425000000897853,
+          "p50": 0.035600000046542846,
+          "p95": 0.09922000003825815,
+          "p99": 0.1988180000171279,
+          "total": 32.74800000053801
+        },
+        "max_market_orders": 10,
+        "money": [
+          74046.0,
+          40760.0
+        ],
+        "opponent_action_digest": "67615598a23a4c853b4586d1fa8fc91b33a004bc149c06135b3c85518ac6d28c",
+        "opponent_exception": null,
+        "overage_exhausted": false,
+        "rewards": [
+          74046.0,
+          40760.0
+        ],
+        "statuses": [
+          "DONE",
+          "DONE"
+        ],
+        "terminal_inventory": {
+          "marked_value": 0.0,
+          "units": 0
+        },
+        "timeout_calls": 0
+      },
+      "control_outcome": "W",
+      "incumbent_stratum": "v27_current_meta",
+      "opponent_family": "kaito_v21",
+      "paired_margin_delta": -9133.0,
+      "seat": 0,
+      "seed": 83171301,
+      "technical_pass": false
+    },
+    {
+      "candidate": {
+        "action_digest": "64920240143dc574208e879290a4c838f745791ab296d595e8697f8a53372c8a",
+        "action_issues": {
+          "hand_alignment": 0,
+          "malformed": 0,
+          "market_overflow": 0,
+          "seed_overcommit": 2
+        },
+        "calls": 719,
+        "diagnostics": {
+          "animal_escape_steps": [],
+          "animal_escapes": 0,
+          "crop_death_steps": [
+            167,
+            263,
+            503,
+            508,
+            508,
+            508,
+            604,
+            672,
+            672,
+            672,
+            672,
+            672,
+            676
+          ],
+          "crop_deaths": 13,
+          "fresh_crop_death_steps": [
+            167,
+            263,
+            503
+          ],
+          "fresh_crop_deaths": 3,
+          "shed_overflow_events": 0,
+          "shed_overflow_units": 0
+        },
+        "engine_fingerprint": {
+          "commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+          "configuration_blob": "0fcdf2c14c47d3bdc821c02e26263956cf0fd3d8",
+          "configuration_bytes": 5877,
+          "configuration_sha256": "7f196f4aaf9b4e482fbd61ba4bf19f5cec4da0f81938ece756954035a65c0bb5",
+          "python_blob": "4b78842d0f2d4abf6e318a8248b6306454f5c714",
+          "python_bytes": 39801,
+          "python_sha256": "fb9215c5e21a25243e2d13e75b3d70a79cf7d78fff150a90f1bb5eacf9ba2bcf",
+          "vendor_repo": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\.vendor\\kaggle-environments"
+        },
+        "exception": null,
+        "latency_ms": {
+          "calls": 719,
+          "max": 0.6248999998206273,
+          "p50": 0.0328000000990869,
+          "p95": 0.12653000003410853,
+          "p99": 0.24994999992486566,
+          "total": 33.72159999980795
+        },
+        "max_market_orders": 10,
+        "money": [
+          102100.0,
+          121063.0
+        ],
+        "opponent_action_digest": "d499a76d3d88b43e1c16d70d081d1be378953c75797e3683a6473596295be6cd",
+        "opponent_exception": null,
+        "overage_exhausted": false,
+        "rewards": [
+          102100.0,
+          121063.0
+        ],
+        "statuses": [
+          "DONE",
+          "DONE"
+        ],
+        "terminal_inventory": {
+          "marked_value": 0.0,
+          "units": 0
+        },
+        "timeout_calls": 0
+      },
+      "candidate_name": "dominant_8c4s",
+      "candidate_outcome": "W",
+      "control": {
+        "action_digest": "b02698ffbd5c8f742f2ff874cce6398cf76daf156125c0eab77471a654f511be",
+        "action_issues": {
+          "hand_alignment": 0,
+          "malformed": 0,
+          "market_overflow": 0,
+          "seed_overcommit": 0
+        },
+        "calls": 719,
+        "diagnostics": {
+          "animal_escape_steps": [],
+          "animal_escapes": 0,
+          "crop_death_steps": [
+            167,
+            263,
+            287,
+            503,
+            508,
+            508,
+            508,
+            604,
+            672,
+            672,
+            672,
+            672,
+            672,
+            676
+          ],
+          "crop_deaths": 14,
+          "fresh_crop_death_steps": [
+            167,
+            263,
+            503
+          ],
+          "fresh_crop_deaths": 3,
+          "shed_overflow_events": 0,
+          "shed_overflow_units": 0
+        },
+        "engine_fingerprint": {
+          "commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+          "configuration_blob": "0fcdf2c14c47d3bdc821c02e26263956cf0fd3d8",
+          "configuration_bytes": 5877,
+          "configuration_sha256": "7f196f4aaf9b4e482fbd61ba4bf19f5cec4da0f81938ece756954035a65c0bb5",
+          "python_blob": "4b78842d0f2d4abf6e318a8248b6306454f5c714",
+          "python_bytes": 39801,
+          "python_sha256": "fb9215c5e21a25243e2d13e75b3d70a79cf7d78fff150a90f1bb5eacf9ba2bcf",
+          "vendor_repo": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\.vendor\\kaggle-environments"
+        },
+        "exception": null,
+        "latency_ms": {
+          "calls": 719,
+          "max": 0.846200000069075,
+          "p50": 0.03609999976106337,
+          "p95": 0.11827999978777376,
+          "p99": 0.20148200005678568,
+          "total": 34.508199998526834
+        },
+        "max_market_orders": 10,
+        "money": [
+          41887.0,
+          73860.0
+        ],
+        "opponent_action_digest": "fb3141af275f95b6a3bf5cc0dfc74e7f5ba8ca26f0afbbe34028b8736a69969d",
+        "opponent_exception": null,
+        "overage_exhausted": false,
+        "rewards": [
+          41887.0,
+          73860.0
+        ],
+        "statuses": [
+          "DONE",
+          "DONE"
+        ],
+        "terminal_inventory": {
+          "marked_value": 0.0,
+          "units": 0
+        },
+        "timeout_calls": 0
+      },
+      "control_outcome": "W",
+      "incumbent_stratum": "v27_current_meta",
+      "opponent_family": "kaito_v21",
+      "paired_margin_delta": -13010.0,
+      "seat": 1,
+      "seed": 83171301,
+      "technical_pass": false
+    },
+    {
+      "candidate": {
+        "action_digest": "64920240143dc574208e879290a4c838f745791ab296d595e8697f8a53372c8a",
+        "action_issues": {
+          "hand_alignment": 0,
+          "malformed": 0,
+          "market_overflow": 0,
+          "seed_overcommit": 2
+        },
+        "calls": 719,
+        "diagnostics": {
+          "animal_escape_steps": [],
+          "animal_escapes": 0,
+          "crop_death_steps": [
+            167,
+            263,
+            503,
+            508,
+            508,
+            508,
+            604,
+            672,
+            672,
+            672,
+            672,
+            672,
+            676
+          ],
+          "crop_deaths": 13,
+          "fresh_crop_death_steps": [
+            167,
+            263,
+            503
+          ],
+          "fresh_crop_deaths": 3,
+          "shed_overflow_events": 0,
+          "shed_overflow_units": 0
+        },
+        "engine_fingerprint": {
+          "commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+          "configuration_blob": "0fcdf2c14c47d3bdc821c02e26263956cf0fd3d8",
+          "configuration_bytes": 5877,
+          "configuration_sha256": "7f196f4aaf9b4e482fbd61ba4bf19f5cec4da0f81938ece756954035a65c0bb5",
+          "python_blob": "4b78842d0f2d4abf6e318a8248b6306454f5c714",
+          "python_bytes": 39801,
+          "python_sha256": "fb9215c5e21a25243e2d13e75b3d70a79cf7d78fff150a90f1bb5eacf9ba2bcf",
+          "vendor_repo": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\.vendor\\kaggle-environments"
+        },
+        "exception": null,
+        "latency_ms": {
+          "calls": 719,
+          "max": 1.1767999999392487,
+          "p50": 0.032699999792384915,
+          "p95": 0.11339999964548052,
+          "p99": 0.27839599983963265,
+          "total": 33.1180999883145
+        },
+        "max_market_orders": 10,
+        "money": [
+          94306.0,
+          73812.0
+        ],
+        "opponent_action_digest": "91ed27430d045cfc5ec571c1989cbab9ff960281d2f057ab52aa66a6cd57431f",
+        "opponent_exception": null,
+        "overage_exhausted": false,
+        "rewards": [
+          94306.0,
+          73812.0
+        ],
+        "statuses": [
+          "DONE",
+          "DONE"
+        ],
+        "terminal_inventory": {
+          "marked_value": 0.0,
+          "units": 0
+        },
+        "timeout_calls": 0
+      },
+      "candidate_name": "dominant_8c4s",
+      "candidate_outcome": "W",
+      "control": {
+        "action_digest": "d0953590ed2391068e506aacd6aebcc7ce60e8a5ff68612556265363f5ed9ad9",
+        "action_issues": {
+          "hand_alignment": 0,
+          "malformed": 0,
+          "market_overflow": 0,
+          "seed_overcommit": 2
+        },
+        "calls": 719,
+        "diagnostics": {
+          "animal_escape_steps": [],
+          "animal_escapes": 0,
+          "crop_death_steps": [
+            167,
+            263,
+            503,
+            508,
+            508,
+            508,
+            604,
+            672,
+            672,
+            672,
+            672,
+            672,
+            676
+          ],
+          "crop_deaths": 13,
+          "fresh_crop_death_steps": [
+            167,
+            263,
+            503
+          ],
+          "fresh_crop_deaths": 3,
+          "shed_overflow_events": 0,
+          "shed_overflow_units": 0
+        },
+        "engine_fingerprint": {
+          "commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+          "configuration_blob": "0fcdf2c14c47d3bdc821c02e26263956cf0fd3d8",
+          "configuration_bytes": 5877,
+          "configuration_sha256": "7f196f4aaf9b4e482fbd61ba4bf19f5cec4da0f81938ece756954035a65c0bb5",
+          "python_blob": "4b78842d0f2d4abf6e318a8248b6306454f5c714",
+          "python_bytes": 39801,
+          "python_sha256": "fb9215c5e21a25243e2d13e75b3d70a79cf7d78fff150a90f1bb5eacf9ba2bcf",
+          "vendor_repo": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\.vendor\\kaggle-environments"
+        },
+        "exception": null,
+        "latency_ms": {
+          "calls": 719,
+          "max": 0.843699999677483,
+          "p50": 0.03770000012082164,
+          "p95": 0.13667999983226767,
+          "p99": 0.2357319996554001,
+          "total": 39.47349999816652
+        },
+        "max_market_orders": 10,
+        "money": [
+          42262.0,
+          42054.0
+        ],
+        "opponent_action_digest": "7da37a13edd3feae2ef3c8f24dfaa4e5d534e8474b9bedb47718e6e370d4fc1c",
+        "opponent_exception": null,
+        "overage_exhausted": false,
+        "rewards": [
+          42262.0,
+          42054.0
+        ],
+        "statuses": [
+          "DONE",
+          "DONE"
+        ],
+        "terminal_inventory": {
+          "marked_value": 0.0,
+          "units": 0
+        },
+        "timeout_calls": 0
+      },
+      "control_outcome": "W",
+      "incumbent_stratum": "boatlee_v16_rc2_market_relay",
+      "opponent_family": "other_incumbent",
+      "paired_margin_delta": 20286.0,
+      "seat": 0,
+      "seed": 83171301,
+      "technical_pass": false
+    },
+    {
+      "candidate": {
+        "action_digest": "64920240143dc574208e879290a4c838f745791ab296d595e8697f8a53372c8a",
+        "action_issues": {
+          "hand_alignment": 0,
+          "malformed": 0,
+          "market_overflow": 0,
+          "seed_overcommit": 2
+        },
+        "calls": 719,
+        "diagnostics": {
+          "animal_escape_steps": [],
+          "animal_escapes": 0,
+          "crop_death_steps": [
+            167,
+            263,
+            503,
+            508,
+            508,
+            508,
+            604,
+            672,
+            672,
+            672,
+            672,
+            676
+          ],
+          "crop_deaths": 12,
+          "fresh_crop_death_steps": [
+            167,
+            263,
+            503
+          ],
+          "fresh_crop_deaths": 3,
+          "shed_overflow_events": 0,
+          "shed_overflow_units": 0
+        },
+        "engine_fingerprint": {
+          "commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+          "configuration_blob": "0fcdf2c14c47d3bdc821c02e26263956cf0fd3d8",
+          "configuration_bytes": 5877,
+          "configuration_sha256": "7f196f4aaf9b4e482fbd61ba4bf19f5cec4da0f81938ece756954035a65c0bb5",
+          "python_blob": "4b78842d0f2d4abf6e318a8248b6306454f5c714",
+          "python_bytes": 39801,
+          "python_sha256": "fb9215c5e21a25243e2d13e75b3d70a79cf7d78fff150a90f1bb5eacf9ba2bcf",
+          "vendor_repo": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\.vendor\\kaggle-environments"
+        },
+        "exception": null,
+        "latency_ms": {
+          "calls": 719,
+          "max": 0.7559000000583183,
+          "p50": 0.03440000000409782,
+          "p95": 0.12935000004290487,
+          "p99": 0.24796200021228357,
+          "total": 34.913100002995634
+        },
+        "max_market_orders": 10,
+        "money": [
+          73973.0,
+          94204.0
+        ],
+        "opponent_action_digest": "18930b1479a544bf1ce7be58472c4cfad804091a77f2ed42e0951b602b0b06f9",
+        "opponent_exception": null,
+        "overage_exhausted": false,
+        "rewards": [
+          73973.0,
+          94204.0
+        ],
+        "statuses": [
+          "DONE",
+          "DONE"
+        ],
+        "terminal_inventory": {
+          "marked_value": 0.0,
+          "units": 0
+        },
+        "timeout_calls": 0
+      },
+      "candidate_name": "dominant_8c4s",
+      "candidate_outcome": "W",
+      "control": {
+        "action_digest": "8ec8770a523bfaa16996bbcdc2c4afc0d118bfc8802c35311b93a0a6fb1f9446",
+        "action_issues": {
+          "hand_alignment": 0,
+          "malformed": 0,
+          "market_overflow": 0,
+          "seed_overcommit": 2
+        },
+        "calls": 719,
+        "diagnostics": {
+          "animal_escape_steps": [],
+          "animal_escapes": 0,
+          "crop_death_steps": [
+            167,
+            263,
+            287,
+            503,
+            508,
+            508,
+            508,
+            604,
+            672,
+            672,
+            672,
+            672,
+            676
+          ],
+          "crop_deaths": 13,
+          "fresh_crop_death_steps": [
+            167,
+            263,
+            287,
+            503
+          ],
+          "fresh_crop_deaths": 4,
+          "shed_overflow_events": 0,
+          "shed_overflow_units": 0
+        },
+        "engine_fingerprint": {
+          "commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+          "configuration_blob": "0fcdf2c14c47d3bdc821c02e26263956cf0fd3d8",
+          "configuration_bytes": 5877,
+          "configuration_sha256": "7f196f4aaf9b4e482fbd61ba4bf19f5cec4da0f81938ece756954035a65c0bb5",
+          "python_blob": "4b78842d0f2d4abf6e318a8248b6306454f5c714",
+          "python_bytes": 39801,
+          "python_sha256": "fb9215c5e21a25243e2d13e75b3d70a79cf7d78fff150a90f1bb5eacf9ba2bcf",
+          "vendor_repo": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\.vendor\\kaggle-environments"
+        },
+        "exception": null,
+        "latency_ms": {
+          "calls": 719,
+          "max": 0.37849999989703065,
+          "p50": 0.02989999984492897,
+          "p95": 0.08248999988609287,
+          "p99": 0.19206999995731258,
+          "total": 27.757600002587424
+        },
+        "max_market_orders": 10,
+        "money": [
+          42022.0,
+          42294.0
+        ],
+        "opponent_action_digest": "d56744510d29252ee804455193fc4e27c002735362c8f805d4ebeb952ab3036d",
+        "opponent_exception": null,
+        "overage_exhausted": false,
+        "rewards": [
+          42022.0,
+          42294.0
+        ],
+        "statuses": [
+          "DONE",
+          "DONE"
+        ],
+        "terminal_inventory": {
+          "marked_value": 0.0,
+          "units": 0
+        },
+        "timeout_calls": 0
+      },
+      "control_outcome": "W",
+      "incumbent_stratum": "boatlee_v16_rc2_market_relay",
+      "opponent_family": "other_incumbent",
+      "paired_margin_delta": 19959.0,
+      "seat": 1,
+      "seed": 83171301,
+      "technical_pass": false
+    },
+    {
+      "candidate": {
+        "action_digest": "64920240143dc574208e879290a4c838f745791ab296d595e8697f8a53372c8a",
+        "action_issues": {
+          "hand_alignment": 0,
+          "malformed": 0,
+          "market_overflow": 0,
+          "seed_overcommit": 3
+        },
+        "calls": 719,
+        "diagnostics": {
+          "animal_escape_steps": [],
+          "animal_escapes": 0,
+          "crop_death_steps": [
+            167,
+            263,
+            503,
+            508,
+            508,
+            508,
+            604,
+            672,
+            672,
+            672,
+            672,
+            672,
+            676
+          ],
+          "crop_deaths": 13,
+          "fresh_crop_death_steps": [
+            167,
+            263,
+            503
+          ],
+          "fresh_crop_deaths": 3,
+          "shed_overflow_events": 0,
+          "shed_overflow_units": 0
+        },
+        "engine_fingerprint": {
+          "commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+          "configuration_blob": "0fcdf2c14c47d3bdc821c02e26263956cf0fd3d8",
+          "configuration_bytes": 5877,
+          "configuration_sha256": "7f196f4aaf9b4e482fbd61ba4bf19f5cec4da0f81938ece756954035a65c0bb5",
+          "python_blob": "4b78842d0f2d4abf6e318a8248b6306454f5c714",
+          "python_bytes": 39801,
+          "python_sha256": "fb9215c5e21a25243e2d13e75b3d70a79cf7d78fff150a90f1bb5eacf9ba2bcf",
+          "vendor_repo": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\.vendor\\kaggle-environments"
+        },
+        "exception": null,
+        "latency_ms": {
+          "calls": 719,
+          "max": 0.6825999998909538,
+          "p50": 0.034700000014709076,
+          "p95": 0.11008000010406253,
+          "p99": 0.21088399993459492,
+          "total": 32.92649999457353
+        },
+        "max_market_orders": 10,
+        "money": [
+          100083.0,
+          75930.0
+        ],
+        "opponent_action_digest": "c6fb431e33d80f1fcc0e673751982d1d27dad2e92cf3dd43da8a85cf0f71f86d",
+        "opponent_exception": null,
+        "overage_exhausted": false,
+        "rewards": [
+          100083.0,
+          75930.0
+        ],
+        "statuses": [
+          "DONE",
+          "DONE"
+        ],
+        "terminal_inventory": {
+          "marked_value": 0.0,
+          "units": 0
+        },
+        "timeout_calls": 0
+      },
+      "candidate_name": "dominant_8c4s",
+      "candidate_outcome": "W",
+      "control": {
+        "action_digest": "566cb95740aa1e7d2498438f00d2b1671e035797eebc1c4fbca83a8938899588",
+        "action_issues": {
+          "hand_alignment": 0,
+          "malformed": 0,
+          "market_overflow": 0,
+          "seed_overcommit": 0
+        },
+        "calls": 719,
+        "diagnostics": {
+          "animal_escape_steps": [],
+          "animal_escapes": 0,
+          "crop_death_steps": [
+            167,
+            263,
+            503,
+            508,
+            508,
+            508,
+            604,
+            672,
+            672,
+            672,
+            672,
+            672,
+            676
+          ],
+          "crop_deaths": 13,
+          "fresh_crop_death_steps": [
+            167,
+            263,
+            503
+          ],
+          "fresh_crop_deaths": 3,
+          "shed_overflow_events": 0,
+          "shed_overflow_units": 0
+        },
+        "engine_fingerprint": {
+          "commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+          "configuration_blob": "0fcdf2c14c47d3bdc821c02e26263956cf0fd3d8",
+          "configuration_bytes": 5877,
+          "configuration_sha256": "7f196f4aaf9b4e482fbd61ba4bf19f5cec4da0f81938ece756954035a65c0bb5",
+          "python_blob": "4b78842d0f2d4abf6e318a8248b6306454f5c714",
+          "python_bytes": 39801,
+          "python_sha256": "fb9215c5e21a25243e2d13e75b3d70a79cf7d78fff150a90f1bb5eacf9ba2bcf",
+          "vendor_repo": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\.vendor\\kaggle-environments"
+        },
+        "exception": null,
+        "latency_ms": {
+          "calls": 719,
+          "max": 1.7007000001285633,
+          "p50": 0.03229999992981902,
+          "p95": 0.09114000017689251,
+          "p99": 0.1623199999812644,
+          "total": 31.887500006632763
+        },
+        "max_market_orders": 10,
+        "money": [
+          74046.0,
+          40760.0
+        ],
+        "opponent_action_digest": "67615598a23a4c853b4586d1fa8fc91b33a004bc149c06135b3c85518ac6d28c",
+        "opponent_exception": null,
+        "overage_exhausted": false,
+        "rewards": [
+          74046.0,
+          40760.0
+        ],
+        "statuses": [
+          "DONE",
+          "DONE"
+        ],
+        "terminal_inventory": {
+          "marked_value": 0.0,
+          "units": 0
+        },
+        "timeout_calls": 0
+      },
+      "control_outcome": "W",
+      "incumbent_stratum": "boatlee_v16_rc2_market_relay",
+      "opponent_family": "kaito_v21",
+      "paired_margin_delta": -9133.0,
+      "seat": 0,
+      "seed": 83171301,
+      "technical_pass": false
+    },
+    {
+      "candidate": {
+        "action_digest": "64920240143dc574208e879290a4c838f745791ab296d595e8697f8a53372c8a",
+        "action_issues": {
+          "hand_alignment": 0,
+          "malformed": 0,
+          "market_overflow": 0,
+          "seed_overcommit": 2
+        },
+        "calls": 719,
+        "diagnostics": {
+          "animal_escape_steps": [],
+          "animal_escapes": 0,
+          "crop_death_steps": [
+            167,
+            263,
+            503,
+            508,
+            508,
+            508,
+            604,
+            672,
+            672,
+            672,
+            672,
+            672,
+            676
+          ],
+          "crop_deaths": 13,
+          "fresh_crop_death_steps": [
+            167,
+            263,
+            503
+          ],
+          "fresh_crop_deaths": 3,
+          "shed_overflow_events": 0,
+          "shed_overflow_units": 0
+        },
+        "engine_fingerprint": {
+          "commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+          "configuration_blob": "0fcdf2c14c47d3bdc821c02e26263956cf0fd3d8",
+          "configuration_bytes": 5877,
+          "configuration_sha256": "7f196f4aaf9b4e482fbd61ba4bf19f5cec4da0f81938ece756954035a65c0bb5",
+          "python_blob": "4b78842d0f2d4abf6e318a8248b6306454f5c714",
+          "python_bytes": 39801,
+          "python_sha256": "fb9215c5e21a25243e2d13e75b3d70a79cf7d78fff150a90f1bb5eacf9ba2bcf",
+          "vendor_repo": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\.vendor\\kaggle-environments"
+        },
+        "exception": null,
+        "latency_ms": {
+          "calls": 719,
+          "max": 1.363100000162376,
+          "p50": 0.03659999993033125,
+          "p95": 0.12899999974251844,
+          "p99": 0.1964999998108399,
+          "total": 36.57039999961853
+        },
+        "max_market_orders": 10,
+        "money": [
+          102100.0,
+          121063.0
+        ],
+        "opponent_action_digest": "d499a76d3d88b43e1c16d70d081d1be378953c75797e3683a6473596295be6cd",
+        "opponent_exception": null,
+        "overage_exhausted": false,
+        "rewards": [
+          102100.0,
+          121063.0
+        ],
+        "statuses": [
+          "DONE",
+          "DONE"
+        ],
+        "terminal_inventory": {
+          "marked_value": 0.0,
+          "units": 0
+        },
+        "timeout_calls": 0
+      },
+      "candidate_name": "dominant_8c4s",
+      "candidate_outcome": "W",
+      "control": {
+        "action_digest": "b02698ffbd5c8f742f2ff874cce6398cf76daf156125c0eab77471a654f511be",
+        "action_issues": {
+          "hand_alignment": 0,
+          "malformed": 0,
+          "market_overflow": 0,
+          "seed_overcommit": 0
+        },
+        "calls": 719,
+        "diagnostics": {
+          "animal_escape_steps": [],
+          "animal_escapes": 0,
+          "crop_death_steps": [
+            167,
+            263,
+            287,
+            503,
+            508,
+            508,
+            508,
+            604,
+            672,
+            672,
+            672,
+            672,
+            672,
+            676
+          ],
+          "crop_deaths": 14,
+          "fresh_crop_death_steps": [
+            167,
+            263,
+            503
+          ],
+          "fresh_crop_deaths": 3,
+          "shed_overflow_events": 0,
+          "shed_overflow_units": 0
+        },
+        "engine_fingerprint": {
+          "commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+          "configuration_blob": "0fcdf2c14c47d3bdc821c02e26263956cf0fd3d8",
+          "configuration_bytes": 5877,
+          "configuration_sha256": "7f196f4aaf9b4e482fbd61ba4bf19f5cec4da0f81938ece756954035a65c0bb5",
+          "python_blob": "4b78842d0f2d4abf6e318a8248b6306454f5c714",
+          "python_bytes": 39801,
+          "python_sha256": "fb9215c5e21a25243e2d13e75b3d70a79cf7d78fff150a90f1bb5eacf9ba2bcf",
+          "vendor_repo": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\.vendor\\kaggle-environments"
+        },
+        "exception": null,
+        "latency_ms": {
+          "calls": 719,
+          "max": 2.1099999999023566,
+          "p50": 0.04089999993084348,
+          "p95": 0.14192999988154048,
+          "p99": 0.28625800000554924,
+          "total": 42.241799995281326
+        },
+        "max_market_orders": 10,
+        "money": [
+          41887.0,
+          73860.0
+        ],
+        "opponent_action_digest": "fb3141af275f95b6a3bf5cc0dfc74e7f5ba8ca26f0afbbe34028b8736a69969d",
+        "opponent_exception": null,
+        "overage_exhausted": false,
+        "rewards": [
+          41887.0,
+          73860.0
+        ],
+        "statuses": [
+          "DONE",
+          "DONE"
+        ],
+        "terminal_inventory": {
+          "marked_value": 0.0,
+          "units": 0
+        },
+        "timeout_calls": 0
+      },
+      "control_outcome": "W",
+      "incumbent_stratum": "boatlee_v16_rc2_market_relay",
+      "opponent_family": "kaito_v21",
+      "paired_margin_delta": -13010.0,
+      "seat": 1,
+      "seed": 83171301,
+      "technical_pass": false
+    }
+  ],
+  "protocol": {
+    "controls": [
+      "v27_current_meta",
+      "boatlee_v16_rc2_market_relay"
+    ],
+    "freshness": "83171301 had no literal occurrence outside the new lane before protocol creation",
+    "mechanism": "complete 719-turn public replay tape transplant with hand-count-only projection",
+    "opponents": [
+      "other_incumbent",
+      "kaito_v21"
+    ],
+    "seats": [
+      0,
+      1
+    ],
+    "seed": 83171301,
+    "stopping_rule": "stop unless each incumbent stratum has technical validity, positive sign majority, positive median, and more outcome improvements than regressions"
+  },
+  "schema_version": 1,
+  "strata": {
+    "dominant_8c4s": {
+      "boatlee_v16_rc2_market_relay": {
+        "mean_own_bank_delta": 44298.5,
+        "mean_paired_margin_delta": 4525.5,
+        "median_paired_margin_delta": 5413.0,
+        "outcome_improvements": 0,
+        "outcome_regressions": 0,
+        "pairs": 4,
+        "positive_zero_negative": [
+          2,
+          0,
+          2
+        ],
+        "technical_pass": false,
+        "worst_paired_margin_delta": -13010.0
+      },
+      "v27_current_meta": {
+        "mean_own_bank_delta": 44418.5,
+        "mean_paired_margin_delta": 4765.5,
+        "median_paired_margin_delta": 5653.0,
+        "outcome_improvements": 2,
+        "outcome_regressions": 0,
+        "pairs": 4,
+        "positive_zero_negative": [
+          2,
+          0,
+          2
+        ],
+        "technical_pass": false,
+        "worst_paired_margin_delta": -13010.0
+      }
+    },
+    "rank1_10c4s": {
+      "boatlee_v16_rc2_market_relay": {
+        "mean_own_bank_delta": 22622.5,
+        "mean_paired_margin_delta": -2982.25,
+        "median_paired_margin_delta": -2499.0,
+        "outcome_improvements": 0,
+        "outcome_regressions": 0,
+        "pairs": 4,
+        "positive_zero_negative": [
+          2,
+          0,
+          2
+        ],
+        "technical_pass": true,
+        "worst_paired_margin_delta": -9958.0
+      },
+      "v27_current_meta": {
+        "mean_own_bank_delta": 22742.5,
+        "mean_paired_margin_delta": -2742.25,
+        "median_paired_margin_delta": -2259.0,
+        "outcome_improvements": 2,
+        "outcome_regressions": 0,
+        "pairs": 4,
+        "positive_zero_negative": [
+          2,
+          0,
+          2
+        ],
+        "technical_pass": true,
+        "worst_paired_margin_delta": -9958.0
+      }
+    }
+  }
+}

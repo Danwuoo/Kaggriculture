@@ -1,0 +1,261 @@
+{
+  "engine": {
+    "current_commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+    "current_json_sha256": "7F196F4AAF9B4E482FBD61BA4BF19F5CEC4DA0F81938ECE756954035A65C0BB5",
+    "current_normalized_sha256": "FB9215C5E21A25243E2D13E75B3D70A79CF7D78FFF150A90F1BB5EACF9BA2BCF",
+    "engine_path": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\.vendor\\kaggle-environments\\kaggle_environments\\envs\\kaggriculture\\kaggriculture.py",
+    "normalized_sha256": "9741C0470A8DB98A70644491D5121AE6295413343D1A08EF9FCEE35E0B76F2C5",
+    "pinned_commit": "a4dce5ae6e2ffe3c1afea8ec4b24b562df74cc07"
+  },
+  "information_boundary": "Private observations are used only inside same-transition correctness checks for their owning player and are not retained or compared across players.",
+  "raw_success_bytes_retained": 0,
+  "schema_version": 1,
+  "summaries": [
+    {
+      "aligned_full_tape_sha256": "b7d8875565704bc04c4c03fefe4ccbc92f170a251dd9cb8f224624769e9f5464",
+      "aligned_mapping": "replay rows 1..719 map to observation steps 0..718",
+      "asset_loss_safety": {
+        "animal_escapes": 0,
+        "fresh_crop_deaths": 0,
+        "shed_overflow_states": 0
+      },
+      "episode_id": 92498144,
+      "excluded_unaligned_full_tape_sha256": "757e22ee35f12c10d466db24c9180929e928adbb1fb55f5d513896af8828bf08",
+      "first_aligned_action": {
+        "farmer": [
+          "BUILD_PASTURE"
+        ],
+        "hands": [],
+        "market": [
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_ANIMAL",
+            "COW",
+            2
+          ],
+          [
+            "BUY_ANIMAL",
+            "SHEEP",
+            2
+          ],
+          [
+            "BUY_SEED",
+            "WHEAT",
+            7
+          ],
+          [
+            "BUY_SEED",
+            "MELON",
+            12
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            6
+          ]
+        ]
+      },
+      "last_aligned_action": {
+        "farmer": [
+          "WEST"
+        ],
+        "hands": [
+          [
+            "DROP"
+          ],
+          [
+            "DROP"
+          ],
+          [
+            "PASS"
+          ],
+          [
+            "DROP"
+          ],
+          [
+            "PASS"
+          ],
+          [
+            "PASS"
+          ],
+          [
+            "PASS"
+          ],
+          [
+            "DROP"
+          ]
+        ],
+        "market": [
+          [
+            "SELL",
+            "MILK",
+            15
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            10
+          ]
+        ]
+      },
+      "manifest_full_tape_sha256": "b7d8875565704bc04c4c03fefe4ccbc92f170a251dd9cb8f224624769e9f5464",
+      "module_version": "1.32.6",
+      "rank": 1,
+      "rewards": [
+        149998.0,
+        143436.0
+      ],
+      "schema_safety": {
+        "malformed_actions": 0,
+        "market_overflow_turns": 0,
+        "seed_overcommit_turns": 0
+      },
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "team_name": "カワシギ",
+      "transitions_passed": 719
+    },
+    {
+      "aligned_full_tape_sha256": "59e6cf8aa76737b50cf27e3059bb75d6095b88f8e93e70a888487ca5c63efd0c",
+      "aligned_mapping": "replay rows 1..719 map to observation steps 0..718",
+      "asset_loss_safety": {
+        "animal_escapes": 0,
+        "fresh_crop_deaths": 0,
+        "shed_overflow_states": 0
+      },
+      "episode_id": 92423692,
+      "excluded_unaligned_full_tape_sha256": "6f12ba2d796dbc26ac5a7d0224955e8e373611b05ba81e6e2c1e05fc67dc3cd6",
+      "first_aligned_action": {
+        "farmer": [
+          "PASS"
+        ],
+        "hands": [],
+        "market": [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            14
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_ANIMAL",
+            "COW",
+            1
+          ],
+          [
+            "BUY_ANIMAL",
+            "SHEEP",
+            4
+          ],
+          [
+            "BUY_SEED",
+            "MELON",
+            5
+          ],
+          [
+            "BUY_SEED",
+            "WHEAT",
+            5
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      },
+      "last_aligned_action": {
+        "farmer": [
+          "PASS"
+        ],
+        "hands": [
+          [
+            "CARE"
+          ],
+          [
+            "CARE"
+          ],
+          [
+            "CARE"
+          ],
+          [
+            "PASS"
+          ],
+          [
+            "PASS"
+          ],
+          [
+            "CARE"
+          ],
+          [
+            "CARE"
+          ],
+          [
+            "CARE"
+          ],
+          [
+            "DROP"
+          ],
+          [
+            "PASS"
+          ]
+        ],
+        "market": [
+          [
+            "SELL",
+            "FERTILIZER",
+            5
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            7
+          ]
+        ]
+      },
+      "manifest_full_tape_sha256": "59e6cf8aa76737b50cf27e3059bb75d6095b88f8e93e70a888487ca5c63efd0c",
+      "module_version": "1.32.6",
+      "rank": 3,
+      "rewards": [
+        147089.0,
+        150896.0
+      ],
+      "schema_safety": {
+        "malformed_actions": 0,
+        "market_overflow_turns": 0,
+        "seed_overcommit_turns": 3
+      },
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "team_name": "JALKARNA GAUTAM",
+      "transitions_passed": 719
+    }
+  ]
+}

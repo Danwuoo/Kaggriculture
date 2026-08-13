@@ -308,6 +308,16 @@ def macro_family(signatures: list[dict[str, Any]]) -> str:
     return digest(landmarks)
 
 
+def meaningful_actions(steps: list[Any], seat: int) -> list[dict[str, Any]]:
+    """Return agent calls 0..718 from replay rows 1..719."""
+    if len(steps) != 720:
+        raise ValueError("expected 720 replay rows")
+    return [
+        canonical_action(step[seat].get("action") if isinstance(step[seat], dict) else None)
+        for step in steps[1:]
+    ]
+
+
 def extract_replay(raw: Path, selected: dict[str, Any], cache: Path) -> tuple[dict[str, Any], dict[str, Any]]:
     size = raw.stat().st_size
     if size > MAX_RAW_BYTES:
@@ -323,7 +333,10 @@ def extract_replay(raw: Path, selected: dict[str, Any], cache: Path) -> tuple[di
     seat = int(selected["target_agent_index"])
     if seat not in (0, 1):
         raise ValueError("unsupported target seat")
-    actions = [canonical_action((step[seat].get("action") if isinstance(step[seat], dict) else None)) for step in steps[:-1]]
+    # Kaggle replay row 0 is the initial state with a placeholder action.  Row
+    # n + 1 stores the action returned for observation step n, so the 719
+    # meaningful calls are rows 1..719, not rows 0..718.
+    actions = meaningful_actions(steps, seat)
     if len(actions) != 719:
         raise ValueError("expected 719 meaningful actions")
     units, markets = unit_tape(actions), market_tape(actions)
@@ -341,14 +354,15 @@ def extract_replay(raw: Path, selected: dict[str, Any], cache: Path) -> tuple[di
         tape_path.parent.mkdir(parents=True, exist_ok=True)
         temporary = tape_path.with_suffix(".tmp")
         with gzip.open(temporary, "wb", compresslevel=6) as handle:
-            handle.write(canonical({"schema": 1, "actions": actions}))
+            handle.write(canonical({"schema": 2, "action_alignment": "replay rows 1..719 map to observation steps 0..718", "actions": actions}))
         os.replace(temporary, tape_path)
     feature = {
-        "schema": 1, "episode_id": int(selected["episode_id"]), "rank": int(selected["rank"]), "team_id": int(selected["team_id"]), "submission_id": int(selected["submission_id"]), "target_agent_index": seat,
+        "schema": 2, "episode_id": int(selected["episode_id"]), "rank": int(selected["rank"]), "team_id": int(selected["team_id"]), "submission_id": int(selected["submission_id"]), "target_agent_index": seat,
         "raw": {"sha256": raw_hash, "bytes": size, "retained": False},
         "replay": {"seed": replay.get("info", {}).get("seed"), "module_version": replay.get("module_version"), "schema_version": replay.get("schema_version"), "target_reward": float(selected["target_reward"])},
         "tapes": {"full": full_digest, "unit": unit_digest, "market": market_digest, "full_tape_path": str(tape_path.relative_to(cache)), "turns": 719, "phases": phase},
         "route": {"family": macro_family(signatures), "daily_public_signatures": signatures, "daily_same_player_private_labels": private},
+        "action_alignment": "replay rows 1..719 map to agent observation steps 0..718",
         "information_boundary": "Features access only target-player actions/observation. Private labels are from that player's private field only; no opponent private field is read.",
     }
     feature_path = cache / "corpus" / "features" / f"episode-{selected['episode_id']}.json.gz"

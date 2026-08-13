@@ -1,0 +1,88 @@
+"""Generated research-only high-score route transplant: shared_guarded_r03."""
+import base64
+import json
+import zlib
+
+_TAPE_SHA256 = "59e6cf8aa76737b50cf27e3059bb75d6095b88f8e93e70a888487ca5c63efd0c"
+_ACTIONS = json.loads(zlib.decompress(base64.b64decode("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")))
+_STATE = {0: {}, 1: {}}
+
+def _at(farm, position):
+    try:
+        x, y = int(position[0]), int(position[1])
+        return farm.get("tiles", [])[y][x]
+    except (IndexError, TypeError, ValueError):
+        return "LOCKED"
+
+def _route_actor(step, index):
+    source = _ACTIONS[min(max(0, int(step)), 718)]
+    units = [source.get("farmer") or ["PASS"], *(source.get("hands") or [])]
+    return list(units[index] if index < len(units) else ["PASS"])
+
+def _guard(obs, step, seat, action, state):
+    farm = obs["farms"][seat]
+    positions = [farm.get("farmer"), *(farm.get("hands", []) or [])]
+    units = [action["farmer"], *action["hands"]]
+    active = state["active"]
+    for index, transaction in list(active.items()):
+        if index >= len(units):
+            active.pop(index, None)
+            continue
+        age = step - transaction["start"]
+        if age == 1:
+            units[index] = list(transaction["intended"])
+        elif 2 <= age <= 9:
+            units[index] = _route_actor(step - 1, index)
+        else:
+            active.pop(index, None)
+    for index, (position, intended) in enumerate(zip(positions, units)):
+        if index in active or not intended or intended[0] not in ("BUILD_PASTURE", "PLANT"):
+            continue
+        tile = _at(farm, position)
+        if isinstance(tile, dict) and tile.get("kind") == "WEED":
+            active[index] = {"start": step, "intended": list(intended)}
+            units[index] = ["DIG"]
+            state["weed_repairs"] += 1
+    seeds = (obs.get("private", {}) or {}).get("seeds", {}) or {}
+    used = {}
+    for index, intended in enumerate(units):
+        if not intended or intended[0] != "PLANT" or len(intended) < 2:
+            continue
+        crop = str(intended[1])
+        count = used.get(crop, 0)
+        if count >= max(0, int(seeds.get(crop, 0) or 0)):
+            units[index] = ["PASS"]
+            state["seed_trims"] += 1
+        else:
+            used[crop] = count + 1
+    action["farmer"] = units[0]
+    action["hands"] = units[1:]
+    return action
+
+
+def stats(seat=None):
+    if seat is None:
+        return {key: dict(value) for key, value in _STATE.items()}
+    return dict(_STATE.get(seat, {}))
+
+def agent(obs, configuration=None):
+    step = min(max(0, int(obs.get("step", 0) or 0)), 718)
+    seat = int(obs.get("player", 0) or 0)
+    state = _STATE.get(seat, {})
+    if step == 0 or step < state.get("last_step", -1):
+        state = {"last_step": step, "alignment_changes": 0, "active": {}, "weed_repairs": 0, "seed_trims": 0}
+        _STATE[seat] = state
+    state["last_step"] = step
+    source = _ACTIONS[step]
+    expected = len(obs["farms"][seat].get("hands", []) or [])
+    hands = [list(row or ["PASS"]) for row in (source.get("hands", []) or [])]
+    if len(hands) != expected:
+        state["alignment_changes"] += 1
+        hands = (hands + [["PASS"] for _ in range(max(0, expected - len(hands)))])[:expected]
+    action = {
+        "farmer": list(source.get("farmer") or ["PASS"]),
+        "hands": hands,
+        "market": [list(row or []) for row in (source.get("market", []) or [])][:10],
+    }
+    action = _guard(obs, step, seat, action, state)
+    return action

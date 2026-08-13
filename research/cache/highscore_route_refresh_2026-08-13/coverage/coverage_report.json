@@ -1,0 +1,15 @@
+{
+  "blocker": null,
+  "cache_absolute_path": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\research\\cache\\highscore_route_refresh_2026-08-13",
+  "candidate_limit": 50,
+  "captured_at": "2026-08-13T13:58:15.627898Z",
+  "coverage_complete_for_requested": true,
+  "leaderboard_rows_returned": 50,
+  "metadata_attempted_this_run": 50,
+  "metadata_failures_this_run": 2,
+  "metadata_failures_total": 2,
+  "metadata_ok": 48,
+  "requested_replays": 40,
+  "selection": "one live-score-matched active submission per team; highest target-reward completed public episode; unique episode IDs in rank order",
+  "unique_selected_episodes": 40
+}

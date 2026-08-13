@@ -1,0 +1,357 @@
+{
+  "candidate_limit": 50,
+  "captured_at": "2026-08-13T13:56:56.470010Z",
+  "competition": "kaggriculture",
+  "rows": [
+    {
+      "leaderboard_score": "3240.2",
+      "rank": 1,
+      "submission_date": "2026-08-12T16:50:03.273000Z",
+      "team_id": 16677252,
+      "team_name": "カワシギ"
+    },
+    {
+      "leaderboard_score": "3156.4",
+      "rank": 2,
+      "submission_date": "2026-08-12T05:18:51.713000Z",
+      "team_id": 16676904,
+      "team_name": "researchstudio.site"
+    },
+    {
+      "leaderboard_score": "3148.9",
+      "rank": 3,
+      "submission_date": "2026-08-12T16:42:23.813000Z",
+      "team_id": 16659081,
+      "team_name": "JALKARNA GAUTAM"
+    },
+    {
+      "leaderboard_score": "3126.8",
+      "rank": 4,
+      "submission_date": "2026-08-13T00:37:13.950000Z",
+      "team_id": 16671088,
+      "team_name": "jasonstillchasin"
+    },
+    {
+      "leaderboard_score": "3117.4",
+      "rank": 5,
+      "submission_date": "2026-08-12T16:59:56.926000Z",
+      "team_id": 16681405,
+      "team_name": "Yusuke Hayashi"
+    },
+    {
+      "leaderboard_score": "3105.3",
+      "rank": 6,
+      "submission_date": "2026-08-12T14:18:31.976000Z",
+      "team_id": 16626332,
+      "team_name": "MD. Nazmus Sakib Anik"
+    },
+    {
+      "leaderboard_score": "3104.8",
+      "rank": 7,
+      "submission_date": "2026-08-13T05:04:24.820000Z",
+      "team_id": 16654490,
+      "team_name": "Furious Monk"
+    },
+    {
+      "leaderboard_score": "3103.3",
+      "rank": 8,
+      "submission_date": "2026-08-13T06:52:49.760000Z",
+      "team_id": 16624979,
+      "team_name": "Mohamed abdelrazik"
+    },
+    {
+      "leaderboard_score": "3098.7",
+      "rank": 9,
+      "submission_date": "2026-08-13T05:21:23.876000Z",
+      "team_id": 16655255,
+      "team_name": "MalelizarazoP"
+    },
+    {
+      "leaderboard_score": "3094.4",
+      "rank": 10,
+      "submission_date": "2026-08-13T10:22:57.833000Z",
+      "team_id": 16673205,
+      "team_name": "Arda Ceylan"
+    },
+    {
+      "leaderboard_score": "3075.4",
+      "rank": 11,
+      "submission_date": "2026-08-13T08:11:03.863000Z",
+      "team_id": 16644565,
+      "team_name": "Suda"
+    },
+    {
+      "leaderboard_score": "3064.9",
+      "rank": 12,
+      "submission_date": "2026-08-13T06:27:35.510000Z",
+      "team_id": 16671454,
+      "team_name": "Shadow"
+    },
+    {
+      "leaderboard_score": "3055.3",
+      "rank": 13,
+      "submission_date": "2026-08-13T07:22:10.890000Z",
+      "team_id": 16698538,
+      "team_name": "Haozhe Wang 2022"
+    },
+    {
+      "leaderboard_score": "3051.4",
+      "rank": 14,
+      "submission_date": "2026-08-13T08:27:46.746000Z",
+      "team_id": 16662883,
+      "team_name": "OceanMix"
+    },
+    {
+      "leaderboard_score": "3047.6",
+      "rank": 15,
+      "submission_date": "2026-08-13T04:01:49.796000Z",
+      "team_id": 16672549,
+      "team_name": "Yubo WANG"
+    },
+    {
+      "leaderboard_score": "3021.6",
+      "rank": 16,
+      "submission_date": "2026-08-13T08:38:47.163000Z",
+      "team_id": 16637546,
+      "team_name": "Forrest"
+    },
+    {
+      "leaderboard_score": "3019.9",
+      "rank": 17,
+      "submission_date": "2026-08-13T06:12:23.546000Z",
+      "team_id": 16705830,
+      "team_name": "Grim Reaper"
+    },
+    {
+      "leaderboard_score": "3018.4",
+      "rank": 18,
+      "submission_date": "2026-08-12T15:15:24.180000Z",
+      "team_id": 16663445,
+      "team_name": "ali dzaki"
+    },
+    {
+      "leaderboard_score": "3017.4",
+      "rank": 19,
+      "submission_date": "2026-08-13T08:25:22.136000Z",
+      "team_id": 16696997,
+      "team_name": "coolin666"
+    },
+    {
+      "leaderboard_score": "3015.1",
+      "rank": 20,
+      "submission_date": "2026-08-13T12:37:54.360000Z",
+      "team_id": 16671520,
+      "team_name": "sci-shi"
+    },
+    {
+      "leaderboard_score": "3013.5",
+      "rank": 21,
+      "submission_date": "2026-08-13T13:30:21.986000Z",
+      "team_id": 16705139,
+      "team_name": "gogogo"
+    },
+    {
+      "leaderboard_score": "3011.1",
+      "rank": 22,
+      "submission_date": "2026-08-12T17:02:49.596000Z",
+      "team_id": 16639250,
+      "team_name": "Hamed Seyed-allaei"
+    },
+    {
+      "leaderboard_score": "3011.1",
+      "rank": 23,
+      "submission_date": "2026-08-13T06:43:22.246000Z",
+      "team_id": 16623745,
+      "team_name": "chunluran"
+    },
+    {
+      "leaderboard_score": "3009.9",
+      "rank": 24,
+      "submission_date": "2026-08-12T05:21:08.283000Z",
+      "team_id": 16658038,
+      "team_name": "Khanh"
+    },
+    {
+      "leaderboard_score": "3007.9",
+      "rank": 25,
+      "submission_date": "2026-08-13T06:32:09.813000Z",
+      "team_id": 16690019,
+      "team_name": "Around30"
+    },
+    {
+      "leaderboard_score": "3005.3",
+      "rank": 26,
+      "submission_date": "2026-08-13T13:40:13.833000Z",
+      "team_id": 16684202,
+      "team_name": "Ignat"
+    },
+    {
+      "leaderboard_score": "3001.5",
+      "rank": 27,
+      "submission_date": "2026-08-13T03:12:04.306000Z",
+      "team_id": 16623398,
+      "team_name": "Tony Li"
+    },
+    {
+      "leaderboard_score": "2999.7",
+      "rank": 28,
+      "submission_date": "2026-08-13T10:45:03.136000Z",
+      "team_id": 16703045,
+      "team_name": "ReCurSiON"
+    },
+    {
+      "leaderboard_score": "2998.2",
+      "rank": 29,
+      "submission_date": "2026-08-13T01:33:52.256000Z",
+      "team_id": 16630675,
+      "team_name": "Lucien de Rubempre"
+    },
+    {
+      "leaderboard_score": "2986.5",
+      "rank": 30,
+      "submission_date": "2026-08-13T09:14:06.073000Z",
+      "team_id": 16626191,
+      "team_name": "kevin park"
+    },
+    {
+      "leaderboard_score": "2983.9",
+      "rank": 31,
+      "submission_date": "2026-08-12T15:01:31.486000Z",
+      "team_id": 16690113,
+      "team_name": "m0chi1216"
+    },
+    {
+      "leaderboard_score": "2982.1",
+      "rank": 32,
+      "submission_date": "2026-08-12T23:47:27.493000Z",
+      "team_id": 16712121,
+      "team_name": "Hai Dang"
+    },
+    {
+      "leaderboard_score": "2981.8",
+      "rank": 33,
+      "submission_date": "2026-08-12T13:35:15.276000Z",
+      "team_id": 16708546,
+      "team_name": "Blue Rain"
+    },
+    {
+      "leaderboard_score": "2981.7",
+      "rank": 34,
+      "submission_date": "2026-08-13T09:54:38.370000Z",
+      "team_id": 16657277,
+      "team_name": "Dude and Destroy"
+    },
+    {
+      "leaderboard_score": "2980.3",
+      "rank": 35,
+      "submission_date": "2026-08-12T17:47:11.856000Z",
+      "team_id": 16658382,
+      "team_name": "vladee"
+    },
+    {
+      "leaderboard_score": "2979.7",
+      "rank": 36,
+      "submission_date": "2026-08-13T06:53:12.426000Z",
+      "team_id": 16658248,
+      "team_name": "Aaweg"
+    },
+    {
+      "leaderboard_score": "2979.5",
+      "rank": 37,
+      "submission_date": "2026-08-13T08:57:26.280000Z",
+      "team_id": 16634166,
+      "team_name": "Yuki.O"
+    },
+    {
+      "leaderboard_score": "2979.0",
+      "rank": 38,
+      "submission_date": "2026-08-12T17:51:32.506000Z",
+      "team_id": 16663252,
+      "team_name": "MD Concepcion"
+    },
+    {
+      "leaderboard_score": "2978.8",
+      "rank": 39,
+      "submission_date": "2026-08-13T05:33:00.073000Z",
+      "team_id": 16671588,
+      "team_name": "Keisuke"
+    },
+    {
+      "leaderboard_score": "2977.0",
+      "rank": 40,
+      "submission_date": "2026-08-13T08:06:45.173000Z",
+      "team_id": 16668721,
+      "team_name": "Efe Can Celiksoy"
+    },
+    {
+      "leaderboard_score": "2974.5",
+      "rank": 41,
+      "submission_date": "2026-08-13T11:20:36.356000Z",
+      "team_id": 16690763,
+      "team_name": "chungkuangwen"
+    },
+    {
+      "leaderboard_score": "2972.0",
+      "rank": 42,
+      "submission_date": "2026-08-13T01:29:45.073000Z",
+      "team_id": 16661743,
+      "team_name": "Sergey Kutepov"
+    },
+    {
+      "leaderboard_score": "2970.2",
+      "rank": 43,
+      "submission_date": "2026-08-13T00:03:26.763000Z",
+      "team_id": 16702754,
+      "team_name": "cloud farm"
+    },
+    {
+      "leaderboard_score": "2969.8",
+      "rank": 44,
+      "submission_date": "2026-08-13T09:31:45.456000Z",
+      "team_id": 16672128,
+      "team_name": "Cliffton"
+    },
+    {
+      "leaderboard_score": "2969.6",
+      "rank": 45,
+      "submission_date": "2026-08-12T18:05:48.830000Z",
+      "team_id": 16654715,
+      "team_name": "Aqib Raza"
+    },
+    {
+      "leaderboard_score": "2968.7",
+      "rank": 46,
+      "submission_date": "2026-08-13T02:19:30.946000Z",
+      "team_id": 16710499,
+      "team_name": "sukeke"
+    },
+    {
+      "leaderboard_score": "2966.9",
+      "rank": 47,
+      "submission_date": "2026-08-12T15:30:35.926000Z",
+      "team_id": 16666977,
+      "team_name": "Tagir Analyzes"
+    },
+    {
+      "leaderboard_score": "2966.5",
+      "rank": 48,
+      "submission_date": "2026-08-12T15:57:00.996000Z",
+      "team_id": 16623990,
+      "team_name": "senkin13"
+    },
+    {
+      "leaderboard_score": "2960.6",
+      "rank": 49,
+      "submission_date": "2026-08-13T09:44:31.840000Z",
+      "team_id": 16682867,
+      "team_name": "sneaky6767"
+    },
+    {
+      "leaderboard_score": "2960.4",
+      "rank": 50,
+      "submission_date": "2026-08-12T23:45:16.303000Z",
+      "team_id": 16623608,
+      "team_name": "Dmitry Larko"
+    }
+  ]
+}
