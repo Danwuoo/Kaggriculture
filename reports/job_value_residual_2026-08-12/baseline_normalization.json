@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "kind": "baseline_normalization",
+  "control_commit": "9e90922914d11272b932b9516eadc329d16186a4",
+  "engine_fingerprint": {
+    "commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+    "python_blob": "4b78842d0f2d4abf6e318a8248b6306454f5c714",
+    "configuration_blob": "0fcdf2c14c47d3bdc821c02e26263956cf0fd3d8",
+    "python_sha256": "fb9215c5e21a25243e2d13e75b3d70a79cf7d78fff150a90f1bb5eacf9ba2bcf",
+    "configuration_sha256": "7f196f4aaf9b4e482fbd61ba4bf19f5cec4da0f81938ece756954035a65c0bb5",
+    "python_bytes": 39801,
+    "configuration_bytes": 5877
+  },
+  "regenerated_artifacts": {
+    "v27_current_meta": {
+      "sha256": "6f8d070467e311293f6ee919fa405a332ab9f904f3fea77390bb9abb5ff46c64"
+    },
+    "boatlee_v16_rc2_market_relay": {
+      "sha256": "7117e45755fc4f9b227c82921e19822ce7fcee8c5605a6d0f84957a5a4a8592a"
+    }
+  },
+  "comparison_fields": [
+    "statuses",
+    "calls",
+    "candidate_reward",
+    "opponent_reward",
+    "candidate_money",
+    "opponent_money",
+    "action_digest",
+    "opponent_action_digest",
+    "action_issues",
+    "max_market_orders",
+    "diagnostics",
+    "terminal_inventory",
+    "exception",
+    "opponent_exception",
+    "timeout_calls",
+    "overage_exhausted"
+  ],
+  "games": [
+    {
+      "strategy": "v27_current_meta",
+      "opponent": "kaito_v21",
+      "seed": 873001,
+      "seat": 0,
+      "equivalent": true,
+      "behavior": {
+        "statuses": ["DONE", "DONE"],
+        "calls": 719,
+        "candidate_reward": 71222.0,
+        "opponent_reward": 43905.0,
+        "candidate_money": 71222.0,
+        "opponent_money": 43905.0,
+        "action_digest": "f81deed7fa88cfa63f3943812b8ab9931fb1b25b79cb71b92d7a8aaefba2929d",
+        "opponent_action_digest": "1e45d2bceecf95fae000e5afe4a07ec63aa5c85526e20730609ce7075cfd9b79",
+        "action_issues": {"malformed": 0, "hand_alignment": 0, "seed_overcommit": 0, "market_overflow": 0},
+        "max_market_orders": 10,
+        "diagnostics": {"animal_escapes": 0, "crop_deaths": 0, "fresh_crop_deaths": 0, "shed_overflow_events": 0, "shed_overflow_units": 0},
+        "terminal_inventory": {"units": 0, "marked_value": 0.0},
+        "exception": null,
+        "opponent_exception": null,
+        "timeout_calls": 0,
+        "overage_exhausted": false
+      }
+    },
+    {
+      "strategy": "v27_current_meta",
+      "opponent": "kaito_v21",
+      "seed": 873001,
+      "seat": 1,
+      "equivalent": true,
+      "behavior": {
+        "statuses": ["DONE", "DONE"], "calls": 719, "candidate_reward": 71222.0, "opponent_reward": 43905.0, "candidate_money": 71222.0, "opponent_money": 43905.0,
+        "action_digest": "f81deed7fa88cfa63f3943812b8ab9931fb1b25b79cb71b92d7a8aaefba2929d", "opponent_action_digest": "1e45d2bceecf95fae000e5afe4a07ec63aa5c85526e20730609ce7075cfd9b79",
+        "action_issues": {"malformed": 0, "hand_alignment": 0, "seed_overcommit": 0, "market_overflow": 0}, "max_market_orders": 10,
+        "diagnostics": {"animal_escapes": 0, "crop_deaths": 0, "fresh_crop_deaths": 0, "shed_overflow_events": 0, "shed_overflow_units": 0}, "terminal_inventory": {"units": 0, "marked_value": 0.0},
+        "exception": null, "opponent_exception": null, "timeout_calls": 0, "overage_exhausted": false
+      }
+    },
+    {
+      "strategy": "boatlee_v16_rc2_market_relay",
+      "opponent": "kaito_v21",
+      "seed": 873001,
+      "seat": 0,
+      "equivalent": true,
+      "behavior": {
+        "statuses": ["DONE", "DONE"], "calls": 719, "candidate_reward": 71222.0, "opponent_reward": 43905.0, "candidate_money": 71222.0, "opponent_money": 43905.0,
+        "action_digest": "f81deed7fa88cfa63f3943812b8ab9931fb1b25b79cb71b92d7a8aaefba2929d", "opponent_action_digest": "1e45d2bceecf95fae000e5afe4a07ec63aa5c85526e20730609ce7075cfd9b79",
+        "action_issues": {"malformed": 0, "hand_alignment": 0, "seed_overcommit": 0, "market_overflow": 0}, "max_market_orders": 10,
+        "diagnostics": {"animal_escapes": 0, "crop_deaths": 0, "fresh_crop_deaths": 0, "shed_overflow_events": 0, "shed_overflow_units": 0}, "terminal_inventory": {"units": 0, "marked_value": 0.0},
+        "exception": null, "opponent_exception": null, "timeout_calls": 0, "overage_exhausted": false
+      }
+    },
+    {
+      "strategy": "boatlee_v16_rc2_market_relay",
+      "opponent": "kaito_v21",
+      "seed": 873001,
+      "seat": 1,
+      "equivalent": true,
+      "behavior": {
+        "statuses": ["DONE", "DONE"], "calls": 719, "candidate_reward": 71222.0, "opponent_reward": 43905.0, "candidate_money": 71222.0, "opponent_money": 43905.0,
+        "action_digest": "f81deed7fa88cfa63f3943812b8ab9931fb1b25b79cb71b92d7a8aaefba2929d", "opponent_action_digest": "1e45d2bceecf95fae000e5afe4a07ec63aa5c85526e20730609ce7075cfd9b79",
+        "action_issues": {"malformed": 0, "hand_alignment": 0, "seed_overcommit": 0, "market_overflow": 0}, "max_market_orders": 10,
+        "diagnostics": {"animal_escapes": 0, "crop_deaths": 0, "fresh_crop_deaths": 0, "shed_overflow_events": 0, "shed_overflow_units": 0}, "terminal_inventory": {"units": 0, "marked_value": 0.0},
+        "exception": null, "opponent_exception": null, "timeout_calls": 0, "overage_exhausted": false
+      }
+    }
+  ],
+  "all_equivalent": true
+}
