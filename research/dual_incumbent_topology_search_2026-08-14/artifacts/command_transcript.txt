@@ -1,0 +1,108 @@
+$ C:\Python314\python.exe C:\Users\wurre\Downloads\Kaggriculture\research\main_approach\v27_current_meta\development\build_standalone.py
+exit_code=0
+stdout:
+stderr:
+
+$ C:\Python314\python.exe C:\Users\wurre\Downloads\Kaggriculture\research\main_approach\v27_current_meta\development\build_standalone.py --check
+exit_code=0
+stdout:
+stderr:
+
+$ C:\Python314\python.exe C:\Users\wurre\Downloads\Kaggriculture\research\main_approach\boatlee_v16_rc2_market_relay\development\build_standalone.py
+exit_code=0
+stdout:
+stderr:
+
+$ C:\Python314\python.exe C:\Users\wurre\Downloads\Kaggriculture\research\main_approach\boatlee_v16_rc2_market_relay\development\build_standalone.py --check
+exit_code=0
+stdout:
+stderr:
+
+$ C:\Python314\python.exe -m unittest research.main_approach.test_development_sources -v
+exit_code=0
+stdout:
+stderr:
+test_development_sources_are_not_compressed (research.main_approach.test_development_sources.DevelopmentSourceTests.test_development_sources_are_not_compressed) ... ok
+test_generated_standalones_are_current (research.main_approach.test_development_sources.DevelopmentSourceTests.test_generated_standalones_are_current) ... ok
+test_readable_routes_match_generated_standalones (research.main_approach.test_development_sources.DevelopmentSourceTests.test_readable_routes_match_generated_standalones) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.288s
+
+OK
+
+$ C:\Python314\python.exe C:\Users\wurre\Downloads\Kaggriculture\research\dual_incumbent_topology_search_2026-08-14\test_topology_search.py -v
+exit_code=0
+stdout:
+stderr:
+test_local_lineage_reconstructs_ninth_cow_anchor (__main__.GenomeCompilerTests.test_local_lineage_reconstructs_ninth_cow_anchor) ... ok
+test_payload_round_trip (__main__.GenomeCompilerTests.test_payload_round_trip) ... ok
+test_public_selector_declares_no_identity (__main__.GenomeCompilerTests.test_public_selector_declares_no_identity) ... ok
+test_same_genome_has_independent_lane_candidate_ids (__main__.GenomeCompilerTests.test_same_genome_has_independent_lane_candidate_ids) ... ok
+test_search_space_is_one_factor_not_cartesian (__main__.GenomeCompilerTests.test_search_space_is_one_factor_not_cartesian) ... ok
+test_windows_and_dispositions_are_bounded_and_explicit (__main__.GenomeCompilerTests.test_windows_and_dispositions_are_bounded_and_explicit) ... ok
+test_development_manifest_rejects_fresh_seed (__main__.MaterializationAndSchedulerTests.test_development_manifest_rejects_fresh_seed) ... ok
+test_manifest_hash_and_read_only_status (__main__.MaterializationAndSchedulerTests.test_manifest_hash_and_read_only_status) ... ok
+test_materialized_control_wrapper_is_isolated_and_standard_library (__main__.MaterializationAndSchedulerTests.test_materialized_control_wrapper_is_isolated_and_standard_library) ... ok
+test_atomic_same_crop_cancellation (__main__.SeedGuardTests.test_atomic_same_crop_cancellation) ... ok
+test_missing_or_unreadable_ledger_preserves_incumbent (__main__.SeedGuardTests.test_missing_or_unreadable_ledger_preserves_incumbent) ... ok
+test_readable_sufficient_is_identity (__main__.SeedGuardTests.test_readable_sufficient_is_identity) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 1.192s
+
+OK
+
+$ C:\Python314\python.exe C:\Users\wurre\Downloads\Kaggriculture\research\dual_incumbent_topology_search_2026-08-14\cli.py launch-formal --help
+exit_code=0
+stdout:
+usage: cli.py launch-formal [-h] --authorization AUTHORIZATION
+                            --tier {S1,S2,S3,S4} --registry REGISTRY
+                            --manifest MANIFEST --run-root RUN_ROOT
+                            --workers WORKERS --stdout STDOUT --stderr STDERR
+                            --launch-record LAUNCH_RECORD
+
+options:
+  -h, --help            show this help message and exit
+  --authorization AUTHORIZATION
+  --tier {S1,S2,S3,S4}
+  --registry REGISTRY
+  --manifest MANIFEST
+  --run-root RUN_ROOT
+  --workers WORKERS
+  --stdout STDOUT
+  --stderr STDERR
+  --launch-record LAUNCH_RECORD
+stderr:
+
+$ py -3.12 C:\Users\wurre\Downloads\Kaggriculture\research\main_approach\validate_development.py
+exit_code=0
+stdout:
+Loading environment open_spiel_env failed: No module named 'pyspiel'
+stderr:
+
+$ C:\Python314\python.exe -m compileall -q C:\Users\wurre\Downloads\Kaggriculture\research\dual_incumbent_topology_search_2026-08-14
+exit_code=0
+stdout:
+stderr:
+
+$ git diff --check
+exit_code=0
+stdout:
+stderr:
+warning: in the working copy of 'AGENTS.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'research/highscore_route_refresh_2026-08-13/README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'research/highscore_route_refresh_2026-08-13/build_candidates.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'research/highscore_route_refresh_2026-08-13/candidates/shared_guarded_r03/main.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'research/highscore_route_refresh_2026-08-13/candidates/shared_guarded_r05/main.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'research/highscore_route_refresh_2026-08-13/candidates/shared_guarded_r07/main.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'research/highscore_route_refresh_2026-08-13/candidates/shared_guarded_r09/main.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'research/highscore_route_refresh_2026-08-13/candidates/shared_guarded_r13/main.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'research/highscore_route_refresh_2026-08-13/candidates/shared_guarded_r23/main.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'research/highscore_route_refresh_2026-08-13/candidates/shared_guarded_r27/main.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'research/main_approach/boatlee_v16_rc2_market_relay/development/agent.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'research/main_approach/boatlee_v16_rc2_market_relay/development/runtime.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'research/main_approach/boatlee_v16_rc2_market_relay/main.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'research/main_approach/v27_current_meta/development/agent.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'research/main_approach/v27_current_meta/development/runtime.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'research/main_approach/v27_current_meta/main.py', LF will be replaced by CRLF the next time Git touches it

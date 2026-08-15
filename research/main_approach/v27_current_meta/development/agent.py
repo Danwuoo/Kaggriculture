@@ -2,7 +2,7 @@
 
 from .market import _rank_sell_slots
 from .route import _LEGACY_ACTIONS, _MULTI_SELL_STEPS, _REBALANCE_ACTIONS, _ROUTE_HAND_COUNTS, _WEED_CANDIDATE_STEPS
-from .runtime import _copy_action, _get, _project_action, _runtime_context
+from .runtime import _copy_action, _get, _project_action, _project_atomic_plants, _runtime_context
 from .weed_repair import _WEED_STATE, _weed_needs_repair, _weed_repair_action, _weed_reset
 
 def agent(obs, configuration=None):
@@ -18,12 +18,13 @@ def agent(obs, configuration=None):
             and not weed
             and step not in _MULTI_SELL_STEPS
         ):
-            return template
+            return _project_atomic_plants(obs, template)
         action = _copy_action(template)
         if weed:
             _weed_repair_action(action, actions, step, farm, game)
         if step in _MULTI_SELL_STEPS:
             _rank_sell_slots(obs, action, configuration)
+        action = _project_atomic_plants(obs, action)
         return _project_action(action, expected_hands)
     except Exception:
         farms = _get(obs, "farms", []) or []

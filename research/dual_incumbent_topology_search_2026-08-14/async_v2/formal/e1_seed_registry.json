@@ -1,0 +1,21 @@
+{
+  "schema_version": 2,
+  "run_id": "async-e1-20260814",
+  "engine": {
+    "commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+    "python_blob": "4b78842d0f2d4abf6e318a8248b6306454f5c714",
+    "configuration_blob": "0fcdf2c14c47d3bdc821c02e26263956cf0fd3d8"
+  },
+  "classifications": {
+    "technical": [811407],
+    "retained_consumed_e1": [81426017, 81426029],
+    "fresh": []
+  },
+  "technical": {"seeds": [811407], "status": "CONSUMED_TECHNICAL_ONLY"},
+  "formal_tiers": {
+    "E1": {"seeds": [81426017, 81426029], "status": "CONSUMED_RETAINED_E1"},
+    "E2": {"seeds": [], "status": "UNAUTHORIZED"},
+    "E3": {"seeds": [], "status": "UNAUTHORIZED"}
+  },
+  "formal_fresh_seeds_executed_at_freeze": false
+}

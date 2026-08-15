@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "created_date": "2026-08-14",
+  "workspace": "C:/Users/wurre/Downloads/Kaggriculture",
+  "verified_by_local_artifact": [
+    {
+      "claim": "Both active readable routes contain a cow purchase at step 361, hand-0 BUILD_PASTURE at 517, and hand-0 PLACE COW at 518.",
+      "sources": [
+        "research/main_approach/v27_current_meta/development/route_actions.json",
+        "research/main_approach/boatlee_v16_rc2_market_relay/development/route_actions.json"
+      ]
+    },
+    {
+      "claim": "The supplied v27 replay confirms the purchased cow reaches hand 0, BUILD and PLACE occur at tile (7,3), and the placed animal is fed next turn.",
+      "sources": ["data/replay/v27.json"]
+    },
+    {
+      "claim": "The old job-value search surface was one actor for four to eight turns and explicitly excluded BUY_ANIMAL, BUILD, HIRE, BUY_LAND, and seed-dependent structural windows.",
+      "sources": [
+        "reports/job_value_residual_2026-08-12/design.md",
+        "research/job_value_residual_2026-08-12/window_search.py"
+      ]
+    },
+    {
+      "claim": "Direct high-score route transplant stopped after an opponent-family split; the shared 8-cow/4-sheep tape raised own bank but failed against Kaito and had atomic seed-overcommit/state-compatibility defects.",
+      "sources": [
+        "reports/highscore_route_refresh_2026-08-13/decision.md",
+        "research/highscore_route_refresh_2026-08-13/artifacts/shared_market_screen.json"
+      ]
+    },
+    {
+      "claim": "The exact audited engine/config identities are commit bded87..., Python blob 4b7884..., and configuration blob 0fcdf2....",
+      "sources": [
+        "AGENTS.md",
+        "research/risk_aware_graph_relay_2026-08-11/decision.md"
+      ]
+    },
+    {
+      "claim": "Seed 811407 is already consumed by the retained main-approach development validation and is suitable only for technical D0-D4 checks.",
+      "sources": [
+        "research/main_approach/validate_development.py",
+        "research/main_approach/development_validation.json"
+      ]
+    },
+    {
+      "claim": "Before D0 edits both incumbent builder checks were already stale only at generated route payload bytes; decoded route equality still passed.",
+      "sources": ["D0 command transcript"]
+    }
+  ],
+  "prompt_memory_pending_verification": [
+    "A Phase 2A-v1 run stopped on two atomic seed-overcommit turns.",
+    "A fixed reclaimed 8C4S candidate was positive on seed 203647191 and split on Saiteja/Roman.",
+    "A public selector v2 had a control-relative signal but failed an always-8 oracle gate.",
+    "A prior +/-24 audit was only a zero-edit transpose audit."
+  ],
+  "currently_missing": [
+    "Any current-repo source, plan, manifest, or decision named Phase 1 or Phase 2A.",
+    "Any current-repo fixed8 or selector-v2 implementation/artifact.",
+    "Any frozen formal E1/S1 fresh-seed registry or job manifest."
+  ],
+  "formal_fresh_seeds_executed": false
+}

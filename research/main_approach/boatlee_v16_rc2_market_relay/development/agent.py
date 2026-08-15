@@ -4,7 +4,7 @@ from .base_agent import _V16_OFFICIAL_CONFIGURATION, _v16_dynamic_action
 from .livestock import _V16_ROUTE_STATE, _v16_reset, _v16_yarn_route
 from .relay import _RC2_ROUTE_STATE, _rc2_market_relay, _rc2_needs_relay, _rc2_reset, _rc2_update_state
 from .route import _MULTI_SELL_STEPS, _REBALANCE_ACTIONS, _ROUTE_HAND_COUNTS, _WEED_CANDIDATE_STEPS
-from .runtime import _get, _project_action, _runtime_context
+from .runtime import _get, _project_action, _project_atomic_plants, _runtime_context
 from .weed_repair import _WEED_STATE, _weed_needs_repair, _weed_reset
 from .wool import _v16_wool_reset
 
@@ -33,13 +33,14 @@ def agent(obs):
             and not weed
             and step not in _MULTI_SELL_STEPS
         ):
-            return template
+            return _project_atomic_plants(obs, template)
         action = _v16_dynamic_action(
             obs, configuration, template, _REBALANCE_ACTIONS, step, seat, farm,
             weed_game, weed, yarn,
         )
         if relay:
             _rc2_market_relay(obs, action, step, configuration, relay_state)
+        action = _project_atomic_plants(obs, action)
         return _project_action(action, expected_hands)
     except Exception:
         farms = _get(obs, "farms", []) or []

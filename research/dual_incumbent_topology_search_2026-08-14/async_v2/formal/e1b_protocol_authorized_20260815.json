@@ -1,0 +1,36 @@
+{
+  "schema_version": 2,
+  "run_id": "async-e1b-20260815-consumed-small-screen",
+  "stage": "E1",
+  "formal_authorized": true,
+  "evaluation_seeds": [81426017, 81426029],
+  "seed_classification": {
+    "technical": [],
+    "retained_consumed_e1": [81426017, 81426029],
+    "fresh": []
+  },
+  "authorization": "On 2026-08-15 the user explicitly requested quick verification and, if successful, direct launch of the expanded asynchronous search.",
+  "engine": {
+    "commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+    "python_blob": "4b78842d0f2d4abf6e318a8248b6306454f5c714",
+    "configuration_blob": "0fcdf2c14c47d3bdc821c02e26263956cf0fd3d8"
+  },
+  "library": "research/dual_incumbent_topology_search_2026-08-14/async_v2/artifacts/motif_library.json",
+  "seed_registry": "research/dual_incumbent_topology_search_2026-08-14/async_v2/formal/e1b_seed_registry_20260815.json",
+  "seed_usage_scan": "research/dual_incumbent_topology_search_2026-08-14/async_v2/formal/e1b_seed_usage_preflight_20260815.json",
+  "cpu_calibration": "research/dual_incumbent_topology_search_2026-08-14/async_v2/artifacts/cpu_calibration_program_w10_v3.json",
+  "run_root": "research/dual_incumbent_topology_search_2026-08-14/async_v2/artifacts/formal/async_e1b_20260815_consumed_small_screen/run",
+  "lanes": ["v27_current_meta", "boatlee_v16_rc2_market_relay"],
+  "population_per_lane": 64,
+  "generations": 24,
+  "workers": 10,
+  "proposal_seed": 811407,
+  "opponents": ["other_incumbent", "kaito_v21"],
+  "seats": [0, 1],
+  "candidate_context_jobs": 24576,
+  "pairing": "lane-relative matched controls; never pool rewards, margins, populations, caches, or decisions across lanes",
+  "generation_contract": "Up to 1536 adaptive candidate slots per lane across 24 generations. Each generation and its canonical jobs are atomically frozen before evaluation; semantic no-ops and duplicate phenotypes are rejected before efficacy scoring.",
+  "stopping_rule": "Run all 24 generations unless an infrastructure failure occurs. Candidate efficacy failures do not stop a topology direction. Infrastructure failures emit no efficacy score and do not unlock E2.",
+  "decision_boundary": "This retained-seed E1b small screen cannot promote or unlock a fresh-seed tier. E2 remains unauthorized.",
+  "runtime_selector_inputs": "public state only; no opponent identity or opponent-private information"
+}

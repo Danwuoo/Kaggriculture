@@ -1,0 +1,142 @@
+Kaggriculture Async E1b technical-only command transcript
+created_at_utc=2026-08-14T16:24:32.085111+00:00
+technical_seed=811407
+formal_fresh_seeds_executed=false
+e1_seeds_reexecuted=false
+e2_games_executed=false
+
+[async_v2_unit_property_integration]
+command=["C:\\Python314\\python.exe", "-m", "unittest", "discover", "-s", "research\\dual_incumbent_topology_search_2026-08-14\\async_v2", "-p", "test_*.py", "-v"]
+returncode=0 wall_seconds=10.862775
+stdout:
+
+stderr:
+test_eight_windows_are_allowed_but_nine_are_rejected (test_async_v2.CanonicalGenomeTests.test_eight_windows_are_allowed_but_nine_are_rejected) ... ok
+test_multi_gene_genome_is_canonical (test_async_v2.CanonicalGenomeTests.test_multi_gene_genome_is_canonical) ... ok
+test_overlap_is_allowed_on_disjoint_channels (test_async_v2.CanonicalGenomeTests.test_overlap_is_allowed_on_disjoint_channels) ... ok
+test_overlapping_same_channel_blocks_are_rejected (test_async_v2.CanonicalGenomeTests.test_overlapping_same_channel_blocks_are_rejected) ... ok
+test_compile_smoke_contains_coupled_candidates (test_async_v2.ExactCompilerTests.test_compile_smoke_contains_coupled_candidates) ... ok
+test_control_compiles_independently_per_lane (test_async_v2.ExactCompilerTests.test_control_compiles_independently_per_lane) ... ok
+test_control_is_a_pre_efficacy_semantic_no_op (test_async_v2.ExactCompilerTests.test_control_is_a_pre_efficacy_semantic_no_op) ... ok
+test_engine_identity_is_current (test_async_v2.ExactCompilerTests.test_engine_identity_is_current) ... ok
+test_runtime_selector_has_no_opponent_identity (test_async_v2.ExactCompilerTests.test_runtime_selector_has_no_opponent_identity) ... ok
+test_explicit_registry_fresh_execute_passes_only_fresh_set (test_async_v2.FormalRunSeedPlumbingTests.test_explicit_registry_fresh_execute_passes_only_fresh_set) ... ok
+test_nondefault_registry_flows_into_preflight_manifest (test_async_v2.FormalRunSeedPlumbingTests.test_nondefault_registry_flows_into_preflight_manifest) ... ok
+test_real_protocol_registry_authority_hashes_are_validated (test_async_v2.FormalRunSeedPlumbingTests.test_real_protocol_registry_authority_hashes_are_validated) ... ok
+test_registry_identity_change_rejects_resume_before_evaluation (test_async_v2.FormalRunSeedPlumbingTests.test_registry_identity_change_rejects_resume_before_evaluation) ... ok
+test_retained_execute_passes_empty_fresh_set (test_async_v2.FormalRunSeedPlumbingTests.test_retained_execute_passes_empty_fresh_set) ... ok
+test_tampered_registry_is_rejected_before_evaluation (test_async_v2.FormalRunSeedPlumbingTests.test_tampered_registry_is_rejected_before_evaluation) ... ok
+test_unknown_seed_cannot_be_inferred_fresh (test_async_v2.FormalRunSeedPlumbingTests.test_unknown_seed_cannot_be_inferred_fresh) ... ok
+test_initial_population_contains_multi_gene_combinations (test_async_v2.LibraryAndEvolutionTests.test_initial_population_contains_multi_gene_combinations) ... ok
+test_initial_population_covers_four_lane_local_islands (test_async_v2.LibraryAndEvolutionTests.test_initial_population_covers_four_lane_local_islands) ... ok
+test_library_has_bounded_route_and_market_surface_per_lane (test_async_v2.LibraryAndEvolutionTests.test_library_has_bounded_route_and_market_surface_per_lane) ... ok
+test_mutation_is_lane_owned (test_async_v2.LibraryAndEvolutionTests.test_mutation_is_lane_owned) ... ok
+test_e1b_protocol_is_non_executable_and_progressive (test_async_v2.ProtocolDesignTests.test_e1b_protocol_is_non_executable_and_progressive) ... ok
+test_action_digest_and_pareto_dedup_keep_one_representative (test_async_v2.RankingAndCachePropertyTests.test_action_digest_and_pareto_dedup_keep_one_representative) ... ok
+test_candidate_context_cache_identity_ignores_generation (test_async_v2.RankingAndCachePropertyTests.test_candidate_context_cache_identity_ignores_generation) ... ok
+test_near_tie_ranking_penalizes_opponent_overfit (test_async_v2.RankingAndCachePropertyTests.test_near_tie_ranking_penalizes_opponent_overfit) ... ok
+test_semantic_nonempty_is_not_observed_behavior_changing (test_async_v2.RankingAndCachePropertyTests.test_semantic_nonempty_is_not_observed_behavior_changing) ... ok
+test_worker_cap_is_fifteen (test_async_v2.RankingAndCachePropertyTests.test_worker_cap_is_fifteen) ... ok
+test_completed_accounting_sets_executed_flags (test_async_v2.SeedAccountingTests.test_completed_accounting_sets_executed_flags) ... ok
+test_formal_authorized_consumed_seed_is_not_fresh (test_async_v2.SeedAccountingTests.test_formal_authorized_consumed_seed_is_not_fresh) ... ok
+test_manifest_keeps_authorization_and_freshness_independent (test_async_v2.SeedAccountingTests.test_manifest_keeps_authorization_and_freshness_independent) ... ok
+test_only_explicit_fresh_seed_sets_fresh_execution (test_async_v2.SeedAccountingTests.test_only_explicit_fresh_seed_sets_fresh_execution) ... ok
+test_status_does_not_create_absent_root (test_async_v2.StatusTests.test_status_does_not_create_absent_root) ... ok
+
+----------------------------------------------------------------------
+Ran 31 tests in 10.100s
+
+OK
+
+[v27_builder_check]
+command=["C:\\Python314\\python.exe", "research\\main_approach\\v27_current_meta\\development\\build_standalone.py", "--check"]
+returncode=0 wall_seconds=0.114449
+stdout:
+
+stderr:
+
+
+[boatlee_builder_check]
+command=["C:\\Python314\\python.exe", "research\\main_approach\\boatlee_v16_rc2_market_relay\\development\\build_standalone.py", "--check"]
+returncode=0 wall_seconds=0.111239
+stdout:
+
+stderr:
+
+
+[shared_source_contract]
+command=["C:\\Python314\\python.exe", "-m", "unittest", "research.main_approach.test_development_sources", "-v"]
+returncode=0 wall_seconds=0.423002
+stdout:
+
+stderr:
+test_development_sources_are_not_compressed (research.main_approach.test_development_sources.DevelopmentSourceTests.test_development_sources_are_not_compressed) ... ok
+test_generated_standalones_are_current (research.main_approach.test_development_sources.DevelopmentSourceTests.test_generated_standalones_are_current) ... ok
+test_readable_routes_match_generated_standalones (research.main_approach.test_development_sources.DevelopmentSourceTests.test_readable_routes_match_generated_standalones) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.223s
+
+OK
+
+[technical_status_read_only]
+command=["C:\\Python314\\python.exe", "C:\\Users\\wurre\\Downloads\\Kaggriculture\\research\\dual_incumbent_topology_search_2026-08-14\\async_v2\\cli.py", "status", "--run-root", "research\\dual_incumbent_topology_search_2026-08-14\\async_v2\\artifacts\\e1b_remediation_v2\\cpu_smoke_w15\\search"]
+returncode=0 wall_seconds=0.344315
+stdout:
+{"candidate_context_cache_entries": 56, "checkpoint": {"completed_generation": 1, "exists": true, "valid": true}, "evaluation_seeds": [811407], "execution_completed": false, "execution_started": false, "exists": true, "formal_authorized": false, "formal_fresh_seeds_executed": false, "generations": [{"counts": {"complete": 32}, "frozen": true, "generation": 0, "jobs": 32}, {"counts": {"complete": 32}, "frozen": true, "generation": 1, "jobs": 32}], "manifest_sha256": "7415cb932a9a885ad6587252569f921a433ab109d20a65d9ea1be3f47c163fa8", "manifest_valid": true, "retained_e1_seeds_executed": false, "seed_accounting": {"evaluation_seeds": [811407], "formal_authorized": false, "formal_fresh_seeds_executed": false, "fresh_seeds": [], "registry_run_id": "async-e1-20260814", "retained_consumed_e1_seeds": [], "retained_e1_seeds_executed": false, "schema_version": 1, "seed_registry_file_sha256": "7a84529673cd061b47dce24a5038603a7310d34b3ac152b3b4285977fc409885", "technical_seeds": [811407], "technical_seeds_executed": true, "unclassified_seeds": []}, "seed_registry_file_sha256": null, "seed_registry_path": null, "seed_registry_run_id": null, "summary_exists": true, "technical_seed": 811407}
+stderr:
+
+
+[git_diff_check]
+command=["git", "diff", "--check"]
+returncode=0 wall_seconds=0.057983
+stdout:
+
+stderr:
+warning: in the working copy of 'AGENTS.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'research/highscore_route_refresh_2026-08-13/README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'research/highscore_route_refresh_2026-08-13/build_candidates.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'research/highscore_route_refresh_2026-08-13/candidates/shared_guarded_r03/main.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'research/highscore_route_refresh_2026-08-13/candidates/shared_guarded_r05/main.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'research/highscore_route_refresh_2026-08-13/candidates/shared_guarded_r07/main.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'research/highscore_route_refresh_2026-08-13/candidates/shared_guarded_r09/main.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'research/highscore_route_refresh_2026-08-13/candidates/shared_guarded_r13/main.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'research/highscore_route_refresh_2026-08-13/candidates/shared_guarded_r23/main.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'research/highscore_route_refresh_2026-08-13/candidates/shared_guarded_r27/main.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'research/main_approach/boatlee_v16_rc2_market_relay/development/agent.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'research/main_approach/boatlee_v16_rc2_market_relay/development/runtime.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'research/main_approach/boatlee_v16_rc2_market_relay/main.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'research/main_approach/v27_current_meta/development/agent.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'research/main_approach/v27_current_meta/development/runtime.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'research/main_approach/v27_current_meta/main.py', LF will be replaced by CRLF the next time Git touches it
+
+[git_status]
+command=["git", "status", "-sb"]
+returncode=0 wall_seconds=0.046563
+stdout:
+## main...origin/main
+ M AGENTS.md
+ M research/highscore_route_refresh_2026-08-13/README.md
+ M research/highscore_route_refresh_2026-08-13/artifacts/candidate_manifest.json
+ M research/highscore_route_refresh_2026-08-13/artifacts/shared_market_screen.json
+ M research/highscore_route_refresh_2026-08-13/build_candidates.py
+ M research/highscore_route_refresh_2026-08-13/candidates/shared_guarded_r03/main.py
+ M research/highscore_route_refresh_2026-08-13/candidates/shared_guarded_r05/main.py
+ M research/highscore_route_refresh_2026-08-13/candidates/shared_guarded_r07/main.py
+ M research/highscore_route_refresh_2026-08-13/candidates/shared_guarded_r09/main.py
+ M research/highscore_route_refresh_2026-08-13/candidates/shared_guarded_r13/main.py
+ M research/highscore_route_refresh_2026-08-13/candidates/shared_guarded_r23/main.py
+ M research/highscore_route_refresh_2026-08-13/candidates/shared_guarded_r27/main.py
+ M research/main_approach/boatlee_v16_rc2_market_relay/development/agent.py
+ M research/main_approach/boatlee_v16_rc2_market_relay/development/runtime.py
+ M research/main_approach/boatlee_v16_rc2_market_relay/main.py
+ M research/main_approach/development_validation.json
+ M research/main_approach/v27_current_meta/development/agent.py
+ M research/main_approach/v27_current_meta/development/runtime.py
+ M research/main_approach/v27_current_meta/main.py
+?? reports/highscore_route_refresh_2026-08-13/
+?? research/dual_incumbent_topology_search_2026-08-14/
+?? research/highscore_route_refresh_2026-08-13/artifacts/shared_market_screen_partial_seed_guard.json
+stderr:
+
+

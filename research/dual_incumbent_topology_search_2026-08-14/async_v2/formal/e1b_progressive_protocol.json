@@ -1,0 +1,81 @@
+{
+  "schema_version": 2,
+  "run_id": "async-e1b-unlaunched-design",
+  "stage": "E1b",
+  "executable": false,
+  "formal_authorized": false,
+  "fresh_seeds_executed": false,
+  "e1_seeds_reexecuted_during_development": false,
+  "seed_classification": {
+    "technical": [811407],
+    "retained_consumed_e1": [81426017, 81426029],
+    "fresh": [],
+    "formal_authorization_is_freshness": false
+  },
+  "engine": {
+    "commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+    "python_blob": "4b78842d0f2d4abf6e318a8248b6306454f5c714",
+    "configuration_blob": "0fcdf2c14c47d3bdc821c02e26263956cf0fd3d8"
+  },
+  "lanes": [
+    "v27_current_meta",
+    "boatlee_v16_rc2_market_relay"
+  ],
+  "lane_pairing": "independent lane-relative controls; never pool rewards, margins, archives, caches, or decisions",
+  "workers": {
+    "default": 15,
+    "maximum": 15,
+    "windows_start_method": "spawn",
+    "detached_process": false
+  },
+  "topology_contract": {
+    "compile_distinct_nonempty_semantic_per_lane_minimum": 1000,
+    "compile_distinct_nonempty_semantic_per_lane_maximum": 2000,
+    "compile_capacity_is_exact_behavior_change_claim": false,
+    "observed_behavior_change_requires_lane_control_action_digest": true,
+    "maximum_event_linked_windows": 8,
+    "window_turns_minimum": 8,
+    "window_turns_maximum": 48,
+    "islands": ["route", "market", "constants", "coupled"],
+    "same_lane_crossover_only": true,
+    "runtime_selector_inputs": "public state only"
+  },
+  "progressive_stages": [
+    {
+      "name": "static_proposals",
+      "execute_in_this_development": false,
+      "games": 0,
+      "gate": "1000-2000 compile-distinct nonempty semantic phenotypes per lane with action-operation and event-family coverage; no exact action-change claim"
+    },
+    {
+      "name": "technical_legality_no_op",
+      "execute_in_this_development": false,
+      "seeds": [811407],
+      "gate": "semantic no-op rejection before efficacy; separately report observed lane-control action-digest change rate, exact legality, determinism, digest dedup, and both-seat finalist parity"
+    },
+    {
+      "name": "consumed_e1_small_screen",
+      "execute_in_this_development": false,
+      "seeds": [81426017, 81426029],
+      "opponents": ["other_incumbent", "kaito_v21"],
+      "seats": [0, 1],
+      "contexts_per_candidate": 8,
+      "gate": "lane-relative opponent consistency, paired W/L, worst downside, own-bank delta, and complexity"
+    },
+    {
+      "name": "consumed_e1_full_contexts",
+      "execute_in_this_development": false,
+      "seeds": [81426017, 81426029],
+      "opponents": ["other_incumbent", "kaito_v21", "roman_lb950", "saiteja_3000"],
+      "seats": [0, 1],
+      "contexts_per_candidate": 16,
+      "gate": "all survivors complete all contexts; keep every loss and adverse technical/economic event"
+    }
+  ],
+  "stopping_rule": "This document is design-only. Stop after READY_FOR_E1B_PREFLIGHT; a new explicit authorization is required before running any E1b stage that uses 81426017 or 81426029.",
+  "e2": {
+    "authorized": false,
+    "seeds": [],
+    "executed": false
+  }
+}

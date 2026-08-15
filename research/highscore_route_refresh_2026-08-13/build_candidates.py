@@ -88,17 +88,21 @@ def _guard(obs, step, seat, action, state):
             units[index] = ["DIG"]
             state["weed_repairs"] += 1
     seeds = (obs.get("private", {}) or {}).get("seeds", {}) or {}
-    used = {}
+    plant_groups = {}
     for index, intended in enumerate(units):
         if not intended or intended[0] != "PLANT" or len(intended) < 2:
             continue
         crop = str(intended[1])
-        count = used.get(crop, 0)
-        if count >= max(0, int(seeds.get(crop, 0) or 0)):
+        plant_groups.setdefault(crop, []).append(index)
+    for crop, indices in plant_groups.items():
+        if len(indices) <= max(0, int(seeds.get(crop, 0) or 0)):
+            continue
+        # The official engine atomically cancels every same-crop PLANT when
+        # demand exceeds available seeds. Emit PASS for the whole group so the
+        # legal projection is state-equivalent instead of partially planting.
+        for index in indices:
             units[index] = ["PASS"]
-            state["seed_trims"] += 1
-        else:
-            used[crop] = count + 1
+        state["seed_trims"] += len(indices)
     action["farmer"] = units[0]
     action["hands"] = units[1:]
     return action

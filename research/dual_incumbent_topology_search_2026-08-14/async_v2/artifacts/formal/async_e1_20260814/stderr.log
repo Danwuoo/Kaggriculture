@@ -1,0 +1,43 @@
+Traceback (most recent call last):
+  File "C:\Users\wurre\Downloads\Kaggriculture\research\dual_incumbent_topology_search_2026-08-14\async_v2\formal_run.py", line 379, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\wurre\Downloads\Kaggriculture\research\dual_incumbent_topology_search_2026-08-14\async_v2\formal_run.py", line 371, in main
+    result = execute(args.protocol, args.preflight)
+  File "C:\Users\wurre\Downloads\Kaggriculture\research\dual_incumbent_topology_search_2026-08-14\async_v2\formal_run.py", line 271, in execute
+    return run_search(
+        validated["library_path"],
+    ...<8 lines>...
+        authority=validated["authority"],
+    )
+  File "C:\Users\wurre\Downloads\Kaggriculture\research\dual_incumbent_topology_search_2026-08-14\async_v2\search.py", line 484, in run_search
+    (lane, opponent, seed, seat): _control(run_root, lane, opponent, seed, seat, formal_seeds)
+                                  ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wurre\Downloads\Kaggriculture\research\dual_incumbent_topology_search_2026-08-14\async_v2\search.py", line 183, in _control
+    run = run_control(lane, opponent, seed, seat, formal_seeds=formal_seeds)
+  File "C:\Users\wurre\Downloads\Kaggriculture\research\dual_incumbent_topology_search_2026-08-14\async_v2\evaluator.py", line 93, in run_control
+    return RUNNER.run_game(lane, CONTROLS[lane], opponent, int(seed), int(seat), capture_trace=capture_trace)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wurre\Downloads\Kaggriculture\research\job_value_residual_2026-08-12\engine_runner.py", line 274, in run_game
+    fingerprint = assert_engine_current()
+  File "C:\Users\wurre\Downloads\Kaggriculture\research\job_value_residual_2026-08-12\engine_runner.py", line 66, in assert_engine_current
+    actual = harness.engine_fingerprint()
+  File "C:\Users\wurre\Downloads\Kaggriculture\research\main_approach\performance_optimization_2026_08_11\harness.py", line 100, in engine_fingerprint
+    configuration = _git_bytes(CONFIG_RELATIVE)
+  File "C:\Users\wurre\Downloads\Kaggriculture\research\main_approach\performance_optimization_2026_08_11\harness.py", line 93, in _git_bytes
+    ["git", "-C", str(_vendor_repo()), "show", f"{ENGINE_COMMIT}:{relative}"]
+                      ~~~~~~~~~~~~^^
+  File "C:\Users\wurre\Downloads\Kaggriculture\research\main_approach\performance_optimization_2026_08_11\harness.py", line 75, in _vendor_repo
+    common = subprocess.run(
+             ~~~~~~~~~~~~~~^
+        ["git", "rev-parse", "--git-common-dir"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        check=True,
+        ^^^^^^^^^^^
+    ).stdout.strip()
+    ^
+  File "C:\Python314\Lib\subprocess.py", line 578, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['git', 'rev-parse', '--git-common-dir']' returned non-zero exit status 3221226091.

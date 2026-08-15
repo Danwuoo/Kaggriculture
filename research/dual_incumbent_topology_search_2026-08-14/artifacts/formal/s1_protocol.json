@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "stage": "S1",
+  "authorization": "START_E1",
+  "run_id": "dual-topology-s1-20260814",
+  "objective": "Smallest paired formal screen of ninth-cow removal and coupled topology shifts, separately on both incumbents.",
+  "development_verification": {
+    "decision": "READY_FOR_FORMAL_S1",
+    "sha256": "fdb7ef1f5344377abccf431a187cb3e4ebe1bbf0727cc2bae4133d94a34e0d57"
+  },
+  "engine": {
+    "commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+    "python_blob": "4b78842d0f2d4abf6e318a8248b6306454f5c714",
+    "configuration_blob": "0fcdf2c14c47d3bdc821c02e26263956cf0fd3d8",
+    "python_sha256": "fb9215c5e21a25243e2d13e75b3d70a79cf7d78fff150a90f1bb5eacf9ba2bcf",
+    "configuration_sha256": "7f196f4aaf9b4e482fbd61ba4bf19f5cec4da0f81938ece756954035a65c0bb5"
+  },
+  "population_source_sha256": "83c1336cea424f5c9ace96d0e3aa95c3a81619278165ba1c83897993c6a27cae",
+  "controls": {
+    "v27_current_meta": "063128bf765f6a6bb29ecaccc3a7dae8943e35e46c26a6364a1b3169313b9fb4",
+    "boatlee_v16_rc2_market_relay": "ddb78d2a829745505f31afc6ea1288e2f57d6ff534649d5f416926e8035029ea"
+  },
+  "seeds": [20260814, 20260815, 20260816],
+  "seats": [0, 1],
+  "opponents": ["other_incumbent", "kaito_v21"],
+  "candidate_policy": "All mutation-free structural roots except the redundant control genome: ninth-cow removal plus shifts -72,-48,-24,0,+24,+48,+72.",
+  "candidates": {
+    "v27_current_meta": [
+      {"root": "removal", "shift": 0, "candidate_id": "c_57ee9dfc16f9006cf6f895d3"},
+      {"root": "shift", "shift": -72, "candidate_id": "c_4d8f5728839a0ab770e760fa"},
+      {"root": "shift", "shift": -48, "candidate_id": "c_620ce84ae01b5e5ed3b45bb1"},
+      {"root": "shift", "shift": -24, "candidate_id": "c_19989fb9ae4082dc9db98973"},
+      {"root": "shift", "shift": 0, "candidate_id": "c_93499a9c11ef71d8b36c5e0f"},
+      {"root": "shift", "shift": 24, "candidate_id": "c_6113b82f80d0568c96b9d42d"},
+      {"root": "shift", "shift": 48, "candidate_id": "c_4bc88b808c5bde899ac80caa"},
+      {"root": "shift", "shift": 72, "candidate_id": "c_c2b0d49c03740c4633a4ea29"}
+    ],
+    "boatlee_v16_rc2_market_relay": [
+      {"root": "removal", "shift": 0, "candidate_id": "c_879c9b5fc0bb91b758559afa"},
+      {"root": "shift", "shift": -72, "candidate_id": "c_687a61286c35ced23b139a95"},
+      {"root": "shift", "shift": -48, "candidate_id": "c_aa0d8b05ab545326873c631c"},
+      {"root": "shift", "shift": -24, "candidate_id": "c_6679126671ca5fb41d37ee90"},
+      {"root": "shift", "shift": 0, "candidate_id": "c_f96d2e4ec2134cddb958fcf2"},
+      {"root": "shift", "shift": 24, "candidate_id": "c_1cf031028fcb7739c9851bca"},
+      {"root": "shift", "shift": 48, "candidate_id": "c_31513a363e69eda1cb458463"},
+      {"root": "shift", "shift": 72, "candidate_id": "c_1a77623de5c165113a31d8ec"}
+    ]
+  },
+  "expected_jobs": 192,
+  "pairing": "Each candidate is paired with its own lane control on identical seed, seat, and opponent. No cross-lane pooling.",
+  "stopping_rule": "Run the complete frozen S1 manifest. Candidate failures do not stop the direction. Infrastructure failures have no efficacy and require same-manifest resume. Do not unlock or launch S2 automatically.",
+  "promotion_readout": [
+    "lane-stratified paired win/draw/loss",
+    "paired terminal-margin delta",
+    "own-bank delta",
+    "downside and economic diagnostics"
+  ],
+  "formal_fresh_seeds_executed_before_launch": false
+}

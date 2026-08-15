@@ -1,0 +1,36 @@
+{
+  "schema_version": 2,
+  "run_id": "async-e1-20260814",
+  "stage": "E1",
+  "formal_authorized": true,
+  "evaluation_seeds": [81426017, 81426029],
+  "seed_classification": {
+    "technical": [],
+    "retained_consumed_e1": [81426017, 81426029],
+    "fresh": []
+  },
+  "authorization": "User explicitly said: start Async E1; calibrate program CPU to about 30-40 percent first.",
+  "engine": {
+    "commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+    "python_blob": "4b78842d0f2d4abf6e318a8248b6306454f5c714",
+    "configuration_blob": "0fcdf2c14c47d3bdc821c02e26263956cf0fd3d8"
+  },
+  "library": "research/dual_incumbent_topology_search_2026-08-14/async_v2/artifacts/motif_library.json",
+  "seed_registry": "research/dual_incumbent_topology_search_2026-08-14/async_v2/formal/e1_seed_registry.json",
+  "seed_usage_scan": "research/dual_incumbent_topology_search_2026-08-14/async_v2/formal/e1_seed_usage_preflight.json",
+  "cpu_calibration": "research/dual_incumbent_topology_search_2026-08-14/async_v2/artifacts/cpu_calibration_program_w10_v3.json",
+  "run_root": "research/dual_incumbent_topology_search_2026-08-14/async_v2/artifacts/formal/async_e1_20260814/run_v3",
+  "lanes": ["v27_current_meta", "boatlee_v16_rc2_market_relay"],
+  "population_per_lane": 16,
+  "generations": 8,
+  "workers": 10,
+  "proposal_seed": 8142600,
+  "opponents": ["other_incumbent", "kaito_v21", "roman_lb950", "saiteja_3000"],
+  "seats": [0, 1],
+  "candidate_context_jobs": 4096,
+  "pairing": "lane-relative matched controls; never pool rewards or margins across lanes",
+  "generation_contract": "Generation 0 is frozen at preflight. Later adaptive candidates and canonical job manifests are atomically frozen before any job in that generation runs.",
+  "stopping_rule": "Run all eight generations unless an infrastructure failure occurs. A candidate efficacy loss does not stop its topology direction. Infrastructure failures emit no efficacy score and do not unlock E2.",
+  "decision_boundary": "E1 is an adaptive search/development tier. Its best genome is not promoted without a new explicitly authorized E2 fresh paired holdout.",
+  "runtime_selector_inputs": "public state only; no opponent identity or opponent-private information"
+}

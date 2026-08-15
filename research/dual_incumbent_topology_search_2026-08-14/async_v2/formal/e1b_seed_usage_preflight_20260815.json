@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "scanned_at": "2026-08-15T00:00:00+08:00",
+  "scope": "local repository text artifacts before authorized Async E1b retained-seed small screen",
+  "command_pattern": "rg -l --fixed-strings <seed> . --glob !*.pyc",
+  "selected": [
+    {
+      "seed": 81426017,
+      "classification": "retained_consumed_e1",
+      "matching_files_before_freeze_count": 2106,
+      "matching_path_list_sha256": "3ce2b931bc1c4c0bdbc4ec2480c3c1005bfa6300750bcd3dcba79cc3cf69f71c"
+    },
+    {
+      "seed": 81426029,
+      "classification": "retained_consumed_e1",
+      "matching_files_before_freeze_count": 2105,
+      "matching_path_list_sha256": "1431e1abf1f1a63cc41b8970bfffeb40f6f69ccb9bd75b8880b248a7e7050c48"
+    }
+  ],
+  "fresh_at_freeze": false,
+  "formal_fresh_seeds_executed_before_launch": false,
+  "retained_e1_seeds_reexecuted_before_launch": false
+}

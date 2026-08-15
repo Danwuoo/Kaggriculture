@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "authorization": "START_E1",
+  "scan_date": "2026-08-14",
+  "workspace": "C:/Users/wurre/Downloads/Kaggriculture",
+  "scan_scope": [
+    "AGENTS.md",
+    "ARCHIVE.md",
+    "strategy.md",
+    "data/",
+    "docs/",
+    "reports/",
+    "research/",
+    "scripts/"
+  ],
+  "method": "rg fixed-string scan over the complete listed checkout scope before registry freeze",
+  "selected_seeds": [20260814, 20260815, 20260816],
+  "pre_freeze_hits": {
+    "20260814": 0,
+    "20260815": 0,
+    "20260816": 0
+  },
+  "technical_seed_excluded": 811407,
+  "explicitly_avoided_memory_family": "20364719x",
+  "freshness_decision": "PASS",
+  "formal_fresh_seeds_executed_at_scan": false
+}

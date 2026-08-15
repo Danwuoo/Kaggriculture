@@ -1,0 +1,38 @@
+Async topology v2 development transcript
+Workspace: C:\Users\wurre\Downloads\Kaggriculture
+Formal v2 fresh seeds executed: false
+
+1. Build corrected high-score motif library
+python research\dual_incumbent_topology_search_2026-08-14\async_v2\cli.py build-library --output research\dual_incumbent_topology_search_2026-08-14\async_v2\artifacts\motif_library.json
+PASS library_sha256=f7b90cee86cf710578e1d54445da12732b33f7c26902477b71bdfa35635cc5b2 counts=554/554
+
+2. Compile multi-gene smoke population on technical traces
+python research\dual_incumbent_topology_search_2026-08-14\async_v2\cli.py compile-smoke --library research\dual_incumbent_topology_search_2026-08-14\async_v2\artifacts\motif_library.json --output research\dual_incumbent_topology_search_2026-08-14\async_v2\artifacts\compile_smoke.json --population 8
+PASS compile_smoke_sha256=3dd1199d9ca1a367bee8e967c6fb589e47cc23c6b7b1889c27e76a7bfd6d22d2 compiled=8/8 multi_gene=4/4
+
+3. Exact technical population search (current source)
+python research\dual_incumbent_topology_search_2026-08-14\async_v2\cli.py search --library research\dual_incumbent_topology_search_2026-08-14\async_v2\artifacts\motif_library.json --run-root research\dual_incumbent_topology_search_2026-08-14\async_v2\artifacts\technical_search_current --population 4 --generations 2 --workers 4
+PASS manifest_sha256=83bd7f8f1711b3764836bb8a1e2224eaf3625bce3e68b57949838314c3b9d739 summary_sha256=384148418127bdf6c055c8b2acc310db6d76191e88708b9193ff7321a1069ae6 jobs=64 complete=64
+NOTE both lane Pareto best candidates are unchanged controls; stronger_strategy_claim=false
+
+4. Scheduler/failure audit
+python research\dual_incumbent_topology_search_2026-08-14\async_v2\scheduler_audit.py --library research\dual_incumbent_topology_search_2026-08-14\async_v2\artifacts\motif_library.json --output research\dual_incumbent_topology_search_2026-08-14\async_v2\artifacts\scheduler_audit.json
+PASS scheduler_audit_sha256=514a8f4b5edc908766e29a3046037f79a9625bd90d55a0d7623c435a0ef1b5c6 serial_parallel_equal=true corrupt_resume=true worker_exception=true engine_import=true
+
+5. Unit/integration tests
+python -m unittest discover -s research\dual_incumbent_topology_search_2026-08-14\async_v2 -p "test_*.py" -v
+PASS 11/11
+
+6. Active source/artifact contracts
+python research\main_approach\v27_current_meta\development\build_standalone.py --check
+python research\main_approach\boatlee_v16_rc2_market_relay\development\build_standalone.py --check
+python -m unittest research.main_approach.test_development_sources -v
+PASS both builders; shared source contract 3/3
+
+7. Development decision
+python research\dual_incumbent_topology_search_2026-08-14\async_v2\verify.py --library research\dual_incumbent_topology_search_2026-08-14\async_v2\artifacts\motif_library.json --run-root research\dual_incumbent_topology_search_2026-08-14\async_v2\artifacts\technical_search_current --scheduler research\dual_incumbent_topology_search_2026-08-14\async_v2\artifacts\scheduler_audit.json --compile-smoke research\dual_incumbent_topology_search_2026-08-14\async_v2\artifacts\compile_smoke.json --output research\dual_incumbent_topology_search_2026-08-14\async_v2\artifacts\development_verification.json --decision research\dual_incumbent_topology_search_2026-08-14\async_v2\development_decision.md
+PASS decision=READY_FOR_ASYNC_FORMAL_PREFLIGHT development_verification_sha256=31ce556571cc6c776e4903b5059cb2bf865ee09cbb6e3137a6233958261fcdf0
+
+8. Whitespace audit
+git diff --check
+PASS (line-ending conversion warnings only)

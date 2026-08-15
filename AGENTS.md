@@ -25,17 +25,42 @@ restored Round 2 reliability control; it is no longer the default optimization
 target and must not displace the two main approaches in experiments unless the
 hypothesis specifically requires it.
 
-The primary next research direction is a dual-incumbent temporal residual over
-a 24- to 48-turn horizon. It should let feed, water, harvest, shipping, shed
-capacity, sale timing, deliberate asset abandonment, and time-shifted market
-preemption compete through explicit opportunity cost. Asset survival has no
-special status in that comparison: losing an animal or crop can be the rational
-choice when its remaining value is below the work, timing, capacity, or capital
-it consumes. A graph model is one
-ablation, not the assumed solution: compare it with a flat model and a simple
-greedy/value rule. A shared residual must condition on incumbent identity and
-state, rejoin the relevant incumbent legally, and earn its value separately on
-both strategy families.
+### Primary Research Objective: Strategy Tuning and Route Topology
+
+The **first and highest-priority objective** is strategy-level micro-tuning and
+route-topology exploration on both incumbents. Optimize decision boundaries,
+short action motifs, divergence and legal rejoin points, worker allocation,
+production timing, and public-market exposure before considering another broad
+runtime, planner, model, or software-architecture redesign. Prefer bounded
+8- to 48-turn interventions and paired time-shifted counterfactuals over full
+tape replacement or a new universal framework.
+
+Large architectural changes are not an active optimization target. Make one
+only when a discriminating experiment shows that the current architecture
+cannot express, observe, safely rejoin from, or measure a strategy intervention
+that already has evidence of value. Architecture may otherwise supply only the
+minimum state tracking, legality projection, timing guard, and incumbent rejoin
+support required by the strategy experiment. Do not treat model complexity,
+graph structure, or a shared abstraction as progress without a separately
+measured strategy gain on both incumbents.
+
+The leading concrete lane is a dual-incumbent temporal residual over an 8- to
+48-turn horizon, informed by the high-output 8-cow/4-sheep topology but not by
+full route cloning. It should let feed, water, harvest, shipping, shed capacity,
+sale timing, deliberate asset abandonment, and time-shifted market preemption
+compete through explicit opportunity cost. Its first discriminating target is
+the public-market externality exposed by the 2026-08-13 high-score refresh:
+retain locally valuable production motifs while suppressing sales or production
+timing that creates more value for the opponent. The decision must use public
+state rather than opponent identity.
+
+Asset survival has no special status in that comparison: losing an animal or
+crop can be the rational choice when its remaining value is below the work,
+timing, capacity, or capital it consumes. A graph model is one ablation, not the
+assumed solution: compare it with a flat model and a simple greedy/value rule.
+A shared residual must condition on incumbent identity and state, rejoin the
+relevant incumbent legally, and earn its value separately on both strategy
+families.
 
 Prefer a complete, tested, standalone, submission-ready change over a plan or
 an abstract framework. Continue through implementation, official-engine games,
@@ -359,6 +384,12 @@ The details belong in their reports; the following constraints remain active:
   residual beat both learned selectors but improved mean paired margin by only
   6.5 coins and changed no win/loss. The intervention surface lacked negative
   labels. Reuse this as falsifying evidence, not as a model candidate.
+- `reports/highscore_route_refresh_2026-08-13/decision.md`: direct full-route
+  transplant is stopped. The new shared 8-cow/4-sheep topology raised own-bank
+  output and beat the other incumbent on the smallest matched screen, but all
+  seven observed market tapes lost both seats to Kaito v21 and created fresh
+  state-compatibility failures. Retain the production topology only as source
+  material for bounded motifs and public-state market-exposure suppression.
 - `reports/hypothesis_cycle_2026-08-10.md`: scale-only, opening-only, one-day
   commitment, modal-route imitation, and fixed-tape continuation were not
   sufficient. Do not restart them without a distinct mechanism and protocol.
@@ -416,8 +447,11 @@ contracts passed 3/3 and the legacy production suite passed 18/18. See
 
 ## Default Working Principle
 
+Treat strategy micro-tuning and route-topology exploration as the primary goal.
 Start from the smallest matched residual on each incumbent that can reveal a
 real temporal tradeoff. Preserve incumbent behavior outside the declared
 window, require negative as well as positive counterfactual labels before
 training a selector, and expand only after fresh paired evidence supports the
-mechanism separately for v27 and Boatlee.
+mechanism separately for v27 and Boatlee. Do not start a broad architecture
+lane unless a strategy experiment first demonstrates a concrete architectural
+limitation.

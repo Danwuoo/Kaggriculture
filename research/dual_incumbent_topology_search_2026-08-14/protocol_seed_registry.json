@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "engine": {
+    "commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+    "python_blob": "4b78842d0f2d4abf6e318a8248b6306454f5c714",
+    "configuration_blob": "0fcdf2c14c47d3bdc821c02e26263956cf0fd3d8"
+  },
+  "technical": {
+    "seeds": [811407],
+    "purpose": "D0-D4 correctness/parity/failure testing only"
+  },
+  "formal_tiers": {
+    "S1": {"seeds": [20260814, 20260815, 20260816], "status": "FROZEN"},
+    "S2": {"seeds": [], "status": "UNAUTHORIZED"},
+    "S3": {"seeds": [], "status": "UNAUTHORIZED"},
+    "S4": {"seeds": [], "status": "UNAUTHORIZED"}
+  },
+  "formal_fresh_seeds_executed": false
+}

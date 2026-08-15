@@ -64,6 +64,54 @@ def _project_action(action, expected_hands):
     return action
 
 
+def _project_atomic_plants(obs, action):
+    """Mirror the engine's same-crop atomic PLANT cancellation when observable."""
+    private = _get(obs, "private", None)
+    if private is None:
+        return action
+    seeds = _get(private, "seeds", None)
+    if seeds is None:
+        return action
+    farmer = action.get("farmer") if isinstance(action, dict) else None
+    hands = action.get("hands") if isinstance(action, dict) else None
+    if not isinstance(farmer, list) or not isinstance(hands, list):
+        return action
+    units = [farmer, *hands]
+    demand = {}
+    for order in units:
+        if isinstance(order, list) and len(order) >= 2 and order[0] == "PLANT":
+            crop = str(order[1])
+            demand[crop] = demand.get(crop, 0) + 1
+    if not demand:
+        return action
+    available = {}
+    for crop in demand:
+        raw = _get(seeds, crop, None)
+        if raw is None:
+            return action
+        try:
+            available[crop] = max(0, int(raw))
+        except (TypeError, ValueError):
+            return action
+    blocked = {crop for crop, count in demand.items() if count > available[crop]}
+    if not blocked:
+        return action
+    projected = _copy_action(action)
+    projected_units = [projected["farmer"], *projected["hands"]]
+    projected_units = [
+        ["PASS"]
+        if isinstance(order, list)
+        and len(order) >= 2
+        and order[0] == "PLANT"
+        and str(order[1]) in blocked
+        else order
+        for order in projected_units
+    ]
+    projected["farmer"] = projected_units[0]
+    projected["hands"] = projected_units[1:]
+    return projected
+
+
 def _seat(obs):
     return 1 if int(_get(obs, "player", 0) or 0) == 1 else 0
 

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "scanned_at": "2026-08-14T00:00:00+08:00",
+  "scope": "local repository text artifacts before Async E1 freeze",
+  "command_pattern": "rg -l --fixed-strings <seed> . --glob !*.pyc",
+  "selected": [
+    {"seed": 81426017, "matching_files_before_freeze": []},
+    {"seed": 81426029, "matching_files_before_freeze": []}
+  ],
+  "excluded": [
+    {
+      "seed": 203647191,
+      "reason": "retained evidence already references this seed",
+      "matching_files": ["research/dual_incumbent_topology_search_2026-08-14/artifacts/evidence_inventory.json"]
+    },
+    {
+      "seeds": [20260814, 20260815, 20260816],
+      "reason": "consumed by the superseded narrow S1 run"
+    }
+  ],
+  "fresh_at_freeze": true
+}

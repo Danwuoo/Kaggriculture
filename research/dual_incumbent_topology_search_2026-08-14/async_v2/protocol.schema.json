@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Async topology development protocol",
+  "type": "object",
+  "required": ["schema_version", "technical_seed", "lanes", "population", "generations", "opponents", "formal_authorized"],
+  "properties": {
+    "schema_version": {"const": 2},
+    "technical_seed": {"const": 811407},
+    "lanes": {
+      "const": ["v27_current_meta", "boatlee_v16_rc2_market_relay"]
+    },
+    "population": {"type": "integer", "minimum": 2},
+    "generations": {"type": "integer", "minimum": 1},
+    "opponents": {
+      "type": "array",
+      "items": {"enum": ["other_incumbent", "kaito_v21", "roman_lb950", "saiteja_3000"]},
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "formal_authorized": {"const": false}
+  },
+  "additionalProperties": true
+}
+
