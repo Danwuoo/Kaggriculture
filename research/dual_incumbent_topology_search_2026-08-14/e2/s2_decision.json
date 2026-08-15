@@ -1,0 +1,205 @@
+{
+  "schema_version": 1,
+  "kind": "e2_s2_decision",
+  "source_run": "e2_s2_20260815_boatlee_tail_v1",
+  "source_artifacts": {
+    "manifest_file_sha256": "b01f76ea2150b71e0210cc870ebf08f770462571861db6aeeb1fee24fffeaa49",
+    "manifest_canonical_sha256": "35493ebe885c1ff877661ac5b8d0809f66c102d68ea2f9d1df8ddc261ded891e",
+    "protocol_file_sha256": "c263f90d59bd4f7823eca9323c918bda878480b031c5be498d52765b83cb8020",
+    "protocol_canonical_sha256": "8f37ce44795b39fb15e08c3cd35ea03cb470ad4dfa0404e944b397a1e64372bc",
+    "execution_file_sha256": "b993b3d90ae5f92f0b167a7764cdb31068fec2781f75a4cee1ce30ac384281af",
+    "execution_canonical_sha256": "f3623757c3a65c3ce1dacd850148136295804e09f16c13ca495af8f7cf127008",
+    "summary_file_sha256": "526aa911302e68586610fc2b50ae5762ca41bcccc3d7b7da490a98ed8955163e",
+    "summary_canonical_sha256": "d9b35d4fb9de3f6eee99ea7776b02df7408d9d13b466f82a423a9462d8549d7e",
+    "checkpoint_file_sha256": "a313def54afbd8d7c58ce498549731def818f455d7bb1c9d14727b7797666700",
+    "checkpoint_canonical_sha256": "793b8dcc1c043f563d5d705e13b0bef92b1c6df345b52dbdaa2b56560455bcd2",
+    "s1_decision_canonical_sha256": "b3d683daa57e54ecd25e9e1cddf10e2df31ffc23506f5335fb3eace043fe0f9e"
+  },
+  "formal_fresh_seeds_executed": true,
+  "executed_formal_seeds": [95715007, 41193493, 61594307, 58893729],
+  "engine": {
+    "commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+    "python_sha256": "fb9215c5e21a25243e2d13e75b3d70a79cf7d78fff150a90f1bb5eacf9ba2bcf",
+    "configuration_sha256": "7f196f4aaf9b4e482fbd61ba4bf19f5cec4da0f81938ece756954035a65c0bb5"
+  },
+  "technical_gate": {
+    "pass": true,
+    "controls_complete": 32,
+    "candidates_complete": 32,
+    "valid_shard_hashes": 64,
+    "invalid_shard_hashes": 0,
+    "statuses": ["DONE", "DONE"],
+    "exceptions": 0,
+    "timeouts": 0,
+    "overage_exhaustions": 0,
+    "max_market_orders": 10,
+    "maximum_run_p95_ms": 0.4669399902923033,
+    "maximum_call_ms": 19.756000008783303,
+    "stderr_bytes": 0
+  },
+  "lanes": {
+    "boatlee_v16_rc2_market_relay": {
+      "candidate_id": "ac_3aa759d7d7fc4a409c409326",
+      "standalone_sha256": "54ce17ad14ef49aaa6c985ccd4245e06c82a450b39de65b9f14c412b3c7930c6",
+      "candidate_mutation": null,
+      "contexts": 32,
+      "effective_contexts": 32,
+      "paired_margin_wdl": [23, 0, 9],
+      "actual_win_delta": 0,
+      "mean_paired_margin": 209.1875,
+      "median_paired_margin": 131.0,
+      "mean_own_bank_delta": 2217.9375,
+      "worst_paired_margin": -4212.0,
+      "lower_quartile_mean": -2071.25,
+      "total_paired_margin": 6694.0,
+      "positive_margin_total": 23297.0,
+      "negative_margin_total": -16603.0,
+      "largest_positive_outlier": 14235.0,
+      "mean_without_largest_positive_outlier": -243.25806451612902,
+      "by_opponent": {
+        "kaito_v21": {
+          "contexts": 8,
+          "paired_margin_wdl": [6, 0, 2],
+          "mean_paired_margin": 51.0,
+          "median_paired_margin": 43.5,
+          "worst_paired_margin": -33.0
+        },
+        "other_incumbent": {
+          "contexts": 8,
+          "paired_margin_wdl": [6, 0, 2],
+          "mean_paired_margin": 600.25,
+          "median_paired_margin": 552.5,
+          "worst_paired_margin": -35.0
+        },
+        "roman_lb950": {
+          "contexts": 8,
+          "paired_margin_wdl": [3, 0, 5],
+          "mean_paired_margin": -173.75,
+          "median_paired_margin": -2404.0,
+          "worst_paired_margin": -4212.0
+        },
+        "saiteja_3000": {
+          "contexts": 8,
+          "paired_margin_wdl": [8, 0, 0],
+          "mean_paired_margin": 359.25,
+          "median_paired_margin": 423.5,
+          "worst_paired_margin": 92.0
+        }
+      },
+      "by_seat": {
+        "0": {
+          "contexts": 16,
+          "paired_margin_wdl": [12, 0, 4],
+          "mean_paired_margin": 639.9375,
+          "median_paired_margin": 140.5,
+          "worst_paired_margin": -4212.0
+        },
+        "1": {
+          "contexts": 16,
+          "paired_margin_wdl": [11, 0, 5],
+          "mean_paired_margin": -221.5625,
+          "median_paired_margin": 111.5,
+          "worst_paired_margin": -3539.0
+        }
+      },
+      "tail_attribution": {
+        "negative_contexts": 9,
+        "roman_negative_contexts": 5,
+        "roman_worst_context": {
+          "seed": 41193493,
+          "seat": 0,
+          "paired_margin_delta": -4212.0,
+          "own_bank_delta": 745.0,
+          "opponent_bank_delta": 4957.0,
+          "receipt_revenue_delta": 749.0
+        },
+        "roman_positive_outlier_context": {
+          "seed": 95715007,
+          "seat": 0,
+          "paired_margin_delta": 14235.0,
+          "own_bank_delta": 27730.0,
+          "opponent_bank_delta": 13495.0,
+          "receipt_revenue_delta": 27783.0
+        },
+        "control_step_240_market": [
+          ["SELL", "WOOL", 16],
+          ["SELL", "WHEAT", 2],
+          ["BUY_LAND"],
+          ["HIRE"], ["HIRE"], ["HIRE"], ["HIRE"], ["HIRE"], ["HIRE"], ["HIRE"]
+        ],
+        "candidate_step_240_market": [
+          ["SELL", "WOOL", 18],
+          ["BUY_LAND"],
+          ["HIRE"], ["HIRE"], ["HIRE"], ["HIRE"], ["HIRE"], ["HIRE"], ["HIRE"]
+        ],
+        "control_step_241_market": [
+          ["HIRE"], ["HIRE"], ["HIRE"], ["HIRE"], ["HIRE"], ["HIRE"], ["HIRE"],
+          ["BUY_SEED", "MELON", 7]
+        ],
+        "candidate_step_241_market": [
+          ["SELL", "FERTILIZER", 16],
+          ["HIRE"], ["HIRE"], ["HIRE"], ["HIRE"], ["HIRE"], ["HIRE"],
+          ["BUY_SEED", "MELON", 7], ["HIRE"]
+        ],
+        "economic_diagnostic_deltas": {
+          "animal_escapes": 0,
+          "crop_deaths": 0,
+          "fresh_crop_deaths": 0,
+          "shed_overflow_units": {
+            "one_unit_contexts": 1,
+            "two_unit_contexts": 31
+          }
+        },
+        "classification": "repeatable_opponent_family_and_seat_sensitive_public_market_tail",
+        "causal_limit": "The retained evidence identifies the coupled steps 240-241 public-market block but does not separately identify the wool/wheat substitution from the fertilizer sale; atom-level ablation is required.",
+        "selector_limit": "The S2 shards retain public-state digests but no decision-step feature snapshots, so a public-state selector cannot be selected from this evidence alone."
+      },
+      "decision": "E2_S2_REMEDIATION_REQUIRED",
+      "promotion_eligible": false
+    },
+    "v27_current_meta": {
+      "decision": "STOPPED_AT_S1_NO_EFFICACY",
+      "s2_contexts": 0,
+      "candidate": null
+    }
+  },
+  "combined_s1_s2_boatlee": {
+    "contexts": 48,
+    "paired_margin_wdl": [38, 0, 10],
+    "actual_win_delta": 0,
+    "mean_paired_margin": 196.41666666666666,
+    "median_paired_margin": 150.0,
+    "mean_own_bank_delta": 1739.9583333333333,
+    "worst_paired_margin": -4212.0,
+    "roman_lb950": {
+      "contexts": 12,
+      "paired_margin_wdl": [6, 0, 6],
+      "mean_paired_margin": -127.33333333333333,
+      "median_paired_margin": -458.5,
+      "worst_paired_margin": -4212.0
+    }
+  },
+  "overall_decision": "E2_S2_REMEDIATION_REQUIRED",
+  "decision_basis": [
+    "The complete technical gate passed, so all efficacy evidence is admissible.",
+    "The positive mean is not robust: removing one +14235 Roman outlier makes the remaining 31-context mean -243.25806451612902.",
+    "Roman is negative in five of eight S2 contexts with median -2404 and remains 6/0/6 across S1 plus S2.",
+    "Seat 1 has negative mean paired margin and the lower quartile mean is -2071.25.",
+    "Actual win delta is zero, so the tail is not compensated by a changed win/loss outcome in this block."
+  ],
+  "required_remediation": {
+    "new_attributable_version_required": true,
+    "candidate_must_not_be_silently_mutated": true,
+    "minimum_ablations": [
+      "step-240 wool/wheat substitution without the step-241 fertilizer sale",
+      "step-241 fertilizer sale without the step-240 wool/wheat substitution"
+    ],
+    "runtime_selector_must_use_public_state_only": true,
+    "opponent_identity_forbidden": true,
+    "consumed_s1_s2_seeds_may_be_used_for_diagnostics_not_efficacy": true,
+    "new_formal_fresh_seed_execution_requires_separate_authorization": true
+  },
+  "pool_lanes": false,
+  "later_tier_launched": false,
+  "s2_decision_sha256": "caf7ed39249a09393f31d2174dc636822770ea8c39794ac6bf277940ab7a4d70"
+}

@@ -1,3 +1,6 @@
 research/job_value_residual_2026-08-12/artifacts/*.jsonl text eol=lf
 research/dual_incumbent_topology_search_2026-08-14/async_v3/** text eol=lf
 research/dual_incumbent_topology_search_2026-08-14/e2/** text eol=lf
+research/dual_incumbent_topology_search_2026-08-14/e2/artifacts/** -text
+submission/e2_boatlee_public_selector/main.py -text
+submission/e2_boatlee_step_241_only/main.py -text

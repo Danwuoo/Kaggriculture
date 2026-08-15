@@ -1,0 +1,267 @@
+{
+  "build": {
+    "base_path": "C:\\Users\\wurre\\.codex\\worktrees\\7adf\\Kaggriculture\\research\\main_approach\\boatlee_v16_rc2_market_relay\\main.py",
+    "base_sha256": "69ce4f657df5a168c676acfa4f9089a373bc291fe3486950de0bca16ad042213",
+    "kind": "e2_boatlee_submission_variants_build",
+    "schema_version": 1,
+    "variants": {
+      "public_selector": {
+        "bytes": 43186,
+        "candidate_id": "e2boatlee_7f591d609cf14d89e6aa1599",
+        "check": true,
+        "directory_entries": [
+          "main.py"
+        ],
+        "path": "C:\\Users\\wurre\\.codex\\worktrees\\7adf\\Kaggriculture\\submission\\e2_boatlee_public_selector\\main.py",
+        "sha256": "b4ef9bff8cbba2dfaccacc320a32f707006158fcf905c02db02ad89fe0f6099a"
+      },
+      "step_241_only": {
+        "bytes": 45850,
+        "candidate_id": "ac_a85701baf0cd39d61ab067d3",
+        "check": true,
+        "directory_entries": [
+          "main.py"
+        ],
+        "path": "C:\\Users\\wurre\\.codex\\worktrees\\7adf\\Kaggriculture\\submission\\e2_boatlee_step_241_only\\main.py",
+        "sha256": "13ac97f6f9c311b52e18ca42ffc1916e09ba12f2dd4aba7fd0f525ba63c5101c"
+      }
+    }
+  },
+  "engine_fingerprint": {
+    "commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+    "configuration_blob": "0fcdf2c14c47d3bdc821c02e26263956cf0fd3d8",
+    "configuration_bytes": 5877,
+    "configuration_sha256": "7f196f4aaf9b4e482fbd61ba4bf19f5cec4da0f81938ece756954035a65c0bb5",
+    "python_blob": "4b78842d0f2d4abf6e318a8248b6306454f5c714",
+    "python_bytes": 39801,
+    "python_sha256": "fb9215c5e21a25243e2d13e75b3d70a79cf7d78fff150a90f1bb5eacf9ba2bcf",
+    "vendor_repo": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\.vendor\\kaggle-environments"
+  },
+  "formal_fresh_seeds_executed": false,
+  "kaggle_submission_executed": false,
+  "kind": "e2_boatlee_submission_variants_verification",
+  "opponent": {
+    "lane": "v27_current_meta",
+    "path": "C:\\Users\\wurre\\.codex\\worktrees\\7adf\\Kaggriculture\\research\\main_approach\\v27_current_meta\\main.py",
+    "sha256": "ec7d384806d4717b91c8f7f8da20710b054fdcb729abd767328c7520fa01bec0"
+  },
+  "pass": true,
+  "schema_version": 1,
+  "technical_seed": 811407,
+  "technical_seed_role": "correctness_only",
+  "variants": {
+    "public_selector": {
+      "bytes": 43186,
+      "candidate_id": "e2boatlee_7f591d609cf14d89e6aa1599",
+      "checks": {
+        "both_seats_official_engine": true,
+        "directory_contains_only_main_py": true,
+        "hash_matches_frozen_candidate": true,
+        "isolated_import": true,
+        "standard_library_contract": true,
+        "under_5_mib": true
+      },
+      "directory_entries": [
+        "main.py"
+      ],
+      "isolated_import": {
+        "callable_agent": true,
+        "isolated": true
+      },
+      "official_engine_games": [
+        {
+          "action_digest": "e59e5e54aa6134b5fe8bb373132d5d63c88dabc2264cc88be1f30fd1b6d6e7a1",
+          "checks": {
+            "calls_719": true,
+            "done": true,
+            "market_cap": true,
+            "no_exception": true,
+            "no_overage_exhaustion": true,
+            "no_timeout": true,
+            "opponent_no_exception": true,
+            "valid_action_schema": true
+          },
+          "latency_ms": {
+            "calls": 719,
+            "max": 0.4714999959105626,
+            "p50": 0.039000005926936865,
+            "p95": 0.11172000668011606,
+            "p99": 0.19641999679151928,
+            "total": 35.76429991517216
+          },
+          "max_market_orders": 10,
+          "money": [
+            108567.0,
+            108061.0
+          ],
+          "pass": true,
+          "rewards": [
+            108567.0,
+            108061.0
+          ],
+          "seat": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "action_digest": "41d36eb64c0037651716ff08e1b8c5b464a1c475070efc59726b7da77cd9a70b",
+          "checks": {
+            "calls_719": true,
+            "done": true,
+            "market_cap": true,
+            "no_exception": true,
+            "no_overage_exhaustion": true,
+            "no_timeout": true,
+            "opponent_no_exception": true,
+            "valid_action_schema": true
+          },
+          "latency_ms": {
+            "calls": 719,
+            "max": 0.3588999970816076,
+            "p50": 0.03519999154377729,
+            "p95": 0.12196999741718176,
+            "p99": 0.19473200372885927,
+            "total": 35.06079988437705
+          },
+          "max_market_orders": 10,
+          "money": [
+            108061.0,
+            108567.0
+          ],
+          "pass": true,
+          "rewards": [
+            108061.0,
+            108567.0
+          ],
+          "seat": 1,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        }
+      ],
+      "pass": true,
+      "path": "C:\\Users\\wurre\\.codex\\worktrees\\7adf\\Kaggriculture\\submission\\e2_boatlee_public_selector\\main.py",
+      "sha256": "b4ef9bff8cbba2dfaccacc320a32f707006158fcf905c02db02ad89fe0f6099a",
+      "static_audit": {
+        "forbidden_imports": [],
+        "imports": [
+          "base64",
+          "json",
+          "math",
+          "zlib"
+        ],
+        "pass": true
+      }
+    },
+    "step_241_only": {
+      "bytes": 45850,
+      "candidate_id": "ac_a85701baf0cd39d61ab067d3",
+      "checks": {
+        "both_seats_official_engine": true,
+        "directory_contains_only_main_py": true,
+        "hash_matches_frozen_candidate": true,
+        "isolated_import": true,
+        "standard_library_contract": true,
+        "under_5_mib": true
+      },
+      "directory_entries": [
+        "main.py"
+      ],
+      "isolated_import": {
+        "callable_agent": true,
+        "isolated": true
+      },
+      "official_engine_games": [
+        {
+          "action_digest": "e59e5e54aa6134b5fe8bb373132d5d63c88dabc2264cc88be1f30fd1b6d6e7a1",
+          "checks": {
+            "calls_719": true,
+            "done": true,
+            "market_cap": true,
+            "no_exception": true,
+            "no_overage_exhaustion": true,
+            "no_timeout": true,
+            "opponent_no_exception": true,
+            "valid_action_schema": true
+          },
+          "latency_ms": {
+            "calls": 719,
+            "max": 0.520800007507205,
+            "p50": 0.04499999340623617,
+            "p95": 0.17148000915767628,
+            "p99": 0.31554599612718526,
+            "total": 44.23239977040794
+          },
+          "max_market_orders": 10,
+          "money": [
+            108567.0,
+            108061.0
+          ],
+          "pass": true,
+          "rewards": [
+            108567.0,
+            108061.0
+          ],
+          "seat": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        },
+        {
+          "action_digest": "41d36eb64c0037651716ff08e1b8c5b464a1c475070efc59726b7da77cd9a70b",
+          "checks": {
+            "calls_719": true,
+            "done": true,
+            "market_cap": true,
+            "no_exception": true,
+            "no_overage_exhaustion": true,
+            "no_timeout": true,
+            "opponent_no_exception": true,
+            "valid_action_schema": true
+          },
+          "latency_ms": {
+            "calls": 719,
+            "max": 0.36499999987427145,
+            "p50": 0.044200001866556704,
+            "p95": 0.16103998932521793,
+            "p99": 0.2673399969353344,
+            "total": 43.15160012629349
+          },
+          "max_market_orders": 10,
+          "money": [
+            108061.0,
+            108567.0
+          ],
+          "pass": true,
+          "rewards": [
+            108061.0,
+            108567.0
+          ],
+          "seat": 1,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ]
+        }
+      ],
+      "pass": true,
+      "path": "C:\\Users\\wurre\\.codex\\worktrees\\7adf\\Kaggriculture\\submission\\e2_boatlee_step_241_only\\main.py",
+      "sha256": "13ac97f6f9c311b52e18ca42ffc1916e09ba12f2dd4aba7fd0f525ba63c5101c",
+      "static_audit": {
+        "forbidden_imports": [],
+        "imports": [
+          "base64",
+          "json",
+          "math",
+          "zlib"
+        ],
+        "pass": true
+      }
+    }
+  },
+  "verification_sha256": "86cffcfaf8675e3697946ddaf94a24287cff501fcbea065c08924aeafd05fc60"
+}

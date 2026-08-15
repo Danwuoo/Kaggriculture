@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "kind": "e2_development_candidate_registry",
+  "status": "user_authorized_delayed_public_intervention",
+  "authority_candidate_registry": "candidate_registry.json",
+  "formal_fresh_seeds_executed": false,
+  "lanes": {
+    "boatlee_v16_rc2_market_relay": {
+      "candidate_id": "ac_3aa759d7d7fc4a409c409326",
+      "role": "unchanged_fixed_e2_finalist",
+      "mutation": null
+    },
+    "v27_current_meta": {
+      "candidate_id": "e2v27_8b3ebcb128a4f4709ea94ce3",
+      "role": "frozen_e2_s1_fresh_label_selector",
+      "schema_version": 2,
+      "decision_step": 494,
+      "intervention": {
+        "remove_exact_order": ["BUY_PRODUCT", "WHEAT", 2],
+        "rejoin_step": 495
+      },
+      "thresholds": {
+        "min_wheat_price": 47,
+        "max_wheat_inventory": 9500
+      },
+      "features": [
+        "step",
+        "player",
+        "farms[*].money",
+        "farms[*].hands",
+        "farms[*].unlocked_quadrants",
+        "market.prices.WHEAT",
+        "market.inventory.WHEAT",
+        "town.unlocked_shops"
+      ],
+      "fallback": "v27_incumbent",
+      "lineage": {
+        "diagnostic_probe": "ac_46448f767f398cc4ce8047d3",
+        "delayed_component_e1c": "ac_01234c1e2e934d5e26ea1d36",
+        "amendment": "user_authorized_delayed_public_intervention"
+      },
+      "efficacy_claim": null,
+      "technical_feature_basis": {
+        "seed": 811407,
+        "correctness_only": true,
+        "wheat_price_range": [45, 49],
+        "wheat_inventory_range": [9435, 9583],
+        "both_branches_exercised": true
+      }
+    }
+  }
+}

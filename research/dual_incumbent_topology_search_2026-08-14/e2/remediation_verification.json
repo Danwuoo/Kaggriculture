@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "kind": "e2_s2_remediation_verification",
+  "decision": "READY_FOR_E2_S2_FRESH_CONFIRMATION",
+  "formal_fresh_confirmation_authorized": false,
+  "new_formal_fresh_seeds_selected": [],
+  "new_formal_fresh_seeds_executed": false,
+  "engine": {
+    "commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+    "python_sha256": "fb9215c5e21a25243e2d13e75b3d70a79cf7d78fff150a90f1bb5eacf9ba2bcf",
+    "configuration_sha256": "7f196f4aaf9b4e482fbd61ba4bf19f5cec4da0f81938ece756954035a65c0bb5"
+  },
+  "controls": {
+    "boatlee_v16_rc2_market_relay": "69ce4f657df5a168c676acfa4f9089a373bc291fe3486950de0bca16ad042213",
+    "v27_current_meta": "ec7d384806d4717b91c8f7f8da20710b054fdcb729abd767328c7520fa01bec0"
+  },
+  "source_hashes": {
+    "boatlee_remediation.py": "562b991bd55a3527318c893f2fed88dbccafe5606d70175be6f67901c7daf7e5",
+    "boatlee_selector.py": "6cddf7625e47e3aaf932cbc840dd4b2d324f271894fdd96d8b7ef65f98817932",
+    "boatlee_selector_validation.py": "4339342be8ab1b5d48a2204d07ef0744b77fdb29a12dfe887c927b4930392315",
+    "test_boatlee_remediation.py": "5e7fa458864231c5ff1e033cb65d93171773dbffe06a2579d9eb063319c782c5",
+    "test_boatlee_selector.py": "eb0e5b34dedcbcd31670dd219bce50f361c6d643370ff316700c99a2c76d7633"
+  },
+  "atomic_ablation": {
+    "run_id": "e2_s2_boatlee_remediation_20260815_v1",
+    "manifest_file_sha256": "b16139dc41aa41d5ba78b0b6ff75024431873c733df39ce1ec5e9374c3d9f7c9",
+    "manifest_canonical_sha256": "f776e8ab1e561d6f56cee3c695ee3b57b172010da8d12d581e977602b207f51a",
+    "summary_file_sha256": "e0136608d1ef33ff56edaceed1db27e2ba9a421e2a6b1f97915ccdd452dbcb39",
+    "summary_canonical_sha256": "5edc59d749fb34a73bb731b556c499f8b6f7ef99810e91a91ca47b131c3bc2c9",
+    "valid_shards": 144,
+    "invalid_shards": 0,
+    "full_reference_exact_formal_replay": true,
+    "public_feature_contexts": 48,
+    "public_feature_consistency": true,
+    "variants": {
+      "step_240_only": {
+        "candidate_id": "ac_501500daa79fcb8068244d0e",
+        "paired_margin_wdl": [8, 4, 36],
+        "mean_paired_margin": 74.52083333333333,
+        "median_paired_margin": -51.0,
+        "worst_paired_margin": -639.0
+      },
+      "step_241_only": {
+        "candidate_id": "ac_a85701baf0cd39d61ab067d3",
+        "paired_margin_wdl": [42, 0, 6],
+        "mean_paired_margin": 253.22916666666666,
+        "median_paired_margin": 203.0,
+        "worst_paired_margin": -4229.0
+      }
+    },
+    "efficacy_claim": null
+  },
+  "selector_validation": {
+    "run_id": "e2_s2_boatlee_selector_20260815_v1",
+    "manifest_file_sha256": "8765e801a7effb16a6c8d736f011d4a4ee2e35cfa828b019112acb236b1bb538",
+    "manifest_canonical_sha256": "1adbcd0db4aaf3a7d0cf21ae08e91455a501c0976f304abf18524ae1ccc51d51",
+    "validation_file_sha256": "7b255a99d8fdfb41295d470aaf61ca60b5d18e9f6846af709a609d033d39a9ac",
+    "validation_canonical_sha256": "3fdf37adfdf32a41b7d87ed61db6ee8743dead3873b5f6890103caebbd3bc642",
+    "valid_shards": 56,
+    "invalid_shards": 0,
+    "candidate_id": "e2boatlee_7f591d609cf14d89e6aa1599",
+    "standalone_sha256": "b4ef9bff8cbba2dfaccacc320a32f707006158fcf905c02db02ad89fe0f6099a",
+    "standalone_bytes": 43186,
+    "deterministic_builder": true,
+    "isolated_import": true,
+    "standard_library_only": true,
+    "contexts": 48,
+    "branch_counts": {"intervene": 36, "incumbent": 12},
+    "paired_margin_wdl": [36, 12, 0],
+    "mean_paired_margin": 273.8958333333333,
+    "median_paired_margin": 155.5,
+    "mean_own_bank_delta": 1681.1458333333333,
+    "worst_paired_margin": 0.0,
+    "actual_win_delta": 0,
+    "prediction_behavior_parity": "48/48",
+    "prediction_feature_parity": "48/48",
+    "worker_1_vs_4": "8/8",
+    "technical_seed_fast_standalone_both_seats": "2/2",
+    "failure_injection": "2/2",
+    "max_market_orders": 10,
+    "maximum_run_p95_ms": 0.44406999222701454,
+    "maximum_call_ms": 13.47290001285728,
+    "public_state_only": true,
+    "opponent_identity_used": false,
+    "efficacy_claim": null,
+    "ready_for_fresh_confirmation": true
+  },
+  "tests": {
+    "incumbent_builders": "2/2",
+    "shared_source_contract": "3/3",
+    "async_v2": "31/31",
+    "async_v3": "23/23",
+    "e2_including_remediation": "20/20",
+    "git_diff_check": "pass"
+  },
+  "diagnostic_game_accounting": {
+    "consumed_seed_atomic_ablation_games": 144,
+    "consumed_seed_selector_games": 48,
+    "worker_equality_replays": 8,
+    "technical_seed_correctness_games": 4,
+    "total_nonfresh_games": 204,
+    "v27_games": 0
+  },
+  "known_limitations": [
+    "All selector labels use consumed S1/S2 contexts and carry no fresh efficacy claim.",
+    "The public fertilizer threshold perfectly separates Roman from the other retained families at step 240, so opponent-family proxy overfit remains possible despite using only causal public market state.",
+    "Actual win delta is zero on the diagnostic block.",
+    "Fresh confirmation is mandatory before promotion or submission packaging."
+  ],
+  "pool_lanes": false,
+  "later_tier_launched": false,
+  "remediation_verification_sha256": "a048c9ef7346c75e4780d5dfc62798b15650eefd118d7ca82c6c92ff2e4db89e"
+}

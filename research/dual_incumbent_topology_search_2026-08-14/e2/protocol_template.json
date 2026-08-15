@@ -21,7 +21,7 @@
     },
     "v27_current_meta": {
       "control": "lane_incumbent",
-      "candidates": [],
+      "candidates": ["e2v27_8b3ebcb128a4f4709ea94ce3"],
       "diagnostic_probe": "ac_46448f767f398cc4ce8047d3",
       "max_selector_candidates": 2,
       "pool_with_other_lane": false

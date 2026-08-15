@@ -1,0 +1,40 @@
+E2 S2 Boatlee remediation command transcript (2026-08-15)
+
+python -m py_compile research/dual_incumbent_topology_search_2026-08-14/e2/boatlee_remediation.py research/dual_incumbent_topology_search_2026-08-14/e2/test_boatlee_remediation.py
+exit=0
+
+python -m unittest discover -s research/dual_incumbent_topology_search_2026-08-14/e2 -p "test_*.py" -v
+20/20 passed
+
+python research/dual_incumbent_topology_search_2026-08-14/e2/boatlee_remediation.py prepare --output-root research/dual_incumbent_topology_search_2026-08-14/e2/artifacts/remediation/e2_s2_boatlee_remediation_20260815_v1
+exit=0; manifest=f776e8ab1e561d6f56cee3c695ee3b57b172010da8d12d581e977602b207f51a; new_formal_fresh_seeds_executed=false
+
+python research/dual_incumbent_topology_search_2026-08-14/e2/boatlee_remediation.py run --output-root research/dual_incumbent_topology_search_2026-08-14/e2/artifacts/remediation/e2_s2_boatlee_remediation_20260815_v1 --workers 4
+exit=0; 144/144 consumed-seed diagnostic shards complete; summary=5edc59d749fb34a73bb731b556c499f8b6f7ef99810e91a91ca47b131c3bc2c9
+
+python -m py_compile research/dual_incumbent_topology_search_2026-08-14/e2/boatlee_selector.py research/dual_incumbent_topology_search_2026-08-14/e2/boatlee_selector_validation.py research/dual_incumbent_topology_search_2026-08-14/e2/test_boatlee_selector.py
+exit=0
+
+python research/dual_incumbent_topology_search_2026-08-14/e2/boatlee_selector_validation.py prepare --output-root research/dual_incumbent_topology_search_2026-08-14/e2/artifacts/remediation/e2_s2_boatlee_selector_20260815_v1
+exit=0; manifest=1adbcd0db4aaf3a7d0cf21ae08e91455a501c0976f304abf18524ae1ccc51d51; new_formal_fresh_seeds_executed=false
+
+python research/dual_incumbent_topology_search_2026-08-14/e2/boatlee_selector_validation.py run --output-root research/dual_incumbent_topology_search_2026-08-14/e2/artifacts/remediation/e2_s2_boatlee_selector_20260815_v1 --workers 4
+exit=0; selector contexts=48/48; worker equality=8/8; technical parity=2/2 seats; failure injection=2/2; validation=3fdf37adfdf32a41b7d87ed61db6ee8743dead3873b5f6890103caebbd3bc642
+
+python research/main_approach/v27_current_meta/development/build_standalone.py --check
+exit=0
+
+python research/main_approach/boatlee_v16_rc2_market_relay/development/build_standalone.py --check
+exit=0
+
+python -m unittest research.main_approach.test_development_sources -v
+3/3 passed
+
+python -m unittest discover -s research/dual_incumbent_topology_search_2026-08-14/async_v2 -p "test_*.py" -v
+31/31 passed
+
+python -m unittest discover -s research/dual_incumbent_topology_search_2026-08-14/async_v3 -p "test_*.py" -v
+23/23 passed
+
+git diff --check
+exit=0

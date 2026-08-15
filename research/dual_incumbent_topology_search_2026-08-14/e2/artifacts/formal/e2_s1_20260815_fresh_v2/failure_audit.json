@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "kind": "e2_s1_infrastructure_failure_audit",
+  "run_id": "e2_s1_20260815_fresh_v2",
+  "status": "control_phase_infrastructure_failed",
+  "root_cause": "Saiteja frozen opponent copied main.py without required sibling modules",
+  "root_cause_exception": "ModuleNotFoundError: No module named 'agent_frontier'",
+  "control_shards": 32,
+  "control_complete": 0,
+  "control_infrastructure_failed": 32,
+  "candidate_shards": 0,
+  "efficacy_results": 0,
+  "formal_fresh_seeds_executed": true,
+  "same_tier_seed_reuse_allowed": true,
+  "repair": "freeze the five-file Saiteja package and create formal-v3",
+  "later_tier_launched": false
+}

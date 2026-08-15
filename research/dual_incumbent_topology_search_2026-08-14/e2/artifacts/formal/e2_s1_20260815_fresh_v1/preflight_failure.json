@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "kind": "e2_s1_preflight_failure",
+  "run_id": "e2_s1_20260815_fresh_v1",
+  "stage": "candidate_artifact_hash_gate",
+  "status": "failed_before_manifest_and_before_execution",
+  "reason": "Boatlee development artifact was overwritten by a parity helper after its recorded hash was computed",
+  "expected_sha256": "54ce17ad14ef49aaa6c985ccd4245e06c82a450b39de65b9f14c412b3c7930c6",
+  "observed_sha256": "9b2560610eda48062895fd604a9393f9bf058aae7f3e8124e643f9ed7fe36ee9",
+  "repair": "fix frozen-byte parity and create attributable development-v3/formal-v2 roots",
+  "efficacy": null,
+  "formal_fresh_seeds_executed": false,
+  "later_tier_launched": false
+}

@@ -47,6 +47,17 @@ reruns the same gate; it never weakens the gate.
 - At most two selector versions are frozen for E2 S1, with distinct IDs and
   exact standalone parity.
 
+The user-authorized remediation supersedes only the requirement that the
+runtime choose the complete exact probe at step 0. The exact probe must still
+reconstruct and remain a diagnostic comparator. The new delayed selector must:
+
+- have a new candidate ID and no inherited efficacy claim;
+- act only at step 494 and rejoin at step 495;
+- remove only the exact incumbent `BUY_PRODUCT WHEAT 2` order;
+- use only frozen public wheat price/inventory thresholds;
+- exercise intervene, preserve-incumbent, and malformed-feature fallback paths;
+- enter S1 only to acquire fresh labels, not as a promoted strategy.
+
 ## Engine/runtime gate
 
 - Both players end `DONE` in every retained technical game.

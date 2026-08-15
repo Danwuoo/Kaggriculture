@@ -1,0 +1,18 @@
+Kaggriculture E2 development command transcript
+run_id=e2_development_20260815_v3
+invocation=C:\Python314\python.exe research\dual_incumbent_topology_search_2026-08-14\e2\verify.py --technical-seed 811407
+C:\Python314\python.exe research\main_approach\v27_current_meta\development\build_standalone.py --check | exit=0 | stdout_sha256=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 | stderr_sha256=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+C:\Python314\python.exe research\main_approach\boatlee_v16_rc2_market_relay\development\build_standalone.py --check | exit=0 | stdout_sha256=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 | stderr_sha256=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+C:\Python314\python.exe -m unittest research.main_approach.test_development_sources -v | exit=0 | stdout_sha256=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 | stderr_sha256=62c800b274d773512b542ed9b1c303d241479f9d98958511f37e50ff0f1b9fe7
+C:\Python314\python.exe -m unittest discover -s research\dual_incumbent_topology_search_2026-08-14\async_v2 -p test_*.py -v | exit=0 | stdout_sha256=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 | stderr_sha256=0fbc30144013e229827e6ed9df098188225abd53b5a4f846d7e82a5970e51cea
+C:\Python314\python.exe -m unittest discover -s research\dual_incumbent_topology_search_2026-08-14\async_v3 -p test_*.py -v | exit=0 | stdout_sha256=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 | stderr_sha256=a994be9e1e015b3f692132c7d7a2514bf58972f854bb1bf8b2ad204c364e0a67
+C:\Python314\python.exe -m unittest discover -s research\dual_incumbent_topology_search_2026-08-14\e2 -p test_*.py -v | exit=0 | stdout_sha256=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 | stderr_sha256=87a62478d510bc8751c4b3a712b44c96465eb5f2f0e0a0103653d3fe6fa3806c
+C:\Python314\python.exe -m json.tool C:\Users\wurre\.codex\worktrees\7adf\Kaggriculture\research\dual_incumbent_topology_search_2026-08-14\e2\candidate_registry.json | exit=0 | stdout_sha256=68d816fc12e7c38df2fa7cd8b2fe691968e64344e759caf66cc753de7f39dbc2 | stderr_sha256=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+C:\Python314\python.exe -m json.tool C:\Users\wurre\.codex\worktrees\7adf\Kaggriculture\research\dual_incumbent_topology_search_2026-08-14\e2\development_candidate_registry.json | exit=0 | stdout_sha256=4d1ed77fd120e0803c4cc1caea43e2459ce9d20ccb19d142beddabe4ce8e7cac | stderr_sha256=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+C:\Python314\python.exe -m json.tool C:\Users\wurre\.codex\worktrees\7adf\Kaggriculture\research\dual_incumbent_topology_search_2026-08-14\e2\protocol_template.json | exit=0 | stdout_sha256=0f99632b78fb06e2756f6dd4183e22dd7c824563624644074e11cf96a3cf1a6a | stderr_sha256=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+git diff --check | exit=0 | stdout_sha256=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 | stderr_sha256=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+registered parity: exact engine, seed 811407, both seats, other-incumbent opponent
+selector parity: exact engine, seed 811407, both seats, four public opponent families
+scheduler: workers 1-vs-4 plus kill/corrupt/import/engine/worker injection
+formal fresh seeds executed=false
+decision=READY_FOR_E2_S1

@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "e2_s2_fresh_seed_registry",
+  "status": "user_authorized_for_e2_s2",
+  "authorization": "User explicitly instructed: complete and enter S2",
+  "selection_date": "2026-08-15",
+  "selection_scope": "boatlee_only_four-seed_paired_tail_characterization",
+  "freshness_scan_roots": [
+    "C:/Users/wurre/.codex/worktrees/7adf/Kaggriculture",
+    "C:/Users/wurre/Downloads/Kaggriculture",
+    "C:/Users/wurre/Desktop/Kaggriculture-archive/2026-08-10"
+  ],
+  "seeds": [
+    {
+      "seed": 95715007,
+      "classification": "formal_fresh",
+      "fresh": true,
+      "purpose": "e2_s2_boatlee_market_tail_characterization",
+      "preselection_repository_hits": 0,
+      "executed": false
+    },
+    {
+      "seed": 41193493,
+      "classification": "formal_fresh",
+      "fresh": true,
+      "purpose": "e2_s2_boatlee_market_tail_characterization",
+      "preselection_repository_hits": 0,
+      "executed": false
+    },
+    {
+      "seed": 61594307,
+      "classification": "formal_fresh",
+      "fresh": true,
+      "purpose": "e2_s2_boatlee_market_tail_characterization",
+      "preselection_repository_hits": 0,
+      "executed": false
+    },
+    {
+      "seed": 58893729,
+      "classification": "formal_fresh",
+      "fresh": true,
+      "purpose": "e2_s2_boatlee_market_tail_characterization",
+      "preselection_repository_hits": 0,
+      "executed": false
+    }
+  ],
+  "excluded_consumed_seeds": [811407, 81426017, 81426029, 42284410, 73912654],
+  "formal_fresh_seeds_executed": false
+}
