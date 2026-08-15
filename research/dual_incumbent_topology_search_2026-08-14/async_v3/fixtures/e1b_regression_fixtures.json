@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "authority": {
+    "source_commit": "2e9032188c84fd5401f7b2d4da9869ad2023a1a3",
+    "run_relative_path": "research/dual_incumbent_topology_search_2026-08-14/async_v2/artifacts/formal/async_e1b_20260815_consumed_small_screen_v2/run",
+    "search_manifest_canonical_sha256": "66c4101669803b09b9b857aee6aca7e1cf826b1586d9d7b7f8ee75ee35313152",
+    "search_summary_file_sha256": "66f57ea523070c887d4b5f59c3a6a46732013ab4ae3990875953e3db0d39a05f",
+    "search_summary_canonical_sha256": "69f43c115a95c1b3550061057dcf8ec1be2c7827321065a2afb9da22799ac7ad",
+    "engine": {
+      "commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+      "python_blob": "4b78842d0f2d4abf6e318a8248b6306454f5c714",
+      "python_sha256": "fb9215c5e21a25243e2d13e75b3d70a79cf7d78fff150a90f1bb5eacf9ba2bcf",
+      "configuration_blob": "0fcdf2c14c47d3bdc821c02e26263956cf0fd3d8",
+      "configuration_sha256": "7f196f4aaf9b4e482fbd61ba4bf19f5cec4da0f81938ece756954035a65c0bb5"
+    },
+    "evaluation_seeds": [81426017, 81426029],
+    "opponents": ["other_incumbent", "kaito_v21"],
+    "seats": [0, 1],
+    "formal_fresh_seeds_executed": false
+  },
+  "near_tie_mean_margin_epsilon": 1.0,
+  "lanes": {
+    "boatlee_v16_rc2_market_relay": {
+      "minimal_robust": {
+        "candidate_id": "ac_5f4a369973330bf53370f3f8",
+        "first_generation_file": "generation_003.json",
+        "first_generation_canonical_sha256": "2770c96913dba8cc3c0be72635204f3883241c10124c5bc9996a3e5a105ba1e9",
+        "genome_id": "ag_c967a37618e837717aa6e07f",
+        "phenotype_id": "ph_81eb145fb19a180e33cc6dd7",
+        "action_digest_vector_sha256": "fce897e10c13a542cdbf9e3c08ad67c5e688787a9a2782088df1e8fb5ac372db",
+        "route_blocks": [
+          {
+            "source_tape": "59e6cf8aa76737b50cf27e3059bb75d6095b88f8e93e70a888487ca5c63efd0c",
+            "start": 237,
+            "end": 244,
+            "channels": ["market"],
+            "motif_id": "motif_3817688fdae902b8afc85a94"
+          }
+        ],
+        "effective_market_patches": {
+          "240": [["SELL", "WOOL", 18], ["BUY_LAND"], ["HIRE"], ["HIRE"], ["HIRE"], ["HIRE"], ["HIRE"], ["HIRE"], ["HIRE"]],
+          "241": [["SELL", "FERTILIZER", 16], ["HIRE"], ["HIRE"], ["HIRE"], ["HIRE"], ["HIRE"], ["HIRE"], ["BUY_SEED", "MELON", 7], ["HIRE"]]
+        },
+        "metrics": {
+          "paired_wdl": {"win": 8, "draw": 0, "loss": 0},
+          "candidate_wdl": {"win": 8, "draw": 0, "loss": 0},
+          "control_wdl": {"win": 8, "draw": 0, "loss": 0},
+          "actual_win_delta": 0,
+          "mean_paired_margin": 307.125,
+          "median_paired_margin": 157.5,
+          "worst_paired_margin": 6.0,
+          "mean_own_bank": 1059.0,
+          "by_opponent_mean_margin": {"kaito_v21": 94.25, "other_incumbent": 520.0},
+          "opponent_positive_families": 2,
+          "opponent_nonnegative_families": 2,
+          "opponent_worst_mean_margin": 94.25,
+          "complexity": 1,
+          "action_changed_contexts": 8,
+          "technical_pass": true,
+          "efficacy_eligible": true
+        },
+        "expected_frontier": "robust"
+      },
+      "ranked_extra_window": {
+        "candidate_id": "ac_25fbbfe7484fa2d6846b27c6",
+        "first_generation_file": "generation_008.json",
+        "first_generation_canonical_sha256": "9b464a606cf88fdf1562b6d56e0f47cdee35000d672403676bf60ba68cbbded4",
+        "genome_id": "ag_fbb206c0c45cb8636cc38178",
+        "phenotype_id": "ph_3f04d640cbc7b2494057ec8a",
+        "action_digest_vector_sha256": "b0d1ee8857d76e227d757a9ffd067f2df93da0fb865663e296b1b4ed837f07d4",
+        "route_blocks": [
+          {
+            "source_tape": "59e6cf8aa76737b50cf27e3059bb75d6095b88f8e93e70a888487ca5c63efd0c",
+            "start": 237,
+            "end": 244,
+            "channels": ["market"],
+            "motif_id": "motif_3817688fdae902b8afc85a94"
+          },
+          {
+            "source_tape": "ef50a2a2de971f3b4cd33c7399547ff36cef90bd998f480f551359ede57cadcb",
+            "start": 266,
+            "end": 273,
+            "channels": ["market"],
+            "motif_id": "motif_76a65fbb9fa2d8a3ff66daeb"
+          }
+        ],
+        "metrics": {
+          "paired_wdl": {"win": 8, "draw": 0, "loss": 0},
+          "actual_win_delta": 0,
+          "mean_paired_margin": 307.625,
+          "median_paired_margin": 158.5,
+          "worst_paired_margin": 6.0,
+          "mean_own_bank": 1059.25,
+          "by_opponent_mean_margin": {"kaito_v21": 95.25, "other_incumbent": 520.0},
+          "opponent_positive_families": 2,
+          "opponent_nonnegative_families": 2,
+          "opponent_worst_mean_margin": 95.25,
+          "complexity": 2,
+          "action_changed_contexts": 8,
+          "technical_pass": true,
+          "efficacy_eligible": true
+        },
+        "expected_frontier": "robust",
+        "expected_causal_preference_within_epsilon": "ac_5f4a369973330bf53370f3f8"
+      }
+    },
+    "v27_current_meta": {
+      "opening_only_high_upside": {
+        "candidate_id": "ac_b59943fc80ea1fa0ff69ce89",
+        "first_generation_file": "generation_017.json",
+        "first_generation_canonical_sha256": "a7c2ae0846c8c8a06c13dfe0273d6a2dc9a77b18da1ae6ca9c2b5981a32b530c",
+        "genome_id": "ag_7582d93dd69cbbaff5369bfa",
+        "phenotype_id": "ph_368b2a1a7ca6b9023c2cc7e4",
+        "action_digest_vector_sha256": "8053e61935013417c0d3fccdf9ff78702ef95670f3ee3b94df10018060f606c1",
+        "route_blocks": [
+          {
+            "source_tape": "ef50a2a2de971f3b4cd33c7399547ff36cef90bd998f480f551359ede57cadcb",
+            "start": 0,
+            "end": 7,
+            "channels": ["market"],
+            "motif_id": "motif_9e7ebe01b17d274eb36ab8d6"
+          }
+        ],
+        "effective_market_patches": {
+          "0": [["BUY_PRODUCT", "WHEAT", 11], ["HIRE"], ["HIRE"], ["HIRE"], ["HIRE"], ["BUY_ANIMAL", "COW", 1], ["BUY_ANIMAL", "SHEEP", 4], ["BUY_SEED", "MELON", 5], ["BUY_SEED", "WHEAT", 5]]
+        },
+        "metrics": {
+          "paired_wdl": {"win": 6, "draw": 0, "loss": 2},
+          "candidate_wdl": {"win": 8, "draw": 0, "loss": 0},
+          "control_wdl": {"win": 4, "draw": 0, "loss": 4},
+          "actual_win_delta": 4,
+          "mean_paired_margin": 7344.625,
+          "median_paired_margin": 11351.0,
+          "worst_paired_margin": -11985.0,
+          "mean_own_bank": -3637.875,
+          "by_opponent_mean_margin": {"kaito_v21": 549.75, "other_incumbent": 14139.5},
+          "opponent_positive_families": 2,
+          "opponent_nonnegative_families": 2,
+          "opponent_worst_mean_margin": 549.75,
+          "complexity": 1,
+          "action_changed_contexts": 8,
+          "technical_pass": true,
+          "efficacy_eligible": true
+        },
+        "expected_frontier": "high_upside",
+        "robust_exclusion_reason": "negative_worst_paired_margin"
+      },
+      "ranked_high_upside": {
+        "candidate_id": "ac_421ad5f206c01e62204a11e3",
+        "first_generation_file": "generation_016.json",
+        "first_generation_canonical_sha256": "0fdc9061b76b5f64c2ade055759012e6e51ed571373d1ca59f9ff73d0b20a9bb",
+        "genome_id": "ag_6b30b909054bd519c19ab4b6",
+        "phenotype_id": "ph_fc5b480f8c42d4f5f54a69b6",
+        "action_digest_vector_sha256": "a6e09febb70b246ca3417fe447dff0768d4ed42489ccf7baa5bc524a49c348f5",
+        "metrics": {
+          "paired_wdl": {"win": 6, "draw": 0, "loss": 2},
+          "candidate_wdl": {"win": 8, "draw": 0, "loss": 0},
+          "control_wdl": {"win": 4, "draw": 0, "loss": 4},
+          "actual_win_delta": 4,
+          "mean_paired_margin": 7431.625,
+          "median_paired_margin": 11443.0,
+          "worst_paired_margin": -11910.0,
+          "mean_own_bank": -3560.25,
+          "by_opponent_mean_margin": {"kaito_v21": 634.75, "other_incumbent": 14228.5},
+          "opponent_positive_families": 2,
+          "opponent_nonnegative_families": 2,
+          "opponent_worst_mean_margin": 634.75,
+          "complexity": 2,
+          "action_changed_contexts": 8,
+          "technical_pass": true,
+          "efficacy_eligible": true
+        },
+        "expected_frontier": "high_upside",
+        "robust_exclusion_reason": "negative_worst_paired_margin"
+      }
+    }
+  },
+  "regression_assertions": [
+    "fixture hashes and candidate payloads must match frozen E1b evidence",
+    "Boatlee minimal_robust must be eligible for the robust frontier",
+    "Boatlee minimal_robust is the causal representative within the one-coin near-tie band",
+    "both v27 anchors must be retained on the high-upside frontier",
+    "neither v27 anchor may be classified as robust",
+    "ranking and candidate identity must remain lane-local"
+  ]
+}

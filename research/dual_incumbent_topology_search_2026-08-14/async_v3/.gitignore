@@ -1,0 +1,14 @@
+__pycache__/
+artifacts/development/formal_pipeline_*/
+artifacts/development/finalists/
+artifacts/development/scheduler_audit/
+artifacts/formal/*/formal/
+artifacts/formal/*/jobs/
+artifacts/formal/*/generations/
+artifacts/formal/*/manifest.json
+artifacts/formal/*/checkpoint.json
+artifacts/formal/*/control_cache.json
+artifacts/formal/*/candidate_context_cache.json
+artifacts/formal/*/run.stdout.log
+artifacts/formal/*/run.stderr.log
+artifacts/formal/*/finalists/*/*/__pycache__/

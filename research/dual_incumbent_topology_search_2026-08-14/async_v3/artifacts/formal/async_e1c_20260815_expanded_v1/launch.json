@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "run_id": "async_e1c_20260815_expanded_v1",
+  "pid": 8432,
+  "started_utc": "2026-08-15T08:05:40.959Z",
+  "command": [
+    "C:\\Python314\\python.exe",
+    "research\\dual_incumbent_topology_search_2026-08-14\\async_v3\\cli.py",
+    "run",
+    "--output-root",
+    "research\\dual_incumbent_topology_search_2026-08-14\\async_v3\\artifacts\\formal\\async_e1c_20260815_expanded_v1",
+    "--workers",
+    "15",
+    "--execute-retained-e1c"
+  ],
+  "workers": 15,
+  "manifest": "eabc538ce8962fc073036d5443e058db3593fdb64cb538b827bad57b2cd2f1ea",
+  "manifest_file_sha256": "68e561b2ea18c92c5954c8878efea0aa877e20a4c8e1693cf15913294f7e2f86",
+  "engine": "7b0209e6b509c3a35e4f8a57f7a110c37455eb0f731f815f7ad85dec76c5c7b3",
+  "control": "5e73a775aea1fe49ec889cc1faf866e5d30d75eb520e6dcdc2f56168d20ce4e5",
+  "fixture": "2200552b813b10b9d17a30f0bd99965051957802f8c98ffeb945f894ebd9b5b2",
+  "registry": "e65e945bbbc33337422bd09eaaa5dfa1cbbd694091b29b74179b2af5a47922f8",
+  "jobs": "7ac496b329206f4d6b8bd7d47a0985737fb864f1a49e771c45e19b414dc93f5e",
+  "seeds": [
+    {
+      "seed": 81426017,
+      "classification": "retained_consumed",
+      "fresh": false
+    },
+    {
+      "seed": 81426029,
+      "classification": "retained_consumed",
+      "fresh": false
+    }
+  ],
+  "formal_fresh_seeds_executed": false,
+  "stdout": "run.stdout.log",
+  "stderr": "run.stderr.log",
+  "job_manifests": "jobs",
+  "shards": "shards"
+}

@@ -19,6 +19,32 @@ gain that hides a regression on either line. They may share hypotheses, test
 harnesses, and offline analysis, but their runtime modules, routes, generated
 artifacts, controls, and evidence must remain independently attributable.
 
+### Current topology-search state: E1c complete, E2 development next
+
+The Async V3 E1c retained-seed search completed on 2026-08-15. Do not restart
+or broaden E1 merely because its population code remains available. Its search
+surface saturated: the useful Boatlee result appeared in generation 0 and the
+v27 high-upside result in generation 1, with no late-generation improvement.
+
+The next authorized work is contract-scoped E2 development under
+`research/dual_incumbent_topology_search_2026-08-14/e2/`. It has two independent
+lane roles:
+
+- Boatlee fixed finalist `ac_3aa759d7d7fc4a409c409326`, a one-block market
+  route over steps 237--245;
+- v27 diagnostic probe `ac_46448f767f398cc4ce8047d3`, used only as a branch
+  for a public-state selector, never as an always-on promoted candidate.
+
+The v27 E1c representative `ac_bad79e4d71965c86b6b351a1` is an economic no-op
+counterexample. An action-digest difference alone is no longer sufficient for
+behavior-change, efficacy, frontier, or finalist eligibility. Require an
+executed receipt, public/economic state, terminal bank/reward, or attributed
+economic-diagnostic difference relative to the lane control.
+
+E1c used only previously consumed seeds `81426017` and `81426029`.
+`formal_fresh_seeds_executed=false` for E1c, and no E2 fresh seed has been
+selected or executed. E2 development does not authorize E2 S1 launch.
+
 `v27_current_meta_safety_guarded/` is retained as a useful reference variant,
 not a third active development line. The multi-file `submission/` tree is the
 restored Round 2 reliability control; it is no longer the default optimization
@@ -81,7 +107,10 @@ read in this order:
 3. The selected approach's `development/README.md` and relevant split modules.
 4. `data/kaggriculture/AGENTS.md` and `data/kaggriculture/README.md`.
 5. The exact official engine Python and configuration JSON used by the run.
-6. The decision record for the mechanism being extended or challenged.
+6. For topology-search or E2 work, the Async V3 README, E1c decision, E2
+   README, candidate registry, implementation plan, acceptance contract, and
+   runbook in their declared order.
+7. The decision record for the mechanism being extended or challenged.
 
 Read `strategy.md` and the relevant `submission/` modules only when changing or
 using the legacy production control. Read archived reports narrowly for the
@@ -390,6 +419,12 @@ The details belong in their reports; the following constraints remain active:
   seven observed market tapes lost both seats to Kaito v21 and created fresh
   state-compatibility failures. Retain the production topology only as source
   material for bounded motifs and public-state market-exposure suppression.
+- `research/dual_incumbent_topology_search_2026-08-14/async_v3/e1c_decision.md`:
+  stop E1 expansion. Carry the one-block Boatlee candidate into E2 unchanged;
+  treat the v27 high-upside topology only as a public-selector branch. Exclude
+  the retained v27 economic no-op from all efficacy frontiers. E1c reused
+  consumed seeds and is hypothesis/selection evidence, not a fresh promotion
+  screen.
 - `reports/hypothesis_cycle_2026-08-10.md`: scale-only, opening-only, one-day
   commitment, modal-route imitation, and fixed-tape continuation were not
   sufficient. Do not restart them without a distinct mechanism and protocol.
@@ -425,6 +460,8 @@ Use the narrowest source that answers the question:
 | Top-50 replay metadata | `data/public_replays/top50-2026-08-09/README.md` |
 | Downloaded public opponents | `research/public_agents/README.md` |
 | Archived artifact map | `ARCHIVE.md` |
+| Async V3 implementation and E1c outcome | `research/dual_incumbent_topology_search_2026-08-14/async_v3/README.md`, `research/dual_incumbent_topology_search_2026-08-14/async_v3/e1c_decision.md` |
+| E2 authority, candidates, and formal boundary | `research/dual_incumbent_topology_search_2026-08-14/e2/README.md`, `research/dual_incumbent_topology_search_2026-08-14/e2/candidate_registry.json`, `research/dual_incumbent_topology_search_2026-08-14/e2/runbook.md` |
 
 The external archive is at
 `C:\Users\wurre\Desktop\Kaggriculture-archive\2026-08-10`. Read `ARCHIVE.md`

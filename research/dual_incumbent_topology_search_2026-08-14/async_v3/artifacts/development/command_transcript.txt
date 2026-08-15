@@ -1,0 +1,8 @@
+Kaggriculture Async V3 development command transcript
+verify --technical-seed 811407 --workers 4 --compare-workers 1
+fixture validation (read-only)
+control reproducibility both lanes/seats
+finalist fast/standalone parity both lanes/seats
+spawn scheduler 1-vs-4 and failure audit
+frozen formal preflight/status/dry-mock pipeline (no E1c engine game)
+pass=true

@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "kind": "e2_s1_protocol_template",
+  "status": "contract_only",
+  "formal_authorized": false,
+  "formal_fresh_seeds_executed": false,
+  "evaluation_seeds": [],
+  "technical_seed": 811407,
+  "seats": [0, 1],
+  "opponents": [
+    "kaito_v21",
+    "other_incumbent",
+    "roman_lb950",
+    "saiteja_3000"
+  ],
+  "lanes": {
+    "boatlee_v16_rc2_market_relay": {
+      "control": "lane_incumbent",
+      "candidates": ["ac_3aa759d7d7fc4a409c409326"],
+      "pool_with_other_lane": false
+    },
+    "v27_current_meta": {
+      "control": "lane_incumbent",
+      "candidates": [],
+      "diagnostic_probe": "ac_46448f767f398cc4ce8047d3",
+      "max_selector_candidates": 2,
+      "pool_with_other_lane": false
+    }
+  },
+  "seed_registry": null,
+  "engine_fingerprint": null,
+  "control_hashes": null,
+  "candidate_registry_sha256": null,
+  "job_manifest_sha256": null,
+  "stop_rule": {
+    "infrastructure_failure_scores": false,
+    "failed_candidate_stops_direction": false,
+    "repair_creates_new_version": true,
+    "later_tier_unlock_requires_complete_gate": true
+  }
+}

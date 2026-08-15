@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "kind": "e2_candidate_registry",
+  "status": "frozen_e1c_inputs_no_fresh_seed_authorized",
+  "source_run": {
+    "run_id": "async_e1c_20260815_expanded_v1",
+    "repo_head_at_run": "2e9032188c84fd5401f7b2d4da9869ad2023a1a3",
+    "implementation_bundle_sha256": "f29aa44cee51dd05c4bd1d65e139b5f402239fb68baf12a91d57e3469a4a1f3e",
+    "search_summary_path": "research/dual_incumbent_topology_search_2026-08-14/async_v3/artifacts/formal/async_e1c_20260815_expanded_v1/search_summary.json",
+    "search_summary_file_sha256": "fa0b2ee3ea9105b236352e17757ddb36d226fd81cef18d4acf53008fc7fa837b",
+    "search_summary_canonical_sha256": "5f70c83f1b94fa2d9eafcdd0811ee751f4d824dcdea9a39085439ed08a73a5b1",
+    "manifest_file_sha256": "68e561b2ea18c92c5954c8878efea0aa877e20a4c8e1693cf15913294f7e2f86",
+    "manifest_canonical_sha256": "eabc538ce8962fc073036d5443e058db3593fdb64cb538b827bad57b2cd2f1ea",
+    "protocol_file_sha256": "e264a120385e3916757df6de52b94c49b508ee32264367f17c8f03e04f4e81fa",
+    "launch_file_sha256": "3979442dafaa2d8216390c59da0e19ae09f0d14cc19dee3a7d62c59a07b91b85",
+    "evaluation_seeds": [81426017, 81426029],
+    "seed_classification": "retained_consumed",
+    "formal_fresh_seeds_executed": false,
+    "candidate_contexts": 5776,
+    "control_contexts": 16,
+    "workers": 15
+  },
+  "engine": {
+    "commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+    "python_blob": "4b78842d0f2d4abf6e318a8248b6306454f5c714",
+    "python_sha256": "fb9215c5e21a25243e2d13e75b3d70a79cf7d78fff150a90f1bb5eacf9ba2bcf",
+    "configuration_blob": "0fcdf2c14c47d3bdc821c02e26263956cf0fd3d8",
+    "configuration_sha256": "7f196f4aaf9b4e482fbd61ba4bf19f5cec4da0f81938ece756954035a65c0bb5"
+  },
+  "lanes": {
+    "boatlee_v16_rc2_market_relay": {
+      "candidate_id": "ac_3aa759d7d7fc4a409c409326",
+      "candidate_payload_sha256": "3aa759d7d7fc4a409c4093266bc1768d14e9486b1836a60551ba177196cb72a8",
+      "genome_id": "ag_a121331bd381c37caa2929c3",
+      "generation": 0,
+      "role": "fixed_e2_finalist",
+      "genome": {
+        "schema_version": 3,
+        "lane": "boatlee_v16_rc2_market_relay",
+        "route_blocks": [
+          {
+            "source_tape": "59e6cf8aa76737b50cf27e3059bb75d6095b88f8e93e70a888487ca5c63efd0c",
+            "start": 237,
+            "end": 245,
+            "channels": ["market"],
+            "motif_id": "motif_3817688fdae902b8afc85a94"
+          }
+        ],
+        "market_edits": [],
+        "constants": []
+      },
+      "effective_patches": {
+        "240": [
+          ["SELL", "WOOL", 18],
+          ["BUY_LAND"],
+          ["HIRE"], ["HIRE"], ["HIRE"], ["HIRE"], ["HIRE"], ["HIRE"], ["HIRE"]
+        ],
+        "241": [
+          ["SELL", "FERTILIZER", 16],
+          ["HIRE"], ["HIRE"], ["HIRE"], ["HIRE"], ["HIRE"], ["HIRE"],
+          ["BUY_SEED", "MELON", 7],
+          ["HIRE"]
+        ]
+      },
+      "metrics": {
+        "contexts": 8,
+        "mean_paired_margin": 307.125,
+        "worst_paired_margin": 6.0,
+        "mean_own_bank_delta": 1059.0,
+        "actual_win_delta": 0,
+        "opponent_nonnegative_families": 2,
+        "complexity": 1
+      },
+      "standalone_path": "research/dual_incumbent_topology_search_2026-08-14/async_v3/artifacts/formal/async_e1c_20260815_expanded_v1/finalists/boatlee_v16_rc2_market_relay/ac_3aa759d7d7fc4a409c409326/main.py",
+      "standalone_sha256": "54ce17ad14ef49aaa6c985ccd4245e06c82a450b39de65b9f14c412b3c7930c6"
+    },
+    "v27_current_meta": {
+      "candidate_id": "ac_46448f767f398cc4ce8047d3",
+      "candidate_payload_sha256": "46448f767f398cc4ce8047d376ec98060bfa4ed255ba0b6ab18bcaed6aef6dd8",
+      "genome_id": "ag_99e7330b862fa8861fa20cff",
+      "generation": 1,
+      "role": "diagnostic_probe_and_selector_branch_only",
+      "genome": {
+        "schema_version": 3,
+        "lane": "v27_current_meta",
+        "route_blocks": [
+          {
+            "source_tape": "96e614d6325f18b367cd6a88e833d5ba2be8563dbecd0c1a26f49e06af21a0f8",
+            "start": 492,
+            "end": 499,
+            "channels": ["market"],
+            "motif_id": "motif_a257aaa43f096f02e5c49206"
+          },
+          {
+            "source_tape": "ef50a2a2de971f3b4cd33c7399547ff36cef90bd998f480f551359ede57cadcb",
+            "start": 0,
+            "end": 7,
+            "channels": ["market"],
+            "motif_id": "motif_9e7ebe01b17d274eb36ab8d6"
+          }
+        ],
+        "market_edits": [
+          {
+            "step": 0,
+            "sequence": 0,
+            "operation": "insert",
+            "queue_index": 0,
+            "target_index": null,
+            "order": ["SELL", "WOOL", 2],
+            "guard": null
+          },
+          {
+            "step": 0,
+            "sequence": 1,
+            "operation": "replace",
+            "queue_index": 1,
+            "target_index": 0,
+            "order": ["BUY_ANIMAL", "COW", 2],
+            "guard": null
+          },
+          {
+            "step": 0,
+            "sequence": 2,
+            "operation": "replace",
+            "queue_index": 1,
+            "target_index": 0,
+            "order": ["HIRE"],
+            "guard": null
+          }
+        ],
+        "constants": []
+      },
+      "effective_patches": {
+        "0": [
+          ["HIRE"],
+          ["BUY_PRODUCT", "WHEAT", 11],
+          ["HIRE"], ["HIRE"], ["HIRE"], ["HIRE"],
+          ["BUY_ANIMAL", "COW", 1],
+          ["BUY_ANIMAL", "SHEEP", 4],
+          ["BUY_SEED", "MELON", 5],
+          ["BUY_SEED", "WHEAT", 5]
+        ],
+        "494": []
+      },
+      "metrics": {
+        "contexts": 8,
+        "mean_paired_margin": 11251.125,
+        "worst_paired_margin": -6131.0,
+        "mean_own_bank_delta": 19247.0,
+        "actual_win_delta": 4,
+        "opponent_nonnegative_families": 1,
+        "complexity": 5
+      },
+      "standalone_path": null,
+      "standalone_sha256": null,
+      "materialization_required_before_e2_s1": true
+    }
+  },
+  "negative_regressions": [
+    {
+      "candidate_id": "ac_bad79e4d71965c86b6b351a1",
+      "candidate_payload_sha256": "bad79e4d71965c86b6b351a1e6565dc1169be210f7bd5b2eeb5622ab8aae0198",
+      "lane": "v27_current_meta",
+      "classification": "economic_noop_excluded_from_all_efficacy_frontiers",
+      "contexts": 8,
+      "action_changed_contexts": 8,
+      "mean_paired_margin": 0.0,
+      "worst_paired_margin": 0.0,
+      "mean_own_bank_delta": 0.0,
+      "actual_win_delta": 0,
+      "standalone_path": "research/dual_incumbent_topology_search_2026-08-14/async_v3/artifacts/formal/async_e1c_20260815_expanded_v1/finalists/v27_current_meta/ac_bad79e4d71965c86b6b351a1/main.py",
+      "standalone_sha256": "b8b2aa6894ff75c9dac8d36d37609e5591d3a5f0c167afde8002fc9fe5b9bc69"
+    }
+  ],
+  "e2_fresh_seeds": [],
+  "formal_fresh_seeds_executed": false
+}
