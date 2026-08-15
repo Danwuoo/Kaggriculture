@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "kind": "e2_s2_remediation_candidate_registry",
+  "status": "ready_for_fresh_confirmation_not_authorized",
+  "source_decision": "s2_decision.json",
+  "new_formal_fresh_seeds_executed": false,
+  "lanes": {
+    "boatlee_v16_rc2_market_relay": {
+      "original_candidate": {
+        "candidate_id": "ac_3aa759d7d7fc4a409c409326",
+        "standalone_sha256": "54ce17ad14ef49aaa6c985ccd4245e06c82a450b39de65b9f14c412b3c7930c6",
+        "mutation": null,
+        "role": "preserved_s2_failed_tail_reference"
+      },
+      "diagnostic_ablations": {
+        "step_240_only": {
+          "candidate_id": "ac_501500daa79fcb8068244d0e",
+          "standalone_sha256": "ce0b39a41b6f591a90563a78ba95537d69c3a44d09fabcebbf4da9edab5c722d",
+          "patch_steps": [240],
+          "role": "consumed_seed_attribution_only",
+          "efficacy_claim": null
+        },
+        "step_241_only": {
+          "candidate_id": "ac_a85701baf0cd39d61ab067d3",
+          "standalone_sha256": "13ac97f6f9c311b52e18ca42ffc1916e09ba12f2dd4aba7fd0f525ba63c5101c",
+          "patch_steps": [241],
+          "role": "consumed_seed_attribution_only",
+          "efficacy_claim": null
+        }
+      },
+      "frozen_selector": {
+        "candidate_id": "e2boatlee_7f591d609cf14d89e6aa1599",
+        "standalone_sha256": "b4ef9bff8cbba2dfaccacc320a32f707006158fcf905c02db02ad89fe0f6099a",
+        "bytes": 43186,
+        "role": "e2_s2_remediation_public_selector",
+        "decision_step": 240,
+        "intervention_step": 241,
+        "intervention": "step_241_only_fertilizer_branch",
+        "thresholds": {
+          "max_fertilizer_price": 84,
+          "min_fertilizer_inventory": 10082
+        },
+        "features": [
+          "step",
+          "player",
+          "market.prices.FERTILIZER",
+          "market.inventory.FERTILIZER"
+        ],
+        "fallback": "boatlee_incumbent",
+        "rejoin_step": 242,
+        "opponent_identity_used": false,
+        "private_opponent_information_used": false,
+        "efficacy_claim": null,
+        "diagnostic_validation": {
+          "consumed_contexts": 48,
+          "branch_counts": {"intervene": 36, "incumbent": 12},
+          "paired_margin_wdl": [36, 12, 0],
+          "mean_paired_margin": 273.8958333333333,
+          "worst_paired_margin": 0.0,
+          "exact_prediction_parity": true
+        }
+      }
+    },
+    "v27_current_meta": {
+      "status": "stopped_at_s1_no_efficacy",
+      "remediation_candidates": [],
+      "games": 0
+    }
+  },
+  "frozen_selector_versions": 1,
+  "max_selector_versions": 2,
+  "pool_lanes": false,
+  "later_tier_launched": false,
+  "registry_sha256": "e79dcddd5366814b121816fe94c860a3b39e664cb283b1a97e649d00c4ffa232"
+}

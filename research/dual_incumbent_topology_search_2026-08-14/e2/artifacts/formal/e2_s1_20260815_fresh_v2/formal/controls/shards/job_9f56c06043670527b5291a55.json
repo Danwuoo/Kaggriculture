@@ -1,0 +1,1 @@
+{"efficacy":null,"infrastructure_failure":{"detail":"A process in the process pool was terminated abruptly while the future was running or pending.","type":"worker"},"job_id":"job_9f56c06043670527b5291a55","shard_sha256":"fe9c8a187aac512eb3cd1689e2c58ee42391ec9a4a039b32762de8c744ba80e7","status":"infrastructure_failed"}

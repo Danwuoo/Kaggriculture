@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "kind": "e2_s1_decision",
+  "source_run": "e2_s1_20260815_fresh_v4",
+  "source_summary_file_sha256": "2f7113c9fc5eb102b224fb503dd03a61dc54824c20f4061def09957967d929fb",
+  "source_summary_canonical_sha256": "632c4e8e06b7825833249f6218de920f1c4ae38a24e059899fb834040dfcfaf1",
+  "source_checkpoint_file_sha256": "7e5209272d5869e782d68709c6464124016e63486ae1854f73900cef19eb9e66",
+  "source_checkpoint_canonical_sha256": "32d2d9990e6fe05d3a609726505448a0c93a716e83262f7bab3ff02c92f7815c",
+  "formal_fresh_seeds_executed": true,
+  "lanes": {
+    "boatlee_v16_rc2_market_relay": {
+      "candidate_id": "ac_3aa759d7d7fc4a409c409326",
+      "decision": "ADVANCE_TO_E2_S2_TAIL_CHARACTERIZATION",
+      "contexts": 16,
+      "paired_margin_wdl": [15, 0, 1],
+      "actual_win_delta": 0,
+      "mean_paired_margin": 170.875,
+      "mean_own_bank_delta": 784.0,
+      "worst_paired_margin": -3197.0,
+      "by_opponent_mean_margin": {
+        "kaito_v21": 268.0,
+        "other_incumbent": 225.5,
+        "roman_lb950": -34.5,
+        "saiteja_3000": 224.5
+      },
+      "downside_attribution": {
+        "context": {"opponent": "roman_lb950", "seed": 73912654, "seat": 0},
+        "candidate_own_bank_delta": -7411.0,
+        "opponent_bank_delta": -4214.0,
+        "paired_margin_delta": -3197.0,
+        "candidate_receipt_revenue": 160083.0,
+        "control_receipt_revenue": 167476.0,
+        "receipt_revenue_delta": -7393.0,
+        "candidate_extra_shed_overflow_units": 2,
+        "crop_death_delta": 0,
+        "animal_escape_delta": 0,
+        "mechanism": "step-241 fertilizer sale changed public market state and opponent actions, cascading into materially lower late milk receipts",
+        "classification": "attributed_interaction_specific_market_tail_not_strategy_wide_runtime_collapse"
+      },
+      "s2_candidate_mutation": null
+    },
+    "v27_current_meta": {
+      "candidate_id": "e2v27_8b3ebcb128a4f4709ea94ce3",
+      "decision": "CURRENT_SELECTOR_NO_EFFICACY_STOP",
+      "contexts": 16,
+      "selector_branches": {"incumbent": 14, "suppress_buy": 2},
+      "effective_contexts": 2,
+      "paired_margin_wdl": [0, 16, 0],
+      "actual_win_delta": 0,
+      "mean_paired_margin": 0.0,
+      "mean_own_bank_delta": 0.0,
+      "worst_paired_margin": 0.0,
+      "s2_candidate": null,
+      "reason": "both fresh intervention labels changed receipts/public state but produced zero terminal bank or margin gain"
+    }
+  },
+  "overall_decision": "ADVANCE_BOATLEE_ONLY_TO_E2_S2",
+  "pool_lanes": false,
+  "later_tier_launched": false,
+  "s1_decision_sha256": "b3d683daa57e54ecd25e9e1cddf10e2df31ffc23506f5335fb3eace043fe0f9e"
+}

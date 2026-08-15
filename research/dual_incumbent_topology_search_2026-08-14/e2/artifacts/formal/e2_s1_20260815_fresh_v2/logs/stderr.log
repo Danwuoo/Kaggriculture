@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "C:\Users\wurre\.codex\worktrees\7adf\Kaggriculture\research\dual_incumbent_topology_search_2026-08-14\e2\formal_s1.py", line 657, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\wurre\.codex\worktrees\7adf\Kaggriculture\research\dual_incumbent_topology_search_2026-08-14\e2\formal_s1.py", line 652, in main
+    result = run(args.output_root, args.workers, args.execute_s1)
+  File "C:\Users\wurre\.codex\worktrees\7adf\Kaggriculture\research\dual_incumbent_topology_search_2026-08-14\e2\formal_s1.py", line 565, in run
+    raise RuntimeError("control phase incomplete; candidate phase not launched")
+RuntimeError: control phase incomplete; candidate phase not launched

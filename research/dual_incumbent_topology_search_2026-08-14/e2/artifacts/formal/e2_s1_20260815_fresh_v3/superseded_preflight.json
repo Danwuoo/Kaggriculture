@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "kind": "e2_s1_superseded_preflight",
+  "run_id": "e2_s1_20260815_fresh_v3",
+  "status": "preflight_only_not_launched",
+  "reason": "formal-v4 adds a Windows spawn-worker opponent import smoke before relaunch",
+  "formal_fresh_seeds_executed": false,
+  "efficacy": null,
+  "later_tier_launched": false
+}

@@ -48,6 +48,16 @@ Freeze at most two selector versions for E2 S1. Each version receives a new
 lane-local candidate ID and includes its exact feature list, thresholds,
 fallback, and causal lineage.
 
+### User-authorized delayed-intervention amendment
+
+The initial implementation falsified exact-probe selection at step 0 because
+all legal standard-start public features were invariant across the favorable
+and adverse retained contexts. Keep the exact probe as a diagnostic comparator.
+Develop one new candidate that preserves the incumbent until step 494, removes
+only `BUY_PRODUCT WHEAT 2` under frozen public wheat scarcity thresholds, and
+rejoins at step 495. Treat its S1 purpose as fresh-label acquisition; do not
+transfer the exact probe's E1c efficacy metrics to it.
+
 ## 4. Exact evaluator and scheduler reuse
 
 Reuse the verified Async V3 exact-engine loader, lane-relative controls,
