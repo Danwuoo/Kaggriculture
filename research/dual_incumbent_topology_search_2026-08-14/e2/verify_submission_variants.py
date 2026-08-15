@@ -77,20 +77,25 @@ def verify() -> dict[str, Any]:
                         "other_incumbent",
                         TECHNICAL_SEED,
                         seat,
+                        policy_factory=lambda module, _agent, _seat: getattr(
+                            module, "_kaggle_submission_entrypoint"
+                        ),
                         capture_trace=False,
                     )
                     games.append(_technical_view(run.summary, seat))
             audit = static_audit(source)
             checks = {
                 "directory_contains_only_main_py": entries == ["main.py"],
-                "hash_matches_frozen_candidate": _sha256(source) == metadata["sha256"],
+                "hash_matches_frozen_package": _sha256(source) == metadata["sha256"],
                 "under_5_mib": source.stat().st_size < 5 * 1024 * 1024,
                 "isolated_import": imported == {"callable_agent": True, "isolated": True},
+                "server_entrypoint_present": "def _kaggle_submission_entrypoint(" in source.read_text(encoding="utf-8"),
                 "standard_library_contract": audit["pass"],
-                "both_seats_official_engine": all(game["pass"] for game in games),
+                "both_seats_official_engine_via_server_entrypoint": all(game["pass"] for game in games),
             }
             variants[name] = {
                 "candidate_id": metadata["candidate_id"],
+                "strategy_sha256": metadata["strategy_sha256"],
                 "path": str(source),
                 "bytes": source.stat().st_size,
                 "sha256": _sha256(source),
@@ -118,7 +123,8 @@ def verify() -> dict[str, Any]:
         "build": build_result,
         "variants": variants,
         "formal_fresh_seeds_executed": False,
-        "kaggle_submission_executed": False,
+        "kaggle_submission_executed_by_verifier": False,
+        "external_submission_evidence": "submission_server_verification.json",
         "pass": all(row["pass"] for row in variants.values()),
     }
     payload["verification_sha256"] = payload_hash(payload)

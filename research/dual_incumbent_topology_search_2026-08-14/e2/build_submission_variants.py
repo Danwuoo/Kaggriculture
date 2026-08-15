@@ -31,14 +31,20 @@ VARIANTS = {
     "public_selector": {
         "candidate_id": "e2boatlee_7f591d609cf14d89e6aa1599",
         "directory": ROOT / "submission" / "e2_boatlee_public_selector",
-        "sha256": "b4ef9bff8cbba2dfaccacc320a32f707006158fcf905c02db02ad89fe0f6099a",
+        "strategy_sha256": "b4ef9bff8cbba2dfaccacc320a32f707006158fcf905c02db02ad89fe0f6099a",
+        "sha256": "17b149a652b3c7ebb7d46482ecff3f81103f65287409d3281cd732bca86451f6",
     },
     "step_241_only": {
         "candidate_id": "ac_a85701baf0cd39d61ab067d3",
         "directory": ROOT / "submission" / "e2_boatlee_step_241_only",
-        "sha256": "13ac97f6f9c311b52e18ca42ffc1916e09ba12f2dd4aba7fd0f525ba63c5101c",
+        "strategy_sha256": "13ac97f6f9c311b52e18ca42ffc1916e09ba12f2dd4aba7fd0f525ba63c5101c",
+        "sha256": "3fdef34507528484cbad579e2d8c5e8bc831bf5493e95e720cd111a971b68634",
     },
 }
+SERVER_ENTRYPOINT = """
+def _kaggle_submission_entrypoint(obs, configuration=None):
+    return agent(obs, configuration)
+"""
 
 
 def _sha256(content: bytes) -> str:
@@ -54,18 +60,34 @@ def render_variants() -> dict[str, bytes]:
     if ablation.candidate_id != VARIANTS["step_241_only"]["candidate_id"]:
         raise RuntimeError("step-241-only identity drifted")
 
-    rendered = {
+    strategy = {
         "public_selector": render_selector(
             BASE.read_text(encoding="utf-8"), selector
         ).encode("utf-8"),
         "step_241_only": render_standalone(ablation).encode("utf-8"),
+    }
+    for name, content in strategy.items():
+        observed = _sha256(content)
+        expected = str(VARIANTS[name]["strategy_sha256"])
+        if observed != expected:
+            raise RuntimeError(
+                f"{name} strategy artifact drifted: expected {expected}, observed {observed}"
+            )
+    rendered = {
+        name: (
+            content.decode("utf-8").rstrip()
+            + "\n\n"
+            + SERVER_ENTRYPOINT.strip()
+            + "\n"
+        ).encode("utf-8")
+        for name, content in strategy.items()
     }
     for name, content in rendered.items():
         observed = _sha256(content)
         expected = str(VARIANTS[name]["sha256"])
         if observed != expected:
             raise RuntimeError(
-                f"{name} artifact drifted: expected {expected}, observed {observed}"
+                f"{name} package artifact drifted: expected {expected}, observed {observed}"
             )
     return rendered
 
@@ -93,9 +115,11 @@ def build(*, check: bool) -> dict[str, Any]:
             target.write_bytes(content)
         results[name] = {
             "candidate_id": metadata["candidate_id"],
+            "strategy_sha256": metadata["strategy_sha256"],
             "path": str(target),
             "bytes": len(content),
             "sha256": _sha256(content),
+            "server_entrypoint": "_kaggle_submission_entrypoint",
             "directory_entries": sorted(path.name for path in directory.iterdir()),
             "check": check,
         }

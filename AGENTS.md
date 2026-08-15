@@ -19,31 +19,53 @@ gain that hides a regression on either line. They may share hypotheses, test
 harnesses, and offline analysis, but their runtime modules, routes, generated
 artifacts, controls, and evidence must remain independently attributable.
 
-### Current topology-search state: E1c complete, E2 development next
+### Current topology-search state: E2 remediation complete
 
-The Async V3 E1c retained-seed search completed on 2026-08-15. Do not restart
-or broaden E1 merely because its population code remains available. Its search
-surface saturated: the useful Boatlee result appeared in generation 0 and the
-v27 high-upside result in generation 1, with no late-generation improvement.
+Async V3 E1c and contract-scoped E2 development, S1, S2, and remediation
+completed on 2026-08-15. Do not restart or broaden E1 merely because its
+population code remains available. Read
+`research/dual_incumbent_topology_search_2026-08-14/e2/research_summary.md`
+before extending this program.
 
-The next authorized work is contract-scoped E2 development under
-`research/dual_incumbent_topology_search_2026-08-14/e2/`. It has two independent
-lane roles:
+The E2 lane decisions remain independent:
 
-- Boatlee fixed finalist `ac_3aa759d7d7fc4a409c409326`, a one-block market
-  route over steps 237--245;
-- v27 diagnostic probe `ac_46448f767f398cc4ce8047d3`, used only as a branch
-  for a public-state selector, never as an always-on promoted candidate.
+- v27 stopped at S1. Its delayed public selector changed receipts/public state
+  in two fresh contexts but produced zero terminal paired-margin and own-bank
+  change in all 16 contexts. The probe `ac_46448f767f398cc4ce8047d3` remains
+  diagnostic-only, and there is no v27 E2 remediation candidate.
+- Boatlee finalist `ac_3aa759d7d7fc4a409c409326` advanced through S1 but its
+  always-on step-240/241 market block failed S2 because of a repeatable
+  Roman/seat-sensitive public-market tail. Do not promote or resume that
+  always-on form.
+- Boatlee remediation froze one public-state selector,
+  `e2boatlee_7f591d609cf14d89e6aa1599`. It conditionally applies only the exact
+  step-241 fertilizer branch using public fertilizer price and inventory, then
+  rejoins the incumbent at step 242. Its 36/12/0 result uses consumed contexts
+  and is diagnostic fit, not fresh efficacy; public-state proxy overfit remains
+  the unresolved risk.
+- `ac_a85701baf0cd39d61ab067d3`, the step-241-only ablation, remains a diagnostic
+  comparator with a known Roman tail and is excluded from efficacy frontiers.
 
-The v27 E1c representative `ac_bad79e4d71965c86b6b351a1` is an economic no-op
-counterexample. An action-digest difference alone is no longer sufficient for
-behavior-change, efficacy, frontier, or finalist eligibility. Require an
-executed receipt, public/economic state, terminal bank/reward, or attributed
-economic-diagnostic difference relative to the lane control.
+E1c seeds `81426017` and `81426029` and E2 formal seeds `42284410`, `73912654`,
+`95715007`, `41193493`, `61594307`, and `58893729` are consumed. No
+post-remediation fresh confirmation seed has been selected or executed. The
+next possible efficacy action is a separately authorized smallest paired fresh
+confirmation of the frozen Boatlee selector; v27 remains stopped and must not
+be pooled into that decision.
 
-E1c used only previously consumed seeds `81426017` and `81426029`.
-`formal_fresh_seeds_executed=false` for E1c, and no E2 fresh seed has been
-selected or executed. E2 development does not authorize E2 S1 launch.
+The user separately authorized technical Kaggle submissions of the frozen
+selector and step-241-only comparator. After a packaging-only repair added the
+required `_kaggle_submission_entrypoint` without changing strategy bytes, both
+completed 720-state Kaggle server validation replays with `DONE/DONE` and 690
+non-pass actions per seat. This is runtime/packaging evidence only, not
+promotion or fresh-efficacy evidence. See
+`research/dual_incumbent_topology_search_2026-08-14/e2/submission_server_verification.json`.
+
+The v27 E1c representative `ac_bad79e4d71965c86b6b351a1` is the permanent
+economic no-op counterexample. An action-digest difference alone is not
+sufficient for behavior-change, efficacy, frontier, or finalist eligibility.
+Require an executed receipt, public/economic state, terminal bank/reward, or
+attributed economic-diagnostic difference relative to the lane control.
 
 `v27_current_meta_safety_guarded/` is retained as a useful reference variant,
 not a third active development line. The multi-file `submission/` tree is the
@@ -70,23 +92,29 @@ support required by the strategy experiment. Do not treat model complexity,
 graph structure, or a shared abstraction as progress without a separately
 measured strategy gain on both incumbents.
 
-The leading concrete lane is a dual-incumbent temporal residual over an 8- to
-48-turn horizon, informed by the high-output 8-cow/4-sheep topology but not by
-full route cloning. It should let feed, water, harvest, shipping, shed capacity,
-sale timing, deliberate asset abandonment, and time-shifted market preemption
-compete through explicit opportunity cost. Its first discriminating target is
-the public-market externality exposed by the 2026-08-13 high-score refresh:
-retain locally valuable production motifs while suppressing sales or production
-timing that creates more value for the opponent. The decision must use public
-state rather than opponent identity.
+The immediate concrete lane is the smallest fresh paired confirmation of the
+frozen Boatlee fertilizer selector, and only after separate authorization. Its
+discriminating question is whether fertilizer price and inventory identify a
+genuinely reusable public-market boundary rather than merely proxying the
+consumed Roman contexts. Preserve the exact selector bytes and thresholds,
+stratify both seats and opponent families, and stop on a renewed
+Roman/seat-sensitive tail. Kaggle public score and mirrored server validation
+cannot substitute for this matched evidence.
+
+v27 remains a first-class incumbent and control, but its E2 lane is stopped.
+Do not revive its zero-terminal-effect selector or create a shared
+dual-incumbent residual until a distinct bounded hypothesis supplies a causal
+intervention and falsifying outcome for v27 separately. If the Boatlee fresh
+confirmation passes, its result remains Boatlee-local unless separately tested
+on v27.
 
 Asset survival has no special status in that comparison: losing an animal or
 crop can be the rational choice when its remaining value is below the work,
-timing, capacity, or capital it consumes. A graph model is one ablation, not the
-assumed solution: compare it with a flat model and a simple greedy/value rule.
-A shared residual must condition on incumbent identity and state, rejoin the
-relevant incumbent legally, and earn its value separately on both strategy
-families.
+timing, capacity, or capital it consumes. For future bounded temporal
+residuals, compare any graph model with a flat model and a simple greedy/value
+rule. A shared residual, if later justified, must condition on incumbent
+identity and state, rejoin the relevant incumbent legally, and earn its value
+separately on both strategy families.
 
 Prefer a complete, tested, standalone, submission-ready change over a plan or
 an abstract framework. Continue through implementation, official-engine games,
@@ -110,7 +138,8 @@ read in this order:
 6. For topology-search or E2 work, the Async V3 README, E1c decision, E2
    README, candidate registry, implementation plan, acceptance contract, and
    runbook in their declared order.
-7. The decision record for the mechanism being extended or challenged.
+7. The E2 research summary, then the decision record and machine-readable
+   artifact for the mechanism or gate being extended or challenged.
 
 Read `strategy.md` and the relevant `submission/` modules only when changing or
 using the legacy production control. Read archived reports narrowly for the
@@ -166,12 +195,18 @@ trees and ensure neither generated artifact imports it.
 
 Every generated `main.py` must:
 
-- expose `agent(obs)` from archive root;
+- expose `agent(obs)` for the local harness;
 - be self-contained and standard-library-only;
 - have no runtime filesystem, network, subprocess, or local checkout
   assumptions;
 - preserve seat-isolated episode state and reset on step zero or rewind;
 - remain below the competition package and runtime limits.
+
+Every `main.py` packaged for Kaggle must additionally expose
+`_kaggle_submission_entrypoint(obs, configuration=None)` at archive root and
+delegate it directly to `agent`. Exercise that exact server entrypoint in local
+official-engine verification; testing only `agent` is insufficient packaging
+evidence.
 
 `v27_current_meta_safety_guarded/main.py` remains authoritative for that
 reference variant until a separately validated decompression is performed.
@@ -425,6 +460,17 @@ The details belong in their reports; the following constraints remain active:
   the retained v27 economic no-op from all efficacy frontiers. E1c reused
   consumed seeds and is hypothesis/selection evidence, not a fresh promotion
   screen.
+- `research/dual_incumbent_topology_search_2026-08-14/e2/s1_decision.md` and
+  `research/dual_incumbent_topology_search_2026-08-14/e2/s2_decision.md`: v27
+  stopped for zero terminal efficacy. The unchanged
+  Boatlee finalist advanced through S1, then its always-on block failed S2
+  because one positive Roman outlier hid a negative remaining mean and a
+  repeatable Roman/seat-sensitive public-market tail.
+- `research/dual_incumbent_topology_search_2026-08-14/e2/remediation_decision.md`:
+  retain only frozen selector `e2boatlee_7f591d609cf14d89e6aa1599` for a
+  separately authorized fresh confirmation. Its 36/12/0 consumed-context fit
+  is not promotion evidence. Keep step-241-only as an unsafe diagnostic
+  comparator, and do not use either Kaggle server smoke as efficacy evidence.
 - `reports/hypothesis_cycle_2026-08-10.md`: scale-only, opening-only, one-day
   commitment, modal-route imitation, and fixed-tape continuation were not
   sufficient. Do not restart them without a distinct mechanism and protocol.
@@ -461,7 +507,9 @@ Use the narrowest source that answers the question:
 | Downloaded public opponents | `research/public_agents/README.md` |
 | Archived artifact map | `ARCHIVE.md` |
 | Async V3 implementation and E1c outcome | `research/dual_incumbent_topology_search_2026-08-14/async_v3/README.md`, `research/dual_incumbent_topology_search_2026-08-14/async_v3/e1c_decision.md` |
+| E2 consolidated outcome and next gate | `research/dual_incumbent_topology_search_2026-08-14/e2/research_summary.md` |
 | E2 authority, candidates, and formal boundary | `research/dual_incumbent_topology_search_2026-08-14/e2/README.md`, `research/dual_incumbent_topology_search_2026-08-14/e2/candidate_registry.json`, `research/dual_incumbent_topology_search_2026-08-14/e2/runbook.md` |
+| E2 technical packaging and Kaggle server smoke | `research/dual_incumbent_topology_search_2026-08-14/e2/submission_variant_verification.json`, `research/dual_incumbent_topology_search_2026-08-14/e2/submission_server_verification.json` |
 
 The external archive is at
 `C:\Users\wurre\Desktop\Kaggriculture-archive\2026-08-10`. Read `ARCHIVE.md`

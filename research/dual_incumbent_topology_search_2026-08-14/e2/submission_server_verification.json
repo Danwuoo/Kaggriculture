@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "kind": "e2_boatlee_kaggle_server_verification",
+  "captured_at": "2026-08-15T22:42:30+08:00",
+  "competition": "kaggriculture",
+  "purpose": "user_authorized_technical_submission_smoke",
+  "promotion_claim": false,
+  "fresh_confirmation_evidence": false,
+  "formal_fresh_seeds_executed_after_remediation": false,
+  "root_cause": {
+    "symptom": "Kaggle accepted the standalone artifact but returned PASS for every action",
+    "cause": "the generated artifact exposed agent but omitted _kaggle_submission_entrypoint",
+    "repair": "append a packaging-only adapter that delegates to agent(obs, configuration)",
+    "strategy_bytes_changed": false
+  },
+  "diagnostic_submissions": [
+    {
+      "submission_id": 55529498,
+      "variant": "public_selector",
+      "packaging": "raw_main_py_without_server_entrypoint",
+      "validation_episode_id": 93329735,
+      "status": "COMPLETE",
+      "nonpass_actions_per_seat": [0, 0],
+      "classification": "invalid_runtime_smoke_not_efficacy_evidence"
+    },
+    {
+      "submission_id": 55529549,
+      "variant": "public_selector",
+      "packaging": "archive_without_server_entrypoint",
+      "validation_episode_id": 93330628,
+      "status": "COMPLETE",
+      "nonpass_actions_per_seat": [0, 0],
+      "classification": "invalid_runtime_smoke_not_efficacy_evidence"
+    }
+  ],
+  "verified_submissions": [
+    {
+      "variant": "public_selector",
+      "candidate_id": "e2boatlee_7f591d609cf14d89e6aa1599",
+      "submission_id": 55529631,
+      "validation_episode_id": 93331533,
+      "status": "COMPLETE",
+      "strategy_sha256": "b4ef9bff8cbba2dfaccacc320a32f707006158fcf905c02db02ad89fe0f6099a",
+      "packaged_main_sha256": "17b149a652b3c7ebb7d46482ecff3f81103f65287409d3281cd732bca86451f6",
+      "archive_sha256": "93695f87179e637e2f80094775fa24396bd7c048a3ed7d8013a8fdcc1f3d61f6",
+      "replay_sha256": "7e09415a6cc79cccf0f279d42d564240c90c2c055414ef49e5edddf9905c767d",
+      "states": 720,
+      "calls_per_seat": 719,
+      "final_statuses": ["DONE", "DONE"],
+      "final_rewards": [57528.0, 57674.0],
+      "nonpass_actions_per_seat": [690, 690],
+      "step_0_market_orders_per_seat": [9, 9],
+      "max_market_orders": 10,
+      "server_entrypoint": "_kaggle_submission_entrypoint",
+      "pass": true
+    },
+    {
+      "variant": "step_241_only",
+      "candidate_id": "ac_a85701baf0cd39d61ab067d3",
+      "submission_id": 55529790,
+      "validation_episode_id": 93333341,
+      "status": "COMPLETE",
+      "strategy_sha256": "13ac97f6f9c311b52e18ca42ffc1916e09ba12f2dd4aba7fd0f525ba63c5101c",
+      "packaged_main_sha256": "3fdef34507528484cbad579e2d8c5e8bc831bf5493e95e720cd111a971b68634",
+      "archive_sha256": "64f0384539f33576fa6e9941bce559752eca2e7bd5a4076bf6d20438a126b562",
+      "replay_sha256": "4baaa793335dc856b373d75711ea3b550a410beebdaef109ef8cf1968efb18a9",
+      "states": 720,
+      "calls_per_seat": 719,
+      "final_statuses": ["DONE", "DONE"],
+      "final_rewards": [57528.0, 57674.0],
+      "nonpass_actions_per_seat": [690, 690],
+      "step_0_market_orders_per_seat": [9, 9],
+      "max_market_orders": 10,
+      "server_entrypoint": "_kaggle_submission_entrypoint",
+      "pass": true
+    }
+  ],
+  "local_verification": {
+    "path": "research/dual_incumbent_topology_search_2026-08-14/e2/submission_variant_verification.json",
+    "verification_sha256": "71d628065307c6d11a4ee6f427d7200c5ce6c47ad67405d343be03a48e836d4b",
+    "technical_seed": 811407,
+    "technical_seed_role": "correctness_only",
+    "both_seats_via_server_entrypoint": true
+  },
+  "pass": true
+}

@@ -844,3 +844,6 @@ def agent(obs, configuration=None):
         else: state["branch"] = "incumbent"
     state["last_step"] = step
     return _e2b_project(obs, base)
+
+def _kaggle_submission_entrypoint(obs, configuration=None):
+    return agent(obs, configuration)

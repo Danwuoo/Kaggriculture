@@ -1,29 +1,33 @@
 {
   "build": {
-    "base_path": "C:\\Users\\wurre\\.codex\\worktrees\\7adf\\Kaggriculture\\research\\main_approach\\boatlee_v16_rc2_market_relay\\main.py",
-    "base_sha256": "69ce4f657df5a168c676acfa4f9089a373bc291fe3486950de0bca16ad042213",
+    "base_path": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\research\\main_approach\\boatlee_v16_rc2_market_relay\\main.py",
+    "base_sha256": "ddb78d2a829745505f31afc6ea1288e2f57d6ff534649d5f416926e8035029ea",
     "kind": "e2_boatlee_submission_variants_build",
     "schema_version": 1,
     "variants": {
       "public_selector": {
-        "bytes": 43186,
+        "bytes": 43284,
         "candidate_id": "e2boatlee_7f591d609cf14d89e6aa1599",
         "check": true,
         "directory_entries": [
           "main.py"
         ],
-        "path": "C:\\Users\\wurre\\.codex\\worktrees\\7adf\\Kaggriculture\\submission\\e2_boatlee_public_selector\\main.py",
-        "sha256": "b4ef9bff8cbba2dfaccacc320a32f707006158fcf905c02db02ad89fe0f6099a"
+        "path": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\submission\\e2_boatlee_public_selector\\main.py",
+        "server_entrypoint": "_kaggle_submission_entrypoint",
+        "sha256": "17b149a652b3c7ebb7d46482ecff3f81103f65287409d3281cd732bca86451f6",
+        "strategy_sha256": "b4ef9bff8cbba2dfaccacc320a32f707006158fcf905c02db02ad89fe0f6099a"
       },
       "step_241_only": {
-        "bytes": 45850,
+        "bytes": 45948,
         "candidate_id": "ac_a85701baf0cd39d61ab067d3",
         "check": true,
         "directory_entries": [
           "main.py"
         ],
-        "path": "C:\\Users\\wurre\\.codex\\worktrees\\7adf\\Kaggriculture\\submission\\e2_boatlee_step_241_only\\main.py",
-        "sha256": "13ac97f6f9c311b52e18ca42ffc1916e09ba12f2dd4aba7fd0f525ba63c5101c"
+        "path": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\submission\\e2_boatlee_step_241_only\\main.py",
+        "server_entrypoint": "_kaggle_submission_entrypoint",
+        "sha256": "3fdef34507528484cbad579e2d8c5e8bc831bf5493e95e720cd111a971b68634",
+        "strategy_sha256": "13ac97f6f9c311b52e18ca42ffc1916e09ba12f2dd4aba7fd0f525ba63c5101c"
       }
     }
   },
@@ -37,13 +41,14 @@
     "python_sha256": "fb9215c5e21a25243e2d13e75b3d70a79cf7d78fff150a90f1bb5eacf9ba2bcf",
     "vendor_repo": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\.vendor\\kaggle-environments"
   },
+  "external_submission_evidence": "submission_server_verification.json",
   "formal_fresh_seeds_executed": false,
-  "kaggle_submission_executed": false,
+  "kaggle_submission_executed_by_verifier": false,
   "kind": "e2_boatlee_submission_variants_verification",
   "opponent": {
     "lane": "v27_current_meta",
-    "path": "C:\\Users\\wurre\\.codex\\worktrees\\7adf\\Kaggriculture\\research\\main_approach\\v27_current_meta\\main.py",
-    "sha256": "ec7d384806d4717b91c8f7f8da20710b054fdcb729abd767328c7520fa01bec0"
+    "path": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\research\\main_approach\\v27_current_meta\\main.py",
+    "sha256": "063128bf765f6a6bb29ecaccc3a7dae8943e35e46c26a6364a1b3169313b9fb4"
   },
   "pass": true,
   "schema_version": 1,
@@ -51,13 +56,14 @@
   "technical_seed_role": "correctness_only",
   "variants": {
     "public_selector": {
-      "bytes": 43186,
+      "bytes": 43284,
       "candidate_id": "e2boatlee_7f591d609cf14d89e6aa1599",
       "checks": {
-        "both_seats_official_engine": true,
+        "both_seats_official_engine_via_server_entrypoint": true,
         "directory_contains_only_main_py": true,
-        "hash_matches_frozen_candidate": true,
+        "hash_matches_frozen_package": true,
         "isolated_import": true,
+        "server_entrypoint_present": true,
         "standard_library_contract": true,
         "under_5_mib": true
       },
@@ -83,11 +89,11 @@
           },
           "latency_ms": {
             "calls": 719,
-            "max": 0.4714999959105626,
-            "p50": 0.039000005926936865,
-            "p95": 0.11172000668011606,
-            "p99": 0.19641999679151928,
-            "total": 35.76429991517216
+            "max": 0.5807999987155199,
+            "p50": 0.06579999171663076,
+            "p95": 0.17253000114578762,
+            "p99": 0.3123880061320983,
+            "total": 57.76189990865532
           },
           "max_market_orders": 10,
           "money": [
@@ -119,11 +125,11 @@
           },
           "latency_ms": {
             "calls": 719,
-            "max": 0.3588999970816076,
-            "p50": 0.03519999154377729,
-            "p95": 0.12196999741718176,
-            "p99": 0.19473200372885927,
-            "total": 35.06079988437705
+            "max": 0.34410000080242753,
+            "p50": 0.059600002714432776,
+            "p95": 0.12853000225732103,
+            "p99": 0.19446799909928825,
+            "total": 48.792699846671894
           },
           "max_market_orders": 10,
           "money": [
@@ -143,8 +149,8 @@
         }
       ],
       "pass": true,
-      "path": "C:\\Users\\wurre\\.codex\\worktrees\\7adf\\Kaggriculture\\submission\\e2_boatlee_public_selector\\main.py",
-      "sha256": "b4ef9bff8cbba2dfaccacc320a32f707006158fcf905c02db02ad89fe0f6099a",
+      "path": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\submission\\e2_boatlee_public_selector\\main.py",
+      "sha256": "17b149a652b3c7ebb7d46482ecff3f81103f65287409d3281cd732bca86451f6",
       "static_audit": {
         "forbidden_imports": [],
         "imports": [
@@ -154,16 +160,18 @@
           "zlib"
         ],
         "pass": true
-      }
+      },
+      "strategy_sha256": "b4ef9bff8cbba2dfaccacc320a32f707006158fcf905c02db02ad89fe0f6099a"
     },
     "step_241_only": {
-      "bytes": 45850,
+      "bytes": 45948,
       "candidate_id": "ac_a85701baf0cd39d61ab067d3",
       "checks": {
-        "both_seats_official_engine": true,
+        "both_seats_official_engine_via_server_entrypoint": true,
         "directory_contains_only_main_py": true,
-        "hash_matches_frozen_candidate": true,
+        "hash_matches_frozen_package": true,
         "isolated_import": true,
+        "server_entrypoint_present": true,
         "standard_library_contract": true,
         "under_5_mib": true
       },
@@ -189,11 +197,11 @@
           },
           "latency_ms": {
             "calls": 719,
-            "max": 0.520800007507205,
-            "p50": 0.04499999340623617,
-            "p95": 0.17148000915767628,
-            "p99": 0.31554599612718526,
-            "total": 44.23239977040794
+            "max": 0.4076999903190881,
+            "p50": 0.06880000000819564,
+            "p95": 0.14125001180218533,
+            "p99": 0.2330379924387674,
+            "total": 55.36710006708745
           },
           "max_market_orders": 10,
           "money": [
@@ -225,11 +233,11 @@
           },
           "latency_ms": {
             "calls": 719,
-            "max": 0.36499999987427145,
-            "p50": 0.044200001866556704,
-            "p95": 0.16103998932521793,
-            "p99": 0.2673399969353344,
-            "total": 43.15160012629349
+            "max": 0.8551999926567078,
+            "p50": 0.06459999713115394,
+            "p95": 0.15432999643962833,
+            "p99": 0.2686699989135389,
+            "total": 54.59370026073884
           },
           "max_market_orders": 10,
           "money": [
@@ -249,8 +257,8 @@
         }
       ],
       "pass": true,
-      "path": "C:\\Users\\wurre\\.codex\\worktrees\\7adf\\Kaggriculture\\submission\\e2_boatlee_step_241_only\\main.py",
-      "sha256": "13ac97f6f9c311b52e18ca42ffc1916e09ba12f2dd4aba7fd0f525ba63c5101c",
+      "path": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\submission\\e2_boatlee_step_241_only\\main.py",
+      "sha256": "3fdef34507528484cbad579e2d8c5e8bc831bf5493e95e720cd111a971b68634",
       "static_audit": {
         "forbidden_imports": [],
         "imports": [
@@ -260,8 +268,9 @@
           "zlib"
         ],
         "pass": true
-      }
+      },
+      "strategy_sha256": "13ac97f6f9c311b52e18ca42ffc1916e09ba12f2dd4aba7fd0f525ba63c5101c"
     }
   },
-  "verification_sha256": "86cffcfaf8675e3697946ddaf94a24287cff501fcbea065c08924aeafd05fc60"
+  "verification_sha256": "71d628065307c6d11a4ee6f427d7200c5ce6c47ad67405d343be03a48e836d4b"
 }

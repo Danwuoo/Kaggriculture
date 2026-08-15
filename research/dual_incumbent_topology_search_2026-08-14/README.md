@@ -1,16 +1,40 @@
 # Dual-incumbent event-linked topology search
 
-## 2026-08-14 scope correction
+## Current status
+
+Async V3 E1c and contract-scoped E2 completed on 2026-08-15. Do not restart
+the original or Async V2 population merely because their code and artifacts
+remain available.
+
+- E1c stopped population expansion and carried one unchanged Boatlee finalist
+  plus one diagnostic v27 probe into E2.
+- E2 S1 stopped v27 for zero terminal efficacy and advanced Boatlee only.
+- E2 S2 rejected the always-on Boatlee block because of a repeatable
+  Roman/seat-sensitive public-market tail.
+- Remediation froze one public-state Boatlee selector at
+  `READY_FOR_E2_S2_FRESH_CONFIRMATION`; no post-remediation fresh seed has been
+  selected or executed.
+- Two user-authorized standalone files were prepared and submitted for Kaggle
+  server-runtime smoke testing. Both required a packaging-only server-entrypoint
+  repair and then completed active validation replays. This is not promotion or
+  fresh-efficacy evidence.
+
+Read `e2/research_summary.md` for the consolidated result and evidence map,
+then the relevant gate-specific decision. The next possible efficacy action is
+a separately authorized fresh confirmation of the frozen Boatlee selector.
+
+## Historical 2026-08-14 scope correction
 
 The original S1 surface below is retained as provenance but is superseded for
 future search design.  It evaluated only eight ninth-cow structural roots per
 lane and did not express the requested coupled search across `_LEGACY_ACTIONS`
 blocks and market/runtime constants.  Do not unlock S2 from that run.
 
-The active corrected development surface is [`async_v2/`](async_v2/README.md):
+The first corrected development surface was [`async_v2/`](async_v2/README.md):
 a lane-isolated, population-based search over multiple bounded route blocks,
 public-market genes, and v27/Boatlee-owned runtime constants in the same
-genome.  See `async_v2/scope_correction.md` for the consumed-seed boundary.
+genome. It was subsequently superseded by Async V3 and E2. See
+`async_v2/scope_correction.md` for its consumed-seed boundary.
 
 Date: 2026-08-14
 
@@ -68,9 +92,9 @@ job manifest.
 
 The command surface is documented in `runbook.md`. `status` is read-only.
 
-## D4 status
+## Historical D4 status
 
 Development is `READY_FOR_FORMAL_S1`; see `development_decision.md` and
 `artifacts/development_verification.json`. The decision covers correctness and
-development readiness only. Formal fresh-seed efficacy remains unexecuted and
-unauthorized in this task.
+development readiness only. That D4 statement is retained as provenance and
+must not be mistaken for current authority; Async V3 E1c and E2 supersede it.

@@ -873,3 +873,6 @@ def agent(obs, configuration=None):
     if _V3_SPEC["lane"] == "boatlee_v16_rc2_market_relay": base = _V3_BASE_AGENT(obs)
     else: base = _V3_BASE_AGENT(obs, configuration)
     return _v3_apply(obs, base)
+
+def _kaggle_submission_entrypoint(obs, configuration=None):
+    return agent(obs, configuration)

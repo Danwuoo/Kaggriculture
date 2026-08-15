@@ -12,17 +12,50 @@ here does not establish safety, efficacy, or promotion readiness.
 
 | Approach | Category | Distinguishing mechanism | Provenance |
 | --- | --- | --- | --- |
-| `v27_current_meta` | Fixed public-route baseline | HIRE4-derived v27 action tape with actor-local weed repair and market SELL-slot ranking | Moved unchanged from `scripts/other appoach/original/main.py` |
-| `v27_current_meta_safety_guarded` | Safety-guarded fixed public route | Adds a same-turn seed ledger and fresh-crop watering protection to the v27 route | Moved unchanged from `scripts/other appoach/main.py` |
-| `boatlee_v16_rc2_market_relay` | Market-relay livestock route | Boatlee V16-RC2 high-output route with livestock conversion, wool control, and a guarded three-turn FERTILIZER relay | Imported from the uploaded `submission.tar.gz` |
+| `v27_current_meta` | Active incumbent | HIRE4-derived v27 action tape with actor-local weed repair and market SELL-slot ranking | Moved unchanged from `scripts/other appoach/original/main.py` |
+| `boatlee_v16_rc2_market_relay` | Active incumbent | Boatlee V16-RC2 high-output route with livestock conversion, wool control, and a guarded three-turn FERTILIZER relay | Imported from the uploaded `submission.tar.gz` |
+| `v27_current_meta_safety_guarded` | Retained reference | Adds a same-turn seed ledger and fresh-crop watering protection to the v27 route | Moved unchanged from `scripts/other appoach/main.py` |
+
+## Current E2 topology result
+
+The 2026-08-15 E2 program evaluated the two active incumbents separately. The
+v27 public selector stopped at S1 because its fresh interventions changed
+receipts/public state but produced zero terminal paired-margin and own-bank
+change. The unchanged always-on Boatlee E1c block advanced through S1 but was
+rejected at S2 because its positive mean depended on one Roman outlier and it
+retained a repeatable Roman/seat-sensitive public-market downside.
+
+Boatlee remediation froze one new public-state selector,
+`e2boatlee_7f591d609cf14d89e6aa1599`. It observes only public fertilizer price
+and inventory at step 240, conditionally applies the exact step-241 fertilizer
+branch, and rejoins at step 242. Its consumed-context diagnostics are 36/12/0,
+but it has no post-remediation fresh efficacy evidence and is not promoted.
+
+Two user-authorized technical artifacts are retained independently:
+
+| Artifact | Role | Promotion status |
+| --- | --- | --- |
+| `submission/e2_boatlee_public_selector/main.py` | Frozen candidate for a separately authorized fresh confirmation | Not promoted |
+| `submission/e2_boatlee_step_241_only/main.py` | Atomic risk comparator retaining the Roman tail | Diagnostic only |
+
+Both artifacts include the Kaggle server adapter
+`_kaggle_submission_entrypoint`. Their repaired, user-authorized server smoke
+replays completed `DONE/DONE` with active actions, confirming packaging/runtime
+only. They do not supply fresh efficacy or promotion evidence.
+
+See
+`research/dual_incumbent_topology_search_2026-08-14/e2/research_summary.md`
+for the full stage history, seeds, hashes, evidence map, and next gate.
 
 ## Working rules
 
-- Treat the three agents as independently tuned strategy lines; do not collapse
-  their constants or tapes into a shared implementation without a comparative
-  experiment.
-- Keep each `main.py` runnable as a standalone Kaggle entrypoint exposing
-  `agent(obs)`.
+- Treat v27 and Boatlee as two independently tuned active strategy lines. Keep
+  the safety-guarded v27 variant as a reference rather than a third active
+  incumbent. Do not collapse their constants or tapes into a shared
+  implementation without a comparative experiment.
+- Keep each generated `main.py` runnable through local `agent(obs)`. Any file
+  packaged for Kaggle must also expose `_kaggle_submission_entrypoint` and be
+  verified through that exact adapter.
 - Record engine/configuration fingerprints and paired-seat evidence before
   comparing scores or promoting a candidate.
 - Preserve the existing audit history in

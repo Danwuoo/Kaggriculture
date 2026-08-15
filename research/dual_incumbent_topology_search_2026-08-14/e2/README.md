@@ -2,6 +2,10 @@
 
 Status: `READY_FOR_E2_S2_FRESH_CONFIRMATION` (fresh confirmation is not authorized)
 
+Start with `research_summary.md` for the consolidated development, S1, S2,
+remediation, seed-consumption, and technical-package outcome. The documents
+below remain the gate-specific authority.
+
 ## Current formal and remediation state
 
 E2 S1 and the Boatlee-only S2 tail tier completed on 2026-08-15. S1 stopped
@@ -19,8 +23,21 @@ fertilizer branch behind one frozen public-state selector,
 
 S1/S2 formal fresh seeds have been executed and are now consumed. Remediation
 selected and executed no new fresh seed. A separate user authorization is
-required before selecting or executing fresh confirmation seeds. No later tier
-or submission is authorized.
+required before selecting or executing fresh confirmation seeds. No later
+fresh tier has been executed.
+
+The user separately authorized technical packaging of the frozen public
+selector and the step-241-only diagnostic comparator. They are retained at
+`submission/e2_boatlee_public_selector/main.py` and
+`submission/e2_boatlee_step_241_only/main.py`. Both passed isolated import,
+both-seat correctness, and user-authorized Kaggle server-runtime smoke checks.
+The initial packages exposed `agent` but lacked Kaggle's required
+`_kaggle_submission_entrypoint`; the deterministic builder now preserves the
+frozen strategy bytes and appends only that adapter. The repaired validation
+episodes finished `DONE/DONE` with 690 non-pass actions per seat. Packaging and
+server execution are not promotion evidence. The step-241-only artifact
+retains the known Roman tail and is diagnostic-only. See
+`submission_server_verification.json` for submission and replay hashes.
 
 ## User-authorized remediation amendment
 
@@ -64,7 +81,9 @@ Read in this order before E2 work:
 6. `candidate_registry.json`;
 7. `implementation_plan.md`;
 8. `development_acceptance_contract.md`;
-9. `runbook.md` and `protocol_template.json`.
+9. `runbook.md` and `protocol_template.json`;
+10. `research_summary.md` and the decision record for the stage being
+    extended or challenged.
 
 ## Fixed candidate roles
 
