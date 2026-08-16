@@ -47,6 +47,233 @@
       "title": "177/180 Fresh Top-30 | v21.1 Conditional Memory"
     },
     {
+      "directory": "lb20260816_01_boatlee_v16_rc5",
+      "files": [
+        {
+          "bytes": 18946,
+          "flagged_calls": [],
+          "flagged_imports": [],
+          "imports": [
+            "base64",
+            "copy",
+            "json",
+            "zlib"
+          ],
+          "name": "main.py",
+          "sha256": "f029fa0cb66a9eb509afbe44e3f59b800332d0419db91607183410e4089c4d19"
+        }
+      ],
+      "kernel": "boatlee/v16-rc5-high-score-8c-4s-premium-market-lead",
+      "notebook": "v16-rc5-high-score-8c-4s-premium-market-lead.ipynb",
+      "notebook_sha256": "92faf3269de09bdf8bcbb3d306f12cf8a8d83385e9cec94b78f6134a04d4143f",
+      "title": "V16-RC5 | High-Score 8C/4S Premium Market Lead"
+    },
+    {
+      "directory": "lb20260816_02_kaito_v25",
+      "files": [
+        {
+          "bytes": 21330,
+          "flagged_calls": [],
+          "flagged_imports": [],
+          "imports": [
+            "base64",
+            "copy",
+            "json",
+            "math",
+            "zlib"
+          ],
+          "name": "main.py",
+          "sha256": "9bdfbafb6755067182d88ce594fd46fb1d712713ffd6931e83d5d50e84bc6fb2"
+        }
+      ],
+      "kernel": "kaitofukami/15-16-strict-future-v25-meta-reset",
+      "notebook": "15-16-strict-future-v25-meta-reset.ipynb",
+      "notebook_sha256": "e28aa997dc5317cad8e2a8ee5887efa7c12c40fc17e41af366f2723f29f21406",
+      "title": "15/16 Strict-Future | v25 Meta Reset"
+    },
+    {
+      "directory": "lb20260816_03_deniz_v111",
+      "files": [
+        {
+          "bytes": 18946,
+          "flagged_calls": [],
+          "flagged_imports": [],
+          "imports": [
+            "base64",
+            "copy",
+            "json",
+            "zlib"
+          ],
+          "name": "main.py",
+          "sha256": "f029fa0cb66a9eb509afbe44e3f59b800332d0419db91607183410e4089c4d19"
+        }
+      ],
+      "kernel": "denizeryilmaz/v111-8c4s-economic-core-premium-lead",
+      "notebook": "v111-8c4s-economic-core-premium-lead.ipynb",
+      "notebook_sha256": "92faf3269de09bdf8bcbb3d306f12cf8a8d83385e9cec94b78f6134a04d4143f",
+      "title": "V111 | 8C4S Economic Core Premium Lead"
+    },
+    {
+      "directory": "lb20260816_04_rayk_zero_to_top",
+      "files": [
+        {
+          "bytes": 75098,
+          "flagged_calls": [
+            "exec"
+          ],
+          "flagged_imports": [],
+          "imports": [
+            "base64",
+            "copy",
+            "json",
+            "math",
+            "zlib"
+          ],
+          "name": "main.py",
+          "sha256": "489f5d197527f107027626cce79d850fd2ca90edd43d94384b849b6511e27bdb"
+        }
+      ],
+      "kernel": "raykkretzschmar/kaggriculture-findings-from-zero-to-top-meta",
+      "notebook": "kaggriculture-findings-from-zero-to-top-meta.ipynb",
+      "notebook_sha256": "a7447511510ed22b73f2315246b6bf4de66f219ffe3ba692a377f3fb47931331",
+      "title": "Kaggriculture: Findings from Zero to Top Meta"
+    },
+    {
+      "directory": "lb20260816_05_boatlee_v16_rc5_r5a",
+      "files": [
+        {
+          "bytes": 23912,
+          "flagged_calls": [],
+          "flagged_imports": [],
+          "imports": [
+            "base64",
+            "copy",
+            "json",
+            "zlib"
+          ],
+          "name": "main.py",
+          "sha256": "7f87c941af3050d0f21376f2843b324d7a06a1a8c050fa554cf07a769e5c937c"
+        }
+      ],
+      "kernel": "boatlee/v16-rc5-r5a-high-score-8c-4s-recovery",
+      "notebook": "v16-rc5-r5a-high-score-8c-4s-recovery.ipynb",
+      "notebook_sha256": "0bf9369f19ba97afb493a24bc9ea91df906bb1b1167d16fdae5b634e8e5f0466",
+      "title": "V16-RC5-R5A | High-Score 8C/4S Recovery"
+    },
+    {
+      "directory": "lb20260816_06_boatlee_v14_clone_preemption",
+      "files": [
+        {
+          "bytes": 26304,
+          "flagged_calls": [],
+          "flagged_imports": [],
+          "imports": [
+            "base64",
+            "copy",
+            "json",
+            "math",
+            "zlib"
+          ],
+          "name": "main.py",
+          "sha256": "a7f827b9438885b34b7fd5bf8165458a72f8bb83031a288dd4640f21ade3294b"
+        }
+      ],
+      "kernel": "boatlee/84-84-base-public-holdout-v14-clone-preemption",
+      "notebook": "84-84-base-public-holdout-v14-clone-preemption.ipynb",
+      "notebook_sha256": "9ab82fd86a9f3be300ec4ee2ae2a6a9bdabc5a1232926ed57a5e3b645dda11e0",
+      "title": "84/84 Base+Public Holdout | V14 Clone Preemption"
+    },
+    {
+      "directory": "lb20260816_07_kunal_ttv1",
+      "files": [
+        {
+          "bytes": 61980,
+          "flagged_calls": [],
+          "flagged_imports": [],
+          "imports": [
+            "base64",
+            "copy",
+            "json",
+            "math",
+            "zlib"
+          ],
+          "name": "main.py",
+          "sha256": "d39dba50793d9777c990347443bf0c481c78adaea86055f6f6b0600dcfcd9f2e"
+        }
+      ],
+      "kernel": "kunaldesale2408/kaggriculture-ttv1",
+      "notebook": "kaggriculture-ttv1.ipynb",
+      "notebook_sha256": "9eae9635ad94645f3a85a97b8347da757a596754e566510a3062998f490b9811",
+      "title": "Kaggriculture TTV1"
+    },
+    {
+      "directory": "lb20260816_08_salem_3094",
+      "files": [
+        {
+          "bytes": 61980,
+          "flagged_calls": [],
+          "flagged_imports": [],
+          "imports": [
+            "base64",
+            "copy",
+            "json",
+            "math",
+            "zlib"
+          ],
+          "name": "main.py",
+          "sha256": "d39dba50793d9777c990347443bf0c481c78adaea86055f6f6b0600dcfcd9f2e"
+        }
+      ],
+      "kernel": "salemali7/3094-score-kaggriculture",
+      "notebook": "3094-score-kaggriculture.ipynb",
+      "notebook_sha256": "aa536d91a6b8155d54ea94d7a2f4216993316e0ffab8b17ea4d81d029db0498f",
+      "title": "3094 score | Kaggriculture "
+    },
+    {
+      "directory": "lb20260816_09_bruce_high_score_pipeline",
+      "files": [
+        {
+          "bytes": 133270,
+          "flagged_calls": [],
+          "flagged_imports": [],
+          "imports": [
+            "copy",
+            "json"
+          ],
+          "name": "main.py",
+          "sha256": "ed8c8420514acb5a96c0d44cfd42a8786e49c7cdc01a0de61d2e6b8997dda87a"
+        }
+      ],
+      "kernel": "bruceqdu/my-2026-08-04-high-score-pipeline",
+      "notebook": "my-2026-08-04-high-score-pipeline.ipynb",
+      "notebook_sha256": "cdca09ed40f2c3a8b142791dd2f1b5f3dffc2de4332a153e53da6c63d58e7b5a",
+      "title": "My 2026-08-04 High-Score Pipeline"
+    },
+    {
+      "directory": "lb20260816_10_prvsiyan_soil",
+      "files": [
+        {
+          "bytes": 29465,
+          "flagged_calls": [
+            "exec"
+          ],
+          "flagged_imports": [],
+          "imports": [
+            "__future__",
+            "base64",
+            "hashlib",
+            "zlib"
+          ],
+          "name": "main.py",
+          "sha256": "34193f0ca7fdc77db52cfdadf61596d42cbc2ffd3d8b7903819b0ad78a064a2a"
+        }
+      ],
+      "kernel": "prvsiyan/kaggriculture-frontier-the-soil-remembers-rain",
+      "notebook": "kaggriculture-frontier-the-soil-remembers-rain.ipynb",
+      "notebook_sha256": "b8bd08ac24c4f7fff84eb7a8c7d4d0862d33094848218eac8063c30778c22358",
+      "title": "Kaggriculture Frontier | The Soil Remembers Rain"
+    },
+    {
       "directory": "roman_lb950",
       "files": [
         {

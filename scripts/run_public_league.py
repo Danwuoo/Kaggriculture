@@ -36,13 +36,17 @@ ENGINE_FILES_SHA256 = {
 
 
 PUBLIC_AGENTS = {
-    "kaito_v20": PUBLIC_ROOT / "kaito_v20_weed_recovery" / "extracted" / "main.py",
-    "kaito_v21": PUBLIC_ROOT / "kaito_v21_top30" / "extracted" / "main.py",
-    "roman_lb950": PUBLIC_ROOT / "roman_lb950" / "extracted" / "main.py",
-    "saiteja_3000": PUBLIC_ROOT / "saiteja_mega_ensemble_3000" / "extracted" / "main.py",
-    "saiteja_2600": PUBLIC_ROOT / "saiteja_pure_architecture_2600" / "extracted" / "main.py",
+    "lb01_boatlee_v16_rc5": PUBLIC_ROOT / "lb20260816_01_boatlee_v16_rc5" / "extracted" / "main.py",
+    "lb02_kaito_v25": PUBLIC_ROOT / "lb20260816_02_kaito_v25" / "extracted" / "main.py",
+    "lb03_deniz_v111": PUBLIC_ROOT / "lb20260816_03_deniz_v111" / "extracted" / "main.py",
+    "lb04_rayk_c95": PUBLIC_ROOT / "lb20260816_04_rayk_zero_to_top" / "extracted" / "main.py",
+    "lb05_boatlee_v16_rc5_r5a": PUBLIC_ROOT / "lb20260816_05_boatlee_v16_rc5_r5a" / "extracted" / "main.py",
+    "lb06_boatlee_v14": PUBLIC_ROOT / "lb20260816_06_boatlee_v14_clone_preemption" / "extracted" / "main.py",
+    "lb07_kunal_ttv1": PUBLIC_ROOT / "lb20260816_07_kunal_ttv1" / "extracted" / "main.py",
+    "lb08_salem_3094": PUBLIC_ROOT / "lb20260816_08_salem_3094" / "extracted" / "main.py",
+    "lb09_bruce_pipeline": PUBLIC_ROOT / "lb20260816_09_bruce_high_score_pipeline" / "extracted" / "main.py",
+    "lb10_prvsiyan_soil": PUBLIC_ROOT / "lb20260816_10_prvsiyan_soil" / "extracted" / "main.py",
 }
-MEGA_SIBLINGS = ("agent_frontier", "agent_hamburger", "agent_moon", "agent_v14")
 DEFAULT_SEEDS = (0, 1, 7, 11, 23, 37, 101, 777)
 
 
@@ -104,9 +108,6 @@ def load_public_agent(name, serial):
     path = PUBLIC_AGENTS[name]
     if not path.exists():
         raise FileNotFoundError(f"missing extracted public agent: {path}")
-    if name == "saiteja_3000":
-        for module_name in MEGA_SIBLINGS:
-            sys.modules.pop(module_name, None)
     module_name = f"_kaggriculture_public_{name}_{serial}"
     spec = importlib.util.spec_from_file_location(module_name, path)
     if spec is None or spec.loader is None:

@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import ast
 import base64
+import binascii
 import hashlib
 import json
 import zlib
@@ -60,6 +61,104 @@ def _decode_payload(encoded):
     return raw
 
 
+def _decode_zlib(compressed):
+    decoder = zlib.decompressobj()
+    raw = decoder.decompress(compressed, MAX_EXTRACTED_BYTES + 1)
+    if len(raw) > MAX_EXTRACTED_BYTES or decoder.unconsumed_tail:
+        raise ValueError("compressed notebook payload exceeds extraction limit")
+    raw += decoder.flush(MAX_EXTRACTED_BYTES + 1 - len(raw))
+    if len(raw) > MAX_EXTRACTED_BYTES or not decoder.eof:
+        raise ValueError("invalid or oversized compressed notebook payload")
+    return raw
+
+
+def _bounded(value):
+    if isinstance(value, (bytes, str)) and len(value) > MAX_EXTRACTED_BYTES * 2:
+        raise ValueError("notebook literal exceeds extraction limit")
+    return value
+
+
+def _safe_value(node, values):
+    """Evaluate only the literal codec expressions used by public notebooks."""
+
+    if isinstance(node, ast.Constant):
+        return _bounded(node.value)
+    if isinstance(node, ast.Name):
+        if node.id not in values:
+            raise ValueError(f"unknown safe value: {node.id}")
+        return values[node.id]
+    if isinstance(node, ast.List):
+        return [_safe_value(item, values) for item in node.elts]
+    if isinstance(node, ast.Tuple):
+        return tuple(_safe_value(item, values) for item in node.elts)
+    if isinstance(node, ast.Dict):
+        return {
+            _safe_value(key, values): _safe_value(value, values)
+            for key, value in zip(node.keys, node.values)
+        }
+    if isinstance(node, ast.BinOp) and isinstance(node.op, ast.Add):
+        return _bounded(_safe_value(node.left, values) + _safe_value(node.right, values))
+    if not isinstance(node, ast.Call):
+        raise ValueError(f"unsupported safe expression: {type(node).__name__}")
+
+    if node.keywords or len(node.args) != 1:
+        raise ValueError("unsupported safe call signature")
+    argument = _safe_value(node.args[0], values)
+    function = node.func
+    if isinstance(function, ast.Attribute) and function.attr == "join":
+        separator = _safe_value(function.value, values)
+        return _bounded(separator.join(argument))
+    if isinstance(function, ast.Attribute) and function.attr == "encode":
+        if not isinstance(argument, str):
+            raise ValueError("encode codec name must be a string")
+        source = _safe_value(function.value, values)
+        if not isinstance(source, str) or argument.lower().replace("-", "") != "ascii":
+            raise ValueError("only ASCII payload encoding is supported")
+        return _bounded(source.encode("ascii"))
+    if isinstance(function, ast.Attribute) and function.attr == "decode":
+        if not isinstance(argument, str):
+            raise ValueError("decode codec name must be a string")
+        source = _safe_value(function.value, values)
+        codec = argument.lower().replace("-", "")
+        if not isinstance(source, bytes) or codec not in {"ascii", "utf8"}:
+            raise ValueError("unsupported payload decoding")
+        return _bounded(source.decode("utf-8" if codec == "utf8" else "ascii"))
+
+    call = ""
+    if isinstance(function, ast.Name):
+        call = function.id
+    elif isinstance(function, ast.Attribute) and isinstance(function.value, ast.Name):
+        call = f"{function.value.id}.{function.attr}"
+    if call in {"base64.b85decode", "b85decode"}:
+        return _bounded(base64.b85decode(argument))
+    if call in {"base64.b64decode", "b64decode"}:
+        return _bounded(base64.b64decode(argument))
+    if call in {"zlib.decompress", "decompress"}:
+        if not isinstance(argument, bytes):
+            raise ValueError("zlib payload must be bytes")
+        return _decode_zlib(argument)
+    raise ValueError(f"unsupported safe call: {call or type(function).__name__}")
+
+
+def _safe_assignments(source, initial=None):
+    tree = ast.parse(source)
+    values = dict(initial or {})
+    history = []
+    for node in tree.body:
+        if not isinstance(node, ast.Assign) or len(node.targets) != 1:
+            continue
+        target = node.targets[0]
+        if not isinstance(target, ast.Name):
+            continue
+        try:
+            value = _safe_value(node.value, values)
+        except (ValueError, TypeError, KeyError, binascii.Error, zlib.error):
+            continue
+        values[target.id] = value
+        history.append((target.id, value))
+    return values, history
+
+
 def _literal_assignments(source):
     tree = ast.parse(source)
     values = {}
@@ -96,6 +195,7 @@ def _add_file(files, name, raw):
 def _extract_notebook(path):
     notebook = json.loads(path.read_text(encoding="utf-8"))
     files = {}
+    safe_values = {}
     for cell in notebook.get("cells", []):
         if cell.get("cell_type") != "code":
             continue
@@ -107,9 +207,17 @@ def _extract_notebook(path):
             name = first.removeprefix("%%writefile ").strip()
             _add_file(files, name, body.encode("utf-8"))
             continue
-        if "b85decode" not in source or "zlib.decompress" not in source:
+        try:
+            values, history = _safe_assignments(source, safe_values)
+        except SyntaxError:
             continue
-        values = _literal_assignments(source)
+        safe_values.update(values)
+        for name, value in history:
+            if name not in {"AGENT_SOURCE", "agent_bytes", "agent_source", "payload", "raw"}:
+                continue
+            raw = value.encode("utf-8") if isinstance(value, str) else value
+            if isinstance(raw, bytes):
+                files["main.py"] = raw
         if isinstance(values.get("agent_payload"), str):
             _add_file(files, "main.py", _decode_payload(values["agent_payload"]))
         parts = values.get("_AGENT_B85_PARTS")

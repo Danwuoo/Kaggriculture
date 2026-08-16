@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "run_at": "2026-08-16T14:34:56.6106004+08:00",
+  "purpose": "Local pinned-engine runtime and packaging compatibility only; not efficacy or promotion evidence.",
+  "engine": {
+    "commit": "a4dce5ae6e2ffe3c1afea8ec4b24b562df74cc07",
+    "kaggriculture_py_sha256": "C11BAF358548D8DD6F3CBA031899BC1614C0FCB31A27366F12753563154307E6",
+    "kaggriculture_json_sha256": "9518A5FA925039B5443BAF4A162454ABAE40EC6E7CAF462D0CEE2654419A8063",
+    "current_engine_matched": false
+  },
+  "protocol": {
+    "opponent_seat": 0,
+    "control_seat": 1,
+    "control": "starter",
+    "games": 10,
+    "expected_states_per_game": 720
+  },
+  "results": [
+    {"rank": 1, "seed": 8601601, "statuses": ["DONE", "DONE"], "rewards": [182605.0, 3503.0], "states": 720},
+    {"rank": 2, "seed": 8601602, "statuses": ["DONE", "DONE"], "rewards": [180966.0, 3487.0], "states": 720},
+    {"rank": 3, "seed": 8601603, "statuses": ["DONE", "DONE"], "rewards": [180497.0, 3495.0], "states": 720},
+    {"rank": 4, "seed": 8601604, "statuses": ["DONE", "DONE"], "rewards": [186059.0, 3500.0], "states": 720},
+    {"rank": 5, "seed": 8601605, "statuses": ["DONE", "DONE"], "rewards": [171300.0, 3509.0], "states": 720},
+    {"rank": 6, "seed": 8601606, "statuses": ["DONE", "DONE"], "rewards": [198495.0, 3501.0], "states": 720},
+    {"rank": 7, "seed": 8601607, "statuses": ["DONE", "DONE"], "rewards": [188540.0, 3485.0], "states": 720},
+    {"rank": 8, "seed": 8601608, "statuses": ["DONE", "DONE"], "rewards": [194611.0, 3487.0], "states": 720},
+    {"rank": 9, "seed": 8601609, "statuses": ["DONE", "DONE"], "rewards": [187187.0, 3494.0], "states": 720},
+    {"rank": 10, "seed": 8601610, "statuses": ["DONE", "DONE"], "rewards": [180852.0, 3491.0], "states": 720}
+  ],
+  "summary": {
+    "done_done": 10,
+    "failed": 0
+  }
+}

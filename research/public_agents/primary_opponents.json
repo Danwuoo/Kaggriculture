@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-08-16T14:29:34.9483787+08:00",
+  "competition": "kaggriculture",
+  "selection": {
+    "surface": "Kaggle competition Code page",
+    "sort": "Public Score descending",
+    "url": "https://www.kaggle.com/competitions/kaggriculture/code?competitionId=147734&sortBy=scoreDescending&excludeNonAccessedDatasources=true",
+    "pinned_notebooks_excluded": true,
+    "requested_slots": 10,
+    "downloaded_slots": 10,
+    "unique_main_sha256": 8
+  },
+  "opponents": [
+    {
+      "rank": 1,
+      "public_score": 2913.3,
+      "name": "lb01_boatlee_v16_rc5",
+      "kernel": "boatlee/v16-rc5-high-score-8c-4s-premium-market-lead",
+      "directory": "lb20260816_01_boatlee_v16_rc5",
+      "main_bytes": 18946,
+      "main_sha256": "f029fa0cb66a9eb509afbe44e3f59b800332d0419db91607183410e4089c4d19",
+      "duplicate_group": "f029fa0c",
+      "static_audit": "clear"
+    },
+    {
+      "rank": 2,
+      "public_score": 2905.7,
+      "name": "lb02_kaito_v25",
+      "kernel": "kaitofukami/15-16-strict-future-v25-meta-reset",
+      "directory": "lb20260816_02_kaito_v25",
+      "main_bytes": 21330,
+      "main_sha256": "9bdfbafb6755067182d88ce594fd46fb1d712713ffd6931e83d5d50e84bc6fb2",
+      "duplicate_group": "9bdfbafb",
+      "static_audit": "clear"
+    },
+    {
+      "rank": 3,
+      "public_score": 2863.4,
+      "name": "lb03_deniz_v111",
+      "kernel": "denizeryilmaz/v111-8c4s-economic-core-premium-lead",
+      "directory": "lb20260816_03_deniz_v111",
+      "main_bytes": 18946,
+      "main_sha256": "f029fa0cb66a9eb509afbe44e3f59b800332d0419db91607183410e4089c4d19",
+      "duplicate_group": "f029fa0c",
+      "duplicate_of_rank": 1,
+      "static_audit": "clear"
+    },
+    {
+      "rank": 4,
+      "public_score": 2837.0,
+      "name": "lb04_rayk_c95",
+      "kernel": "raykkretzschmar/kaggriculture-findings-from-zero-to-top-meta",
+      "directory": "lb20260816_04_rayk_zero_to_top",
+      "main_bytes": 75098,
+      "main_sha256": "489f5d197527f107027626cce79d850fd2ca90edd43d94384b849b6511e27bdb",
+      "duplicate_group": "489f5d19",
+      "static_audit": "embedded_exec_reviewed",
+      "embedded_sources": [
+        {
+          "name": "_SBT_SOURCE",
+          "bytes": 41374,
+          "flagged_imports": [],
+          "flagged_calls": []
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "public_score": 2834.7,
+      "name": "lb05_boatlee_v16_rc5_r5a",
+      "kernel": "boatlee/v16-rc5-r5a-high-score-8c-4s-recovery",
+      "directory": "lb20260816_05_boatlee_v16_rc5_r5a",
+      "main_bytes": 23912,
+      "main_sha256": "7f87c941af3050d0f21376f2843b324d7a06a1a8c050fa554cf07a769e5c937c",
+      "duplicate_group": "7f87c941",
+      "static_audit": "clear"
+    },
+    {
+      "rank": 6,
+      "public_score": 2833.9,
+      "name": "lb06_boatlee_v14",
+      "kernel": "boatlee/84-84-base-public-holdout-v14-clone-preemption",
+      "directory": "lb20260816_06_boatlee_v14_clone_preemption",
+      "main_bytes": 26304,
+      "main_sha256": "a7f827b9438885b34b7fd5bf8165458a72f8bb83031a288dd4640f21ade3294b",
+      "duplicate_group": "a7f827b9",
+      "static_audit": "clear"
+    },
+    {
+      "rank": 7,
+      "public_score": 2812.0,
+      "name": "lb07_kunal_ttv1",
+      "kernel": "kunaldesale2408/kaggriculture-ttv1",
+      "directory": "lb20260816_07_kunal_ttv1",
+      "main_bytes": 61980,
+      "main_sha256": "d39dba50793d9777c990347443bf0c481c78adaea86055f6f6b0600dcfcd9f2e",
+      "duplicate_group": "d39dba50",
+      "static_audit": "clear"
+    },
+    {
+      "rank": 8,
+      "public_score": 2772.7,
+      "name": "lb08_salem_3094",
+      "kernel": "salemali7/3094-score-kaggriculture",
+      "directory": "lb20260816_08_salem_3094",
+      "main_bytes": 61980,
+      "main_sha256": "d39dba50793d9777c990347443bf0c481c78adaea86055f6f6b0600dcfcd9f2e",
+      "duplicate_group": "d39dba50",
+      "duplicate_of_rank": 7,
+      "static_audit": "clear"
+    },
+    {
+      "rank": 9,
+      "public_score": 2754.9,
+      "name": "lb09_bruce_pipeline",
+      "kernel": "bruceqdu/my-2026-08-04-high-score-pipeline",
+      "directory": "lb20260816_09_bruce_high_score_pipeline",
+      "main_bytes": 133270,
+      "main_sha256": "ed8c8420514acb5a96c0d44cfd42a8786e49c7cdc01a0de61d2e6b8997dda87a",
+      "duplicate_group": "ed8c8420",
+      "static_audit": "clear"
+    },
+    {
+      "rank": 10,
+      "public_score": 2733.3,
+      "name": "lb10_prvsiyan_soil",
+      "kernel": "prvsiyan/kaggriculture-frontier-the-soil-remembers-rain",
+      "directory": "lb20260816_10_prvsiyan_soil",
+      "main_bytes": 29465,
+      "main_sha256": "34193f0ca7fdc77db52cfdadf61596d42cbc2ffd3d8b7903819b0ad78a064a2a",
+      "duplicate_group": "34193f0c",
+      "static_audit": "embedded_exec_reviewed",
+      "embedded_sources": [
+        {
+          "name": "_MODAL_PAYLOAD",
+          "bytes": 12059,
+          "flagged_imports": [],
+          "flagged_calls": []
+        },
+        {
+          "name": "_RC5_PAYLOAD",
+          "bytes": 18946,
+          "flagged_imports": [],
+          "flagged_calls": []
+        }
+      ]
+    }
+  ]
+}
