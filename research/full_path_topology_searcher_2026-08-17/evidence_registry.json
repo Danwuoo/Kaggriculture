@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "created": "2026-08-17",
+  "formal_efficacy_authorized": false,
+  "policy": {
+    "summary_only": "May rank proposals or calibrate rejection logic; never causal efficacy.",
+    "consumed_paired": "May diagnose mechanisms; never fresh promotion evidence.",
+    "structural": "May describe action topology; never outcome efficacy.",
+    "source_code": "May establish mechanism presence; never outcome efficacy."
+  },
+  "consumed_seeds": [
+    81426017,
+    81426029,
+    42284410,
+    73912654,
+    95715007,
+    41193493,
+    61594307,
+    58893729
+  ],
+  "engine": {
+    "commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+    "python_blob": "4b78842d0f2d4abf6e318a8248b6306454f5c714",
+    "configuration_blob": "0fcdf2c14c47d3bdc821c02e26263956cf0fd3d8",
+    "python_sha256": "fb9215c5e21a25243e2d13e75b3d70a79cf7d78fff150a90f1bb5eacf9ba2bcf",
+    "configuration_sha256": "7f196f4aaf9b4e482fbd61ba4bf19f5cec4da0f81938ece756954035a65c0bb5"
+  },
+  "collections": {
+    "atlas_inputs": {
+      "source_representative_count": 227,
+      "representative_count": 225,
+      "unique_full_action_digests": 225,
+      "exact_duplicate_count": 2,
+      "file_count": 451,
+      "inventory_sha256": "70be8f58812512e905da578ee501d8b602ff6c8a9b3b6f22dd3cab62071fbdf6",
+      "manifest_sha256": "f6b5fb489ea94dfb9d6c9b3e87dac3b7a375120132e1dc2a507924e0c6b88a38",
+      "manifest_bytes": 297875
+    }
+  },
+  "paired_protocols": [],
+  "sources": [
+    {"id":"user_research_report","path":"full_path_topology_searching_report_2026-08-17.md","sha256":"a5429d5d0dc0029d8800b1be3b56a32dfc6e48dca19b772edc7c26f4baad68ef","bytes":37245,"evidence_level":"summary_only","mutable":false},
+    {"id":"user_expected_architecture","path":"topology_path.md","sha256":"dc484d0ee463e723924600017e98aff28dda175bd3cb05adb6cac8387066e5f9","bytes":9603,"evidence_level":"summary_only","mutable":false},
+    {"id":"v27_incumbent","path":"research/main_approach/v27_current_meta/main.py","sha256":"063128bf765f6a6bb29ecaccc3a7dae8943e35e46c26a6364a1b3169313b9fb4","bytes":29857,"evidence_level":"source_code","lane":"v27_current_meta","mutable":false},
+    {"id":"v27_route","path":"research/main_approach/v27_current_meta/development/route_actions.json","sha256":"d62e8f0a0b930ddfedd560d824c320c39ff3c947f914169ea22ca013a3f0ff84","bytes":305157,"evidence_level":"source_code","lane":"v27_current_meta","mutable":false},
+    {"id":"boatlee_incumbent","path":"research/main_approach/boatlee_v16_rc2_market_relay/main.py","sha256":"ddb78d2a829745505f31afc6ea1288e2f57d6ff534649d5f416926e8035029ea","bytes":39456,"evidence_level":"source_code","lane":"boatlee_v16_rc2_market_relay","mutable":false},
+    {"id":"boatlee_route","path":"research/main_approach/boatlee_v16_rc2_market_relay/development/route_actions.json","sha256":"d62e8f0a0b930ddfedd560d824c320c39ff3c947f914169ea22ca013a3f0ff84","bytes":305157,"evidence_level":"source_code","lane":"boatlee_v16_rc2_market_relay","mutable":false},
+    {"id":"public_opponents","path":"research/public_agents/primary_opponents.json","sha256":"1bd5b81fc56735b61e4f3f49937d9ad21a63e3c8257fafc3c12f624605f7070c","bytes":5090,"evidence_level":"source_code","mutable":false},
+    {"id":"full_action_trie_summary","path":"reports/full_tape_topology_scaleup_2026-08-10/full_action_trie.json","sha256":"8d8851cd4211adf4bf1222450d186728e99f2a78df6b85a43b8c23c7b33cc46c","bytes":140747,"evidence_level":"structural","mutable":false},
+    {"id":"full_action_trie_sqlite","path":"research/cache/full_tape_topology_scaleup_2026-08-10/corpus/full_action_prefix_trie.sqlite","sha256":"6d3c697b0ae9c2e2526152f6e5ec22b1dfec2aaf06299473f1eff676c81ec702","bytes":42037248,"evidence_level":"structural","mutable":false},
+    {"id":"e2_remediation_verification","path":"research/dual_incumbent_topology_search_2026-08-14/e2/remediation_verification.json","sha256":"d9bbc98954bc34cf681903815a7542fb2fcf5e2cd9db397b046d1ee028fb9104","bytes":5131,"evidence_level":"consumed_paired","lane":"boatlee_v16_rc2_market_relay","mutable":false},
+    {"id":"async_e1b_fixture","path":"research/dual_incumbent_topology_search_2026-08-14/async_v3/fixtures/e1b_regression_fixtures.json","sha256":"5d4a96c48f7f9ece23db7b0644c16aa524a038a5f8d598b8ce5bffa193985686","bytes":8677,"evidence_level":"consumed_paired","mutable":false},
+    {"id":"rayk_c27_source","path":"research/public_agents/lb20260816_04_rayk_zero_to_top/extracted/main.py","sha256":"489f5d197527f107027626cce79d850fd2ca90edd43d94384b849b6511e27bdb","bytes":75098,"evidence_level":"source_code","mutable":false},
+    {"id":"v27_e1c_economic_noop_candidate","path":"research/dual_incumbent_topology_search_2026-08-14/async_v3/artifacts/formal/async_e1c_20260815_expanded_v1/finalists/v27_current_meta/ac_bad79e4d71965c86b6b351a1/main.py","sha256":"b8b2aa6894ff75c9dac8d36d37609e5591d3a5f0c167afde8002fc9fe5b9bc69","bytes":36887,"evidence_level":"consumed_paired","lane":"v27_current_meta","candidate_artifact":true,"technical_verified":true,"efficacy_eligible":false,"mutable":false}
+  ]
+}

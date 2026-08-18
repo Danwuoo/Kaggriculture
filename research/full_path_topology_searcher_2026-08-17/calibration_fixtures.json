@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "fixtures": [
+    {
+      "id": "c27_reported_13_7_classifier",
+      "evidence_level": "summary_only",
+      "claimed_wdl": {"wins": 13, "draws": 0, "losses": 7},
+      "reported_mean_margin_delta": 42.0,
+      "expected": {"proposal_rank_signal": true, "efficacy_eligible": false},
+      "note": "Calibrates ranking only. No local raw matched 13-7 artifact was found."
+    },
+    {
+      "id": "fixed_horizon_25_reported_distribution",
+      "evidence_level": "summary_only",
+      "claimed_wdl": {"wins": 1, "draws": 0, "losses": 1},
+      "expected": {"proposal_rank_signal": true, "efficacy_eligible": false},
+      "note": "Exact paired rows were absent from the live tree and external archive."
+    }
+  ]
+}
+

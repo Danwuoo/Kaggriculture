@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "policy": "Priorities allocate development-test budget only; they are not efficacy scores.",
+  "motifs": [
+    {"id":"terminal_liquidation","lanes":["v27_current_meta","boatlee_v16_rc2_market_relay"],"mutability":0.95,"frontier_relevance":0.90,"own_loss_match":0.85,"bounded_horizon":[8,24]},
+    {"id":"public_market_preemption","lanes":["v27_current_meta","boatlee_v16_rc2_market_relay"],"mutability":0.80,"frontier_relevance":0.95,"own_loss_match":0.80,"bounded_horizon":[8,48]},
+    {"id":"livestock_capacity_trade","lanes":["boatlee_v16_rc2_market_relay"],"mutability":0.70,"frontier_relevance":0.85,"own_loss_match":0.75,"bounded_horizon":[8,32]},
+    {"id":"worker_route_rejoin","lanes":["v27_current_meta","boatlee_v16_rc2_market_relay"],"mutability":0.65,"frontier_relevance":0.75,"own_loss_match":0.70,"bounded_horizon":[8,48]}
+  ]
+}
+
