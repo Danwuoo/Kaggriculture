@@ -7,20 +7,25 @@ import importlib.util
 import json
 from pathlib import Path
 import tempfile
+import hashlib
+import subprocess
+import re
 from typing import Any
 
 try:
-    from .atlas import build_atlas, mutation_frontier
-    from .authority import ROOT, validate_registry
+    from .atlas import build_atlas
+    from .authority import ROOT, canonical_utf8_lf, validate_registry
     from .compiler import compile_candidate
     from .evaluator import classify_summary_fixture
     from .model import BranchSpec
+    from .proposal import proposal_oracle
 except ImportError:
-    from atlas import build_atlas, mutation_frontier
-    from authority import ROOT, validate_registry
+    from atlas import build_atlas
+    from authority import ROOT, canonical_utf8_lf, validate_registry
     from compiler import compile_candidate
     from evaluator import classify_summary_fixture
     from model import BranchSpec
+    from proposal import proposal_oracle
 
 
 LANE = Path(__file__).resolve().parent
@@ -33,13 +38,15 @@ def calibration() -> dict[str, Any]:
     selector = e2["selector_validation"]
     e2_result = {
         "id": "boatlee_e2_frozen_selector", "evidence_level": "consumed_paired",
+        "anchor_role": "margin_only_false_positive_control",
         "paired_margin_wdl": selector["paired_margin_wdl"], "actual_win_delta": selector["actual_win_delta"],
-        "proposal_rank_signal": True, "efficacy_eligible": False,
+        "calibration_status": "rejected_as_required", "efficacy_eligible": False,
         "rejection_reason": "zero_actual_win_delta_and_consumed_contexts",
     }
-    passed = all(not row["efficacy_eligible"] for row in classified) and not e2_result["efficacy_eligible"]
-    return {"passed": passed, "summary_fixtures": classified, "e2": e2_result,
-            "provenance_gap": "No local raw c27 13-7 rows or fixed-horizon-25 rows; summary fixtures test classification only."}
+    safety_passed = all(not row["efficacy_eligible"] for row in classified) and not e2_result["efficacy_eligible"]
+    return {"status": "PARTIAL_BLOCKED_RAW_ANCHORS", "safety_passed": safety_passed,
+            "three_anchor_calibration_passed": False, "summary_fixtures": classified, "e2": e2_result,
+            "provenance_gap": "No local raw c27 13-7 rows or fixed-horizon-25 rows; those anchors remain uncalibrated."}
 
 
 def sample_branch() -> BranchSpec:
@@ -86,17 +93,112 @@ def run(include_entropy: bool = False) -> dict[str, Any]:
         "legacy_support_statistics_not_used": atlas["legacy_support_statistics_used"] is False,
     }
     motifs = json.loads((LANE / "frontier_motifs.json").read_text(encoding="utf-8"))["motifs"]
-    ranked = mutation_frontier(motifs)
+    loss_rows = json.loads((ROOT / "research/job_value_residual_2026-08-12/artifacts/discovery_windows.json").read_text(encoding="utf-8"))["rows"]
+    proposal_atlas = atlas if include_entropy else build_atlas(include_channel_entropy=True)
+    proposal_oracles = {
+        lane: proposal_oracle(motifs, lane, proposal_atlas, loss_rows)
+        for lane in ("v27_current_meta", "boatlee_v16_rc2_market_relay")
+    }
     calibrations = calibration()
     compiler = compiler_smoke()
-    passed = (authority["passed"] and all(atlas_checks.values()) and calibrations["passed"]
+    passed = (authority["passed"] and all(atlas_checks.values()) and calibrations["safety_passed"]
               and compiler["passed"] and compiler["static_audit"]["passed"] and compiler["isolated_import"])
     return {
-        "schema_version": 1, "decision": "READY_FOR_PROPOSAL_ONLY" if passed else "DEVELOPMENT_REMEDIATION_REQUIRED",
+        "schema_version": 2,
+        "decision": "REPRODUCIBLE_BRANCH_EXPERIMENTATION_SUBSTRATE_ONLY" if passed else "DEVELOPMENT_REMEDIATION_REQUIRED",
+        "status_matrix": {
+            "v1_design_safety": "PASS_WITH_CAVEATS" if passed else "FAIL",
+            "reproducible_development_verification": "PASS" if passed else "FAIL",
+            "expected_full_path_architecture": "PARTIAL_IMPLEMENTATION",
+            "proposal_oracle": "BLOCKED_FRONTIER_CODE_EVIDENCE",
+            "three_anchor_calibration": "BLOCKED_RAW_ROWS",
+            "formal_efficacy": "NOT_AUTHORIZED",
+        },
+        "architecture_capabilities": {
+            "incumbent_linear_spines": True, "single_bounded_branch_compilation": True,
+            "multi_branch_conditional_routing": False, "best_policy_topology_materialized": False,
+        },
         "formal_fresh_confirmation_authorized": False, "new_formal_seeds_selected": [], "new_formal_seeds_executed": False,
         "authority": authority, "atlas": {key: value for key, value in atlas.items() if key != "channel_entropy_by_step"},
         "atlas_checks": atlas_checks, "calibration": calibrations, "compiler": compiler,
-        "proposal_frontier": ranked, "pool_lanes": False, "passed": passed,
+        "proposal_oracles": proposal_oracles, "pool_lanes": False, "passed": passed,
+    }
+
+
+def source_inventory() -> dict[str, Any]:
+    lane_relative = LANE.relative_to(ROOT).as_posix()
+    tracked = subprocess.check_output(
+        ["git", "ls-files", "--", ".gitattributes", "full_path_topology_searching_report_2026-08-17.md",
+         "topology_path.md", lane_relative], cwd=ROOT, text=True).splitlines()
+    paths = [ROOT / value for value in sorted(set(tracked))
+             if not value.endswith("development_verification_summary.json")]
+    entries = []
+    for path in paths:
+        raw = canonical_utf8_lf(path.read_bytes())
+        entries.append({"path": path.relative_to(ROOT).as_posix(), "bytes": len(raw),
+                        "sha256": hashlib.sha256(raw).hexdigest()})
+    encoded = json.dumps(entries, sort_keys=True, separators=(",", ":")).encode("utf-8")
+    return {"file_count": len(entries), "sha256": hashlib.sha256(encoded).hexdigest(), "files": entries}
+
+
+def run_verification_commands() -> list[dict[str, Any]]:
+    commands = [
+        (["python", "-m", "unittest", "discover", "-s", "tests", "-v"], LANE, 56, "unittest"),
+        (["python", "-m", "unittest", "test_async_v3", "-v"], ROOT / "research/dual_incumbent_topology_search_2026-08-14/async_v3", 23, "unittest"),
+        (["python", "-m", "unittest", "research.main_approach.test_development_sources", "-v"], ROOT, 3, "unittest"),
+        (["python", "cli.py", "validate"], LANE, 1, "validation"),
+    ]
+    runs = []
+    for command, cwd, minimum_count, kind in commands:
+        completed = subprocess.run(command, cwd=cwd, capture_output=True, text=True)
+        output = completed.stdout + completed.stderr
+        matches = re.findall(r"Ran (\d+) tests?", output)
+        if kind == "unittest":
+            count = int(matches[-1]) if matches else 0
+            semantic_pass = count >= minimum_count
+        else:
+            try:
+                validation = json.loads(completed.stdout)
+                semantic_pass = validation["authority"]["passed"] is True and validation["calibration"]["safety_passed"] is True
+            except (KeyError, TypeError, ValueError, json.JSONDecodeError):
+                semantic_pass = False
+            count = 1 if semantic_pass else 0
+        passed = completed.returncode == 0 and semantic_pass
+        run = {
+            "command": subprocess.list2cmdline(command), "working_directory": cwd.relative_to(ROOT).as_posix() or ".",
+            "exit_code": completed.returncode, "minimum_required": minimum_count,
+            "passed": count if passed else 0, "failed": 0 if passed else max(1, count),
+            "output_sha256": hashlib.sha256(output.encode("utf-8")).hexdigest(),
+        }
+        runs.append(run)
+        if not passed:
+            raise RuntimeError(f"verification command failed: {run}")
+    return runs
+
+
+def tracked_summary(report: dict[str, Any], verification_runs: list[dict[str, Any]]) -> dict[str, Any]:
+    inventory = source_inventory()
+    compiler = report["compiler"]
+    atlas = report["atlas"]
+    base_commit = subprocess.run(["git", "rev-parse", "HEAD"], cwd=ROOT, capture_output=True,
+                                 text=True, check=True).stdout.strip()
+    return {
+        "schema_version": 1, "verified_date": "2026-08-20", "base_commit_at_verification": base_commit,
+        "source_inventory_policy": "git_tracked_sources_only",
+        "source_inventory_sha256": inventory["sha256"], "source_file_count": inventory["file_count"],
+        "decision": report["decision"], "status_matrix": report["status_matrix"],
+        "formal_efficacy_authorized": False,
+        "atlas": {"source_representatives": atlas["source_representative_tapes"],
+                  "unique_full_action_tapes": atlas["representative_tapes"], "nodes": atlas["nodes"],
+                  "max_depth": atlas["max_depth"], "structure_digest": atlas["deduplicated_structure_digest"],
+                  "input_inventory_sha256": report["authority"]["collections"]["atlas_inputs"]["inventory_sha256"]},
+        "candidate_smoke": {"bytes": compiler["bytes"], "sha256": compiler["sha256"],
+                            "isolated_import": compiler["isolated_import"], "both_entrypoints": compiler["callable_agent"] and compiler["callable_server_entrypoint"]},
+        "calibration": {"status": report["calibration"]["status"],
+                        "three_anchor_calibration_passed": False},
+        "proposal_oracles": {lane: {"status": value["status"], "ranked_proposal_count": value["ranked_proposal_count"]}
+                             for lane, value in report["proposal_oracles"].items()},
+        "verification_runs": verification_runs,
     }
 
 

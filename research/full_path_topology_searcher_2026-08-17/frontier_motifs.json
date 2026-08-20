@@ -1,11 +1,11 @@
 {
-  "schema_version": 1,
-  "policy": "Priorities allocate development-test budget only; they are not efficacy scores.",
+  "schema_version": 2,
+  "policy": "Manual scalar priorities are prohibited. All three signals must be derived from frozen evidence; missing evidence blocks ranking.",
+  "required_signals": ["replay_mutability", "frontier_relevance", "own_loss_match"],
   "motifs": [
-    {"id":"terminal_liquidation","lanes":["v27_current_meta","boatlee_v16_rc2_market_relay"],"mutability":0.95,"frontier_relevance":0.90,"own_loss_match":0.85,"bounded_horizon":[8,24]},
-    {"id":"public_market_preemption","lanes":["v27_current_meta","boatlee_v16_rc2_market_relay"],"mutability":0.80,"frontier_relevance":0.95,"own_loss_match":0.80,"bounded_horizon":[8,48]},
-    {"id":"livestock_capacity_trade","lanes":["boatlee_v16_rc2_market_relay"],"mutability":0.70,"frontier_relevance":0.85,"own_loss_match":0.75,"bounded_horizon":[8,32]},
-    {"id":"worker_route_rejoin","lanes":["v27_current_meta","boatlee_v16_rc2_market_relay"],"mutability":0.65,"frontier_relevance":0.75,"own_loss_match":0.70,"bounded_horizon":[8,48]}
+    {"id":"terminal_liquidation","lanes":["v27_current_meta","boatlee_v16_rc2_market_relay"],"channel":"full","step_window":[688,718],"loss_families":["terminal_liquidation"],"bounded_horizon":[8,24]},
+    {"id":"public_market_preemption","lanes":["v27_current_meta","boatlee_v16_rc2_market_relay"],"channel":"market","step_window":[216,432],"loss_families":["logistics_market"],"bounded_horizon":[8,48]},
+    {"id":"livestock_capacity_trade","lanes":["boatlee_v16_rc2_market_relay"],"channel":"unit","step_window":[200,640],"loss_families":["maintenance_trade"],"bounded_horizon":[8,32]},
+    {"id":"worker_route_rejoin","lanes":["v27_current_meta","boatlee_v16_rc2_market_relay"],"channel":"unit","step_window":[0,718],"loss_families":["maintenance_trade","productive_detour"],"bounded_horizon":[8,48]}
   ]
 }
-

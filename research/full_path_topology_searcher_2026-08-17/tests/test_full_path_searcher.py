@@ -14,14 +14,15 @@ from unittest import mock
 LANE = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(LANE))
 
-from atlas import build_atlas, build_incumbent_graph, deduplicated_tapes, first_irreversible_divergence, mutation_frontier
-from authority import load_registry, validate_registry
+from atlas import build_atlas, build_incumbent_graph, deduplicated_tapes, first_irreversible_divergence
+from authority import canonical_utf8_lf, fingerprint, load_registry, validate_registry
 import compiler as compiler_module
 from compiler import MAX_CANDIDATE_BYTES, RUNTIME_SOURCE, compile_candidate, static_audit, technical_evaluate
 import evaluator as evaluator_module
 from evaluator import classify_summary_fixture, evaluate_pairs
 from model import BranchSpec, ContinuationSpec, RejoinContract, StateSignature
-from verify import calibration, sample_branch
+from proposal import proposal_oracle
+from verify import calibration, sample_branch, source_inventory
 
 LANE_NAME = "v27_current_meta"
 REGISTRY = load_registry()
@@ -180,10 +181,15 @@ class AtlasTests(unittest.TestCase):
         self.assertNotEqual(left["graph_digest"], right["graph_digest"])
         self.assertTrue(all(row["source"].startswith("v27_current_meta:") for row in left["edges"]))
 
-    def test_priority_is_budget_only_and_deterministic(self):
-        rows = [{"id": "b", "mutability": .5, "frontier_relevance": 1, "own_loss_match": 1},
-                {"id": "a", "mutability": 1, "frontier_relevance": 1, "own_loss_match": 1}]
-        self.assertEqual([row["id"] for row in mutation_frontier(rows)], ["a", "b"])
+    def test_proposal_oracle_fails_closed_without_verified_frontier_sources(self):
+        atlas = build_atlas(include_channel_entropy=True)
+        motifs = json.loads((LANE / "frontier_motifs.json").read_text(encoding="utf-8"))["motifs"]
+        rows = json.loads((LANE.parents[1] / "research/job_value_residual_2026-08-12/artifacts/discovery_windows.json").read_text(encoding="utf-8"))["rows"]
+        result = proposal_oracle(motifs, LANE_NAME, atlas, rows)
+        self.assertEqual(result["status"], "BLOCKED_MISSING_EVIDENCE")
+        self.assertEqual(result["ranked_proposal_count"], 0)
+        self.assertTrue(all(row["priority"] is None for row in result["proposals"]))
+        self.assertTrue(any(row["signals"]["replay_mutability"] is not None for row in result["proposals"]))
 
     def test_first_irreversible_divergence(self):
         result = first_irreversible_divergence([{"causal_digest": "a"}, {"causal_digest": "b"}], [{"causal_digest": "a"}, {"causal_digest": "c"}])
@@ -228,6 +234,29 @@ class EvaluatorTests(unittest.TestCase):
                 result = evaluate_pairs(rows, "fresh_paired", LANE_NAME, registered)
             self.assertTrue(result.wdl_gate_passed)
             self.assertFalse(result.efficacy_eligible)
+            self.assertIn("formal_efficacy_contract_not_approved", result.stop_reasons)
+
+    def test_authorization_flag_and_approved_contract_still_enforce_support_and_uncertainty(self):
+        with tempfile.TemporaryDirectory(dir=LANE) as temporary:
+            artifact = Path(temporary) / "candidate.py"
+            artifact.write_bytes(b"registered candidate fixture\n")
+            digest = hashlib.sha256(artifact.read_bytes()).hexdigest()
+            registered = {**PROTOCOL, "candidate_source_id": "verified_candidate", "candidate_sha256": digest}
+            source = {"id": "verified_candidate", "path": artifact.relative_to(LANE.parents[1]).as_posix(),
+                      "sha256": digest, "bytes": artifact.stat().st_size, "lane": LANE_NAME,
+                      "candidate_artifact": True, "technical_verified": True, "mutable": False}
+            registry = {**REGISTRY, "formal_efficacy_authorized": True,
+                        "formal_efficacy_contract": {"status": "approved", "minimum_matched_contexts": 2,
+                            "minimum_independent_seeds": 2, "minimum_opponent_families": 2,
+                            "uncertainty_lower_bound_rule": "cluster_bootstrap_p025_gt_0"},
+                        "paired_protocols": [registered], "sources": [*REGISTRY["sources"], source]}
+            rows = [{**wdl_row(0, [0, 1], [1, 0], terminal_state_changed=True), "candidate_sha256": digest},
+                    {**wdl_row(1, [0, 0], [0, 0]), "candidate_sha256": digest}]
+            with mock.patch.object(evaluator_module, "_registry", return_value=registry):
+                result = evaluate_pairs(rows, "fresh_paired", LANE_NAME, registered)
+            self.assertTrue(result.wdl_gate_passed)
+            self.assertFalse(result.efficacy_eligible)
+            self.assertIn("formal_efficacy_support_or_uncertainty_gate_failed", result.stop_reasons)
 
     def test_registered_candidate_provenance_negative_matrix_fails_closed(self):
         with tempfile.TemporaryDirectory(dir=LANE) as temporary:
@@ -318,14 +347,16 @@ class EvaluatorTests(unittest.TestCase):
 
     def test_summary_fixture_never_claims_efficacy(self):
         result = classify_summary_fixture({"id": "c27", "evidence_level": "summary_only", "claimed_wdl": {"wins": 13, "losses": 7}})
-        self.assertTrue(result["proposal_rank_signal"])
+        self.assertFalse(result["proposal_rank_signal"])
+        self.assertEqual(result["calibration_status"], "blocked_raw_paired_rows_unavailable")
         self.assertFalse(result["efficacy_eligible"])
         mislabeled = classify_summary_fixture({"id": "aggregate", "evidence_level": "fresh_paired", "claimed_wdl": {"wins": 99}})
         self.assertFalse(mislabeled["efficacy_eligible"])
 
     def test_calibration_rejects_e2_and_missing_raw_rows(self):
         result = calibration()
-        self.assertTrue(result["passed"])
+        self.assertTrue(result["safety_passed"])
+        self.assertFalse(result["three_anchor_calibration_passed"])
         self.assertFalse(result["e2"]["efficacy_eligible"])
         self.assertIn("No local raw", result["provenance_gap"])
 
@@ -438,12 +469,31 @@ class RuntimeTests(unittest.TestCase):
 
 
 class IntegrationTests(unittest.TestCase):
+    def test_canonical_text_fingerprint_is_eol_independent(self):
+        self.assertEqual(canonical_utf8_lf(b"a\r\nb\r\n"), b"a\nb\n")
+        with tempfile.TemporaryDirectory() as temporary:
+            left = Path(temporary) / "left.txt"; right = Path(temporary) / "right.txt"
+            left.write_bytes(b"a\r\nb\r\n"); right.write_bytes(b"a\nb\n")
+            self.assertEqual(fingerprint(left, "canonical_utf8_lf")["sha256"],
+                             fingerprint(right, "canonical_utf8_lf")["sha256"])
+
     def test_registry_is_frozen(self):
         result = validate_registry()
         self.assertTrue(result["passed"])
         self.assertTrue(all(result["registry_contract"].values()))
         self.assertEqual(result["collections"]["atlas_inputs"]["file_count"], 451)
         self.assertTrue(result["collections"]["atlas_inputs"]["passed"])
+        topology = next(row for row in result["sources"] if row["id"] == "user_expected_architecture")
+        self.assertEqual(topology["fingerprint_mode"], "canonical_utf8_lf")
+        self.assertEqual(topology["actual_bytes"], 9122)
+
+    def test_source_inventory_is_stable_and_excludes_summary(self):
+        inventory = source_inventory()
+        self.assertRegex(inventory["sha256"], r"^[0-9a-f]{64}$")
+        self.assertFalse(any(row["path"].endswith("development_verification_summary.json") for row in inventory["files"]))
+        with tempfile.TemporaryDirectory(dir=LANE) as temporary:
+            (Path(temporary) / "ignored-candidate.py").write_text("def agent(obs): return {}\n", encoding="utf-8")
+            self.assertEqual(source_inventory()["sha256"], inventory["sha256"])
 
     def test_compiler_is_standalone_and_under_package_limit(self):
         with tempfile.TemporaryDirectory() as temporary:

@@ -1,6 +1,20 @@
+.gitattributes text eol=lf
 research/job_value_residual_2026-08-12/artifacts/*.jsonl text eol=lf
+research/job_value_residual_2026-08-12/artifacts/discovery_windows.json text eol=lf
 research/dual_incumbent_topology_search_2026-08-14/async_v3/** text eol=lf
 research/dual_incumbent_topology_search_2026-08-14/e2/** text eol=lf
 research/dual_incumbent_topology_search_2026-08-14/e2/artifacts/** -text
 submission/e2_boatlee_public_selector/main.py -text
 submission/e2_boatlee_step_241_only/main.py -text
+
+# Full-path topology research provenance is canonical UTF-8/LF text.
+full_path_topology_searching_report_2026-08-17.md text eol=lf
+topology_path.md text eol=lf
+research/full_path_topology_searcher_2026-08-17/** text=auto eol=lf
+research/main_approach/v27_current_meta/main.py text eol=lf
+research/main_approach/v27_current_meta/development/route_actions.json text eol=lf
+research/main_approach/boatlee_v16_rc2_market_relay/main.py text eol=lf
+research/main_approach/boatlee_v16_rc2_market_relay/development/route_actions.json text eol=lf
+research/public_agents/primary_opponents.json text eol=lf
+research/public_agents/lb20260816_04_rayk_zero_to_top/extracted/main.py text eol=lf
+reports/full_tape_topology_scaleup_2026-08-10/full_action_trie.json text eol=lf

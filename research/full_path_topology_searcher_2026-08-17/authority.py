@@ -15,12 +15,30 @@ ROOT = LANE.parents[1]
 REGISTRY = LANE / "evidence_registry.json"
 
 
+def canonical_utf8_lf(raw: bytes) -> bytes:
+    """Return a checkout-independent UTF-8/LF representation."""
+    text = raw.decode("utf-8")
+    return text.replace("\r\n", "\n").replace("\r", "\n").encode("utf-8")
+
+
+def fingerprint(path: Path, mode: str = "raw_bytes") -> dict[str, Any]:
+    raw = path.read_bytes()
+    if mode == "canonical_utf8_lf":
+        value = canonical_utf8_lf(raw)
+    elif mode == "raw_bytes":
+        value = raw
+    else:
+        raise ValueError(f"unsupported fingerprint mode: {mode}")
+    return {
+        "sha256": hashlib.sha256(value).hexdigest(),
+        "bytes": len(value),
+        "working_tree_bytes": len(raw),
+        "mode": mode,
+    }
+
+
 def sha256(path: Path) -> str:
-    digest = hashlib.sha256()
-    with path.open("rb") as handle:
-        for block in iter(lambda: handle.read(1024 * 1024), b""):
-            digest.update(block)
-    return digest.hexdigest()
+    return fingerprint(path)["sha256"]
 
 
 def load_registry() -> dict[str, Any]:
@@ -104,21 +122,25 @@ def validate_registry() -> dict[str, Any]:
     protocols = registry.get("paired_protocols")
     protocol_ids = [row.get("protocol_id") for row in protocols] if isinstance(protocols, list) else []
     registry_contract = {
-        "schema_v1": registry.get("schema_version") == 1 and not isinstance(registry.get("schema_version"), bool),
+        "schema_v2": registry.get("schema_version") == 2 and not isinstance(registry.get("schema_version"), bool),
         "strict_formal_boundary": registry.get("formal_efficacy_authorized") is False,
+        "formal_contract_unapproved": registry.get("formal_efficacy_contract", {}).get("status") == "not_approved",
         "unique_source_ids": all(isinstance(value, str) and value for value in source_ids) and len(source_ids) == len(set(source_ids)),
         "paired_protocols_are_unique_list": isinstance(protocols, list) and all(isinstance(value, str) and value for value in protocol_ids) and len(protocol_ids) == len(set(protocol_ids)),
     }
     ok = all(registry_contract.values())
     for source in registry["sources"]:
         path = ROOT / source["path"]
-        actual = sha256(path) if path.is_file() else None
-        size = path.stat().st_size if path.is_file() else None
-        passed = actual == source["sha256"] and size == source["bytes"]
+        mode = source.get("fingerprint_mode", "raw_bytes")
+        actual = fingerprint(path, mode) if path.is_file() else None
+        passed = (actual is not None and actual["sha256"] == source["sha256"]
+                  and actual["bytes"] == source["bytes"])
         ok = ok and passed
         findings.append({"id": source["id"], "path": source["path"], "passed": passed,
-                         "expected_sha256": source["sha256"], "actual_sha256": actual,
-                         "expected_bytes": source["bytes"], "actual_bytes": size})
+                         "fingerprint_mode": mode,
+                         "expected_sha256": source["sha256"], "actual_sha256": actual["sha256"] if actual else None,
+                         "expected_bytes": source["bytes"], "actual_bytes": actual["bytes"] if actual else None,
+                         "working_tree_bytes": actual["working_tree_bytes"] if actual else None})
     engine = engine_fingerprint(registry["engine"])
     atlas_inputs = atlas_inputs_fingerprint()
     expected_inputs = registry["collections"]["atlas_inputs"]

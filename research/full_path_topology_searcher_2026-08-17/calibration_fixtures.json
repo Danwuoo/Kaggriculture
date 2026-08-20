@@ -1,21 +1,22 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "fixtures": [
     {
       "id": "c27_reported_13_7_classifier",
+      "anchor_role": "positive_control",
       "evidence_level": "summary_only",
       "claimed_wdl": {"wins": 13, "draws": 0, "losses": 7},
       "reported_mean_margin_delta": 42.0,
-      "expected": {"proposal_rank_signal": true, "efficacy_eligible": false},
-      "note": "Calibrates ranking only. No local raw matched 13-7 artifact was found."
+      "expected": {"calibration_status": "blocked_raw_paired_rows_unavailable", "efficacy_eligible": false},
+      "note": "Expected positive control, but it cannot calibrate the evaluator until raw matched c27-vs-c17 rows are frozen."
     },
     {
       "id": "fixed_horizon_25_reported_distribution",
+      "anchor_role": "distribution_failure_control",
       "evidence_level": "summary_only",
       "claimed_wdl": {"wins": 1, "draws": 0, "losses": 1},
-      "expected": {"proposal_rank_signal": true, "efficacy_eligible": false},
-      "note": "Exact paired rows were absent from the live tree and external archive."
+      "expected": {"calibration_status": "blocked_raw_paired_rows_unavailable", "efficacy_eligible": false},
+      "note": "Expected rejection control, but exact parent-relative paired rows were absent from the live tree and external archive."
     }
   ]
 }
-

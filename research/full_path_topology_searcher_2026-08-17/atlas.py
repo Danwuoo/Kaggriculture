@@ -196,15 +196,6 @@ def build_atlas(include_channel_entropy: bool = True) -> dict[str, Any]:
     return result
 
 
-def mutation_frontier(motifs: Iterable[dict[str, Any]]) -> list[dict[str, Any]]:
-    ranked = []
-    for motif in motifs:
-        value = dict(motif)
-        value["priority"] = round(float(value["mutability"]) * float(value["frontier_relevance"]) * float(value["own_loss_match"]), 8)
-        ranked.append(value)
-    return sorted(ranked, key=lambda value: (-value["priority"], value["id"]))
-
-
 def first_irreversible_divergence(control: list[dict[str, Any]], candidate: list[dict[str, Any]], lookback: int = 8) -> dict[str, Any] | None:
     if len(control) != len(candidate):
         raise ValueError("paired traces must have equal length")

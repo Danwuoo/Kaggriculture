@@ -1,8 +1,10 @@
 # Full Path Topology Searcher — development lane
 
-This isolated V1 turns retained route topology into bounded, executable branch
-proposals. It does **not** search an unconstrained 719-turn replacement tape.
-The executable graph is:
+This isolated V1 is a **branch-experimentation substrate**, not the complete
+Outcome-Conditioned Executable DAG described by `topology_path.md`. It
+materializes one bounded branch against a retained incumbent spine; it does
+not yet route among multiple calibrated outgoing branches or materialize
+`BEST_POLICY_TOPOLOGY`. The executable unit is:
 
 `incumbent spine -> public-state trigger -> 1..48 turn motif -> causal continuation -> explicit rejoin or incumbent fallback -> WDL value`
 
@@ -19,7 +21,7 @@ exact duplicates are excluded from support and entropy statistics.
 
 ## Status boundary
 
-V1 may produce `READY_FOR_PROPOSAL_ONLY`. It cannot authorize fresh seeds,
+Current status is `REPRODUCIBLE_BRANCH_EXPERIMENTATION_SUBSTRATE_ONLY`. It cannot authorize fresh seeds,
 formal efficacy, promotion, submission packaging, or Kaggle submission. The
 frozen Boatlee E2 selector is evidence about rejection logic only; its consumed
 contexts and zero actual win delta remain non-efficacy evidence. v27 E2 remains
@@ -37,11 +39,19 @@ python cli.py forensics --control control_trace.json --candidate candidate_trace
 python cli.py compile --spec branch.json --output artifacts\candidate\main.py
 python cli.py technical-evaluate --candidate artifacts\candidate\main.py
 python cli.py report --output ..\cache\full_path_topology_searcher_2026-08-17\development_verification.json
+python cli.py write-summary
 ```
 
-`propose` ranks test budget by `mutability × frontier relevance × own-loss
-match`; it never ranks efficacy. `technical-evaluate` performs static and
-isolated-import checks and runs zero formal games.
+`write-summary` executes the lane, Async V3, and incumbent source-contract
+suites plus registry validation before publishing. Zero-test or reduced-test
+runs fail closed. Its source digest covers Git-tracked inputs only, so ignored
+candidate artifacts cannot make the committed summary checkout-dependent.
+
+`propose` derives replay mutability from the 225-tape atlas and own-loss match
+from registered consumed forensic windows. It refuses to rank while verified
+multi-lineage frontier-code matches are absent; manual scalar priorities are
+not accepted. `technical-evaluate` performs static and isolated-import checks
+and runs zero formal games.
 
 ## Candidate contract
 
@@ -68,6 +78,13 @@ exact non-Boolean integers only.
 Margin, own bank, receipts, action digests,
 or proposal priority cannot substitute. W→L is high risk; repeatable family/seat
 worsening is a stop. Economics may break ties only when transition profiles are
-identical. In this V1 registry, `formal_efficacy_authorized` is false, so even a
-fully passing hypothetical raw-row gate remains non-eligible until a separate
-authorization updates the program boundary.
+identical. In this V1 registry, `formal_efficacy_authorized` is false and the
+statistical efficacy contract is explicitly `not_approved`. Toggling the
+authorization flag alone cannot make evidence eligible.
+
+## Known evidence gaps
+
+The c27 positive anchor and fixed-horizon-25 distribution-failure anchor remain
+uncalibrated because their raw parent-relative paired rows are not present.
+Only the Boatlee E2 margin-only false-positive anchor can currently be rejected
+from retained machine evidence. These gaps are blockers, not proposal signals.

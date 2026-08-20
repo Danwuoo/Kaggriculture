@@ -11,8 +11,8 @@ from atlas import build_atlas, first_irreversible_divergence
 from authority import validate_registry
 from compiler import compile_candidate, technical_evaluate
 from model import BranchSpec
-from proposal import rank_proposals
-from verify import calibration, write_report
+from proposal import proposal_oracle
+from verify import calibration, run_verification_commands, tracked_summary, write_report
 
 
 LANE = Path(__file__).resolve().parent
@@ -49,6 +49,8 @@ def main() -> None:
     report = commands.add_parser("report")
     report.add_argument("--output", type=Path, required=True)
     report.add_argument("--include-entropy", action="store_true")
+    summary = commands.add_parser("write-summary")
+    summary.add_argument("--output", type=Path, default=LANE / "development_verification_summary.json")
     args = parser.parse_args()
 
     if args.command == "validate":
@@ -59,11 +61,18 @@ def main() -> None:
         result = first_irreversible_divergence(_read(args.control), _read(args.candidate)); _write(args.output, result)
     elif args.command == "propose":
         motifs = _read(LANE / "frontier_motifs.json")["motifs"]
-        result = {"lane": args.lane, "development_budget_only": True, "proposals": rank_proposals(motifs, args.lane)}; _write(args.output, result)
+        loss_rows = _read(LANE.parents[1] / "research/job_value_residual_2026-08-12/artifacts/discovery_windows.json")["rows"]
+        result = proposal_oracle(motifs, args.lane, build_atlas(include_channel_entropy=True), loss_rows)
+        _write(args.output, result)
     elif args.command == "compile":
         result = compile_candidate(BranchSpec.from_dict(_read(args.spec)), args.output)
     elif args.command == "technical-evaluate":
         result = technical_evaluate(args.candidate)
+    elif args.command == "write-summary":
+        verification_runs = run_verification_commands()
+        report_value = write_report(LANE.parents[1] / "research/cache/full_path_topology_searcher_2026-08-17/development_verification.json", include_entropy=False)
+        result = tracked_summary(report_value, verification_runs)
+        _write(args.output, result)
     else:
         result = write_report(args.output, include_entropy=args.include_entropy)
     print(json.dumps(result, indent=2, sort_keys=True))

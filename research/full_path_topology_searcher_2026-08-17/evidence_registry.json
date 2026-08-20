@@ -1,9 +1,17 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "created": "2026-08-17",
   "formal_efficacy_authorized": false,
+  "formal_efficacy_contract": {
+    "status": "not_approved",
+    "activation_rule": "Authorization alone is insufficient. A separately approved minimum-support and uncertainty contract is required.",
+    "minimum_matched_contexts": null,
+    "minimum_independent_seeds": null,
+    "minimum_opponent_families": null,
+    "uncertainty_lower_bound_rule": null
+  },
   "policy": {
-    "summary_only": "May rank proposals or calibrate rejection logic; never causal efficacy.",
+    "summary_only": "May calibrate fail-closed rejection logic only; never rank proposals or establish causal efficacy.",
     "consumed_paired": "May diagnose mechanisms; never fresh promotion evidence.",
     "structural": "May describe action topology; never outcome efficacy.",
     "source_code": "May establish mechanism presence; never outcome efficacy."
@@ -39,17 +47,18 @@
   },
   "paired_protocols": [],
   "sources": [
-    {"id":"user_research_report","path":"full_path_topology_searching_report_2026-08-17.md","sha256":"a5429d5d0dc0029d8800b1be3b56a32dfc6e48dca19b772edc7c26f4baad68ef","bytes":37245,"evidence_level":"summary_only","mutable":false},
-    {"id":"user_expected_architecture","path":"topology_path.md","sha256":"dc484d0ee463e723924600017e98aff28dda175bd3cb05adb6cac8387066e5f9","bytes":9603,"evidence_level":"summary_only","mutable":false},
+    {"id":"user_research_report","path":"full_path_topology_searching_report_2026-08-17.md","fingerprint_mode":"canonical_utf8_lf","sha256":"a5429d5d0dc0029d8800b1be3b56a32dfc6e48dca19b772edc7c26f4baad68ef","bytes":37245,"evidence_level":"summary_only","mutable":false},
+    {"id":"user_expected_architecture","path":"topology_path.md","fingerprint_mode":"canonical_utf8_lf","sha256":"e77800b3031c0909e01389e3861a4732ba1951544c77ab0bcf45ebe9d99d0d9f","bytes":9122,"evidence_level":"summary_only","mutable":false},
     {"id":"v27_incumbent","path":"research/main_approach/v27_current_meta/main.py","sha256":"063128bf765f6a6bb29ecaccc3a7dae8943e35e46c26a6364a1b3169313b9fb4","bytes":29857,"evidence_level":"source_code","lane":"v27_current_meta","mutable":false},
     {"id":"v27_route","path":"research/main_approach/v27_current_meta/development/route_actions.json","sha256":"d62e8f0a0b930ddfedd560d824c320c39ff3c947f914169ea22ca013a3f0ff84","bytes":305157,"evidence_level":"source_code","lane":"v27_current_meta","mutable":false},
     {"id":"boatlee_incumbent","path":"research/main_approach/boatlee_v16_rc2_market_relay/main.py","sha256":"ddb78d2a829745505f31afc6ea1288e2f57d6ff534649d5f416926e8035029ea","bytes":39456,"evidence_level":"source_code","lane":"boatlee_v16_rc2_market_relay","mutable":false},
     {"id":"boatlee_route","path":"research/main_approach/boatlee_v16_rc2_market_relay/development/route_actions.json","sha256":"d62e8f0a0b930ddfedd560d824c320c39ff3c947f914169ea22ca013a3f0ff84","bytes":305157,"evidence_level":"source_code","lane":"boatlee_v16_rc2_market_relay","mutable":false},
     {"id":"public_opponents","path":"research/public_agents/primary_opponents.json","sha256":"1bd5b81fc56735b61e4f3f49937d9ad21a63e3c8257fafc3c12f624605f7070c","bytes":5090,"evidence_level":"source_code","mutable":false},
-    {"id":"full_action_trie_summary","path":"reports/full_tape_topology_scaleup_2026-08-10/full_action_trie.json","sha256":"8d8851cd4211adf4bf1222450d186728e99f2a78df6b85a43b8c23c7b33cc46c","bytes":140747,"evidence_level":"structural","mutable":false},
+    {"id":"full_action_trie_summary","path":"reports/full_tape_topology_scaleup_2026-08-10/full_action_trie.json","fingerprint_mode":"canonical_utf8_lf","sha256":"ab5b006f87d4b56e71f1aa5f922cae844b64e655980d650187a138f071a2f3d7","bytes":133371,"evidence_level":"structural","mutable":false},
     {"id":"full_action_trie_sqlite","path":"research/cache/full_tape_topology_scaleup_2026-08-10/corpus/full_action_prefix_trie.sqlite","sha256":"6d3c697b0ae9c2e2526152f6e5ec22b1dfec2aaf06299473f1eff676c81ec702","bytes":42037248,"evidence_level":"structural","mutable":false},
     {"id":"e2_remediation_verification","path":"research/dual_incumbent_topology_search_2026-08-14/e2/remediation_verification.json","sha256":"d9bbc98954bc34cf681903815a7542fb2fcf5e2cd9db397b046d1ee028fb9104","bytes":5131,"evidence_level":"consumed_paired","lane":"boatlee_v16_rc2_market_relay","mutable":false},
     {"id":"async_e1b_fixture","path":"research/dual_incumbent_topology_search_2026-08-14/async_v3/fixtures/e1b_regression_fixtures.json","sha256":"5d4a96c48f7f9ece23db7b0644c16aa524a038a5f8d598b8ce5bffa193985686","bytes":8677,"evidence_level":"consumed_paired","mutable":false},
+    {"id":"job_value_discovery_windows","path":"research/job_value_residual_2026-08-12/artifacts/discovery_windows.json","fingerprint_mode":"canonical_utf8_lf","sha256":"16d261cd6e7ea909c65c8675f7dd1a87e7a262a86b51161dc0f85da5e34a04b7","bytes":46921,"evidence_level":"consumed_paired","mutable":false},
     {"id":"rayk_c27_source","path":"research/public_agents/lb20260816_04_rayk_zero_to_top/extracted/main.py","sha256":"489f5d197527f107027626cce79d850fd2ca90edd43d94384b849b6511e27bdb","bytes":75098,"evidence_level":"source_code","mutable":false},
     {"id":"v27_e1c_economic_noop_candidate","path":"research/dual_incumbent_topology_search_2026-08-14/async_v3/artifacts/formal/async_e1c_20260815_expanded_v1/finalists/v27_current_meta/ac_bad79e4d71965c86b6b351a1/main.py","sha256":"b8b2aa6894ff75c9dac8d36d37609e5591d3a5f0c167afde8002fc9fe5b9bc69","bytes":36887,"evidence_level":"consumed_paired","lane":"v27_current_meta","candidate_artifact":true,"technical_verified":true,"efficacy_eligible":false,"mutable":false}
   ]

@@ -220,13 +220,38 @@ def evaluate_pairs(pairs: Iterable[Mapping[str, Any]], freshness: str, lane: str
         if values["worsen"] >= 2 and values["worsen"] > values["improve"]:
             reasons.append(f"repeatable_stratum_worsening:{name}")
     net_ordinal_delta = sum(int(row["delta"]) for row in rows)
+    uncertainty = _interval(rows)
     if improve <= worsen or net_ordinal_delta <= 0:
         reasons.append("nonpositive_primary_wdl_movement")
     wdl_gate_passed = bool(rows) and technical_valid and effective and improve > worsen and net_ordinal_delta > 0 and not reasons
     formal_authorized = registry.get("formal_efficacy_authorized") is True
+    formal_contract = registry.get("formal_efficacy_contract", {})
+    formal_contract_approved = (
+        isinstance(formal_contract, Mapping)
+        and formal_contract.get("status") == "approved"
+        and all(isinstance(formal_contract.get(name), int) and not isinstance(formal_contract.get(name), bool)
+                and formal_contract[name] > 0 for name in (
+                    "minimum_matched_contexts", "minimum_independent_seeds", "minimum_opponent_families"))
+        and isinstance(formal_contract.get("uncertainty_lower_bound_rule"), str)
+        and bool(formal_contract.get("uncertainty_lower_bound_rule"))
+    )
     if not formal_authorized:
         reasons.append("formal_efficacy_not_authorized")
-    efficacy = wdl_gate_passed and formal_authorized
+    if not formal_contract_approved:
+        reasons.append("formal_efficacy_contract_not_approved")
+    formal_support_passed = False
+    if formal_contract_approved:
+        observed_families = {family for _seed, family, _context_id in context_seats}
+        formal_support_passed = (
+            len(context_seats) >= formal_contract["minimum_matched_contexts"]
+            and len(observed_seeds) >= formal_contract["minimum_independent_seeds"]
+            and len(observed_families) >= formal_contract["minimum_opponent_families"]
+            and formal_contract["uncertainty_lower_bound_rule"] == "cluster_bootstrap_p025_gt_0"
+            and uncertainty["cluster_bootstrap_p025"] > 0
+        )
+        if not formal_support_passed:
+            reasons.append("formal_efficacy_support_or_uncertainty_gate_failed")
+    efficacy = wdl_gate_passed and formal_authorized and formal_contract_approved and formal_support_passed
     margins = [float(row["paired_margin_delta"]) for row in rows if row.get("paired_margin_delta") is not None]
     banks = [float(row["own_bank_delta"]) for row in rows if row.get("own_bank_delta") is not None]
     economics = {
@@ -240,7 +265,7 @@ def evaluate_pairs(pairs: Iterable[Mapping[str, Any]], freshness: str, lane: str
         control_wdl=dict(control), candidate_wdl=dict(candidate), transition_matrix=dict(transitions),
         improve=improve, same=len(rows) - improve - worsen, worsen=worsen,
         strata={key: dict(value) for key, value in sorted(strata.items())},
-        uncertainty=_interval(rows), support=len(rows), freshness=derived_freshness,
+        uncertainty=uncertainty, support=len(rows), freshness=derived_freshness,
         technical_valid=technical_valid, effective_change=effective, wdl_gate_passed=wdl_gate_passed,
         efficacy_eligible=efficacy,
         economics=economics, stop_reasons=tuple(dict.fromkeys(reasons)),
@@ -249,11 +274,11 @@ def evaluate_pairs(pairs: Iterable[Mapping[str, Any]], freshness: str, lane: str
 
 def classify_summary_fixture(fixture: Mapping[str, Any]) -> dict[str, Any]:
     """Classify aggregate-only evidence without pretending it is paired raw evidence."""
-    claimed = dict(fixture.get("claimed_wdl", {}))
-    has_primary = int(claimed.get("wins", 0)) > 0
     level = str(fixture.get("evidence_level", "summary_only"))
     return {
-        "fixture_id": fixture["id"], "proposal_rank_signal": has_primary,
+        "fixture_id": fixture["id"], "anchor_role": fixture.get("anchor_role", "unattributed"),
+        "calibration_status": "blocked_raw_paired_rows_unavailable",
+        "raw_paired_rows_available": False, "proposal_rank_signal": False,
         "efficacy_eligible": False,
         "rejection_reason": f"aggregate_{level}_must_use_raw_attributed_rows_through_evaluate_pairs",
     }

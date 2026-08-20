@@ -1,0 +1,84 @@
+{
+  "atlas": {
+    "input_inventory_sha256": "70be8f58812512e905da578ee501d8b602ff6c8a9b3b6f22dd3cab62071fbdf6",
+    "max_depth": 719,
+    "nodes": 102803,
+    "source_representatives": 227,
+    "structure_digest": "74718aad76297a3a00acf8ad8b40e84548a57635692ac5388f39dfce3b6e9e00",
+    "unique_full_action_tapes": 225
+  },
+  "base_commit_at_verification": "f39fb4ca146cff3b7157fc86986ce4233b47cc30",
+  "calibration": {
+    "status": "PARTIAL_BLOCKED_RAW_ANCHORS",
+    "three_anchor_calibration_passed": false
+  },
+  "candidate_smoke": {
+    "both_entrypoints": true,
+    "bytes": 42211,
+    "isolated_import": true,
+    "sha256": "ac0beb808982f6caf070e2c76834d1dfe8184be67659fd263437893345b49fa1"
+  },
+  "decision": "REPRODUCIBLE_BRANCH_EXPERIMENTATION_SUBSTRATE_ONLY",
+  "formal_efficacy_authorized": false,
+  "proposal_oracles": {
+    "boatlee_v16_rc2_market_relay": {
+      "ranked_proposal_count": 0,
+      "status": "BLOCKED_MISSING_EVIDENCE"
+    },
+    "v27_current_meta": {
+      "ranked_proposal_count": 0,
+      "status": "BLOCKED_MISSING_EVIDENCE"
+    }
+  },
+  "schema_version": 1,
+  "source_file_count": 22,
+  "source_inventory_policy": "git_tracked_sources_only",
+  "source_inventory_sha256": "130cbc42631b8cffa7ba70ae00cdc540463868ae1c9f85097670003ffd694163",
+  "status_matrix": {
+    "expected_full_path_architecture": "PARTIAL_IMPLEMENTATION",
+    "formal_efficacy": "NOT_AUTHORIZED",
+    "proposal_oracle": "BLOCKED_FRONTIER_CODE_EVIDENCE",
+    "reproducible_development_verification": "PASS",
+    "three_anchor_calibration": "BLOCKED_RAW_ROWS",
+    "v1_design_safety": "PASS_WITH_CAVEATS"
+  },
+  "verification_runs": [
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "failed": 0,
+      "minimum_required": 56,
+      "output_sha256": "871819f563b1a84ff916a9c7c4bda79b13bd333f26aafe2e0e346bbf8ed77251",
+      "passed": 56,
+      "working_directory": "research/full_path_topology_searcher_2026-08-17"
+    },
+    {
+      "command": "python -m unittest test_async_v3 -v",
+      "exit_code": 0,
+      "failed": 0,
+      "minimum_required": 23,
+      "output_sha256": "26cb12a29aa8805b96203880350b09e1534ba5f88a337413e86a5c0f20d71d01",
+      "passed": 23,
+      "working_directory": "research/dual_incumbent_topology_search_2026-08-14/async_v3"
+    },
+    {
+      "command": "python -m unittest research.main_approach.test_development_sources -v",
+      "exit_code": 0,
+      "failed": 0,
+      "minimum_required": 3,
+      "output_sha256": "bb175b38ad0b1718cad2bd88832d8233ca335049d0b11ddf1600aeae63e479f5",
+      "passed": 3,
+      "working_directory": "."
+    },
+    {
+      "command": "python cli.py validate",
+      "exit_code": 0,
+      "failed": 0,
+      "minimum_required": 1,
+      "output_sha256": "8c7f42425b73a2f1dba3cc32e53c2694310458556287cdb9689806a8c8c7f219",
+      "passed": 1,
+      "working_directory": "research/full_path_topology_searcher_2026-08-17"
+    }
+  ],
+  "verified_date": "2026-08-20"
+}
