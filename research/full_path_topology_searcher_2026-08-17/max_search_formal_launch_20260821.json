@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "kind": "maximum_full_tape_search_formal_launch",
+  "run_id": "max_search_formal_300m_20260821_v1",
+  "launched_at": "2026-08-21T20:15:50.2673231+08:00",
+  "authorization": {
+    "source": "current_chat_user_request",
+    "formal_authorization_id": "user_20260821_300m_dynamic_11w",
+    "requested_candidate_games": 300000000,
+    "requested_worker_range": [10, 12],
+    "requested_program_cpu_percent": [50, 65],
+    "requested_storage_policy": "dynamic_deletion"
+  },
+  "process": {
+    "pid": 3912,
+    "python": "C:\\Python314\\python.exe",
+    "workers": 11,
+    "max_in_flight": 44,
+    "background": true,
+    "window_style": "hidden",
+    "run_root": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\research\\cache\\full_path_topology_searcher_2026-08-17\\max_search_formal_300m_20260821_v1",
+    "stdout": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\research\\cache\\full_path_topology_searcher_2026-08-17\\max_search_formal_300m_20260821_v1\\logs\\formal_stdout.log",
+    "stderr": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\research\\cache\\full_path_topology_searcher_2026-08-17\\max_search_formal_300m_20260821_v1\\logs\\formal_stderr.log"
+  },
+  "frozen_inputs": {
+    "contract_sha256": "486c480cb81ad461eb4a36d3e10621dda3bd927c636afbb94d2c56304e566d66",
+    "preflight_manifest_sha256": "5f79aefc89e1b6fa47bf67a02a72da397dac94a3c4d4ecfd73165f5e0b400956",
+    "preflight_manifest_file_sha256": "41bd47d003fd866614105333c164510a6f29e62463893f23136d5652550b8f83",
+    "implementation_manifest_sha256": "3ebeb3151ae39501b2a95313f1fc74333df81ef4082b0bacf6f64d869ac29fe3",
+    "source_snapshot_sha256": "aeb56618d87560d8a9892eab00823523ae305d080f9c0289af61ae0d2b38a777",
+    "context_registry_sha256": "caacd2101412edd7578cbabeba8b17d2796cbadbc0acac812149b36a128e584b",
+    "context_registry_file_sha256": "396d5e9dfc9f36a8b03dde58c9d6c6bcd2b0b45f2fa870fe1ce1794295c4c899",
+    "calibration_sha256": "747b24915d5b704ae5a6075bce53aa53eb61cd2bf7e8e7084b56c6a1845cae70",
+    "calibration_file_sha256": "4fe457f9bede9420dbda1396f5f9dba63baa5c795bcd9b00f86d42c398e773d7",
+    "execution_manifest_sha256": "1454d7dfcad3ac5c05c4746aa1d6df39ad703337977ca2f10801a0cea8a1d3d9",
+    "execution_manifest_file_sha256": "9a1d02c5f36d8fae60a2d21ffd1649ca631be044f3e220cf8fe4d0466e77f9d5",
+    "initial_checkpoint_sha256": "7dc05a1c9f6901d6d32ae4b1997697cc126c81be8efa7335d23fe7b9ec5b4805",
+    "initial_population_file_sha256": "4a208b2071c2e2b9c7f83350edb2ae45b4f89db08cfdeca02abdd40cb99dc36e"
+  },
+  "contexts": {
+    "t0": 6,
+    "t1": 24,
+    "untouched_holdout": 24,
+    "holdout_executed_by_300m_runner": false,
+    "pre_freeze_exact_token_repository_hits": 0
+  },
+  "calibration": {
+    "official_candidate_games": 128,
+    "elapsed_seconds": 95.24777799996082,
+    "games_per_second": 1.3438633707555117,
+    "whole_interval_cpu_percent": 57.48250346285631,
+    "steady_state_program_tree_cpu_percent": 50.19,
+    "program_cpu_gate_passed": true,
+    "rejected_12_worker_cpu_percent": 69.16513159287726
+  },
+  "dynamic_storage": {
+    "mode": "generation_adverse_compact_prune",
+    "minimum_runtime_free_bytes": 53687091200,
+    "available_free_bytes_at_manifest": 467204317184,
+    "retain_all_negative_margin_receipts": true,
+    "retain_all_technical_failures": true,
+    "retain_worse_economic_diagnostics": true,
+    "hash_all_deleted_receipts": true,
+    "delete_raw_receipts_after_signed_generation": true,
+    "mock_pause_resume_logical_t0": 128,
+    "mock_pause_resume_logical_t1": 64,
+    "mock_pause_resume_live_raw_receipts_after_completion": 0
+  },
+  "launch_verification": {
+    "parent_running": true,
+    "direct_child_processes": 12,
+    "expected_worker_processes": 11,
+    "expected_resource_tracker_processes": 1,
+    "stderr_bytes": 0,
+    "persisted_controls": 60,
+    "persisted_t0_receipts": 192,
+    "persisted_t0_candidates": 32,
+    "formal_execution_started": true,
+    "generation_checkpoint_advances_only_after_complete_generation": true
+  },
+  "tests": {
+    "maximum_search": {"passed": 104, "failed": 0},
+    "main_approach_source_contracts": {"passed": 3, "failed": 0},
+    "v27_builder_check": "passed",
+    "boatlee_builder_check": "passed"
+  },
+  "external_actions": {
+    "automatic_broad_launch": false,
+    "automatic_promotion": false,
+    "automatic_submission": false,
+    "kaggle_submission_performed": false,
+    "remote_repository_changed": false
+  }
+}

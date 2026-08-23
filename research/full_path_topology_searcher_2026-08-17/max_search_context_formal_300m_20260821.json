@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "kind": "maximum_search_context_draft",
+  "mode": "formal",
+  "stages": {
+    "t0": [
+      {"opponent_family": "other_incumbent", "seed": 92741361, "seat": 0},
+      {"opponent_family": "other_incumbent", "seed": 92741361, "seat": 1},
+      {"opponent_family": "other_incumbent", "seed": 68309524, "seat": 0},
+      {"opponent_family": "other_incumbent", "seed": 68309524, "seat": 1},
+      {"opponent_family": "other_incumbent", "seed": 25174893, "seat": 0},
+      {"opponent_family": "other_incumbent", "seed": 25174893, "seat": 1}
+    ],
+    "t1": [
+      {"opponent_family": "other_incumbent", "seed": 91462753, "seat": 0},
+      {"opponent_family": "other_incumbent", "seed": 91462753, "seat": 1},
+      {"opponent_family": "kaito_v21", "seed": 91462753, "seat": 0},
+      {"opponent_family": "kaito_v21", "seed": 91462753, "seat": 1},
+      {"opponent_family": "other_incumbent", "seed": 73815026, "seat": 0},
+      {"opponent_family": "other_incumbent", "seed": 73815026, "seat": 1},
+      {"opponent_family": "kaito_v21", "seed": 73815026, "seat": 0},
+      {"opponent_family": "kaito_v21", "seed": 73815026, "seat": 1},
+      {"opponent_family": "other_incumbent", "seed": 46598217, "seat": 0},
+      {"opponent_family": "other_incumbent", "seed": 46598217, "seat": 1},
+      {"opponent_family": "kaito_v21", "seed": 46598217, "seat": 0},
+      {"opponent_family": "kaito_v21", "seed": 46598217, "seat": 1},
+      {"opponent_family": "other_incumbent", "seed": 30974685, "seat": 0},
+      {"opponent_family": "other_incumbent", "seed": 30974685, "seat": 1},
+      {"opponent_family": "kaito_v21", "seed": 30974685, "seat": 0},
+      {"opponent_family": "kaito_v21", "seed": 30974685, "seat": 1},
+      {"opponent_family": "other_incumbent", "seed": 85261349, "seat": 0},
+      {"opponent_family": "other_incumbent", "seed": 85261349, "seat": 1},
+      {"opponent_family": "kaito_v21", "seed": 85261349, "seat": 0},
+      {"opponent_family": "kaito_v21", "seed": 85261349, "seat": 1},
+      {"opponent_family": "other_incumbent", "seed": 17642538, "seat": 0},
+      {"opponent_family": "other_incumbent", "seed": 17642538, "seat": 1},
+      {"opponent_family": "kaito_v21", "seed": 17642538, "seat": 0},
+      {"opponent_family": "kaito_v21", "seed": 17642538, "seat": 1}
+    ],
+    "holdout": [
+      {"opponent_family": "other_incumbent", "seed": 59731482, "seat": 0},
+      {"opponent_family": "other_incumbent", "seed": 59731482, "seat": 1},
+      {"opponent_family": "kaito_v21", "seed": 59731482, "seat": 0},
+      {"opponent_family": "kaito_v21", "seed": 59731482, "seat": 1},
+      {"opponent_family": "other_incumbent", "seed": 24068173, "seat": 0},
+      {"opponent_family": "other_incumbent", "seed": 24068173, "seat": 1},
+      {"opponent_family": "kaito_v21", "seed": 24068173, "seat": 0},
+      {"opponent_family": "kaito_v21", "seed": 24068173, "seat": 1},
+      {"opponent_family": "other_incumbent", "seed": 76923514, "seat": 0},
+      {"opponent_family": "other_incumbent", "seed": 76923514, "seat": 1},
+      {"opponent_family": "kaito_v21", "seed": 76923514, "seat": 0},
+      {"opponent_family": "kaito_v21", "seed": 76923514, "seat": 1},
+      {"opponent_family": "other_incumbent", "seed": 41857396, "seat": 0},
+      {"opponent_family": "other_incumbent", "seed": 41857396, "seat": 1},
+      {"opponent_family": "kaito_v21", "seed": 41857396, "seat": 0},
+      {"opponent_family": "kaito_v21", "seed": 41857396, "seat": 1},
+      {"opponent_family": "other_incumbent", "seed": 96314725, "seat": 0},
+      {"opponent_family": "other_incumbent", "seed": 96314725, "seat": 1},
+      {"opponent_family": "kaito_v21", "seed": 96314725, "seat": 0},
+      {"opponent_family": "kaito_v21", "seed": 96314725, "seat": 1},
+      {"opponent_family": "other_incumbent", "seed": 52480631, "seat": 0},
+      {"opponent_family": "other_incumbent", "seed": 52480631, "seat": 1},
+      {"opponent_family": "kaito_v21", "seed": 52480631, "seat": 0},
+      {"opponent_family": "kaito_v21", "seed": 52480631, "seat": 1}
+    ]
+  },
+  "freshness": {
+    "source": "user-authorized maximum 300M search; exact-token repository scan before freeze found zero prior seed hits",
+    "consumed_seed_overlap_allowed": false,
+    "notes": "T0, T1, and untouched holdout seeds are stage-disjoint. Holdout is frozen but not executed by the 300M T0/T1 runner."
+  }
+}

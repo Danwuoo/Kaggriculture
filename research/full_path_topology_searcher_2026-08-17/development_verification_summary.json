@@ -7,37 +7,37 @@
     "structure_digest": "74718aad76297a3a00acf8ad8b40e84548a57635692ac5388f39dfce3b6e9e00",
     "unique_full_action_tapes": 225
   },
-  "base_commit_at_verification": "f39fb4ca146cff3b7157fc86986ce4233b47cc30",
+  "base_commit_at_verification": "3d7003a13434697d91f3836d88f9c6ac7059d912",
   "calibration": {
     "status": "PARTIAL_BLOCKED_RAW_ANCHORS",
     "three_anchor_calibration_passed": false
   },
   "candidate_smoke": {
     "both_entrypoints": true,
-    "bytes": 42211,
+    "bytes": 42366,
     "isolated_import": true,
-    "sha256": "ac0beb808982f6caf070e2c76834d1dfe8184be67659fd263437893345b49fa1"
+    "sha256": "6dda499cd300e407a3c5deeab9ecc4085dd8db990c939cac2baada90aaf462ea"
   },
   "decision": "REPRODUCIBLE_BRANCH_EXPERIMENTATION_SUBSTRATE_ONLY",
   "formal_efficacy_authorized": false,
   "proposal_oracles": {
     "boatlee_v16_rc2_market_relay": {
-      "ranked_proposal_count": 0,
-      "status": "BLOCKED_MISSING_EVIDENCE"
+      "ranked_proposal_count": 2,
+      "status": "READY"
     },
     "v27_current_meta": {
-      "ranked_proposal_count": 0,
-      "status": "BLOCKED_MISSING_EVIDENCE"
+      "ranked_proposal_count": 2,
+      "status": "READY"
     }
   },
   "schema_version": 1,
-  "source_file_count": 22,
+  "source_file_count": 45,
   "source_inventory_policy": "git_tracked_sources_only",
-  "source_inventory_sha256": "130cbc42631b8cffa7ba70ae00cdc540463868ae1c9f85097670003ffd694163",
+  "source_inventory_sha256": "703482d0373b38e114db11ebc483648801dfc79e8e20a17a6d227bfc8c918a29",
   "status_matrix": {
     "expected_full_path_architecture": "PARTIAL_IMPLEMENTATION",
     "formal_efficacy": "NOT_AUTHORIZED",
-    "proposal_oracle": "BLOCKED_FRONTIER_CODE_EVIDENCE",
+    "proposal_oracle": "READY_LOCUS_ONLY",
     "reproducible_development_verification": "PASS",
     "three_anchor_calibration": "BLOCKED_RAW_ROWS",
     "v1_design_safety": "PASS_WITH_CAVEATS"
@@ -47,9 +47,9 @@
       "command": "python -m unittest discover -s tests -v",
       "exit_code": 0,
       "failed": 0,
-      "minimum_required": 56,
-      "output_sha256": "871819f563b1a84ff916a9c7c4bda79b13bd333f26aafe2e0e346bbf8ed77251",
-      "passed": 56,
+      "minimum_required": 60,
+      "output_sha256": "824acd9adc07514bff83eb35a3d7fb6dc9439b756e6b92679c830d77f0b0abf1",
+      "passed": 60,
       "working_directory": "research/full_path_topology_searcher_2026-08-17"
     },
     {
@@ -57,7 +57,7 @@
       "exit_code": 0,
       "failed": 0,
       "minimum_required": 23,
-      "output_sha256": "26cb12a29aa8805b96203880350b09e1534ba5f88a337413e86a5c0f20d71d01",
+      "output_sha256": "4a9176c469ba9c296cc4286095cd55b48bba8c1433249b41f1be4282b68cc14b",
       "passed": 23,
       "working_directory": "research/dual_incumbent_topology_search_2026-08-14/async_v3"
     },
@@ -66,7 +66,7 @@
       "exit_code": 0,
       "failed": 0,
       "minimum_required": 3,
-      "output_sha256": "bb175b38ad0b1718cad2bd88832d8233ca335049d0b11ddf1600aeae63e479f5",
+      "output_sha256": "bab94704b0cdce579c2f1d9702c15c19093b87403cc54f9649209a2afef5d33f",
       "passed": 3,
       "working_directory": "."
     },

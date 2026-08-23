@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "lane": "boatlee_v16_rc2_market_relay",
+  "decision_step": 499,
+  "trigger": {
+    "all": [
+      {"path": "own_farm.hands.7.0", "op": "eq", "value": 0},
+      {"path": "own_farm.hands.7.1", "op": "eq", "value": 0},
+      {"path": "own_farm.tiles.1.1.yield_units", "op": "ge", "value": 1}
+    ]
+  },
+  "motif": {
+    "kind": "action_sequence",
+    "patches": [
+      {"step": 499, "actor_actions": [[7, ["EAST"]]], "market_mode": "preserve", "market": []},
+      {"step": 500, "actor_actions": [[7, ["SOUTH"]]], "market_mode": "preserve", "market": []},
+      {"step": 501, "actor_actions": [[7, ["HARVEST"]]], "market_mode": "preserve", "market": []},
+      {"step": 502, "actor_actions": [[7, ["NORTH"]]], "market_mode": "preserve", "market": []}
+    ]
+  },
+  "displaced_actions": ["hand[7]:WATER", "hand[7]:EAST", "hand[7]:WATER", "hand[7]:HARVEST"],
+  "continuation": {
+    "mode": "fixed",
+    "min_end_step": 502,
+    "max_end_step": 502,
+    "rejoin": {}
+  },
+  "fallback": "incumbent",
+  "parent_node_id": "boatlee_v16_rc2_market_relay:spine:499",
+  "evidence_ids": ["boatlee_incumbent", "job_value_discovery_windows"],
+  "max_horizon": 4
+}

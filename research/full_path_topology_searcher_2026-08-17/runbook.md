@@ -1,5 +1,9 @@
 # Runbook
 
+> Historical V1 bounded-branch runbook. Do not use it to launch the active V2
+> maximum full-tape search; current development commands are in
+> `max_search/README.md`.
+
 1. Confirm `git status -sb`; preserve unrelated and user-owned changes.
 2. Run `python cli.py validate`. Any registry drift is fail-closed.
 3. Build the atlas into `research/cache/full_path_topology_searcher_2026-08-17/`.

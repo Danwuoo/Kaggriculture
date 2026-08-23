@@ -99,6 +99,8 @@ def run(include_entropy: bool = False) -> dict[str, Any]:
         lane: proposal_oracle(motifs, lane, proposal_atlas, loss_rows)
         for lane in ("v27_current_meta", "boatlee_v16_rc2_market_relay")
     }
+    proposal_ready = all(value["status"] == "READY" and value["ranked_proposal_count"] > 0
+                         for value in proposal_oracles.values())
     calibrations = calibration()
     compiler = compiler_smoke()
     passed = (authority["passed"] and all(atlas_checks.values()) and calibrations["safety_passed"]
@@ -110,7 +112,7 @@ def run(include_entropy: bool = False) -> dict[str, Any]:
             "v1_design_safety": "PASS_WITH_CAVEATS" if passed else "FAIL",
             "reproducible_development_verification": "PASS" if passed else "FAIL",
             "expected_full_path_architecture": "PARTIAL_IMPLEMENTATION",
-            "proposal_oracle": "BLOCKED_FRONTIER_CODE_EVIDENCE",
+            "proposal_oracle": "READY_LOCUS_ONLY" if proposal_ready else "BLOCKED_MISSING_EVIDENCE",
             "three_anchor_calibration": "BLOCKED_RAW_ROWS",
             "formal_efficacy": "NOT_AUTHORIZED",
         },
@@ -143,7 +145,7 @@ def source_inventory() -> dict[str, Any]:
 
 def run_verification_commands() -> list[dict[str, Any]]:
     commands = [
-        (["python", "-m", "unittest", "discover", "-s", "tests", "-v"], LANE, 56, "unittest"),
+        (["python", "-m", "unittest", "discover", "-s", "tests", "-v"], LANE, 60, "unittest"),
         (["python", "-m", "unittest", "test_async_v3", "-v"], ROOT / "research/dual_incumbent_topology_search_2026-08-14/async_v3", 23, "unittest"),
         (["python", "-m", "unittest", "research.main_approach.test_development_sources", "-v"], ROOT, 3, "unittest"),
         (["python", "cli.py", "validate"], LANE, 1, "validation"),
@@ -205,5 +207,5 @@ def tracked_summary(report: dict[str, Any], verification_runs: list[dict[str, An
 def write_report(path: Path, include_entropy: bool = False) -> dict[str, Any]:
     report = run(include_entropy=include_entropy)
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(report, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    path.write_text(json.dumps(report, indent=2, sort_keys=True) + "\n", encoding="utf-8", newline="\n")
     return report

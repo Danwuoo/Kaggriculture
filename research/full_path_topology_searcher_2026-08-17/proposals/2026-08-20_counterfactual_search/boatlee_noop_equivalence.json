@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "lane": "boatlee_v16_rc2_market_relay",
+  "decision_step": 361,
+  "trigger": {"all": [{"path": "market.prices.MILK", "op": "gt", "value": 1000000000}]},
+  "motif": {"kind": "market_edit", "patches": [{"step": 361, "market_mode": "append", "market": [["HIRE"]]}]},
+  "displaced_actions": [],
+  "continuation": {"mode": "immediate", "min_end_step": 361, "max_end_step": 361, "rejoin": {}},
+  "fallback": "incumbent",
+  "parent_node_id": "boatlee_v16_rc2_market_relay:spine:361",
+  "evidence_ids": ["full_action_trie_summary"],
+  "max_horizon": 1
+}

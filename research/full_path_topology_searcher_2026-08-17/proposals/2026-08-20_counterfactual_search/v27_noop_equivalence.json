@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "lane": "v27_current_meta",
+  "decision_step": 264,
+  "trigger": {"all": [{"path": "market.prices.FERTILIZER", "op": "gt", "value": 1000000000}]},
+  "motif": {"kind": "market_edit", "patches": [{"step": 264, "market_mode": "append", "market": [["HIRE"]]}]},
+  "displaced_actions": [],
+  "continuation": {"mode": "immediate", "min_end_step": 264, "max_end_step": 264, "rejoin": {}},
+  "fallback": "incumbent",
+  "parent_node_id": "v27_current_meta:spine:264",
+  "evidence_ids": ["full_action_trie_summary"],
+  "max_horizon": 1
+}

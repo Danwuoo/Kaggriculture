@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "kind": "proposal_only_technical_verification",
+  "verified_date": "2026-08-20",
+  "base_commit": "3d7003a13434697d91f3836d88f9c6ac7059d912",
+  "decision": "NEGATIVE_CONTROLS_TECHNICALLY_VERIFIED_NO_POSITIVE_CANDIDATE",
+  "formal_games_run": 0,
+  "fresh_seeds_selected": [],
+  "efficacy_claim": null,
+  "pool_lanes": false,
+  "engine_fingerprint": {
+    "commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+    "python_sha256": "fb9215c5e21a25243e2d13e75b3d70a79cf7d78fff150a90f1bb5eacf9ba2bcf",
+    "configuration_sha256": "7f196f4aaf9b4e482fbd61ba4bf19f5cec4da0f81938ece756954035a65c0bb5"
+  },
+  "proposal_oracles": {
+    "v27_current_meta": {
+      "status": "READY",
+      "ranking_scope": "motif_locus_only_not_action_direction",
+      "ranked": [
+        {"id": "worker_route_rejoin", "priority": 0.22027616},
+        {"id": "public_market_preemption", "priority": 0.04267289}
+      ]
+    },
+    "boatlee_v16_rc2_market_relay": {
+      "status": "READY",
+      "ranking_scope": "motif_locus_only_not_action_direction",
+      "ranked": [
+        {"id": "worker_route_rejoin", "priority": 0.33041424},
+        {"id": "livestock_capacity_trade", "priority": 0.12356899}
+      ]
+    }
+  },
+  "source_inputs": [
+    {
+      "path": "research/full_path_topology_searcher_2026-08-17/frontier_code_evidence.json",
+      "bytes": 4573,
+      "sha256": "1819fbde8df97ea9d34c6876c91caacb2c13ee603f555d169174440911512923"
+    },
+    {
+      "path": "research/full_path_topology_searcher_2026-08-17/proposals/2026-08-20_next_stage/proposal_contract.json",
+      "bytes": 1856,
+      "sha256": "2caa0397d121f7057d4ae39fb0f33511352183f8336c0ce7f10252f1a5ae0249"
+    }
+  ],
+  "compiled_negative_controls": {
+    "v27_current_meta": {
+      "spec_path": "research/full_path_topology_searcher_2026-08-17/proposals/2026-08-20_next_stage/v27_worker_route_negative_control.json",
+      "spec_bytes": 1144,
+      "spec_sha256": "de6d7d0877cd229ffe52f33c1ba9e1e0eed5c2b4f244ed8a8e5ec494d68800c0",
+      "branch_id": "branch_51370d2f8b6761e124b11c3f",
+      "candidate_bytes": 42790,
+      "candidate_sha256": "4e47c74ec77d126ace1aacfce2410fba78a16160d9aff1eca9a78eeaa9938588",
+      "static_audit_passed": true,
+      "isolated_import_passed": true,
+      "both_entrypoints": true,
+      "exact_patch_and_bounded_fallback_tested": true
+    },
+    "boatlee_v16_rc2_market_relay": {
+      "spec_path": "research/full_path_topology_searcher_2026-08-17/proposals/2026-08-20_next_stage/boatlee_worker_route_negative_control.json",
+      "spec_bytes": 1176,
+      "spec_sha256": "b592e1f2f453f0baf89c84a1342da76b0b8b4a690af8bd79c64bab3527f4a5b0",
+      "branch_id": "branch_e46b7ab2c8a9e0248bd8716e",
+      "candidate_bytes": 52421,
+      "candidate_sha256": "f694f081c60b6fc697f551acec6ab2efdccd42dd3ac719131327dc609efdc340",
+      "static_audit_passed": true,
+      "isolated_import_passed": true,
+      "both_entrypoints": true,
+      "exact_patch_and_bounded_fallback_tested": true
+    }
+  },
+  "verification": {
+    "full_path_searcher_tests": {"passed": 60, "failed": 0},
+    "async_v3_tests": {"passed": 23, "failed": 0},
+    "main_approach_source_contract_tests": {"passed": 3, "failed": 0},
+    "v27_generated_artifact_check": "PASS",
+    "boatlee_generated_artifact_check": "PASS",
+    "authority_registry": "PASS",
+    "development_report": "REPRODUCIBLE_BRANCH_EXPERIMENTATION_SUBSTRATE_ONLY",
+    "proposal_status": "READY_LOCUS_ONLY"
+  },
+  "positive_candidate_boundary": {
+    "status": "NOT_YET_MATERIALIZED",
+    "reason": "Consumed own-loss windows establish harmful directions only; code presence and replay mutability do not supply a positive causal action label."
+  }
+}

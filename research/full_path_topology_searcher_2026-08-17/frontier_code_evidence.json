@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "kind": "audited_frontier_code_motif_matches",
+  "policy": {
+    "evidence_level": "CODE_CONFIRMED_MECHANISM",
+    "efficacy_signal": false,
+    "minimum_independent_lineages": 2,
+    "priority_scalars_allowed": false,
+    "source_hash_and_symbol_match_required": true
+  },
+  "sources": [
+    {
+      "id": "frontier_boatlee_rc5",
+      "lineage": "boatlee_rc5",
+      "path": "research/public_agents/lb20260816_01_boatlee_v16_rc5/extracted/main.py",
+      "sha256": "f029fa0cb66a9eb509afbe44e3f59b800332d0419db91607183410e4089c4d19",
+      "bytes": 18946
+    },
+    {
+      "id": "frontier_kaito_v25",
+      "lineage": "kaito_v25",
+      "path": "research/public_agents/lb20260816_02_kaito_v25/extracted/main.py",
+      "sha256": "9bdfbafb6755067182d88ce594fd46fb1d712713ffd6931e83d5d50e84bc6fb2",
+      "bytes": 21330
+    },
+    {
+      "id": "frontier_rayk_zero_to_top",
+      "lineage": "rayk_zero_to_top",
+      "path": "research/public_agents/lb20260816_04_rayk_zero_to_top/extracted/main.py",
+      "sha256": "489f5d197527f107027626cce79d850fd2ca90edd43d94384b849b6511e27bdb",
+      "bytes": 75098
+    },
+    {
+      "id": "frontier_boatlee_rc5_r5a",
+      "lineage": "boatlee_rc5",
+      "path": "research/public_agents/lb20260816_05_boatlee_v16_rc5_r5a/extracted/main.py",
+      "sha256": "7f87c941af3050d0f21376f2843b324d7a06a1a8c050fa554cf07a769e5c937c",
+      "bytes": 23912
+    },
+    {
+      "id": "frontier_boatlee_v14_clone_preemption",
+      "lineage": "boatlee_v14_clone_preemption",
+      "path": "research/public_agents/lb20260816_06_boatlee_v14_clone_preemption/extracted/main.py",
+      "sha256": "a7f827b9438885b34b7fd5bf8165458a72f8bb83031a288dd4640f21ade3294b",
+      "bytes": 26304
+    },
+    {
+      "id": "frontier_kunal_ttv1",
+      "lineage": "boatlee_v14_clone_preemption",
+      "path": "research/public_agents/lb20260816_07_kunal_ttv1/extracted/main.py",
+      "sha256": "d39dba50793d9777c990347443bf0c481c78adaea86055f6f6b0600dcfcd9f2e",
+      "bytes": 61980
+    },
+    {
+      "id": "frontier_bruce_pipeline",
+      "lineage": "bruce_pipeline",
+      "path": "research/public_agents/lb20260816_09_bruce_high_score_pipeline/extracted/main.py",
+      "sha256": "ed8c8420514acb5a96c0d44cfd42a8786e49c7cdc01a0de61d2e6b8997dda87a",
+      "bytes": 133270
+    },
+    {
+      "id": "frontier_prvsiyan_soil",
+      "lineage": "prvsiyan_soil",
+      "path": "research/public_agents/lb20260816_10_prvsiyan_soil/extracted/main.py",
+      "sha256": "34193f0ca7fdc77db52cfdadf61596d42cbc2ffd3d8b7903819b0ad78a064a2a",
+      "bytes": 29465
+    }
+  ],
+  "motifs": {
+    "public_market_preemption": {
+      "matches": [
+        {
+          "source_id": "frontier_boatlee_rc5",
+          "required_symbols": ["_front_run", "_future_quantity", "_repay"]
+        },
+        {
+          "source_id": "frontier_kaito_v25",
+          "required_symbols": ["_impact_score", "_order_score", "_rank_sell_slots"]
+        },
+        {
+          "source_id": "frontier_rayk_zero_to_top",
+          "required_symbols": ["_front_run", "_plan_sells", "_sell_priority"]
+        },
+        {
+          "source_id": "frontier_boatlee_v14_clone_preemption",
+          "required_symbols": ["_future_sells", "_preempt_shift", "_repay_shift"]
+        }
+      ]
+    },
+    "terminal_liquidation": {
+      "matches": [
+        {
+          "source_id": "frontier_rayk_zero_to_top",
+          "required_symbols": ["_terminal_action", "_terminal_liquidation"]
+        },
+        {
+          "source_id": "frontier_bruce_pipeline",
+          "required_symbols": ["best_terminal_item", "terminal_cashout"]
+        }
+      ]
+    },
+    "livestock_capacity_trade": {
+      "matches": [
+        {
+          "source_id": "frontier_boatlee_rc5_r5a",
+          "required_symbols": ["_adjacent_cow_pasture_move", "_cow_place_alignment", "_guarded_demand_cow9"]
+        },
+        {
+          "source_id": "frontier_kunal_ttv1",
+          "required_symbols": ["_v17_feed_guard", "_v17_room_evac", "_v17_room_guard"]
+        }
+      ]
+    },
+    "worker_route_rejoin": {
+      "matches": [
+        {
+          "source_id": "frontier_boatlee_rc5_r5a",
+          "required_symbols": ["_cow_place_alignment", "_trace_actor_action", "_weed_repair_action"]
+        },
+        {
+          "source_id": "frontier_kaito_v25",
+          "required_symbols": ["_trace_actor_action", "_weed_repair_action"]
+        },
+        {
+          "source_id": "frontier_bruce_pipeline",
+          "required_symbols": ["apply_pending", "repair_weed_actions"]
+        }
+      ]
+    }
+  }
+}

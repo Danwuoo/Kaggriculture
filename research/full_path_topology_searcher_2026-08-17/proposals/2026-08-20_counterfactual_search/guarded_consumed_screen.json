@@ -1,0 +1,497 @@
+{
+  "consumed_discovery_games_run": 32,
+  "formal_games_run": 0,
+  "fresh_seeds_selected": [],
+  "kind": "consumed_compiled_counterfactual_screen_result",
+  "manifest_sha256": "ebba6b070456a40688e0dee34c73de7f0d0e2adaecbf255a9bf70c7bdf194e0a",
+  "pool_lanes": false,
+  "results": [
+    {
+      "candidate_sha256": "c79568b1d24b316b2fc6d76100020ee98c4b7a3166d78df1e0df8238bf6f94f5",
+      "id": "v27_guarded_step264_fertilizer_slot",
+      "lane": "v27_current_meta",
+      "mechanism": "when public own money is at most 7280, replace the step-264 MILK sell slot with 24 FERTILIZER while preserving all nine HIRE slots",
+      "rows": [
+        {
+          "action_digest_changed": true,
+          "candidate_action_digest": "f5296a1ff63b2f51e32e26ebf561b8a8e5ff791fe68416ba3c03ef1856a6a5e9",
+          "candidate_margin": -1955.0,
+          "candidate_outcome": "L",
+          "context": {
+            "opponent_family": "other_incumbent",
+            "seat": 0,
+            "seed": 93687444
+          },
+          "control_margin": -1998.0,
+          "control_outcome": "L",
+          "diagnostic_delta": {
+            "animal_escapes": 0,
+            "crop_deaths": 0,
+            "fresh_crop_deaths": 0,
+            "shed_overflow_units": 3
+          },
+          "margin_delta": 43.0,
+          "money_delta": 764.0,
+          "opponent_action_digest_changed": true,
+          "outcome_transition": "L_TO_L",
+          "sign": "positive",
+          "technical_pass": true,
+          "terminal_inventory_units_delta": 0
+        },
+        {
+          "action_digest_changed": true,
+          "candidate_action_digest": "f5296a1ff63b2f51e32e26ebf561b8a8e5ff791fe68416ba3c03ef1856a6a5e9",
+          "candidate_margin": -1955.0,
+          "candidate_outcome": "L",
+          "context": {
+            "opponent_family": "other_incumbent",
+            "seat": 1,
+            "seed": 93687444
+          },
+          "control_margin": -1998.0,
+          "control_outcome": "L",
+          "diagnostic_delta": {
+            "animal_escapes": 0,
+            "crop_deaths": 0,
+            "fresh_crop_deaths": 0,
+            "shed_overflow_units": 3
+          },
+          "margin_delta": 43.0,
+          "money_delta": 764.0,
+          "opponent_action_digest_changed": true,
+          "outcome_transition": "L_TO_L",
+          "sign": "positive",
+          "technical_pass": true,
+          "terminal_inventory_units_delta": 0
+        },
+        {
+          "action_digest_changed": true,
+          "candidate_action_digest": "e864113f7788f255142ca06da5fb08c0e7a93c2d0072547096d1f9caa9f49582",
+          "candidate_margin": 17.0,
+          "candidate_outcome": "W",
+          "context": {
+            "opponent_family": "other_incumbent",
+            "seat": 0,
+            "seed": 65365230
+          },
+          "control_margin": -239.0,
+          "control_outcome": "L",
+          "diagnostic_delta": {
+            "animal_escapes": 0,
+            "crop_deaths": 0,
+            "fresh_crop_deaths": 0,
+            "shed_overflow_units": 3
+          },
+          "margin_delta": 256.0,
+          "money_delta": 456.0,
+          "opponent_action_digest_changed": true,
+          "outcome_transition": "L_TO_W",
+          "sign": "positive",
+          "technical_pass": true,
+          "terminal_inventory_units_delta": 0
+        },
+        {
+          "action_digest_changed": true,
+          "candidate_action_digest": "e864113f7788f255142ca06da5fb08c0e7a93c2d0072547096d1f9caa9f49582",
+          "candidate_margin": 17.0,
+          "candidate_outcome": "W",
+          "context": {
+            "opponent_family": "other_incumbent",
+            "seat": 1,
+            "seed": 65365230
+          },
+          "control_margin": -239.0,
+          "control_outcome": "L",
+          "diagnostic_delta": {
+            "animal_escapes": 0,
+            "crop_deaths": 0,
+            "fresh_crop_deaths": 0,
+            "shed_overflow_units": 3
+          },
+          "margin_delta": 256.0,
+          "money_delta": 456.0,
+          "opponent_action_digest_changed": true,
+          "outcome_transition": "L_TO_W",
+          "sign": "positive",
+          "technical_pass": true,
+          "terminal_inventory_units_delta": 0
+        },
+        {
+          "action_digest_changed": false,
+          "candidate_action_digest": "7be7830e94500e5772dc3dfa5eb17218543212f7d08a7d50e198ae70041045a0",
+          "candidate_margin": 14034.0,
+          "candidate_outcome": "W",
+          "context": {
+            "opponent_family": "kaito_v21",
+            "seat": 0,
+            "seed": 93687444
+          },
+          "control_margin": 14034.0,
+          "control_outcome": "W",
+          "diagnostic_delta": {
+            "animal_escapes": 0,
+            "crop_deaths": 0,
+            "fresh_crop_deaths": 0,
+            "shed_overflow_units": 0
+          },
+          "margin_delta": 0.0,
+          "money_delta": 0.0,
+          "opponent_action_digest_changed": false,
+          "outcome_transition": "W_TO_W",
+          "sign": "neutral",
+          "technical_pass": true,
+          "terminal_inventory_units_delta": 0
+        },
+        {
+          "action_digest_changed": false,
+          "candidate_action_digest": "7be7830e94500e5772dc3dfa5eb17218543212f7d08a7d50e198ae70041045a0",
+          "candidate_margin": 14034.0,
+          "candidate_outcome": "W",
+          "context": {
+            "opponent_family": "kaito_v21",
+            "seat": 1,
+            "seed": 93687444
+          },
+          "control_margin": 14034.0,
+          "control_outcome": "W",
+          "diagnostic_delta": {
+            "animal_escapes": 0,
+            "crop_deaths": 0,
+            "fresh_crop_deaths": 0,
+            "shed_overflow_units": 0
+          },
+          "margin_delta": 0.0,
+          "money_delta": 0.0,
+          "opponent_action_digest_changed": false,
+          "outcome_transition": "W_TO_W",
+          "sign": "neutral",
+          "technical_pass": true,
+          "terminal_inventory_units_delta": 0
+        },
+        {
+          "action_digest_changed": true,
+          "candidate_action_digest": "372d11eb214046d3fcdfec734db4b9ff09e4be9cb6d8fb35fcd43680f376b7eb",
+          "candidate_margin": 29552.0,
+          "candidate_outcome": "W",
+          "context": {
+            "opponent_family": "kaito_v21",
+            "seat": 0,
+            "seed": 65365230
+          },
+          "control_margin": 29541.0,
+          "control_outcome": "W",
+          "diagnostic_delta": {
+            "animal_escapes": 0,
+            "crop_deaths": 0,
+            "fresh_crop_deaths": 0,
+            "shed_overflow_units": 3
+          },
+          "margin_delta": 11.0,
+          "money_delta": 407.0,
+          "opponent_action_digest_changed": false,
+          "outcome_transition": "W_TO_W",
+          "sign": "positive",
+          "technical_pass": true,
+          "terminal_inventory_units_delta": 0
+        },
+        {
+          "action_digest_changed": true,
+          "candidate_action_digest": "372d11eb214046d3fcdfec734db4b9ff09e4be9cb6d8fb35fcd43680f376b7eb",
+          "candidate_margin": 29552.0,
+          "candidate_outcome": "W",
+          "context": {
+            "opponent_family": "kaito_v21",
+            "seat": 1,
+            "seed": 65365230
+          },
+          "control_margin": 29541.0,
+          "control_outcome": "W",
+          "diagnostic_delta": {
+            "animal_escapes": 0,
+            "crop_deaths": 0,
+            "fresh_crop_deaths": 0,
+            "shed_overflow_units": 3
+          },
+          "margin_delta": 11.0,
+          "money_delta": 407.0,
+          "opponent_action_digest_changed": false,
+          "outcome_transition": "W_TO_W",
+          "sign": "positive",
+          "technical_pass": true,
+          "terminal_inventory_units_delta": 0
+        }
+      ],
+      "spec_sha256": "4f305f1d29f98efc1a46490cab2d9f7fd9a0632aac73bcbb81ece5cf65f1dae8",
+      "summary": {
+        "changed_contexts": 6,
+        "consumed_support_only": true,
+        "contexts": 8,
+        "effective_change": true,
+        "efficacy_signal": false,
+        "fallback_contexts": 2,
+        "family_seat_mean_margin_delta": {
+          "kaito_v21:seat0": 5.5,
+          "kaito_v21:seat1": 5.5,
+          "other_incumbent:seat0": 149.5,
+          "other_incumbent:seat1": 149.5
+        },
+        "max_margin_delta": 256.0,
+        "mean_margin_delta": 77.5,
+        "mean_money_delta": 406.75,
+        "min_margin_delta": 0.0,
+        "negative": 0,
+        "neutral": 2,
+        "positive": 6,
+        "technical_pass": true,
+        "transition_matrix": {
+          "L_TO_L": 2,
+          "L_TO_W": 2,
+          "W_TO_W": 4
+        }
+      }
+    },
+    {
+      "candidate_sha256": "2dee2b9a05cf11fab79f7e126841e38396b1a93dd5f1cdd7e0ae8628b9bc6082",
+      "id": "boatlee_guarded_skip_cow9_step361",
+      "lane": "boatlee_v16_rc2_market_relay",
+      "mechanism": "when public MILK price is at most 203, remove only the ninth COW purchase at step 361",
+      "rows": [
+        {
+          "action_digest_changed": false,
+          "candidate_action_digest": "517e8f2fd40f8476d4eb146a8b4b40612f813e85770cc2752fdd9829d87b431a",
+          "candidate_margin": 1998.0,
+          "candidate_outcome": "W",
+          "context": {
+            "opponent_family": "other_incumbent",
+            "seat": 0,
+            "seed": 93687444
+          },
+          "control_margin": 1998.0,
+          "control_outcome": "W",
+          "diagnostic_delta": {
+            "animal_escapes": 0,
+            "crop_deaths": 0,
+            "fresh_crop_deaths": 0,
+            "shed_overflow_units": 0
+          },
+          "margin_delta": 0.0,
+          "money_delta": 0.0,
+          "opponent_action_digest_changed": false,
+          "outcome_transition": "W_TO_W",
+          "sign": "neutral",
+          "technical_pass": true,
+          "terminal_inventory_units_delta": 0
+        },
+        {
+          "action_digest_changed": false,
+          "candidate_action_digest": "517e8f2fd40f8476d4eb146a8b4b40612f813e85770cc2752fdd9829d87b431a",
+          "candidate_margin": 1998.0,
+          "candidate_outcome": "W",
+          "context": {
+            "opponent_family": "other_incumbent",
+            "seat": 1,
+            "seed": 93687444
+          },
+          "control_margin": 1998.0,
+          "control_outcome": "W",
+          "diagnostic_delta": {
+            "animal_escapes": 0,
+            "crop_deaths": 0,
+            "fresh_crop_deaths": 0,
+            "shed_overflow_units": 0
+          },
+          "margin_delta": 0.0,
+          "money_delta": 0.0,
+          "opponent_action_digest_changed": false,
+          "outcome_transition": "W_TO_W",
+          "sign": "neutral",
+          "technical_pass": true,
+          "terminal_inventory_units_delta": 0
+        },
+        {
+          "action_digest_changed": false,
+          "candidate_action_digest": "c2ce4a7106b5f982a97b39d76634ac7ec6b2d38d78bc302dc5e7fa995dcba63a",
+          "candidate_margin": 239.0,
+          "candidate_outcome": "W",
+          "context": {
+            "opponent_family": "other_incumbent",
+            "seat": 0,
+            "seed": 65365230
+          },
+          "control_margin": 239.0,
+          "control_outcome": "W",
+          "diagnostic_delta": {
+            "animal_escapes": 0,
+            "crop_deaths": 0,
+            "fresh_crop_deaths": 0,
+            "shed_overflow_units": 0
+          },
+          "margin_delta": 0.0,
+          "money_delta": 0.0,
+          "opponent_action_digest_changed": false,
+          "outcome_transition": "W_TO_W",
+          "sign": "neutral",
+          "technical_pass": true,
+          "terminal_inventory_units_delta": 0
+        },
+        {
+          "action_digest_changed": false,
+          "candidate_action_digest": "c2ce4a7106b5f982a97b39d76634ac7ec6b2d38d78bc302dc5e7fa995dcba63a",
+          "candidate_margin": 239.0,
+          "candidate_outcome": "W",
+          "context": {
+            "opponent_family": "other_incumbent",
+            "seat": 1,
+            "seed": 65365230
+          },
+          "control_margin": 239.0,
+          "control_outcome": "W",
+          "diagnostic_delta": {
+            "animal_escapes": 0,
+            "crop_deaths": 0,
+            "fresh_crop_deaths": 0,
+            "shed_overflow_units": 0
+          },
+          "margin_delta": 0.0,
+          "money_delta": 0.0,
+          "opponent_action_digest_changed": false,
+          "outcome_transition": "W_TO_W",
+          "sign": "neutral",
+          "technical_pass": true,
+          "terminal_inventory_units_delta": 0
+        },
+        {
+          "action_digest_changed": true,
+          "candidate_action_digest": "18786eff0fb45127a729800b9703ffd4b2217c0533c28acd2153015b1e9d4072",
+          "candidate_margin": 14203.0,
+          "candidate_outcome": "W",
+          "context": {
+            "opponent_family": "kaito_v21",
+            "seat": 0,
+            "seed": 93687444
+          },
+          "control_margin": 14034.0,
+          "control_outcome": "W",
+          "diagnostic_delta": {
+            "animal_escapes": 0,
+            "crop_deaths": 0,
+            "fresh_crop_deaths": 0,
+            "shed_overflow_units": 5
+          },
+          "margin_delta": 169.0,
+          "money_delta": 231.0,
+          "opponent_action_digest_changed": true,
+          "outcome_transition": "W_TO_W",
+          "sign": "positive",
+          "technical_pass": true,
+          "terminal_inventory_units_delta": 0
+        },
+        {
+          "action_digest_changed": true,
+          "candidate_action_digest": "18786eff0fb45127a729800b9703ffd4b2217c0533c28acd2153015b1e9d4072",
+          "candidate_margin": 14203.0,
+          "candidate_outcome": "W",
+          "context": {
+            "opponent_family": "kaito_v21",
+            "seat": 1,
+            "seed": 93687444
+          },
+          "control_margin": 14034.0,
+          "control_outcome": "W",
+          "diagnostic_delta": {
+            "animal_escapes": 0,
+            "crop_deaths": 0,
+            "fresh_crop_deaths": 0,
+            "shed_overflow_units": 5
+          },
+          "margin_delta": 169.0,
+          "money_delta": 231.0,
+          "opponent_action_digest_changed": true,
+          "outcome_transition": "W_TO_W",
+          "sign": "positive",
+          "technical_pass": true,
+          "terminal_inventory_units_delta": 0
+        },
+        {
+          "action_digest_changed": false,
+          "candidate_action_digest": "98619a1530af3b0ebe3942ed62ab05bfd0f516fe167ab87acee5973a206fed04",
+          "candidate_margin": 29541.0,
+          "candidate_outcome": "W",
+          "context": {
+            "opponent_family": "kaito_v21",
+            "seat": 0,
+            "seed": 65365230
+          },
+          "control_margin": 29541.0,
+          "control_outcome": "W",
+          "diagnostic_delta": {
+            "animal_escapes": 0,
+            "crop_deaths": 0,
+            "fresh_crop_deaths": 0,
+            "shed_overflow_units": 0
+          },
+          "margin_delta": 0.0,
+          "money_delta": 0.0,
+          "opponent_action_digest_changed": false,
+          "outcome_transition": "W_TO_W",
+          "sign": "neutral",
+          "technical_pass": true,
+          "terminal_inventory_units_delta": 0
+        },
+        {
+          "action_digest_changed": false,
+          "candidate_action_digest": "98619a1530af3b0ebe3942ed62ab05bfd0f516fe167ab87acee5973a206fed04",
+          "candidate_margin": 29541.0,
+          "candidate_outcome": "W",
+          "context": {
+            "opponent_family": "kaito_v21",
+            "seat": 1,
+            "seed": 65365230
+          },
+          "control_margin": 29541.0,
+          "control_outcome": "W",
+          "diagnostic_delta": {
+            "animal_escapes": 0,
+            "crop_deaths": 0,
+            "fresh_crop_deaths": 0,
+            "shed_overflow_units": 0
+          },
+          "margin_delta": 0.0,
+          "money_delta": 0.0,
+          "opponent_action_digest_changed": false,
+          "outcome_transition": "W_TO_W",
+          "sign": "neutral",
+          "technical_pass": true,
+          "terminal_inventory_units_delta": 0
+        }
+      ],
+      "spec_sha256": "812802ba055b09a15c96a65f0f08ba234e39138b3767b30f80d11c2da6d57b9f",
+      "summary": {
+        "changed_contexts": 2,
+        "consumed_support_only": true,
+        "contexts": 8,
+        "effective_change": true,
+        "efficacy_signal": false,
+        "fallback_contexts": 6,
+        "family_seat_mean_margin_delta": {
+          "kaito_v21:seat0": 84.5,
+          "kaito_v21:seat1": 84.5,
+          "other_incumbent:seat0": 0.0,
+          "other_incumbent:seat1": 0.0
+        },
+        "max_margin_delta": 169.0,
+        "mean_margin_delta": 42.25,
+        "mean_money_delta": 57.75,
+        "min_margin_delta": 0.0,
+        "negative": 0,
+        "neutral": 6,
+        "positive": 2,
+        "technical_pass": true,
+        "transition_matrix": {
+          "W_TO_W": 8
+        }
+      }
+    }
+  ],
+  "schema_version": 1
+}

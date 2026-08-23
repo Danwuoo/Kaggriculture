@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "kind": "maximum_full_tape_search_formal_resume",
+  "run_id": "max_search_formal_300m_20260821_v1",
+  "original_pid": 3912,
+  "original_process_found": false,
+  "orphan_worker_count": 0,
+  "restarted_at": "2026-08-22T00:53:25.5943760+08:00",
+  "new_pid": 20656,
+  "workers": 11,
+  "resource_tracker_processes": 1,
+  "same_run_root": true,
+  "same_execution_manifest_sha256": "1454d7dfcad3ac5c05c4746aa1d6df39ad703337977ca2f10801a0cea8a1d3d9",
+  "same_context_registry_sha256": "caacd2101412edd7578cbabeba8b17d2796cbadbc0acac812149b36a128e584b",
+  "same_contract_sha256": "486c480cb81ad461eb4a36d3e10621dda3bd927c636afbb94d2c56304e566d66",
+  "pre_resume_integrity": {
+    "sqlite_quick_check": "ok",
+    "execution_manifest_signature_valid": true,
+    "execution_checkpoint_signature_valid": true,
+    "source_engine_control_route_root_implementation_drift": false,
+    "opponent_artifact_drift": false,
+    "controls": 60,
+    "cached_t0_receipts": 32256,
+    "cached_t0_candidates": 5376,
+    "live_t1_receipts": 0,
+    "stderr_bytes": 0
+  },
+  "post_resume_verification": {
+    "parent_running": true,
+    "direct_children": 12,
+    "stderr_bytes": 0,
+    "persisted_t0_receipts": 32448,
+    "persisted_t0_candidates": 5408,
+    "new_t0_receipts_after_resume": 192,
+    "new_t0_candidates_after_resume": 32,
+    "cached_receipts_preserved": true,
+    "duplicate_formal_run_created": false
+  },
+  "logs": {
+    "stdout": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\research\\cache\\full_path_topology_searcher_2026-08-17\\max_search_formal_300m_20260821_v1\\logs\\formal_resume_20260822_0053_stdout.log",
+    "stderr": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\research\\cache\\full_path_topology_searcher_2026-08-17\\max_search_formal_300m_20260821_v1\\logs\\formal_resume_20260822_0053_stderr.log"
+  },
+  "external_actions": {
+    "automatic_broad_launch": false,
+    "automatic_promotion": false,
+    "automatic_submission": false,
+    "kaggle_submission_performed": false,
+    "remote_repository_changed": false
+  }
+}

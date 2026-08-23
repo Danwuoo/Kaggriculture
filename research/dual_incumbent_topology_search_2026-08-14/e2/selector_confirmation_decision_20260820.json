@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "kind": "e2_s2_selector_fresh_confirmation_decision",
+  "decision": "PASS_MINIMUM_FRESH_CONFIRMATION_ADVANCE_TO_BROAD_ROBUSTNESS",
+  "candidate_id": "e2boatlee_7f591d609cf14d89e6aa1599",
+  "lane": "boatlee_v16_rc2_market_relay",
+  "source_run_id": "e2_s2_selector_confirmation_20260820_v1",
+  "source_summary_file_sha256": "7b5a27a554c4d3fda3e4718cb144fb52fad9b22e3431b4f0e57bb89aecbf1aee",
+  "source_summary_canonical_sha256": "fdeb1cea520f78665b9f3a2e83c47e8242aa3ebda747f9a0c89b8d8c4b4b42b8",
+  "source_protocol_file_sha256": "5e96b7384be116eae07e772cde8e2bb97d323556e8a63f9dbd52b979b9e91c47",
+  "fresh_seeds": [84627193, 53190847],
+  "paired_contexts": 16,
+  "paired_margin_wdl": [12, 4, 0],
+  "mean_paired_margin": 150.5625,
+  "worst_paired_margin": 0.0,
+  "mean_own_bank_delta": 660.3125,
+  "actual_win_delta": 0,
+  "roman_negative_contexts": 0,
+  "tail_falsifier_triggered": false,
+  "technical_gate_passed": true,
+  "promotion_authorized": false,
+  "broad_robustness_search_authorized": true,
+  "authorization": "User explicitly instructed on 2026-08-20: 直接進行一次全面的搜尋，能多大就多大，cpu 約使用 70-85%",
+  "required_next_scope": {
+    "candidate_mutation": null,
+    "pool_with_v27": false,
+    "fresh_seeds_only": true,
+    "both_seats": true,
+    "family_stratification": true,
+    "roman_or_repeated_seat_tail_stops_promotion": true,
+    "automatic_later_tier": false
+  },
+  "limitations": [
+    "The minimum confirmation used only two independent seeds.",
+    "The selector abstained in all Roman contexts, so cross-family proxy-overfit remains unresolved.",
+    "No actual win/loss transition occurred."
+  ],
+  "later_tier_launched": false
+}

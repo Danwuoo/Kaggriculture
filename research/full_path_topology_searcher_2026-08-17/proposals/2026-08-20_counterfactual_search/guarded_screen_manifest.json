@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "kind": "consumed_guarded_counterfactual_screen",
+  "formal_efficacy_authorized": false,
+  "fresh_seeds_selected": [],
+  "consumed_seeds": [93687444, 65365230],
+  "opponent_families": ["other_incumbent", "kaito_v21"],
+  "seats": [0, 1],
+  "candidates": [
+    {
+      "id": "v27_guarded_step264_fertilizer_slot",
+      "lane": "v27_current_meta",
+      "mechanism": "when public own money is at most 7280, replace the step-264 MILK sell slot with 24 FERTILIZER while preserving all nine HIRE slots",
+      "spec_path": "research/full_path_topology_searcher_2026-08-17/proposals/2026-08-20_counterfactual_search/v27_guarded_step264_fertilizer_slot.json",
+      "spec_bytes": 964,
+      "spec_sha256": "4f305f1d29f98efc1a46490cab2d9f7fd9a0632aac73bcbb81ece5cf65f1dae8",
+      "control_path": "research/main_approach/v27_current_meta/main.py",
+      "control_bytes": 29857,
+      "control_sha256": "063128bf765f6a6bb29ecaccc3a7dae8943e35e46c26a6364a1b3169313b9fb4",
+      "candidate_path": "research/full_path_topology_searcher_2026-08-17/artifacts/2026-08-20_counterfactual_search/v27_guarded_step264_fertilizer_slot/main.py",
+      "candidate_bytes": 42617,
+      "candidate_sha256": "c79568b1d24b316b2fc6d76100020ee98c4b7a3166d78df1e0df8238bf6f94f5"
+    },
+    {
+      "id": "boatlee_guarded_skip_cow9_step361",
+      "lane": "boatlee_v16_rc2_market_relay",
+      "mechanism": "when public MILK price is at most 203, remove only the ninth COW purchase at step 361",
+      "spec_path": "research/full_path_topology_searcher_2026-08-17/proposals/2026-08-20_counterfactual_search/boatlee_guarded_skip_cow9_step361.json",
+      "spec_bytes": 687,
+      "spec_sha256": "812802ba055b09a15c96a65f0f08ba234e39138b3767b30f80d11c2da6d57b9f",
+      "control_path": "research/main_approach/boatlee_v16_rc2_market_relay/main.py",
+      "control_bytes": 39456,
+      "control_sha256": "ddb78d2a829745505f31afc6ea1288e2f57d6ff534649d5f416926e8035029ea",
+      "candidate_path": "research/full_path_topology_searcher_2026-08-17/artifacts/2026-08-20_counterfactual_search/boatlee_guarded_skip_cow9_step361/main.py",
+      "candidate_bytes": 52044,
+      "candidate_sha256": "2dee2b9a05cf11fab79f7e126841e38396b1a93dd5f1cdd7e0ae8628b9bc6082"
+    }
+  ]
+}

@@ -99,7 +99,9 @@ def _fp_positive_int(value): return isinstance(value, int) and not isinstance(va
 def _fp_valid_unit(row):
     if not isinstance(row, list) or not row or not isinstance(row[0], str): return False
     op = row[0]
-    if op in {"NORTH", "SOUTH", "EAST", "WEST", "PASS", "DROP", "WATER", "HARVEST", "FERTILIZE", "BUILD_COOP", "BUILD_PASTURE", "DIG", "FEED", "COLLECT_FERTILIZER", "CARE"}: return len(row) == 1
+    if op in {"NORTH", "SOUTH", "EAST", "WEST", "PASS", "DROP", "WATER", "HARVEST", "BUILD_COOP", "BUILD_PASTURE", "DIG", "COLLECT_FERTILIZER", "CARE"}: return len(row) == 1
+    if op == "FEED": return len(row) == 1 or (len(row) == 2 and row[1] == "WHEAT")
+    if op == "FERTILIZE": return len(row) == 1 or (len(row) == 2 and row[1] == "FERTILIZER")
     if op == "PLANT": return len(row) == 2 and row[1] in _FP_CROPS
     if op in {"PICKUP", "PLACE"}: return len(row) in (2, 3) and row[1] in (_FP_PRODUCTS | _FP_ANIMALS) and (len(row) == 2 or _fp_positive_int(row[2]))
     return False

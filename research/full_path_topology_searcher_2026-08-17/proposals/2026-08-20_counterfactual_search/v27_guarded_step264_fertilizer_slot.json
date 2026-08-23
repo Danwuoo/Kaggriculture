@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "lane": "v27_current_meta",
+  "decision_step": 264,
+  "trigger": {
+    "all": [
+      {"path": "own_farm.money", "op": "le", "value": 7280},
+      {"path": "market.prices.FERTILIZER", "op": "ge", "value": 81},
+      {"path": "market.inventory.FERTILIZER", "op": "ge", "value": 10082}
+    ]
+  },
+  "motif": {
+    "kind": "market_edit",
+    "patches": [
+      {
+        "step": 264,
+        "market_mode": "replace",
+        "market": [
+          ["SELL", "FERTILIZER", 24],
+          ["HIRE"], ["HIRE"], ["HIRE"], ["HIRE"], ["HIRE"],
+          ["HIRE"], ["HIRE"], ["HIRE"], ["HIRE"]
+        ]
+      }
+    ]
+  },
+  "displaced_actions": ["SELL MILK 3 at step 264"],
+  "continuation": {"mode": "immediate", "min_end_step": 264, "max_end_step": 264, "rejoin": {}},
+  "fallback": "incumbent",
+  "parent_node_id": "v27_current_meta:spine:264",
+  "evidence_ids": ["full_action_trie_summary", "job_value_discovery_windows"],
+  "max_horizon": 1
+}

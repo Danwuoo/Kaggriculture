@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "kind": "e2_s2_selector_confirmation_fresh_seed_registry",
+  "status": "user_authorized_for_fresh_confirmation",
+  "authorization": "User explicitly instructed on 2026-08-20: 正式 fresh search，確定指令成功啟動後就停止監看",
+  "selection_date": "2026-08-20",
+  "selection_scope": "boatlee_frozen_selector_two-seed_paired_confirmation",
+  "freshness_scan_roots": [
+    "C:/Users/wurre/Downloads/Kaggriculture",
+    "C:/Users/wurre/Desktop/Kaggriculture-archive/2026-08-10"
+  ],
+  "seeds": [
+    {
+      "seed": 84627193,
+      "classification": "formal_fresh",
+      "fresh": true,
+      "purpose": "e2_s2_boatlee_public_selector_confirmation",
+      "preselection_repository_hits": 0,
+      "executed": false
+    },
+    {
+      "seed": 53190847,
+      "classification": "formal_fresh",
+      "fresh": true,
+      "purpose": "e2_s2_boatlee_public_selector_confirmation",
+      "preselection_repository_hits": 0,
+      "executed": false
+    }
+  ],
+  "excluded_consumed_seeds": [
+    811407,
+    81426017,
+    81426029,
+    42284410,
+    73912654,
+    95715007,
+    41193493,
+    61594307,
+    58893729,
+    93687444,
+    65365230,
+    76238482,
+    47896298,
+    37504575,
+    22465322,
+    22831087,
+    27715185,
+    39010211,
+    44100301,
+    89716831,
+    79417473,
+    15516570,
+    28880297
+  ],
+  "formal_fresh_seeds_executed": false
+}

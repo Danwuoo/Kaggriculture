@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "lane": "boatlee_v16_rc2_market_relay",
+  "decision_step": 361,
+  "trigger": {
+    "all": [
+      {"path": "market.prices.MILK", "op": "le", "value": 203}
+    ]
+  },
+  "motif": {
+    "kind": "market_edit",
+    "patches": [
+      {"step": 361, "market_mode": "remove", "market": [["BUY_ANIMAL", "COW", 1]]}
+    ]
+  },
+  "displaced_actions": ["BUY_ANIMAL COW 1 at step 361"],
+  "continuation": {"mode": "immediate", "min_end_step": 361, "max_end_step": 361, "rejoin": {}},
+  "fallback": "incumbent",
+  "parent_node_id": "boatlee_v16_rc2_market_relay:spine:361",
+  "evidence_ids": ["full_action_trie_summary", "job_value_discovery_windows"],
+  "max_horizon": 1
+}

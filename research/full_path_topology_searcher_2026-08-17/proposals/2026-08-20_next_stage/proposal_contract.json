@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "kind": "full_path_proposal_only_contract",
+  "date": "2026-08-20",
+  "formal_games_authorized": false,
+  "fresh_seeds_selected": [],
+  "efficacy_claim": null,
+  "pool_lanes": false,
+  "ranked_development_motifs": {
+    "v27_current_meta": ["worker_route_rejoin", "public_market_preemption"],
+    "boatlee_v16_rc2_market_relay": ["worker_route_rejoin", "livestock_capacity_trade"]
+  },
+  "materialized_negative_controls": {
+    "v27_current_meta": {
+      "source_candidate_id": "0012c21e45271daf80f082de",
+      "known_consumed_context_direction": "negative",
+      "mechanism": "four-turn harvest detour displacing incumbent WATER and route actions",
+      "falsifier": "the compiled branch cannot reproduce the declared actor-local patch, preserve incumbent fallback, or terminate at the declared continuation bound",
+      "role": "compiler_and_attribution_regression_only"
+    },
+    "boatlee_v16_rc2_market_relay": {
+      "source_candidate_id": "000263fc893b40d79a65d7f8",
+      "known_consumed_context_direction": "negative",
+      "mechanism": "four-turn harvest detour displacing two incumbent WATER actions",
+      "falsifier": "the compiled branch cannot reproduce the declared actor-local patch, preserve incumbent fallback, or terminate at the declared continuation bound",
+      "role": "compiler_and_attribution_regression_only"
+    }
+  },
+  "positive_candidate_boundary": {
+    "status": "NOT_YET_MATERIALIZED",
+    "reason": "The available own-loss windows prove harmful detour directions, not a positive alternative. Frontier-code presence and replay mutability prioritize a locus but cannot supply a causal action label.",
+    "next_required_evidence": "lane-local positive or outcome-different counterfactual specifying a public trigger, exact actions, natural rejoin, and falsifying terminal outcome"
+  }
+}

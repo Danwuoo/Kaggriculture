@@ -1,5 +1,9 @@
 # Development acceptance contract
 
+> Historical V1 acceptance contract. It continues to govern V1 regression
+> behavior but does not cap or authorize the V2 maximum full-tape search. See
+> `CURRENT_TASK.md` and `max_search_contract.json` for the active boundary.
+
 The lane passes V1 only when all of the following hold:
 
 1. Every registered source exists at its frozen SHA-256 and byte count. Text
@@ -43,12 +47,19 @@ The lane passes V1 only when all of the following hold:
    The compiler re-hashes its frozen incumbent and publishes atomically only
    after static audit, isolated import, and both entrypoints pass. Resolved
    outputs beneath incumbent and E1/E2 source/evidence roots are rejected.
+   The runtime validator accepts every exact unit and market action in both
+   current incumbent routes, including parameterized `FEED WHEAT` and
+   `FERTILIZE FERTILIZER`. An impossible-trigger compiled candidate must
+   reproduce its current-incumbent control before strategy results are admitted.
 9. Existing Async V3 (23 tests) and main-approach source contracts (3 tests)
    remain green. Frozen old full-tape tests are out of scope because their
    archived input and import-time Kaggle dependency are absent.
 10. Proposal scoring contains no manual signal scalars. Replay mutability and
-    own-loss matching are evidence-derived; missing verified multi-lineage
-    frontier-code matches block ranking. A tracked compact verification summary
+    own-loss matching are evidence-derived. Frontier-code matches require exact
+    frozen source hashes, audited semantic symbols, and at least two independent
+    lineages; source drift or missing matches blocks ranking. Ranking identifies
+    a development locus only: consumed negative windows cannot supply a positive
+    action direction or efficacy label. A tracked compact verification summary
     records source, atlas-input, structure, and candidate digests.
 
 Passing means `REPRODUCIBLE_BRANCH_EXPERIMENTATION_SUBSTRATE_ONLY`. It is a

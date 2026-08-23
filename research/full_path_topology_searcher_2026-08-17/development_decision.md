@@ -1,4 +1,7 @@
-# Development decision — 2026-08-17
+# Development decision — updated 2026-08-20
+
+> Historical V1 decision. Retained for provenance and regression only. The
+> active task authority is `CURRENT_TASK.md`.
 
 Decision: **REPRODUCIBLE_BRANCH_EXPERIMENTATION_SUBSTRATE_ONLY**.
 
@@ -29,15 +32,31 @@ blocked because their raw paired rows are unavailable. It does reject the frozen
 its contexts are consumed and actual win delta is zero despite favorable
 paired-margin and own-bank diagnostics.
 
-Proposal ranking is also fail-closed. Atlas mutability and consumed own-loss
-matches are derived from registered evidence, but no audited per-motif,
-multi-lineage frontier-code match artifact exists yet. Consequently there are
-zero ranked proposals; the former hand-entered scalar priorities were removed.
+Proposal ranking remains fail-closed but is now operational for development
+locus selection. Atlas mutability, consumed own-loss matches, and audited
+frontier-code matches are derived from registered evidence. The frontier source
+artifact freezes exact bytes and hashes, validates semantic symbols, and
+deduplicates submission lineages. Two motifs rank in each incumbent lane. This
+is not a positive action label: the own-loss evidence is consumed and negative,
+and the frontier-code signal is mechanism presence rather than efficacy.
+
+The first bounded materialization therefore uses the highest-ranked shared
+worker-route locus only as an exact known-negative regression control. Separate
+four-turn v27 and Boatlee branches reproduce their lane-local harmful detours,
+then terminate and fall back to their own incumbents. Both compile, pass static
+and isolated-import technical checks, expose both entrypoints, and execute zero
+formal games. They are compiler/attribution controls, not promotion candidates.
 
 No incumbent, E1/E2 source, generated incumbent artifact, consumed seed, fresh
 seed, formal game, remote repository, or Kaggle state was changed. The next
-permitted action is to author and technically evaluate lane-local bounded
-proposals. Fresh paired efficacy remains separately authorized work.
+scientific gate was completed on consumed contexts. A distinct v27 step-264
+cash-boundary selector produced 6 positive, 2 fallback-neutral, and 0 negative
+rows, including two L-to-W changes. It is retained for a separately authorized
+fresh falsification, not efficacy. A Boatlee low-MILK-price selector produced 2
+positive and 6 fallback-neutral rows but has only one unique positive
+seed/family context, so it remains diagnostic and does not displace the frozen
+E2 selector's authorized ordering. Fresh paired efficacy remains separately
+authorized work.
 
 WDL evaluation is closed to registry-predeclared protocol/context manifests and
 re-hashes the immutable lane-local candidate artifact before admitting evidence.
@@ -46,4 +65,6 @@ cannot reach the mechanical WDL gate.
 
 Compact machine-readable evidence is tracked at
 `research/full_path_topology_searcher_2026-08-17/development_verification_summary.json`.
+The 2026-08-20 proposal-only contract and technical result are tracked beneath
+`proposals/2026-08-20_next_stage/`.
 The full local report and channel atlas remain in the ignored cache directory.

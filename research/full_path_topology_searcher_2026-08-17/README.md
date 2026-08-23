@@ -1,5 +1,12 @@
 # Full Path Topology Searcher — development lane
 
+> **V1 historical boundary.** The active optimization task is now the maximum
+> full-tape population search in `CURRENT_TASK.md`; its closed scale contract is
+> `max_search_contract.json` and implementation is under `max_search/`. This
+> README remains authoritative only for the retained bounded-branch V1
+> regression substrate. Statements below about the next proposal or efficacy
+> action are superseded when they conflict with `CURRENT_TASK.md`.
+
 This isolated V1 is a **branch-experimentation substrate**, not the complete
 Outcome-Conditioned Executable DAG described by `topology_path.md`. It
 materializes one bounded branch against a retained incumbent spine; it does
@@ -27,6 +34,14 @@ frozen Boatlee E2 selector is evidence about rejection logic only; its consumed
 contexts and zero actual win delta remain non-efficacy evidence. v27 E2 remains
 stopped.
 
+The 2026-08-20 consumed counterfactual search retained one distinct v27
+fresh-falsification candidate at step 264 and one narrow Boatlee diagnostic at
+step 361. The guarded v27 result is 6 positive, 2 fallback-neutral, 0 negative,
+including two L-to-W rows; Boatlee is 2 positive, 6 fallback-neutral, 0 negative
+with no WDL transition. Both selectors were derived from consumed contexts and
+remain non-efficacy evidence. See
+`proposals/2026-08-20_counterfactual_search/counterfactual_decision.md`.
+
 ## Commands
 
 Run from this directory with the workspace Python:
@@ -40,6 +55,7 @@ python cli.py compile --spec branch.json --output artifacts\candidate\main.py
 python cli.py technical-evaluate --candidate artifacts\candidate\main.py
 python cli.py report --output ..\cache\full_path_topology_searcher_2026-08-17\development_verification.json
 python cli.py write-summary
+python compiled_counterfactual_screen.py --manifest proposals\2026-08-20_counterfactual_search\guarded_screen_manifest.json --output proposals\2026-08-20_counterfactual_search\guarded_consumed_screen.json
 ```
 
 `write-summary` executes the lane, Async V3, and incumbent source-contract
@@ -47,11 +63,19 @@ suites plus registry validation before publishing. Zero-test or reduced-test
 runs fail closed. Its source digest covers Git-tracked inputs only, so ignored
 candidate artifacts cannot make the committed summary checkout-dependent.
 
-`propose` derives replay mutability from the 225-tape atlas and own-loss match
-from registered consumed forensic windows. It refuses to rank while verified
-multi-lineage frontier-code matches are absent; manual scalar priorities are
-not accepted. `technical-evaluate` performs static and isolated-import checks
-and runs zero formal games.
+`propose` derives replay mutability from the 225-tape atlas, own-loss match from
+registered consumed forensic windows, and frontier relevance from hash-frozen
+public-agent sources with audited semantic symbols. It deduplicates submission
+lineages and requires at least two independent lineages; source drift or absent
+matches fails closed. Manual scalar priorities are not accepted. A ranked motif
+identifies only a development locus: the consumed own-loss rows describe a
+known-harmful direction and cannot label a positive branch. `technical-evaluate`
+performs static and isolated-import checks and runs zero formal games.
+
+Compiled counterfactual screens must freeze the current incumbent control hash.
+The retained no-op equivalence artifact catches wrapper/action-schema drift
+before strategy results are admitted. Consumed discovery games are recorded
+separately from formal games and never set `efficacy_signal=true`.
 
 ## Candidate contract
 

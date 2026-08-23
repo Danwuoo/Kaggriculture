@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "kind": "maximum_full_tape_search_development_verification",
+  "date": "2026-08-21",
+  "contract": {
+    "path": "research/full_path_topology_searcher_2026-08-17/max_search_contract.json",
+    "canonical_sha256": "170a2e3b43aa95379280c244f088a6fcef34cca41a1a1101e1bbe7f77253e4db",
+    "population": 16384,
+    "generations": 2000,
+    "raw_candidates": 30000000,
+    "t0_games": 180000000,
+    "t1_additional_games": 120000000,
+    "t0_t1_candidate_games": 300000000,
+    "broad_finalists": 100,
+    "islands": 32,
+    "formal_execution_authorized": false
+  },
+  "source_snapshot": {
+    "repo_head": "3d7003a13434697d91f3836d88f9c6ac7059d912",
+    "engine_commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+    "engine_python_sha256": "fb9215c5e21a25243e2d13e75b3d70a79cf7d78fff150a90f1bb5eacf9ba2bcf",
+    "engine_configuration_sha256": "7f196f4aaf9b4e482fbd61ba4bf19f5cec4da0f81938ece756954035a65c0bb5",
+    "v27_control_sha256": "063128bf765f6a6bb29ecaccc3a7dae8943e35e46c26a6364a1b3169313b9fb4",
+    "boatlee_control_sha256": "ddb78d2a829745505f31afc6ea1288e2f57d6ff534649d5f416926e8035029ea",
+    "route_relation": "byte_equal_but_lane_owned_separately"
+  },
+  "development_preflight": {
+    "run_id": "max_search_development_v6",
+    "manifest_payload_sha256": "337e407cf2608f38143b06fbfab0dc6295b5cc93b97bc93f74b12998129c2e6f",
+    "implementation_manifest_sha256": "f1547e3b6afb6c0b5cb3634aeea7f32ce7e58b8d34a0a2ce03c7e4791155f394",
+    "root_count": 228,
+    "generation_0_unique_candidates": 16384,
+    "generation_1_development_births": 64,
+    "candidate_index_after_generation_1": 16448,
+    "generation_1_target_births_in_formal_contract": 15000,
+    "generation_1_shard_canonical_sha256": "22530088fa16a01c090f0f319260e670a9c302ae85749c704bf977bd25556e7d",
+    "manifest_signature_valid": true,
+    "checkpoint_signature_valid": true,
+    "idempotent_rerun_verified": true,
+    "formal_games_run": 0,
+    "efficacy_signal": false
+  },
+  "official_engine_smokes": {
+    "noop_wrapper": {
+      "technical_games": 8,
+      "both_lanes": true,
+      "both_seats": true,
+      "done_done": true,
+      "exact_behavior_equal": true,
+      "zero_action_issues": true,
+      "artifact_sha256": "027bdd4369c348efccd4694c9af0991af3262b40eabc50a6840a692651ad2f0e"
+    },
+    "effective_mutation": {
+      "technical_games": 8,
+      "both_lanes": true,
+      "both_seats": true,
+      "done_done": true,
+      "action_digest_changed": true,
+      "edit_distance": 1,
+      "zero_action_issues": true,
+      "maximum_wrapper_latency_ms": 1.6033999854698777,
+      "artifact_sha256": "4cf0a9b95d137a6bc0d92a289acd3d97a1aa83c558b656fefc4abb92c467808a"
+    },
+    "formal_games_run": 0,
+    "efficacy_signal": false
+  },
+  "regression": {
+    "full_path_searcher_tests": {"passed": 90, "failed": 0},
+    "async_v3_tests": {"passed": 23, "failed": 0},
+    "main_approach_source_contracts": {"passed": 3, "failed": 0},
+    "both_generated_standalone_checks": true,
+    "v1_authority_validation": true,
+    "git_diff_check": true
+  },
+  "first_audit_remediation": {
+    "initial_verdict": "fix-first",
+    "closed_nested_contract_validation": true,
+    "formal_authorization_bypass_blocked": true,
+    "prepared_shard_crash_reconciliation": true,
+    "implementation_source_bound_to_manifest": true,
+    "island_capacity_uniqueness_and_lane_enforced": true,
+    "fitness_lane_and_control_provenance_enforced": true,
+    "invalid_and_nonfinite_selection_rejected": true,
+    "candidate_identity_full_sha256_and_collision_checked": true,
+    "evidence_hash_reconciled": true,
+    "fresh_followup_audit_pending": false
+  },
+  "second_audit_remediation": {
+    "second_verdict": "fix-first",
+    "scoring_identity_derived_from_manifest_and_genome": true,
+    "paired_rows_bound_to_manifest_candidate_lane_and_control": true,
+    "prepared_and_final_summary_closed_validation": true,
+    "complete_candidate_index_generation_set_enforced": true,
+    "fixed_fifty_finalists_per_lane": true,
+    "contract_tie_break_order_implemented": true,
+    "fresh_followup_audit_pending": false
+  },
+  "third_audit_remediation": {
+    "third_verdict": "fix-first",
+    "score_metrics_recomputed_from_raw_receipts": true,
+    "derived_row_fields_strictly_reconciled": true,
+    "birth_genome_parent_and_mate_lane_checked": true,
+    "coordinator_add_validate_and_reconcile_enforce_island_lane": true,
+    "fresh_followup_audit_pending": false
+  },
+  "fourth_audit_remediation": {
+    "fourth_verdict": "fix-first",
+    "empty_opponent_family_rejected_in_score_candidate": true,
+    "fresh_followup_audit_pending": false
+  },
+  "final_audit": {
+    "verdict": "ship",
+    "role": "sol_advisor_sol_reviewer",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "high",
+    "host_sandbox": "danger-full-access",
+    "approval_policy": "never",
+    "behavioral_read_only_state_verified": true,
+    "blocking_findings": 0
+  },
+  "scope": {
+    "formal_search_launched": false,
+    "t0_t1_scheduler_implemented": false,
+    "seed_registry_frozen": false,
+    "context_registry_frozen": false,
+    "physical_workers_selected": false,
+    "promotion_authorized": false,
+    "submission_authorized": false
+  },
+  "development_verdict": "AUDITED_DEVELOPMENT_SUBSTRATE_SHIP_NOT_FORMAL_EXECUTION"
+}

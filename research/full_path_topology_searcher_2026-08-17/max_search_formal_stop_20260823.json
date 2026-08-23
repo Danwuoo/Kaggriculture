@@ -1,0 +1,57 @@
+{
+  "schema": "max-search-formal-stop/v1",
+  "stopped_at": "2026-08-23T00:15:27.183414+08:00",
+  "reason": "User-requested transition from the signed 300M run to a new approximately two-day run.",
+  "old_run_root": "research/cache/full_path_topology_searcher_2026-08-17/max_search_formal_300m_20260821_v1",
+  "stopped_root_pid": 20656,
+  "captured_child_pids": [
+    12896,
+    11836,
+    7696,
+    20636,
+    26720,
+    26020,
+    9952,
+    19648,
+    27848,
+    13556,
+    9076,
+    14836
+  ],
+  "all_captured_processes_stopped": true,
+  "database": {
+    "quick_check": "ok",
+    "wal_checkpoint": {
+      "busy": 0,
+      "log_frames": 0,
+      "checkpointed_frames": 0
+    },
+    "execution_store_sha256": "250df8b8256d721fb50772c2cecfcbe1a2f3e9bc1a3ae57e57620a65c13d1b3c"
+  },
+  "preserved_games": {
+    "total_completed_t0_t1": 196272,
+    "generation_0": {
+      "complete": true,
+      "t0": 98304,
+      "t1": 65520,
+      "t1_promotions": 2730,
+      "dynamic_prune_complete": true,
+      "adverse_receipts_retained": 156842
+    },
+    "generation_1": {
+      "complete": false,
+      "t0": 32448,
+      "t1": 0
+    }
+  },
+  "immutable_artifacts": {
+    "execution_manifest_sha256": "9a1d02c5f36d8fae60a2d21ffd1649ca631be044f3e220cf8fe4d0466e77f9d5",
+    "execution_checkpoint_sha256": "a5f892cab53ae87ff92e40064a6192293181b3538bc042cd4011ccb76399cff1"
+  },
+  "handoff_constraints": [
+    "Do not mutate or resume the signed 300M manifest as the new two-day contract.",
+    "Build an exact completed-game key ledger from generation-0 population/promotions plus generation-1 live receipts before pruning or importing.",
+    "A new run may reuse compatible receipts and fitness, but must never re-execute a completed candidate-tier-context-engine-strategy tuple.",
+    "Keep both incumbent lanes independently attributable and never pool their scores."
+  ]
+}

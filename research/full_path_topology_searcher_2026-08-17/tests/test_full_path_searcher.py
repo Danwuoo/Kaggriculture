@@ -21,6 +21,7 @@ from compiler import MAX_CANDIDATE_BYTES, RUNTIME_SOURCE, compile_candidate, sta
 import evaluator as evaluator_module
 from evaluator import classify_summary_fixture, evaluate_pairs
 from model import BranchSpec, ContinuationSpec, RejoinContract, StateSignature
+import proposal as proposal_module
 from proposal import proposal_oracle
 from verify import calibration, sample_branch, source_inventory
 
@@ -181,15 +182,38 @@ class AtlasTests(unittest.TestCase):
         self.assertNotEqual(left["graph_digest"], right["graph_digest"])
         self.assertTrue(all(row["source"].startswith("v27_current_meta:") for row in left["edges"]))
 
-    def test_proposal_oracle_fails_closed_without_verified_frontier_sources(self):
+    def test_proposal_oracle_ranks_only_complete_evidence_signals(self):
         atlas = build_atlas(include_channel_entropy=True)
         motifs = json.loads((LANE / "frontier_motifs.json").read_text(encoding="utf-8"))["motifs"]
         rows = json.loads((LANE.parents[1] / "research/job_value_residual_2026-08-12/artifacts/discovery_windows.json").read_text(encoding="utf-8"))["rows"]
         result = proposal_oracle(motifs, LANE_NAME, atlas, rows)
+        self.assertEqual(result["status"], "READY")
+        self.assertEqual(result["ranking_scope"], "motif_locus_only_not_action_direction")
+        self.assertEqual(result["ranked_proposal_count"], 2)
+        ranked = [row for row in result["proposals"] if row["ranking_eligible"]]
+        self.assertTrue(all(row["priority"] is not None for row in ranked))
+        self.assertTrue(all(row["evidence"]["frontier_relevance"]["efficacy_signal"] is False for row in ranked))
+        self.assertTrue(all(row["evidence"]["own_loss_match"]["positive_branch_label"] is False for row in ranked))
+        self.assertEqual({row["id"] for row in ranked}, {"worker_route_rejoin", "public_market_preemption"})
+        worker = next(row for row in ranked if row["id"] == "worker_route_rejoin")
+        self.assertEqual(worker["evidence"]["frontier_relevance"]["frontier_population_lineages"], 6)
+        self.assertEqual(len(worker["evidence"]["frontier_relevance"]["verified_independent_lineages"]), 3)
+
+    def test_proposal_oracle_fails_closed_on_frontier_source_drift(self):
+        atlas = build_atlas(include_channel_entropy=True)
+        motifs = json.loads((LANE / "frontier_motifs.json").read_text(encoding="utf-8"))["motifs"]
+        rows = json.loads((LANE.parents[1] / "research/job_value_residual_2026-08-12/artifacts/discovery_windows.json").read_text(encoding="utf-8"))["rows"]
+        evidence = json.loads(proposal_module.FRONTIER_CODE_EVIDENCE.read_text(encoding="utf-8"))
+        evidence["sources"][0]["sha256"] = "0" * 64
+        with tempfile.TemporaryDirectory() as temporary:
+            drifted = Path(temporary) / "frontier.json"
+            drifted.write_text(json.dumps(evidence), encoding="utf-8")
+            with mock.patch.object(proposal_module, "FRONTIER_CODE_EVIDENCE", drifted):
+                result = proposal_oracle(motifs, LANE_NAME, atlas, rows)
         self.assertEqual(result["status"], "BLOCKED_MISSING_EVIDENCE")
         self.assertEqual(result["ranked_proposal_count"], 0)
-        self.assertTrue(all(row["priority"] is None for row in result["proposals"]))
-        self.assertTrue(any(row["signals"]["replay_mutability"] is not None for row in result["proposals"]))
+        self.assertTrue(all(row["evidence"]["frontier_relevance"]["status"] == "frontier_code_evidence_invalid"
+                            for row in result["proposals"]))
 
     def test_first_irreversible_divergence(self):
         result = first_irreversible_divergence([{"causal_digest": "a"}, {"causal_digest": "b"}], [{"causal_digest": "a"}, {"causal_digest": "c"}])
@@ -362,6 +386,43 @@ class EvaluatorTests(unittest.TestCase):
 
 
 class RuntimeTests(unittest.TestCase):
+    def test_materialized_worker_route_negative_controls_are_exact_and_bounded(self):
+        root = LANE / "proposals/2026-08-20_next_stage"
+        cases = [
+            ("v27_worker_route_negative_control.json", 610, [1, 2], [2, 2],
+             [["EAST"], ["HARVEST"], ["WEST"], ["NORTH"]]),
+            ("boatlee_worker_route_negative_control.json", 499, [0, 0], [1, 1],
+             [["EAST"], ["SOUTH"], ["HARVEST"], ["NORTH"]]),
+        ]
+        for filename, start, position, tile_xy, expected in cases:
+            spec = BranchSpec.from_dict(json.loads((root / filename).read_text(encoding="utf-8")))
+            namespace = runtime(spec)
+            tiles = [[None for _ in range(10)] for _ in range(10)]
+            tiles[tile_xy[1]][tile_xy[0]] = {"kind": "PLANT", "yield_units": 1}
+            hands = [[4, 4] for _ in range(8)]
+            hands[7] = position
+            base_obs = {
+                "player": 0,
+                "farms": [
+                    {"farmer": [4, 4], "hands": hands, "tiles": tiles, "money": 3000},
+                    {"farmer": [4, 4], "hands": [], "tiles": tiles, "money": 3000},
+                ],
+                "market": {"prices": {}, "inventory": {}},
+                "town": {"unlocked_shops": []},
+                "private": {"seeds": {}, "shed": {}, "inventories": [{} for _ in range(9)]},
+            }
+            observed = []
+            for offset in range(4):
+                observed.append(namespace["agent"]({**base_obs, "step": start + offset})["hands"][7])
+            self.assertEqual(observed, expected)
+            self.assertEqual(namespace["_FP_STATE"][0]["status"], "complete")
+            self.assertEqual(namespace["agent"]({**base_obs, "step": start + 4})["hands"][7], ["PASS"])
+            namespace = runtime(spec)
+            fallback_hands = [list(value) for value in hands]
+            fallback_hands[7] = [9, 9]
+            fallback_farms = [dict(base_obs["farms"][0], hands=fallback_hands), base_obs["farms"][1]]
+            self.assertEqual(namespace["agent"]({**base_obs, "farms": fallback_farms, "step": start})["hands"][7], ["PASS"])
+
     def test_triggered_market_patch_and_market_cap(self):
         spec = sample_branch(); ns = runtime(spec)
         result = ns["agent"](obs(240))
@@ -469,6 +530,35 @@ class RuntimeTests(unittest.TestCase):
 
 
 class IntegrationTests(unittest.TestCase):
+    def test_runtime_validator_accepts_every_current_incumbent_route_action(self):
+        namespace = runtime(sample_branch())
+        for lane in ("v27_current_meta", "boatlee_v16_rc2_market_relay"):
+            route = json.loads((LANE.parent / f"main_approach/{lane}/development/route_actions.json").read_text(encoding="utf-8"))
+            for step, action in enumerate(route):
+                for unit in [action["farmer"], *action["hands"]]:
+                    with self.subTest(lane=lane, step=step, unit=unit):
+                        self.assertTrue(namespace["_fp_valid_unit"](unit))
+                for order in action["market"]:
+                    with self.subTest(lane=lane, step=step, market=order):
+                        self.assertTrue(namespace["_fp_valid_market"](order))
+
+    def test_guarded_consumed_counterfactuals_are_positive_but_not_efficacy(self):
+        root = LANE / "proposals/2026-08-20_counterfactual_search"
+        noop = json.loads((root / "noop_equivalence_result.json").read_text(encoding="utf-8"))
+        guarded = json.loads((root / "guarded_consumed_screen.json").read_text(encoding="utf-8"))
+        self.assertEqual(noop["formal_games_run"], 0)
+        self.assertTrue(all(row["summary"]["technical_pass"] for row in noop["results"]))
+        self.assertTrue(all(not row["summary"]["effective_change"] for row in noop["results"]))
+        self.assertTrue(all(row["summary"]["mean_margin_delta"] == 0 for row in noop["results"]))
+        by_id = {row["id"]: row for row in guarded["results"]}
+        v27 = by_id["v27_guarded_step264_fertilizer_slot"]["summary"]
+        boatlee = by_id["boatlee_guarded_skip_cow9_step361"]["summary"]
+        self.assertEqual((v27["positive"], v27["neutral"], v27["negative"]), (6, 2, 0))
+        self.assertEqual(v27["transition_matrix"]["L_TO_W"], 2)
+        self.assertEqual((boatlee["positive"], boatlee["neutral"], boatlee["negative"]), (2, 6, 0))
+        self.assertEqual(guarded["formal_games_run"], 0)
+        self.assertTrue(all(row["summary"]["efficacy_signal"] is False for row in guarded["results"]))
+
     def test_canonical_text_fingerprint_is_eol_independent(self):
         self.assertEqual(canonical_utf8_lf(b"a\r\nb\r\n"), b"a\nb\n")
         with tempfile.TemporaryDirectory() as temporary:

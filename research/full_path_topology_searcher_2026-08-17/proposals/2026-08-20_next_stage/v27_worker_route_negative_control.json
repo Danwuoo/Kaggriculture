@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "lane": "v27_current_meta",
+  "decision_step": 610,
+  "trigger": {
+    "all": [
+      {"path": "own_farm.hands.7.0", "op": "eq", "value": 1},
+      {"path": "own_farm.hands.7.1", "op": "eq", "value": 2},
+      {"path": "own_farm.tiles.2.2.yield_units", "op": "ge", "value": 1}
+    ]
+  },
+  "motif": {
+    "kind": "action_sequence",
+    "patches": [
+      {"step": 610, "actor_actions": [[7, ["EAST"]]], "market_mode": "preserve", "market": []},
+      {"step": 611, "actor_actions": [[7, ["HARVEST"]]], "market_mode": "preserve", "market": []},
+      {"step": 612, "actor_actions": [[7, ["WEST"]]], "market_mode": "preserve", "market": []},
+      {"step": 613, "actor_actions": [[7, ["NORTH"]]], "market_mode": "preserve", "market": []}
+    ]
+  },
+  "displaced_actions": ["hand[7]:WEST", "hand[7]:WATER", "hand[7]:EAST", "hand[7]:NORTH"],
+  "continuation": {
+    "mode": "fixed",
+    "min_end_step": 613,
+    "max_end_step": 613,
+    "rejoin": {}
+  },
+  "fallback": "incumbent",
+  "parent_node_id": "v27_current_meta:spine:610",
+  "evidence_ids": ["v27_incumbent", "job_value_discovery_windows"],
+  "max_horizon": 4
+}

@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "kind": "compiled_noop_equivalence_screen",
+  "formal_efficacy_authorized": false,
+  "fresh_seeds_selected": [],
+  "consumed_seeds": [93687444],
+  "opponent_families": ["kaito_v21"],
+  "seats": [0],
+  "candidates": [
+    {
+      "id": "v27_noop_equivalence",
+      "lane": "v27_current_meta",
+      "mechanism": "impossible public trigger; compiled wrapper must exactly preserve the current incumbent",
+      "spec_path": "research/full_path_topology_searcher_2026-08-17/proposals/2026-08-20_counterfactual_search/v27_noop_equivalence.json",
+      "spec_bytes": 555,
+      "spec_sha256": "f4266bfbbc3bcf72e5aaa781b3e94cc7449e784637572cd59c73a1aca7a575ff",
+      "control_path": "research/main_approach/v27_current_meta/main.py",
+      "control_bytes": 29857,
+      "control_sha256": "063128bf765f6a6bb29ecaccc3a7dae8943e35e46c26a6364a1b3169313b9fb4",
+      "candidate_path": "research/full_path_topology_searcher_2026-08-17/artifacts/2026-08-20_counterfactual_search/v27_noop_equivalence/main.py",
+      "candidate_bytes": 42360,
+      "candidate_sha256": "7c44a71e6d68edbfac379fd781a5f5f1845cc57f50e1e766c1d13bedda4622fb"
+    },
+    {
+      "id": "boatlee_noop_equivalence",
+      "lane": "boatlee_v16_rc2_market_relay",
+      "mechanism": "impossible public trigger; compiled wrapper must exactly preserve the current incumbent",
+      "spec_path": "research/full_path_topology_searcher_2026-08-17/proposals/2026-08-20_counterfactual_search/boatlee_noop_equivalence.json",
+      "spec_bytes": 573,
+      "spec_sha256": "46c4dfde3b53539b842f35e178242b4aa81d40f5f6a850bf87e943d1bfb4cecf",
+      "control_path": "research/main_approach/boatlee_v16_rc2_market_relay/main.py",
+      "control_bytes": 39456,
+      "control_sha256": "ddb78d2a829745505f31afc6ea1288e2f57d6ff534649d5f416926e8035029ea",
+      "candidate_path": "research/full_path_topology_searcher_2026-08-17/artifacts/2026-08-20_counterfactual_search/boatlee_noop_equivalence/main.py",
+      "candidate_bytes": 51977,
+      "candidate_sha256": "18b6abc249521dbee4e25adfc150241a24288794d284fc9f27cc55169b3837bf"
+    }
+  ]
+}

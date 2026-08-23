@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "kind": "maximum_search_context_draft",
+  "mode": "development",
+  "stages": {
+    "t0": [
+      {"opponent_family": "other_incumbent", "seed": 811407, "seat": 0}
+    ],
+    "t1": [
+      {"opponent_family": "kaito_v21", "seed": 811408, "seat": 1}
+    ],
+    "holdout": [
+      {"opponent_family": "other_incumbent", "seed": 811409, "seat": 1}
+    ]
+  },
+  "freshness": {
+    "source": "technical development-only scheduler validation",
+    "consumed_seed_overlap_allowed": true,
+    "notes": "These contexts are never efficacy or promotion evidence."
+  }
+}

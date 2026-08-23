@@ -1,0 +1,373 @@
+{
+  "freshness": {
+    "consumed_seed_overlap_allowed": false,
+    "notes": "T0, T1, and untouched holdout seeds are stage-disjoint. Holdout is frozen but not executed by the 300M T0/T1 runner.",
+    "source": "user-authorized maximum 300M search; exact-token repository scan before freeze found zero prior seed hits"
+  },
+  "kind": "maximum_search_context_registry",
+  "mode": "formal",
+  "opponent_artifacts": {
+    "kaito_v21": {
+      "by_lane": {
+        "boatlee_v16_rc2_market_relay": {
+          "bytes": 428598,
+          "path": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\research\\public_agents\\kaito_v21_top30\\extracted\\main.py",
+          "sha256": "d9dc24ce5429ec628ead0621a160bee90725350683d7dfcc4686fcaf511f3aab"
+        },
+        "v27_current_meta": {
+          "bytes": 428598,
+          "path": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\research\\public_agents\\kaito_v21_top30\\extracted\\main.py",
+          "sha256": "d9dc24ce5429ec628ead0621a160bee90725350683d7dfcc4686fcaf511f3aab"
+        }
+      }
+    },
+    "other_incumbent": {
+      "by_lane": {
+        "boatlee_v16_rc2_market_relay": {
+          "bytes": 28627,
+          "path": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\research\\job_value_residual_2026-08-12\\controls\\v27_current_meta\\main.py",
+          "sha256": "be174326d7e4d4e4b2b937ec212fa3d242c98e04ba9cc213254e968b6aef351e"
+        },
+        "v27_current_meta": {
+          "bytes": 38509,
+          "path": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\research\\job_value_residual_2026-08-12\\controls\\boatlee_v16_rc2_market_relay\\main.py",
+          "sha256": "1d46a8fde96fffdf400f69d83ca3b7029046a0aeb13689eea78c4bf1f3bcfeaf"
+        }
+      }
+    }
+  },
+  "registry_sha256": "caacd2101412edd7578cbabeba8b17d2796cbadbc0acac812149b36a128e584b",
+  "schema_version": 1,
+  "stages": {
+    "holdout": [
+      {
+        "context_id": "ctx_1710804d1c43d5e87556667f",
+        "opponent_family": "other_incumbent",
+        "seat": 0,
+        "seed": 59731482
+      },
+      {
+        "context_id": "ctx_fdbcabb28597eddb467441fa",
+        "opponent_family": "other_incumbent",
+        "seat": 1,
+        "seed": 59731482
+      },
+      {
+        "context_id": "ctx_2258184c1db2331867126e68",
+        "opponent_family": "kaito_v21",
+        "seat": 0,
+        "seed": 59731482
+      },
+      {
+        "context_id": "ctx_6d210cd35ffaf53b9d3e4f92",
+        "opponent_family": "kaito_v21",
+        "seat": 1,
+        "seed": 59731482
+      },
+      {
+        "context_id": "ctx_2bcd4e29d7e83e60d30ecb4b",
+        "opponent_family": "other_incumbent",
+        "seat": 0,
+        "seed": 24068173
+      },
+      {
+        "context_id": "ctx_bd3ba949a2e9cf4e3aa6df1b",
+        "opponent_family": "other_incumbent",
+        "seat": 1,
+        "seed": 24068173
+      },
+      {
+        "context_id": "ctx_b38645a11b63cbed6a21ca59",
+        "opponent_family": "kaito_v21",
+        "seat": 0,
+        "seed": 24068173
+      },
+      {
+        "context_id": "ctx_7ead59b947703e93d93c0c8e",
+        "opponent_family": "kaito_v21",
+        "seat": 1,
+        "seed": 24068173
+      },
+      {
+        "context_id": "ctx_640f74dd659716193928b8d5",
+        "opponent_family": "other_incumbent",
+        "seat": 0,
+        "seed": 76923514
+      },
+      {
+        "context_id": "ctx_ecfe554a2f5e07dd3c67e6d9",
+        "opponent_family": "other_incumbent",
+        "seat": 1,
+        "seed": 76923514
+      },
+      {
+        "context_id": "ctx_335e91440e565ade8ae7c224",
+        "opponent_family": "kaito_v21",
+        "seat": 0,
+        "seed": 76923514
+      },
+      {
+        "context_id": "ctx_6f9ab87fc840d234ab1ef8d0",
+        "opponent_family": "kaito_v21",
+        "seat": 1,
+        "seed": 76923514
+      },
+      {
+        "context_id": "ctx_7d558951eb112e33809a0e9a",
+        "opponent_family": "other_incumbent",
+        "seat": 0,
+        "seed": 41857396
+      },
+      {
+        "context_id": "ctx_0f4f8a9841e410460c29d1dc",
+        "opponent_family": "other_incumbent",
+        "seat": 1,
+        "seed": 41857396
+      },
+      {
+        "context_id": "ctx_5ccd82e3130738f169b74cc4",
+        "opponent_family": "kaito_v21",
+        "seat": 0,
+        "seed": 41857396
+      },
+      {
+        "context_id": "ctx_19052107e6dc7a1811a3634e",
+        "opponent_family": "kaito_v21",
+        "seat": 1,
+        "seed": 41857396
+      },
+      {
+        "context_id": "ctx_0fb2c73146f28287a74b50b6",
+        "opponent_family": "other_incumbent",
+        "seat": 0,
+        "seed": 96314725
+      },
+      {
+        "context_id": "ctx_f176d08391516898cfd07a08",
+        "opponent_family": "other_incumbent",
+        "seat": 1,
+        "seed": 96314725
+      },
+      {
+        "context_id": "ctx_b61f8130bc25e48984a13fd5",
+        "opponent_family": "kaito_v21",
+        "seat": 0,
+        "seed": 96314725
+      },
+      {
+        "context_id": "ctx_76fc7dd82a5ce5faf66e723d",
+        "opponent_family": "kaito_v21",
+        "seat": 1,
+        "seed": 96314725
+      },
+      {
+        "context_id": "ctx_59316aaeac5bc2f44053f051",
+        "opponent_family": "other_incumbent",
+        "seat": 0,
+        "seed": 52480631
+      },
+      {
+        "context_id": "ctx_5ed0e471d5219aca892c57e2",
+        "opponent_family": "other_incumbent",
+        "seat": 1,
+        "seed": 52480631
+      },
+      {
+        "context_id": "ctx_bb8529ca840583fe666dbe05",
+        "opponent_family": "kaito_v21",
+        "seat": 0,
+        "seed": 52480631
+      },
+      {
+        "context_id": "ctx_4c58afad00de5f8eb031698a",
+        "opponent_family": "kaito_v21",
+        "seat": 1,
+        "seed": 52480631
+      }
+    ],
+    "t0": [
+      {
+        "context_id": "ctx_1b0bcef3b294aad7c3e2fcaa",
+        "opponent_family": "other_incumbent",
+        "seat": 0,
+        "seed": 92741361
+      },
+      {
+        "context_id": "ctx_7bd212d3d32123ac1c12df8a",
+        "opponent_family": "other_incumbent",
+        "seat": 1,
+        "seed": 92741361
+      },
+      {
+        "context_id": "ctx_3ad588795fb591b960e6f717",
+        "opponent_family": "other_incumbent",
+        "seat": 0,
+        "seed": 68309524
+      },
+      {
+        "context_id": "ctx_54ffde3d6f8905962716df4d",
+        "opponent_family": "other_incumbent",
+        "seat": 1,
+        "seed": 68309524
+      },
+      {
+        "context_id": "ctx_92d71cd08ae96a54c3353521",
+        "opponent_family": "other_incumbent",
+        "seat": 0,
+        "seed": 25174893
+      },
+      {
+        "context_id": "ctx_96fc637643c83836e2cc1a0f",
+        "opponent_family": "other_incumbent",
+        "seat": 1,
+        "seed": 25174893
+      }
+    ],
+    "t1": [
+      {
+        "context_id": "ctx_95a9cb974cc9cb5203fa5ef6",
+        "opponent_family": "other_incumbent",
+        "seat": 0,
+        "seed": 91462753
+      },
+      {
+        "context_id": "ctx_3e985f736bc8f3bbe906249a",
+        "opponent_family": "other_incumbent",
+        "seat": 1,
+        "seed": 91462753
+      },
+      {
+        "context_id": "ctx_113c6e0cf3cd736d154c5256",
+        "opponent_family": "kaito_v21",
+        "seat": 0,
+        "seed": 91462753
+      },
+      {
+        "context_id": "ctx_b82e47e931a76e6cdc1a0f99",
+        "opponent_family": "kaito_v21",
+        "seat": 1,
+        "seed": 91462753
+      },
+      {
+        "context_id": "ctx_905f91d81eb714d4466f6404",
+        "opponent_family": "other_incumbent",
+        "seat": 0,
+        "seed": 73815026
+      },
+      {
+        "context_id": "ctx_5fdc2e416d38db613a442b35",
+        "opponent_family": "other_incumbent",
+        "seat": 1,
+        "seed": 73815026
+      },
+      {
+        "context_id": "ctx_8eb3ee3ae2efb3c3bf32bf12",
+        "opponent_family": "kaito_v21",
+        "seat": 0,
+        "seed": 73815026
+      },
+      {
+        "context_id": "ctx_a4fdc380c0c9f42cb9a72dfe",
+        "opponent_family": "kaito_v21",
+        "seat": 1,
+        "seed": 73815026
+      },
+      {
+        "context_id": "ctx_834febca2904a97b62888962",
+        "opponent_family": "other_incumbent",
+        "seat": 0,
+        "seed": 46598217
+      },
+      {
+        "context_id": "ctx_892abdf13731a3ba94f5fe80",
+        "opponent_family": "other_incumbent",
+        "seat": 1,
+        "seed": 46598217
+      },
+      {
+        "context_id": "ctx_572bfe866c999e14d41c9152",
+        "opponent_family": "kaito_v21",
+        "seat": 0,
+        "seed": 46598217
+      },
+      {
+        "context_id": "ctx_4ce6fb30a4464afab9576649",
+        "opponent_family": "kaito_v21",
+        "seat": 1,
+        "seed": 46598217
+      },
+      {
+        "context_id": "ctx_51e3382ff287e19f63ea395e",
+        "opponent_family": "other_incumbent",
+        "seat": 0,
+        "seed": 30974685
+      },
+      {
+        "context_id": "ctx_18d759f752bb931498430ebc",
+        "opponent_family": "other_incumbent",
+        "seat": 1,
+        "seed": 30974685
+      },
+      {
+        "context_id": "ctx_5855a3e062eb6a8ff4eec56c",
+        "opponent_family": "kaito_v21",
+        "seat": 0,
+        "seed": 30974685
+      },
+      {
+        "context_id": "ctx_d25b92c8323f6e09bcb0be98",
+        "opponent_family": "kaito_v21",
+        "seat": 1,
+        "seed": 30974685
+      },
+      {
+        "context_id": "ctx_89adbce6e3a4d01290457599",
+        "opponent_family": "other_incumbent",
+        "seat": 0,
+        "seed": 85261349
+      },
+      {
+        "context_id": "ctx_a62cb6791d42d4d010b8d394",
+        "opponent_family": "other_incumbent",
+        "seat": 1,
+        "seed": 85261349
+      },
+      {
+        "context_id": "ctx_fc060b04e28b53b6d9614be0",
+        "opponent_family": "kaito_v21",
+        "seat": 0,
+        "seed": 85261349
+      },
+      {
+        "context_id": "ctx_9a1ffe120223e57e6132b8ee",
+        "opponent_family": "kaito_v21",
+        "seat": 1,
+        "seed": 85261349
+      },
+      {
+        "context_id": "ctx_8b1d12d053467d15b2f6a470",
+        "opponent_family": "other_incumbent",
+        "seat": 0,
+        "seed": 17642538
+      },
+      {
+        "context_id": "ctx_c3b1938046841a237ad6c2df",
+        "opponent_family": "other_incumbent",
+        "seat": 1,
+        "seed": 17642538
+      },
+      {
+        "context_id": "ctx_5d627c6fc1cb893e1ea55399",
+        "opponent_family": "kaito_v21",
+        "seat": 0,
+        "seed": 17642538
+      },
+      {
+        "context_id": "ctx_686f5327d6666685d645e2fa",
+        "opponent_family": "kaito_v21",
+        "seat": 1,
+        "seed": 17642538
+      }
+    ]
+  }
+}

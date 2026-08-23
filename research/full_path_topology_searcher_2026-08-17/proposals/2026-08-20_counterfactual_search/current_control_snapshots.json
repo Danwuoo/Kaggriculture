@@ -1,0 +1,966 @@
+{
+  "consumed_control_games_run": 16,
+  "formal_games_run": 0,
+  "fresh_seeds_selected": [],
+  "kind": "current_incumbent_consumed_public_state_snapshots",
+  "manifest_sha256": "f3bc41499331acc71709fa4443046635b8a2f3b6a211b42b9bff09ef64b4778a",
+  "rows": [
+    {
+      "context": {
+        "opponent_family": "other_incumbent",
+        "seat": 0,
+        "seed": 93687444
+      },
+      "decision_step": 264,
+      "lane": "v27_current_meta",
+      "public_state": {
+        "market_inventory": {
+          "CARROT": 9965,
+          "EGG": 9989,
+          "FERTILIZER": 10096,
+          "MELON": 10049,
+          "MILK": 9953,
+          "STRAWBERRY": 9941,
+          "TOMATO": 9989,
+          "WHEAT": 9853,
+          "WOOL": 10001
+        },
+        "market_prices": {
+          "CARROT": 39,
+          "EGG": 51,
+          "FERTILIZER": 81,
+          "MELON": 226,
+          "MILK": 220,
+          "STRAWBERRY": 185,
+          "TOMATO": 61,
+          "WHEAT": 37,
+          "WOOL": 200
+        },
+        "opponent_money": 7080.0,
+        "opponent_tile_counts": {
+          "COW": 6,
+          "MELON": 12,
+          "SHEEP": 6,
+          "STRAWBERRY": 31,
+          "WEED": 1,
+          "WHEAT": 13
+        },
+        "opponent_worker_count": 1,
+        "own_money": 7280.0,
+        "own_tile_counts": {
+          "COW": 8,
+          "MELON": 12,
+          "SHEEP": 4,
+          "STRAWBERRY": 31,
+          "WEED": 1,
+          "WHEAT": 13
+        },
+        "own_worker_count": 1,
+        "town": {
+          "unlocked_shops": [
+            "ICE_CREAM_SHOP",
+            "YARN_STORE",
+            "PET_CAFE"
+          ]
+        }
+      }
+    },
+    {
+      "context": {
+        "opponent_family": "other_incumbent",
+        "seat": 1,
+        "seed": 93687444
+      },
+      "decision_step": 264,
+      "lane": "v27_current_meta",
+      "public_state": {
+        "market_inventory": {
+          "CARROT": 9965,
+          "EGG": 9989,
+          "FERTILIZER": 10096,
+          "MELON": 10049,
+          "MILK": 9953,
+          "STRAWBERRY": 9941,
+          "TOMATO": 9989,
+          "WHEAT": 9853,
+          "WOOL": 10001
+        },
+        "market_prices": {
+          "CARROT": 39,
+          "EGG": 51,
+          "FERTILIZER": 81,
+          "MELON": 226,
+          "MILK": 220,
+          "STRAWBERRY": 185,
+          "TOMATO": 61,
+          "WHEAT": 37,
+          "WOOL": 200
+        },
+        "opponent_money": 7080.0,
+        "opponent_tile_counts": {
+          "COW": 6,
+          "MELON": 12,
+          "SHEEP": 6,
+          "STRAWBERRY": 31,
+          "WEED": 1,
+          "WHEAT": 13
+        },
+        "opponent_worker_count": 1,
+        "own_money": 7280.0,
+        "own_tile_counts": {
+          "COW": 8,
+          "MELON": 12,
+          "SHEEP": 4,
+          "STRAWBERRY": 31,
+          "WEED": 1,
+          "WHEAT": 13
+        },
+        "own_worker_count": 1,
+        "town": {
+          "unlocked_shops": [
+            "ICE_CREAM_SHOP",
+            "YARN_STORE",
+            "PET_CAFE"
+          ]
+        }
+      }
+    },
+    {
+      "context": {
+        "opponent_family": "other_incumbent",
+        "seat": 0,
+        "seed": 65365230
+      },
+      "decision_step": 264,
+      "lane": "v27_current_meta",
+      "public_state": {
+        "market_inventory": {
+          "CARROT": 9989,
+          "EGG": 9989,
+          "FERTILIZER": 10096,
+          "MELON": 10049,
+          "MILK": 9911,
+          "STRAWBERRY": 9929,
+          "TOMATO": 9959,
+          "WHEAT": 9811,
+          "WOOL": 10059
+        },
+        "market_prices": {
+          "CARROT": 38,
+          "EGG": 51,
+          "FERTILIZER": 81,
+          "MELON": 226,
+          "MILK": 242,
+          "STRAWBERRY": 191,
+          "TOMATO": 65,
+          "WHEAT": 39,
+          "WOOL": 1
+        },
+        "opponent_money": 4855.0,
+        "opponent_tile_counts": {
+          "COW": 8,
+          "MELON": 12,
+          "SHEEP": 4,
+          "STRAWBERRY": 31,
+          "WEED": 1,
+          "WHEAT": 13
+        },
+        "opponent_worker_count": 1,
+        "own_money": 4855.0,
+        "own_tile_counts": {
+          "COW": 8,
+          "MELON": 12,
+          "SHEEP": 4,
+          "STRAWBERRY": 31,
+          "WEED": 1,
+          "WHEAT": 13
+        },
+        "own_worker_count": 1,
+        "town": {
+          "unlocked_shops": [
+            "ICE_CREAM_SHOP",
+            "PIZZA_SHOP",
+            "ICE_CREAM_SHOP"
+          ]
+        }
+      }
+    },
+    {
+      "context": {
+        "opponent_family": "other_incumbent",
+        "seat": 1,
+        "seed": 65365230
+      },
+      "decision_step": 264,
+      "lane": "v27_current_meta",
+      "public_state": {
+        "market_inventory": {
+          "CARROT": 9989,
+          "EGG": 9989,
+          "FERTILIZER": 10096,
+          "MELON": 10049,
+          "MILK": 9911,
+          "STRAWBERRY": 9929,
+          "TOMATO": 9959,
+          "WHEAT": 9811,
+          "WOOL": 10059
+        },
+        "market_prices": {
+          "CARROT": 38,
+          "EGG": 51,
+          "FERTILIZER": 81,
+          "MELON": 226,
+          "MILK": 242,
+          "STRAWBERRY": 191,
+          "TOMATO": 65,
+          "WHEAT": 39,
+          "WOOL": 1
+        },
+        "opponent_money": 4855.0,
+        "opponent_tile_counts": {
+          "COW": 8,
+          "MELON": 12,
+          "SHEEP": 4,
+          "STRAWBERRY": 31,
+          "WEED": 1,
+          "WHEAT": 13
+        },
+        "opponent_worker_count": 1,
+        "own_money": 4855.0,
+        "own_tile_counts": {
+          "COW": 8,
+          "MELON": 12,
+          "SHEEP": 4,
+          "STRAWBERRY": 31,
+          "WEED": 1,
+          "WHEAT": 13
+        },
+        "own_worker_count": 1,
+        "town": {
+          "unlocked_shops": [
+            "ICE_CREAM_SHOP",
+            "PIZZA_SHOP",
+            "ICE_CREAM_SHOP"
+          ]
+        }
+      }
+    },
+    {
+      "context": {
+        "opponent_family": "kaito_v21",
+        "seat": 0,
+        "seed": 93687444
+      },
+      "decision_step": 264,
+      "lane": "v27_current_meta",
+      "public_state": {
+        "market_inventory": {
+          "CARROT": 9989,
+          "EGG": 9977,
+          "FERTILIZER": 10082,
+          "MELON": 10049,
+          "MILK": 9962,
+          "STRAWBERRY": 9977,
+          "TOMATO": 9941,
+          "WHEAT": 9868,
+          "WOOL": 9985
+        },
+        "market_prices": {
+          "CARROT": 38,
+          "EGG": 51,
+          "FERTILIZER": 84,
+          "MELON": 226,
+          "MILK": 214,
+          "STRAWBERRY": 160,
+          "TOMATO": 67,
+          "WHEAT": 36,
+          "WOOL": 224
+        },
+        "opponent_money": 10706.0,
+        "opponent_tile_counts": {
+          "COW": 8,
+          "MELON": 2,
+          "SHEEP": 4,
+          "STRAWBERRY": 18,
+          "WHEAT": 7
+        },
+        "opponent_worker_count": 1,
+        "own_money": 7942.0,
+        "own_tile_counts": {
+          "COW": 8,
+          "MELON": 12,
+          "SHEEP": 4,
+          "STRAWBERRY": 31,
+          "WEED": 1,
+          "WHEAT": 13
+        },
+        "own_worker_count": 1,
+        "town": {
+          "unlocked_shops": [
+            "PIZZA_SHOP",
+            "YARN_STORE",
+            "BRUNCH_SPOT"
+          ]
+        }
+      }
+    },
+    {
+      "context": {
+        "opponent_family": "kaito_v21",
+        "seat": 1,
+        "seed": 93687444
+      },
+      "decision_step": 264,
+      "lane": "v27_current_meta",
+      "public_state": {
+        "market_inventory": {
+          "CARROT": 9989,
+          "EGG": 9977,
+          "FERTILIZER": 10082,
+          "MELON": 10049,
+          "MILK": 9962,
+          "STRAWBERRY": 9977,
+          "TOMATO": 9941,
+          "WHEAT": 9868,
+          "WOOL": 9985
+        },
+        "market_prices": {
+          "CARROT": 38,
+          "EGG": 51,
+          "FERTILIZER": 84,
+          "MELON": 226,
+          "MILK": 214,
+          "STRAWBERRY": 160,
+          "TOMATO": 67,
+          "WHEAT": 36,
+          "WOOL": 224
+        },
+        "opponent_money": 10706.0,
+        "opponent_tile_counts": {
+          "COW": 8,
+          "MELON": 2,
+          "SHEEP": 4,
+          "STRAWBERRY": 18,
+          "WHEAT": 7
+        },
+        "opponent_worker_count": 1,
+        "own_money": 7942.0,
+        "own_tile_counts": {
+          "COW": 8,
+          "MELON": 12,
+          "SHEEP": 4,
+          "STRAWBERRY": 31,
+          "WEED": 1,
+          "WHEAT": 13
+        },
+        "own_worker_count": 1,
+        "town": {
+          "unlocked_shops": [
+            "PIZZA_SHOP",
+            "YARN_STORE",
+            "BRUNCH_SPOT"
+          ]
+        }
+      }
+    },
+    {
+      "context": {
+        "opponent_family": "kaito_v21",
+        "seat": 0,
+        "seed": 65365230
+      },
+      "decision_step": 264,
+      "lane": "v27_current_meta",
+      "public_state": {
+        "market_inventory": {
+          "CARROT": 9989,
+          "EGG": 9977,
+          "FERTILIZER": 10082,
+          "MELON": 10049,
+          "MILK": 9932,
+          "STRAWBERRY": 9941,
+          "TOMATO": 9959,
+          "WHEAT": 9835,
+          "WOOL": 10045
+        },
+        "market_prices": {
+          "CARROT": 38,
+          "EGG": 51,
+          "FERTILIZER": 84,
+          "MELON": 226,
+          "MILK": 232,
+          "STRAWBERRY": 185,
+          "TOMATO": 65,
+          "WHEAT": 38,
+          "WOOL": 82
+        },
+        "opponent_money": 10130.0,
+        "opponent_tile_counts": {
+          "COW": 8,
+          "MELON": 2,
+          "SHEEP": 4,
+          "STRAWBERRY": 15,
+          "WHEAT": 7
+        },
+        "opponent_worker_count": 1,
+        "own_money": 6252.0,
+        "own_tile_counts": {
+          "COW": 8,
+          "MELON": 12,
+          "SHEEP": 4,
+          "STRAWBERRY": 31,
+          "WEED": 1,
+          "WHEAT": 13
+        },
+        "own_worker_count": 1,
+        "town": {
+          "unlocked_shops": [
+            "ICE_CREAM_SHOP",
+            "PIZZA_SHOP",
+            "BAKERY"
+          ]
+        }
+      }
+    },
+    {
+      "context": {
+        "opponent_family": "kaito_v21",
+        "seat": 1,
+        "seed": 65365230
+      },
+      "decision_step": 264,
+      "lane": "v27_current_meta",
+      "public_state": {
+        "market_inventory": {
+          "CARROT": 9989,
+          "EGG": 9977,
+          "FERTILIZER": 10082,
+          "MELON": 10049,
+          "MILK": 9932,
+          "STRAWBERRY": 9941,
+          "TOMATO": 9959,
+          "WHEAT": 9835,
+          "WOOL": 10045
+        },
+        "market_prices": {
+          "CARROT": 38,
+          "EGG": 51,
+          "FERTILIZER": 84,
+          "MELON": 226,
+          "MILK": 232,
+          "STRAWBERRY": 185,
+          "TOMATO": 65,
+          "WHEAT": 38,
+          "WOOL": 82
+        },
+        "opponent_money": 10130.0,
+        "opponent_tile_counts": {
+          "COW": 8,
+          "MELON": 2,
+          "SHEEP": 4,
+          "STRAWBERRY": 15,
+          "WHEAT": 7
+        },
+        "opponent_worker_count": 1,
+        "own_money": 6252.0,
+        "own_tile_counts": {
+          "COW": 8,
+          "MELON": 12,
+          "SHEEP": 4,
+          "STRAWBERRY": 31,
+          "WEED": 1,
+          "WHEAT": 13
+        },
+        "own_worker_count": 1,
+        "town": {
+          "unlocked_shops": [
+            "ICE_CREAM_SHOP",
+            "PIZZA_SHOP",
+            "BAKERY"
+          ]
+        }
+      }
+    },
+    {
+      "context": {
+        "opponent_family": "other_incumbent",
+        "seat": 0,
+        "seed": 93687444
+      },
+      "decision_step": 361,
+      "lane": "boatlee_v16_rc2_market_relay",
+      "public_state": {
+        "market_inventory": {
+          "CARROT": 9910,
+          "EGG": 9983,
+          "FERTILIZER": 10178,
+          "MELON": 10044,
+          "MILK": 9946,
+          "STRAWBERRY": 9923,
+          "TOMATO": 9965,
+          "WHEAT": 9811,
+          "WOOL": 9978
+        },
+        "market_prices": {
+          "CARROT": 40,
+          "EGG": 51,
+          "FERTILIZER": 64,
+          "MELON": 231,
+          "MILK": 224,
+          "STRAWBERRY": 194,
+          "TOMATO": 64,
+          "WHEAT": 39,
+          "WOOL": 227
+        },
+        "opponent_money": 19134.0,
+        "opponent_tile_counts": {
+          "COW": 8,
+          "MELON": 14,
+          "SHEEP": 4,
+          "STRAWBERRY": 36,
+          "WHEAT": 13
+        },
+        "opponent_worker_count": 9,
+        "own_money": 19020.0,
+        "own_tile_counts": {
+          "COW": 6,
+          "MELON": 14,
+          "SHEEP": 6,
+          "STRAWBERRY": 36,
+          "WHEAT": 13
+        },
+        "own_worker_count": 9,
+        "town": {
+          "unlocked_shops": [
+            "ICE_CREAM_SHOP",
+            "YARN_STORE",
+            "PET_CAFE",
+            "PIZZA_SHOP",
+            "BAKERY"
+          ]
+        }
+      }
+    },
+    {
+      "context": {
+        "opponent_family": "other_incumbent",
+        "seat": 1,
+        "seed": 93687444
+      },
+      "decision_step": 361,
+      "lane": "boatlee_v16_rc2_market_relay",
+      "public_state": {
+        "market_inventory": {
+          "CARROT": 9910,
+          "EGG": 9983,
+          "FERTILIZER": 10178,
+          "MELON": 10044,
+          "MILK": 9946,
+          "STRAWBERRY": 9923,
+          "TOMATO": 9965,
+          "WHEAT": 9811,
+          "WOOL": 9978
+        },
+        "market_prices": {
+          "CARROT": 40,
+          "EGG": 51,
+          "FERTILIZER": 64,
+          "MELON": 231,
+          "MILK": 224,
+          "STRAWBERRY": 194,
+          "TOMATO": 64,
+          "WHEAT": 39,
+          "WOOL": 227
+        },
+        "opponent_money": 19134.0,
+        "opponent_tile_counts": {
+          "COW": 8,
+          "MELON": 14,
+          "SHEEP": 4,
+          "STRAWBERRY": 36,
+          "WHEAT": 13
+        },
+        "opponent_worker_count": 9,
+        "own_money": 19020.0,
+        "own_tile_counts": {
+          "COW": 6,
+          "MELON": 14,
+          "SHEEP": 6,
+          "STRAWBERRY": 36,
+          "WHEAT": 13
+        },
+        "own_worker_count": 9,
+        "town": {
+          "unlocked_shops": [
+            "ICE_CREAM_SHOP",
+            "YARN_STORE",
+            "PET_CAFE",
+            "PIZZA_SHOP",
+            "BAKERY"
+          ]
+        }
+      }
+    },
+    {
+      "context": {
+        "opponent_family": "other_incumbent",
+        "seat": 0,
+        "seed": 65365230
+      },
+      "decision_step": 361,
+      "lane": "boatlee_v16_rc2_market_relay",
+      "public_state": {
+        "market_inventory": {
+          "CARROT": 9984,
+          "EGG": 9983,
+          "FERTILIZER": 10178,
+          "MELON": 10044,
+          "MILK": 9854,
+          "STRAWBERRY": 9885,
+          "TOMATO": 9910,
+          "WHEAT": 9719,
+          "WOOL": 10056
+        },
+        "market_prices": {
+          "CARROT": 38,
+          "EGG": 51,
+          "FERTILIZER": 64,
+          "MELON": 231,
+          "MILK": 265,
+          "STRAWBERRY": 210,
+          "TOMATO": 71,
+          "WHEAT": 42,
+          "WOOL": 18
+        },
+        "opponent_money": 14065.0,
+        "opponent_tile_counts": {
+          "COW": 8,
+          "MELON": 14,
+          "SHEEP": 4,
+          "STRAWBERRY": 36,
+          "WHEAT": 13
+        },
+        "opponent_worker_count": 9,
+        "own_money": 14151.0,
+        "own_tile_counts": {
+          "COW": 8,
+          "MELON": 14,
+          "SHEEP": 4,
+          "STRAWBERRY": 36,
+          "WHEAT": 13
+        },
+        "own_worker_count": 9,
+        "town": {
+          "unlocked_shops": [
+            "ICE_CREAM_SHOP",
+            "PIZZA_SHOP",
+            "ICE_CREAM_SHOP",
+            "PIZZA_SHOP",
+            "BRUNCH_SPOT"
+          ]
+        }
+      }
+    },
+    {
+      "context": {
+        "opponent_family": "other_incumbent",
+        "seat": 1,
+        "seed": 65365230
+      },
+      "decision_step": 361,
+      "lane": "boatlee_v16_rc2_market_relay",
+      "public_state": {
+        "market_inventory": {
+          "CARROT": 9984,
+          "EGG": 9983,
+          "FERTILIZER": 10178,
+          "MELON": 10044,
+          "MILK": 9854,
+          "STRAWBERRY": 9885,
+          "TOMATO": 9910,
+          "WHEAT": 9719,
+          "WOOL": 10056
+        },
+        "market_prices": {
+          "CARROT": 38,
+          "EGG": 51,
+          "FERTILIZER": 64,
+          "MELON": 231,
+          "MILK": 265,
+          "STRAWBERRY": 210,
+          "TOMATO": 71,
+          "WHEAT": 42,
+          "WOOL": 18
+        },
+        "opponent_money": 14065.0,
+        "opponent_tile_counts": {
+          "COW": 8,
+          "MELON": 14,
+          "SHEEP": 4,
+          "STRAWBERRY": 36,
+          "WHEAT": 13
+        },
+        "opponent_worker_count": 9,
+        "own_money": 14151.0,
+        "own_tile_counts": {
+          "COW": 8,
+          "MELON": 14,
+          "SHEEP": 4,
+          "STRAWBERRY": 36,
+          "WHEAT": 13
+        },
+        "own_worker_count": 9,
+        "town": {
+          "unlocked_shops": [
+            "ICE_CREAM_SHOP",
+            "PIZZA_SHOP",
+            "ICE_CREAM_SHOP",
+            "PIZZA_SHOP",
+            "BRUNCH_SPOT"
+          ]
+        }
+      }
+    },
+    {
+      "context": {
+        "opponent_family": "kaito_v21",
+        "seat": 0,
+        "seed": 93687444
+      },
+      "decision_step": 361,
+      "lane": "boatlee_v16_rc2_market_relay",
+      "public_state": {
+        "market_inventory": {
+          "CARROT": 9984,
+          "EGG": 9947,
+          "FERTILIZER": 10170,
+          "MELON": 10086,
+          "MILK": 9976,
+          "STRAWBERRY": 9953,
+          "TOMATO": 9910,
+          "WHEAT": 9774,
+          "WOOL": 9920
+        },
+        "market_prices": {
+          "CARROT": 38,
+          "EGG": 53,
+          "FERTILIZER": 66,
+          "MELON": 176,
+          "MILK": 203,
+          "STRAWBERRY": 178,
+          "TOMATO": 71,
+          "WHEAT": 40,
+          "WOOL": 238
+        },
+        "opponent_money": 21486.0,
+        "opponent_tile_counts": {
+          "COW": 8,
+          "MELON": 12,
+          "SHEEP": 6,
+          "STRAWBERRY": 41,
+          "WHEAT": 7
+        },
+        "opponent_worker_count": 6,
+        "own_money": 19662.0,
+        "own_tile_counts": {
+          "COW": 8,
+          "MELON": 14,
+          "SHEEP": 4,
+          "STRAWBERRY": 36,
+          "WHEAT": 13
+        },
+        "own_worker_count": 9,
+        "town": {
+          "unlocked_shops": [
+            "PIZZA_SHOP",
+            "YARN_STORE",
+            "BRUNCH_SPOT",
+            "YARN_STORE",
+            "PIZZA_SHOP"
+          ]
+        }
+      }
+    },
+    {
+      "context": {
+        "opponent_family": "kaito_v21",
+        "seat": 1,
+        "seed": 93687444
+      },
+      "decision_step": 361,
+      "lane": "boatlee_v16_rc2_market_relay",
+      "public_state": {
+        "market_inventory": {
+          "CARROT": 9984,
+          "EGG": 9947,
+          "FERTILIZER": 10170,
+          "MELON": 10086,
+          "MILK": 9976,
+          "STRAWBERRY": 9953,
+          "TOMATO": 9910,
+          "WHEAT": 9774,
+          "WOOL": 9920
+        },
+        "market_prices": {
+          "CARROT": 38,
+          "EGG": 53,
+          "FERTILIZER": 66,
+          "MELON": 176,
+          "MILK": 203,
+          "STRAWBERRY": 178,
+          "TOMATO": 71,
+          "WHEAT": 40,
+          "WOOL": 238
+        },
+        "opponent_money": 21486.0,
+        "opponent_tile_counts": {
+          "COW": 8,
+          "MELON": 12,
+          "SHEEP": 6,
+          "STRAWBERRY": 41,
+          "WHEAT": 7
+        },
+        "opponent_worker_count": 6,
+        "own_money": 19662.0,
+        "own_tile_counts": {
+          "COW": 8,
+          "MELON": 14,
+          "SHEEP": 4,
+          "STRAWBERRY": 36,
+          "WHEAT": 13
+        },
+        "own_worker_count": 9,
+        "town": {
+          "unlocked_shops": [
+            "PIZZA_SHOP",
+            "YARN_STORE",
+            "BRUNCH_SPOT",
+            "YARN_STORE",
+            "PIZZA_SHOP"
+          ]
+        }
+      }
+    },
+    {
+      "context": {
+        "opponent_family": "kaito_v21",
+        "seat": 0,
+        "seed": 65365230
+      },
+      "decision_step": 361,
+      "lane": "boatlee_v16_rc2_market_relay",
+      "public_state": {
+        "market_inventory": {
+          "CARROT": 9946,
+          "EGG": 9947,
+          "FERTILIZER": 10170,
+          "MELON": 10086,
+          "MILK": 9921,
+          "STRAWBERRY": 9916,
+          "TOMATO": 9929,
+          "WHEAT": 9716,
+          "WOOL": 10058
+        },
+        "market_prices": {
+          "CARROT": 40,
+          "EGG": 53,
+          "FERTILIZER": 66,
+          "MELON": 176,
+          "MILK": 237,
+          "STRAWBERRY": 197,
+          "TOMATO": 69,
+          "WHEAT": 42,
+          "WOOL": 5
+        },
+        "opponent_money": 19115.0,
+        "opponent_tile_counts": {
+          "COW": 8,
+          "MELON": 12,
+          "SHEEP": 6,
+          "STRAWBERRY": 38,
+          "WHEAT": 7
+        },
+        "opponent_worker_count": 6,
+        "own_money": 15355.0,
+        "own_tile_counts": {
+          "COW": 8,
+          "MELON": 14,
+          "SHEEP": 4,
+          "STRAWBERRY": 36,
+          "WHEAT": 13
+        },
+        "own_worker_count": 9,
+        "town": {
+          "unlocked_shops": [
+            "ICE_CREAM_SHOP",
+            "PIZZA_SHOP",
+            "BAKERY",
+            "PET_CAFE",
+            "ICE_CREAM_SHOP"
+          ]
+        }
+      }
+    },
+    {
+      "context": {
+        "opponent_family": "kaito_v21",
+        "seat": 1,
+        "seed": 65365230
+      },
+      "decision_step": 361,
+      "lane": "boatlee_v16_rc2_market_relay",
+      "public_state": {
+        "market_inventory": {
+          "CARROT": 9946,
+          "EGG": 9947,
+          "FERTILIZER": 10170,
+          "MELON": 10086,
+          "MILK": 9921,
+          "STRAWBERRY": 9916,
+          "TOMATO": 9929,
+          "WHEAT": 9716,
+          "WOOL": 10058
+        },
+        "market_prices": {
+          "CARROT": 40,
+          "EGG": 53,
+          "FERTILIZER": 66,
+          "MELON": 176,
+          "MILK": 237,
+          "STRAWBERRY": 197,
+          "TOMATO": 69,
+          "WHEAT": 42,
+          "WOOL": 5
+        },
+        "opponent_money": 19115.0,
+        "opponent_tile_counts": {
+          "COW": 8,
+          "MELON": 12,
+          "SHEEP": 6,
+          "STRAWBERRY": 38,
+          "WHEAT": 7
+        },
+        "opponent_worker_count": 6,
+        "own_money": 15355.0,
+        "own_tile_counts": {
+          "COW": 8,
+          "MELON": 14,
+          "SHEEP": 4,
+          "STRAWBERRY": 36,
+          "WHEAT": 13
+        },
+        "own_worker_count": 9,
+        "town": {
+          "unlocked_shops": [
+            "ICE_CREAM_SHOP",
+            "PIZZA_SHOP",
+            "BAKERY",
+            "PET_CAFE",
+            "ICE_CREAM_SHOP"
+          ]
+        }
+      }
+    }
+  ],
+  "schema_version": 1
+}

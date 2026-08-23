@@ -1,0 +1,102 @@
+{
+  "schema_version": 2,
+  "kind": "maximum_full_tape_population_search_contract",
+  "status": "development_only_not_launched",
+  "authority": "research/full_path_topology_searcher_2026-08-17/CURRENT_TASK.md",
+  "formal_execution_authorized": false,
+  "pool_lanes": false,
+  "scale": {
+    "population": 16384,
+    "generations": 2000,
+    "raw_candidates": 30000000,
+    "t0_t1_candidate_games": 300000000,
+    "broad_finalists": 100,
+    "islands": 32,
+    "residents_per_island": 512
+  },
+  "tiers": {
+    "t0": {
+      "candidate_count": 30000000,
+      "games_per_candidate": 6,
+      "candidate_games": 180000000
+    },
+    "t1": {
+      "candidate_count": 5000000,
+      "additional_games_per_candidate": 24,
+      "candidate_games": 120000000
+    },
+    "control_cache_games_in_t0_t1_budget": false,
+    "broad_games_in_t0_t1_budget": false
+  },
+  "lanes": {
+    "v27_current_meta": {
+      "islands": 16,
+      "modes": {
+        "coordinate": 4,
+        "large_neighborhood": 4,
+        "de_novo": 4,
+        "novelty": 4
+      }
+    },
+    "boatlee_v16_rc2_market_relay": {
+      "islands": 16,
+      "modes": {
+        "coordinate": 4,
+        "large_neighborhood": 4,
+        "de_novo": 4,
+        "novelty": 4
+      }
+    }
+  },
+  "genome": {
+    "meaningful_turns": 719,
+    "replacement_horizons": [1, 2, 4, 8, 24, 48, 96, 192, 719],
+    "channels": ["farmer", "hands", "market", "full"],
+    "root_families": ["lane_incumbent", "deduplicated_public_tape", "pass_tape"],
+    "operators": [
+      "point_replace",
+      "market_insert",
+      "market_remove",
+      "market_replace",
+      "market_reorder",
+      "quantity_step",
+      "time_shift",
+      "donor_block",
+      "destroy_repair",
+      "compatible_crossover"
+    ]
+  },
+  "selection": {
+    "primary": "net_wdl_transition",
+    "hard_technical_gate": true,
+    "effective_change_required": true,
+    "broad_finalists_per_lane": 50,
+    "tail_fields": ["w_to_l", "repeatable_family_seat_negative_tails", "cvar_01", "cvar_05", "worst_margin"],
+    "tie_break_fields": ["mean_margin", "mean_own_bank", "lower_complexity", "novelty"],
+    "opponent_identity_runtime_feature": false,
+    "opponent_private_runtime_feature": false
+  },
+  "engine": {
+    "commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+    "python_sha256": "fb9215c5e21a25243e2d13e75b3d70a79cf7d78fff150a90f1bb5eacf9ba2bcf",
+    "configuration_sha256": "7f196f4aaf9b4e482fbd61ba4bf19f5cec4da0f81938ece756954035a65c0bb5"
+  },
+  "execution_boundary": {
+    "seed_registry": null,
+    "context_registry": null,
+    "physical_workers": null,
+    "cpu_target_percent": [50, 65],
+    "storage_retention": {
+      "mode": "generation_adverse_compact_prune",
+      "minimum_free_bytes": 53687091200,
+      "retain_all_negative_margin_receipts": true,
+      "retain_all_technical_failures": true,
+      "retain_worse_economic_diagnostics": true,
+      "hash_all_deleted_receipts": true,
+      "delete_raw_receipts_after_signed_generation": true
+    },
+    "automatic_broad_launch": false,
+    "automatic_promotion": false,
+    "automatic_submission": false
+  }
+}

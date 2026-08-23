@@ -1,0 +1,50 @@
+{
+  "artifact_sha256": "28ab63ed1fc05f672d5791e0de765a7f600ffdd73285ceb9be2ea379e7883a0f",
+  "created_at": "2026-08-23T02:05:24.3600911+08:00",
+  "database_files": [
+    {
+      "bytes": 206888960,
+      "path": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\research\\cache\\full_path_topology_searcher_2026-08-17\\max_search_formal_300m_20260821_v1\\execution_candidate_index.sqlite",
+      "sha256": "6d5f9edc0f336523772b8e2915875d2679a7f76181d2873631d9836ebcc626ec"
+    },
+    {
+      "bytes": 425984,
+      "path": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\research\\cache\\full_path_topology_searcher_2026-08-17\\max_search_formal_300m_20260821_v1\\execution_candidate_index.sqlite-shm",
+      "sha256": "f0577fd12a5a72031f79c30417279ac438c8711fdb14a9c2ba8111ade0fc4ba6"
+    },
+    {
+      "bytes": 209712152,
+      "path": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\research\\cache\\full_path_topology_searcher_2026-08-17\\max_search_formal_300m_20260821_v1\\execution_candidate_index.sqlite-wal",
+      "sha256": "a95703b3b2821a05d558b4e7bccd017ef5899e720617559b00884b7eaf3659af"
+    },
+    {
+      "bytes": 264519680,
+      "path": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\research\\cache\\full_path_topology_searcher_2026-08-17\\max_search_formal_300m_20260821_v1\\execution_store.sqlite",
+      "sha256": "250df8b8256d721fb50772c2cecfcbe1a2f3e9bc1a3ae57e57620a65c13d1b3c"
+    },
+    {
+      "bytes": 32768,
+      "path": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\research\\cache\\full_path_topology_searcher_2026-08-17\\max_search_formal_300m_20260821_v1\\execution_store.sqlite-shm",
+      "sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb"
+    },
+    {
+      "bytes": 0,
+      "path": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\research\\cache\\full_path_topology_searcher_2026-08-17\\max_search_formal_300m_20260821_v1\\execution_store.sqlite-wal",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "formal_stop": {
+    "bytes": 1868,
+    "path": "C:\\Users\\wurre\\Downloads\\Kaggriculture\\research\\full_path_topology_searcher_2026-08-17\\max_search_formal_stop_20260823.json",
+    "sha256": "4a988eac4306acb68504615f2ebb8f5f8b59dbcd08f9bb352c504295b355c30f"
+  },
+  "kind": "stopped_max_search_database_identity",
+  "old_execution_manifest_sha256": "1454d7dfcad3ac5c05c4746aa1d6df39ad703337977ca2f10801a0cea8a1d3d9",
+  "old_run_root": "research/cache/full_path_topology_searcher_2026-08-17/max_search_formal_300m_20260821_v1",
+  "quick_check": {
+    "execution_candidate_index.sqlite": "ok",
+    "execution_store.sqlite": "ok"
+  },
+  "schema_version": 1,
+  "stopped_process_set_confirmed_empty": true
+}

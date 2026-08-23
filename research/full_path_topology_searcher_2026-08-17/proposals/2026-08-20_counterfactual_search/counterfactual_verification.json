@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "kind": "lane_local_counterfactual_verification",
+  "verified_date": "2026-08-20",
+  "base_commit": "3d7003a13434697d91f3836d88f9c6ac7059d912",
+  "decision": "V27_FRESH_FALSIFICATION_CANDIDATE_BOATLEE_DIAGNOSTIC_POSITIVE_ONLY",
+  "formal_games_run": 0,
+  "fresh_seeds_selected": [],
+  "efficacy_claim": null,
+  "pool_lanes": false,
+  "engine": {
+    "commit": "bded87b0d7879078c726a93a4884d044f79c4eed",
+    "python_sha256": "fb9215c5e21a25243e2d13e75b3d70a79cf7d78fff150a90f1bb5eacf9ba2bcf",
+    "configuration_sha256": "7f196f4aaf9b4e482fbd61ba4bf19f5cec4da0f81938ece756954035a65c0bb5"
+  },
+  "validity_repair": {
+    "control_mismatch_found": true,
+    "invalid_results_excluded": true,
+    "current_v27_control_sha256": "063128bf765f6a6bb29ecaccc3a7dae8943e35e46c26a6364a1b3169313b9fb4",
+    "current_boatlee_control_sha256": "ddb78d2a829745505f31afc6ea1288e2f57d6ff534649d5f416926e8035029ea",
+    "runtime_action_schema_fixed": ["FEED WHEAT", "FERTILIZE FERTILIZER"],
+    "noop_equivalence": {
+      "bytes": 4113,
+      "sha256": "85a53cab7de52d116a35f1d8fd403f7ded319acd0f302adf01c4d74fd2178ea3",
+      "v27_exact": true,
+      "boatlee_exact": true
+    }
+  },
+  "unguarded_result": {
+    "path": "research/full_path_topology_searcher_2026-08-17/proposals/2026-08-20_counterfactual_search/compiled_consumed_screen.json",
+    "bytes": 17097,
+    "sha256": "1cfa7bfd36acad58249e949584fe55d95799021e928d809be0f5560f38afd54e",
+    "v27": {"positive": 6, "neutral": 0, "negative": 2, "tail": "kaito_v21_seed_93687444_minus_504"},
+    "boatlee": {"positive": 2, "neutral": 0, "negative": 6, "negative_wdl_transitions": 2}
+  },
+  "guarded_result": {
+    "path": "research/full_path_topology_searcher_2026-08-17/proposals/2026-08-20_counterfactual_search/guarded_consumed_screen.json",
+    "bytes": 16979,
+    "sha256": "80b08f434f525af50dcb52a858d58af6ad28e88dd4c2c50a8f354e6843aff379",
+    "v27": {
+      "candidate_id": "branch_49691264492d1d3f21da29dc",
+      "candidate_sha256": "c79568b1d24b316b2fc6d76100020ee98c4b7a3166d78df1e0df8238bf6f94f5",
+      "positive": 6,
+      "neutral": 2,
+      "negative": 0,
+      "changed_contexts": 6,
+      "unique_changed_seed_family_contexts": 3,
+      "l_to_w": 2,
+      "mean_margin_delta": 77.5,
+      "min_margin_delta": 0.0,
+      "mean_own_money_delta": 406.75,
+      "efficacy_signal": false,
+      "status": "RETAIN_FOR_SEPARATELY_AUTHORIZED_FRESH_FALSIFICATION"
+    },
+    "boatlee": {
+      "candidate_id": "branch_3f11447b64ee9acaaf0512d8",
+      "candidate_sha256": "2dee2b9a05cf11fab79f7e126841e38396b1a93dd5f1cdd7e0ae8628b9bc6082",
+      "positive": 2,
+      "neutral": 6,
+      "negative": 0,
+      "changed_contexts": 2,
+      "unique_changed_seed_family_contexts": 1,
+      "l_to_w": 0,
+      "mean_margin_delta": 42.25,
+      "min_margin_delta": 0.0,
+      "mean_own_money_delta": 57.75,
+      "efficacy_signal": false,
+      "status": "DIAGNOSTIC_POSITIVE_TOO_NARROW"
+    }
+  },
+  "public_state_snapshots": {
+    "bytes": 22617,
+    "sha256": "1f6c5eebde35a6920c82da262cab60658e75ec36cfd84611ec3aae70844baf18"
+  },
+  "risk": {
+    "v27": "consumed money threshold may proxy seed or opponent interaction",
+    "boatlee": "single unique positive context and consumed MILK threshold"
+  }
+}
